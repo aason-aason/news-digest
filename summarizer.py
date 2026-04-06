@@ -1,12 +1,14 @@
 """
-summarizer.py: Gemini Flashで記事をトピック別に日本語要約する
+summarizer.py: Gemini Flashで記事をカテゴリ別・2段階で日本語要約する
 """
 
 import os
+import json
+import re
 from google import genai
 
 
-def summarize_articles(articles: list[dict], config: dict) -> str:
+def summarize_articles(articles: list[dict], config: dict) -> list[dict]:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise EnvironmentError("GEMINI_API_KEY が設定されていません")
@@ -23,8 +25,17 @@ def summarize_articles(articles: list[dict], config: dict) -> str:
 """
 
     prompt = f"""以下はテック・ビジネス・音楽DTM分野の最新記事です。
-カテゴリ別にまとめて、日本語でわかりやすく要約してください。
-URLは含めないでください。
+各記事について日本語で以下のJSON配列を返してください。
+
+出力形式（JSONのみ、説明文不要）:
+[
+  {{
+    "category": "カテゴリ名（テック／ビジネス／音楽・DTM）",
+    "title": "記事タイトルの日本語訳",
+    "short": "1〜2文の短い要約",
+    "detail": "何がリリースされたか・どんな特徴か・価格や入手方法なども含めた3〜5文の詳しい説明"
+  }}
+]
 
 {articles_text}
 """
@@ -34,4 +45,10 @@ URLは含めないでください。
         contents=prompt,
     )
 
-    return response.text
+    # JSONブロックを抽出してパース
+    text = response.text.strip()
+    match = re.search(r'\[.*\]', text, re.DOTALL)
+    if match:
+        return json.loads(match.group())
+
+    return []

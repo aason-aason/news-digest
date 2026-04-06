@@ -21,16 +21,16 @@ def main():
     articles = fetch_articles(config)
     print(f"  → {len(articles)} 件取得")
 
-    # 2. Claude APIで要約
-    print("[2/4] Claude APIで要約中...")
+    # 2. Gemini APIで要約
+    print("[2/4] Gemini APIで要約中...")
     from summarizer import summarize_articles
-    summary_html = summarize_articles(articles, config)
-    print("  → 要約完了")
+    summary_data = summarize_articles(articles, config)
+    print(f"  → {len(summary_data)} 件の要約完了")
 
     # 3. index.html生成
     print("[3/4] index.htmlを生成中...")
     from renderer import render_html
-    output_path = render_html(summary_html, config)
+    output_path = render_html(summary_data, config)
     print(f"  → {output_path} に保存")
 
     # 4. Discord通知
