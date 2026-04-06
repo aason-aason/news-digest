@@ -11,7 +11,7 @@ def notify_discord(config: dict) -> None:
     webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
     if not webhook_url:
         raise EnvironmentError("DISCORD_WEBHOOK_URL が設定されていません")
-    print(f"  [debug] Webhook URL先頭30文字: {webhook_url[:30]}")
+    print(f"  [debug] Webhook URL末尾20文字: ...{webhook_url[-20:]}")
 
     pages_url = config["github_pages"]["url"]
     message = f"今日のまとめを更新しました → {pages_url}"
