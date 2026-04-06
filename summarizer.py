@@ -3,7 +3,7 @@ summarizer.py: Gemini Flashで記事をトピック別に日本語要約する
 """
 
 import os
-import google.generativeai as genai
+from google import genai
 
 
 def summarize_articles(articles: list[dict], config: dict) -> str:
@@ -11,8 +11,7 @@ def summarize_articles(articles: list[dict], config: dict) -> str:
     if not api_key:
         raise EnvironmentError("GEMINI_API_KEY が設定されていません")
 
-    genai.configure(api_key=api_key)
-    model = genai.GenerativeModel(config["gemini"]["model"])
+    client = genai.Client(api_key=api_key)
 
     # 記事リストをテキストに整形
     articles_text = ""
@@ -31,9 +30,9 @@ URL: {article['link']}
 {articles_text}
 """
 
-    response = model.generate_content(
-        prompt,
-        generation_config={"max_output_tokens": config["gemini"]["max_tokens"]},
+    response = client.models.generate_content(
+        model=config["gemini"]["model"],
+        contents=prompt,
     )
 
     return response.text
