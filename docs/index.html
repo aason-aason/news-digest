@@ -1,26 +1,109 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News Digest - 2026年04月06日</title>
   <style>
+    :root {
+      --bg: #f0f2f5;
+      --surface: #ffffff;
+      --text: #111111;
+      --subtext: #555555;
+      --border: #e8e8e8;
+      --header-bg: rgba(255,255,255,0.85);
+      --shadow: 0 2px 12px rgba(0,0,0,0.08);
+      --shadow-hover: 0 8px 24px rgba(0,0,0,0.14);
+    }
+    [data-theme="dark"] {
+      --bg: #18191a;
+      --surface: #242526;
+      --text: #e4e6eb;
+      --subtext: #b0b3b8;
+      --border: #3a3b3c;
+      --header-bg: rgba(36,37,38,0.92);
+      --shadow: 0 2px 12px rgba(0,0,0,0.4);
+      --shadow-hover: 0 8px 24px rgba(0,0,0,0.6);
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
-      background: #f0f2f5;
-      color: #222;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
     }
     header {
-      background: #fff;
-      border-bottom: 1px solid #e0e0e0;
-      padding: 16px 20px;
+      background: var(--header-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
-    header h1 { font-size: 1.2rem; font-weight: 700; color: #111; }
-    header .date { font-size: 0.78rem; color: #999; margin-top: 2px; }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    header h1 { font-size: 1.15rem; font-weight: 800; color: var(--text); }
+    header .date { font-size: 0.75rem; color: var(--subtext); margin-top: 2px; }
+    .dark-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .dark-toggle:hover { background: var(--border); }
+    .controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .search-box {
+      flex: 1;
+      min-width: 160px;
+      padding: 7px 14px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-box:focus {
+      border-color: #1a73e8;
+      box-shadow: 0 0 0 3px rgba(26,115,232,0.15);
+    }
+    .filter-btn {
+      padding: 5px 14px;
+      border: 2px solid var(--cat-color);
+      border-radius: 20px;
+      background: none;
+      color: var(--cat-color);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--cat-color);
+      color: #fff;
+    }
+    .filter-btn.all-btn {
+      border-color: var(--subtext);
+      color: var(--subtext);
+      --cat-color: var(--subtext);
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -30,251 +113,338 @@
       padding: 0 16px 40px;
     }
     .card {
-      background: #fff;
-      border-radius: 12px;
+      background: var(--surface);
+      border-radius: 14px;
       padding: 18px 20px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
       gap: 10px;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.3s;
+      animation: fadeUp 0.4s ease both;
+      cursor: default;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+    .card.hidden { display: none; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
     .badge {
       display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 2px 8px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 2px 10px;
       border-radius: 20px;
       color: #fff;
       width: fit-content;
+      letter-spacing: 0.03em;
     }
     .card h2 {
       font-size: 0.95rem;
       font-weight: 700;
-      color: #111;
+      color: var(--text);
       line-height: 1.5;
     }
     .short {
-      font-size: 0.88rem;
-      color: #555;
-      line-height: 1.7;
+      font-size: 0.87rem;
+      color: var(--subtext);
+      line-height: 1.75;
     }
-    details { border-top: 1px solid #f0f0f0; padding-top: 10px; }
+    details {
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
     summary {
       font-size: 0.82rem;
       color: #1a73e8;
       cursor: pointer;
       list-style: none;
       user-select: none;
+      transition: color 0.2s;
     }
+    summary:hover { color: #1558b0; }
     summary::-webkit-details-marker { display: none; }
-    summary::before { content: "▶ "; font-size: 0.7rem; }
-    details[open] summary::before { content: "▼ "; }
+    summary::before { content: "▶ もっと詳しく"; }
+    details[open] summary::before { content: "▲ 閉じる"; }
     .detail {
       font-size: 0.87rem;
-      color: #444;
-      line-height: 1.75;
+      color: var(--subtext);
+      line-height: 1.8;
       margin-top: 10px;
+      animation: fadeIn 0.25s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .no-results {
+      grid-column: 1/-1;
+      text-align: center;
+      color: var(--subtext);
+      padding: 60px 0;
+      font-size: 0.95rem;
     }
     @media (max-width: 600px) {
       .grid { grid-template-columns: 1fr; padding: 0 12px 32px; }
+      .card { padding: 16px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>News Digest</h1>
-    <p class="date">2026年04月06日 更新</p>
+    <div class="header-top">
+      <div>
+        <h1>News Digest</h1>
+        <p class="date">2026年04月06日 更新</p>
+      </div>
+      <button class="dark-toggle" id="darkToggle">🌙 ダーク</button>
+    </div>
+    <div class="controls">
+      <input class="search-box" type="search" id="searchBox" placeholder="🔍 キーワードで絞り込む...">
+      <button class="filter-btn all-btn active" data-category="all">すべて</button>
+      <button class="filter-btn" data-category="テック" style="--cat-color:#1a73e8">テック</button>
+<button class="filter-btn" data-category="ビジネス" style="--cat-color:#e67e22">ビジネス</button>
+<button class="filter-btn" data-category="音楽・DTM" style="--cat-color:#8e44ad">音楽・DTM</button>
+    </div>
   </header>
-  <div class="grid">
-    <div class="card">
+  <div class="grid" id="grid">
+    <div class="card" data-category="テック" style="animation-delay:0.00s">
       <span class="badge" style="background:#1a73e8">テック</span>
-      <h2>Googleがオフラインで動作するAI音声認識アプリをひっそりとリリース</h2>
-      <p class="short">GoogleがGemma AIモデルを活用した、オフライン対応の新しい音声認識アプリを発表した。</p>
+      <h2>Google、オフラインで動作するAI音声認識アプリを静かにリリース</h2>
+      <p class="short">GoogleがGemma AIモデルを活用したオフライン優先のAI音声認識アプリを公開した。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">Googleは、Wispr Flowなどの既存アプリに対抗するため、オフラインファーストのAI音声認識アプリを静かにローンチした。このアプリはGoogleが開発したGemma AIモデルを利用しており、インターネット接続がない環境でも高精度な音声認識が可能である。これにより、プライバシーを重視するユーザーや、ネットワーク環境が不安定な場所でも安心して利用できる、新しい選択肢が提供される。</p>
+        <summary></summary>
+        <p class="detail">Wispr Flowのような既存の音声認識アプリに対抗するため、GoogleはGemma AIモデルを利用した新しいAI音声認識アプリをひっそりとリリースした。このアプリは、インターネット接続がない環境でも高精度な文字起こしを可能にするオフライン対応が最大の特徴である。これにより、ユーザーは場所を選ばずに安心して音声認識機能を利用できるようになる。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="テック" style="animation-delay:0.05s">
       <span class="badge" style="background:#1a73e8">テック</span>
-      <h2>Netflixが子供向けゲーム分野に拡大、新しいスタンドアロンアプリをリリース</h2>
-      <p class="short">Netflixは、子供向けゲームの「増え続ける」ライブラリにアクセスできる新しいスタンドアロンアプリを提供すると発表した。</p>
+      <h2>Netflix、子供向けゲーム市場に進出、新しい単独アプリをリリース</h2>
+      <p class="short">Netflixは、子供向けゲームの「増え続ける」ライブラリにアクセスできる新しいスタンドアロンアプリを発表した。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">Netflixは、動画配信サービスからさらに事業を拡大し、子供向けゲームに特化したスタンドアロンアプリをリリースした。このアプリを通じて、子供たちは「絶えず増え続ける」ゲームのライブラリにアクセスできるようになる。Netflixは、この取り組みにより、子供向けエンターテイメントの提供を強化し、家族層のユーザーエンゲージメントを高めることを目指している。</p>
+        <summary></summary>
+        <p class="detail">Netflixが子供向けエンターテイメント体験の拡大として、キッズゲーム市場への本格参入を発表した。これに伴い、子供たちが「絶えず増え続ける」ゲームライブラリにアクセスできる新しい単独アプリをリリースする。この動きは、Netflixがビデオストリーミングだけでなく、インタラクティブなコンテンツにも注力し、家族向けサービスを強化する戦略の一環だ。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="テック" style="animation-delay:0.10s">
       <span class="badge" style="background:#1a73e8">テック</span>
-      <h2>安全規制当局がテスラの遠隔駐車機能に対する調査を終了した理由</h2>
-      <p class="short">米国家道路交通安全局（NHTSA）は、テスラの「Actually Smart Summon」機能に対する調査を終了した。</p>
+      <h2>安全規制当局がテスラの遠隔駐車機能に関する調査を終了した理由</h2>
+      <p class="short">NHTSAはテスラの「Actually Smart Summon」機能に関する調査を、事故発生率の低さと負傷者の不在を理由に終了した。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">NHTSAは、テスラの「Actually Smart Summon」機能に関する調査を終了すると発表した。調査結果によると、同機能に関連する事故の発生件数はごく一部であり、いずれの事故も負傷者を出していないことが確認された。さらに、テスラがこの機能について複数のソフトウェアアップデートを実施し、安全性の改善を図ったことも、NHTSAが調査終了を決定した要因となっている。</p>
+        <summary></summary>
+        <p class="detail">米国国家道路交通安全局（NHTSA）は、テスラの遠隔駐車機能「Actually Smart Summon」に関する調査を終了すると発表した。調査の結果、この機能が関わる事故の発生率はごくわずかであり、負傷につながった事例は確認されなかったと報告されている。さらに、テスラがこれまで複数回にわたってソフトウェアアップデートをリリースし、機能改善に努めてきたことも、今回の調査終了の決定に影響を与えたとされている。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="ビジネス" style="animation-delay:0.15s">
       <span class="badge" style="background:#e67e22">ビジネス</span>
-      <h2>Startup Battlefield 200の募集開始：VCアクセス、TechCrunch掲載、10万ドル獲得のチャンス</h2>
-      <p class="short">Startup Battlefield 200の応募が開始され、選ばれた200社はVCからのアクセス、TechCrunchでの報道、そして10万ドルを獲得するチャンスがある。</p>
+      <h2>Startup Battlefield 200の応募開始：VCアクセス、TechCrunch掲載、10万ドルのチャンス</h2>
+      <p class="short">Startup Battlefield 200への応募が開始され、選ばれた200社はVCからのアクセス、TechCrunchでの報道、そして10万ドルの賞金を獲得するチャンスがある。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">Startup Battlefield 200は、有望なスタートアップに、ベンチャーキャピタルへのアクセス、大手テックメディアTechCrunchでの広範な報道、そして10万ドルの賞金という貴重な機会を提供する。自社のスタートアップ、または推薦したい企業がある場合、5月27日までに応募プロセスを完了する必要がある。このプログラムは、スタートアップが次のレベルに進むための重要な足がかりとなるだろう。</p>
+        <summary></summary>
+        <p class="detail">TechCrunch主催のStartup Battlefield 200が応募を開始した。このプログラムは、ベンチャーキャピタルへのアクセス、TechCrunchでの広範な報道、そして10万ドルの賞金という、スタートアップにとって貴重な機会を提供する。自社または注目に値するスタートアップを推薦し、5月27日の締め切りまでに応募プロセスを完了することで、世界の舞台で輝くチャンスを得られる。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="ビジネス" style="animation-delay:0.20s">
       <span class="badge" style="background:#e67e22">ビジネス</span>
-      <h2>TechCrunch Disrupt 2026のチケットが今週最大500ドル割引</h2>
-      <p class="short">TechCrunch Disrupt 2026のチケットが、本日より5日間限定で最大約500ドルの割引価格で購入できる。</p>
+      <h2>TechCrunch Disrupt 2026のチケットが今週限定で最大500ドル割引</h2>
+      <p class="short">TechCrunch Disrupt 2026のチケットが今週限定で最大500ドル近く割引されるキャンペーンが実施されている。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">TechCrunch Disrupt 2026への参加を検討している方は、今すぐ行動すべきだ。本日より5日間限定で、チケットが最大約500ドルの大幅割引で提供されている。この特別オファーは、太平洋時間4月10日（金）午後11時59分に終了するため、低価格で参加するためには公式サイトでの早めの登録が必要だ。スタートアップ業界の主要イベントをお得に体験するチャンスを見逃さないようにしよう。</p>
+        <summary></summary>
+        <p class="detail">TechCrunch Disrupt 2026のチケットが、本日より5日間限定で約500ドルの大幅割引で購入できる特別キャンペーンが開始された。このオファーは、太平洋標準時4月10日金曜日の午後11時59分に終了するため、参加を希望するビジネス関係者は早めの登録が推奨される。この機会に、世界有数のスタートアップイベントのチケットを低価格で確保することが可能だ。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="ビジネス" style="animation-delay:0.25s">
       <span class="badge" style="background:#e67e22">ビジネス</span>
-      <h2>スペインのXoopleがAI向け地球マッピングで1億3000万ドルのシリーズB資金調達</h2>
-      <p class="short">スペインのXoopleが、AI向け地球マッピングのために1億3000万ドルのシリーズB資金調達を実施した。</p>
+      <h2>スペインのXoople、AI向け地球マッピングで1億3000万ドルのシリーズB資金調達</h2>
+      <p class="short">スペインのXoopleがAI向け地球マッピングのために1億3000万ドルのシリーズB資金を調達し、L3Harrisとの提携も発表した。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">スペインを拠点とするスタートアップXoopleは、AIのための地球マッピング技術開発を目的として、1億3000万ドルのシリーズB資金調達に成功した。同社はさらに、Xoopleの宇宙船に搭載されるセンサーの製造に関して、L3Harrisとの提携を発表した。この資金は、地球の高精度3Dモデルを生成し、自動運転車、都市計画、環境モニタリングなど多岐にわたるAIアプリケーションに利用できるデータ提供を目指すXoopleの取り組みを加速させるものとなる。</p>
+        <summary></summary>
+        <p class="detail">スペインを拠点とするXoopleは、AIを駆使した地球マッピング技術の開発を加速するため、シリーズBラウンドで1億3000万ドル（約195億円）の資金調達に成功した。同社はさらに、自社の宇宙船に搭載するセンサーを製造するために、大手航空宇宙・防衛企業L3Harrisとの戦略的契約締結も発表した。この大規模な資金調達とパートナーシップにより、Xoopleは地球の精密なデジタルツイン作成に向けた取り組みを大きく進展させる見込みだ。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="ビジネス" style="animation-delay:0.30s">
       <span class="badge" style="background:#e67e22">ビジネス</span>
       <h2>新生活で知っておきたい｢PayPay｣最新動向と対策</h2>
-      <p class="short">国内コード決済市場でトップを走るPayPayの最新動向と、新生活における賢い利用方法を解説する。</p>
+      <p class="short">国内コード決済市場でトップを走るPayPayの最新動向と、新生活で役立つ対策について解説する記事だ。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">ユーザー数7300万人超（2026年3月時点）、決済回数78億回超（24年度）を誇る国内コード決済市場のリーダー、PayPay。この記事では、新生活を迎える人々に向けて、PayPayの最新のサービス動向やお得なキャンペーン情報、さらに節約術としての活用法や注意点などを詳しく解説している。キャッシュレス決済が浸透する現代において、PayPayを効果的に利用するための情報が満載だ。</p>
+        <summary></summary>
+        <p class="detail">2026年3月時点でユーザー数7300万人超、24年度の決済回数78億回超を誇る国内コード決済市場のリーダー、PayPay。この記事では、新生活を始める上で知っておきたいPayPayの最新サービス動向や、お得な利用方法、節約術について詳しく説明している。効率的な家計管理やスマートな支払いに活用するための具体的なヒントが満載で、ユーザーにとって必読の内容となっている。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="ビジネス" style="animation-delay:0.35s">
       <span class="badge" style="background:#e67e22">ビジネス</span>
       <h2>｢デアゴスティーニ｣"ロマンの塊オフィス"で感涙</h2>
-      <p class="short">パートワーク（分冊百科）シリーズで知られるデアゴスティーニのオフィスが、「ロマンの塊」と称されるほど魅力的であると紹介されている。</p>
+      <p class="short">模型パーツ付きマガジンなどの分冊百科で知られるデアゴスティーニのオフィスについて、その魅力に迫る記事だ。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">模型パーツ付きマガジンなどの分冊百科シリーズで有名なデアゴスティーニのオフィスについて、その魅力に迫る記事。オフィスは「ロマンの塊」と表現され、訪れる人々を感動させる工夫が凝らされているようだ。『第二次世…』といった代表的なシリーズの展示や、創造性を刺激する空間デザインが特徴で、同社のブランドイメージを体現する場所となっている。このオフィスは、ファンにとっては聖地とも言える存在であり、同社のマーケティング戦略の一端を垣間見ることができる。</p>
+        <summary></summary>
+        <p class="detail">パートワーク（分冊百科）シリーズで有名なデアゴスティーニのオフィスが「ロマンの塊」と表現され、訪れる人々を感動させている。記事では、『第二次世界大戦傑作機コレクション』など、同社の人気シリーズを象徴する数々の模型やアイテムが並ぶオフィスの様子を詳しく紹介。来訪者が思わず涙ぐむほどの、ユニークな空間がデアゴスティーニのブランド哲学と世界観を色濃く反映していると伝えている。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="ビジネス" style="animation-delay:0.40s">
       <span class="badge" style="background:#e67e22">ビジネス</span>
       <h2>｢家族写真を無断転載しマナー違反捏造｣SNSの恐怖</h2>
-      <p class="short">SNSやネットニュースで頻繁に見られる「列車でのマナー」に関する投稿において、家族写真が無断転載され、マナー違反を捏造されるケースがあるという。</p>
+      <p class="short">SNSやネットニュースで頻繁に見かける「列車でのマナー」に関する投稿において、家族写真が無断転載されマナー違反が捏造されるというSNSの危険性について警告する記事だ。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">SNSやネットニュースで頻繁に話題となる「列車でのマナー」を巡る投稿に関する警告記事。この記事では、無関係の家族写真が匿名で無断転載され、あたかもマナー違反をしているかのように事実を捏造されるといった、SNSの負の側面と恐怖を指摘している。このような行為は、プライバシー侵害や名誉毀損にあたる可能性があり、SNS利用における情報リテラシーや倫理の重要性を改めて問いかける内容となっている。</p>
+        <summary></summary>
+        <p class="detail">近年、SNSやネットニュースで「列車でのマナー」を巡る投稿が後を絶たない中、無関係な家族写真が無断転載され、あたかもマナー違反をしているかのように事実が捏造される事例が多発している。この記事は、SNSに潜むプライバシー侵害やフェイクニュースのリスクについて深く掘り下げ、個人情報の取り扱いにおける注意喚起を促している。安易な情報拡散が引き起こす深刻な結果と、それを防ぐための対策の重要性を強調している。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:0.45s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
       <h2>Renger KoningがKontakt向けシネマティックピアノ「Felt & Fog」をリリース（無料版あり）</h2>
       <p class="short">Renger KoningがKontakt用のシネマティックピアノ音源「Felt & Fog」をリリースし、無料版も提供している。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">開発者Renger Koningが、Kontakt向けの新しいシネマティックピアノ音源「Felt & Fog」を発表した。このライブラリは、既存の無料シネマティックピアノ音源（Dark Mode by SRM Sounds、Cozy Piano from SampleScienceなど）に新たな選択肢を加えるもので、無料版も提供されるため、誰でも手軽にシネマティックなピアノサウンドを楽曲に取り入れることができる。このリリースにより、DTMユーザーはより多様な音色表現が可能となる。</p>
+        <summary></summary>
+        <p class="detail">Renger Koningは、Kontakt向けに設計された新しいシネマティックピアノ音源「Felt & Fog」を発表した。この音源は、すでに多くの無料シネマティックピアノライブラリが存在する中で、独自の表現力と雰囲気を加える。Dark Mode by SRM SoundsやCozy Piano from SampleScienceといった既存の選択肢とは異なる、新たなサウンドパレットをユーザーに提供する。無料版も用意されているため、誰もがその魅力を手軽に体験できる。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:0.50s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
       <h2>United Pluginsのリアルタイムリミックスエンジン「Relooper」が81%オフ（15ドル）</h2>
-      <p class="short">United Pluginsのリアルタイムリミックスエンジン「Relooper」が、Plugin Boutiqueで81%オフの15ドルで提供されている。</p>
+      <p class="short">United Pluginsのリアルタイムリミックスエンジン「Relooper」がPlugin Boutiqueで81%オフの15ドルで販売されている。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">United Pluginsが提供するリアルタイムリミックスエンジン「Relooper」は、ハードドライブにある数百ものループに新たな生命を吹き込むための強力なツールだ。現在、Plugin Boutiqueにて通常価格82ドルのところ、81%オフのわずか15ドルという破格の価格で販売されている。この特別セールは4月30日まで開催されており、既存のループ素材を斬新な方法で活用したいDTMユーザーにとっては見逃せないチャンスだ。</p>
+        <summary></summary>
+        <p class="detail">United Pluginsの革新的なリアルタイムリミックスエンジン「Relooper」が、Plugin Boutiqueにて驚きの81%オフで提供されている。通常価格82ドルが、期間限定でわずか15ドルで購入可能だ。この特別セールは4月30日まで開催される。Relooperは、ハードドライブに大量のループを持つクリエイターにとって、既存の素材に新たな命を吹き込み、独創的なリミックスをリアルタイムで生成するための強力なツールとなるだろう。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:0.55s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
-      <h2>Cotorro AudioがWindows向け無料マルチバンドハーモニックエキサイター「P1E-RU」をリリース</h2>
-      <p class="short">Cotorro Audioが、Windows用の無料マルチバンドハーモニックエキサイタープラグイン「P1E-RU」を発表した。</p>
+      <h2>Cotorro AudioがWindows用無料マルチバンドハーモニックエキサイター「P1E-RU」をリリース</h2>
+      <p class="short">Cotorro AudioがWindows向けに無料のマルチバンドハーモニックエキサイタープラグイン「P1E-RU」をリリースした。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">Cotorro Audioから、Windowsユーザー向けの無料マルチバンドハーモニックエキサイタープラグイン「P1E-RU」が登場した。このプラグインは、信号を低域（20 Hz〜350 Hz）、中域（350 Hz〜2.5 kHz）、高域（2.5 kHz〜22 kHz）の3つの固定周波数帯域に分割し、それぞれ独立してサチュレーションを適用できる。サウンドに倍音を加え、より豊かな響きや存在感を与えることが可能で、無料で音作りの幅を広げる強力なツールとなるだろう。</p>
+        <summary></summary>
+        <p class="detail">Cotorro Audioは、Windowsユーザー向けに画期的な無料プラグイン「P1E-RU」をリリースした。このマルチバンドハーモニックエキサイターは、入力信号を低域（20 Hz〜350 Hz）、中域（350 Hz〜2.5 kHz）、高域（2.5 kHz〜22 kHz）の3つの固定周波数帯域に分割する。ユーザーはそれぞれの帯域に個別にサチュレーションを適用することで、サウンドに豊かな倍音と存在感を加えることができる。音源に輝きとパンチを与えたいDTMクリエイターにとって、強力な味方となるだろう。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:0.60s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
       <h2>「ソフトシンセでは得られない何かがある」：Jasper TygnerがMoog Grandmotherを愛する理由</h2>
-      <p class="short">新進気鋭のプロデューサー兼マルチインストゥルメンタリストのJasper Tygnerが、自身のデビューアルバム『Blue』の制作について語り、Moog Grandmotherを愛用する理由を明かした。</p>
+      <p class="short">新進気鋭のプロデューサー兼マルチインストゥルメンタリストのJasper Tygnerが、デビューアルバム制作を語りつつ、Moog Grandmotherへの愛を明かした。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">プロデューサー兼マルチインストゥルメンタリストのJasper Tygnerが、サウスロンドンのスタジオでデビューアルバム『Blue』の制作について語った。彼は特に、Moog Grandmotherアナログシンセサイザーへの深い愛情を明かし、「ソフトシンセでは得られない何かがある」と、ハードウェアシンセが持つ独特のサウンドキャラクターや操作性が、彼の音楽制作において不可欠な要素となっていることを強調した。このインタビューは、アナログ機材の持つ魅力を再認識させる内容となっている。</p>
+        <summary></summary>
+        <p class="detail">サウスロンドンのスタジオで、注目を集めるプロデューサー兼マルチインストゥルメンタリストのJasper Tygnerが、デビューアルバム「Blue」の制作秘話を語った。彼は、愛用するハードウェアシンセサイザーMoog Grandmotherについて熱く語り、「ソフトシンセでは決して得られない、何か特別なものがある」とその魅力を強調した。アナログならではのサウンドと、直感的な操作感が、彼の音楽制作において不可欠な要素であることを示唆している。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:0.65s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
-      <h2>「私たちは皆、脆い生き物だ。傷をなめ、またこのプロセスを繰り返す意味があるのかと考える」：ミッジ・ユーロが語る</h2>
-      <p class="short">ミッジ・ユーロが、名声、回復力、そして再発明について振り返り、新しい音楽とシネマティックなライブツアー体験について語った。</p>
+      <h2>「私たちは皆、脆い生き物だ。傷を癒しながら、またこのプロセスを繰り返す意味があるのかと考えるものだ」：Midge Ureに聞く</h2>
+      <p class="short">Midge Ureが、新作音楽とシネマティックなライブツアー体験で復帰するにあたり、名声、回復力、そして再発明について語る。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">ミュージシャンのミッジ・ユーロが、自身のキャリアにおける名声、逆境からの回復力、そして自己の再発明というテーマについて深く語った。彼は、新しい音楽の制作と、それに伴うシネマティックなライブツアー体験を通じて表現しようとしているものを明かしている。「私たちは皆、脆い小さな生き物だ。座って傷をなめ、またこのプロセスを繰り返す意味があるのかと考える」という言葉は、彼のキャリアを通じた挑戦と内省を示しており、音楽活動の深い側面を垣間見せる内容だ。</p>
+        <summary></summary>
+        <p class="detail">Midge Ureが、新しい音楽と没入感のあるシネマティックなライブツアー体験と共にシーンに復帰する。彼は、これまでの名声や逆境を乗り越える回復力、そしてアーティストとしての再発明について深く語っている。「私たちは皆、脆い小さな生き物であり、傷つき、癒しながら、この創造のプロセスを再び繰り返す意味があるのかと自問する瞬間がある」と、その芸術的葛藤と情熱を明らかにした。彼の言葉は、長年のキャリアを持つアーティストの内面を垣間見せる貴重な洞察だ。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:0.70s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
-      <h2>「彼はやって来て、『ホーンが気に入らない。外してくれ。後でもっとやる。じゃあね。』と言い、後でまた戻ってきて『ああ、最高だ！ハーモニーをもっと加えてくれ！』と言うんだ」：80年代の傑作におけるジョルジオ・モロダーの天才性</h2>
-      <p class="short">80年代の楽曲制作におけるジョルジオ・モロダーのユニークなアプローチと、彼の天才性を垣間見せるエピソードが語られている。</p>
+      <h2>「彼はふらりと来て、『ホーンは嫌いだ。外せ。後でもっとやる。じゃあね。』と言い、後でまた戻ってきて『ああ、最高だ！もっとハーモニーを！』と言った」：80年代のクラシックにおけるジョルジオ・モロダーの天才性</h2>
+      <p class="short">80年代のクラシック楽曲制作におけるジョルジオ・モロダーの天才的なディレクションと、その気まぐれな制作スタイルが語られている。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">80年代の音楽制作にまつわるエピソードを通じて、伝説的なプロデューサー、ジョルジオ・モロダーの天才的な側面が紹介されている。記事では、彼の直感的で時に気まぐれとも思える指示が、どのようにして時代を超えた傑作を生み出したかを描写。「彼はやって来て、『ホーンが気に入らない。外してくれ。後でもっとやる。じゃあね。』と言い、後でまた戻ってきて『ああ、最高だ！ハーモニーをもっと加えてくれ！』と言うんだ」という具体的な逸話は、彼のクリエイティブなプロセスと、アーティストを魅了する人柄を示している。</p>
+        <summary></summary>
+        <p class="detail">80年代の音楽制作現場におけるジョルジオ・モロダーのユニークな天才性が明らかにされている。彼はスタジオに突然現れては、直感的に「ホーンは気に入らない。外して後でまたやろう」と指示を出し、一度スタジオを離れた後、再び戻ってきては「素晴らしい！もっとハーモニーを加えよう」と気まぐれに意見を変えることで知られていた。この予測不可能な制作スタイルが、結果として数々の名曲を生み出した彼のカリスマ性と、音楽に対する深い洞察力を示している。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:0.75s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
-      <h2>グリッドを外す：スウィングとは何か、そしてそれをどう加えるか</h2>
-      <p class="short">このチュートリアルでは、スウィングの理論を解説し、Ableton Liveでのスウィングの適用方法をステップバイステップで説明する。</p>
+      <h2>グリッドを外れて：スウィングとは何か、そしてどう加えるか</h2>
+      <p class="short">このチュートリアルでは、楽曲にスウィング感を加えるための最初のステップを紹介している。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">スウィングは、Daft PunkやFred Again..のようなアーティストの楽曲に躍動感と活気を与える、リズムにおける重要な要素だ。この記事は、スウィングの基本的な理論を深く掘り下げ、弱い拍をグリッドから微妙にずらすことで、どのようにビートに「揺れ」や「ノリ」を生み出すかを解説している。特にAbleton Liveを例に挙げ、Groove Poolの活用法も紹介し、手作業でノートを調整する手間を省きながら、楽曲全体に自然なスウィング感を付与する方法を具体的に示している。このテクニックは、どんなDAWでも応用可能で、単調なビートに深みと人間味を加える強力なツールとなるだろう。</p>
+        <summary></summary>
+        <p class="detail">このガイドでは、Daft PunkやFred Again..の楽曲に聞かれるような「スウィング」の概念と、それを自身のトラックに適用する方法を詳細に解説する。スウィングは、弱いビートをグリッドからずらすことで、バウンス感や活気、スナップ感を楽曲に与える。Ableton Liveを例に、ヒップホップ、ハウス、テクノといったジャンルでリズムにグルーヴを加えるための理論と実践的なステップを学ぶことができる。ドラムだけでなく、リードやベースラインにも応用することで、楽曲全体に躍動感をもたらす強力なテクニックだ。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:0.80s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
-      <h2>二つのエキスポの物語：ロンドン・シンセ＆ペダルエキスポ2026からのレポート</h2>
-      <p class="short">Superboothへの参加が叶わなかった筆者が、Hackney Wickで開催されたロンドン・シンセ＆ペダルエキスポ2026に参加し、イベントの様子をレポートする。</p>
+      <h2>二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026のレポート</h2>
+      <p class="short">ロンドンで開催されたシンセ＆ペダル・エキスポ2026のレポートで、筆者がSuperboothを逃した悔しさを補うイベントとなった。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">ベルリンからロンドンへの移住やパスポート更新問題でSuperboothに参加できなかった筆者が、3月21日と22日にHackney Wickで開催されたロンドン・シンセ＆ペダルエキスポ2026の様子を報告した。このイベントは、シンセとペダルの2つの部屋に約50のメーカーが出展し、特にMonk Projectのジェネレーティブシーケンサー「TMA1」、アイスランドのGenki Instrumentsによるポリフォニック・ラックマウントシンセ「Katla」、そしてスマートフォンをAbleton Liveの3Dモーションコントローラーにする無料アプリ「Flowfal」が注目を集めた。イベントは活気に満ちていたが、多様性の欠如が課題として挙げられている。</p>
+        <summary></summary>
+        <p class="detail">長年Superboothを皆勤していた筆者が、今回は参加できなかった代わりにロンドン・シンセ＆ペダル・エキスポ2026を訪問し、その様子をレポートしている。Hackney Wickの会場には約50のメーカーが出展し、Arturia、Moog、Korgといった主要ブランドから、The Monk ProjectのTMA1やGenki InstrumentsのKatlaといった革新的な製品まで、多様なシンセやペダルが展示された。特にKatlaは、火山溶岩を使用したノブが特徴のポリフォニックラックマウントシンセで、その革新性とサウンドが高く評価された。また、スマートフォンを3Dモーションコントローラーにする無料アプリFlowfalも紹介されており、熱気あるイベントの様子が伝わる。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:0.85s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
-      <h2>Marian (BR)：「ハウスミュージックのルーツを学べ」</h2>
-      <p class="short">新しいハウスミュージックの波を牽引するDJ/プロデューサーMarian (BR)が、自身の音楽的ルーツや制作哲学、そしてキャリアの道のりについて語ったインタビュー。</p>
+      <h2>Marian (BR): 「ハウスミュージックのルーツを研究せよ」</h2>
+      <p class="short">Marian (BR)は、初期の影響からイビサでの重要な瞬間まで、これまでのキャリアジャーニーを振り返る。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">シカゴハウスにルーツを持ち、グルーヴ主導のサウンドでダンスフロアを席巻するDJ/プロデューサーMarian (BR)へのインタビュー。彼は、サンプルのチョップ、ボーカルのキャラクター、ピアノやオルガンの使用、そしてサチュレーションされたドラムなど、クラシックなハウスミュージックの要素が自身の制作に最も影響を与えていると語る。Jamie JonesやThe Martinez BrothersといったトップDJからの支持を受け、イビサでの「Swing Bom」の成功がキャリアの転機となったこと、そしてDeeperfectからの新作EPやParadiseでのデビューなど、今後の活動についても触れられている。若手アーティストへのアドバイスとして「ハウスミュージックのルーツを学び、クラブに足を運び、先行者から学び、拒絶に備えよ」と語る。</p>
+        <summary></summary>
+        <p class="detail">ハウスミュージックシーンの新星Marian (BR)は、シカゴハウスに深く根ざしたグルーヴ重視のサウンドで注目を集めている。彼の音楽は、ロールするベースライン、シャープなサンプリング、引き込まれるようなリズムが特徴だ。インタビューでは、自身のルーツや、Pacha Ibizaでの「Music On」シーズンにおける「Swing Bom」の成功がキャリアの転換点となったこと、そしてJamie JonesやThe Martinez Brothersといった著名DJからの支持について語っている。今後のDeeperfectからのEPリリースや、IbizaでのParadiseデビューにも言及し、若手プロデューサーへのアドバイスとして「ハウスミュージックのルーツを研究し、クラブで時間を過ごし、先行者から学び、拒絶に備えること」を強調した。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:0.90s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
       <h2>約2万円で手に入る！空きスペースにすっぽり収まるノブ特化型MIDIコントローラ、Novation Launch Control 3</h2>
-      <p class="short">NovationのLaunchシリーズに、コンパクトでノブに特化した新しいMIDIコントローラ「Launch Control 3」が加わった。</p>
+      <p class="short">NovationのLaunchシリーズに、コンパクトなノブ特化型MIDIコントローラ「Launch Control 3」が新たに加わった。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">Novationから、人気のLaunch Control XL 3に続く形で、コンパクトなMIDIコントローラ「Launch Control 3」が新たに登場した。このモデルは、特にノブ操作に特化しており、約2万円という手頃な価格帯で提供される。DTM環境の空きスペースにすっぽりと収まる設計のため、限られたデスクスペースでも導入しやすいのが特徴だ。ソフトウェアのパラメータを直感的に操作したいDTMユーザーにとって、コストパフォーマンスの高い選択肢となるだろう。</p>
+        <summary></summary>
+        <p class="detail">Novationの人気MIDIコントローラ「Launch Control XL 3」に続き、よりコンパクトな新モデル「Launch Control 3」が登場した。実売価格約2万円という手頃な価格帯でありながら、空きスペースにすっぽりと収まる省スペース設計が特徴だ。このモデルは、多くのノブを搭載し、DTMソフトウェアのパラメータを直感的に操作することに特化しているため、よりスムーズなワークフローを実現したいクリエイターにとって魅力的な選択肢となるだろう。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:0.95s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
       <h2>今、日本が一番安い！Wavesバンドル破格の秘密は「開発費回収」にあり！</h2>
-      <p class="short">DTMプラグインのトップシェアを誇るWavesバンドルが現在、日本で破格の安さで提供されており、その秘密は開発費回収戦略にあるとされている。</p>
+      <p class="short">DTMプラグインでトップシェアを誇るWavesのバンドルが、現在日本で破格の安さで提供されている理由を解説している。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">DTMにおいて必須のプラグインを提供するWavesが、現在日本で驚異的な価格でバンドル製品を販売している。この破格の価格設定の背景には、「開発費回収」という同社の戦略があるようだ。長年にわたり業界トップクラスのシェアを維持してきたWavesは、初期開発費を早期に回収し、新たな顧客層の獲得と市場拡大を図っていると推測される。ユーザーにとっては、高品質なプラグインをこれまでにない安価で手に入れる絶好のチャンスとなっている。</p>
+        <summary></summary>
+        <p class="detail">DTMにおいて不可欠なエフェクトやインストゥルメントプラグインの分野で、長年にわたりトップクラスのシェアを誇るWaves。現在、日本の市場ではWavesのバンドルが他国に比べて破格の安さで提供されているという。その背景には、開発費の回収戦略が深く関係していることが示唆されている。この記事では、なぜ日本市場でこのような価格設定が可能になっているのか、その秘密と、DTMユーザーにとってこのチャンスがいかに魅力的であるかを詳しく掘り下げて説明している。</p>
       </details>
     </div>
-    <div class="card">
+    <div class="card" data-category="音楽・DTM" style="animation-delay:1.00s">
       <span class="badge" style="background:#8e44ad">音楽・DTM</span>
       <h2>ドラムの音作りに悩む時代は終わった!?6つのモジュールで魔法をかけるXLN Audio DB-30 Drum Butterが発売記念で24％OFF！</h2>
-      <p class="short">XLN Audioから、ドラムの音作りを劇的に改善する新しいマルチエフェクトプラグイン「DB-30 Drum Butter」がリリースされ、発売記念として24%オフで提供されている。</p>
+      <p class="short">XLN Audioから新しいマルチエフェクトプラグイン「DB-30 Drum Butter」がリリースされ、発売記念で24%オフとなっている。</p>
       <details>
-        <summary>もっと詳しく</summary>
-        <p class="detail">数々のアワードを受賞してきたスウェーデンのプラグインデベロッパーXLN Audioから、ドラムサウンド専用のマルチエフェクトプラグイン「DB-30 Drum Butter」が登場した。このプラグインは6つのモジュールを搭載しており、ドラムの音作りにおける様々な課題を解決し、より豊かなサウンドを実現する。3月31日に発売され、現在発売記念として24%オフの特別価格で購入可能。ドラムトラックのミキシングに頭を悩ませていたDTMユーザーにとって、強力な味方となること間違いなしの製品だ。</p>
+        <summary></summary>
+        <p class="detail">数々のアワードを獲得してきたスウェーデンのプラグインデベロッパーXLN Audioから、ドラムサウンドの音作りに特化した新しいマルチエフェクトプラグイン「DB-30 Drum Butter」が3月31日に発売された。このプラグインは、6つのモジュールを組み合わせることで、ドラムサウンドに魔法をかけるように豊かな質感とパンチを加えることができる。現在、発売記念として24%オフの特別価格で提供されており、ドラムの音作りに悩むすべてのクリエイターにとって、強力な味方となること間違いなしだ。</p>
       </details>
     </div>
+    <div class="no-results" id="noResults" style="display:none">該当する記事が見つかりませんでした</div>
   </div>
+  <script>
+    // ダークモード
+    const toggle = document.getElementById('darkToggle');
+    const html = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved) { html.dataset.theme = saved; toggle.textContent = saved === 'dark' ? '☀️ ライト' : '🌙 ダーク'; }
+    toggle.addEventListener('click', () => {
+      const isDark = html.dataset.theme === 'dark';
+      html.dataset.theme = isDark ? 'light' : 'dark';
+      toggle.textContent = isDark ? '🌙 ダーク' : '☀️ ライト';
+      localStorage.setItem('theme', html.dataset.theme);
+    });
+
+    // フィルター & 検索
+    let activeCategory = 'all';
+    let searchQuery = '';
+
+    function updateCards() {
+      const cards = document.querySelectorAll('.card[data-category]');
+      let visible = 0;
+      cards.forEach(card => {
+        const catMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
+        const textMatch = !searchQuery || card.textContent.toLowerCase().includes(searchQuery);
+        card.classList.toggle('hidden', !(catMatch && textMatch));
+        if (catMatch && textMatch) visible++;
+      });
+      document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCategory = btn.dataset.category;
+        updateCards();
+      });
+    });
+
+    document.getElementById('searchBox').addEventListener('input', e => {
+      searchQuery = e.target.value.toLowerCase();
+      updateCards();
+    });
+  </script>
 </body>
 </html>
