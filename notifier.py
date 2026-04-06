@@ -21,7 +21,10 @@ def notify_discord(config: dict) -> None:
     req = urllib.request.Request(
         webhook_url,
         data=payload,
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": "Mozilla/5.0",
+        },
         method="POST",
     )
 
