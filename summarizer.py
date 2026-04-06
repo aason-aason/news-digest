@@ -13,19 +13,18 @@ def summarize_articles(articles: list[dict], config: dict) -> str:
 
     client = genai.Client(api_key=api_key)
 
-    # 記事リストをテキストに整形
+    # 記事リストをテキストに整形（URLは除外）
     articles_text = ""
     for i, article in enumerate(articles, 1):
         articles_text += f"""
-記事{i}: {article['title']}
-URL: {article['link']}
+記事{i}【{article.get('category', '')}】: {article['title']}
 概要: {article['summary']}
 ---
 """
 
-    prompt = f"""以下はTechCrunchの最新記事です。
-トピック別にまとめて、日本語でわかりやすく要約してください。
-各トピックには記事のURLも含めてください。
+    prompt = f"""以下はテック・ビジネス・音楽DTM分野の最新記事です。
+カテゴリ別にまとめて、日本語でわかりやすく要約してください。
+URLは含めないでください。
 
 {articles_text}
 """
