@@ -1,0 +1,14 @@
+rss:
+  url: "https://techcrunch.com/feed/"
+  max_articles: 5
+
+gemini:
+  model: "gemini-2.0-flash"
+  max_tokens: 2048
+
+output:
+  docs_dir: "docs"
+  filename: "index.html"
+
+github_pages:
+  url: "https://aason-aason.github.io/news-digest/"
