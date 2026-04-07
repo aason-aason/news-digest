@@ -56,9 +56,11 @@ def summarize_articles(articles: list[dict], config: dict) -> list[dict]:
 
     client = genai.Client(api_key=api_key)
 
-    # 記事リストをテキストに整形
+    # 記事リストをテキストに整形（URLをindex番号で管理）
+    url_map = {}
     articles_text = ""
     for i, article in enumerate(articles, 1):
+        url_map[i] = article.get("link", "")
         articles_text += (
             f"\n記事{i}【{article.get('category', '')}】"
             f"（ソース: {article.get('source', '')}）\n"
@@ -74,6 +76,7 @@ def summarize_articles(articles: list[dict], config: dict) -> list[dict]:
 出力形式（JSONのみ、説明文不要）:
 [
   {{
+    "article_index": 記事番号（整数）,
     "category": "カテゴリ名（テック／ビジネス／音楽・DTM）",
     "title": "記事タイトルの日本語訳",
     "importance": "🔴 または 🟡 または 🟢",
@@ -95,7 +98,13 @@ def summarize_articles(articles: list[dict], config: dict) -> list[dict]:
     match = re.search(r'\[.*\]', text, re.DOTALL)
     if match:
         try:
-            return json.loads(match.group())
+            items = json.loads(match.group())
+            # article_indexを使ってURLを付与
+            for item in items:
+                idx = item.pop("article_index", None)
+                if idx and idx in url_map:
+                    item["url"] = url_map[idx]
+            return items
         except json.JSONDecodeError as e:
             logger.error(f"JSONパースエラー: {e}")
             return []

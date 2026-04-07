@@ -46,6 +46,14 @@ def render_html(articles: list[dict], config: dict) -> str:
 
     urgent_html = _build_urgent(urgent) if urgent else ""
 
+    # フィルターボタン
+    filter_btns = '<button class="filter-btn active" data-cat="all">すべて</button>\n'
+    if urgent:
+        filter_btns += '<button class="filter-btn" data-cat="urgent" style="--c:#ff4444">🔴 緊急</button>\n'
+    for cat in categories:
+        color = CATEGORY_COLOR.get(cat, "#666")
+        filter_btns += f'<button class="filter-btn" data-cat="{cat}" style="--c:{color}">{cat}</button>\n'
+
     html = f"""<!DOCTYPE html>
 <html lang="ja" data-theme="light">
 <head>
@@ -93,13 +101,16 @@ def render_html(articles: list[dict], config: dict) -> str:
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      padding: 16px 20px;
+      padding: 14px 20px 0;
       position: sticky;
       top: 0;
       z-index: 100;
+    }}
+    .header-top {{
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 12px;
     }}
     header h1 {{ font-size: 1.1rem; font-weight: 800; }}
     header .date {{ font-size: 0.78rem; color: var(--muted); margin-top: 2px; }}
@@ -115,6 +126,31 @@ def render_html(articles: list[dict], config: dict) -> str:
       transition: background 0.2s;
     }}
     .dark-btn:hover {{ background: var(--border); }}
+    .filter-bar {{
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      scrollbar-width: none;
+    }}
+    .filter-bar::-webkit-scrollbar {{ display: none; }}
+    .filter-btn {{
+      flex-shrink: 0;
+      padding: 5px 14px;
+      border: 2px solid var(--c, #888);
+      border-radius: 20px;
+      background: none;
+      color: var(--c, #888);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }}
+    .filter-btn.active, .filter-btn:hover {{
+      background: var(--c, #888);
+      color: #fff;
+    }}
+    .filter-btn[data-cat="all"] {{ --c: #555; }}
 
     /* メインコンテンツ */
     main {{
@@ -219,26 +255,35 @@ def render_html(articles: list[dict], config: dict) -> str:
       from {{ opacity: 0; }}
       to   {{ opacity: 1; }}
     }}
-    .source-name {{
-      font-size: 0.75rem;
-      color: var(--muted);
+    .source-link {{
+      font-size: 0.78rem;
+      color: #1a73e8;
+      text-decoration: none;
+      display: inline-block;
       margin-top: 2px;
     }}
+    .source-link:hover {{ text-decoration: underline; }}
   </style>
 </head>
 <body>
   <header>
-    <div>
-      <h1>News Digest</h1>
-      <p class="date">{today} 更新</p>
+    <div class="header-top">
+      <div>
+        <h1>News Digest</h1>
+        <p class="date">{today} 更新</p>
+      </div>
+      <button class="dark-btn" id="darkBtn">🌙 ダーク</button>
     </div>
-    <button class="dark-btn" id="darkBtn">🌙 ダーク</button>
+    <div class="filter-bar">
+      {filter_btns}
+    </div>
   </header>
   <main>
     {urgent_html}
     {sections_html}
   </main>
   <script>
+    // ダークモード
     const btn = document.getElementById('darkBtn');
     const root = document.documentElement;
     const saved = localStorage.getItem('theme') || 'light';
@@ -249,6 +294,24 @@ def render_html(articles: list[dict], config: dict) -> str:
       root.dataset.theme = dark ? 'dark' : 'light';
       btn.textContent = dark ? '☀️ ライト' : '🌙 ダーク';
       localStorage.setItem('theme', root.dataset.theme);
+    }});
+
+    // カテゴリフィルター
+    document.querySelectorAll('.filter-btn').forEach(btn => {{
+      btn.addEventListener('click', () => {{
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.cat;
+        document.querySelectorAll('.category-section, .urgent-section').forEach(sec => {{
+          if (cat === 'all') {{
+            sec.style.display = '';
+          }} else if (cat === 'urgent') {{
+            sec.style.display = sec.classList.contains('urgent-section') ? '' : 'none';
+          }} else {{
+            sec.style.display = sec.dataset.cat === cat ? '' : 'none';
+          }}
+        }});
+      }});
     }});
   </script>
 </body>
@@ -277,6 +340,7 @@ def _build_item(article: dict, delay: float) -> str:
     summary     = article.get("summary", "")
     detail      = article.get("detail", "")
     source_name = article.get("source_name", "")
+    url         = article.get("url", "")
     importance  = article.get("importance", "🟢")
     badge       = _importance_badge(importance)
 
@@ -287,7 +351,12 @@ def _build_item(article: dict, delay: float) -> str:
         <p class="detail-text">{detail}</p>
       </details>"""
 
-    source_block = f'<p class="source-name">📰 {source_name}</p>' if source_name else ""
+    if source_name and url:
+        source_block = f'<a class="source-link" href="{url}" target="_blank" rel="noopener">📰 {source_name}</a>'
+    elif source_name:
+        source_block = f'<span class="source-link">📰 {source_name}</span>'
+    else:
+        source_block = ""
 
     return f"""<div class="item" style="animation-delay:{delay:.2f}s">
       <div class="item-header">
@@ -313,7 +382,7 @@ def _build_section(category: str, articles: list[dict]) -> str:
     """カテゴリセクションのHTMLを返す。"""
     color = CATEGORY_COLOR.get(category, "#666")
     items = "\n".join(_build_item(a, i * 0.05) for i, a in enumerate(articles))
-    return f"""<section class="category-section">
+    return f"""<section class="category-section" data-cat="{category}">
       <p class="category-label" style="color:{color}">● {category}</p>
       {items}
     </section>"""
