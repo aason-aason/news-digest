@@ -45,13 +45,16 @@
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      padding: 16px 20px;
+      padding: 14px 20px 0;
       position: sticky;
       top: 0;
       z-index: 100;
+    }
+    .header-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 12px;
     }
     header h1 { font-size: 1.1rem; font-weight: 800; }
     header .date { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
@@ -67,6 +70,31 @@
       transition: background 0.2s;
     }
     .dark-btn:hover { background: var(--border); }
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      scrollbar-width: none;
+    }
+    .filter-bar::-webkit-scrollbar { display: none; }
+    .filter-btn {
+      flex-shrink: 0;
+      padding: 5px 14px;
+      border: 2px solid var(--c, #888);
+      border-radius: 20px;
+      background: none;
+      color: var(--c, #888);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--c, #888);
+      color: #fff;
+    }
+    .filter-btn[data-cat="all"] { --c: #555; }
 
     /* メインコンテンツ */
     main {
@@ -171,284 +199,297 @@
       from { opacity: 0; }
       to   { opacity: 1; }
     }
-    .source-name {
-      font-size: 0.75rem;
-      color: var(--muted);
+    .source-link {
+      font-size: 0.78rem;
+      color: #1a73e8;
+      text-decoration: none;
+      display: inline-block;
       margin-top: 2px;
     }
+    .source-link:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
-    <div>
-      <h1>News Digest</h1>
-      <p class="date">2026年04月07日 更新</p>
+    <div class="header-top">
+      <div>
+        <h1>News Digest</h1>
+        <p class="date">2026年04月07日 更新</p>
+      </div>
+      <button class="dark-btn" id="darkBtn">🌙 ダーク</button>
     </div>
-    <button class="dark-btn" id="darkBtn">🌙 ダーク</button>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-cat="all">すべて</button>
+<button class="filter-btn" data-cat="テック" style="--c:#1a73e8">テック</button>
+<button class="filter-btn" data-cat="ビジネス" style="--c:#e67e22">ビジネス</button>
+<button class="filter-btn" data-cat="音楽・DTM" style="--c:#8e44ad">音楽・DTM</button>
+
+    </div>
   </header>
   <main>
     
-    <section class="category-section">
+    <section class="category-section" data-cat="テック">
       <p class="category-label" style="color:#1a73e8">● テック</p>
       <div class="item" style="animation-delay:0.00s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>AIスタートアップRocket、マッキンゼー風レポートを低コストで提供</h2>
-      <p class="summary">AIスタートアップRocketが、従来のコンサルティングファームのレポートに似た高品質な戦略・製品開発・競合情報レポートを、大幅に低コストで提供するプラットフォームを発表した。これは、AIがコード生成だけでなく、より複雑なビジネス戦略策定支援へと進化していることを示しているため有益です。</p>
+      <h2>AIスタートアップRocketがマッキンゼー風レポートを低コストで提供</h2>
+      <p class="summary">AIスタートアップのRocketが、戦略策定、プロダクト構築、競合情報分析を統合した新しいAIプラットフォームを発表しました。これは単なるコード生成を超え、マッキンゼーのようなコンサルティングレポートを大幅に低価格で提供することを目指しています。企業はこれにより、より迅速かつコスト効率良く戦略的意思決定を行えるようになる可能性があります。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Rocketの新しいAIプラットフォームは、戦略立案、製品構築、競合インテリジェンスの機能を統合し、これまでのAIツールが主流だったコード生成の域を超え、経営コンサルティング分野への進出を目指している。これにより、中小企業やスタートアップでも、高品質な戦略レポートを手軽に利用できるようになる可能性がある。時間があるときにAIの一般的な動向として確認すると良いでしょう。</p>
+        <p class="detail-text">Rocketのプラットフォームは、従来のAIツールが主に行ってきたコード生成だけでなく、市場分析や製品戦略といったビジネスの上流工程にAIを適用しようとするものです。これにより、高価なコンサルティングサービスに頼ることなく、企業が戦略的な洞察を得られるようになります。TechCrunchによると、このサービスは大規模なコンサルティングファームのサービスを「わずかなコスト」で提供するとされています。</p>
       </details>
-      <p class="source-name">📰 TechCrunch</p>
+      <a class="source-link" href="https://techcrunch.com/2026/04/06/indian-startup-rocket-wants-its-ai-to-do-mckinsey-style-consulting-at-a-fraction-of-the-cost/" target="_blank" rel="noopener">📰 TechCrunch</a>
     </div>
 <div class="item" style="animation-delay:0.05s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
       <h2>AIデザインプラットフォームPicsartがクリエイター収益化プログラムを開始</h2>
-      <p class="summary">AIデザインプラットフォームのPicsartが、クリエイター向けの収益化プログラムを開始した。これにより、クリエイターはPicsartのツールでオリジナルコンテンツを制作し、特定のキャンペーンでソーシャルチャネルに共有することで、オーディエンスのエンゲージメントに応じて収益を得られるようになる。</p>
+      <p class="summary">AIデザインプラットフォームのPicsartが、クリエイター向けの収益化プログラムを開始しました。このプログラムでは、クリエイターがPicsartツールを使って特定のキャンペーン向けにオリジナルコンテンツを作成し、自身のソーシャルチャンネルで共有することで、オーディエンスのエンゲージメントに応じて報酬を得ることができます。これは、クリエイターエコノミーを支援し、プラットフォームの活性化を狙うものです。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">このプログラムは、クリエイターがPicsartのAIデザインツールを活用して制作したコンテンツを、プラットフォームが指定するキャンペーンを通じて公開し、そのコンテンツがどれだけ多くのユーザーの関心を引き、エンゲージメントを生み出したかに基づいて報酬を支払う仕組み。Picsartは、クリエイターエコノミーを強化し、プラットフォームの利用者層を拡大することを目指しているため、AI・テックの一般的な動向や個人開発者のマーケティング事例として有益です。</p>
+        <p class="detail-text">Picsartのこの新しいプログラムは、クリエイターが指定されたキャンペーンテーマに基づき、Picsartの豊富なAIデザインツールを活用して画像を制作することを促します。作成されたコンテンツはクリエイターのソーシャルメディアで共有され、その投稿のパフォーマンス（いいね、コメント、シェアなど）に応じて収益が分配される仕組みです。これにより、クリエイターは自身の創造性を収益に繋げることができ、Picsartはユーザー生成コンテンツとプラットフォームの露出を増やすことが期待されます。</p>
       </details>
-      <p class="source-name">📰 TechCrunch</p>
+      <a class="source-link" href="https://techcrunch.com/2026/04/06/ai-design-platform-picsart-launches-a-creator-monetization-program/" target="_blank" rel="noopener">📰 TechCrunch</a>
     </div>
 <div class="item" style="animation-delay:0.10s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>OpenAIの元従業員らが、新たに最大1億ドルのファンドから密かに投資を開始</h2>
-      <p class="summary">OpenAIの元従業員らが、OpenAIと深いつながりを持つ新たなベンチャーキャピタルファンド「Zero Shot」を立ち上げ、すでに一部の企業に投資を開始している。このファンドは最初のファンドとして1億ドルの調達を目指しており、AI業界における新たな資金の流れとエコシステムの形成を示す。</p>
+      <h2>OpenAI出身者らが1億ドル規模のVCファンドから静かに投資を開始</h2>
+      <p class="summary">OpenAIの元社員たちが、新たなベンチャーキャピタルファンド「Zero Shot」を設立し、最初のファンドで1億ドルを調達する目標を掲げています。すでにいくつかの企業に投資を行っており、これはOpenAI関連の人材がAIエコシステム内で新たな影響力を持つことを示唆しています。彼らの投資活動は、将来のAI分野のトレンドを形成する可能性があります。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Zero Shotは、OpenAIの技術やビジョンに精通した元従業員によって設立されたため、AI分野の有望なスタートアップへの投資に特化するとみられる。これにより、AIエコシステム内でOpenAIの技術を活用した新しいビジネスや技術革新が加速する可能性があり、AI業界の将来の動向に影響を与えるだろう。OpenAI自体の仕様変更や新機能ではないため、時間があるときにAI・テックの一般的な動向として確認すると良いでしょう。</p>
+        <p class="detail-text">Zero ShotはOpenAIとの強い繋がりを持つファンドであり、その投資戦略はAI技術の最先端に焦点を当てると予想されます。1億ドルという目標額は、AIスタートアップへの初期段階の投資としては十分な規模であり、OpenAI出身者の知見がどのように次世代のAI企業を育成するかに注目が集まります。彼らの投資先は、OpenAIが関心を寄せる領域や、既存の技術では解決が難しい「ゼロショット学習」のような先進的なAIアプローチに関連する可能性もあります。</p>
       </details>
-      <p class="source-name">📰 TechCrunch</p>
+      <a class="source-link" href="https://techcrunch.com/2026/04/06/openai-alums-have-been-quietly-investing-from-a-new-potentially-100m-fund/" target="_blank" rel="noopener">📰 TechCrunch</a>
     </div>
-    </section><section class="category-section">
+    </section><section class="category-section" data-cat="ビジネス">
       <p class="category-label" style="color:#e67e22">● ビジネス</p>
       <div class="item" style="animation-delay:0.00s">
       <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
+        <span class="imp-badge imp-important">🟡 重要</span>
       </div>
-      <h2>AIスタートアップRocket、マッキンゼー風レポートを低コストで提供</h2>
-      <p class="summary">AIスタートアップRocketは、戦略、製品構築、競合インテリジェンスを組み合わせた新しいAIプラットフォームを発表した。これにより、従来の高価なコンサルティングレポートを大幅に低コストで提供し、AIの活用範囲をコード生成からビジネス戦略策定へと広げることを目指している。</p>
+      <h2>Startup Battlefield 200の参加応募が開始：VCとの接触、TechCrunch掲載、10万ドルのチャンス</h2>
+      <p class="summary">TechCrunchが主催する「Startup Battlefield 200」の参加応募が開始されました。選ばれた200社は、ベンチャーキャピタルとの接触、TechCrunchでの報道、そして優勝者には10万ドルの賞金を得る機会があります。個人開発者やスタートアップにとって、資金調達やメディア露出の貴重なチャンスとなるため、興味がある場合は今日中に詳細を確認すべきです。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Rocketのプラットフォームは、企業がマッキンゼーのような大手コンサルティングファームから得られる高品質なレポートを、手頃な価格で利用できるようにすることを目指している。これは、AIが高度なビジネス分析や戦略立案の領域に進出し、中小企業やスタートアップでも専門的な知見を活用しやすくなることを意味するため、ビジネス戦略・経営の知見として有益です。</p>
+        <p class="detail-text">このプログラムは、TechCrunch Disruptイベントの一環として開催され、有望なスタートアップに大きなプラットフォームを提供します。応募締め切りは5月27日で、対象となるのはまだ広く知られていない革新的なスタートアップです。選出されれば、業界の主要プレーヤーや投資家とのネットワークを築き、プロダクトを広く知ってもらうための絶好の機会となります。特に、個人開発者が自身のプロジェクトをスケールアップさせる上で、資金と認知の両面で大きなメリットをもたらす可能性があります。</p>
       </details>
-      <p class="source-name">📰 TechCrunch Startups</p>
+      <a class="source-link" href="https://techcrunch.com/2026/04/06/startup-battlefield-200-applications-open-get-vc-access-techcrunch-coverage-and-100k/" target="_blank" rel="noopener">📰 TechCrunch Startups</a>
     </div>
 <div class="item" style="animation-delay:0.05s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>Startup Battlefield 200の応募開始：VCアクセス、TechCrunch掲載、10万ドルのチャンス</h2>
-      <p class="summary">TechCrunchが主催するStartup Battlefield 200の応募が開始された。選ばれた200社のスタートアップは、ベンチャーキャピタルへのアクセス、TechCrunchでの報道、そして10万ドルの賞金を獲得するチャンスがある。</p>
+      <h2>AIスタートアップRocketがマッキンゼー風レポートを低コストで提供</h2>
+      <p class="summary">AIスタートアップのRocketが、戦略策定、プロダクト構築、競合情報分析を統合した新しいAIプラットフォームを発表しました。これは単なるコード生成を超え、マッキンゼーのようなコンサルティングレポートを大幅に低価格で提供することを目指しています。企業はこれにより、より迅速かつコスト効率良く戦略的意思決定を行えるようになる可能性があります。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">応募締め切りは5月27日で、自社のスタートアップまたは注目に値するスタートアップを推薦し、申請プロセスを完了する必要がある。このプログラムは、特に初期段階のスタートアップにとって、資金調達、メディア露出、そして業界内のコネクションを築く貴重な機会となるため、ビジネス戦略・経営の知見として有益です。</p>
+        <p class="detail-text">Rocketのプラットフォームは、従来のAIツールが主に行ってきたコード生成だけでなく、市場分析や製品戦略といったビジネスの上流工程にAIを適用しようとするものです。これにより、高価なコンサルティングサービスに頼ることなく、企業が戦略的な洞察を得られるようになります。TechCrunchによると、このサービスは大規模なコンサルティングファームのサービスを「わずかなコスト」で提供するとされています。</p>
       </details>
-      <p class="source-name">📰 TechCrunch Startups</p>
+      <a class="source-link" href="https://techcrunch.com/2026/04/06/indian-startup-rocket-wants-its-ai-to-do-mckinsey-style-consulting-at-a-fraction-of-the-cost/" target="_blank" rel="noopener">📰 TechCrunch Startups</a>
     </div>
 <div class="item" style="animation-delay:0.10s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
       <h2>TechCrunch Disrupt 2026のチケットが今週最大500ドル割引</h2>
-      <p class="summary">TechCrunch Disrupt 2026のチケットが今週限定で最大500ドル割引されるセールが開始された。この特別価格は、4月10日金曜日太平洋時間午後11時59分まで有効であり、早めの登録が推奨される。</p>
+      <p class="summary">TechCrunch Disrupt 2026のチケットが、今週5日間限定で最大500ドル割引になるセールを実施しています。この割引は4月10日金曜日午後11時59分（太平洋時間）に終了するため、イベントへの参加を検討している場合は早めの登録が必要です。これは、スタートアップエコシステムに関心のある個人や企業にとって、お得にカンファレンスに参加する機会です。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">この割引は、大手テック・スタートアップイベントへの参加費用を抑えるチャンスであり、特にスタートアップ関係者や投資家、メディア関係者にとっては魅力的な情報。イベントへの参加は、最新のトレンドを学び、ネットワーキングを広げる重要な機会となるため、ビジネス戦略・経営の知見として有益です。</p>
+        <p class="detail-text">TechCrunch Disruptは、スタートアップ、投資家、テクノロジー業界のリーダーが集まる主要なイベントです。この割引は早期割引の一環として提供されており、イベントのフルアクセスパスや特定のパッケージに適用される可能性があります。イベントでは、最先端のスタートアップピッチ、業界リーダーによる講演、ネットワーキングの機会が提供されます。費用を抑えて参加したい方は、期日までに登録を完了することが推奨されます。</p>
       </details>
-      <p class="source-name">📰 TechCrunch Startups</p>
+      <a class="source-link" href="https://techcrunch.com/2026/04/06/massive-ticket-savings-of-up-to-500-this-week-for-techcrunch-disrupt-2026/" target="_blank" rel="noopener">📰 TechCrunch Startups</a>
     </div>
 <div class="item" style="animation-delay:0.15s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>格差を騒ぎ立てるメディアに違和感しかない | 国内経済 | 東洋経済オンライン</h2>
-      <p class="summary">この記事は、メディアが格差問題を過度に強調することへの筆者の違和感を表明している。また、2026年4月6日に心筋梗塞で死去したゼンショーホールディングス会長の小川賢太郎氏（享年77）の生前の功績を偲び、関連する過去記事を再掲する内容も含まれる。</p>
+      <h2>格差を騒ぎ立てるメディアに違和感しかない（ゼンショー小川賢太郎会長の死去を受けて）</h2>
+      <p class="summary">ゼンショーホールディングスの小川賢太郎会長が2026年4月6日に心筋梗塞で77歳で逝去されました。この記事は、彼の功績を偲ぶとともに、格差問題を過度に煽るメディアの姿勢について筆者の見解を述べています。一般的な企業経営者の訃報と、それに関連する社会論評であり、直接的なビジネスへの影響は少ないでしょう。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">主な焦点はメディアの報道姿勢に対する批評であるが、ゼンショー会長の死去という訃報も併せて伝えられている。小川氏は外食産業のリーダーとして知られ、その経営手腕や業界への貢献は多大であった。記事は、彼の功績を振り返りながら、格差問題に対するよりバランスの取れた視点の必要性を訴えている可能性があるため、ビジネス戦略・経営の知見として有益です。</p>
+        <p class="detail-text">小川賢太郎氏はゼンショーを回転寿司チェーン「はま寿司」や牛丼チェーン「すき家」などを展開する巨大外食グループへと成長させた立役者です。記事では、彼の経営手腕や企業哲学を振り返りつつ、現代社会における格差報道のあり方について疑問を投げかけています。彼の死は外食産業界にとって大きな損失ですが、この記事自体は個別のビジネス戦略や市場動向に直接影響を与えるものではありません。</p>
       </details>
-      <p class="source-name">📰 東洋経済オンライン</p>
+      <a class="source-link" href="https://toyokeizai.net/articles/-/940621?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener">📰 東洋経済オンライン</a>
     </div>
 <div class="item" style="animation-delay:0.20s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>自己肯定感を高めようとする人の"落とし穴" | リーダーシップ・教養・資格・スキル | 東洋経済オンライン</h2>
-      <p class="summary">自己肯定感を高めようとする行為には、時に落とし穴が存在するという内容の記事。自己肯定感が低いと自分を責める傾向にあるが、他者も同様に自分を否定的に見ていると思い込んでしまう悪循環に陥る危険性を指摘している。</p>
+      <h2>自己肯定感を高めようとする人の"落とし穴"</h2>
+      <p class="summary">自己肯定感を高めようとする際に陥りやすい誤解や落とし穴について解説する記事です。自己肯定感の低さが自己批判につながり、それが他者からの評価への不安へと連鎖するメカニズムに言及しています。これはビジネスパーソンのメンタルヘルスやリーダーシップ、生産性向上に間接的に関連する有益な情報です。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">記事は、自己肯定感を無理に高めようとすることが、かえって自己との対話を妨げ、現実から目を背ける原因になり得ると警告している。真の自己肯定は、ありのままの自分を受け入れ、他者の評価に過度に左右されないバランスの取れた視点を持つことから生まれると示唆している可能性が高い。生産性・習慣系の知見として有益な記事です。</p>
+        <p class="detail-text">記事では、自己肯定感を無理に高めようとすることが逆効果になるケースや、自己肯定感の本質的な意味について考察しています。単に自分を褒めるだけでなく、自己受容や成長のプロセスに焦点を当てることの重要性が示唆されている可能性があります。リーダーシップやチームマネジメントにおいても、自己肯定感の健全な理解は個人のパフォーマンス向上だけでなく、組織全体の心理的安全性にも影響を与えるため、有益な視点を提供します。</p>
       </details>
-      <p class="source-name">📰 東洋経済オンライン</p>
+      <a class="source-link" href="https://toyokeizai.net/articles/-/940299?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener">📰 東洋経済オンライン</a>
     </div>
 <div class="item" style="animation-delay:0.25s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>50代､自慢話より喜ばれる経験の見える化とは？ | リーダーシップ・教養・資格・スキル | 東洋経済オンライン</h2>
-      <p class="summary">50代が自身の経験を単なる自慢話ではなく、他者に価値あるものとして伝えるための「見える化」の重要性を説く記事。これまで「意味のない仕事は断るべき」と提唱してきた筆者が、50代が本当に取り組むべき「意味のある仕事」とは何かを考察している。</p>
+      <h2>50代、自慢話より喜ばれる経験の見える化とは？</h2>
+      <p class="summary">50代のビジネスパーソンが、自身の経験を単なる自慢話ではなく、他者に価値を提供する形で「見える化」する方法について解説する記事です。前回の記事で「意味のない仕事を断る」ことの重要性に触れ、今回は「意味のある仕事」に繋がる経験の伝え方を提案しています。キャリア開発や人材育成において有益な視点を提供します。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">記事は、50代がこれまでの豊富な経験やスキルを、具体的な成果や教訓として整理し、他者が理解しやすく、活用できる形で提示する方法に焦点を当てている。これにより、後進の育成や新たなキャリアパスの開拓、組織内でのリーダーシップ発揮に繋がるヒントを提供し、単なる経験談ではなく、実用的な知見として共有することの価値を強調している。生産性・習慣系の知見として有益な記事です。</p>
+        <p class="detail-text">記事では、50代が持つ豊富な経験を若手世代や組織にどのように効果的に還元するかを議論しています。具体的なスキルセットや成功事例だけでなく、そこに至るまでの思考プロセス、失敗からの学び、問題解決のアプローチなどを言語化し、共有することの重要性が強調されるでしょう。これにより、組織全体の知見の継承を促進し、個人のセカンドキャリア形成にも役立つ実践的なアドバイスが期待されます。</p>
       </details>
-      <p class="source-name">📰 東洋経済オンライン</p>
+      <a class="source-link" href="https://toyokeizai.net/articles/-/939808?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener">📰 東洋経済オンライン</a>
     </div>
-    </section><section class="category-section">
+    </section><section class="category-section" data-cat="音楽・DTM">
       <p class="category-label" style="color:#8e44ad">● 音楽・DTM</p>
       <div class="item" style="animation-delay:0.00s">
       <div class="item-header">
         <span class="imp-badge imp-important">🟡 重要</span>
       </div>
       <h2>Renger KoningがKontakt向けシネマティックピアノ「Felt & Fog」をリリース（無料版あり）</h2>
-      <p class="summary">開発者Renger Koningが、Kontakt用のシネマティックピアノ音源「Felt & Fog」をリリースし、無料バージョンも提供している。これにより、高品質なシネマティックピアノ音源を手軽に入手できるようになり、音楽制作の選択肢がさらに広がったため、今日中に確認すべき重要な情報です。</p>
+      <p class="summary">開発者Renger Koningが、Kontakt用の新しいシネマティックピアノ音源「Felt & Fog」をリリースしました。無料版も提供されており、既に多数の無料シネマティックピアノライブラリが存在する中で、異なるサウンドの選択肢を提供します。高品質なピアノ音源を探しているDTMユーザーは、この無料版を試す価値があります。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Felt & Fogは、その名の通りフェルトピアノの柔らかな質感と霧がかったようなアンビエントなサウンドを特徴とする。無料版があるため、多くのDTMユーザーが気軽に試すことができ、既存の無料シネマティックピアノライブラリ（SRM SoundsのDark Mode、SampleScienceのCozy Piano、Venus Theoryのforms:pianoなど）と比較検討する良い機会となる。音楽制作者は、サウンドデザインの幅を広げる新たな選択肢を得られるだろう。</p>
+        <p class="detail-text">「Felt & Fog」は、Kontaktプラットフォーム向けに設計された、映画音楽のような雰囲気を醸し出すピアノ音源です。市場にはSRM Soundsの「Dark Mode」やSampleScienceの「Cozy Piano」など、多くの優れた無料シネマティックピアノがありますが、この新しいライブラリは独自の音色やテクスチャを提供する可能性があります。無料版を利用することで、フルバージョン購入前のサウンドチェックや、手軽に新しいピアノサウンドを導入することができます。</p>
       </details>
-      <p class="source-name">📰 Bedroom Producers Blog</p>
+      <a class="source-link" href="https://bedroomproducersblog.com/2026/04/06/renger-koning-felt-fog-piano/" target="_blank" rel="noopener">📰 Bedroom Producers Blog</a>
     </div>
 <div class="item" style="animation-delay:0.05s">
       <div class="item-header">
         <span class="imp-badge imp-important">🟡 重要</span>
       </div>
       <h2>United Pluginsのリアルタイムリミックスエンジン「Relooper」が81%オフ（15ドル）</h2>
-      <p class="summary">United Pluginsのリアルタイムリミックスエンジン「Relooper」が、Plugin Boutiqueで81%オフの15ドルで販売されている。通常価格82ドルからの大幅な割引で、4月30日までの期間限定セールとなるため、今日中に確認すべき重要な情報です。</p>
+      <p class="summary">United Pluginsのリアルタイムリミックスエンジン「Relooper」が、Plugin Boutiqueで81%オフの15ドルという破格のセールを実施中です。通常価格82ドルのところ、大幅な割引となっており、セールは4月30日までです。既存のループ素材に新たな生命を吹き込みたいDTMユーザーにとって、見逃せないチャンスです。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Relooperは、既存のループ音源をリアルタイムで再構築・再アレンジできるツールであり、新しいアイデアの創出やマンネリ化したトラックの改善に役立つ。大量のループ音源を所有しているユーザーは、このセールを活用して、楽曲制作の幅を広げたり、インスピレーションを得たりすることができるだろう。</p>
+        <p class="detail-text">Relooperは、手持ちのオーディオループをリアルタイムで再構成し、新しいアイデアやグルーヴを生み出すことができるツールです。ランダム化機能や直感的なインターフェースを通じて、ループの断片化、リバース、ピッチシフトなどを組み合わせることが可能です。このツールは、DJやプロデューサーが既存のサンプルパックを新鮮な方法で活用し、ユニークなサウンドスケープを構築するのに役立ちます。低価格で入手できるこの機会は、制作の幅を広げたい方に特に推奨されます。</p>
       </details>
-      <p class="source-name">📰 Bedroom Producers Blog</p>
+      <a class="source-link" href="https://bedroomproducersblog.com/2026/04/06/united-plugins-relooper/" target="_blank" rel="noopener">📰 Bedroom Producers Blog</a>
     </div>
 <div class="item" style="animation-delay:0.10s">
       <div class="item-header">
         <span class="imp-badge imp-important">🟡 重要</span>
       </div>
       <h2>Cotorro AudioがWindows向け無料マルチバンドハーモニックエキサイター「P1E-RU」をリリース</h2>
-      <p class="summary">Cotorro Audioが、Windows向けの無料マルチバンドハーモニックエキサイタープラグイン「P1E-RU」をリリースした。このツールは、オーディオ信号を3つの固定周波数帯域に分割し、それぞれに独立してサチュレーションを適用できるため、サウンドに輝きと厚みを加えるのに役立つため、今日中に確認すべき重要な情報です。</p>
+      <p class="summary">Cotorro Audioが、Windows用の無料マルチバンドハーモニックエキサイタープラグイン「P1E-RU」をリリースしました。このプラグインは信号を3つの固定周波数帯域に分割し、それぞれに独立してサチュレーションを適用できるため、ミックスに輝きやパンチを加えるのに非常に役立ちます。無料でありながらサウンドクオリティを向上させる強力なツールなので、Windowsユーザーはすぐに試すべきです。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">P1E-RUは、20Hz～350Hzの低域、350Hz～2.5kHzの中域、2.5kHz～22kHzの高域に信号を分け、各帯域で個別にハーモニック（倍音）を追加できる。これにより、ボーカルや楽器トラック、ミックス全体にパンチや存在感を与えることが可能になり、無料でありながらプロフェッショナルなサウンドメイクに貢献する。</p>
+        <p class="detail-text">「P1E-RU」は、低域（20Hz〜350Hz）、中域（350Hz〜2.5kHz）、高域（2.5kHz〜22kHz）の3バンドに信号を分け、各バンドに個別のサチュレーションを適用できます。これにより、特定の周波数帯域のみに倍音を加え、サウンドをより豊かでクリアに、あるいは力強くすることが可能です。ドラム、ボーカル、シンセなど、さまざまなトラックの音質向上に活用でき、Windows環境のDTM制作者にとって即座に導入できる貴重な無料プラグインです。</p>
       </details>
-      <p class="source-name">📰 Bedroom Producers Blog</p>
+      <a class="source-link" href="https://bedroomproducersblog.com/2026/04/06/cotorro-audio-p1e-ru/" target="_blank" rel="noopener">📰 Bedroom Producers Blog</a>
     </div>
 <div class="item" style="animation-delay:0.15s">
       <div class="item-header">
         <span class="imp-badge imp-important">🟡 重要</span>
       </div>
       <h2>約2万円で手に入る！空きスペースにすっぽり収まるノブ特化型MIDIコントローラ、Novation Launch Control 3</h2>
-      <p class="summary">NovationのLaunchシリーズに、コンパクトなノブ特化型MIDIコントローラ「Launch Control 3」が約2万円で登場した。これは、既存のLaunch Control XL 3のコンパクト版として、限られたデスクスペースでも効率的に使用できる設計となっているため、今日中に確認すべき重要な情報です。</p>
+      <p class="summary">Novationから、Launchシリーズの新しいコンパクトなノブ特化型MIDIコントローラ「Launch Control 3」が約2万円で登場しました。従来のLaunch Control XL 3に続くモデルで、省スペースながら豊富なノブを備え、DTM環境での直感的な操作性を高めます。手頃な価格で、特にデスクスペースが限られているDTMユーザーにとって魅力的な新製品です。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Launch Control 3は、そのコンパクトなサイズと多くのノブ・フェーダー・パッドを搭載していることで、DAWのミキサーやエフェクトパラメーター、シンセサイザーのコントロールなどを直感的に操作できる。実売価格約2万円という手頃さも魅力で、DTMユーザー、特にライブパフォーマンスや複雑なオートメーションを多用するクリエイターにとって、作業効率と創造性を向上させる強力なツールとなるだろう。</p>
+        <p class="detail-text">Launch Control 3は、その名の通り多数のロータリーノブに特化しており、DAWのミキサー、エフェクトパラメーター、シンセサイザーの音色調整などを手元で素早くコントロールできます。コンパクトな設計のため、既存の機材の隙間にも簡単に配置でき、限られたスペースでも物理的な操作感を加えることが可能です。実売価格が2万円前後と手頃であるため、MIDIコントローラを初めて導入するユーザーや、追加のコントロールサーフェスを探しているユーザーにとって、費用対効果の高い選択肢となるでしょう。</p>
       </details>
-      <p class="source-name">📰 DTMステーション</p>
+      <a class="source-link" href="https://www.dtmstation.com/archives/76873.html" target="_blank" rel="noopener">📰 DTMステーション</a>
     </div>
 <div class="item" style="animation-delay:0.20s">
       <div class="item-header">
         <span class="imp-badge imp-important">🟡 重要</span>
       </div>
       <h2>今、日本が一番安い！Wavesバンドル破格の秘密は「開発費回収」にあり！</h2>
-      <p class="summary">DTM用プラグインでトップシェアを誇るWavesのバンドルが、現在日本で世界最安値で提供されている。この破格の価格設定の背景には、同社の「開発費回収」戦略があるとされており、DTMユーザーにとっては高品質なプラグインを手に入れる絶好の機会となっているため、今日中に確認すべき重要な情報です。</p>
+      <p class="summary">DTMプラグインのトップシェアを誇るWavesのバンドル製品が、現在日本で世界最安値で提供されている状況を解説する記事です。この破格の価格設定の背景には「開発費回収」戦略があるとされており、DTMユーザーにとっては非常に大きな購入チャンスとなっています。高品質なプラグインを低価格で手に入れたい方は、この機会を見逃すべきではありません。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Wavesは、エフェクトやインストゥルメントのプラグインを多数開発しており、プロ・アマ問わず多くのクリエイターに利用されている。この記事は、なぜ日本市場で特に低価格が実現しているのか、そのマーケティング戦略やビジネスモデルに切り込んでいると予想される。開発費を早期に回収し、新たな製品開発や市場拡大に投資するための戦略の一環として、特定の地域で積極的な価格設定を行っている可能性が示唆される。ユーザーは、この機会にプロ仕様のプラグインバンドルを通常よりも大幅に安く購入できる。</p>
+        <p class="detail-text">Wavesは、エフェクトやインストゥルメントなど多様なプラグインを提供し、プロのスタジオから個人クリエイターまで幅広く利用されています。記事では、日本市場に特化した価格戦略や、過去のセール動向を踏まえつつ、同社がどのようにして開発コストを回収し、市場での競争力を維持しているのかに迫る可能性があります。具体的なバンドル名や、現在のセールがいつまで続くかといった情報も含まれているかもしれません。日本でのこの特別な価格設定は、DTM環境を強化したいユーザーにとって、これまで以上にコストパフォーマンスの高い投資を可能にします。</p>
       </details>
-      <p class="source-name">📰 DTMステーション</p>
+      <a class="source-link" href="https://www.dtmstation.com/archives/76827.html" target="_blank" rel="noopener">📰 DTMステーション</a>
     </div>
 <div class="item" style="animation-delay:0.25s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
       <h2>「ソフトシンセでは得られない何かがある」：Jasper TygnerがMoog Grandmotherを愛する理由</h2>
-      <p class="summary">新進気鋭のプロデューサー兼マルチインストゥルメンタリストのJasper Tygnerが、彼のデビューアルバム「Blue」の制作秘話と、愛用のMoog Grandmotherシンセサイザーへの思いを語った。彼はソフトシンセでは得られない、Moog Grandmother独自のサウンドと質感を高く評価している。</p>
+      <p class="summary">注目を集めるプロデューサー兼マルチインストゥルメンタリストのJasper Tygnerが、彼のデビューアルバム「Blue」制作について語り、特にハードウェアシンセサイザーMoog Grandmotherへの愛情を明らかにしています。彼はソフトシンセでは得られない独自の音質や制作体験が、Moog Grandmotherにはあると強調しています。ハードウェア機材の魅力を再認識させるインタビュー記事です。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Jasper Tygnerのサウスロンドンにあるスタジオを訪れたインタビューで、彼はアナログシンセサイザー、特にMoog Grandmotherが持つ、有機的で予測不能な特性が、デジタルプラグインでは再現できないと説明した。このインタビューは、ハードウェアシンセとソフトシンセの議論において、いまだにアナログ機材が持つユニークな魅力と、それがアーティストの創造性に与える影響を示しているため、音楽業界トレンドとして有益です。</p>
+        <p class="detail-text">Jasper Tygnerは、南ロンドンのスタジオでMusicRadarのインタビューに応じ、Moog Grandmotherが彼の音楽にどのように貢献しているかを説明しました。彼によると、このアナログシンセサイザーは、その温かみのあるサウンド、触覚的な操作性、そして予期せぬ発見を促す特性により、創造的なプロセスにおいて不可欠な存在だとのことです。多くのプロデューサーがソフトウェアとハードウェアのバランスを模索する中で、特定のハードウェアがもたらすインスピレーションの価値を具体的に示しています。</p>
       </details>
-      <p class="source-name">📰 MusicRadar</p>
+      <a class="source-link" href="https://www.musicradar.com/artists/theres-something-about-it-that-you-just-dont-get-with-soft-synths-jasper-tygner-on-why-he-loves-his-moog-grandmother" target="_blank" rel="noopener">📰 MusicRadar</a>
     </div>
 <div class="item" style="animation-delay:0.30s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>「私たちは皆、脆い小さな生き物だ。傷を舐めながら座って、『またこの全プロセスを経験する意味があるのか？』と考える」：ミッジ・ユーアに聞く</h2>
-      <p class="summary">伝説的アーティストMidge Ureが、名声、回復力、そして再発明について語り、新たな音楽とシネマティックなライブツアー体験と共にシーンに復帰する。彼は、創作活動に伴う精神的な葛藤や、何度も挑戦し続けることの意味について深く考察している。</p>
+      <h2>「私たちは皆、脆い生き物だ。傷を舐め、この全プロセスをもう一度やる意味があるのかと考える」：Midge Ureが語る</h2>
+      <p class="summary">Midge Ureが、名声、回復力、そして再発明について語り、新しい音楽とシネマティックなライブツアー体験と共にカムバックします。彼は音楽業界での長年のキャリアを通じて得た経験や内省を共有しており、アーティストとしての苦悩とモチベーションを深く掘り下げたインタビューです。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">このインタビューは、Midge Ureが新曲リリースとライブツアーを通じて、どのように自身のキャリアと向き合い、時代に合わせて進化しているかを探るもの。彼の言葉は、アーティストが直面するプレッシャーや自己疑念、そしてそれらを乗り越えて創作を続ける原動力について示唆に富んでおり、長きにわたるキャリアを持つアーティストの視点から、音楽業界における持続性と創造性の本質を浮き彫りにしているため、音楽業界トレンドとして有益です。</p>
+        <p class="detail-text">Midge Ureは、Ultravoxのフロントマンとして、またBand Aidの共同創設者として知られるベテランミュージシャンです。このインタビューでは、彼が新しい音楽を制作し、革新的なライブパフォーマンスを計画するに至った背景にある個人的な感情や哲学が明かされます。キャリアの浮き沈みの中で、どのようにして創造性を維持し、常に前進し続けるかという問いに対する彼の答えは、多くのアーティストやクリエイターにとって示唆に富む内容となるでしょう。</p>
       </details>
-      <p class="source-name">📰 MusicRadar</p>
+      <a class="source-link" href="https://www.musicradar.com/artists/were-all-fragile-little-creatures-you-sit-down-lick-your-wounds-and-think-is-there-any-point-in-going-through-this-whole-process-again-we-speak-to-midge-ure" target="_blank" rel="noopener">📰 MusicRadar</a>
     </div>
 <div class="item" style="animation-delay:0.35s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>「彼はひょっこり現れては『ホーンが嫌いだ。外せ。後でまたやろう。じゃあね』と言い、後でまた戻ってきては『ああ、最高だ！ハーモニーをもっと加えてくれ！』と言うんだ」：80年代のクラシックにおけるジョルジオ・モロダーの天才性</h2>
-      <p class="summary">80年代の音楽シーンを象徴するプロデューサー、ジョルジオ・モロダーのユニークな制作スタイルと天才性を、当時の制作パートナーが語っている。彼の直感的で時に気まぐれとも取れるディレクションが、いかにして数々の名曲を生み出したかを示すエピソードだ。</p>
+      <h2>「彼はやってきて『ホーンは気に入らない。外してくれ。また後でやろう。じゃあね。』と言い、後で戻ってきて『ああ、最高だ！もっとハーモニーを！』と言った」：80年代の名曲に見るジョルジオ・モロダーの天才性</h2>
+      <p class="summary">80年代の音楽制作におけるジョルジオ・モロダーの天才的なアプローチと、彼の独特なディレクションスタイルが、当時のアーティストの言葉を通して語られています。予測不能で直感的な彼の制作手法が、どのようにして数々の名曲を生み出したのかが垣間見えます。伝説的プロデューサーのクリエイティブプロセスに焦点を当てた興味深い記事です。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">この記事は、ジョルジオ・モロダーが制作現場で示した自由奔放ながらも的確な判断力に焦点を当てている。「ジョルジオがおならをしても、私はそれを歌っていただろう！」というコメントは、彼がどれほどアーティストから信頼され、そのビジョンが尊重されていたかを物語る。彼の制作プロセスは、論理よりも感覚を重視し、アーティストの潜在能力を引き出すことに長けていたことを示しており、80年代のディスコやシンセポップサウンドの形成に決定的な影響を与えたモロダーの偉大さを再認識させるため、音楽業界トレンドとして有益です。</p>
+        <p class="detail-text">ジョルジオ・モロダーは、ディスコやエレクトロニックミュージックのパイオニアとして知られ、ドナ・サマーをはじめとする多くのアーティストのヒット曲を手がけました。この記事では、彼がスタジオでアーティストとどのように協働し、最終的なサウンドを形成していったか、その瞬間の判断力や音楽的直感が強調されています。例えば、「彼はおならをしても私が歌っただろう！」という発言は、彼の音楽的ビジョンへの絶大な信頼と、それに従うアーティストの姿勢を示しており、当時の制作現場の雰囲気を伝えています。</p>
       </details>
-      <p class="source-name">📰 MusicRadar</p>
+      <a class="source-link" href="https://www.musicradar.com/artists/he-would-blow-in-and-say-i-dont-like-the-horns-take-them-out-well-do-more-later-okay-bye-then-hed-return-later-oh-i-love-it-do-more-harmonies-the-genius-of-giorgio-moroder-in-an-80s-classic" target="_blank" rel="noopener">📰 MusicRadar</a>
     </div>
 <div class="item" style="animation-delay:0.40s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>グリッドから外れて：スウィングとは何か、そしてそれを加える方法</h2>
-      <p class="summary">このチュートリアル記事は、音楽トラックにスウィング感を加える基本的な方法を解説している。スウィングがトラックに跳ねるような活気あるエネルギーを注入し、ストレートなビートにはないグルーヴを生み出すメカニズムを、Ableton Liveを例に挙げながら、ステップバイステップで説明している。</p>
+      <h2>グリッドを外す：スウィングとは何か、そしてそれをトラックに追加する方法</h2>
+      <p class="summary">このチュートリアル記事では、DAWでトラックにスウィングを加える方法の基本を解説しています。スウィングがどのようにして「バウンス、スナップ、活気あるエネルギー」をトラックにもたらすかを説明し、Ableton Liveを例に具体的な適用手順をステップバイステップで示しています。初心者から中級者まで、より人間味のあるグルーヴを楽曲に与えたいDTMユーザーにとって有益な情報源です。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">スウィングの理論として、拍の弱い部分をグリッドからずらすことで生まれる「50%以上のスウィング」が紹介されており、52%、64%、73%といった具体的なスウィング量の違いをオーディオ例と共に示している。Ableton LiveのGroove Pool機能を使った簡単な適用方法や、手動での調整、そしてドラムだけでなく他の要素にもスウィングを適用することで、トラック全体に一体感のあるグルーヴを生み出す方法が詳述されている。生産性・習慣系の知見として有益な記事です。</p>
+        <p class="detail-text">スウィングの理論として、拍の弱い部分をグリッドからずらすことでグルーヴを生成する仕組みを説明し、直立したリズムとスウィングしたリズムの聴覚的違いを具体例と共に示しています。Ableton LiveのGroove Pool機能を使って、手動でノートを移動させる手間なく、簡単にスウィングを適用する方法を詳しく紹介。さらに、ドラムだけでなく、リード、ベースライン、サンプルなど、楽曲のあらゆる要素にスウィングを適用することで得られる効果についても触れています。記事には音声サンプルも含まれており、視覚と聴覚の両方で理解を深めることができます。</p>
       </details>
-      <p class="source-name">📰 Attack Magazine</p>
+      <a class="source-link" href="https://www.attackmagazine.com/technique/tutorials/going-off-grid-what-is-swing-and-how-to-add-it/" target="_blank" rel="noopener">📰 Attack Magazine</a>
     </div>
 <div class="item" style="animation-delay:0.45s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
       <h2>二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026からのレポート</h2>
-      <p class="summary">筆者はドイツの行政手続きの問題でSuperboothを欠席する代わりに、ロンドンで開催された「London Synth & Pedal Expo 2026」に参加し、そのイベントレポートを公開した。このエキスポは、小規模ながらも多くのメーカーが出展し、来場者との距離が近い熱気あるイベントであったと報告されている。</p>
+      <p class="summary">著者がSuperboothを欠席する代わりに、ロンドンで開催された「London Synth & Pedal Expo 2026」に参加したレポート記事です。このイベントは、ハードウェアシンセサイザーやペダルに特化しており、様々なメーカーの製品が展示されました。Superboothのような大規模イベントとは異なる、より親密な雰囲気で、新しい機材との出会いや業界のトレンドを感じられた体験が共有されています。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">レポートでは、Arturia、Moog、Korgなどの大手から、The Monk ProjectのジェネラティブシーケンサーTMA1、アイスランドのGenki InstrumentsによるポリフォニックシンセKatla、スマートフォンのモーションコントローラーアプリFlowfalといった革新的な製品まで、約50のメーカーの製品が紹介されている。特にKatlaは火山岩のノブを使用するなどユニークな特徴を持ち、Blade Runnerのようなリッチで有機的なサウンドを生成すると評価されている。音楽業界トレンドとして有益なイベントレポートです。</p>
+        <p class="detail-text">ロンドンのハックニー・ウィックで開催されたこのイベントは、Delicious Audio Events、KMR Audio、guitarguitarが主催しました。Arturia、Moog、Korgといった大手から、Melbourne Instruments、1010 Music、Dreadboxなどの新興メーカーまで約50社が出展。特に、The Monk Projectのジェネレーティブシーケンサー「TMA1」や、アイスランドのGenki Instrumentsが開発したポリフォニックラックマウントシンセ「Katla」などが注目されました。Katlaは火山岩をノブやサイドプレートに使用したユニークなデザインで、デジタルオシレーターながら有機的なサウンドが評価されています。また、スマートフォンをAbleton Liveの3Dモーションコントローラーに変える無料アプリ「Flowfal」も紹介されており、ハードウェアとソフトウェアの融合の進展も見受けられます。</p>
       </details>
-      <p class="source-name">📰 Attack Magazine</p>
+      <a class="source-link" href="https://www.attackmagazine.com/reviews/gear-software/a-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026/" target="_blank" rel="noopener">📰 Attack Magazine</a>
     </div>
 <div class="item" style="animation-delay:0.50s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
       <h2>Marian (BR)：「ハウスミュージックのルーツを学べ」</h2>
-      <p class="summary">ハウスミュージックプロデューサーのMarian (BR)が、自身の音楽的ルーツであるシカゴハウスの影響、制作哲学、そしてキャリアの転機となったイビサでの経験について語ったインタビュー記事。彼は、常にダンスフロアを意識し、シンプルながらも効果的なグルーヴを追求する姿勢を強調している。</p>
+      <p class="summary">新進気鋭のハウスプロデューサーMarian (BR)が、自身の音楽的ルーツやキャリア、そして成功への道のりについて語ったインタビュー記事です。彼はシカゴハウスに根差したグルーヴ重視のサウンドで注目を集め、「Swing Bom」がイビサのPacha IbizaでのMusic Onシーズンに採用されるなど、急速に国際的な認知度を高めています。彼の哲学は、音楽の「シンプルさ」と「ダンスフロアへの意識」にあります。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Marian (BR)は、Jamie JonesやThe Martinez BrothersといったトップDJが彼のトラックをプレイしたことで注目を集め、Hot CreationsやElrow Musicなどの有名レーベルからリリースしている。「Swing Bom」がPacha IbizaのMusic Onシーズン公式アフタームービーに選ばれたことは、彼にとって大きな節目となった。彼は、成功の秘訣として、ハウスミュージックのルーツを学び、クラブに足を運び、常に質の高い音楽を作り続けること、そして認識を追うのではなく、クラフトへの愛を大切にすることだとアドバイスしているため、音楽業界トレンドとして有益です。</p>
+        <p class="detail-text">Marian (BR)は、初期のシカゴハウスに深く影響を受け、サンプルの使い方、ボーカルのキャラクター、ピアノやオルガンの音色、そしてサチュレートされたドラムサウンドを自身のプロダクションに活用していると述べています。彼のトラックは、Jamie JonesやThe Martinez Brothersなど、多くの著名DJにプレイされており、Hot CreationsやElrow Musicといった有名レーベルからもリリースされています。特に「Swing Bom」がMarco Carolaによってイビサでヘビーローテーションされたことは、彼のキャリアの大きな転換点となりました。彼は、成功するためには「ハウスミュージックのルーツを学び、クラブで時間を過ごし、先行者から学び、拒絶に備えること」が重要だとアドバイスしています。</p>
       </details>
-      <p class="source-name">📰 Attack Magazine</p>
+      <a class="source-link" href="https://www.attackmagazine.com/features/interview/marian-br-study-the-roots-of-house-music/" target="_blank" rel="noopener">📰 Attack Magazine</a>
     </div>
 <div class="item" style="animation-delay:0.55s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
       <h2>DTM初心者のためのオーディオインターフェイスの選び方2026</h2>
-      <p class="summary">DTMを始める上で不可欠な機材であるオーディオインターフェイスの選び方について解説した初心者向けガイド記事。数多くの製品が市場に出回る中、自分に合った最適な一台を見つけるためのポイントが詳しく説明されているため、生産性・習慣系の知見として有益です。</p>
+      <p class="summary">DTMを始める上で不可欠な機材であるオーディオインターフェイスの選び方について、初心者向けに解説する記事です。オーディオインターフェイスの役割や、市場に流通する多数の製品の中から自分に合った一台を見つけるためのポイントが詳しく説明されています。DTMの初期投資を検討している方にとって、非常に実用的なガイドとなります。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">オーディオインターフェイスは、パソコンとマイクや楽器などのオーディオ機器を接続し、音の入出力を行うためのデバイス。記事では、主に音質、入出力端子の種類と数、接続方式（USB、Thunderboltなど）、付属ソフトウェア、予算などを考慮した選び方を提案していると予想される。特に、レイテンシー（遅延）の少なさや安定性、Windows/macOSとの互換性なども重要な要素として挙げられるだろう。</p>
+        <p class="detail-text">この記事では、オーディオインターフェイスが音質の向上、低レイテンシーでの録音・再生、マイクや楽器の接続といったDTMにおける基本的な機能を提供することを強調しています。選ぶ際のポイントとして、入出力の数、接続方式（USB、Thunderboltなど）、対応OS、音質、搭載されているプリアンプの性能、付属ソフトウェア、価格帯などが挙げられるでしょう。DTMステーションが毎年更新している定番ガイドであり、最新の製品情報やトレンドも踏まえた上で、初心者が後悔しない機材選びができるよう具体的なアドバイスが期待されます。</p>
       </details>
-      <p class="source-name">📰 DTMステーション</p>
+      <a class="source-link" href="https://www.dtmstation.com/archives/51971048.html" target="_blank" rel="noopener">📰 DTMステーション</a>
     </div>
     </section>
   </main>
   <script>
+    // ダークモード
     const btn = document.getElementById('darkBtn');
     const root = document.documentElement;
     const saved = localStorage.getItem('theme') || 'light';
@@ -459,6 +500,24 @@
       root.dataset.theme = dark ? 'dark' : 'light';
       btn.textContent = dark ? '☀️ ライト' : '🌙 ダーク';
       localStorage.setItem('theme', root.dataset.theme);
+    });
+
+    // カテゴリフィルター
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.cat;
+        document.querySelectorAll('.category-section, .urgent-section').forEach(sec => {
+          if (cat === 'all') {
+            sec.style.display = '';
+          } else if (cat === 'urgent') {
+            sec.style.display = sec.classList.contains('urgent-section') ? '' : 'none';
+          } else {
+            sec.style.display = sec.dataset.cat === cat ? '' : 'none';
+          }
+        });
+      });
     });
   </script>
 </body>
