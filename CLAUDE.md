@@ -59,20 +59,25 @@ filter:
   include_keywords: ["AI", "LLM", "automation"]
   exclude_keywords: ["crypto", "NFT"]
 
-sources:
-  techcrunch_rss: true
-  arxiv: true
-  hackernews: true
-  reddit: true
-  domestic_rss: true
-  # 音楽・DTM系
-  bedroom_producers_blog: true   # プラグイン・音源の無料配布・新作
-  kvr_audio: true                # VST/AUプラグイン新着・セール情報
-  musicradar: true               # 機材・DAW・制作テクニック全般
-  attack_magazine: true          # 電子音楽・ミックス・マスタリング寄り
-  dtm_station: true              # 国内DTM情報
-  reddit_WeAreTheMusicMakers: true
-  reddit_edmproduction: true
+categories:
+  テック・AI:
+    - techcrunch_rss
+    - arxiv
+    - hackernews
+    - reddit
+    - domestic_rss
+  音楽・DTM:
+    - bedroom_producers_blog
+    - kvr_audio
+    - musicradar
+    - attack_magazine
+    - dtm_station
+    - reddit_WeAreTheMusicMakers
+    - reddit_edmproduction
+  ビジネス:
+    - hbr
+    - toyo_keizai
+    - diamond_online
 
 summary:
   language: "ja"
@@ -109,25 +114,9 @@ digest:
 
 ### Discordの出力フォーマット
 ```
-🤖 【テック・AI】今日のまとめ
-─────────────────
-**① OpenAI / エージェントAIの加速**
-新モデル発表とMicrosoftのCopilot刷新が重なり、
-エージェント型AIへの移行が業界全体で加速。
-
-**② RAG精度改善の新潮流**
-arXivで関連論文が複数公開。
-「何を検索しないか」の設計が重要という知見が増えている。
-
-**③ OSS LLMのコスト競争**
-Llama系の新モデルがコスト比で更新。
-Claude / GPT-4oとの使い分けが現実的な選択肢に。
-
-📎 参照記事
-・https://techcrunch.com/...
-・https://arxiv.org/...
-・https://news.ycombinator.com/...
+今日のまとめを更新しました → https://aason-aason.github.io/news-digest/
 ```
+※ 🔴緊急アラートがある日のみ内容も合わせて通知する
 
 ### summarizer.pyへの影響
 - 単記事要約ではなく、複数記事（タイトル+本文冒頭）をまとめてプロンプトに渡す
@@ -160,7 +149,7 @@ Claude / GPT-4oとの使い分けが現実的な選択肢に。
 
 | フェーズ | 内容 | 状態 |
 |----------|------|------|
-| Phase 1 | RSS + Claude + Discord 最小構成 | 🔲 未着手 |
+| Phase 1 | RSS + Gemini + Discord 最小構成 | ✅ 完了 |
 | Phase 2 | arXiv / HackerNews / Reddit 追加 | 🔲 未着手 |
 | Phase 3 | Groq fallback / コスト監視 | 🔲 未着手 |
 | Phase 4 | X投稿ソース追加 | 🔲 後日 |
@@ -191,6 +180,9 @@ Claude / GPT-4oとの使い分けが現実的な選択肢に。
 | dtm_station | https://dtmstation.com/feed |
 | reddit_WeAreTheMusicMakers | Reddit API（r/WeAreTheMusicMakers） |
 | reddit_edmproduction | Reddit API（r/edmproduction） |
+| hbr | http://feeds.harvardbusiness.org/harvardbusiness |
+| toyo_keizai | https://toyokeizai.net/list/feed/rss |
+| diamond_online | https://diamond.jp/feed/top |
 
 
 
@@ -201,8 +193,48 @@ Claude / GPT-4oとの使い分けが現実的な選択肢に。
 
 ---
 
-## 申し送り事項
-（最初のセッション開始時に追記すること）
+## 申し送り事項（2026-04-07時点）
+
+### 現在の実装状況
+
+**AI要約**
+- Gemini 2.5 Flash を使用（当初Claude APIの予定だったがGemini Flashに変更）
+- 環境変数: `GEMINI_API_KEY`（Claude APIは未使用）
+- 出力形式: JSON配列（category / title / importance / summary / detail / source_name / url）
+
+**RSSソース（稼働中）**
+- テック: TechCrunch, TechCrunch Startups
+- ビジネス: The Hustle, IndieHackers, Harvard Business Review, 東洋経済オンライン, ダイヤモンド・オンライン
+- 音楽・DTM: Bedroom Producers Blog, KVR Audio, MusicRadar, Attack Magazine, DTMステーション
+- 1ソースあたり3件取得（config.yaml の max_articles_per_feed）
+
+**GitHub Actions**
+- cron: 毎日UTC 22:00（JST 翌7:00）
+- ワークフロー: `.github/workflows/digest.yml`
+- docs/index.html を自動コミット＆プッシュ
+
+**GitHub Pages**
+- 公開URL: https://aason-aason.github.io/news-digest/
+- ソース: mainブランチ / docs フォルダ
+
+**Discord通知**
+- 環境変数: `DISCORD_WEBHOOK_URL`
+- メッセージ: 「今日のまとめを更新しました → {URL}」
+
+**UI**
+- スマホ優先・1カラム
+- 上部フィルターバー（カテゴリ切り替え）
+- 🔴緊急アラートは最上部に別枠表示
+- カード形式（重要度バッジ・要約・もっと詳しく・ソース名リンク）
+- ダークモード対応（localStorage保存）
+
+### 未実装・課題
+- config.yamlの `schedule.cron` とActionsのcronが連動していない（手動合わせ）
+- arXiv / HackerNews / Reddit は未実装
+- Groq fallback 未実装
+- 過去ダイジェストのアーカイブ（archive/YYYY-MM-DD.html）未実装
+- deploy.sh でコミットメッセージが常に "update" になっている
+
 ---
 
 ## 重要度判断基準（確定）
@@ -236,6 +268,11 @@ ClaudeがあーそんIncの文脈で記事の重要度を判断する基準。
 - クラウドワークスの手数料・規約変更
 - AI動画生成ツールの進化（Sora・Runway系）
 - X・Instagramのアルゴリズム変更
+- コミドネの競合・類似プロダクトの価格変更・新機能
+- サブスク型個人プロダクトの収益化事例
+- クリエイター向けマネタイズの新手法
+- 個人開発者の撤退・失敗事例
+- App Store・Google Playのランキング動向
 
 ### 🟢 有益（時間あるときに）
 - AI・テックの一般的な動向
@@ -245,6 +282,12 @@ ClaudeがあーそんIncの文脈で記事の重要度を判断する基準。
 - 個人開発者のマーケティング事例
 - 生産性・習慣系の知見
 - 著作権・音楽ライセンスの動向
+- 個人ブランディング・SNS戦略の事例
+- ソロ起業家・ひとり法人の経営ノウハウ
+- クリエイターエコノミーの市場動向
+- 個人開発者のプロダクト成長事例
+- 個人開発×AIツール活用の最新動向
+- 海外インディーハッカーの収益公開情報
 
 ### 表示ルール
 - 🔴 は最上部に別枠で表示・Discordにも即時通知
