@@ -31,16 +31,16 @@ rss:
       url: "https://www.dtmstation.com/feed"
       categories: ["DTM"]
 
-    # ビジネス / 経済（重複ソースはcategoriesで両方指定）
+    # ビジネス / 経済（AIが内容を判断して振り分け）
     - name: "Harvard Business Review"
       url: "https://hbr.org/feed"
-      categories: ["ビジネス", "経済"]
+      categories: ["ビジネス経済"]
     - name: "東洋経済オンライン"
       url: "https://toyokeizai.net/list/feed/rss"
-      categories: ["ビジネス", "経済"]
+      categories: ["ビジネス経済"]
     - name: "ダイヤモンド・オンライン"
       url: "https://diamond.jp/feed/top"
-      categories: ["ビジネス", "経済"]
+      categories: ["ビジネス経済"]
 
     # Phase 2で追加予定（RSS以外）
     # - name: "arXiv"             # categories: ["テック・AI"]
