@@ -6,7 +6,20 @@ fetcher.py: 複数RSSソースから記事を取得する
 カテゴリごとに記事エントリを複製して返す。
 """
 
+import socket
 import feedparser
+
+DEFAULT_TIMEOUT = 30  # 通常ソースのタイムアウト（秒）
+
+
+def _parse_with_timeout(url: str, timeout: int) -> feedparser.FeedParserDict:
+    """タイムアウト付きでRSSをパースする。"""
+    prev = socket.getdefaulttimeout()
+    try:
+        socket.setdefaulttimeout(timeout)
+        return feedparser.parse(url)
+    finally:
+        socket.setdefaulttimeout(prev)
 
 
 def fetch_articles(config: dict) -> list[dict]:
@@ -19,10 +32,15 @@ def fetch_articles(config: dict) -> list[dict]:
     for source in sources:
         # categories（リスト）または category（文字列）に対応
         categories = source.get("categories") or [source.get("category", "")]
+        timeout = source.get("timeout", DEFAULT_TIMEOUT)
 
         try:
-            feed = feedparser.parse(source["url"])
+            feed = _parse_with_timeout(source["url"], timeout)
             entries = feed.entries[:max_per_feed]
+
+            if not entries:
+                print(f"  [情報] {source['name']}: 記事0件（空フィードまたは取得失敗）")
+                continue
 
             for category in categories:
                 for entry in entries:
@@ -36,6 +54,6 @@ def fetch_articles(config: dict) -> list[dict]:
                     })
 
         except Exception as e:
-            print(f"  [警告] {source['name']} の取得に失敗: {e}")
+            print(f"  [警告] {source['name']} の取得をスキップ: {e}")
 
     return articles

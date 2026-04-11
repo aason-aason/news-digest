@@ -31,6 +31,15 @@ rss:
       url: "https://www.dtmstation.com/feed"
       categories: ["DTM"]
 
+    # ビジネス（固定）
+    - name: "IndieHackers"
+      url: "https://ihrss.io/feed"
+      categories: ["ビジネス"]
+      timeout: 10   # 不安定なため短めに設定（失敗時はスキップ）
+    - name: "note クリエイター収益"
+      url: "https://note.com/hashtag/クリエイター収益/rss"
+      categories: ["ビジネス"]
+
     # ビジネス / 経済（AIが内容を判断して振り分け）
     - name: "Harvard Business Review"
       url: "https://hbr.org/feed"
