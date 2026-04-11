@@ -27,7 +27,10 @@ jobs:
       - name: ダイジェストを生成
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GMAIL_SENDER: ${{nobu.dougahennsyuu@gmail.com}}
+　　　　　　GMAIL_APP_PASSWORD: ${{ wahy gmzf kioq qmul }}
+
+
         run: python main.py
 
       - name: docs/ をコミット＆プッシュ
