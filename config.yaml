@@ -1,42 +1,52 @@
 rss:
   max_articles_per_feed: 3
   sources:
+    # テック・AI
     - name: "TechCrunch"
       url: "https://techcrunch.com/feed/"
-      category: "テック"
+      categories: ["テック・AI"]
     - name: "TechCrunch Startups"
       url: "https://techcrunch.com/category/startups/feed/"
-      category: "ビジネス"
-    - name: "The Hustle"
-      url: "https://thehustle.co/feed/"
-      category: "ビジネス"
-    - name: "IndieHackers"
-      url: "https://www.indiehackers.com/feed.rss"
-      category: "ビジネス"
-    - name: "Harvard Business Review"
-      url: "https://hbr.org/feed"
-      category: "ビジネス"
-    - name: "東洋経済オンライン"
-      url: "https://toyokeizai.net/list/feed/rss"
-      category: "ビジネス"
-    - name: "ダイヤモンド・オンライン"
-      url: "https://diamond.jp/feed/top"
-      category: "ビジネス"
-    - name: "Bedroom Producers Blog"
-      url: "https://bedroomproducersblog.com/feed/"
-      category: "音楽・DTM"
-    - name: "KVR Audio"
-      url: "https://www.kvraudio.com/news.rss"
-      category: "音楽・DTM"
+      categories: ["テック・AI"]
+
+    # Anthropic
+    - name: "Anthropic Blog"
+      url: "https://www.anthropic.com/news/rss.xml"
+      categories: ["Anthropic"]
+
+    # 音楽 / DTM（重複ソースはcategoriesで両方指定）
     - name: "MusicRadar"
       url: "https://www.musicradar.com/feeds/all"
-      category: "音楽・DTM"
+      categories: ["音楽", "DTM"]
     - name: "Attack Magazine"
       url: "https://www.attackmagazine.com/feed/"
-      category: "音楽・DTM"
+      categories: ["音楽", "DTM"]
+    - name: "Bedroom Producers Blog"
+      url: "https://bedroomproducersblog.com/feed/"
+      categories: ["DTM"]
+    - name: "KVR Audio"
+      url: "https://www.kvraudio.com/news.rss"
+      categories: ["DTM"]
     - name: "DTMステーション"
       url: "https://www.dtmstation.com/feed"
-      category: "音楽・DTM"
+      categories: ["DTM"]
+
+    # ビジネス / 経済（重複ソースはcategoriesで両方指定）
+    - name: "Harvard Business Review"
+      url: "https://hbr.org/feed"
+      categories: ["ビジネス", "経済"]
+    - name: "東洋経済オンライン"
+      url: "https://toyokeizai.net/list/feed/rss"
+      categories: ["ビジネス", "経済"]
+    - name: "ダイヤモンド・オンライン"
+      url: "https://diamond.jp/feed/top"
+      categories: ["ビジネス", "経済"]
+
+    # Phase 2で追加予定（RSS以外）
+    # - name: "arXiv"             # categories: ["テック・AI"]
+    # - name: "HackerNews"        # categories: ["テック・AI"]
+    # - name: "Reddit WeAreTheMusicMakers"  # categories: ["音楽"]
+    # - name: "Reddit edmproduction"        # categories: ["DTM"]
 
 gemini:
   model: "gemini-2.5-flash"
