@@ -109,12 +109,18 @@ nullになった記事はJSONに含めないでください。
 {articles_text}
 """
 
-    response = client.models.generate_content(
-        model=config["gemini"]["model"],
-        contents=prompt,
-    )
+    try:
+        response = client.models.generate_content(
+            model=config["gemini"]["model"],
+            contents=prompt,
+        )
+    except Exception as e:
+        print(f"[ERROR] Gemini API呼び出し失敗: {e}", flush=True)
+        raise
 
     text = response.text.strip()
+    print(f"[DEBUG] Gemini応答（先頭200文字）: {text[:200]}", flush=True)
+
     match = re.search(r'\[.*\]', text, re.DOTALL)
     if match:
         try:
@@ -124,10 +130,12 @@ nullになった記事はJSONに含めないでください。
                 idx = item.pop("article_index", None)
                 if idx and idx in url_map:
                     item["url"] = url_map[idx]
+            print(f"[DEBUG] パース成功: {len(items)}件", flush=True)
             return items
         except json.JSONDecodeError as e:
-            logger.error(f"JSONパースエラー: {e}")
+            print(f"[ERROR] JSONパースエラー: {e}", flush=True)
+            print(f"[ERROR] 生のレスポンス: {text[:500]}", flush=True)
             return []
 
-    logger.error("JSONが見つかりませんでした")
+    print(f"[ERROR] JSONが見つかりませんでした。応答全文:\n{text[:1000]}", flush=True)
     return []
