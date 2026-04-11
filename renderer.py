@@ -263,6 +263,53 @@ def render_html(articles: list[dict], config: dict) -> str:
       margin-top: 2px;
     }}
     .source-link:hover {{ text-decoration: underline; }}
+    .actions {{
+      display: flex;
+      gap: 8px;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      flex-wrap: wrap;
+    }}
+    .action-btn {{
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: none;
+      color: var(--subtext);
+      font-size: 0.8rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }}
+    .action-btn:hover {{ background: var(--border); color: var(--text); }}
+    .action-btn.star-btn.starred {{
+      border-color: #f5a623;
+      color: #f5a623;
+      background: #fff8ed;
+    }}
+    [data-theme="dark"] .action-btn.star-btn.starred {{
+      background: #2a2010;
+    }}
+    .toast {{
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #333;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      opacity: 0;
+      transition: all 0.3s;
+      pointer-events: none;
+      z-index: 999;
+    }}
+    .toast.show {{ opacity: 1; transform: translateX(-50%) translateY(0); }}
   </style>
 </head>
 <body>
@@ -282,7 +329,16 @@ def render_html(articles: list[dict], config: dict) -> str:
     {urgent_html}
     {sections_html}
   </main>
+  <div class="toast" id="toast"></div>
   <script>
+    // トースト通知
+    function showToast(msg) {{
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2000);
+    }}
+
     // ダークモード
     const btn = document.getElementById('darkBtn');
     const root = document.documentElement;
@@ -313,6 +369,42 @@ def render_html(articles: list[dict], config: dict) -> str:
         }});
       }});
     }});
+
+    // ⭐ 星ボタン（localStorage保存）
+    const STAR_KEY = 'starred_articles';
+    function getStarred() {{ return JSON.parse(localStorage.getItem(STAR_KEY) || '[]'); }}
+    function saveStarred(arr) {{ localStorage.setItem(STAR_KEY, JSON.stringify(arr)); }}
+
+    document.querySelectorAll('.star-btn').forEach(btn => {{
+      const id = btn.dataset.id;
+      if (getStarred().includes(id)) btn.classList.add('starred');
+      btn.addEventListener('click', () => {{
+        let arr = getStarred();
+        if (arr.includes(id)) {{
+          arr = arr.filter(x => x !== id);
+          btn.classList.remove('starred');
+          showToast('保存を解除しました');
+        }} else {{
+          arr.push(id);
+          btn.classList.add('starred');
+          showToast('⭐ 保存しました');
+        }}
+        saveStarred(arr);
+      }});
+    }});
+
+    // 🤖 Claudeに聞くボタン（クリップボードコピー）
+    document.querySelectorAll('.claude-btn').forEach(btn => {{
+      btn.addEventListener('click', () => {{
+        const title = btn.dataset.title;
+        navigator.clipboard.writeText(title).then(() => {{
+          showToast('タイトルをコピーしました');
+          setTimeout(() => window.open('https://claude.ai/new', '_blank'), 300);
+        }}).catch(() => {{
+          window.open('https://claude.ai/new', '_blank');
+        }});
+      }});
+    }});
   </script>
 </body>
 </html>
@@ -336,6 +428,7 @@ def _importance_badge(importance: str) -> str:
 
 def _build_item(article: dict, delay: float) -> str:
     """1記事分のカードHTMLを返す。"""
+    import urllib.parse
     title       = article.get("title", "")
     summary     = article.get("summary", "")
     detail      = article.get("detail", "")
@@ -343,6 +436,9 @@ def _build_item(article: dict, delay: float) -> str:
     url         = article.get("url", "")
     importance  = article.get("importance", "🟢")
     badge       = _importance_badge(importance)
+
+    # 記事の一意ID（URLベース）
+    article_id = urllib.parse.quote(url, safe="") if url else urllib.parse.quote(title, safe="")
 
     detail_block = ""
     if detail:
@@ -358,6 +454,19 @@ def _build_item(article: dict, delay: float) -> str:
     else:
         source_block = ""
 
+    # X投稿用 Twitter Intent URL
+    tweet_text = urllib.parse.quote(f"{title} {url}" if url else title, safe="")
+    tweet_url  = f"https://twitter.com/intent/tweet?text={tweet_text}"
+
+    # タイトルのHTMLエスケープ（data属性用）
+    title_escaped = title.replace('"', '&quot;')
+
+    actions = f"""<div class="actions">
+        <button class="action-btn star-btn" data-id="{article_id}">⭐ 保存</button>
+        <a class="action-btn" href="{tweet_url}" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="{title_escaped}">🤖 Claudeに聞く</button>
+      </div>"""
+
     return f"""<div class="item" style="animation-delay:{delay:.2f}s">
       <div class="item-header">
         {badge}
@@ -366,6 +475,7 @@ def _build_item(article: dict, delay: float) -> str:
       <p class="summary">{summary}</p>
       {detail_block}
       {source_block}
+      {actions}
     </div>"""
 
 
