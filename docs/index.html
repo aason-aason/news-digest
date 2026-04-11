@@ -58,6 +58,16 @@
     }
     header h1 { font-size: 1.1rem; font-weight: 800; }
     header .date { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .saved-link {
+      font-size: 0.82rem;
+      color: var(--subtext);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 12px;
+      transition: background 0.2s;
+    }
+    .saved-link:hover { background: var(--border); }
     .dark-btn {
       background: none;
       border: 1px solid var(--border);
@@ -111,7 +121,7 @@
       background: var(--urgent-bg);
       border: 2px solid var(--urgent-border);
       border-radius: 14px;
-      padding: 24px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       gap: 4px;
@@ -175,7 +185,7 @@
     .item .summary {
       font-size: 0.96rem;
       color: var(--subtext);
-      line-height: 1.8;
+      line-height: 1.9;
     }
     details { border-top: 1px solid var(--border); padding-top: 12px; }
     summary {
@@ -205,6 +215,53 @@
       display: inline-block;
       margin-top: 2px;
     }
+    .actions {
+      display: flex;
+      gap: 8px;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      flex-wrap: wrap;
+    }
+    .action-btn {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: none;
+      color: var(--subtext);
+      font-size: 0.8rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .action-btn:hover { background: var(--border); color: var(--text); }
+    .action-btn.star-btn.starred {
+      border-color: #f5a623;
+      color: #f5a623;
+      background: #fff8ed;
+    }
+    [data-theme="dark"] .action-btn.star-btn.starred {
+      background: #2a2010;
+    }
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #333;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      opacity: 0;
+      transition: all 0.3s;
+      pointer-events: none;
+      z-index: 999;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
   </style>
 </head>
 <body>
@@ -214,92 +271,167 @@
         <h1>News Digest</h1>
         <p class="date">2026年04月11日 更新</p>
       </div>
-      <button class="dark-btn" id="darkBtn">🌙 ダーク</button>
+      <div style="display:flex;gap:8px;align-items:center">
+        <a class="saved-link" href="saved.html">⭐ 保存済み</a>
+        <button class="dark-btn" id="darkBtn">🌙 ダーク</button>
+      </div>
     </div>
     <div class="filter-bar">
       <button class="filter-btn active" data-cat="all">すべて</button>
-<button class="filter-btn" data-cat="テック" style="--c:#1a73e8">テック</button>
+<button class="filter-btn" data-cat="テック・AI" style="--c:#666">テック・AI</button>
 <button class="filter-btn" data-cat="音楽" style="--c:#666">音楽</button>
 <button class="filter-btn" data-cat="DTM" style="--c:#666">DTM</button>
-<button class="filter-btn" data-cat="ビジネス" style="--c:#e67e22">ビジネス</button>
+<button class="filter-btn" data-cat="経済" style="--c:#666">経済</button>
 
     </div>
   </header>
   <main>
     
-    <section class="category-section" data-cat="テック">
-      <p class="category-label" style="color:#1a73e8">● テック</p>
+    <section class="category-section" data-cat="テック・AI">
+      <p class="category-label" style="color:#666">● テック・AI</p>
       <div class="item" style="animation-delay:0.00s">
       <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
+        <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>Nvidia出資のSiFive、オープンAIチップで36.5億ドルの評価額を達成</h2>
-      <p class="summary">Nvidiaが出資するチップ設計企業SiFiveが、オープンAIチップの分野で36.5億ドルの評価額を達成した。この評価額は、SiFiveのチップ設計が一般的なx86やARMではなく、オープンソースのRISC-Vアーキテクチャに基づいている点で特に注目される。これは、AIチップ市場におけるRISC-Vの潜在的な影響力と多様化を強く示唆している。</p>
+      <h2>サム・アルトマン、自宅襲撃後にNew Yorkerの「扇動的な」記事に反論</h2>
+      <p class="summary">OpenAIのCEOであるサム・アルトマンが、自身の自宅への襲撃事件と、信頼性に疑問を呈したNew Yorker誌の深掘り記事に対し、新たなブログ投稿で反論した。この一連の出来事は、アルトマンのリーダーシップとOpenAIの内部状況に関する懸念を再燃させている。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">SiFiveは、RISC-V命令セットアーキテクチャを基盤としたカスタムチップを提供しており、この評価額はNvidiaのような大手企業からの強力な支持と、AIワークロードに特化した効率的なソリューションへの需要が高まっていることを反映している。AI開発の加速に伴い、より柔軟でカスタマイズ可能なチップ設計が求められており、RISC-Vはそのニーズに応える可能性を秘めている。この動きは、今後のAIチップ市場の競争環境と技術革新に大きな影響を与えるだろう。</p>
+        <p class="detail-text">アルトマンは、New Yorkerの記事が事実誤認と誤解を招く内容を含んでいると主張し、自宅への「暴力的かつ違法な侵入」についても言及した。この事件は、AI業界の著名な人物に対する注目度と、それを取り巻く議論の激化を示している。彼の反応は、同社のガバナンスと、業界内での彼の役割についてさらなる議論を呼ぶ可能性がある。</p>
       </details>
       <span class="source-name">📰 TechCrunch</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F11%2Fsam-altman-responds-to-incendiary-new-yorker-article-after-attack-on-his-home%2F"
+          data-title="サム・アルトマン、自宅襲撃後にNew Yorkerの「扇動的な」記事に反論"
+          data-summary="OpenAIのCEOであるサム・アルトマンが、自身の自宅への襲撃事件と、信頼性に疑問を呈したNew Yorker誌の深掘り記事に対し、新たなブログ投稿で反論した。この一連の出来事は、アルトマンのリーダーシップとOpenAIの内部状況に関する懸念を再燃させている。"
+          data-source="TechCrunch"
+          data-url="https://techcrunch.com/2026/04/11/sam-altman-responds-to-incendiary-new-yorker-article-after-attack-on-his-home/"
+          data-importance="🟢"
+          data-category="テック・AI">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B5%E3%83%A0%E3%83%BB%E3%82%A2%E3%83%AB%E3%83%88%E3%83%9E%E3%83%B3%E3%80%81%E8%87%AA%E5%AE%85%E8%A5%B2%E6%92%83%E5%BE%8C%E3%81%ABNew%20Yorker%E3%81%AE%E3%80%8C%E6%89%87%E5%8B%95%E7%9A%84%E3%81%AA%E3%80%8D%E8%A8%98%E4%BA%8B%E3%81%AB%E5%8F%8D%E8%AB%96%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F11%2Fsam-altman-responds-to-incendiary-new-yorker-article-after-attack-on-his-home%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="サム・アルトマン、自宅襲撃後にNew Yorkerの「扇動的な」記事に反論">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.05s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>サム・アルトマン、自宅襲撃と「扇動的な」ニューヨーカー記事に反論</h2>
-      <p class="summary">OpenAIのCEOサム・アルトマンは、自身の自宅への襲撃事件と、信頼性に疑問を投げかけるニューヨーカー誌の深掘り記事に対し、新たなブログ投稿で反論した。この反論は、AI業界の最重要人物の一人に対する世間の注目度と、同社が直面する内部・外部の課題を示している。彼の信頼性に関する議論は、OpenAIのリーダーシップとその将来に関する憶測をさらに強める可能性がある。</p>
+      <h2>Nvidia支援のSiFive、オープンAIチップで36.5億ドルの評価額に到達</h2>
+      <p class="summary">Nvidiaの支援を受けるSiFiveが、オープンソースのRISC-VベースAIチップ設計で36.5億ドルの評価額に達した。この動きは、従来のx86やARMアーキテクチャに代わるRISC-Vの重要性が高まっていることを示している。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">アルトマンのブログ投稿は、彼が「扇動的」と表現したニューヨーカー誌の記事と、自身の自宅への攻撃の両方に対応するもので、彼の個人的な信頼性やOpenAIのガバナンスに対する懸念が浮上している。この記事は、急速に進化するAI技術をリードする企業において、CEOが公衆の監視下に置かれ、その動向が広く注目されている現状を浮き彫りにしている。OpenAIの方向性や倫理に関する今後の議論にも影響を与える可能性がある。</p>
+        <p class="detail-text">SiFiveは、オープンソースの命令セットアーキテクチャであるRISC-Vに基づいたチップ設計を提供しており、AIチップ市場において独自の地位を確立している。Nvidiaを含む大手企業からの投資は、RISC-VがAIやデータセンター分野で今後も成長する可能性を裏付けている。この技術は、チップ設計の柔軟性とカスタマイズ性を高め、特定用途向けAIハードウェアの発展を加速させることが期待される。</p>
       </details>
       <span class="source-name">📰 TechCrunch</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F11%2Fnvidia-backed-sifive-hits-3-65-billion-valuation-for-open-ai-chips%2F"
+          data-title="Nvidia支援のSiFive、オープンAIチップで36.5億ドルの評価額に到達"
+          data-summary="Nvidiaの支援を受けるSiFiveが、オープンソースのRISC-VベースAIチップ設計で36.5億ドルの評価額に達した。この動きは、従来のx86やARMアーキテクチャに代わるRISC-Vの重要性が高まっていることを示している。"
+          data-source="TechCrunch"
+          data-url="https://techcrunch.com/2026/04/11/nvidia-backed-sifive-hits-3-65-billion-valuation-for-open-ai-chips/"
+          data-importance="🟢"
+          data-category="テック・AI">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=Nvidia%E6%94%AF%E6%8F%B4%E3%81%AESiFive%E3%80%81%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3AI%E3%83%81%E3%83%83%E3%83%97%E3%81%A736.5%E5%84%84%E3%83%89%E3%83%AB%E3%81%AE%E8%A9%95%E4%BE%A1%E9%A1%8D%E3%81%AB%E5%88%B0%E9%81%94%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F11%2Fnvidia-backed-sifive-hits-3-65-billion-valuation-for-open-ai-chips%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="Nvidia支援のSiFive、オープンAIチップで36.5億ドルの評価額に到達">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.10s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>NASAアルテミスII、月ミッションで「完璧な」太平洋着水に成功</h2>
-      <p class="summary">NASAの月ミッション「アルテミスII」の Integrity宇宙船が、太平洋時間の午後5時7分過ぎにサンディエゴ沖の太平洋に着水し、「完璧な」着水に成功した。これは、月への有人飛行に向けた重要なテストミッションが滞りなく完了したことを示している。今後のアルテミス計画の進展に弾みがつき、長期的な月探査への道を開くものとなる。</p>
+      <h2>NASAアルテミスII、太平洋に着水し月ミッションの「完璧な」着陸を達成</h2>
+      <p class="summary">NASAのアルテミスIIミッションのIntegrity宇宙船が、太平洋のサンディエゴ沖に完璧に着水した。これは月への有人飛行に向けた重要な一歩であり、将来の宇宙探査の成功を確実にするためのテストが順調に進んでいることを示す。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">アルテミスIIミッションは、月軌道への有人飛行の事前テストとして実施され、宇宙船の信頼性と乗組員の安全性を検証する目的があった。今回の完璧な着水は、システムの安定性と運用能力の高さを証明し、2026年以降に計画されている有人月面着陸ミッション「アルテミスIII」への大きな一歩となる。これにより、将来的な月面基地建設や火星探査といった、より野心的な宇宙開発計画への期待が高まる。</p>
+        <p class="detail-text">Integrity宇宙船は太平洋時間午後5時7分過ぎに着水し、事前の計画通りにミッションが完了した。アルテミスIIは、月周回飛行ミッションとして、有人月面着陸を目指すアルテミス計画の重要なフェーズである。この成功は、宇宙船のシステムと運用能力を検証し、宇宙飛行士の安全な帰還を保証するために不可欠なデータを提供する。</p>
       </details>
       <span class="source-name">📰 TechCrunch</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F10%2Fnasa-artemis-ii-landing-pacific-ocean-splash-down%2F"
+          data-title="NASAアルテミスII、太平洋に着水し月ミッションの「完璧な」着陸を達成"
+          data-summary="NASAのアルテミスIIミッションのIntegrity宇宙船が、太平洋のサンディエゴ沖に完璧に着水した。これは月への有人飛行に向けた重要な一歩であり、将来の宇宙探査の成功を確実にするためのテストが順調に進んでいることを示す。"
+          data-source="TechCrunch"
+          data-url="https://techcrunch.com/2026/04/10/nasa-artemis-ii-landing-pacific-ocean-splash-down/"
+          data-importance="🟢"
+          data-category="テック・AI">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=NASA%E3%82%A2%E3%83%AB%E3%83%86%E3%83%9F%E3%82%B9II%E3%80%81%E5%A4%AA%E5%B9%B3%E6%B4%8B%E3%81%AB%E7%9D%80%E6%B0%B4%E3%81%97%E6%9C%88%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E3%80%8C%E5%AE%8C%E7%92%A7%E3%81%AA%E3%80%8D%E7%9D%80%E9%99%B8%E3%82%92%E9%81%94%E6%88%90%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F10%2Fnasa-artemis-ii-landing-pacific-ocean-splash-down%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="NASAアルテミスII、太平洋に着水し月ミッションの「完璧な」着陸を達成">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.15s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>TechCrunchが東京で開催されるSusHi Tech 2026にStartup Battlefieldを伴い参加</h2>
-      <p class="summary">テックメディアTechCrunchが、2026年に東京で開催される「SusHi Tech 2026」イベントに参加し、恒例のStartup Battlefieldを日本で実施することを発表した。このイベントはAI、ロボティクス、レジリエンス、エンターテイメントの4つの主要技術領域に焦点を当てる。日本のスタートアップエコシステムにとって、国際的な投資家やメディアに露出する貴重な機会となる。</p>
+      <h2>TechCrunchが東京へ進出 — Startup Battlefieldも開催</h2>
+      <p class="summary">TechCrunchが、AI、ロボティクス、レジリエンス、エンターテイメントの4分野に焦点を当てたSusHi Tech 2026の一環として東京でStartup Battlefieldを開催する。このイベントは、日本のスタートアップエコシステムとグローバルなテックトレンドを結びつける機会を提供する。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">SusHi Tech 2026では、ヒューマノイドロボットのライブデモ、自動運転のソフトウェア革命に関するセッション、サイバー防衛や気候テックに関する深掘り、そしてAIが世界の音楽・アニメ産業をどのように変革しているかについての議論が予定されている。TechCrunchの参加は、日本の技術革新を世界に発信するプラットフォームを提供し、Startup Battlefieldを通じて有望な日本のスタートアップが世界の舞台で競争する機会を与える。これは、日本のテックコミュニティにとって重要なイベントとなるだろう。</p>
+        <p class="detail-text">SusHi Tech 2026は、ヒューマノイドロボットのライブデモ、自動運転ソフトウェア革命に関するセッション、サイバー防衛や気候テックに関する詳細な議論、AIが世界の音楽・アニメ業界をどのように変革しているかについての対談を予定している。このイベントは、日本の技術革新を世界に発信し、新たなビジネスチャンスを創出することを目指している。</p>
       </details>
       <span class="source-name">📰 TechCrunch Startups</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F10%2Ftechcrunch-is-heading-to-tokyo-and-bringing-the-startup-battlefield-with-it%2F"
+          data-title="TechCrunchが東京へ進出 — Startup Battlefieldも開催"
+          data-summary="TechCrunchが、AI、ロボティクス、レジリエンス、エンターテイメントの4分野に焦点を当てたSusHi Tech 2026の一環として東京でStartup Battlefieldを開催する。このイベントは、日本のスタートアップエコシステムとグローバルなテックトレンドを結びつける機会を提供する。"
+          data-source="TechCrunch Startups"
+          data-url="https://techcrunch.com/2026/04/10/techcrunch-is-heading-to-tokyo-and-bringing-the-startup-battlefield-with-it/"
+          data-importance="🟢"
+          data-category="テック・AI">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=TechCrunch%E3%81%8C%E6%9D%B1%E4%BA%AC%E3%81%B8%E9%80%B2%E5%87%BA%20%E2%80%94%20Startup%20Battlefield%E3%82%82%E9%96%8B%E5%82%AC%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F10%2Ftechcrunch-is-heading-to-tokyo-and-bringing-the-startup-battlefield-with-it%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="TechCrunchが東京へ進出 — Startup Battlefieldも開催">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.20s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>資金調達額1億ドル超の全核融合スタートアップ</h2>
-      <p class="summary">核融合エネルギー開発に取り組むスタートアップ企業が、これまでに総額71億ドルを調達しており、その大部分がごく一部の企業に集中していることが明らかになった。この記事は、1億ドル以上を調達した全ての核融合スタートアップをリストアップし、クリーンエネルギー分野への大規模な民間投資の現状を示している。核融合技術が商業化に向けて着実に進展している兆候と見なせる。</p>
+      <h2>1億ドル以上を調達した核融合スタートアップ全リスト</h2>
+      <p class="summary">核融合スタートアップがこれまでに総額71億ドルを調達しており、その大半が数社に集中していることが明らかになった。これは、クリーンエネルギーとしての核融合技術への投資が活発化していることを示している。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">核融合は、究極のクリーンエネルギー源として期待されており、世界中で多くの民間企業が技術開発にしのぎを削っている。これまでの71億ドルという投資額は、この革新的な技術の実現可能性に対する期待の高さを示している。資金が一部の主要企業に集中していることは、この分野の技術開発が資本集約型であり、大規模な資金調達能力が成功の鍵となることを示唆している。この記事は、投資家やエネルギー業界関係者にとって、核融合市場の動向を理解する上で重要な情報を提供する。</p>
+        <p class="detail-text">レポートによると、1億ドル以上の資金を調達した核融合スタートアップのリストが公開された。核融合技術は、二酸化炭素を排出しない無限のエネルギー源として期待されており、世界中で研究開発が進められている。多額の資金が投入されていることから、この分野の技術革新と実用化に向けた競争が激化していることが伺える。</p>
       </details>
       <span class="source-name">📰 TechCrunch Startups</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F10%2Fevery-fusion-startup-that-has-raised-over-100m%2F"
+          data-title="1億ドル以上を調達した核融合スタートアップ全リスト"
+          data-summary="核融合スタートアップがこれまでに総額71億ドルを調達しており、その大半が数社に集中していることが明らかになった。これは、クリーンエネルギーとしての核融合技術への投資が活発化していることを示している。"
+          data-source="TechCrunch Startups"
+          data-url="https://techcrunch.com/2026/04/10/every-fusion-startup-that-has-raised-over-100m/"
+          data-importance="🟢"
+          data-category="テック・AI">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=1%E5%84%84%E3%83%89%E3%83%AB%E4%BB%A5%E4%B8%8A%E3%82%92%E8%AA%BF%E9%81%94%E3%81%97%E3%81%9F%E6%A0%B8%E8%9E%8D%E5%90%88%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E5%85%A8%E3%83%AA%E3%82%B9%E3%83%88%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F10%2Fevery-fusion-startup-that-has-raised-over-100m%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="1億ドル以上を調達した核融合スタートアップ全リスト">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.25s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>最終24時間: TechCrunch Disrupt 2026パスが最大500ドル割引</h2>
-      <p class="summary">TechCrunch Disrupt 2026のイベントパスが最大500ドルの割引となる期間限定のセールが、太平洋時間の今夜11時59分に終了する。この割引は、世界有数のスタートアップイベントへの参加を検討している起業家や投資家にとって、費用を大幅に抑える最後のチャンスとなる。締め切りが迫っているため、関心のある方は早急な確認が必要だ。</p>
+      <h2>最終24時間：TechCrunch Disrupt 2026パスが最大500ドル割引</h2>
+      <p class="summary">TechCrunch Disrupt 2026のパスが最大500ドル割引されるキャンペーンが、太平洋時間午後11時59分に終了する。これは、イベントへの参加を検討している個人開発者やスタートアップにとって、割引価格でパスを入手する最後のチャンスである。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">TechCrunch Disruptは、最新のテクノロジー、有望なスタートアップ、そして業界のリーダーが集まる大規模なカンファレンスである。通常、イベントパスは高額であるため、今回の最大500ドルの割引は参加者にとって大きなメリットとなる。このイベントでは、Startup Battlefieldでのピッチコンテスト、著名な講演者によるセッション、そしてネットワーキングの機会が豊富に用意されている。期限が非常に短いため、参加希望者は迅速に購入手続きを進める必要がある。</p>
+        <p class="detail-text">TechCrunch Disruptは、スタートアップとテクノロジー業界のリーダーが集まる主要なイベント。通常高額なパス料金が割引されるため、予算が限られている参加者には大きなメリットがある。この割引は、AI、ロボティクス、レジリエンス、エンターテイメントなど、最先端技術に触れる機会を提供する。</p>
       </details>
       <span class="source-name">📰 TechCrunch Startups</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F10%2Ffinal-24-hours-save-up-to-500-on-your-techcrunch-disrupt-2026-pass%2F"
+          data-title="最終24時間：TechCrunch Disrupt 2026パスが最大500ドル割引"
+          data-summary="TechCrunch Disrupt 2026のパスが最大500ドル割引されるキャンペーンが、太平洋時間午後11時59分に終了する。これは、イベントへの参加を検討している個人開発者やスタートアップにとって、割引価格でパスを入手する最後のチャンスである。"
+          data-source="TechCrunch Startups"
+          data-url="https://techcrunch.com/2026/04/10/final-24-hours-save-up-to-500-on-your-techcrunch-disrupt-2026-pass/"
+          data-importance="🟢"
+          data-category="テック・AI">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E6%9C%80%E7%B5%8224%E6%99%82%E9%96%93%EF%BC%9ATechCrunch%20Disrupt%202026%E3%83%91%E3%82%B9%E3%81%8C%E6%9C%80%E5%A4%A7500%E3%83%89%E3%83%AB%E5%89%B2%E5%BC%95%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F10%2Ffinal-24-hours-save-up-to-500-on-your-techcrunch-disrupt-2026-pass%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="最終24時間：TechCrunch Disrupt 2026パスが最大500ドル割引">🤖 Claudeに聞く</button>
+      </div>
     </div>
     </section><section class="category-section" data-cat="音楽">
       <p class="category-label" style="color:#666">● 音楽</p>
@@ -307,73 +439,97 @@
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>「コンピュータが登場した時、私たちは一緒に演奏しなくなり、魔法は消え去った」：テクノロジーはいかにしてクラフトワークを最終的に終わらせたか</h2>
-      <p class="summary">電子音楽のパイオニアであるクラフトワークのメンバーが、「コンピュータの登場により、もはや一緒に演奏することがなくなり、音楽の魔法が失われた」と語った。この記事は、バンドを確立させたテクノロジーが、最終的に彼らのクリエイティブな活動の終焉にどのように影響したかを考察している。これは、音楽制作におけるテクノロジーと人間的要素のバランスに関する深い問いを投げかけている。</p>
+      <h2>「コンピューターが登場した時、私たちは一緒に演奏しなくなったので魔法は終わった」：テクノロジーはいかにしてクラフトワークを最終的に終わらせたか</h2>
+      <p class="summary">先駆的な電子音楽グループKraftwerkが、彼らを有名にしたテクノロジーによって最終的に活動を終えることになった経緯について考察されている。コンピューターの導入がメンバー間の共同演奏の魔法を失わせたという視点から、テクノロジーと音楽創作の関係性が問われている。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">クラフトワークは、初期のコンピュータやシンセサイザーを積極的に導入し、革新的なサウンドとパフォーマンスで世界中の音楽シーンを席巻した。しかし、デジタル技術の進化が進むにつれて、メンバー間のリアルタイムな相互作用や即興性が減少し、それがバンドのダイナミクスに影響を与えた可能性が指摘されている。この記事は、技術の進歩がアーティストの創造性や音楽の本質に与える影響について、歴史的な視点から考える貴重な機会を提供する。</p>
+        <p class="detail-text">記事では、コンピューターが音楽制作の中心となることで、バンドメンバーが互いに協力して演奏する機会が減り、それがグループの創造性や結束に影響を与えた可能性が指摘されている。Kraftwerkはテクノロジーを積極的に取り入れたパイオニアであったが、そのテクノロジーが彼らの音楽の本質を変えてしまったという皮肉な結末を示唆している。これは、音楽制作におけるテクノロジーの役割と人間の相互作用について深い議論を提起する。</p>
       </details>
       <span class="source-name">📰 MusicRadar</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fwhen-the-computer-came-along-the-magic-was-over-because-we-didnt-play-together-anymore-how-technology-ultimately-killed-kraftwerk"
+          data-title="「コンピューターが登場した時、私たちは一緒に演奏しなくなったので魔法は終わった」：テクノロジーはいかにしてクラフトワークを最終的に終わらせたか"
+          data-summary="先駆的な電子音楽グループKraftwerkが、彼らを有名にしたテクノロジーによって最終的に活動を終えることになった経緯について考察されている。コンピューターの導入がメンバー間の共同演奏の魔法を失わせたという視点から、テクノロジーと音楽創作の関係性が問われている。"
+          data-source="MusicRadar"
+          data-url="https://www.musicradar.com/artists/when-the-computer-came-along-the-magic-was-over-because-we-didnt-play-together-anymore-how-technology-ultimately-killed-kraftwerk"
+          data-importance="🟢"
+          data-category="音楽">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%8C%E7%99%BB%E5%A0%B4%E3%81%97%E3%81%9F%E6%99%82%E3%80%81%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%AF%E4%B8%80%E7%B7%92%E3%81%AB%E6%BC%94%E5%A5%8F%E3%81%97%E3%81%AA%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A7%E9%AD%94%E6%B3%95%E3%81%AF%E7%B5%82%E3%82%8F%E3%81%A3%E3%81%9F%E3%80%8D%EF%BC%9A%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%81%AF%E3%81%84%E3%81%8B%E3%81%AB%E3%81%97%E3%81%A6%E3%82%AF%E3%83%A9%E3%83%95%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%92%E6%9C%80%E7%B5%82%E7%9A%84%E3%81%AB%E7%B5%82%E3%82%8F%E3%82%89%E3%81%9B%E3%81%9F%E3%81%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fwhen-the-computer-came-along-the-magic-was-over-because-we-didnt-play-together-anymore-how-technology-ultimately-killed-kraftwerk" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="「コンピューターが登場した時、私たちは一緒に演奏しなくなったので魔法は終わった」：テクノロジーはいかにしてクラフトワークを最終的に終わらせたか">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.05s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>「生産性をより速く、より良く、よりクリエイティブにする」：ハウスプロデューサーHammerがゼロからトラックを制作するのを見て学んだ5つのプロダクションのヒント</h2>
-      <p class="summary">BicepのコラボレーターであるハウスプロデューサーHammerが、スタジオでゼロから生の、アナログハウス曲を制作する過程が公開され、そこから生産性を高め、よりクリエイティブな音楽を生み出すための5つのヒントが明らかになった。これは、プロのアーティストのワークフローと実践的な制作テクニックを学ぶ上で非常に有益な情報となる。音楽制作に携わる人々が自身のプロセスを改善するための具体的な洞察が得られるだろう。</p>
+      <h2>「生産性が速く、より良く、より創造的になる」：ハウスプロデューサーHammerがゼロからトラックを制作するのを見て学んだ5つの制作TIPS</h2>
+      <p class="summary">ハウスプロデューサーHammerがゼロからアナログハウスミュージックトラックを制作する様子から、生産性を向上させ、より創造的な楽曲を生み出すための5つのヒントが公開された。これらのヒントは、自身の制作ワークフローを改善したいDTMユーザーにとって有益な示唆を与えるだろう。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Hammerの制作過程からは、機材の選定、サウンドデザインのアプローチ、効率的なセッションの管理、インスピレーションの源泉、そしてミキシングやアレンジメントにおける哲学など、多岐にわたる知見が得られる。特にアナログ機材を重視したハウスミュージックの制作に焦点を当てているため、デジタル環境でのアナログサウンドの再現や、ハードウェアとソフトウェアを融合させたワークフローに関心のあるクリエイターにとって役立つだろう。これらのヒントは、自身の制作速度と品質を向上させるための実用的なアプローチを提供する。</p>
+        <p class="detail-text">この記事では、BicepのコラボレーターでもあるHammerがスタジオでトラックを構築する過程を観察し、実践的な制作テクニックやアプローチを解説している。彼のワークフローは、アナログ機材の活用、効率的なサウンドデザイン、アイデアを素早く形にするための工夫など、DTMにおける生産性と創造性のバランスを見つけるための具体的な方法を示唆している。</p>
       </details>
       <span class="source-name">📰 MusicRadar</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fit-makes-my-productivity-faster-better-more-creative-5-production-tips-we-learned-from-watching-house-producer-hammer-create-a-track-from-scratch"
+          data-title="「生産性が速く、より良く、より創造的になる」：ハウスプロデューサーHammerがゼロからトラックを制作するのを見て学んだ5つの制作TIPS"
+          data-summary="ハウスプロデューサーHammerがゼロからアナログハウスミュージックトラックを制作する様子から、生産性を向上させ、より創造的な楽曲を生み出すための5つのヒントが公開された。これらのヒントは、自身の制作ワークフローを改善したいDTMユーザーにとって有益な示唆を与えるだろう。"
+          data-source="MusicRadar"
+          data-url="https://www.musicradar.com/music-tech/it-makes-my-productivity-faster-better-more-creative-5-production-tips-we-learned-from-watching-house-producer-hammer-create-a-track-from-scratch"
+          data-importance="🟢"
+          data-category="音楽">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%94%9F%E7%94%A3%E6%80%A7%E3%81%8C%E9%80%9F%E3%81%8F%E3%80%81%E3%82%88%E3%82%8A%E8%89%AF%E3%81%8F%E3%80%81%E3%82%88%E3%82%8A%E5%89%B5%E9%80%A0%E7%9A%84%E3%81%AB%E3%81%AA%E3%82%8B%E3%80%8D%EF%BC%9A%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%97%E3%83%AD%E3%83%87%E3%83%A5%E3%83%BC%E3%82%B5%E3%83%BCHammer%E3%81%8C%E3%82%BC%E3%83%AD%E3%81%8B%E3%82%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%82%92%E5%88%B6%E4%BD%9C%E3%81%99%E3%82%8B%E3%81%AE%E3%82%92%E8%A6%8B%E3%81%A6%E5%AD%A6%E3%82%93%E3%81%A05%E3%81%A4%E3%81%AE%E5%88%B6%E4%BD%9CTIPS%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fit-makes-my-productivity-faster-better-more-creative-5-production-tips-we-learned-from-watching-house-producer-hammer-create-a-track-from-scratch" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="「生産性が速く、より良く、より創造的になる」：ハウスプロデューサーHammerがゼロからトラックを制作するのを見て学んだ5つの制作TIPS">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.10s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>「ジェフ・ベックが初期のインスピレーションではなかったから、ギターへの異なるアプローチを学ぶ方法だった」：ロベン・フォード、ジョン・レノンの再編曲、象徴的なコラボレーション、ジェフ・ベックとアンプの巨匠アレクサンダー・ダンブルへの敬意について語る</h2>
-      <p class="summary">ギタリストのロベン・フォードが、ジョン・レノンの楽曲再編曲や著名なコラボレーション、そしてジェフ・ベックとアンプビルダーのアレクサンダー・ダンブルに捧げるアルバム『Two Shades Of Blues』について語った。彼はストラトキャスターを探求し、自身のOverdrive Specialアンプを駆使して独自のサウンドを築き上げた経緯を明かしている。これは、一人のアーティストが音楽的アイデンティティを形成する過程を深く掘り下げた内容である。</p>
+      <h2>「ジョン・レノンを再構築し、ジェフ・ベックとアンプの達人アレクサンダー・ダンブルに敬意を表する」：ロベン・フォードが語るギターへの新しいアプローチ</h2>
+      <p class="summary">ギタリストのロベン・フォードが、ジョン・レノンの曲の再構築、象徴的なコラボレーション、そして故ジェフ・ベックとアンプの巨匠アレクサンダー・ダンブルへの敬意について語っている。彼の「Two Shades Of Blues」というアルバムは、ベックとフォードのお気に入りのアンプビルダーに捧げられたものだ。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">インタビューでは、ジェフ・ベックがフォードの初期の音楽的影響ではなかったにもかかわらず、どのようにしてギターへの異なるアプローチを確立していったかという興味深い側面が語られる。アルバム『Two Shades Of Blues』は、故ジェフ・ベックとフォードが愛用するアンプの製作者ダンブルへのトリビュートであり、彼のギタープレイとサウンドメイキング哲学の集大成と言える。プロのギタリストの機材へのこだわり、音楽的ルーツ、そして創造的なプロセスに関する貴重な洞察は、他のミュージシャンや音楽ファンにとっても有益だろう。</p>
+        <p class="detail-text">フォードは、ジェフ・ベックが初期のインフルエンスではなかったため、ギターへの異なるアプローチを学ぶきっかけになったと述べている。アルバムでは、ストラトキャスターを深く探求し、独自のサウンドを構築している。この記事は、著名なミュージシャンの創作過程や音楽的哲学、そして他の偉大なアーティストへの敬意を通じて、音楽のインスピレーションの源泉を探る内容となっている。</p>
       </details>
       <span class="source-name">📰 MusicRadar</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fit-was-the-way-for-me-to-learn-to-approach-the-guitar-a-different-way-because-jeff-beck-was-not-an-early-influence-robben-ford-on-rearranging-john-lennon-iconic-collaborations-and-paying-tribute-to-jeff-beck-and-amp-guru-alexander-dumble"
+          data-title="「ジョン・レノンを再構築し、ジェフ・ベックとアンプの達人アレクサンダー・ダンブルに敬意を表する」：ロベン・フォードが語るギターへの新しいアプローチ"
+          data-summary="ギタリストのロベン・フォードが、ジョン・レノンの曲の再構築、象徴的なコラボレーション、そして故ジェフ・ベックとアンプの巨匠アレクサンダー・ダンブルへの敬意について語っている。彼の「Two Shades Of Blues」というアルバムは、ベックとフォードのお気に入りのアンプビルダーに捧げられたものだ。"
+          data-source="MusicRadar"
+          data-url="https://www.musicradar.com/artists/it-was-the-way-for-me-to-learn-to-approach-the-guitar-a-different-way-because-jeff-beck-was-not-an-early-influence-robben-ford-on-rearranging-john-lennon-iconic-collaborations-and-paying-tribute-to-jeff-beck-and-amp-guru-alexander-dumble"
+          data-importance="🟢"
+          data-category="音楽">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%AC%E3%83%8E%E3%83%B3%E3%82%92%E5%86%8D%E6%A7%8B%E7%AF%89%E3%81%97%E3%80%81%E3%82%B8%E3%82%A7%E3%83%95%E3%83%BB%E3%83%99%E3%83%83%E3%82%AF%E3%81%A8%E3%82%A2%E3%83%B3%E3%83%97%E3%81%AE%E9%81%94%E4%BA%BA%E3%82%A2%E3%83%AC%E3%82%AF%E3%82%B5%E3%83%B3%E3%83%80%E3%83%BC%E3%83%BB%E3%83%80%E3%83%B3%E3%83%96%E3%83%AB%E3%81%AB%E6%95%AC%E6%84%8F%E3%82%92%E8%A1%A8%E3%81%99%E3%82%8B%E3%80%8D%EF%BC%9A%E3%83%AD%E3%83%99%E3%83%B3%E3%83%BB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%89%E3%81%8C%E8%AA%9E%E3%82%8B%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%B8%E3%81%AE%E6%96%B0%E3%81%97%E3%81%84%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fit-was-the-way-for-me-to-learn-to-approach-the-guitar-a-different-way-because-jeff-beck-was-not-an-early-influence-robben-ford-on-rearranging-john-lennon-iconic-collaborations-and-paying-tribute-to-jeff-beck-and-amp-guru-alexander-dumble" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="「ジョン・レノンを再構築し、ジェフ・ベックとアンプの達人アレクサンダー・ダンブルに敬意を表する」：ロベン・フォードが語るギターへの新しいアプローチ">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.15s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>グリッドから外れて：スイングとは何か、そしてそれをトラックに追加する方法</h2>
-      <p class="summary">このチュートリアルでは、楽曲に「スイング」を適用する基本手順を解説している。スイングは、Daft PunkやFred Again..などの有名曲にも見られるように、トラックに跳ねるようなグルーブと活気を与える重要な要素であり、ストレートなビートにはない魅力を加える。音楽制作の表現力を高めるための実践的なテクニックとして、DTMユーザーにとって非常に有益な情報だ。</p>
+      <h2>マリアン（BR）：「ハウスミュージックのルーツを学べ」</h2>
+      <p class="summary">DJ/プロデューサーのMarian (BR)は、シカゴハウスに根ざしたグルーヴ重視のサウンドで世界的な注目を集め、自身の音楽制作哲学とキャリアパスについて語った。彼は、トラックの完成を見極める直感の重要性や、ダンスフロアを意識した制作アプローチを強調し、若手クリエイターに「ハウスミュージックのルーツを学ぶこと」を提言している。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">スイングは、グリッド上の均等な拍から弱い拍を少しずらすことで生み出されるリズムの揺れを指す。記事ではAbleton Liveを例に、手動でノートをずらす方法から、AbletonのGroove Poolを使って効率的にスイングを適用する方法まで、具体的なステップで説明されている。50%（ストレート）から52%、64%、73%とスイングの割合を変えることで、ドラムパターンがどのように変化するかが視覚と聴覚で示され、その微妙なニュアンスを理解できるようになっている。音楽に「人間らしさ」や「ノリ」を加えるための基本テクニックが習得できる。</p>
+        <p class="detail-text">彼の楽曲「Swing Bom」がイビサのPacha Music Onシーズンで注目され、Hot CreationsやElrow Musicからのリリースも経験し、キャリアを急速に発展させた。Marianは、成功の秘訣は一貫した質の維持と、音楽への純粋な情熱にあると語る。また、ツアーがサウンドに与える影響や、メンタル面での挑戦についても触れており、今後も未発表の楽曲を積極的にプレイしていく姿勢を示した。</p>
       </details>
       <span class="source-name">📰 Attack Magazine</span>
-    </div>
-<div class="item" style="animation-delay:0.20s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Finterview%2Fmarian-br-study-the-roots-of-house-music%2F"
+          data-title="マリアン（BR）：「ハウスミュージックのルーツを学べ」"
+          data-summary="DJ/プロデューサーのMarian (BR)は、シカゴハウスに根ざしたグルーヴ重視のサウンドで世界的な注目を集め、自身の音楽制作哲学とキャリアパスについて語った。彼は、トラックの完成を見極める直感の重要性や、ダンスフロアを意識した制作アプローチを強調し、若手クリエイターに「ハウスミュージックのルーツを学ぶこと」を提言している。"
+          data-source="Attack Magazine"
+          data-url="https://www.attackmagazine.com/features/interview/marian-br-study-the-roots-of-house-music/"
+          data-importance="🟢"
+          data-category="音楽">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%9E%E3%83%AA%E3%82%A2%E3%83%B3%EF%BC%88BR%EF%BC%89%EF%BC%9A%E3%80%8C%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%84%E3%82%92%E5%AD%A6%E3%81%B9%E3%80%8D%20https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Finterview%2Fmarian-br-study-the-roots-of-house-music%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="マリアン（BR）：「ハウスミュージックのルーツを学べ」">🤖 Claudeに聞く</button>
       </div>
-      <h2>二つのエキスポの物語：ロンドン・シンセ＆ペダル・エキスポ2026からのレポート</h2>
-      <p class="summary">ロンドン・シンセ＆ペダル・エキスポ2026のイベントレポートが公開された。このイベントでは、クラシックなモジュラーシンセからモダンなシンセ、エフェクトペダルまで、約50のメーカーの製品が展示され、来場者は最新の機材を試す機会を得た。特に、The Monk ProjectのTMA1ジェネレーティブ・シーケンサーや、Genki Instrumentsのポリフォニック・ラックマウントシンセ「Katla」などが注目を集めた。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">筆者はSuperbooth 2026への参加を逃した代わりにこのイベントを訪れ、その盛況ぶりを報告している。会場はシンセとペダルで部屋が分かれ、Arturia、Moog、Korgなどの大手も出展。The Monk ProjectのTMA1は20種類以上のシーケンサーモデルを持つジェネレーティブ・シーケンサーで、16チャンネルのライブジャムを可能にする。Genki InstrumentsのKatlaは、ブレードランナーのようなサウンドを生み出す5ボイスのポリフォニック・シンセで、火山岩のノブを使用するなどユニークな特徴を持つ。また、スマートフォンをAbleton Liveの3Dモーションコントローラーにする無料アプリFlowfalも紹介されており、音楽制作の新たな可能性を示唆している。</p>
-      </details>
-      <span class="source-name">📰 Attack Magazine</span>
-    </div>
-<div class="item" style="animation-delay:0.25s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>Marian (BR): 「ハウスミュージックのルーツを研究せよ」</h2>
-      <p class="summary">ハウスプロデューサーMarian (BR)が、シカゴハウスに根ざした自身の音楽制作、イビサでのブレイク、そして成功への道のりについて語ったインタビュー。彼は、ハウスミュージックのルーツを深く研究し、クラブでの経験を積み、先行者から学び、拒絶に備えることがキャリアを志す人々にとって不可欠であるとアドバイスしている。彼の哲学は、音楽業界での長期的な成功を目指すアーティストにとって貴重な指針となる。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">Marian (BR)は、グルーヴ主導のハウスミュージックを現代のダンスフロアの中心に押し戻す新世代アーティストの一人。「Pakit Ban」や「Swing Bom」といったトラックで注目を集め、後者はPacha IbizaのMusic Onシーズンの一部となったことが彼のブレイクのきっかけとなった。Jamie Jones、The Martinez Brothers、Joseph CapriatiといったトップDJが彼のトラックをプレイしており、Hot Creationsなどの主要レーベルからリリースしている。彼はスタジオでのシンプルかつパワフルな制作アプローチや、トラックがダンスフロアでどのように響くかを常に意識していることを強調している。来たるイビサでのデビューについても語られており、今後の活躍が期待される。</p>
-      </details>
-      <span class="source-name">📰 Attack Magazine</span>
     </div>
     </section><section class="category-section" data-cat="DTM">
       <p class="category-label" style="color:#666">● DTM</p>
@@ -381,223 +537,400 @@
       <div class="item-header">
         <span class="imp-badge imp-important">🟡 重要</span>
       </div>
-      <h2>Plugin BoutiqueでIK MultimediaのTOTAL Guitar MAXが90%オフ</h2>
-      <p class="summary">Plugin Boutiqueで、IK Multimediaのギター総合ソフトウェアスイート「TOTAL Guitar MAX」が期間限定で89%（約90%）オフになる大規模なセールが実施されている。この大幅割引は、ギターサウンド制作に関心のあるDTMユーザーにとって、プロフェッショナルなツール群を手頃な価格で入手する絶好の機会となる。セール期間は限られているため、購入を検討している場合は早めの確認が推奨される。</p>
+      <h2>二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026レポート</h2>
+      <p class="summary">筆者は今年のSuperboothを逃す代わりに、ロンドン・シンセ＆ペダル・エキスポ2026に参加し、最新のシンセサイザーやペダル、MIDIコントローラーなどを体験した。このイベントでは、The Monk ProjectのTMA1ジェネラティブシーケンサーやGenki InstrumentsのポリフォニックラックマウントシンセKatlaなど、革新的なDTM機材が多数発表され、来場者にとって貴重な情報収集と試奏の機会を提供した。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">TOTAL Guitar MAXは、IK Multimediaが提供するAmpliTubeシリーズの包括的なバンドルであり、多種多様なギターアンプシミュレーター、エフェクトペダル、キャビネット、マイクモデル、さらにレコーディングツールまでが含まれている。これにより、DAW内で非常にリアルかつ柔軟なギターサウンドを構築することが可能になる。通常価格は高額であるため、今回の90%オフはDTMユーザーが自身の制作環境をアップグレードする貴重なチャンスであり、特にギターを多用する楽曲制作者には見逃せないセール情報だ。</p>
+        <p class="detail-text">ロンドン・シンセ＆ペダル・エキスポは、Arturia、Moog、Korgなどの大手から、Melbourne Instruments、1010 Music、Dreadboxなどの人気メーカーまで、約50社が出展。特に注目されたのは、20以上のシーケンサーモデルを持つThe Monk ProjectのTMA1と、北欧の火山名を冠したGenki InstrumentsのKatlaだ。Katlaは5つのボイスを持ち、火山溶岩を使用したノブなど革新的なデザインで、5000ドル以上の価格ながら「ブレードランナー・イン・ア・ボックス」と評されるほどのユニークなサウンドと体験を提供した。また、スマートフォンをAbleton Liveの3Dモーションコントローラーに変える無料アプリFlowfalも紹介された。</p>
       </details>
-      <span class="source-name">📰 Bedroom Producers Blog</span>
+      <span class="source-name">📰 Attack Magazine</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Fa-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026%2F"
+          data-title="二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026レポート"
+          data-summary="筆者は今年のSuperboothを逃す代わりに、ロンドン・シンセ＆ペダル・エキスポ2026に参加し、最新のシンセサイザーやペダル、MIDIコントローラーなどを体験した。このイベントでは、The Monk ProjectのTMA1ジェネラティブシーケンサーやGenki InstrumentsのポリフォニックラックマウントシンセKatlaなど、革新的なDTM機材が多数発表され、来場者にとって貴重な情報収集と試奏の機会を提供した。"
+          data-source="Attack Magazine"
+          data-url="https://www.attackmagazine.com/reviews/gear-software/a-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026/"
+          data-importance="🟡"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E4%BA%8C%E3%81%A4%E3%81%AE%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%9D%E7%89%A9%E8%AA%9E%EF%BC%9A%E3%83%AD%E3%83%B3%E3%83%89%E3%83%B3%E3%83%BB%E3%82%B7%E3%83%B3%E3%82%BB%EF%BC%86%E3%83%9A%E3%83%80%E3%83%AB%E3%83%BB%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%9D2026%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Fa-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026レポート">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.05s">
       <div class="item-header">
         <span class="imp-badge imp-important">🟡 重要</span>
       </div>
-      <h2>SonuscoreがKontakt Player用フリーライブラリ「LUX Orchestral Strings Elements」をリリース</h2>
-      <p class="summary">Sonuscoreが、Native Instrumentsの無償のKontakt Playerで使用できるオーケストラ弦楽器ライブラリ「LUX Orchestral Strings Elements」を無料でリリースした。この高品質な無料ライブラリは、DTMユーザーが手軽に本格的なオーケストラサウンドを自身の楽曲に取り入れることを可能にする。特に、オーケストラ音源に予算をかけられない制作者にとって、非常に有益なリソースとなる。</p>
+      <h2>二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026レポート</h2>
+      <p class="summary">筆者は今年のSuperboothを逃す代わりに、ロンドン・シンセ＆ペダル・エキスポ2026に参加し、最新のシンセサイザーやペダル、MIDIコントローラーなどを体験した。このイベントでは、The Monk ProjectのTMA1ジェネラティブシーケンサーやGenki InstrumentsのポリフォニックラックマウントシンセKatlaなど、革新的なDTM機材が多数発表され、来場者にとって貴重な情報収集と試奏の機会を提供した。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">LUX Orchestral Strings Elementsは、Sonuscoreの評価の高いオーケストラ音源のクオリティを無料で体験できる入門版ライブラリであり、Kontakt Playerのフルバージョンがなくても動作する。近年、高品質な無料のオーケストラコンテンツが増えているが、このリリースもその代表例だ。映画音楽、ゲーム音楽、クラシックアレンジメントなど、幅広いジャンルのDTM制作において、豊かな表現力を持つ弦楽器サウンドを気軽に導入できるようになるため、多くのDTMユーザーにとって歓迎されるニュースである。</p>
+        <p class="detail-text">ロンドン・シンセ＆ペダル・エキスポは、Arturia、Moog、Korgなどの大手から、Melbourne Instruments、1010 Music、Dreadboxなどの人気メーカーまで、約50社が出展。特に注目されたのは、20以上のシーケンサーモデルを持つThe Monk ProjectのTMA1と、北欧の火山名を冠したGenki InstrumentsのKatlaだ。Katlaは5つのボイスを持ち、火山溶岩を使用したノブなど革新的なデザインで、5000ドル以上の価格ながら「ブレードランナー・イン・ア・ボックス」と評されるほどのユニークなサウンドと体験を提供した。また、スマートフォンをAbleton Liveの3Dモーションコントローラーに変える無料アプリFlowfalも紹介された。</p>
       </details>
-      <span class="source-name">📰 Bedroom Producers Blog</span>
+      <span class="source-name">📰 Attack Magazine</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Fa-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026%2F"
+          data-title="二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026レポート"
+          data-summary="筆者は今年のSuperboothを逃す代わりに、ロンドン・シンセ＆ペダル・エキスポ2026に参加し、最新のシンセサイザーやペダル、MIDIコントローラーなどを体験した。このイベントでは、The Monk ProjectのTMA1ジェネラティブシーケンサーやGenki InstrumentsのポリフォニックラックマウントシンセKatlaなど、革新的なDTM機材が多数発表され、来場者にとって貴重な情報収集と試奏の機会を提供した。"
+          data-source="Attack Magazine"
+          data-url="https://www.attackmagazine.com/reviews/gear-software/a-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026/"
+          data-importance="🟡"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E4%BA%8C%E3%81%A4%E3%81%AE%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%9D%E7%89%A9%E8%AA%9E%EF%BC%9A%E3%83%AD%E3%83%B3%E3%83%89%E3%83%B3%E3%83%BB%E3%82%B7%E3%83%B3%E3%82%BB%EF%BC%86%E3%83%9A%E3%83%80%E3%83%AB%E3%83%BB%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%9D2026%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Fa-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026レポート">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.10s">
       <div class="item-header">
         <span class="imp-badge imp-important">🟡 重要</span>
       </div>
-      <h2>MeldaProduction MLimiterXがBPB読者向けに90%オフ (€10のみ)</h2>
-      <p class="summary">MeldaProductionが、そのマスタリンググレードのブリックウォールリミッタープラグイン「MLimiterX」をBedroom Producers Blog (BPB) 読者限定で90%オフ (€99から€10) で提供する。この大幅割引セールは4月19日までで、クーポンコード「BPBMLX90」を使用することで適用される。高品質なリミッターを手頃な価格で入手できる貴重な機会であり、DTMのマスタリング工程の質を向上させたいユーザーにとって非常に魅力的だ。</p>
+      <h2>Plugin BoutiqueでIK MultimediaのTOTAL Guitar MAXが90%オフ</h2>
+      <p class="summary">Plugin BoutiqueでIK Multimediaのギター総合ソフトウェア「TOTAL Guitar MAX」が期間限定で90%オフとなるセールが開催されている。通常価格から大幅な割引が適用されるため、ギター音源やエフェクトを強化したいDTMユーザーにとっては見逃せないチャンスだ。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">MLimiterXは、MeldaProductionのMDynamicsカーネルをベースにした高性能なブリックウォールリミッター。高い音質と柔軟なコントロールが特徴で、マスタリングにおいて音量の最大化とピークの正確な抑制を両立させるのに役立つ。通常価格€99のプロフェッショナルなプラグインがわずか€10で購入できるため、特にマスタリングの質を高めたいDTMユーザーにとっては見逃せないオファーとなる。セール期間が非常に短いため、購入を検討している場合は迅速な対応が求められる。</p>
+        <p class="detail-text">このセールは特定の期間に限定されており、元の価格から大幅に値引きされた価格でTOTAL Guitar MAXを入手できる。TOTAL Guitar MAXには、AmpliTube、TONEXなどのギターアンプ/エフェクトモデリングソフトウェアや、Miroslav Philharmonik 2 CEなどのオーケストラ音源も含まれており、ギターサウンドの制作から楽曲全体のプロデュースまで幅広く対応する。この機会に、高品質なギター制作環境を格安で手に入れることが可能になる。</p>
       </details>
       <span class="source-name">📰 Bedroom Producers Blog</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F10%2Ftotal-guitar-max-plugin-boutique%2F"
+          data-title="Plugin BoutiqueでIK MultimediaのTOTAL Guitar MAXが90%オフ"
+          data-summary="Plugin BoutiqueでIK Multimediaのギター総合ソフトウェア「TOTAL Guitar MAX」が期間限定で90%オフとなるセールが開催されている。通常価格から大幅な割引が適用されるため、ギター音源やエフェクトを強化したいDTMユーザーにとっては見逃せないチャンスだ。"
+          data-source="Bedroom Producers Blog"
+          data-url="https://bedroomproducersblog.com/2026/04/10/total-guitar-max-plugin-boutique/"
+          data-importance="🟡"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=Plugin%20Boutique%E3%81%A7IK%20Multimedia%E3%81%AETOTAL%20Guitar%20MAX%E3%81%8C90%25%E3%82%AA%E3%83%95%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F10%2Ftotal-guitar-max-plugin-boutique%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="Plugin BoutiqueでIK MultimediaのTOTAL Guitar MAXが90%オフ">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.15s">
       <div class="item-header">
         <span class="imp-badge imp-important">🟡 重要</span>
       </div>
-      <h2>入場無料で最新のモニター環境を一挙比較！プロにも相談できる「ヘッドホン・ヘッドホンアンプ大試聴会2026」が5月29日・30日に開催</h2>
-      <p class="summary">音楽制作者向けのモニター機材体験イベント「ヘッドホン・ヘッドホンアンプ大試聴会2026」が、5月29日と30日に無料で入場できる形で開催される。参加者は最新のヘッドホンやヘッドホンアンプを一挙に比較試聴できるだけでなく、プロのエンジニアに直接相談できる貴重な機会も提供される。DTMユーザーが自身の制作環境に最適なモニター機材を見つけるための絶好のチャンスだ。</p>
+      <h2>SonuscoreがKontakt Player用無料ライブラリ「LUX Orchestral Strings Elements」をリリース</h2>
+      <p class="summary">Sonuscoreが、無料のKontakt Playerで利用できるオーケストラ・ストリングス音源「LUX Orchestral Strings Elements」を無料でリリースした。これは、高品質なオーケストラ音源を手軽に入手したいDTM初心者から上級者までにとって非常に価値のある新機能提供となる。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">昨年に続き開催されるこのイベントは、DTMユーザーやプロの音楽制作者にとって、自身の制作環境に最適なモニター機材を見つけるための絶好の場となる。多くのメーカーの最新モデルが試聴可能で、音質の比較検討が容易。さらに、プロからのアドバイスは、機材選びの重要なヒントとなるだろう。特にモニター環境はミックスやマスタリングの精度に直結するため、この種のイベントは非常に価値が高い。入場無料であるため、気軽に参加して最新のモニター技術に触れることができる。</p>
+        <p class="detail-text">LUX Orchestral Strings Elementsは、以前は高価だったオーケストラ音源が現在では無料で手に入るようになった状況を象徴する製品である。このライブラリは、複雑な設定なしに豊かで表現力豊かなストリングスサウンドをDAWに取り入れることを可能にする。無料でありながら高品質なサウンドは、DTM制作の幅を広げ、特に映画音楽やゲーム音楽制作において即戦力となるだろう。</p>
       </details>
-      <span class="source-name">📰 DTMステーション</span>
+      <span class="source-name">📰 Bedroom Producers Blog</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F10%2Fsonuscore-lux-orchestral-strings-elements%2F"
+          data-title="SonuscoreがKontakt Player用無料ライブラリ「LUX Orchestral Strings Elements」をリリース"
+          data-summary="Sonuscoreが、無料のKontakt Playerで利用できるオーケストラ・ストリングス音源「LUX Orchestral Strings Elements」を無料でリリースした。これは、高品質なオーケストラ音源を手軽に入手したいDTM初心者から上級者までにとって非常に価値のある新機能提供となる。"
+          data-source="Bedroom Producers Blog"
+          data-url="https://bedroomproducersblog.com/2026/04/10/sonuscore-lux-orchestral-strings-elements/"
+          data-importance="🟡"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=Sonuscore%E3%81%8CKontakt%20Player%E7%94%A8%E7%84%A1%E6%96%99%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%80%8CLUX%20Orchestral%20Strings%20Elements%E3%80%8D%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F10%2Fsonuscore-lux-orchestral-strings-elements%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="SonuscoreがKontakt Player用無料ライブラリ「LUX Orchestral Strings Elements」をリリース">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.20s">
       <div class="item-header">
         <span class="imp-badge imp-important">🟡 重要</span>
       </div>
-      <h2>約2万円で手に入る！空きスペースにすっぽり収まるノブ特化型MIDIコントローラ、Novation Launch Control 3</h2>
-      <p class="summary">NovationのLaunchシリーズに、ノブに特化したコンパクトなMIDIコントローラ「Launch Control 3」が新たに加わった。実売価格約2万円で手に入り、限られた制作スペースにも収まる設計で、DTMユーザーがソフトウェアのパラメータを直感的に操作できる新しい選択肢を提供する。手頃な価格で多機能なコントロールサーフェスを求めるDTMユーザーにとって、魅力的な新製品の登場だ。</p>
+      <h2>MeldaProduction MLimiterXがBPB読者限定で90%オフ（わずか10ユーロ）</h2>
+      <p class="summary">MeldaProductionのブリックウォールリミッタープラグイン「MLimiterX」が、Bedroom Producers Blogの読者向けに90%オフとなる特別セールを実施している。クーポンコード「BPBMLX90」を使用することで、通常99ユーロの製品をわずか10ユーロで購入できるため、DTMでのマスタリングクオリティを向上させたいユーザーにとって非常に魅力的な機会だ。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Launch Control 3は、以前DMMステーションでも紹介されたLaunch Control XL 3のコンパクト版として登場。多くのノブを搭載しているため、Ableton LiveなどのDAWやプラグインの音作りやミキシングにおいて、マウス操作から解放され、より音楽的なアプローチが可能になる。2万円という価格設定は、DTM初心者から経験者まで幅広い層にとって手が届きやすく、機材のアップグレードや追加を検討しているユーザーには特に魅力的な選択肢となるだろう。コンパクトながら充実した機能で、自宅スタジオの効率を高めることが期待される。</p>
+        <p class="detail-text">このセールは4月19日までとなっており、期間限定で提供される。MLimiterXはMeldaProductionのMDynamicsカーネルをベースとしたマスタリンググレードのリミッターで、楽曲のラウドネスを最大化しつつ透明感を保つことを目的としている。非常に低価格でプロフェッショナルなマスタリングツールを手に入れられるため、音圧競争が激しい現代の音楽制作において、その性能を試す絶好の機会となる。</p>
       </details>
-      <span class="source-name">📰 DTMステーション</span>
+      <span class="source-name">📰 Bedroom Producers Blog</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F10%2Fmeldaproduction-mlimiterx-bpbdeal%2F"
+          data-title="MeldaProduction MLimiterXがBPB読者限定で90%オフ（わずか10ユーロ）"
+          data-summary="MeldaProductionのブリックウォールリミッタープラグイン「MLimiterX」が、Bedroom Producers Blogの読者向けに90%オフとなる特別セールを実施している。クーポンコード「BPBMLX90」を使用することで、通常99ユーロの製品をわずか10ユーロで購入できるため、DTMでのマスタリングクオリティを向上させたいユーザーにとって非常に魅力的な機会だ。"
+          data-source="Bedroom Producers Blog"
+          data-url="https://bedroomproducersblog.com/2026/04/10/meldaproduction-mlimiterx-bpbdeal/"
+          data-importance="🟡"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=MeldaProduction%20MLimiterX%E3%81%8CBPB%E8%AA%AD%E8%80%85%E9%99%90%E5%AE%9A%E3%81%A790%25%E3%82%AA%E3%83%95%EF%BC%88%E3%82%8F%E3%81%9A%E3%81%8B10%E3%83%A6%E3%83%BC%E3%83%AD%EF%BC%89%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F10%2Fmeldaproduction-mlimiterx-bpbdeal%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="MeldaProduction MLimiterXがBPB読者限定で90%オフ（わずか10ユーロ）">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.25s">
       <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
+        <span class="imp-badge imp-important">🟡 重要</span>
       </div>
-      <h2>「コンピュータが登場した時、私たちは一緒に演奏しなくなり、魔法は消え去った」：テクノロジーはいかにしてクラフトワークを最終的に終わらせたか</h2>
-      <p class="summary">電子音楽のパイオニアであるクラフトワークのメンバーが、コンピュータの登場によりメンバー間の演奏がなくなり、音楽の「魔法」が失われたと感じたと語った。この記事は、クラフトワークを形成したテクノロジーが、最終的にバンドの活動に終止符を打った可能性について深く掘り下げている。これは、DTMが音楽制作の主流となる現代において、技術とクリエイティビティの関係性を考える上で重要な示唆を与える。</p>
+      <h2>約2万円で手に入る！空きスペースにすっぽり収まるノブ特化型MIDIコントローラ、Novation Launch Control 3</h2>
+      <p class="summary">NovationのMIDIコントローラLaunchシリーズに、コンパクトな「Launch Control 3」が新たに加わり、約2万円という手頃な価格で手に入る。このノブ特化型コントローラは、限られたスペースにも収まりやすく、DTMユーザーのワークフローを効率化し、より直感的な操作を可能にする新製品だ。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">クラフトワークは革新的なテクノロジーを駆使して新たな音楽ジャンルを切り開いたが、デジタル化の進展が、彼らの創造的なプロセスやバンド内の人間的な相互作用に変化をもたらした。この記事は、音楽制作におけるテクノロジーの役割と、それがアーティストの活動や「ライブ感」に与える影響について、歴史的な視点から考察している。DTMユーザーにとっては、技術進化とクリエイティビティの関係を考える上で、単なるツールの進化だけでなく、その裏側にある人間的な要素の重要性を再認識させる有益な内容である。</p>
+        <p class="detail-text">Launch Control 3は、以前から定評のあるLaunch Control XL 3のコンパクト版として設計されており、特にライブパフォーマンスや省スペースでの制作環境に最適化されている。豊富なノブとボタンにより、DAWのミキサーやエフェクト、インストゥルメントを詳細にコントロールできる。この新製品は、DTMにおける操作性を向上させたいユーザーにとって、コストパフォーマンスの高い選択肢となる。</p>
       </details>
-      <span class="source-name">📰 MusicRadar</span>
+      <span class="source-name">📰 DTMステーション</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76873.html"
+          data-title="約2万円で手に入る！空きスペースにすっぽり収まるノブ特化型MIDIコントローラ、Novation Launch Control 3"
+          data-summary="NovationのMIDIコントローラLaunchシリーズに、コンパクトな「Launch Control 3」が新たに加わり、約2万円という手頃な価格で手に入る。このノブ特化型コントローラは、限られたスペースにも収まりやすく、DTMユーザーのワークフローを効率化し、より直感的な操作を可能にする新製品だ。"
+          data-source="DTMステーション"
+          data-url="https://www.dtmstation.com/archives/76873.html"
+          data-importance="🟡"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E7%B4%842%E4%B8%87%E5%86%86%E3%81%A7%E6%89%8B%E3%81%AB%E5%85%A5%E3%82%8B%EF%BC%81%E7%A9%BA%E3%81%8D%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9%E3%81%AB%E3%81%99%E3%81%A3%E3%81%BD%E3%82%8A%E5%8F%8E%E3%81%BE%E3%82%8B%E3%83%8E%E3%83%96%E7%89%B9%E5%8C%96%E5%9E%8BMIDI%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%80%81Novation%20Launch%20Control%203%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76873.html" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="約2万円で手に入る！空きスペースにすっぽり収まるノブ特化型MIDIコントローラ、Novation Launch Control 3">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.30s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>「生産性をより速く、より良く、よりクリエイティブにする」：ハウスプロデューサーHammerがゼロからトラックを制作するのを見て学んだ5つのプロダクションのヒント</h2>
-      <p class="summary">ハウスプロデューサーHammer（Bicepのコラボレーター）がスタジオで生の、アナログハウス曲をゼロから制作する様子から得られた5つのプロダクションヒントが紹介されている。これらのヒントは、DTMユーザーが自身の生産性を向上させ、より創造的な楽曲を生み出すための実践的なアプローチを提供する。プロのワークフローから、効率的かつインスピレーションに満ちた制作方法を学ぶことができる。</p>
+      <h2>「コンピューターが登場した時、私たちは一緒に演奏しなくなったので魔法は終わった」：テクノロジーはいかにしてクラフトワークを最終的に終わらせたか</h2>
+      <p class="summary">先駆的な電子音楽グループKraftwerkが、彼らを有名にしたテクノロジーによって最終的に活動を終えることになった経緯について考察されている。コンピューターの導入がメンバー間の共同演奏の魔法を失わせたという視点から、DTMと音楽創作の関係性が問われている。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">この記事は、プロデューサーのワークフロー、機材選択、サウンドデザイン、ミキシング、アレンジメントなどに関する具体的なアドバイスを含んでいる可能性がある。特にアナログ機材を多用するハウスミュージックの制作に焦点を当てているため、DAW内でのアナログサウンドの再現や、ハードウェアとソフトウェアの融合に関心のあるDTMユーザーにとって、貴重な洞察となる。プロの現場での効率的な制作手法や、創造性を刺激するためのアプローチを学ぶ良い機会となるだろう。</p>
+        <p class="detail-text">記事では、コンピューターが音楽制作の中心となることで、バンドメンバーが互いに協力して演奏する機会が減り、それがグループの創造性や結束に影響を与えた可能性が指摘されている。Kraftwerkはテクノロジーを積極的に取り入れたパイオニアであったが、そのテクノロジーが彼らの音楽の本質を変えてしまったという皮肉な結末を示唆している。これは、DTMを含む音楽制作におけるテクノロジーの役割と人間の相互作用について深い議論を提起する。</p>
       </details>
       <span class="source-name">📰 MusicRadar</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fwhen-the-computer-came-along-the-magic-was-over-because-we-didnt-play-together-anymore-how-technology-ultimately-killed-kraftwerk"
+          data-title="「コンピューターが登場した時、私たちは一緒に演奏しなくなったので魔法は終わった」：テクノロジーはいかにしてクラフトワークを最終的に終わらせたか"
+          data-summary="先駆的な電子音楽グループKraftwerkが、彼らを有名にしたテクノロジーによって最終的に活動を終えることになった経緯について考察されている。コンピューターの導入がメンバー間の共同演奏の魔法を失わせたという視点から、DTMと音楽創作の関係性が問われている。"
+          data-source="MusicRadar"
+          data-url="https://www.musicradar.com/artists/when-the-computer-came-along-the-magic-was-over-because-we-didnt-play-together-anymore-how-technology-ultimately-killed-kraftwerk"
+          data-importance="🟢"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%8C%E7%99%BB%E5%A0%B4%E3%81%97%E3%81%9F%E6%99%82%E3%80%81%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%AF%E4%B8%80%E7%B7%92%E3%81%AB%E6%BC%94%E5%A5%8F%E3%81%97%E3%81%AA%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A7%E9%AD%94%E6%B3%95%E3%81%AF%E7%B5%82%E3%82%8F%E3%81%A3%E3%81%9F%E3%80%8D%EF%BC%9A%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%81%AF%E3%81%84%E3%81%8B%E3%81%AB%E3%81%97%E3%81%A6%E3%82%AF%E3%83%A9%E3%83%95%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%92%E6%9C%80%E7%B5%82%E7%9A%84%E3%81%AB%E7%B5%82%E3%82%8F%E3%82%89%E3%81%9B%E3%81%9F%E3%81%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fwhen-the-computer-came-along-the-magic-was-over-because-we-didnt-play-together-anymore-how-technology-ultimately-killed-kraftwerk" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="「コンピューターが登場した時、私たちは一緒に演奏しなくなったので魔法は終わった」：テクノロジーはいかにしてクラフトワークを最終的に終わらせたか">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.35s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>「ジェフ・ベックが初期のインスピレーションではなかったから、ギターへの異なるアプローチを学ぶ方法だった」：ロベン・フォード、ジョン・レノンの再編曲、象徴的なコラボレーション、ジェフ・ベックとアンプの巨匠アレクサンダー・ダンブルへの敬意について語る</h2>
-      <p class="summary">ギタリストのロベン・フォードが、ジョン・レノンの楽曲再編曲や著名なコラボレーション、そしてジェフ・ベックとアンプビルダーのアレクサンダー・ダンブルに捧げるアルバム『Two Shades Of Blues』について語った。彼はストラトキャスターを探求し、自身のOverdrive Specialアンプを駆使して独自のサウンドを築き上げた経緯を明かしている。これは、DTMユーザーがプロのアーティストの音作りや機材活用法からインスピレーションを得る良い機会となる。</p>
+      <h2>「生産性が速く、より良く、より創造的になる」：ハウスプロデューサーHammerがゼロからトラックを制作するのを見て学んだ5つの制作TIPS</h2>
+      <p class="summary">ハウスプロデューサーHammerがゼロからアナログハウスミュージックトラックを制作する様子から、生産性を向上させ、より創造的な楽曲を生み出すための5つのヒントが公開された。これらのヒントは、自身の制作ワークフローを改善したいDTMユーザーにとって有益な示唆を与えるだろう。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">インタビューでは、ジェフ・ベックがフォードの初期の音楽的影響ではなかったにもかかわらず、どのようにしてギターへの異なるアプローチを確立していったかという興味深い側面が語られる。アルバム『Two Shades Of Blues』は、故ジェフ・ベックとフォードが愛用するアンプの製作者ダンブルへのトリビュートであり、彼のギタープレイとサウンドメイキング哲学の集大成と言える。DTM環境でギターサウンドを制作するユーザーにとって、プロの機材選択、アンプシミュレーターの使い方、そして楽曲に感情を吹き込むアプローチなどに関する貴重な洞察が提供される。</p>
+        <p class="detail-text">この記事では、BicepのコラボレーターでもあるHammerがスタジオでトラックを構築する過程を観察し、実践的な制作テクニックやアプローチを解説している。彼のワークフローは、アナログ機材の活用、効率的なサウンドデザイン、アイデアを素早く形にするための工夫など、DTMにおける生産性と創造性のバランスを見つけるための具体的な方法を示唆している。</p>
       </details>
       <span class="source-name">📰 MusicRadar</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fit-makes-my-productivity-faster-better-more-creative-5-production-tips-we-learned-from-watching-house-producer-hammer-create-a-track-from-scratch"
+          data-title="「生産性が速く、より良く、より創造的になる」：ハウスプロデューサーHammerがゼロからトラックを制作するのを見て学んだ5つの制作TIPS"
+          data-summary="ハウスプロデューサーHammerがゼロからアナログハウスミュージックトラックを制作する様子から、生産性を向上させ、より創造的な楽曲を生み出すための5つのヒントが公開された。これらのヒントは、自身の制作ワークフローを改善したいDTMユーザーにとって有益な示唆を与えるだろう。"
+          data-source="MusicRadar"
+          data-url="https://www.musicradar.com/music-tech/it-makes-my-productivity-faster-better-more-creative-5-production-tips-we-learned-from-watching-house-producer-hammer-create-a-track-from-scratch"
+          data-importance="🟢"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%94%9F%E7%94%A3%E6%80%A7%E3%81%8C%E9%80%9F%E3%81%8F%E3%80%81%E3%82%88%E3%82%8A%E8%89%AF%E3%81%8F%E3%80%81%E3%82%88%E3%82%8A%E5%89%B5%E9%80%A0%E7%9A%84%E3%81%AB%E3%81%AA%E3%82%8B%E3%80%8D%EF%BC%9A%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%97%E3%83%AD%E3%83%87%E3%83%A5%E3%83%BC%E3%82%B5%E3%83%BCHammer%E3%81%8C%E3%82%BC%E3%83%AD%E3%81%8B%E3%82%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%82%92%E5%88%B6%E4%BD%9C%E3%81%99%E3%82%8B%E3%81%AE%E3%82%92%E8%A6%8B%E3%81%A6%E5%AD%A6%E3%82%93%E3%81%A05%E3%81%A4%E3%81%AE%E5%88%B6%E4%BD%9CTIPS%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fit-makes-my-productivity-faster-better-more-creative-5-production-tips-we-learned-from-watching-house-producer-hammer-create-a-track-from-scratch" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="「生産性が速く、より良く、より創造的になる」：ハウスプロデューサーHammerがゼロからトラックを制作するのを見て学んだ5つの制作TIPS">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.40s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>グリッドから外れて：スイングとは何か、そしてそれをトラックに追加する方法</h2>
-      <p class="summary">このDTMチュートリアルでは、楽曲に「スイング」を導入する基本的な方法が解説されている。スイングは、ビートに跳ねるようなグルーブと生き生きとしたエネルギーを与え、Daft PunkやFred Again..のような著名なトラックにも見られる不可欠な要素である。Ableton Liveを例に、スイングの理論と実践的な適用方法をステップバイステップで学ぶことができ、DTMにおけるリズム表現の幅を広げるのに役立つ。</p>
+      <h2>「ジョン・レノンを再構築し、ジェフ・ベックとアンプの達人アレクサンダー・ダンブルに敬意を表する」：ロベン・フォードが語るギターへの新しいアプローチ</h2>
+      <p class="summary">ギタリストのロベン・フォードが、ジョン・レノンの曲の再構築、象徴的なコラボレーション、そして故ジェフ・ベックとアンプの巨匠アレクサンダー・ダンブルへの敬意について語っている。彼の「Two Shades Of Blues」というアルバムは、ベックとフォードのお気に入りのアンプビルダーに捧げられたものだ。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">スイングは、リズムの弱い拍をグリッドから意図的にずらすことで生まれる「揺れ」を指す。記事では、均等な16分音符のハイハットパートから始め、弱い拍を右（遅く）に移動させることでスイングを生成する様子を図とオーディオで示している。Ableton LiveのGroove Pool機能を使えば、手動でノートを移動させることなく、グリッド自体をシフトさせることでスイングを適用できるため、制作プロセスが大幅に簡素化されることが説明されている。スイングの割合（52%から73%）による聴覚的な違いも具体的に示されており、DTM初心者でも理解しやすい内容となっている。</p>
+        <p class="detail-text">フォードは、ジェフ・ベックが初期のインフルエンスではなかったため、ギターへの異なるアプローチを学ぶきっかけになったと述べている。アルバムでは、ストラトキャスターを深く探求し、独自のサウンドを構築している。この記事は、著名なミュージシャンの創作過程や音楽的哲学、そして他の偉大なアーティストへの敬意を通じて、DTM制作におけるインスピレーションの源泉を探る内容となっている。</p>
       </details>
-      <span class="source-name">📰 Attack Magazine</span>
+      <span class="source-name">📰 MusicRadar</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fit-was-the-way-for-me-to-learn-to-approach-the-guitar-a-different-way-because-jeff-beck-was-not-an-early-influence-robben-ford-on-rearranging-john-lennon-iconic-collaborations-and-paying-tribute-to-jeff-beck-and-amp-guru-alexander-dumble"
+          data-title="「ジョン・レノンを再構築し、ジェフ・ベックとアンプの達人アレクサンダー・ダンブルに敬意を表する」：ロベン・フォードが語るギターへの新しいアプローチ"
+          data-summary="ギタリストのロベン・フォードが、ジョン・レノンの曲の再構築、象徴的なコラボレーション、そして故ジェフ・ベックとアンプの巨匠アレクサンダー・ダンブルへの敬意について語っている。彼の「Two Shades Of Blues」というアルバムは、ベックとフォードのお気に入りのアンプビルダーに捧げられたものだ。"
+          data-source="MusicRadar"
+          data-url="https://www.musicradar.com/artists/it-was-the-way-for-me-to-learn-to-approach-the-guitar-a-different-way-because-jeff-beck-was-not-an-early-influence-robben-ford-on-rearranging-john-lennon-iconic-collaborations-and-paying-tribute-to-jeff-beck-and-amp-guru-alexander-dumble"
+          data-importance="🟢"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%AC%E3%83%8E%E3%83%B3%E3%82%92%E5%86%8D%E6%A7%8B%E7%AF%89%E3%81%97%E3%80%81%E3%82%B8%E3%82%A7%E3%83%95%E3%83%BB%E3%83%99%E3%83%83%E3%82%AF%E3%81%A8%E3%82%A2%E3%83%B3%E3%83%97%E3%81%AE%E9%81%94%E4%BA%BA%E3%82%A2%E3%83%AC%E3%82%AF%E3%82%B5%E3%83%B3%E3%83%80%E3%83%BC%E3%83%BB%E3%83%80%E3%83%B3%E3%83%96%E3%83%AB%E3%81%AB%E6%95%AC%E6%84%8F%E3%82%92%E8%A1%A8%E3%81%99%E3%82%8B%E3%80%8D%EF%BC%9A%E3%83%AD%E3%83%99%E3%83%B3%E3%83%BB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%89%E3%81%8C%E8%AA%9E%E3%82%8B%E3%82%AE%E3%82%BF%E3%83%BC%E3%81%B8%E3%81%AE%E6%96%B0%E3%81%97%E3%81%84%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fit-was-the-way-for-me-to-learn-to-approach-the-guitar-a-different-way-because-jeff-beck-was-not-an-early-influence-robben-ford-on-rearranging-john-lennon-iconic-collaborations-and-paying-tribute-to-jeff-beck-and-amp-guru-alexander-dumble" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="「ジョン・レノンを再構築し、ジェフ・ベックとアンプの達人アレクサンダー・ダンブルに敬意を表する」：ロベン・フォードが語るギターへの新しいアプローチ">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.45s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>二つのエキスポの物語：ロンドン・シンセ＆ペダル・エキスポ2026からのレポート</h2>
-      <p class="summary">ロンドンで開催された「ロンドン・シンセ＆ペダル・エキスポ2026」のレポート記事が公開された。このイベントでは、主要メーカーからインディーズブランドまで約50のシンセサイザーおよびペダルメーカーが最新製品を展示し、来場者はTMA1ジェネレーティブ・シーケンサーや、Genki Instrumentsのポリフォニック・ラックマウントシンセ「Katla」、Ableton Liveを制御する無料アプリFlowfalなど、革新的なDTM機材に触れる機会を得た。これは、DTM・音楽制作ツール分野のトレンドや新製品を知る上で有益な情報である。</p>
+      <h2>グリッドを外す：スイングとは何か、そしてそれをどう加えるか</h2>
+      <p class="summary">本記事は、音楽にバウンス、スナップ、活気のあるエネルギーを与える「スイング」の概念を解説し、Ableton Liveを使用したDTMでの具体的な適用方法をステップバイステップで紹介する。読むことで、楽曲に躍動感をもたらすリズム調整の基礎と実践的なテクニックを習得できる。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">筆者はSuperboothへの参加を断念した代わりにこのイベントを訪れ、その盛況ぶりを報告している。会場はシンセとペダルで部屋が分かれ、Arturia、Moog、Korgなどの大手も出展。特に注目されたのは、The Monk ProjectのTMA1で、20以上のシーケンサーモデルを持つジェネレーティブ・シーケンサー。Genki InstrumentsのKatlaは、火山岩のノブを持つユニークな5ボイスのポリフォニック・シンセ。Flowfalは、スマートフォンやスマートウォッチをAbleton Liveの3Dモーションコントローラーとして利用できる無料アプリで、DTMユーザーにとって新しい操作体験を提供する。イベントの活気や展示された機材の詳細は、DTM愛好家にとって興味深いだろう。</p>
+        <p class="detail-text">スイングは、各ペアの弱い拍をグリッドからずらすことで生成され、そのずれの量でスイングのパーセンテージが決まる。Ableton LiveのGroove Pool機能を使えば、手動で拍を動かす手間なく簡単にスイングを適用でき、視覚的なグリッドはそのままにリズムに変化を加えることが可能だ。ドラムだけでなく、ベースラインやリードサウンドなど、様々な要素にスイングを適用することで、楽曲全体に深いグルーヴを生み出すことができる。</p>
       </details>
       <span class="source-name">📰 Attack Magazine</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Ftutorials%2Fgoing-off-grid-what-is-swing-and-how-to-add-it%2F"
+          data-title="グリッドを外す：スイングとは何か、そしてそれをどう加えるか"
+          data-summary="本記事は、音楽にバウンス、スナップ、活気のあるエネルギーを与える「スイング」の概念を解説し、Ableton Liveを使用したDTMでの具体的な適用方法をステップバイステップで紹介する。読むことで、楽曲に躍動感をもたらすリズム調整の基礎と実践的なテクニックを習得できる。"
+          data-source="Attack Magazine"
+          data-url="https://www.attackmagazine.com/technique/tutorials/going-off-grid-what-is-swing-and-how-to-add-it/"
+          data-importance="🟢"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%82%92%E5%A4%96%E3%81%99%EF%BC%9A%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E3%81%9D%E3%82%8C%E3%82%92%E3%81%A9%E3%81%86%E5%8A%A0%E3%81%88%E3%82%8B%E3%81%8B%20https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Ftutorials%2Fgoing-off-grid-what-is-swing-and-how-to-add-it%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="グリッドを外す：スイングとは何か、そしてそれをどう加えるか">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.50s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>Marian (BR): 「ハウスミュージックのルーツを研究せよ」</h2>
-      <p class="summary">ハウスプロデューサーMarian (BR)が、自身の音楽制作のルーツ、シカゴハウスからの影響、および制作哲学について語ったインタビュー。彼は、楽曲制作ではシンプルさを追求し、ダンスフロアでの効果を常に意識していると述べ、DTM初心者に向けて「ハウスミュージックのルーツを研究し、一貫性を保ち、作品の品質を守る」ことを勧めている。これは、DTMを通じたプロフェッショナルなキャリアを目指す上で、重要な心構えと実践的なアドバイスを提供する。</p>
+      <h2>グリッドを外す：スイングとは何か、そしてそれをどう加えるか</h2>
+      <p class="summary">本記事は、音楽にバウンス、スナップ、活気のあるエネルギーを与える「スイング」の概念を解説し、Ableton Liveを使用したDTMでの具体的な適用方法をステップバイステップで紹介する。読むことで、楽曲に躍動感をもたらすリズム調整の基礎と実践的なテクニックを習得できる。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">Marian (BR)は、初期のシカゴハウスのサンプルチョップ、ボーカル、ピアノ、オルガンの音色、サチュレートされたドラムサウンドに強くインスパイアされていると語る。彼は、曲が完成したかを判断する際はプロジェクトを見ずに感覚で判断するアプローチを採用し、ダンスフロアでの具体的な瞬間を想像しながら制作を進める。また、彼の「Swing Bom」がPacha IbizaのMusic Onシーズンで使用された経験が、彼のキャリアにおける重要な転機となったことも明かされている。彼の制作哲学は、DTMユーザーが自身のサウンドを確立し、成功への道筋を構築する上で示唆に富んでいる。</p>
+        <p class="detail-text">スイングは、各ペアの弱い拍をグリッドからずらすことで生成され、そのずれの量でスイングのパーセンテージが決まる。Ableton LiveのGroove Pool機能を使えば、手動で拍を動かす手間なく簡単にスイングを適用でき、視覚的なグリッドはそのままにリズムに変化を加えることが可能だ。ドラムだけでなく、ベースラインやリードサウンドなど、様々な要素にスイングを適用することで、楽曲全体に深いグルーヴを生み出すことができる。</p>
       </details>
       <span class="source-name">📰 Attack Magazine</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Ftutorials%2Fgoing-off-grid-what-is-swing-and-how-to-add-it%2F"
+          data-title="グリッドを外す：スイングとは何か、そしてそれをどう加えるか"
+          data-summary="本記事は、音楽にバウンス、スナップ、活気のあるエネルギーを与える「スイング」の概念を解説し、Ableton Liveを使用したDTMでの具体的な適用方法をステップバイステップで紹介する。読むことで、楽曲に躍動感をもたらすリズム調整の基礎と実践的なテクニックを習得できる。"
+          data-source="Attack Magazine"
+          data-url="https://www.attackmagazine.com/technique/tutorials/going-off-grid-what-is-swing-and-how-to-add-it/"
+          data-importance="🟢"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%82%92%E5%A4%96%E3%81%99%EF%BC%9A%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E3%81%9D%E3%82%8C%E3%82%92%E3%81%A9%E3%81%86%E5%8A%A0%E3%81%88%E3%82%8B%E3%81%8B%20https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Ftutorials%2Fgoing-off-grid-what-is-swing-and-how-to-add-it%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="グリッドを外す：スイングとは何か、そしてそれをどう加えるか">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.55s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>DTM初心者のためのオーディオインターフェイスの選び方2026</h2>
-      <p class="summary">DTMを始める上で必須となるオーディオインターフェイスの選び方について、初心者向けに解説する記事。オーディオインターフェイスはオーディオの入出力を担う機材であり、多種多様な製品が存在するため、この記事は自身のニーズに合った製品を見つけるための指針を提供する。DTM初心者にとっては、最初の機材選びで失敗しないための重要な情報源となる。</p>
+      <h2>マリアン（BR）：「ハウスミュージックのルーツを学べ」</h2>
+      <p class="summary">DJ/プロデューサーのMarian (BR)は、シカゴハウスに根ざしたグルーヴ重視のサウンドで世界的な注目を集め、自身の音楽制作哲学とキャリアパスについて語った。彼は、トラックの完成を見極める直感の重要性や、ダンスフロアを意識した制作アプローチを強調し、DTMを学ぶ若手クリエイターに「ハウスミュージックのルーツを学ぶこと」を提言している。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">オーディオインターフェイスは、DTM環境においてマイクや楽器の音を高音質で入力し、DAWからのサウンドを正確にモニターするための核となる機材である。記事では、基本的な機能、接続端子の種類（USB, Thunderboltなど）、対応OS、オーディオ品質（サンプリングレート、ビット深度）、レイテンシー、入力数/出力数、そして予算など、選び方のポイントを具体的に解説していると思われる。初心者が陥りがちな落とし穴や、将来的な拡張性も考慮に入れた選び方など、DTMをこれから始める人にとって実用的な情報が満載であると予想される。</p>
+        <p class="detail-text">彼の楽曲「Swing Bom」がイビサのPacha Music Onシーズンで注目され、Hot CreationsやElrow Musicからのリリースも経験し、DTMを通じてキャリアを急速に発展させた。Marianは、成功の秘訣は一貫した質の維持と、音楽への純粋な情熱にあると語る。また、ツアーがサウンドに与える影響や、メンタル面での挑戦についても触れており、今後もDTMで制作した未発表の楽曲を積極的にプレイしていく姿勢を示した。</p>
+      </details>
+      <span class="source-name">📰 Attack Magazine</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Finterview%2Fmarian-br-study-the-roots-of-house-music%2F"
+          data-title="マリアン（BR）：「ハウスミュージックのルーツを学べ」"
+          data-summary="DJ/プロデューサーのMarian (BR)は、シカゴハウスに根ざしたグルーヴ重視のサウンドで世界的な注目を集め、自身の音楽制作哲学とキャリアパスについて語った。彼は、トラックの完成を見極める直感の重要性や、ダンスフロアを意識した制作アプローチを強調し、DTMを学ぶ若手クリエイターに「ハウスミュージックのルーツを学ぶこと」を提言している。"
+          data-source="Attack Magazine"
+          data-url="https://www.attackmagazine.com/features/interview/marian-br-study-the-roots-of-house-music/"
+          data-importance="🟢"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%9E%E3%83%AA%E3%82%A2%E3%83%B3%EF%BC%88BR%EF%BC%89%EF%BC%9A%E3%80%8C%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%84%E3%82%92%E5%AD%A6%E3%81%B9%E3%80%8D%20https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Finterview%2Fmarian-br-study-the-roots-of-house-music%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="マリアン（BR）：「ハウスミュージックのルーツを学べ」">🤖 Claudeに聞く</button>
+      </div>
+    </div>
+<div class="item" style="animation-delay:0.60s">
+      <div class="item-header">
+        <span class="imp-badge imp-useful">🟢 有益</span>
+      </div>
+      <h2>入場無料で最新のモニター環境を一挙比較！プロにも相談できる「ヘッドホン・ヘッドホンアンプ大試聴会2026」が5月29日・30日に開催</h2>
+      <p class="summary">音楽制作者向けのモニター機材体験イベント「ヘッドホン・ヘッドホンアンプ大試聴会2026」が、5月29日と30日に開催されることが決定した。入場無料で最新のヘッドホンやヘッドホンアンプを比較試聴できるだけでなく、プロのエンジニアに直接相談できる貴重な機会となる。</p>
+      <details>
+        <summary></summary>
+        <p class="detail-text">昨年8月に初開催されたこのイベントは、好評を受けて今年も実施される。気候の穏やかな5月に開催されることで、より多くの参加者が快適に訪れることが期待される。DTMユーザーにとって、実際に多くの機材を比較検討し、自身の制作環境に最適なモニター機器を見つける絶好のチャンスとなる。また、プロからのアドバイスは、機材選びだけでなく、音作りの知見を深める上でも有益だ。</p>
       </details>
       <span class="source-name">📰 DTMステーション</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76916.html"
+          data-title="入場無料で最新のモニター環境を一挙比較！プロにも相談できる「ヘッドホン・ヘッドホンアンプ大試聴会2026」が5月29日・30日に開催"
+          data-summary="音楽制作者向けのモニター機材体験イベント「ヘッドホン・ヘッドホンアンプ大試聴会2026」が、5月29日と30日に開催されることが決定した。入場無料で最新のヘッドホンやヘッドホンアンプを比較試聴できるだけでなく、プロのエンジニアに直接相談できる貴重な機会となる。"
+          data-source="DTMステーション"
+          data-url="https://www.dtmstation.com/archives/76916.html"
+          data-importance="🟢"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E5%85%A5%E5%A0%B4%E7%84%A1%E6%96%99%E3%81%A7%E6%9C%80%E6%96%B0%E3%81%AE%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC%E7%92%B0%E5%A2%83%E3%82%92%E4%B8%80%E6%8C%99%E6%AF%94%E8%BC%83%EF%BC%81%E3%83%97%E3%83%AD%E3%81%AB%E3%82%82%E7%9B%B8%E8%AB%87%E3%81%A7%E3%81%8D%E3%82%8B%E3%80%8C%E3%83%98%E3%83%83%E3%83%89%E3%83%9B%E3%83%B3%E3%83%BB%E3%83%98%E3%83%83%E3%83%89%E3%83%9B%E3%83%B3%E3%82%A2%E3%83%B3%E3%83%97%E5%A4%A7%E8%A9%A6%E8%81%B4%E4%BC%9A2026%E3%80%8D%E3%81%8C5%E6%9C%8829%E6%97%A5%E3%83%BB30%E6%97%A5%E3%81%AB%E9%96%8B%E5%82%AC%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76916.html" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="入場無料で最新のモニター環境を一挙比較！プロにも相談できる「ヘッドホン・ヘッドホンアンプ大試聴会2026」が5月29日・30日に開催">🤖 Claudeに聞く</button>
+      </div>
     </div>
-    </section><section class="category-section" data-cat="ビジネス">
-      <p class="category-label" style="color:#e67e22">● ビジネス</p>
+<div class="item" style="animation-delay:0.65s">
+      <div class="item-header">
+        <span class="imp-badge imp-useful">🟢 有益</span>
+      </div>
+      <h2>DTM初心者のためのオーディオインターフェイスの選び方2026</h2>
+      <p class="summary">DTMを始める上で不可欠な機材であるオーディオインターフェイスについて、初心者向けに選び方を解説している。数多くの製品の中から、自身のニーズに合った最適な一台を見つけるための基礎知識とポイントを提供し、DTM環境構築の第一歩をサポートする。</p>
+      <details>
+        <summary></summary>
+        <p class="detail-text">オーディオインターフェイスは、音源の入出力を行うための機材であり、その選択は音質や制作効率に大きく影響する。この記事では、DTM初心者が陥りがちな疑問を解消し、必要な機能、接続方式、予算に応じた製品選びのヒントなどを具体的に説明する。これにより、無駄な投資を避け、効率的にDTM環境を整えることができる。</p>
+      </details>
+      <span class="source-name">📰 DTMステーション</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F51971048.html"
+          data-title="DTM初心者のためのオーディオインターフェイスの選び方2026"
+          data-summary="DTMを始める上で不可欠な機材であるオーディオインターフェイスについて、初心者向けに選び方を解説している。数多くの製品の中から、自身のニーズに合った最適な一台を見つけるための基礎知識とポイントを提供し、DTM環境構築の第一歩をサポートする。"
+          data-source="DTMステーション"
+          data-url="https://www.dtmstation.com/archives/51971048.html"
+          data-importance="🟢"
+          data-category="DTM">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=DTM%E5%88%9D%E5%BF%83%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%E3%81%AE%E9%81%B8%E3%81%B3%E6%96%B92026%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F51971048.html" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="DTM初心者のためのオーディオインターフェイスの選び方2026">🤖 Claudeに聞く</button>
+      </div>
+    </div>
+    </section><section class="category-section" data-cat="経済">
+      <p class="category-label" style="color:#666">● 経済</p>
       <div class="item" style="animation-delay:0.00s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
-      <h2>『Highway Walker』廃止で『ハイウェイまっぷる』へ移行 | 佐滝剛弘の高速道路最前線</h2>
-      <p class="summary">高速道路のサービスエリアで無料配布されていたフリーマガジン『Highway Walker』が廃止され、デジタルコンテンツの『ハイウェイまっぷる』に移行することが報じられた。これは、ビジネスおよびサービス現場で急速に進むペーパーレス化の傾向を反映したもので、紙媒体の需要低下という広範な市場トレンドの一例である。企業が環境変化に適応し、情報提供のデジタルシフトを進めている状況を示している。</p>
+      <h2>｢Highway Walker｣廃止で｢ハイウェイまっぷる｣に</h2>
+      <p class="summary">高速道路のサービスエリア等で配布されてきた情報誌「Highway Walker」が廃止され、代わりに「ハイウェイまっぷる」に移行する。これはビジネス現場における急速なペーパーレス化の動向を反映しており、デジタルシフトが加速する現代の産業構造の変化を示す一例である。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">新聞や雑誌の売上減少が続く中、情報提供の形態が紙からデジタルへとシフトしている現代の消費行動に適応するための戦略的な動きである。高速道路利用者への情報提供は今後、スマートフォンアプリやウェブサイトを通じて行われる可能性が高い。『Highway Walker』の廃止と『ハイウェイまっぷる』への移行は、出版業界だけでなく、情報提供サービス全体のビジネスモデル変革を示しており、企業が効率化と環境配慮を両立させるための戦略を考える上で参考となる。</p>
+        <p class="detail-text">新聞や雑誌の売上減少が続く中、情報提供の方法も紙媒体からデジタル媒体へとシフトしている。この変更は、高速道路利用者への情報提供の形が変わり、よりデジタルを活用したサービスが主流になることを示唆している。出版業界や広告業界だけでなく、情報伝達に関わるあらゆるビジネスにおいて、このペーパーレス化のトレンドに適応する必要性が高まっている。</p>
       </details>
       <span class="source-name">📰 東洋経済オンライン</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F940542%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+          data-title="｢Highway Walker｣廃止で｢ハイウェイまっぷる｣に"
+          data-summary="高速道路のサービスエリア等で配布されてきた情報誌「Highway Walker」が廃止され、代わりに「ハイウェイまっぷる」に移行する。これはビジネス現場における急速なペーパーレス化の動向を反映しており、デジタルシフトが加速する現代の産業構造の変化を示す一例である。"
+          data-source="東洋経済オンライン"
+          data-url="https://toyokeizai.net/articles/-/940542?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+          data-importance="🟢"
+          data-category="経済">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%EF%BD%A2Highway%20Walker%EF%BD%A3%E5%BB%83%E6%AD%A2%E3%81%A7%EF%BD%A2%E3%83%8F%E3%82%A4%E3%82%A6%E3%82%A7%E3%82%A4%E3%81%BE%E3%81%A3%E3%81%B7%E3%82%8B%EF%BD%A3%E3%81%AB%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F940542%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="｢Highway Walker｣廃止で｢ハイウェイまっぷる｣に">🤖 Claudeに聞く</button>
+      </div>
     </div>
 <div class="item" style="animation-delay:0.05s">
       <div class="item-header">
         <span class="imp-badge imp-useful">🟢 有益</span>
       </div>
       <h2>ホルムズ海峡危機で強まった日本の対米追従外交</h2>
-      <p class="summary">イランによるホルムズ海峡封鎖の脅威が現実味を帯びて1ヶ月が経過し、日本の外交がこれまで以上にアメリカへの追従を強めていると指摘されている。これは、日本が輸入する石油の8割以上を中東に依存しているという状況下で、エネルギー安全保障と国際政治のバランスがいかに難しいかを示している。国際情勢が経済や国家戦略に与える影響について深く考察する内容である。</p>
+      <p class="summary">イランのホルムズ海峡封鎖の可能性が浮上してから1カ月が経過し、日本の外交政策において対米追従の姿勢がより強まったと分析されている。これは、石油輸入の8割以上を中東に依存する日本にとって、エネルギー安全保障の観点から重要な経済的・政治的影響を持つ。</p>
       <details>
         <summary></summary>
-        <p class="detail-text">ホルムズ海峡は世界の原油輸送の主要ルートであり、その封鎖は日本の経済に壊滅的な影響を及ぼす可能性がある。このような危機的状況において、日本政府が主要な同盟国であるアメリカとの連携を強化するのは自然な流れだが、同時に自主的な外交の余地が狭まっているという側面もある。この記事は、地政学的リスクがエネルギー政策や外交戦略に与える影響について深く考察しており、企業がサプライチェーンリスクなどを評価し、事業継続計画を策定する上でも関連する知見を提供する。</p>
+        <p class="detail-text">ホルムズ海峡は世界の原油輸送の要衝であり、その封鎖は日本の経済に壊滅的な打撃を与える可能性がある。このような状況下で、日本はエネルギー供給の安定を確保するため、米国との連携を強化する外交戦略をとる傾向にある。この記事は、国際情勢が日本の経済政策や外交姿勢に与える具体的な影響を考察しており、地政学的リスクが日本の産業と貿易にいかに密接に関わっているかを浮き彫りにしている。</p>
       </details>
       <span class="source-name">📰 東洋経済オンライン</span>
-    </div>
-<div class="item" style="animation-delay:0.10s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
+      <div class="actions">
+        <button class="action-btn star-btn"
+          data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F940850%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+          data-title="ホルムズ海峡危機で強まった日本の対米追従外交"
+          data-summary="イランのホルムズ海峡封鎖の可能性が浮上してから1カ月が経過し、日本の外交政策において対米追従の姿勢がより強まったと分析されている。これは、石油輸入の8割以上を中東に依存する日本にとって、エネルギー安全保障の観点から重要な経済的・政治的影響を持つ。"
+          data-source="東洋経済オンライン"
+          data-url="https://toyokeizai.net/articles/-/940850?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+          data-importance="🟢"
+          data-category="経済">⭐ 保存</button>
+        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%9B%E3%83%AB%E3%83%A0%E3%82%BA%E6%B5%B7%E5%B3%A1%E5%8D%B1%E6%A9%9F%E3%81%A7%E5%BC%B7%E3%81%BE%E3%81%A3%E3%81%9F%E6%97%A5%E6%9C%AC%E3%81%AE%E5%AF%BE%E7%B1%B3%E8%BF%BD%E5%BE%93%E5%A4%96%E4%BA%A4%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F940850%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+        <button class="action-btn claude-btn" data-title="ホルムズ海峡危機で強まった日本の対米追従外交">🤖 Claudeに聞く</button>
       </div>
-      <h2>姉川の戦い前夜、信長を仕留め損ねた男の末路</h2>
-      <p class="summary">元亀元年（1570年）4月の姉川の戦いの前夜、織田信長を討ち損じた男の末路について、歴史的な視点から解説している記事。信長が越前の朝倉氏を攻めた際、縁戚である北近江の浅井長政が信長を裏切った背景にある人間関係や戦略的判断が描かれている。歴史上の事例を通じて、現代のビジネス戦略やリーダーシップに応用できる教訓を提供する。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">この記事は、戦国時代の歴史を題材に、戦略の失敗、人間関係の複雑さ、そしてその結果が個人の運命にどう影響したかを掘り下げている。ビジネスの文脈では、リーダーシップの判断、リスク管理、アライアンス戦略の重要性、そして一度の決定がもたらす長期的な影響について、歴史的な教訓として読み解くことができる。特に、信頼関係の構築と維持、そして機会を逃すことの代償といった普遍的なテーマを扱っており、現代の経営者やビジネスパーソンが直面する意思決定の難しさを理解する上で有益な知見を提供する。</p>
-      </details>
-      <span class="source-name">📰 東洋経済オンライン</span>
-    </div>
-<div class="item" style="animation-delay:0.15s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>『Highway Walker』廃止で『ハイウェイまっぷる』へ移行 | 佐滝剛弘の高速道路最前線</h2>
-      <p class="summary">高速道路のフリーマガジン『Highway Walker』が廃止され、デジタル版の『ハイウェイまっぷる』へ移行することが決定した。これは、ビジネスおよびサービス分野で急速に進むペーパーレス化の動きを反映しており、紙媒体の売上低迷という市場全体のトレンドに沿った決定である。企業の情報提供戦略がデジタルへシフトしている具体的な事例として注目される。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">この移行は、情報提供の方法が紙からデジタルへと変化している現代の消費行動に適応するための戦略的な動きである。新聞や雑誌の売上減少が続く中、企業はより効率的で環境に優しいデジタルコンテンツへの投資を増やしている。高速道路利用者は、スマートフォンやタブレットを通じて最新の情報を得られるようになり、企業側は印刷コストの削減やリアルタイムでの情報更新が可能になる。これは、デジタルトランスフォーメーションが様々な業界で進んでいる現状と、それに伴うビジネスモデルの変革を示す事例と言える。</p>
-      </details>
-      <span class="source-name">📰 東洋経済オンライン</span>
-    </div>
-<div class="item" style="animation-delay:0.20s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>ホルムズ海峡危機で強まった日本の対米追従外交</h2>
-      <p class="summary">イランによるホルムズ海峡の封鎖懸念から1ヶ月が経過し、日本が対米追従外交をさらに強めていると指摘されている。これは、日本の石油輸入の8割以上が中東に依存している現状において、エネルギー安全保障と国際関係の複雑さが浮き彫りになる事態である。地政学的リスクが国家の経済政策や外交戦略に与える影響について深く考察する内容だ。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">ホルムズ海峡は世界の原油輸送の要衝であり、その安定性は日本の経済に直接的な影響を与える。危機が高まる中で、日本政府は主要同盟国であるアメリカとの連携を強化することで、エネルギー供給の安定化を図ろうとしている。しかし、この動きは同時に、日本の外交政策における自主性の制約という側面も持ち合わせる。この記事は、地政学的リスクが国家の経済政策や外交戦略に与える影響について深く考察しており、企業のリスクマネジメントや国際ビジネス戦略を検討する上でも関連する情報となる。</p>
-      </details>
-      <span class="source-name">📰 東洋経済オンライン</span>
-    </div>
-<div class="item" style="animation-delay:0.25s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>姉川の戦い前夜、信長を仕留め損ねた男の末路</h2>
-      <p class="summary">元亀元年（1570年）4月の姉川の戦いの前夜、織田信長を討ち取る機会を逃した男の運命を描いた歴史記事。信長が朝倉氏を攻めた際、義兄の浅井長政が信長を裏切った経緯や、その後の長政の末路について詳細に語られている。この歴史物語は、戦略的判断の重要性、人間関係における信頼と裏切り、そして決断がもたらす不可逆的な結果を浮き彫りにする。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">この記事は、戦国時代の歴史を題材に、リーダーシップのあり方、競争戦略、アライアンス管理、そして一度の機会を逃すことがどれほど大きな代償を伴うかについて、示唆を与える。ビジネスの観点からは、重要な意思決定の局面におけるリスク評価の甘さや、信頼関係が崩壊することの深刻な影響といった教訓が読み取れる。歴史上の事例を通じて、現代の経営者やビジネスパーソンが直面する意思決定の難しさや、長期的な視点を持つことの重要性を再認識させる内容となっている。</p>
-      </details>
-      <span class="source-name">📰 東洋経済オンライン</span>
     </div>
     </section>
   </main>
+  <div class="toast" id="toast"></div>
   <script>
+    // トースト通知
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2000);
+    }
+
     // ダークモード
     const btn = document.getElementById('darkBtn');
     const root = document.documentElement;
@@ -625,6 +958,50 @@
           } else {
             sec.style.display = sec.dataset.cat === cat ? '' : 'none';
           }
+        });
+      });
+    });
+
+    // ⭐ 星ボタン（記事データごとlocalStorageに保存）
+    const STAR_KEY = 'starred_articles';
+    function getStarred() { return JSON.parse(localStorage.getItem(STAR_KEY) || '{}'); }
+    function saveStarred(obj) { localStorage.setItem(STAR_KEY, JSON.stringify(obj)); }
+
+    document.querySelectorAll('.star-btn').forEach(btn => {
+      const id = btn.dataset.id;
+      if (getStarred()[id]) btn.classList.add('starred');
+      btn.addEventListener('click', () => {
+        let obj = getStarred();
+        if (obj[id]) {
+          delete obj[id];
+          btn.classList.remove('starred');
+          showToast('保存を解除しました');
+        } else {
+          obj[id] = {
+            id,
+            title:       btn.dataset.title,
+            summary:     btn.dataset.summary,
+            source_name: btn.dataset.source,
+            url:         btn.dataset.url,
+            importance:  btn.dataset.importance,
+            category:    btn.dataset.category,
+          };
+          btn.classList.add('starred');
+          showToast('⭐ 保存しました');
+        }
+        saveStarred(obj);
+      });
+    });
+
+    // 🤖 Claudeに聞くボタン（クリップボードコピー）
+    document.querySelectorAll('.claude-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const title = btn.dataset.title;
+        navigator.clipboard.writeText(title).then(() => {
+          showToast('タイトルをコピーしました');
+          setTimeout(() => window.open('https://claude.ai/new', '_blank'), 300);
+        }).catch(() => {
+          window.open('https://claude.ai/new', '_blank');
         });
       });
     });
