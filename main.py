@@ -1,5 +1,5 @@
 """
-news-digest: TechCrunch RSS → Claude要約 → GitHub Pages → Discord通知
+news-digest: RSS → Gemini要約 → GitHub Pages → Gmail通知
 """
 
 import yaml
@@ -33,10 +33,10 @@ def main():
     output_path = render_html(summary_data, config)
     print(f"  → {output_path} に保存")
 
-    # 4. Discord通知
-    print("[4/4] Discordに通知中...")
-    from notifier import notify_discord
-    notify_discord(config)
+    # 4. Gmail通知
+    print("[4/4] Gmailに通知中...")
+    from notifier import notify_gmail
+    notify_gmail(config, summary_data)
     print("  → 通知送信完了")
 
     print("\n完了しました。")
