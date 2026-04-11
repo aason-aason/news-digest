@@ -66,18 +66,29 @@ categories:
     - hackernews
     - reddit
     - domestic_rss
-  音楽・DTM:
-    - bedroom_producers_blog
-    - kvr_audio
-    - musicradar
-    - attack_magazine
-    - dtm_station
+  Anthropic:
+    - anthropic_blog          # Claude・API・製品アップデート専用
+  音楽:
+    - musicradar              # 音楽業界動向・リリース
+    - attack_magazine         # 電子音楽動向
     - reddit_WeAreTheMusicMakers
+  DTM:
+    - bedroom_producers_blog  # プラグイン・音源の無料配布・新作
+    - kvr_audio               # VST/AUプラグイン新着・セール
+    - musicradar              # DAW・制作テクニック（音楽と共有）
+    - attack_magazine         # ミックス・マスタリング（音楽と共有）
+    - dtm_station             # 国内DTM情報
     - reddit_edmproduction
   ビジネス:
-    - hbr
+    - hbr                     # 個人・フリーランス・マネタイズ寄りの記事
     - toyo_keizai
     - diamond_online
+    # 除外：組織論・マネジメント・リーダーシップ・「いい上司とは」系
+  経済:
+    - hbr                     # 経済時事・マーケット寄りの記事
+    - toyo_keizai
+    - diamond_online
+    # ビジネス・経済は同一ソースをAIが記事内容で振り分ける
 
 summary:
   language: "ja"
@@ -111,6 +122,13 @@ digest:
 
 ### カテゴリ構造
 各カテゴリ内はAIが複数記事をトピック単位に束ねて要約する。
+
+### カテゴリ振り分けルール
+- テック・AIとビジネス・経済で重複する記事はAIが内容を判断して1カテゴリにのみ表示
+- HBR・東洋経済・ダイヤモンドは同一ソースをビジネスと経済の両方に使い、AIが記事内容でカテゴリを振り分ける
+- ビジネス：個人・フリーランス・マネタイズ・収益事例寄りの記事
+- 経済：時事・マーケット・産業動向・景気寄りの記事
+- 組織論・マネジメント・リーダーシップ系はどのカテゴリにも表示しない
 
 ### Discordの出力フォーマット
 ```
@@ -149,7 +167,7 @@ digest:
 
 | フェーズ | 内容 | 状態 |
 |----------|------|------|
-| Phase 1 | RSS + Gemini + Discord 最小構成 | ✅ 完了 |
+| Phase 1 | RSS + Claude + Discord 最小構成 | ✅ 完了 |
 | Phase 2 | arXiv / HackerNews / Reddit 追加 | 🔲 未着手 |
 | Phase 3 | Groq fallback / コスト監視 | 🔲 未着手 |
 | Phase 4 | X投稿ソース追加 | 🔲 後日 |
@@ -181,6 +199,7 @@ digest:
 | reddit_WeAreTheMusicMakers | Reddit API（r/WeAreTheMusicMakers） |
 | reddit_edmproduction | Reddit API（r/edmproduction） |
 | hbr | http://feeds.harvardbusiness.org/harvardbusiness |
+| anthropic_blog | https://www.anthropic.com/news/rss.xml |
 | toyo_keizai | https://toyokeizai.net/list/feed/rss |
 | diamond_online | https://diamond.jp/feed/top |
 
@@ -193,48 +212,8 @@ digest:
 
 ---
 
-## 申し送り事項（2026-04-07時点）
-
-### 現在の実装状況
-
-**AI要約**
-- Gemini 2.5 Flash を使用（当初Claude APIの予定だったがGemini Flashに変更）
-- 環境変数: `GEMINI_API_KEY`（Claude APIは未使用）
-- 出力形式: JSON配列（category / title / importance / summary / detail / source_name / url）
-
-**RSSソース（稼働中）**
-- テック: TechCrunch, TechCrunch Startups
-- ビジネス: The Hustle, IndieHackers, Harvard Business Review, 東洋経済オンライン, ダイヤモンド・オンライン
-- 音楽・DTM: Bedroom Producers Blog, KVR Audio, MusicRadar, Attack Magazine, DTMステーション
-- 1ソースあたり3件取得（config.yaml の max_articles_per_feed）
-
-**GitHub Actions**
-- cron: 毎日UTC 22:00（JST 翌7:00）
-- ワークフロー: `.github/workflows/digest.yml`
-- docs/index.html を自動コミット＆プッシュ
-
-**GitHub Pages**
-- 公開URL: https://aason-aason.github.io/news-digest/
-- ソース: mainブランチ / docs フォルダ
-
-**Discord通知**
-- 環境変数: `DISCORD_WEBHOOK_URL`
-- メッセージ: 「今日のまとめを更新しました → {URL}」
-
-**UI**
-- スマホ優先・1カラム
-- 上部フィルターバー（カテゴリ切り替え）
-- 🔴緊急アラートは最上部に別枠表示
-- カード形式（重要度バッジ・要約・もっと詳しく・ソース名リンク）
-- ダークモード対応（localStorage保存）
-
-### 未実装・課題
-- config.yamlの `schedule.cron` とActionsのcronが連動していない（手動合わせ）
-- arXiv / HackerNews / Reddit は未実装
-- Groq fallback 未実装
-- 過去ダイジェストのアーカイブ（archive/YYYY-MM-DD.html）未実装
-- deploy.sh でコミットメッセージが常に "update" になっている
-
+## 申し送り事項
+（最初のセッション開始時に追記すること）
 ---
 
 ## 重要度判断基準（確定）
@@ -312,6 +291,15 @@ ClaudeがあーそんIncの文脈で記事の重要度を判断する基準。
 - デフォルトで十分な量の要約を表示（薄い要約は禁止）
 - 「もっと詳しく」で更に深掘り要約を折りたたみ展開
 - 参照記事リンクは各トピック直下にサイト名のみ表示（URLは非表示）
+
+### 記事アクション（各トピック直下に配置）
+- ⭐ 星ボタン：タップで保存リストに追加。もう一度タップで解除
+- 🐦 Xに投稿：タップでXが開き、記事タイトル+URLが入力済みの状態になる（Twitter Intent API使用・外部APIなし）
+- 🤖 Claudeに聞く：タップでClaude.aiが開き、記事タイトルがクリップボードにコピーされる
+
+### 保存リスト
+- 星をつけた記事を一覧表示する別ページ（/saved）
+- 星を外すと保存リストから削除される
 
 ### 言語・翻訳方針
 - AIまとめは日本語で完結させる
