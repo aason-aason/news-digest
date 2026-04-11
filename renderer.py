@@ -265,12 +265,14 @@ def render_html(articles: list[dict], config: dict) -> str:
       from {{ opacity: 0; }}
       to   {{ opacity: 1; }}
     }}
-    .source-name {{
+    .source-link {{
       font-size: 0.8rem;
-      color: var(--muted);
+      color: #1a73e8;
+      text-decoration: none;
       display: inline-block;
       margin-top: 2px;
     }}
+    .source-link:hover {{ text-decoration: underline; }}
     .actions {{
       display: flex;
       gap: 8px;
@@ -661,8 +663,10 @@ def _build_item(article: dict, delay: float) -> str:
         <p class="detail-text">{detail}</p>
       </details>"""
 
-    if source_name:
-        source_block = f'<span class="source-name">📰 {source_name}</span>'
+    if source_name and url:
+        source_block = f'<a class="source-link" href="{url}" target="_blank" rel="noopener">📰 {source_name}</a>'
+    elif source_name:
+        source_block = f'<span class="source-link">📰 {source_name}</span>'
     else:
         source_block = ""
 
