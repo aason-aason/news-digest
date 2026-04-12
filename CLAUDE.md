@@ -1,13 +1,13 @@
 # CLAUDE.md — ニュースダイジェストツール
 > 自動更新ファイル。セッション開始時に必ず読むこと。
-> 最終更新：2026-04-07
+> 最終更新：2026-04-12
 
 ---
 
 ## このプロジェクトについて
 
 **あーそんinc.** が運営するニュース自動配信ツール。
-海外テック・AI領域のニュースを収集・要約し、Discordに定時配信する。
+複数ジャンルのニュースを収集・AI要約し、GitHub Pagesに公開、Gmailで定時通知する。
 実行環境はGitHub Actions（cron）。コードを触らずconfig.yamlだけで運用変更できることが最優先。
 
 ---
@@ -46,9 +46,12 @@ news-digest/
 - APIキーは環境変数から取得（ハードコード禁止）
 
 ### notifier.py
-- Discord Webhook URLは環境変数 `DISCORD_WEBHOOK_URL` から取得
-- メッセージフォーマット：タイトル・要約・元記事URL・ソース名
-- 1メッセージあたり2000文字制限に注意（超えたら分割送信）
+- Gmail（smtplib）で通知。Discordは廃止済み
+- 環境変数：`GMAIL_SENDER`（送信元アドレス）、`GMAIL_APP_PASSWORD`（Googleアプリパスワード）
+- 宛先固定：nobu.dougahennsyuu@gmail.com
+- 通常時：件名「📰 今日のニュースまとめを更新しました」＋URL
+- 🔴緊急アラートあり：件名「🔴【緊急】{タイトル}」＋全アラートの要約・詳細
+- `notify_gmail(config, summary_data)` の形で呼び出す（記事データを渡す）
 
 ### config.yaml
 ```yaml
@@ -147,9 +150,9 @@ digest:
 
 | 変数名 | 用途 |
 |--------|------|
-| `ANTHROPIC_API_KEY` | Claude API |
-| `GROQ_API_KEY` | Groq fallback |
-| `DISCORD_WEBHOOK_URL` | Discord通知先 |
+| `GEMINI_API_KEY` | Google Gemini API（要約に使用） |
+| `GMAIL_SENDER` | Gmail送信元アドレス |
+| `GMAIL_APP_PASSWORD` | Googleアプリパスワード（通常のパスワードではない） |
 | `GITHUB_TOKEN` | GitHub PagesへのPush（Actions自動付与のため登録不要） |
 
 ---
@@ -213,7 +216,17 @@ digest:
 ---
 
 ## 申し送り事項
-（最初のセッション開始時に追記すること）
+
+### workflowファイル変更時の注意（2026-04-12）
+`.github/workflows/` を変更してpushするには、PATに `workflow` スコープが必要。
+スコープがない場合はプッシュが拒否される。
+→ 事前にスコープを確認してから作業すること。
+
+### GitHub Secrets・YAMLの手動編集を依頼する場合（2026-04-12）
+- Secretsの値（パスワード・メールアドレス）をYAMLに直書きしてしまうリスクがある
+- 手動編集を依頼するときは**ファイル全体**をコピペしてもらう（部分修正は全角スペース・インデントミスが起きやすい）
+- `${{ secrets.XXX }}` の形式を必ず具体例で伝える
+- 誤ってSecretが公開されたら即座に無効化・再発行を案内する
 ---
 
 ## 重要度判断基準（確定）
