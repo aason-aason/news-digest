@@ -1,901 +1,1300 @@
 <!DOCTYPE html>
 <html lang="ja" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News Digest - 2026年04月14日</title>
-  <style>
-    :root {
-      --bg:        #f5f6f8;
-      --surface:   #ffffff;
-      --text:      #111111;
-      --subtext:   #4a4a4a;
-      --muted:     #888888;
-      --border:    #e4e4e4;
-      --hdr:       rgba(255,255,255,0.92);
-      --shadow:    0 1px 6px rgba(0,0,0,0.07);
-      --urgent-bg: #fff4f4;
-      --urgent-border: #ff4444;
-    }
-    [data-theme="dark"] {
-      --bg:        #18191a;
-      --surface:   #242526;
-      --text:      #e4e6eb;
-      --subtext:   #b0b3b8;
-      --muted:     #777;
-      --border:    #3a3b3c;
-      --hdr:       rgba(24,25,26,0.95);
-      --shadow:    0 1px 6px rgba(0,0,0,0.4);
-      --urgent-bg: #2a1a1a;
-      --urgent-border: #ff4444;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      font-size: 17px;
-      line-height: 1.8;
-      transition: background 0.3s, color 0.3s;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News Digest - 2026年04月15日</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f9f7f4;
+  --surface: #ffffff;
+  --text: #111111;
+  --subtext: #444444;
+  --muted: #888888;
+  --border: #e0ddd8;
+  --border-strong: #111111;
+  --hdr: rgba(249,247,244,0.95);
+  --serif: 'Playfair Display', 'Noto Serif JP', Georgia, serif;
+}
+[data-theme="dark"] {
+  --bg: #1a1918;
+  --surface: #242220;
+  --text: #f0ede8;
+  --subtext: #b0ada8;
+  --muted: #666360;
+  --border: #333130;
+  --border-strong: #f0ede8;
+  --hdr: rgba(26,25,24,0.97);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.8;
+  transition: background 0.3s, color 0.3s;
+}
 
-    /* ヘッダー */
-    header {
-      background: var(--hdr);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 20px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 12px;
-    }
-    header h1 { font-size: 1.1rem; font-weight: 800; }
-    header .date { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
-    .saved-link {
-      font-size: 0.82rem;
-      color: var(--subtext);
-      text-decoration: none;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 5px 12px;
-      transition: background 0.2s;
-    }
-    .saved-link:hover { background: var(--border); }
-    .dark-btn {
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 6px 14px;
-      font-size: 0.82rem;
-      cursor: pointer;
-      color: var(--text);
-      white-space: nowrap;
-      transition: background 0.2s;
-    }
-    .dark-btn:hover { background: var(--border); }
-    .filter-bar {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding-bottom: 12px;
-      scrollbar-width: none;
-    }
-    .filter-bar::-webkit-scrollbar { display: none; }
-    .filter-btn {
-      flex-shrink: 0;
-      padding: 5px 14px;
-      border: 2px solid var(--c, #888);
-      border-radius: 20px;
-      background: none;
-      color: var(--c, #888);
-      font-size: 0.8rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .filter-btn.active, .filter-btn:hover {
-      background: var(--c, #888);
-      color: #fff;
-    }
-    .filter-btn[data-cat="all"] { --c: #555; }
+/* ヘッダー */
+header {
+  background: var(--hdr);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--border-strong);
+  padding: 16px 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.header-logo {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.header-date {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.header-links {
+  display: flex;
+  gap: 8px;
+}
+.header-link {
+  font-size: 11px;
+  color: var(--subtext);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 11px;
+  transition: background 0.2s;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.header-link:hover { background: var(--border); color: var(--text); }
+.filter-bar {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-top: 1px solid var(--border);
+  margin-top: 10px;
+}
+.filter-bar::-webkit-scrollbar { display: none; }
+.filter-btn {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: -2px;
+}
+.filter-btn.active, .filter-btn:hover {
+  color: var(--text);
+  border-bottom-color: var(--border-strong);
+}
 
-    /* メインコンテンツ */
-    main {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 28px 20px 80px;
-      display: flex;
-      flex-direction: column;
-      gap: 36px;
-    }
+/* メインコンテンツ */
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
 
-    /* 🔴 緊急アラート枠 */
-    .urgent-section {
-      background: var(--urgent-bg);
-      border: 2px solid var(--urgent-border);
-      border-radius: 14px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .urgent-section .section-label {
-      font-size: 0.8rem;
-      font-weight: 800;
-      color: var(--urgent-border);
-      letter-spacing: 0.05em;
-      margin-bottom: 12px;
-    }
+/* 緊急セクション */
+.urgent-section {
+  border: 2px solid #cc0000;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+.urgent-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #cc0000;
+  margin-bottom: 16px;
+}
 
-    /* カテゴリセクション */
-    .category-section { display: flex; flex-direction: column; gap: 4px; }
-    .category-label {
-      font-size: 0.75rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      padding: 0 4px;
-      margin-bottom: 8px;
-    }
+/* カテゴリセクション */
+.category-section {
+  margin-bottom: 40px;
+}
+.category-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+.category-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.category-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
 
-    /* 記事カード */
-    .item {
-      background: var(--surface);
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      transition: transform 0.15s, box-shadow 0.15s;
-      animation: fadeUp 0.35s ease both;
-    }
-    .item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(10px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .item-header { display: flex; align-items: flex-start; gap: 8px; flex-wrap: wrap; }
-    .imp-badge {
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 20px;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .imp-urgent  { background: #ffe0e0; color: #cc0000; }
-    .imp-important { background: #fff3e0; color: #b35a00; }
-    .imp-useful  { background: #e8f5e9; color: #2e7d32; }
-    .item h2 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      line-height: 1.55;
-      color: var(--text);
-    }
-    .item .summary {
-      font-size: 0.96rem;
-      color: var(--subtext);
-      line-height: 1.9;
-    }
-    details { border-top: 1px solid var(--border); padding-top: 12px; }
-    summary {
-      font-size: 0.83rem;
-      color: #1a73e8;
-      cursor: pointer;
-      list-style: none;
-      user-select: none;
-    }
-    summary::-webkit-details-marker { display: none; }
-    summary::before { content: "▶ もっと詳しく"; }
-    details[open] summary::before { content: "▲ 閉じる"; }
-    .detail-text {
-      font-size: 0.9rem;
-      color: var(--subtext);
-      line-height: 1.8;
-      margin-top: 12px;
-      animation: fadeIn 0.2s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-    .source-link {
-      font-size: 0.8rem;
-      color: #1a73e8;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 2px;
-    }
-    .source-link:hover { text-decoration: underline; }
-    .actions {
-      display: flex;
-      gap: 8px;
-      border-top: 1px solid var(--border);
-      padding-top: 12px;
-      flex-wrap: wrap;
-    }
-    .action-btn {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      padding: 6px 12px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: none;
-      color: var(--subtext);
-      font-size: 0.8rem;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.2s;
-      white-space: nowrap;
-    }
-    .action-btn:hover { background: var(--border); color: var(--text); }
-    .action-btn.star-btn.starred {
-      border-color: #f5a623;
-      color: #f5a623;
-      background: #fff8ed;
-    }
-    [data-theme="dark"] .action-btn.star-btn.starred {
-      background: #2a2010;
-    }
-    .toast {
-      position: fixed;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%) translateY(20px);
-      background: #333;
-      color: #fff;
-      padding: 8px 18px;
-      border-radius: 20px;
-      font-size: 0.82rem;
-      opacity: 0;
-      transition: all 0.3s;
-      pointer-events: none;
-      z-index: 999;
-    }
-    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-  </style>
+/* 記事 */
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+  animation: fadeIn 0.3s ease both;
+}
+.item:first-of-type {
+  border-top: 1px solid var(--border);
+  margin-top: 12px;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.item-body { min-width: 0; }
+.item-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.imp-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border-radius: 3px;
+}
+.imp-urgent { background: #ffe0e0; color: #cc0000; }
+.imp-important { background: #fff3e0; color: #8a4800; }
+.imp-useful { background: #e8f5e9; color: #2e7d32; }
+.item-source {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+.item h2 {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.item .summary {
+  font-size: 13px;
+  color: var(--subtext);
+  line-height: 1.85;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+details {
+  margin-top: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+summary {
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "▶ 続きを読む"; }
+details[open] summary::before { content: "▲ 閉じる"; }
+.detail-text {
+  font-size: 13px;
+  color: var(--subtext);
+  line-height: 1.85;
+  margin-top: 10px;
+}
+.item-thumb {
+  width: 72px;
+  height: 54px;
+  background: var(--border);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.item-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 0;
+  border: none;
+  background: none;
+  color: var(--muted);
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-family: inherit;
+}
+.action-btn:hover { color: var(--text); }
+.action-btn.star-btn.starred { color: #b35a00; }
+.action-sep {
+  color: var(--border);
+  font-size: 11px;
+  line-height: 1;
+  align-self: center;
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+  z-index: 999;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
 </head>
 <body>
-  <header>
-    <div class="header-top">
-      <div>
-        <h1>News Digest</h1>
-        <p class="date">2026年04月14日 更新</p>
-      </div>
-      <div style="display:flex;gap:8px;align-items:center">
-        <a class="saved-link" href="saved.html">⭐ 保存済み</a>
-        <button class="dark-btn" id="darkBtn">🌙 ダーク</button>
-      </div>
-    </div>
-    <div class="filter-bar">
-      <button class="filter-btn active" data-cat="all">すべて</button>
-<button class="filter-btn" data-cat="urgent" style="--c:#ff4444">🔴 緊急</button>
-<button class="filter-btn" data-cat="テック・AI" style="--c:#666">テック・AI</button>
-<button class="filter-btn" data-cat="Anthropic" style="--c:#666">Anthropic</button>
-<button class="filter-btn" data-cat="音楽" style="--c:#666">音楽</button>
-<button class="filter-btn" data-cat="DTM" style="--c:#666">DTM</button>
-<button class="filter-btn" data-cat="ビジネス" style="--c:#e67e22">ビジネス</button>
-<button class="filter-btn" data-cat="経済" style="--c:#666">経済</button>
 
-    </div>
-  </header>
-  <main>
-    <section class="urgent-section">
-      <p class="section-label">🔴 緊急アラート — 即確認してください</p>
-      <div class="item" style="animation-delay:0.00s">
-      <div class="item-header">
-        <span class="imp-badge imp-urgent">🔴 緊急</span>
-      </div>
-      <h2>数千のウェブサイトで使用されている数十のWordPressプラグインにバックドアが仕掛けられた</h2>
-      <p class="summary">新しい企業オーナーに売却された後、数十のWordPressプラグインが不正にハイジャックされ、マルウェアを配布するためのバックドアが仕掛けられたと報じられています。このセキュリティ脆弱性は、数千のウェブサイトに影響を及ぼす可能性があります。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">攻撃者は、プラグインの所有権が変更された際に管理権限を悪用し、悪意のあるコードを挿入したとみられます。これにより、影響を受けたウェブサイトの訪問者にマルウェアがダウンロードされたり、サイトが不正に乗っ取られたりする危険性があります。WordPressユーザーは、使用しているプラグインの出所を確認し、速やかにアップデートまたは代替策を検討する必要があります。</p>
-      </details>
-      <a class="source-link" href="https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/" target="_blank" rel="noopener">📰 TechCrunch</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fsomeone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites%2F"
-          data-title="数千のウェブサイトで使用されている数十のWordPressプラグインにバックドアが仕掛けられた"
-          data-summary="新しい企業オーナーに売却された後、数十のWordPressプラグインが不正にハイジャックされ、マルウェアを配布するためのバックドアが仕掛けられたと報じられています。このセキュリティ脆弱性は、数千のウェブサイトに影響を及ぼす可能性があります。"
-          data-source="TechCrunch"
-          data-url="https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/"
-          data-importance="🔴"
-          data-category="テック・AI">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E6%95%B0%E5%8D%83%E3%81%AE%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E6%95%B0%E5%8D%81%E3%81%AEWordPress%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%89%E3%82%A2%E3%81%8C%E4%BB%95%E6%8E%9B%E3%81%91%E3%82%89%E3%82%8C%E3%81%9F%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fsomeone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="数千のウェブサイトで使用されている数十のWordPressプラグインにバックドアが仕掛けられた">🤖 Claudeに聞く</button>
+<header>
+  <div class="header-top">
+    <div class="header-logo">News Digest</div>
+    <div class="header-meta">
+      <span class="header-date">2026.04.15</span>
+      <div class="header-links">
+        <a class="header-link" href="saved.html">⭐ 保存済み</a>
+        <button class="header-link" id="darkBtn">🌙 ダーク</button>
       </div>
     </div>
-    </section>
-    <section class="category-section" data-cat="テック・AI">
-      <p class="category-label" style="color:#666">● テック・AI</p>
-      <div class="item" style="animation-delay:0.00s">
-      <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
-      </div>
-      <h2>AIデータセンターのスタートアップFluidstackが180億ドル評価額で10億ドル調達に向け交渉中と報じられる</h2>
-      <p class="summary">AIデータセンターのスタートアップFluidstackが、Anthropicとの500億ドル規模のデータセンター建設契約後、180億ドルの評価額で10億ドルの資金調達ラウンドに向けて交渉中と報じられています。数ヶ月前には75億ドルの評価額だったため、急速な企業価値の上昇を示しています。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">Fluidstackは、AnthropicがAIモデル開発に必要な大規模なコンピューティングインフラを提供するため、データセンターの構築を請け負っています。この契約により、同社の事業が大きく拡大し、投資家の関心が高まっていることが伺えます。新たな資金調達は、さらなる事業拡大や技術開発に充てられる見込みです。</p>
-      </details>
-      <a class="source-link" href="https://techcrunch.com/2026/04/14/ai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report/" target="_blank" rel="noopener">📰 TechCrunch</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report%2F"
-          data-title="AIデータセンターのスタートアップFluidstackが180億ドル評価額で10億ドル調達に向け交渉中と報じられる"
-          data-summary="AIデータセンターのスタートアップFluidstackが、Anthropicとの500億ドル規模のデータセンター建設契約後、180億ドルの評価額で10億ドルの資金調達ラウンドに向けて交渉中と報じられています。数ヶ月前には75億ドルの評価額だったため、急速な企業価値の上昇を示しています。"
-          data-source="TechCrunch"
-          data-url="https://techcrunch.com/2026/04/14/ai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report/"
-          data-importance="🟡"
-          data-category="テック・AI">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=AI%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97Fluidstack%E3%81%8C180%E5%84%84%E3%83%89%E3%83%AB%E8%A9%95%E4%BE%A1%E9%A1%8D%E3%81%A710%E5%84%84%E3%83%89%E3%83%AB%E8%AA%BF%E9%81%94%E3%81%AB%E5%90%91%E3%81%91%E4%BA%A4%E6%B8%89%E4%B8%AD%E3%81%A8%E5%A0%B1%E3%81%98%E3%82%89%E3%82%8C%E3%82%8B%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="AIデータセンターのスタートアップFluidstackが180億ドル評価額で10億ドル調達に向け交渉中と報じられる">🤖 Claudeに聞く</button>
-      </div>
+  </div>
+  <div class="filter-bar">
+    <button class="filter-btn active" data-cat="all">すべて</button>
+<button class="filter-btn" data-cat="テック・AI">テック・AI</button>
+<button class="filter-btn" data-cat="Anthropic">Anthropic</button>
+<button class="filter-btn" data-cat="DTM">DTM</button>
+<button class="filter-btn" data-cat="音楽">音楽</button>
+<button class="filter-btn" data-cat="ビジネス">ビジネス</button>
+<button class="filter-btn" data-cat="経済">経済</button>
+
+  </div>
+</header>
+
+<main>
+  
+  <section class="category-section" data-cat="テック・AI">
+  <p class="category-label">テック・AI</p>
+  <div class="item" style="animation-delay:0.00s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">TechCrunch</span>
     </div>
+    <h2>FathomがGranolaに対抗し、ボットなしの会議モードを追加</h2>
+    <p class="summary">AI会議アシスタントのFathomが、ボットを使わずに会議を記録できる「ボットなしモード」を導入した。これにより、ユーザーはビデオ、オーディオのみ、文字起こしのみのモードを選択でき、競合サービスGranolaとの差別化を図る。この機能は、AIボットが会議に参加することに抵抗があるユーザーや、特定の規制下での利用を可能にし、より幅広い利用シーンに対応する。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">FathomはこれまでAIボットを会議に参加させて記録していたが、今回のアップデートでボットを会議に招待せず、自動でビデオ、オーディオ、文字起こしを記録できるようになった。このモードは特に、セキュリティやプライバシーに敏感な企業、またはAIボットの存在を避けたいユーザー層をターゲットにしている。競合のGranolaは既に同様の機能を提供しており、Fathomはこれに追随しつつ、ユーザーの選択肢を広げることで市場での競争力を高めようとしている。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F15%2Ffathom-adds-a-bot-less-meeting-mode-in-a-bid-to-take-on-granola%2F"
+        data-title="FathomがGranolaに対抗し、ボットなしの会議モードを追加"
+        data-summary="AI会議アシスタントのFathomが、ボットを使わずに会議を記録できる「ボットなしモード」を導入した。これにより、ユーザーはビデオ、オーディオのみ、文字起こしのみのモードを選択でき、競合サービスGranolaとの差別化を図る。この機能は、AIボットが会議に参加することに抵抗があるユーザーや、特定の規制下での利用を可能にし、より幅広い利用シーンに対応する。"
+        data-source="TechCrunch"
+        data-url="https://techcrunch.com/2026/04/15/fathom-adds-a-bot-less-meeting-mode-in-a-bid-to-take-on-granola/"
+        data-importance="🟢"
+        data-category="テック・AI">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Fathom%E3%81%8CGranola%E3%81%AB%E5%AF%BE%E6%8A%97%E3%81%97%E3%80%81%E3%83%9C%E3%83%83%E3%83%88%E3%81%AA%E3%81%97%E3%81%AE%E4%BC%9A%E8%AD%B0%E3%83%A2%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F15%2Ffathom-adds-a-bot-less-meeting-mode-in-a-bid-to-take-on-granola%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="FathomがGranolaに対抗し、ボットなしの会議モードを追加">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
 <div class="item" style="animation-delay:0.05s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>金融リスク管理プラットフォームPillarがa16z主導のラウンドで2,000万ドルのシード資金を調達</h2>
-      <p class="summary">金融リスク管理プラットフォームのPillarが、a16z（Andreessen Horowitz）が主導するラウンドで2,000万ドルのシード資金を調達しました。Pillarは、洗練された機関投資家レベルの金融ツールを中小企業に提供することを目指しています。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">同社の目標は、ヘッジングを決済や会計ソフトウェアと同じくらい身近で普及させることです。中小企業が為替リスクや金利リスクなどを効果的に管理できるソリューションを提供することで、企業運営の安定化を支援します。今回の資金調達により、Pillarは製品開発を加速し、市場拡大を図る計画です。</p>
-      </details>
-      <a class="source-link" href="https://techcrunch.com/2026/04/14/financial-risk-management-platform-pillar-raises-20m-seed-in-round-led-by-a16z/" target="_blank" rel="noopener">📰 TechCrunch Startups</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Ffinancial-risk-management-platform-pillar-raises-20m-seed-in-round-led-by-a16z%2F"
-          data-title="金融リスク管理プラットフォームPillarがa16z主導のラウンドで2,000万ドルのシード資金を調達"
-          data-summary="金融リスク管理プラットフォームのPillarが、a16z（Andreessen Horowitz）が主導するラウンドで2,000万ドルのシード資金を調達しました。Pillarは、洗練された機関投資家レベルの金融ツールを中小企業に提供することを目指しています。"
-          data-source="TechCrunch Startups"
-          data-url="https://techcrunch.com/2026/04/14/financial-risk-management-platform-pillar-raises-20m-seed-in-round-led-by-a16z/"
-          data-importance="🟢"
-          data-category="テック・AI">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E9%87%91%E8%9E%8D%E3%83%AA%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0Pillar%E3%81%8Ca16z%E4%B8%BB%E5%B0%8E%E3%81%AE%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%81%A72%2C000%E4%B8%87%E3%83%89%E3%83%AB%E3%81%AE%E3%82%B7%E3%83%BC%E3%83%89%E8%B3%87%E9%87%91%E3%82%92%E8%AA%BF%E9%81%94%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Ffinancial-risk-management-platform-pillar-raises-20m-seed-in-round-led-by-a16z%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="金融リスク管理プラットフォームPillarがa16z主導のラウンドで2,000万ドルのシード資金を調達">🤖 Claudeに聞く</button>
-      </div>
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">TechCrunch</span>
     </div>
+    <h2>Spotifyが米国と英国で物理的な書籍の購入機能を導入</h2>
+    <p class="summary">Spotifyが米国と英国のAndroidアプリユーザー向けに、物理的な書籍を直接購入できる機能を開始した。この機能は来週にはiOSユーザーにも展開される予定で、音楽ストリーミングサービスが新たなコンテンツ領域に拡大する動きを示している。Spotifyは既にオーディオブックを提供しており、物理書籍の追加により、オーディオブックと連携した新たな顧客体験を提供し、収益源の多角化を目指す。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">この新機能により、Spotifyユーザーはアプリ内でオーディオブックを視聴した後、その物理的な書籍を購入することが可能になる。これは、Spotifyがエンターテイメントプラットフォームとしての地位を強化し、ユーザーのコンテンツ消費体験を一元化する戦略の一環と見られる。具体的には、Androidユーザーは既に利用可能で、iOSユーザーは翌週に利用できるようになる。これにより、Spotifyは競合サービスとの差別化を図りつつ、新たな市場への進出を加速させる狙いがある。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F15%2Fspotify-launches-the-ability-to-purchase-physical-books-in-the-us-and-uk%2F"
+        data-title="Spotifyが米国と英国で物理的な書籍の購入機能を導入"
+        data-summary="Spotifyが米国と英国のAndroidアプリユーザー向けに、物理的な書籍を直接購入できる機能を開始した。この機能は来週にはiOSユーザーにも展開される予定で、音楽ストリーミングサービスが新たなコンテンツ領域に拡大する動きを示している。Spotifyは既にオーディオブックを提供しており、物理書籍の追加により、オーディオブックと連携した新たな顧客体験を提供し、収益源の多角化を目指す。"
+        data-source="TechCrunch"
+        data-url="https://techcrunch.com/2026/04/15/spotify-launches-the-ability-to-purchase-physical-books-in-the-us-and-uk/"
+        data-importance="🟢"
+        data-category="テック・AI">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Spotify%E3%81%8C%E7%B1%B3%E5%9B%BD%E3%81%A8%E8%8B%B1%E5%9B%BD%E3%81%A7%E7%89%A9%E7%90%86%E7%9A%84%E3%81%AA%E6%9B%B8%E7%B1%8D%E3%81%AE%E8%B3%BC%E5%85%A5%E6%A9%9F%E8%83%BD%E3%82%92%E5%B0%8E%E5%85%A5%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F15%2Fspotify-launches-the-ability-to-purchase-physical-books-in-the-us-and-uk%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Spotifyが米国と英国で物理的な書籍の購入機能を導入">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
 <div class="item" style="animation-delay:0.10s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>StrictlyVC San Francisco、数週間後にTDK Ventures、Replitなどのリーダーが集結</h2>
-      <p class="summary">今年の最初のStrictlyVCイベントが、TDK VenturesやReplitなど様々な分野のリーダーを招き、4月30日にサンフランシスコで開催されます。まだ数枚のチケットが残っているため、参加希望者は早めに登録するよう呼びかけられています。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">StrictlyVCはスタートアップとベンチャーキャピタルのためのイベントであり、業界の最前線で活躍する識者による講演やネットワーキングの機会が提供されます。最新のテクノロジー動向や投資トレンドについて直接学ぶことができる貴重な場となるでしょう。サンフランシスコで開催されるこのイベントは、スタートアップエコシステムにおける重要な交流の場です。</p>
-      </details>
-      <a class="source-link" href="https://techcrunch.com/2026/04/14/join-the-first-strictlyvc-of-2026-in-sf-with-leaders-from-tdk-ventures-and-replits-co-founder/" target="_blank" rel="noopener">📰 TechCrunch Startups</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fjoin-the-first-strictlyvc-of-2026-in-sf-with-leaders-from-tdk-ventures-and-replits-co-founder%2F"
-          data-title="StrictlyVC San Francisco、数週間後にTDK Ventures、Replitなどのリーダーが集結"
-          data-summary="今年の最初のStrictlyVCイベントが、TDK VenturesやReplitなど様々な分野のリーダーを招き、4月30日にサンフランシスコで開催されます。まだ数枚のチケットが残っているため、参加希望者は早めに登録するよう呼びかけられています。"
-          data-source="TechCrunch Startups"
-          data-url="https://techcrunch.com/2026/04/14/join-the-first-strictlyvc-of-2026-in-sf-with-leaders-from-tdk-ventures-and-replits-co-founder/"
-          data-importance="🟢"
-          data-category="テック・AI">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=StrictlyVC%20San%20Francisco%E3%80%81%E6%95%B0%E9%80%B1%E9%96%93%E5%BE%8C%E3%81%ABTDK%20Ventures%E3%80%81Replit%E3%81%AA%E3%81%A9%E3%81%AE%E3%83%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%81%8C%E9%9B%86%E7%B5%90%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fjoin-the-first-strictlyvc-of-2026-in-sf-with-leaders-from-tdk-ventures-and-replits-co-founder%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="StrictlyVC San Francisco、数週間後にTDK Ventures、Replitなどのリーダーが集結">🤖 Claudeに聞く</button>
-      </div>
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">TechCrunch Startups</span>
     </div>
-    </section><section class="category-section" data-cat="Anthropic">
-      <p class="category-label" style="color:#666">● Anthropic</p>
-      <div class="item" style="animation-delay:0.00s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>Anthropicの共同創設者が、トランプ政権にMythosについて説明したことを認める</h2>
-      <p class="summary">Anthropicの共同創設者であるジャック・クラーク氏が、Semafor World Economyサミットのインタビューで、同社がトランプ政権にAIモデル「Mythos」について説明したことを認めました。これは、同社が米国政府を提訴している最中にも政府との関与を続けている理由を説明するものです。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">クラーク氏は、AI開発企業が政府と関わることは重要であり、技術の安全性や規制に関する対話が必要であるとの考えを示しました。法的な紛争と並行して政府とのコミュニケーションを維持することは、AI技術の発展と社会への統合において複雑な側面を示唆しています。企業が自社の技術に対する理解を深める努力の一環として位置付けられます。</p>
-      </details>
-      <a class="source-link" href="https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos/" target="_blank" rel="noopener">📰 TechCrunch</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fanthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos%2F"
-          data-title="Anthropicの共同創設者が、トランプ政権にMythosについて説明したことを認める"
-          data-summary="Anthropicの共同創設者であるジャック・クラーク氏が、Semafor World Economyサミットのインタビューで、同社がトランプ政権にAIモデル「Mythos」について説明したことを認めました。これは、同社が米国政府を提訴している最中にも政府との関与を続けている理由を説明するものです。"
-          data-source="TechCrunch"
-          data-url="https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos/"
-          data-importance="🟢"
-          data-category="Anthropic">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=Anthropic%E3%81%AE%E5%85%B1%E5%90%8C%E5%89%B5%E8%A8%AD%E8%80%85%E3%81%8C%E3%80%81%E3%83%88%E3%83%A9%E3%83%B3%E3%83%97%E6%94%BF%E6%A8%A9%E3%81%ABMythos%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%AC%E6%98%8E%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8%E3%82%92%E8%AA%8D%E3%82%81%E3%82%8B%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fanthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="Anthropicの共同創設者が、トランプ政権にMythosについて説明したことを認める">🤖 Claudeに聞く</button>
-      </div>
+    <h2>金融リスク管理プラットフォームPillarがa16z主導で2000万ドルのシードラウンドを調達</h2>
+    <p class="summary">金融リスク管理プラットフォームのPillarが、a16zが主導するシードラウンドで2000万ドルを調達した。Pillarは、洗練された機関投資家レベルのリスクヘッジツールを中小企業（SME）に提供することを目指しており、ヘッジを決済や会計ソフトウェアと同じくらい身近なものにすることを目標としている。この資金調達は、中小企業の金融リスク管理に対する需要の高まりと、それをAI技術で解決しようとするスタートアップへの期待を反映している。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">Pillarのプラットフォームは、中小企業が為替変動や金利変動などの金融リスクを管理するための高度なツールを提供する。同社は、これまで大企業のみがアクセスできたようなリスク管理ソリューションを、より広範な企業が利用できるようにすることを目指している。a16zによる2000万ドルのシード投資は、この分野の市場ポテンシャルとPillarの技術に対する信頼を示している。これにより、中小企業はより効果的に金融リスクを管理し、事業の安定性を高めることが期待される。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Ffinancial-risk-management-platform-pillar-raises-20m-seed-in-round-led-by-a16z%2F"
+        data-title="金融リスク管理プラットフォームPillarがa16z主導で2000万ドルのシードラウンドを調達"
+        data-summary="金融リスク管理プラットフォームのPillarが、a16zが主導するシードラウンドで2000万ドルを調達した。Pillarは、洗練された機関投資家レベルのリスクヘッジツールを中小企業（SME）に提供することを目指しており、ヘッジを決済や会計ソフトウェアと同じくらい身近なものにすることを目標としている。この資金調達は、中小企業の金融リスク管理に対する需要の高まりと、それをAI技術で解決しようとするスタートアップへの期待を反映している。"
+        data-source="TechCrunch Startups"
+        data-url="https://techcrunch.com/2026/04/14/financial-risk-management-platform-pillar-raises-20m-seed-in-round-led-by-a16z/"
+        data-importance="🟢"
+        data-category="テック・AI">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E9%87%91%E8%9E%8D%E3%83%AA%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0Pillar%E3%81%8Ca16z%E4%B8%BB%E5%B0%8E%E3%81%A72000%E4%B8%87%E3%83%89%E3%83%AB%E3%81%AE%E3%82%B7%E3%83%BC%E3%83%89%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%82%92%E8%AA%BF%E9%81%94%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Ffinancial-risk-management-platform-pillar-raises-20m-seed-in-round-led-by-a16z%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="金融リスク管理プラットフォームPillarがa16z主導で2000万ドルのシードラウンドを調達">🤖 Claudeに聞く</button>
     </div>
-    </section><section class="category-section" data-cat="音楽">
-      <p class="category-label" style="color:#666">● 音楽</p>
-      <div class="item" style="animation-delay:0.00s">
-      <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
-      </div>
-      <h2>Moog、創業者の功績を称え、Minimoog Model Dの特別限定再発行版をリリース - わずか500台限定生産</h2>
-      <p class="summary">Moogは創業者のボブ・モーグを称え、伝説的なMinimoog Model Dの特別限定再発行版をリリースします。この「Bob Moog Tribute Edition」は500台のみの限定生産で、Moogのノースカロライナ工場で手作業で組み立てられます。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">Minimoog Model Dは歴史上最も影響力のあるシンセサイザーの一つであり、その再発行はコレクターや音楽プロデューサーにとって大きなニュースです。限定生産であるため、入手は困難が予想されます。オリジナルの回路設計を忠実に再現しつつ、現代的な信頼性を持たせた製品で、往年のサウンドを体験できる貴重な機会となるでしょう。</p>
-      </details>
-      <a class="source-link" href="https://www.musicradar.com/music-tech/moog-celebrates-the-legacy-of-its-founder-with-special-limited-edition-reissue-of-the-minimoog-model-d-but-only-500-will-be-made" target="_blank" rel="noopener">📰 MusicRadar</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fmoog-celebrates-the-legacy-of-its-founder-with-special-limited-edition-reissue-of-the-minimoog-model-d-but-only-500-will-be-made"
-          data-title="Moog、創業者の功績を称え、Minimoog Model Dの特別限定再発行版をリリース - わずか500台限定生産"
-          data-summary="Moogは創業者のボブ・モーグを称え、伝説的なMinimoog Model Dの特別限定再発行版をリリースします。この「Bob Moog Tribute Edition」は500台のみの限定生産で、Moogのノースカロライナ工場で手作業で組み立てられます。"
-          data-source="MusicRadar"
-          data-url="https://www.musicradar.com/music-tech/moog-celebrates-the-legacy-of-its-founder-with-special-limited-edition-reissue-of-the-minimoog-model-d-but-only-500-will-be-made"
-          data-importance="🟡"
-          data-category="音楽">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=Moog%E3%80%81%E5%89%B5%E6%A5%AD%E8%80%85%E3%81%AE%E5%8A%9F%E7%B8%BE%E3%82%92%E7%A7%B0%E3%81%88%E3%80%81Minimoog%20Model%20D%E3%81%AE%E7%89%B9%E5%88%A5%E9%99%90%E5%AE%9A%E5%86%8D%E7%99%BA%E8%A1%8C%E7%89%88%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20-%20%E3%82%8F%E3%81%9A%E3%81%8B500%E5%8F%B0%E9%99%90%E5%AE%9A%E7%94%9F%E7%94%A3%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fmoog-celebrates-the-legacy-of-its-founder-with-special-limited-edition-reissue-of-the-minimoog-model-d-but-only-500-will-be-made" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="Moog、創業者の功績を称え、Minimoog Model Dの特別限定再発行版をリリース - わずか500台限定生産">🤖 Claudeに聞く</button>
-      </div>
-    </div>
-<div class="item" style="animation-delay:0.05s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>「Fenderの遺産を形作った決定的な瞬間を捉える」：FenderのVintera IIIシリーズが歴史的に正確なスペックと「ゴールデンエイラ」トーンを約束</h2>
-      <p class="summary">Fenderがヴィンテージインスパイアされたラインナップの第三世代であるVintera IIIシリーズを発表しました。このシリーズは、歴史的なネックプロファイルやリバースエンジニアリングされたピックアップなど、過去の黄金時代を特徴づける仕様を正確に再現することを重視しています。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">Vintera IIIシリーズは、往年のFenderギターのサウンドとフィールを手頃な価格で提供することを目指しています。特定の年代のモデルにインスパイアされたディテールや、当時のトーンを忠実に再現するピックアップが特徴です。プレイヤーは、伝説的なギターの感覚を現代の信頼性とともに体験できるようになります。</p>
-      </details>
-      <a class="source-link" href="https://www.musicradar.com/guitars/fender-launches-vintera-iii-series" target="_blank" rel="noopener">📰 MusicRadar</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Ffender-launches-vintera-iii-series"
-          data-title="「Fenderの遺産を形作った決定的な瞬間を捉える」：FenderのVintera IIIシリーズが歴史的に正確なスペックと「ゴールデンエイラ」トーンを約束"
-          data-summary="Fenderがヴィンテージインスパイアされたラインナップの第三世代であるVintera IIIシリーズを発表しました。このシリーズは、歴史的なネックプロファイルやリバースエンジニアリングされたピックアップなど、過去の黄金時代を特徴づける仕様を正確に再現することを重視しています。"
-          data-source="MusicRadar"
-          data-url="https://www.musicradar.com/guitars/fender-launches-vintera-iii-series"
-          data-importance="🟢"
-          data-category="音楽">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8CFender%E3%81%AE%E9%81%BA%E7%94%A3%E3%82%92%E5%BD%A2%E4%BD%9C%E3%81%A3%E3%81%9F%E6%B1%BA%E5%AE%9A%E7%9A%84%E3%81%AA%E7%9E%AC%E9%96%93%E3%82%92%E6%8D%89%E3%81%88%E3%82%8B%E3%80%8D%EF%BC%9AFender%E3%81%AEVintera%20III%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%E3%81%8C%E6%AD%B4%E5%8F%B2%E7%9A%84%E3%81%AB%E6%AD%A3%E7%A2%BA%E3%81%AA%E3%82%B9%E3%83%9A%E3%83%83%E3%82%AF%E3%81%A8%E3%80%8C%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%A8%E3%82%A4%E3%83%A9%E3%80%8D%E3%83%88%E3%83%BC%E3%83%B3%E3%82%92%E7%B4%84%E6%9D%9F%20https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Ffender-launches-vintera-iii-series" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="「Fenderの遺産を形作った決定的な瞬間を捉える」：FenderのVintera IIIシリーズが歴史的に正確なスペックと「ゴールデンエイラ」トーンを約束">🤖 Claudeに聞く</button>
-      </div>
-    </div>
-<div class="item" style="animation-delay:0.10s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>「Bon IverというグループのGoogleアラートを受け取り始めたんだ、なぜならJustin Vernonがプレスで私の名前を叫んでいたからだ」：Bruce HornsbyがBon Iverを知った経緯と「超越的」と考える彼らの曲を明かす</h2>
-      <p class="summary">ブルース・ホーンズビーが、どのようにしてBon Iverの存在を知ったか、そして彼らのどの曲を「超越的」と考えているかを明かしました。Bon Iverのジャスティン・ヴァーノンがプレスでホーンズビーの名前を挙げていたことがきっかけで、彼らの音楽に注目したといいます。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">ホーンズビーは、ヴァーノンの「クレイジーなレイヤードボーカルとハーモニー」を特に評価しており、Bon Iverの音楽が非常に特別であると感じています。異なる世代とジャンルのアーティストが互いに影響を与え、評価し合うことは、音楽業界における創造性の継続的な流れを示しています。この記事は、音楽家同士の共鳴と、それが新たな発見につながる過程を伝えています。</p>
-      </details>
-      <a class="source-link" href="https://www.musicradar.com/artists/i-started-getting-all-these-google-alerts-about-this-group-bon-iver-because-justin-vernon-was-shouting-me-out-in-the-press-bruce-hornsby-explains-how-he-first-heard-about-bon-iver-and-reveals-the-song-of-theirs-that-he-considers-to-be-transcendent" target="_blank" rel="noopener">📰 MusicRadar</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fi-started-getting-all-these-google-alerts-about-this-group-bon-iver-because-justin-vernon-was-shouting-me-out-in-the-press-bruce-hornsby-explains-how-he-first-heard-about-bon-iver-and-reveals-the-song-of-theirs-that-he-considers-to-be-transcendent"
-          data-title="「Bon IverというグループのGoogleアラートを受け取り始めたんだ、なぜならJustin Vernonがプレスで私の名前を叫んでいたからだ」：Bruce HornsbyがBon Iverを知った経緯と「超越的」と考える彼らの曲を明かす"
-          data-summary="ブルース・ホーンズビーが、どのようにしてBon Iverの存在を知ったか、そして彼らのどの曲を「超越的」と考えているかを明かしました。Bon Iverのジャスティン・ヴァーノンがプレスでホーンズビーの名前を挙げていたことがきっかけで、彼らの音楽に注目したといいます。"
-          data-source="MusicRadar"
-          data-url="https://www.musicradar.com/artists/i-started-getting-all-these-google-alerts-about-this-group-bon-iver-because-justin-vernon-was-shouting-me-out-in-the-press-bruce-hornsby-explains-how-he-first-heard-about-bon-iver-and-reveals-the-song-of-theirs-that-he-considers-to-be-transcendent"
-          data-importance="🟢"
-          data-category="音楽">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8CBon%20Iver%E3%81%A8%E3%81%84%E3%81%86%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AEGoogle%E3%82%A2%E3%83%A9%E3%83%BC%E3%83%88%E3%82%92%E5%8F%97%E3%81%91%E5%8F%96%E3%82%8A%E5%A7%8B%E3%82%81%E3%81%9F%E3%82%93%E3%81%A0%E3%80%81%E3%81%AA%E3%81%9C%E3%81%AA%E3%82%89Justin%20Vernon%E3%81%8C%E3%83%97%E3%83%AC%E3%82%B9%E3%81%A7%E7%A7%81%E3%81%AE%E5%90%8D%E5%89%8D%E3%82%92%E5%8F%AB%E3%82%93%E3%81%A7%E3%81%84%E3%81%9F%E3%81%8B%E3%82%89%E3%81%A0%E3%80%8D%EF%BC%9ABruce%20Hornsby%E3%81%8CBon%20Iver%E3%82%92%E7%9F%A5%E3%81%A3%E3%81%9F%E7%B5%8C%E7%B7%AF%E3%81%A8%E3%80%8C%E8%B6%85%E8%B6%8A%E7%9A%84%E3%80%8D%E3%81%A8%E8%80%83%E3%81%88%E3%82%8B%E5%BD%BC%E3%82%89%E3%81%AE%E6%9B%B2%E3%82%92%E6%98%8E%E3%81%8B%E3%81%99%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fi-started-getting-all-these-google-alerts-about-this-group-bon-iver-because-justin-vernon-was-shouting-me-out-in-the-press-bruce-hornsby-explains-how-he-first-heard-about-bon-iver-and-reveals-the-song-of-theirs-that-he-considers-to-be-transcendent" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="「Bon IverというグループのGoogleアラートを受け取り始めたんだ、なぜならJustin Vernonがプレスで私の名前を叫んでいたからだ」：Bruce HornsbyがBon Iverを知った経緯と「超越的」と考える彼らの曲を明かす">🤖 Claudeに聞く</button>
-      </div>
-    </div>
-    </section><section class="category-section" data-cat="DTM">
-      <p class="category-label" style="color:#666">● DTM</p>
-      <div class="item" style="animation-delay:0.00s">
-      <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
-      </div>
-      <h2>二つのエキスポ物語：ロンドン・シンセ＆ペダルエキスポ2026のレポート</h2>
-      <p class="summary">ロンドン・シンセ＆ペダルエキスポ2026のイベントレポートが公開され、Superboothを逃した筆者が、このコンパクトながら活気あるイベントで多くの革新的なシンセやペダルを体験した様子が紹介されています。特に注目されたのは、The Monk ProjectのTMA1ジェネレーティブシーケンサーとGenki Instrumentsのポリフォニックラックマウントシンセ「Katla」です。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">このエキスポは、Moog、Arturia、Korgといった大手から、The Monk Project、Genki Instruments、Flowfalなどのインディーメーカーまで、約50のメーカーが出展しました。TMA1は20以上のシーケンサーモデルを提供し、Katlaは5つのボイスとサブオシレーターで豊かなテクスチャを生成します。また、スマホをAbleton Liveの3Dモーションコントローラーに変える無料アプリFlowfalも紹介されています。</p>
-      </details>
-      <a class="source-link" href="https://www.attackmagazine.com/reviews/gear-software/a-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026/" target="_blank" rel="noopener">📰 Attack Magazine</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Fa-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026%2F"
-          data-title="二つのエキスポ物語：ロンドン・シンセ＆ペダルエキスポ2026のレポート"
-          data-summary="ロンドン・シンセ＆ペダルエキスポ2026のイベントレポートが公開され、Superboothを逃した筆者が、このコンパクトながら活気あるイベントで多くの革新的なシンセやペダルを体験した様子が紹介されています。特に注目されたのは、The Monk ProjectのTMA1ジェネレーティブシーケンサーとGenki Instrumentsのポリフォニックラックマウントシンセ「Katla」です。"
-          data-source="Attack Magazine"
-          data-url="https://www.attackmagazine.com/reviews/gear-software/a-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026/"
-          data-importance="🟡"
-          data-category="DTM">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E4%BA%8C%E3%81%A4%E3%81%AE%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%9D%E7%89%A9%E8%AA%9E%EF%BC%9A%E3%83%AD%E3%83%B3%E3%83%89%E3%83%B3%E3%83%BB%E3%82%B7%E3%83%B3%E3%82%BB%EF%BC%86%E3%83%9A%E3%83%80%E3%83%AB%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%9D2026%E3%81%AE%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Fa-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="二つのエキスポ物語：ロンドン・シンセ＆ペダルエキスポ2026のレポート">🤖 Claudeに聞く</button>
-      </div>
-    </div>
-<div class="item" style="animation-delay:0.05s">
-      <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
-      </div>
-      <h2>United Pluginsが10個の無料プラグインを含むUnitedFreeBundleを提供</h2>
-      <p class="summary">United Pluginsは、プロフェッショナルなオーディオプラグイン10個を無料で提供する「UnitedFreeBundle」をリリースしました。これらの無料プラグインには、同社の製品やセール情報を表示する広告バナーが含まれています。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">このバンドルには様々なエフェクトやツールが含まれており、無料で高度なサウンドメイキングが可能になります。広告バナーはプラグインの機能や操作を妨げることはなく、ユーザーは費用をかけずにプロ品質のツールを利用できます。DTMユーザーにとって、新たなサウンドの可能性を広げる魅力的なオファーです。</p>
-      </details>
-      <a class="source-link" href="https://bedroomproducersblog.com/2026/04/14/unitedfreebundle/" target="_blank" rel="noopener">📰 Bedroom Producers Blog</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F14%2Funitedfreebundle%2F"
-          data-title="United Pluginsが10個の無料プラグインを含むUnitedFreeBundleを提供"
-          data-summary="United Pluginsは、プロフェッショナルなオーディオプラグイン10個を無料で提供する「UnitedFreeBundle」をリリースしました。これらの無料プラグインには、同社の製品やセール情報を表示する広告バナーが含まれています。"
-          data-source="Bedroom Producers Blog"
-          data-url="https://bedroomproducersblog.com/2026/04/14/unitedfreebundle/"
-          data-importance="🟡"
-          data-category="DTM">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=United%20Plugins%E3%81%8C10%E5%80%8B%E3%81%AE%E7%84%A1%E6%96%99%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%82%92%E5%90%AB%E3%82%80UnitedFreeBundle%E3%82%92%E6%8F%90%E4%BE%9B%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F14%2Funitedfreebundle%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="United Pluginsが10個の無料プラグインを含むUnitedFreeBundleを提供">🤖 Claudeに聞く</button>
-      </div>
-    </div>
-<div class="item" style="animation-delay:0.10s">
-      <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
-      </div>
-      <h2>Okay Synthesizerが6層ディストーションエンジンを備えた無料プラグインOkay Distortionをリリース</h2>
-      <p class="summary">Okay Synthesizerが、6つのレイヤー型ディストーションエンジンを単一の再構成可能な信号チェーンにまとめた無料のディストーションプラグイン「Okay Distortion」をリリースしました。これにより、ユーザーは多様なディストーション効果を自由に組み合わせてサウンドを形成できます。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">このプラグインは、クリエイティブで楽しいディストーションツールを求める音楽プロデューサーやサウンドデザイナーにとって特に魅力的です。6つの異なるエンジンを重ねて使うことで、繊細な歪みから過激なノイズまで、幅広いサウンドデザインが可能です。無料で提供されるため、誰でも気軽に試して音楽制作に取り入れることができます。</p>
-      </details>
-      <a class="source-link" href="https://bedroomproducersblog.com/2026/04/14/okay-distortion/" target="_blank" rel="noopener">📰 Bedroom Producers Blog</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F14%2Fokay-distortion%2F"
-          data-title="Okay Synthesizerが6層ディストーションエンジンを備えた無料プラグインOkay Distortionをリリース"
-          data-summary="Okay Synthesizerが、6つのレイヤー型ディストーションエンジンを単一の再構成可能な信号チェーンにまとめた無料のディストーションプラグイン「Okay Distortion」をリリースしました。これにより、ユーザーは多様なディストーション効果を自由に組み合わせてサウンドを形成できます。"
-          data-source="Bedroom Producers Blog"
-          data-url="https://bedroomproducersblog.com/2026/04/14/okay-distortion/"
-          data-importance="🟡"
-          data-category="DTM">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=Okay%20Synthesizer%E3%81%8C6%E5%B1%A4%E3%83%87%E3%82%A3%E3%82%B9%E3%83%88%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%92%E5%82%99%E3%81%88%E3%81%9F%E7%84%A1%E6%96%99%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3Okay%20Distortion%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F14%2Fokay-distortion%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="Okay Synthesizerが6層ディストーションエンジンを備えた無料プラグインOkay Distortionをリリース">🤖 Claudeに聞く</button>
-      </div>
-    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
 <div class="item" style="animation-delay:0.15s">
-      <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
-      </div>
-      <h2>Softube Model 82 SH-101エミュレーションがPlugin Boutiqueで70%オフ（29ドル）</h2>
-      <p class="summary">SoftubeのRoland SH-101エミュレーションである「Model 82 Sequencing Mono Synth」が、Plugin Boutiqueで70%オフのセール価格29ドルで提供されています。このセールは4月19日まで限定で実施されており、通常価格99ドルから大幅な割引となります。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">Model 82は、Roland SH-101のクラシックなアナログサウンドとシーケンス機能をソフトウェアで忠実に再現したモノシンセです。アシッドベースラインやリードサウンドの作成に最適であり、多くのプロデューサーに愛用されています。この大幅な割引は、高品質なSH-101エミュレーションを手に入れたいDTMユーザーにとって絶好の機会です。</p>
-      </details>
-      <a class="source-link" href="https://bedroomproducersblog.com/2026/04/14/softube-model-82-deal-pb/" target="_blank" rel="noopener">📰 Bedroom Producers Blog</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F14%2Fsoftube-model-82-deal-pb%2F"
-          data-title="Softube Model 82 SH-101エミュレーションがPlugin Boutiqueで70%オフ（29ドル）"
-          data-summary="SoftubeのRoland SH-101エミュレーションである「Model 82 Sequencing Mono Synth」が、Plugin Boutiqueで70%オフのセール価格29ドルで提供されています。このセールは4月19日まで限定で実施されており、通常価格99ドルから大幅な割引となります。"
-          data-source="Bedroom Producers Blog"
-          data-url="https://bedroomproducersblog.com/2026/04/14/softube-model-82-deal-pb/"
-          data-importance="🟡"
-          data-category="DTM">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=Softube%20Model%2082%20SH-101%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8CPlugin%20Boutique%E3%81%A770%25%E3%82%AA%E3%83%95%EF%BC%8829%E3%83%89%E3%83%AB%EF%BC%89%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F14%2Fsoftube-model-82-deal-pb%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="Softube Model 82 SH-101エミュレーションがPlugin Boutiqueで70%オフ（29ドル）">🤖 Claudeに聞く</button>
-      </div>
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">TechCrunch Startups</span>
     </div>
+    <h2>あと数週間で、StrictlyVCサンフランシスコがTDK Ventures、Replitなどのリーダーたちを結集</h2>
+    <p class="summary">今年最初のStrictlyVCサンフランシスコイベントが4月30日に開催され、TDK VenturesやReplitなどからの業界リーダーたちが集結する。このイベントは、テック業界の最新トレンドやスタートアップエコシステムに関する洞察を得る貴重な機会となる。まだチケットは入手可能であり、参加者にとっては主要な業界関係者とのネットワーキングの場ともなる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">StrictlyVCは、スタートアップとベンチャーキャピタルのエコシステムに焦点を当てたイベントシリーズ。今回のサンフランシスコイベントでは、TDK VenturesやReplitといった注目企業のリーダーが登壇し、彼らの経験や知見を共有する。参加者は、最新の技術トレンド、投資動向、起業家精神について学ぶことができる。チケットはまだ販売されており、TechCrunch Startupsの読者にとっては、直接的な業界のインサイダー情報に触れる機会となる。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fjoin-the-first-strictlyvc-of-2026-in-sf-with-leaders-from-tdk-ventures-and-replits-co-founder%2F"
+        data-title="あと数週間で、StrictlyVCサンフランシスコがTDK Ventures、Replitなどのリーダーたちを結集"
+        data-summary="今年最初のStrictlyVCサンフランシスコイベントが4月30日に開催され、TDK VenturesやReplitなどからの業界リーダーたちが集結する。このイベントは、テック業界の最新トレンドやスタートアップエコシステムに関する洞察を得る貴重な機会となる。まだチケットは入手可能であり、参加者にとっては主要な業界関係者とのネットワーキングの場ともなる。"
+        data-source="TechCrunch Startups"
+        data-url="https://techcrunch.com/2026/04/14/join-the-first-strictlyvc-of-2026-in-sf-with-leaders-from-tdk-ventures-and-replits-co-founder/"
+        data-importance="🟢"
+        data-category="テック・AI">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%81%82%E3%81%A8%E6%95%B0%E9%80%B1%E9%96%93%E3%81%A7%E3%80%81StrictlyVC%E3%82%B5%E3%83%B3%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B7%E3%82%B9%E3%82%B3%E3%81%8CTDK%20Ventures%E3%80%81Replit%E3%81%AA%E3%81%A9%E3%81%AE%E3%83%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%81%9F%E3%81%A1%E3%82%92%E7%B5%90%E9%9B%86%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fjoin-the-first-strictlyvc-of-2026-in-sf-with-leaders-from-tdk-ventures-and-replits-co-founder%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="あと数週間で、StrictlyVCサンフランシスコがTDK Ventures、Replitなどのリーダーたちを結集">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
 <div class="item" style="animation-delay:0.20s">
-      <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
-      </div>
-      <h2>ソースネクストの買い切り型AI文字起こしソフト、RecText AI 2が登場。話者分離機能を新搭載し、グレードアップした最新版をチェック</h2>
-      <p class="summary">ソースネクストがAI文字起こしソフトの新バージョン「RecText AI 2」を9,980円（税込）の買い切りダウンロード版として3月31日に発売しました。この最新版では、新たに話者分離機能が搭載され、複数の話者がいる会議やインタビューの文字起こしの利便性が大幅に向上しています。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">「RecText AI 2」は初代と同様にオフラインで処理が完結するため、機密性の高い情報を含む音声も安心して文字起こしできます。話者分離機能により、誰が何を話したかを明確に区別でき、編集作業の効率化が期待されます。AI技術の進化により、高精度かつ実用的な文字起こしソリューションが提供されることで、DTMにおける歌詞の書き起こしや、楽曲制作時の会議議事録作成など、幅広い用途で活用が見込まれます。</p>
-      </details>
-      <a class="source-link" href="https://www.dtmstation.com/archives/77027.html" target="_blank" rel="noopener">📰 DTMステーション</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77027.html"
-          data-title="ソースネクストの買い切り型AI文字起こしソフト、RecText AI 2が登場。話者分離機能を新搭載し、グレードアップした最新版をチェック"
-          data-summary="ソースネクストがAI文字起こしソフトの新バージョン「RecText AI 2」を9,980円（税込）の買い切りダウンロード版として3月31日に発売しました。この最新版では、新たに話者分離機能が搭載され、複数の話者がいる会議やインタビューの文字起こしの利便性が大幅に向上しています。"
-          data-source="DTMステーション"
-          data-url="https://www.dtmstation.com/archives/77027.html"
-          data-importance="🟡"
-          data-category="DTM">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%8D%E3%82%AF%E3%82%B9%E3%83%88%E3%81%AE%E8%B2%B7%E3%81%84%E5%88%87%E3%82%8A%E5%9E%8BAI%E6%96%87%E5%AD%97%E8%B5%B7%E3%81%93%E3%81%97%E3%82%BD%E3%83%95%E3%83%88%E3%80%81RecText%20AI%202%E3%81%8C%E7%99%BB%E5%A0%B4%E3%80%82%E8%A9%B1%E8%80%85%E5%88%86%E9%9B%A2%E6%A9%9F%E8%83%BD%E3%82%92%E6%96%B0%E6%90%AD%E8%BC%89%E3%81%97%E3%80%81%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89%E3%82%A2%E3%83%83%E3%83%97%E3%81%97%E3%81%9F%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77027.html" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="ソースネクストの買い切り型AI文字起こしソフト、RecText AI 2が登場。話者分離機能を新搭載し、グレードアップした最新版をチェック">🤖 Claudeに聞く</button>
-      </div>
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">DTMステーション</span>
     </div>
-<div class="item" style="animation-delay:0.25s">
-      <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
-      </div>
-      <h2>AWM2+FM+サンプラーのヤマハSEQTRAKがv2.0で大きく進化。新トラック機能とDAW連携を深掘りする</h2>
-      <p class="summary">ヤマハが2024年1月に発売したオールインワン音楽制作ギア「SEQTRAK」が、v2.0アップデートで大幅に機能強化されました。新しいトラック機能の追加とDAW連携の深化により、より高度で柔軟な音楽制作が可能になります。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">SEQTRAKは、ドラムマシン、シンセサイザー（AWM2、FM）、サンプラー、エフェクトを内蔵し、バッテリー駆動とスピーカー搭載でどこでも音楽制作ができるコンパクトなデバイスです。v2.0アップデートでは、新たに楽器トラックの機能が追加され、より複雑な楽曲構成に対応できるようになりました。さらに、DAWとの連携が強化されたことで、制作ワークフローがスムーズになり、SEQTRAKをスタジオの中心に据えた活用が促進されます。</p>
-      </details>
-      <a class="source-link" href="https://www.dtmstation.com/archives/76819.html" target="_blank" rel="noopener">📰 DTMステーション</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76819.html"
-          data-title="AWM2+FM+サンプラーのヤマハSEQTRAKがv2.0で大きく進化。新トラック機能とDAW連携を深掘りする"
-          data-summary="ヤマハが2024年1月に発売したオールインワン音楽制作ギア「SEQTRAK」が、v2.0アップデートで大幅に機能強化されました。新しいトラック機能の追加とDAW連携の深化により、より高度で柔軟な音楽制作が可能になります。"
-          data-source="DTMステーション"
-          data-url="https://www.dtmstation.com/archives/76819.html"
-          data-importance="🟡"
-          data-category="DTM">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=AWM2%2BFM%2B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%A9%E3%83%BC%E3%81%AE%E3%83%A4%E3%83%9E%E3%83%8FSEQTRAK%E3%81%8Cv2.0%E3%81%A7%E5%A4%A7%E3%81%8D%E3%81%8F%E9%80%B2%E5%8C%96%E3%80%82%E6%96%B0%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E6%A9%9F%E8%83%BD%E3%81%A8DAW%E9%80%A3%E6%90%BA%E3%82%92%E6%B7%B1%E6%8E%98%E3%82%8A%E3%81%99%E3%82%8B%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76819.html" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="AWM2+FM+サンプラーのヤマハSEQTRAKがv2.0で大きく進化。新トラック機能とDAW連携を深掘りする">🤖 Claudeに聞く</button>
-      </div>
+    <h2>ソースネクストの買い切り型AI文字起こしソフト「RecText AI 2」が登場。話者分離機能を新搭載し、グレードアップした最新版をチェック</h2>
+    <p class="summary">ソースネクストが、買い切り型AI文字起こしソフト「RecText AI 2」を9,980円（税込）のダウンロード版でリリースした。新バージョンでは話者分離機能が追加され、初代と同じくオフライン処理と買い切り型というコンセプトを維持している。この機能強化により、複数の話者がいる会議やインタビューの文字起こしが格段に効率化され、個人利用からビジネス用途まで幅広いユーザーにとって非常に有益なツールとなる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">RecText AI 2は、3月31日に発売され、価格は9,980円（税込）のダウンロード版。最も大きな進化は、AIによる話者分離機能の搭載で、誰が話しているかを自動で認識し、文字起こし結果に反映することができる。これにより、手動での話者特定の手間が大幅に削減される。また、オフライン処理が可能であるため、インターネット接続がない環境でも利用でき、セキュリティ面でのメリットも大きい。買い切り型であるため、月額費用を気にすることなく長期的に利用できる点もユーザーにとって魅力的である。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77027.html"
+        data-title="ソースネクストの買い切り型AI文字起こしソフト「RecText AI 2」が登場。話者分離機能を新搭載し、グレードアップした最新版をチェック"
+        data-summary="ソースネクストが、買い切り型AI文字起こしソフト「RecText AI 2」を9,980円（税込）のダウンロード版でリリースした。新バージョンでは話者分離機能が追加され、初代と同じくオフライン処理と買い切り型というコンセプトを維持している。この機能強化により、複数の話者がいる会議やインタビューの文字起こしが格段に効率化され、個人利用からビジネス用途まで幅広いユーザーにとって非常に有益なツールとなる。"
+        data-source="DTMステーション"
+        data-url="https://www.dtmstation.com/archives/77027.html"
+        data-importance="🟢"
+        data-category="テック・AI">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%8D%E3%82%AF%E3%82%B9%E3%83%88%E3%81%AE%E8%B2%B7%E3%81%84%E5%88%87%E3%82%8A%E5%9E%8BAI%E6%96%87%E5%AD%97%E8%B5%B7%E3%81%93%E3%81%97%E3%82%BD%E3%83%95%E3%83%88%E3%80%8CRecText%20AI%202%E3%80%8D%E3%81%8C%E7%99%BB%E5%A0%B4%E3%80%82%E8%A9%B1%E8%80%85%E5%88%86%E9%9B%A2%E6%A9%9F%E8%83%BD%E3%82%92%E6%96%B0%E6%90%AD%E8%BC%89%E3%81%97%E3%80%81%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89%E3%82%A2%E3%83%83%E3%83%97%E3%81%97%E3%81%9F%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77027.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="ソースネクストの買い切り型AI文字起こしソフト「RecText AI 2」が登場。話者分離機能を新搭載し、グレードアップした最新版をチェック">🤖 Claudeに聞く</button>
     </div>
-<div class="item" style="animation-delay:0.30s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>Zebra 3で80年代スタイルのチューンド・パーカッションを</h2>
-      <p class="summary">u-heのZebra 3を使って、80年代風のチューンド・パーカッションサウンドを作成するチュートリアルが公開されました。Zebra 3の新しいモダルモジュールは物理モデリングを活用し、FMシンセシスやサンプリングでは難しかったリアルな共鳴感を再現します。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">チュートリアルでは、ホワイトノイズを音源として使い、Zebra 3のモダルモジュールで金属製チューブや木製、ガラス製ベルのような響きを作り出す手順をステップバイステップで解説しています。現在Zebra 3はパブリックベータ版として提供されており、ウェブサイトからインストーラーとベータライセンスカードを無料でダウンロードできます。</p>
-      </details>
-      <a class="source-link" href="https://www.attackmagazine.com/technique/synth-secrets/80s-style-tuned-percussion-with-zebra-3/" target="_blank" rel="noopener">📰 Attack Magazine</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Fsynth-secrets%2F80s-style-tuned-percussion-with-zebra-3%2F"
-          data-title="Zebra 3で80年代スタイルのチューンド・パーカッションを"
-          data-summary="u-heのZebra 3を使って、80年代風のチューンド・パーカッションサウンドを作成するチュートリアルが公開されました。Zebra 3の新しいモダルモジュールは物理モデリングを活用し、FMシンセシスやサンプリングでは難しかったリアルな共鳴感を再現します。"
-          data-source="Attack Magazine"
-          data-url="https://www.attackmagazine.com/technique/synth-secrets/80s-style-tuned-percussion-with-zebra-3/"
-          data-importance="🟢"
-          data-category="DTM">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=Zebra%203%E3%81%A780%E5%B9%B4%E4%BB%A3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%B3%E3%83%89%E3%83%BB%E3%83%91%E3%83%BC%E3%82%AB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%20https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Fsynth-secrets%2F80s-style-tuned-percussion-with-zebra-3%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="Zebra 3で80年代スタイルのチューンド・パーカッションを">🤖 Claudeに聞く</button>
-      </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+</section><section class="category-section" data-cat="Anthropic">
+  <p class="category-label">Anthropic</p>
+  <div class="item" style="animation-delay:0.00s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">TechCrunch</span>
     </div>
-<div class="item" style="animation-delay:0.35s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>グリッドを外れる：スイングとは何か、そしてそれを加える方法</h2>
-      <p class="summary">音楽制作における「スイング」の概念と、それをDAW（Ableton Liveを使用）でトラックに適用する方法に関する詳細なチュートリアルが公開されました。スイングは、直線のビートにバウンス感や躍動感を与える重要な要素です。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">この記事では、均等な間隔のビート（ストレート）と、弱い拍をグリッドからずらすことで生まれるスイングのメカニズムを図と音声サンプルを用いて説明しています。Ableton Liveのグルーブプール機能を使って簡単にスイングを適用する方法や、そのタイミング、ベース、クオンタイズ、ランダム、ベロシティ設定についても解説しています。ドラムだけでなく、リードやベースラインなど、あらゆる要素にスイングを適用することで、トラック全体に生命を吹き込むことが可能になります。</p>
-      </details>
-      <a class="source-link" href="https://www.attackmagazine.com/technique/tutorials/going-off-grid-what-is-swing-and-how-to-add-it/" target="_blank" rel="noopener">📰 Attack Magazine</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Ftutorials%2Fgoing-off-grid-what-is-swing-and-how-to-add-it%2F"
-          data-title="グリッドを外れる：スイングとは何か、そしてそれを加える方法"
-          data-summary="音楽制作における「スイング」の概念と、それをDAW（Ableton Liveを使用）でトラックに適用する方法に関する詳細なチュートリアルが公開されました。スイングは、直線のビートにバウンス感や躍動感を与える重要な要素です。"
-          data-source="Attack Magazine"
-          data-url="https://www.attackmagazine.com/technique/tutorials/going-off-grid-what-is-swing-and-how-to-add-it/"
-          data-importance="🟢"
-          data-category="DTM">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%82%92%E5%A4%96%E3%82%8C%E3%82%8B%EF%BC%9A%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E3%81%9D%E3%82%8C%E3%82%92%E5%8A%A0%E3%81%88%E3%82%8B%E6%96%B9%E6%B3%95%20https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Ftutorials%2Fgoing-off-grid-what-is-swing-and-how-to-add-it%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="グリッドを外れる：スイングとは何か、そしてそれを加える方法">🤖 Claudeに聞く</button>
-      </div>
+    <h2>Anthropicの台頭により、一部のOpenAI投資家が再考を迫られる</h2>
+    <p class="summary">Anthropicの急速な台頭により、OpenAIの投資家の一部が、OpenAIの最近の評価額について再考を迫られている。フィナンシャル・タイムズ紙によると、両社に投資しているある投資家は、OpenAIの最近の資金調達ラウンドの評価額を正当化するには、IPOで1.2兆ドル以上の評価が必要になると指摘している。これにより、Anthropicの現在の3800億ドルの評価額が相対的に割安に見えるとの見方が出ている。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">OpenAIは最近の資金調達ラウンドで高い評価を受けているが、その評価額の妥当性について市場で議論が起きている。一方、Anthropicは急速に成長し、その評価額がOpenAIと比較して魅力的に映っている。この状況は、AI分野における熾烈な競争と、投資家が将来的な成長性と市場価値をどのように評価しているかを示している。Anthropicの競争力強化は、AIモデルの進化やサービス展開に影響を与える可能性があり、今後の市場動向に注目が集まる。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fanthropics-rise-is-giving-some-openai-investors-second-thoughts%2F"
+        data-title="Anthropicの台頭により、一部のOpenAI投資家が再考を迫られる"
+        data-summary="Anthropicの急速な台頭により、OpenAIの投資家の一部が、OpenAIの最近の評価額について再考を迫られている。フィナンシャル・タイムズ紙によると、両社に投資しているある投資家は、OpenAIの最近の資金調達ラウンドの評価額を正当化するには、IPOで1.2兆ドル以上の評価が必要になると指摘している。これにより、Anthropicの現在の3800億ドルの評価額が相対的に割安に見えるとの見方が出ている。"
+        data-source="TechCrunch"
+        data-url="https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/"
+        data-importance="🟡"
+        data-category="Anthropic">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Anthropic%E3%81%AE%E5%8F%B0%E9%A0%AD%E3%81%AB%E3%82%88%E3%82%8A%E3%80%81%E4%B8%80%E9%83%A8%E3%81%AEOpenAI%E6%8A%95%E8%B3%87%E5%AE%B6%E3%81%8C%E5%86%8D%E8%80%83%E3%82%92%E8%BF%AB%E3%82%89%E3%82%8C%E3%82%8B%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fanthropics-rise-is-giving-some-openai-investors-second-thoughts%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Anthropicの台頭により、一部のOpenAI投資家が再考を迫られる">🤖 Claudeに聞く</button>
     </div>
-<div class="item" style="animation-delay:0.40s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>入場無料で最新のモニター環境を一挙比較！プロにも相談できる「ヘッドホン・ヘッドホンアンプ大試聴会2026」が5月29日・30日に開催</h2>
-      <p class="summary">音楽制作者向けのモニター機材体験イベント「ヘッドホン・ヘッドホンアンプ大試聴会2026」が、5月29日（金）と30日（土）に開催されることが決定しました。入場無料で、最新のヘッドホンとヘッドホンアンプを一堂に比較試聴でき、プロのエンジニアにも相談できる貴重な機会です。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">このイベントは、音楽制作におけるモニタリング環境の重要性を理解し、自分に最適な機材を見つけたいと考えるDTMユーザーやプロデューサーにとって有益です。多様なメーカーの製品を実際に試せるだけでなく、専門家からのアドバイスを通じて、音作りのクオリティ向上に繋がる知見を得ることができます。昨年は8月開催でしたが、今年は過ごしやすい季節での開催となります。</p>
-      </details>
-      <a class="source-link" href="https://www.dtmstation.com/archives/76916.html" target="_blank" rel="noopener">📰 DTMステーション</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76916.html"
-          data-title="入場無料で最新のモニター環境を一挙比較！プロにも相談できる「ヘッドホン・ヘッドホンアンプ大試聴会2026」が5月29日・30日に開催"
-          data-summary="音楽制作者向けのモニター機材体験イベント「ヘッドホン・ヘッドホンアンプ大試聴会2026」が、5月29日（金）と30日（土）に開催されることが決定しました。入場無料で、最新のヘッドホンとヘッドホンアンプを一堂に比較試聴でき、プロのエンジニアにも相談できる貴重な機会です。"
-          data-source="DTMステーション"
-          data-url="https://www.dtmstation.com/archives/76916.html"
-          data-importance="🟢"
-          data-category="DTM">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E5%85%A5%E5%A0%B4%E7%84%A1%E6%96%99%E3%81%A7%E6%9C%80%E6%96%B0%E3%81%AE%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC%E7%92%B0%E5%A2%83%E3%82%92%E4%B8%80%E6%8C%99%E6%AF%94%E8%BC%83%EF%BC%81%E3%83%97%E3%83%AD%E3%81%AB%E3%82%82%E7%9B%B8%E8%AB%87%E3%81%A7%E3%81%8D%E3%82%8B%E3%80%8C%E3%83%98%E3%83%83%E3%83%89%E3%83%9B%E3%83%B3%E3%83%BB%E3%83%98%E3%83%83%E3%83%89%E3%83%9B%E3%83%B3%E3%82%A2%E3%83%B3%E3%83%97%E5%A4%A7%E8%A9%A6%E8%81%B4%E4%BC%9A2026%E3%80%8D%E3%81%8C5%E6%9C%8829%E6%97%A5%E3%83%BB30%E6%97%A5%E3%81%AB%E9%96%8B%E5%82%AC%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76916.html" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="入場無料で最新のモニター環境を一挙比較！プロにも相談できる「ヘッドホン・ヘッドホンアンプ大試聴会2026」が5月29日・30日に開催">🤖 Claudeに聞く</button>
-      </div>
-    </div>
-    </section><section class="category-section" data-cat="ビジネス">
-      <p class="category-label" style="color:#e67e22">● ビジネス</p>
-      <div class="item" style="animation-delay:0.00s">
-      <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
-      </div>
-      <h2>フォロワー1000人以下でも月収50万円——AIで「小さく強い」クリエイター収益モデルを設計する方法</h2>
-      <p class="summary">AI時代において、フォロワー数に依存せず月収50万円以上を達成する「小さく強い」クリエイター収益モデルの設計方法が解説されています。この記事では、個人クリエイターが今から構築できる「4つの収益エンジン」の全体像と、小さなファンベースを「高密度の収益」に変換する「濃度設計」の手順が具体的に示されています。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">フォロワー数百人規模で月収50万円を実現した3人の具体的な事例が紹介されており、その成功モデルをToday/This Week/This Monthの3段階アクションプランに落とし込んでいます。AIを活用することで、コンテンツ制作の効率化やパーソナライズされたサービス提供が可能になり、限られた顧客層から高い収益を上げる仕組みを構築できます。個人事業主やフリーランスが、自身の専門性を活かして安定した収益源を確保するための実践的なノウハウが詰まっています。</p>
-      </details>
-      <a class="source-link" href="https://note.com/sei_ryu5055/n/n059fac5da37b" target="_blank" rel="noopener">📰 note クリエイター収益</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fnote.com%2Fsei_ryu5055%2Fn%2Fn059fac5da37b"
-          data-title="フォロワー1000人以下でも月収50万円——AIで「小さく強い」クリエイター収益モデルを設計する方法"
-          data-summary="AI時代において、フォロワー数に依存せず月収50万円以上を達成する「小さく強い」クリエイター収益モデルの設計方法が解説されています。この記事では、個人クリエイターが今から構築できる「4つの収益エンジン」の全体像と、小さなファンベースを「高密度の収益」に変換する「濃度設計」の手順が具体的に示されています。"
-          data-source="note クリエイター収益"
-          data-url="https://note.com/sei_ryu5055/n/n059fac5da37b"
-          data-importance="🟡"
-          data-category="ビジネス">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%95%E3%82%A9%E3%83%AD%E3%83%AF%E3%83%BC1000%E4%BA%BA%E4%BB%A5%E4%B8%8B%E3%81%A7%E3%82%82%E6%9C%88%E5%8F%8E50%E4%B8%87%E5%86%86%E2%80%94%E2%80%94AI%E3%81%A7%E3%80%8C%E5%B0%8F%E3%81%95%E3%81%8F%E5%BC%B7%E3%81%84%E3%80%8D%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%82%BF%E3%83%BC%E5%8F%8E%E7%9B%8A%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E8%A8%AD%E8%A8%88%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20https%3A%2F%2Fnote.com%2Fsei_ryu5055%2Fn%2Fn059fac5da37b" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="フォロワー1000人以下でも月収50万円——AIで「小さく強い」クリエイター収益モデルを設計する方法">🤖 Claudeに聞く</button>
-      </div>
-    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
 <div class="item" style="animation-delay:0.05s">
-      <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
-      </div>
-      <h2>TikTok 0から爆速マネタイズ最短攻略ガイド【完全版】</h2>
-      <p class="summary">TikTokでのマネタイズが「難しくなった」という現状認識に基づき、0からでも爆速で収益化を目指すための完全攻略ガイドが公開されました。TikTokでのマネタイズ手法や戦略について包括的に解説されています。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">このガイドは、TikTokクリエイターや個人事業主が、プラットフォームの変化に対応しながら収益を最大化するための実践的な知識を提供します。アルゴリズム変更や競合の増加により収益化が困難になっている中で、新しい戦略や具体的な手法を学ぶことは、クリエイターにとって非常に重要です。動画コンテンツを活用したビジネスモデルを構築したい人にとって、最新の動向と攻略法を知るための貴重な情報源となるでしょう。</p>
-      </details>
-      <a class="source-link" href="https://note.com/tanishi777/n/nc146fb8e750a" target="_blank" rel="noopener">📰 note クリエイター収益</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fnote.com%2Ftanishi777%2Fn%2Fnc146fb8e750a"
-          data-title="TikTok 0から爆速マネタイズ最短攻略ガイド【完全版】"
-          data-summary="TikTokでのマネタイズが「難しくなった」という現状認識に基づき、0からでも爆速で収益化を目指すための完全攻略ガイドが公開されました。TikTokでのマネタイズ手法や戦略について包括的に解説されています。"
-          data-source="note クリエイター収益"
-          data-url="https://note.com/tanishi777/n/nc146fb8e750a"
-          data-importance="🟡"
-          data-category="ビジネス">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=TikTok%200%E3%81%8B%E3%82%89%E7%88%86%E9%80%9F%E3%83%9E%E3%83%8D%E3%82%BF%E3%82%A4%E3%82%BA%E6%9C%80%E7%9F%AD%E6%94%BB%E7%95%A5%E3%82%AC%E3%82%A4%E3%83%89%E3%80%90%E5%AE%8C%E5%85%A8%E7%89%88%E3%80%91%20https%3A%2F%2Fnote.com%2Ftanishi777%2Fn%2Fnc146fb8e750a" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="TikTok 0から爆速マネタイズ最短攻略ガイド【完全版】">🤖 Claudeに聞く</button>
-      </div>
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">TechCrunch Startups</span>
     </div>
+    <h2>AIデータセンターのスタートアップFluidstackが、数ヶ月で評価額75億ドルから180億ドルへの10億ドル調達ラウンドを交渉中と報道</h2>
+    <p class="summary">AIデータセンターのスタートアップFluidstackが、500億ドル規模のAnthropic向けデータセンター建設契約を獲得した後、わずか数ヶ月で評価額75億ドルから180億ドルへと急上昇し、10億ドル規模の資金調達ラウンドを交渉中であると報じられている。この動きは、AIインフラ市場の急速な成長と、Anthropicの事業拡大が間接的に関連企業の評価を押し上げていることを示している。Fluidstackの大規模な資金調達は、今後のAIインフラ競争において重要な意味を持つだろう。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">Fluidstackは、Anthropicとの500億ドル規模の契約により、AIデータセンター建設事業で大きな牽引力を得た。この契約は、同社の評価額を数ヶ月で75億ドルから180億ドルに急騰させ、さらに10億ドル規模の資金調達を可能にしている。これは、Anthropicのような主要なAI企業が、その技術を支える大規模なコンピューティングインフラを必要としている現状を浮き彫りにしている。Fluidstackの資金調達は、AI市場全体の成長と、それに伴うインフラ需要の爆発的な増加を反映している。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report%2F"
+        data-title="AIデータセンターのスタートアップFluidstackが、数ヶ月で評価額75億ドルから180億ドルへの10億ドル調達ラウンドを交渉中と報道"
+        data-summary="AIデータセンターのスタートアップFluidstackが、500億ドル規模のAnthropic向けデータセンター建設契約を獲得した後、わずか数ヶ月で評価額75億ドルから180億ドルへと急上昇し、10億ドル規模の資金調達ラウンドを交渉中であると報じられている。この動きは、AIインフラ市場の急速な成長と、Anthropicの事業拡大が間接的に関連企業の評価を押し上げていることを示している。Fluidstackの大規模な資金調達は、今後のAIインフラ競争において重要な意味を持つだろう。"
+        data-source="TechCrunch Startups"
+        data-url="https://techcrunch.com/2026/04/14/ai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report/"
+        data-importance="🟡"
+        data-category="Anthropic">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=AI%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97Fluidstack%E3%81%8C%E3%80%81%E6%95%B0%E3%83%B6%E6%9C%88%E3%81%A7%E8%A9%95%E4%BE%A1%E9%A1%8D75%E5%84%84%E3%83%89%E3%83%AB%E3%81%8B%E3%82%89180%E5%84%84%E3%83%89%E3%83%AB%E3%81%B8%E3%81%AE10%E5%84%84%E3%83%89%E3%83%AB%E8%AA%BF%E9%81%94%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%82%92%E4%BA%A4%E6%B8%89%E4%B8%AD%E3%81%A8%E5%A0%B1%E9%81%93%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F14%2Fai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="AIデータセンターのスタートアップFluidstackが、数ヶ月で評価額75億ドルから180億ドルへの10億ドル調達ラウンドを交渉中と報道">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+</section><section class="category-section" data-cat="DTM">
+  <p class="category-label">DTM</p>
+  <div class="item" style="animation-delay:0.00s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">MusicRadar</span>
+    </div>
+    <h2>Universal Audioが人気のプラグイン8つとAI駆動DAW「LUNA」をUAD Explore FREEバンドルで無料配布</h2>
+    <p class="summary">Universal Audioが、8つの人気UADプラグインとAIを搭載したLUNA DAWを「UAD Explore FREEバンドル」として無料で提供を開始した。これにより、UAハードウェアを所有していないユーザーでも、高品質なUAプラグインとDAWを体験できる機会が広がる。これは、同社の製品エコシステムへの新規ユーザー誘致を目的とした大規模なプロモーションであり、多くの音楽クリエイターにとって大きな恩恵となる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">UAD Explore FREEバンドルには、業界で高く評価されているUniversal AudioのDSPプラグインの中から8つが厳選して含まれている。さらに、AI機能を搭載したLUNA DAWも無償で利用可能となる。これまでUA製品は専用ハードウェアが必要な場合が多かったが、この無料バンドルはハードウェアなしで利用できる点が画期的。音楽制作の質を高めたい個人クリエイターやDTM愛好家にとって、プロフェッショナルなツールを手軽に入手する絶好の機会を提供する。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Funiversal-audio-is-giving-away-eight-of-its-most-popular-plugins-for-free-in-the-uad-explore-free-bundle"
+        data-title="Universal Audioが人気のプラグイン8つとAI駆動DAW「LUNA」をUAD Explore FREEバンドルで無料配布"
+        data-summary="Universal Audioが、8つの人気UADプラグインとAIを搭載したLUNA DAWを「UAD Explore FREEバンドル」として無料で提供を開始した。これにより、UAハードウェアを所有していないユーザーでも、高品質なUAプラグインとDAWを体験できる機会が広がる。これは、同社の製品エコシステムへの新規ユーザー誘致を目的とした大規模なプロモーションであり、多くの音楽クリエイターにとって大きな恩恵となる。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/music-tech/universal-audio-is-giving-away-eight-of-its-most-popular-plugins-for-free-in-the-uad-explore-free-bundle"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Universal%20Audio%E3%81%8C%E4%BA%BA%E6%B0%97%E3%81%AE%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B38%E3%81%A4%E3%81%A8AI%E9%A7%86%E5%8B%95DAW%E3%80%8CLUNA%E3%80%8D%E3%82%92UAD%20Explore%20FREE%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%81%A7%E7%84%A1%E6%96%99%E9%85%8D%E5%B8%83%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Funiversal-audio-is-giving-away-eight-of-its-most-popular-plugins-for-free-in-the-uad-explore-free-bundle" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Universal Audioが人気のプラグイン8つとAI駆動DAW「LUNA」をUAD Explore FREEバンドルで無料配布">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.05s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">MusicRadar</span>
+    </div>
+    <h2>Moogが創設者の功績を称え、Minimoog Model Dの特別限定再販版を発表 – わずか500台限定</h2>
+    <p class="summary">Moogが、創設者ボブ・モーグの功績を称え、伝説的なMinimoog Model Dの特別限定再販版を発表した。この「Bob Moog Tribute Edition」はわずか500台の限定生産で、Moogのノースカロライナ州の工場で手作業で組み立てられる。これは、歴史的なシンセサイザーのファンやコレクターにとって極めて貴重な機会であり、Moogブランドの伝統を継承する重要な動きとなる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">Minimoog Model Dは、シンセサイザーの歴史において最も影響力のある楽器の一つとされている。今回発表された「Bob Moog Tribute Edition」は、オリジナルモデルの音質と操作性を忠実に再現しつつ、現代の技術基準に合わせた改善が施されている可能性もある。各ユニットはMoogの熟練した技術者によって手作業で丁寧に組み立てられるため、その品質と希少性は保証される。この再販は、Moogの技術革新と遺産を記念するものであり、音楽制作コミュニティ全体に大きな反響を呼ぶだろう。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fmoog-celebrates-the-legacy-of-its-founder-with-special-limited-edition-reissue-of-the-minimoog-model-d-but-only-500-will-be-made"
+        data-title="Moogが創設者の功績を称え、Minimoog Model Dの特別限定再販版を発表 – わずか500台限定"
+        data-summary="Moogが、創設者ボブ・モーグの功績を称え、伝説的なMinimoog Model Dの特別限定再販版を発表した。この「Bob Moog Tribute Edition」はわずか500台の限定生産で、Moogのノースカロライナ州の工場で手作業で組み立てられる。これは、歴史的なシンセサイザーのファンやコレクターにとって極めて貴重な機会であり、Moogブランドの伝統を継承する重要な動きとなる。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/music-tech/moog-celebrates-the-legacy-of-its-founder-with-special-limited-edition-reissue-of-the-minimoog-model-d-but-only-500-will-be-made"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Moog%E3%81%8C%E5%89%B5%E8%A8%AD%E8%80%85%E3%81%AE%E5%8A%9F%E7%B8%BE%E3%82%92%E7%A7%B0%E3%81%88%E3%80%81Minimoog%20Model%20D%E3%81%AE%E7%89%B9%E5%88%A5%E9%99%90%E5%AE%9A%E5%86%8D%E8%B2%A9%E7%89%88%E3%82%92%E7%99%BA%E8%A1%A8%20%E2%80%93%20%E3%82%8F%E3%81%9A%E3%81%8B500%E5%8F%B0%E9%99%90%E5%AE%9A%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fmoog-celebrates-the-legacy-of-its-founder-with-special-limited-edition-reissue-of-the-minimoog-model-d-but-only-500-will-be-made" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Moogが創設者の功績を称え、Minimoog Model Dの特別限定再販版を発表 – わずか500台限定">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
 <div class="item" style="animation-delay:0.10s">
-      <div class="item-header">
-        <span class="imp-badge imp-useful">🟢 有益</span>
-      </div>
-      <h2>【2月振り返り】note有料記事の売上が減った理由｜Amazonアソシエイト1ヶ月の結果</h2>
-      <p class="summary">個人クリエイターが、2026年2月のnote有料記事の売上減少の理由と、Amazonアソシエイトを導入してからの1ヶ月間の収益結果について振り返っています。個人の収益化戦略における変化と課題が共有されています。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">この記事は、個人が副業やフリーランスとして活動する上でのリアルな収益状況と、その変動要因を考察するものです。noteのようなプラットフォームでの有料コンテンツ販売や、Amazonアソシエイトのようなアフィリエイトプログラムの運用経験は、他の個人開発者やクリエイターにとって参考となる知見を提供します。売上減少の原因分析や新たな収益源の検証は、今後のマネタイズ戦略を検討する上で重要な示唆を与えます。</p>
-      </details>
-      <a class="source-link" href="https://note.com/yossh_1205/n/nd2bf00154364" target="_blank" rel="noopener">📰 note クリエイター収益</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Fnote.com%2Fyossh_1205%2Fn%2Fnd2bf00154364"
-          data-title="【2月振り返り】note有料記事の売上が減った理由｜Amazonアソシエイト1ヶ月の結果"
-          data-summary="個人クリエイターが、2026年2月のnote有料記事の売上減少の理由と、Amazonアソシエイトを導入してからの1ヶ月間の収益結果について振り返っています。個人の収益化戦略における変化と課題が共有されています。"
-          data-source="note クリエイター収益"
-          data-url="https://note.com/yossh_1205/n/nd2bf00154364"
-          data-importance="🟢"
-          data-category="ビジネス">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%902%E6%9C%88%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A%E3%80%91note%E6%9C%89%E6%96%99%E8%A8%98%E4%BA%8B%E3%81%AE%E5%A3%B2%E4%B8%8A%E3%81%8C%E6%B8%9B%E3%81%A3%E3%81%9F%E7%90%86%E7%94%B1%EF%BD%9CAmazon%E3%82%A2%E3%82%BD%E3%82%B7%E3%82%A8%E3%82%A4%E3%83%881%E3%83%B6%E6%9C%88%E3%81%AE%E7%B5%90%E6%9E%9C%20https%3A%2F%2Fnote.com%2Fyossh_1205%2Fn%2Fnd2bf00154364" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="【2月振り返り】note有料記事の売上が減った理由｜Amazonアソシエイト1ヶ月の結果">🤖 Claudeに聞く</button>
-      </div>
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">MusicRadar</span>
     </div>
-    </section><section class="category-section" data-cat="経済">
-      <p class="category-label" style="color:#666">● 経済</p>
-      <div class="item" style="animation-delay:0.00s">
-      <div class="item-header">
-        <span class="imp-badge imp-important">🟡 重要</span>
-      </div>
-      <h2>ロシアが｢ステーブルコイン｣でアフリカ進出加速。暗号資産の技術でルーブル決済圏の拡大を目論む成否は？</h2>
-      <p class="summary">ロシアが、ルーブル建てステーブルコイン「A7A5」を活用してアフリカ市場での決済網構築を加速させています。これは、米欧の経済制裁下でルーブル決済圏を拡大しようとする試みですが、アフリカでのルーブル需要や通貨としての信用問題がその成否を左右すると見られています。</p>
-      <details>
-        <summary></summary>
-        <p class="detail-text">ロシアは、暗号資産技術を利用して制裁の影響を軽減し、貿易構造を多角化する狙いがあります。しかし、アフリカ諸国における米ドルや人民元の優位性、ルーブル自体の信用度、そしてアフリカ経済の貿易構造といった複合的な要因が、ロシアのこの取り組みに大きな課題を投げかけています。地政学的な動向と金融政策が絡み合う、国際経済の新たな展開を示唆する動きです。</p>
-      </details>
-      <a class="source-link" href="https://toyokeizai.net/articles/-/941381?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener">📰 東洋経済オンライン</a>
-      <div class="actions">
-        <button class="action-btn star-btn"
-          data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F941381%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
-          data-title="ロシアが｢ステーブルコイン｣でアフリカ進出加速。暗号資産の技術でルーブル決済圏の拡大を目論む成否は？"
-          data-summary="ロシアが、ルーブル建てステーブルコイン「A7A5」を活用してアフリカ市場での決済網構築を加速させています。これは、米欧の経済制裁下でルーブル決済圏を拡大しようとする試みですが、アフリカでのルーブル需要や通貨としての信用問題がその成否を左右すると見られています。"
-          data-source="東洋経済オンライン"
-          data-url="https://toyokeizai.net/articles/-/941381?utm_source=rss&utm_medium=http&utm_campaign=link_back"
-          data-importance="🟡"
-          data-category="経済">⭐ 保存</button>
-        <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%AD%E3%82%B7%E3%82%A2%E3%81%8C%EF%BD%A2%E3%82%B9%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%82%B3%E3%82%A4%E3%83%B3%EF%BD%A3%E3%81%A7%E3%82%A2%E3%83%95%E3%83%AA%E3%82%AB%E9%80%B2%E5%87%BA%E5%8A%A0%E9%80%9F%E3%80%82%E6%9A%97%E5%8F%B7%E8%B3%87%E7%94%A3%E3%81%AE%E6%8A%80%E8%A1%93%E3%81%A7%E3%83%AB%E3%83%BC%E3%83%96%E3%83%AB%E6%B1%BA%E6%B8%88%E5%9C%8F%E3%81%AE%E6%8B%A1%E5%A4%A7%E3%82%92%E7%9B%AE%E8%AB%96%E3%82%80%E6%88%90%E5%90%A6%E3%81%AF%EF%BC%9F%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F941381%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
-        <button class="action-btn claude-btn" data-title="ロシアが｢ステーブルコイン｣でアフリカ進出加速。暗号資産の技術でルーブル決済圏の拡大を目論む成否は？">🤖 Claudeに聞く</button>
-      </div>
+    <h2>Universal Audioが人気のプラグイン8つとAI駆動DAW「LUNA」をUAD Explore FREEバンドルで無料配布</h2>
+    <p class="summary">Universal Audioが、8つの人気UADプラグインとAIを搭載したLUNA DAWを「UAD Explore FREEバンドル」として無料で提供を開始した。これにより、UAハードウェアを所有していないユーザーでも、高品質なUAプラグインとDAWを体験できる機会が広がる。これは、同社の製品エコシステムへの新規ユーザー誘致を目的とした大規模なプロモーションであり、多くの音楽クリエイターにとって大きな恩恵となる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">UAD Explore FREEバンドルには、業界で高く評価されているUniversal AudioのDSPプラグインの中から8つが厳選して含まれている。さらに、AI機能を搭載したLUNA DAWも無償で利用可能となる。これまでUA製品は専用ハードウェアが必要な場合が多かったが、この無料バンドルはハードウェアなしで利用できる点が画期的。音楽制作の質を高めたい個人クリエイターやDTM愛好家にとって、プロフェッショナルなツールを手軽に入手する絶好の機会を提供する。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Funiversal-audio-is-giving-away-eight-of-its-most-popular-plugins-for-free-in-the-uad-explore-free-bundle"
+        data-title="Universal Audioが人気のプラグイン8つとAI駆動DAW「LUNA」をUAD Explore FREEバンドルで無料配布"
+        data-summary="Universal Audioが、8つの人気UADプラグインとAIを搭載したLUNA DAWを「UAD Explore FREEバンドル」として無料で提供を開始した。これにより、UAハードウェアを所有していないユーザーでも、高品質なUAプラグインとDAWを体験できる機会が広がる。これは、同社の製品エコシステムへの新規ユーザー誘致を目的とした大規模なプロモーションであり、多くの音楽クリエイターにとって大きな恩恵となる。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/music-tech/universal-audio-is-giving-away-eight-of-its-most-popular-plugins-for-free-in-the-uad-explore-free-bundle"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Universal%20Audio%E3%81%8C%E4%BA%BA%E6%B0%97%E3%81%AE%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B38%E3%81%A4%E3%81%A8AI%E9%A7%86%E5%8B%95DAW%E3%80%8CLUNA%E3%80%8D%E3%82%92UAD%20Explore%20FREE%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%81%A7%E7%84%A1%E6%96%99%E9%85%8D%E5%B8%83%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Funiversal-audio-is-giving-away-eight-of-its-most-popular-plugins-for-free-in-the-uad-explore-free-bundle" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Universal Audioが人気のプラグイン8つとAI駆動DAW「LUNA」をUAD Explore FREEバンドルで無料配布">🤖 Claudeに聞く</button>
     </div>
-    </section>
-  </main>
-  <div class="toast" id="toast"></div>
-  <script>
-    // トースト通知
-    function showToast(msg) {
-      const t = document.getElementById('toast');
-      t.textContent = msg;
-      t.classList.add('show');
-      setTimeout(() => t.classList.remove('show'), 2000);
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.15s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">MusicRadar</span>
+    </div>
+    <h2>Moogが創設者の功績を称え、Minimoog Model Dの特別限定再販版を発表 – わずか500台限定</h2>
+    <p class="summary">Moogが、創設者ボブ・モーグの功績を称え、伝説的なMinimoog Model Dの特別限定再販版を発表した。この「Bob Moog Tribute Edition」はわずか500台の限定生産で、Moogのノースカロライナ州の工場で手作業で組み立てられる。これは、歴史的なシンセサイザーのファンやコレクターにとって極めて貴重な機会であり、Moogブランドの伝統を継承する重要な動きとなる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">Minimoog Model Dは、シンセサイザーの歴史において最も影響力のある楽器の一つとされている。今回発表された「Bob Moog Tribute Edition」は、オリジナルモデルの音質と操作性を忠実に再現しつつ、現代の技術基準に合わせた改善が施されている可能性もある。各ユニットはMoogの熟練した技術者によって手作業で丁寧に組み立てられるため、その品質と希少性は保証される。この再販は、Moogの技術革新と遺産を記念するものであり、音楽制作コミュニティ全体に大きな反響を呼ぶだろう。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fmoog-celebrates-the-legacy-of-its-founder-with-special-limited-edition-reissue-of-the-minimoog-model-d-but-only-500-will-be-made"
+        data-title="Moogが創設者の功績を称え、Minimoog Model Dの特別限定再販版を発表 – わずか500台限定"
+        data-summary="Moogが、創設者ボブ・モーグの功績を称え、伝説的なMinimoog Model Dの特別限定再販版を発表した。この「Bob Moog Tribute Edition」はわずか500台の限定生産で、Moogのノースカロライナ州の工場で手作業で組み立てられる。これは、歴史的なシンセサイザーのファンやコレクターにとって極めて貴重な機会であり、Moogブランドの伝統を継承する重要な動きとなる。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/music-tech/moog-celebrates-the-legacy-of-its-founder-with-special-limited-edition-reissue-of-the-minimoog-model-d-but-only-500-will-be-made"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Moog%E3%81%8C%E5%89%B5%E8%A8%AD%E8%80%85%E3%81%AE%E5%8A%9F%E7%B8%BE%E3%82%92%E7%A7%B0%E3%81%88%E3%80%81Minimoog%20Model%20D%E3%81%AE%E7%89%B9%E5%88%A5%E9%99%90%E5%AE%9A%E5%86%8D%E8%B2%A9%E7%89%88%E3%82%92%E7%99%BA%E8%A1%A8%20%E2%80%93%20%E3%82%8F%E3%81%9A%E3%81%8B500%E5%8F%B0%E9%99%90%E5%AE%9A%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fmoog-celebrates-the-legacy-of-its-founder-with-special-limited-edition-reissue-of-the-minimoog-model-d-but-only-500-will-be-made" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Moogが創設者の功績を称え、Minimoog Model Dの特別限定再販版を発表 – わずか500台限定">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.20s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">Bedroom Producers Blog</span>
+    </div>
+    <h2>Elementary Soundsが無料のサンプルベース・カリンバ音源「TSUD」をリリース</h2>
+    <p class="summary">Elementary Soundsが、macOSとWindows向けに無料のサンプルベース・カリンバ音源「TSUD」をリリースした。これは同社にとって約1年ぶりの新製品であり、初の無料リリースとなる。この提供により、多くの音楽制作者が手軽に高品質なカリンバサウンドを自身のプロジェクトに取り入れることができる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">「TSUD」は、カリンバの独特な音色を忠実に再現したサンプルベースのインストゥルメンタルプラグインである。Elementary Soundsはこれまで有料製品をリリースしてきたが、今回初の無料リリースを行うことで、新規ユーザーの獲得とブランド認知度の向上を目指していると考えられる。この無料音源は、特にエスニックな雰囲気やアンビエントなサウンドを求めるDTMユーザーにとって有用なツールとなるだろう。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F15%2Ftsud-kalimba%2F"
+        data-title="Elementary Soundsが無料のサンプルベース・カリンバ音源「TSUD」をリリース"
+        data-summary="Elementary Soundsが、macOSとWindows向けに無料のサンプルベース・カリンバ音源「TSUD」をリリースした。これは同社にとって約1年ぶりの新製品であり、初の無料リリースとなる。この提供により、多くの音楽制作者が手軽に高品質なカリンバサウンドを自身のプロジェクトに取り入れることができる。"
+        data-source="Bedroom Producers Blog"
+        data-url="https://bedroomproducersblog.com/2026/04/15/tsud-kalimba/"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Elementary%20Sounds%E3%81%8C%E7%84%A1%E6%96%99%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%AB%E3%83%AA%E3%83%B3%E3%83%90%E9%9F%B3%E6%BA%90%E3%80%8CTSUD%E3%80%8D%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F15%2Ftsud-kalimba%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Elementary Soundsが無料のサンプルベース・カリンバ音源「TSUD」をリリース">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.25s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">Bedroom Producers Blog</span>
+    </div>
+    <h2>Universal AudioがUAD Explore FREEプラグインバンドルをリリース、8つのプラグインとLUNA DAWが付属</h2>
+    <p class="summary">Universal Audioが、「UAD Explore FREE」と称する無料プラグインバンドルをリリースした。このバンドルには、8つのUADプラグインとLUNA DAWが含まれており、UAハードウェアを必要とせずに利用できる点が画期的である。これまでUA製品へのアクセスが限られていたユーザーにとって、プロフェッショナルグレードのツールを無償で試せる貴重な機会を提供する。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">UAD Explore FREEは、Universal Audioが過去数年間行ってきたプロモーションの一環として、一部のプラグイン（例: 1176）が以前から個別に無料提供されてきたが、今回は8つの人気プラグインが一つのバンドルとしてまとめられた。さらに、AI機能を搭載したDAW「LUNA」も含まれることで、初心者から経験豊富なプロデューサーまで、幅広いユーザーがUAのエコシステムを体験できるようになる。この戦略は、同社のソフトウェアプラットフォームの普及を加速させ、将来的な有料製品へのアップグレードを促す狙いがあるとみられる。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F15%2Funiversal-audio-uad-explore-bundle%2F"
+        data-title="Universal AudioがUAD Explore FREEプラグインバンドルをリリース、8つのプラグインとLUNA DAWが付属"
+        data-summary="Universal Audioが、「UAD Explore FREE」と称する無料プラグインバンドルをリリースした。このバンドルには、8つのUADプラグインとLUNA DAWが含まれており、UAハードウェアを必要とせずに利用できる点が画期的である。これまでUA製品へのアクセスが限られていたユーザーにとって、プロフェッショナルグレードのツールを無償で試せる貴重な機会を提供する。"
+        data-source="Bedroom Producers Blog"
+        data-url="https://bedroomproducersblog.com/2026/04/15/universal-audio-uad-explore-bundle/"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Universal%20Audio%E3%81%8CUAD%20Explore%20FREE%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%80%818%E3%81%A4%E3%81%AE%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%A8LUNA%20DAW%E3%81%8C%E4%BB%98%E5%B1%9E%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F15%2Funiversal-audio-uad-explore-bundle%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Universal AudioがUAD Explore FREEプラグインバンドルをリリース、8つのプラグインとLUNA DAWが付属">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.30s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">Bedroom Producers Blog</span>
+    </div>
+    <h2>United Pluginsが10個のプラグインを無料で提供するUnitedFreeBundleを発表</h2>
+    <p class="summary">United Pluginsが、10個のプロフェッショナルなオーディオプラグインを含む「UnitedFreeBundle」を無料で提供開始した。この無料バンドルの唯一の注意点は、プラグイン内に同社のセールや製品を表示する広告バナーが含まれていることである。この広告はプラグインの表示や操作を妨げないため、多くのユーザーにとって、プログレードのプラグインをコストなしで利用できる魅力的な機会となる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">UnitedFreeBundleに含まれる10個のプラグインは、ミキシングやマスタリングなど様々な用途に対応するプロフェッショナル品質のツールである。広告バナーはプラグインの機能に影響を与えず、ユーザー体験を著しく損なうものではないと説明されている。この戦略は、United Pluginsが自社製品を広く普及させ、将来的な有料製品の購入に繋げるためのマーケティング施策と考えられる。個人クリエイターや予算が限られている制作者にとって、高品質なプラグインを手に入れる絶好のチャンスとなる。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F14%2Funitedfreebundle%2F"
+        data-title="United Pluginsが10個のプラグインを無料で提供するUnitedFreeBundleを発表"
+        data-summary="United Pluginsが、10個のプロフェッショナルなオーディオプラグインを含む「UnitedFreeBundle」を無料で提供開始した。この無料バンドルの唯一の注意点は、プラグイン内に同社のセールや製品を表示する広告バナーが含まれていることである。この広告はプラグインの表示や操作を妨げないため、多くのユーザーにとって、プログレードのプラグインをコストなしで利用できる魅力的な機会となる。"
+        data-source="Bedroom Producers Blog"
+        data-url="https://bedroomproducersblog.com/2026/04/14/unitedfreebundle/"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=United%20Plugins%E3%81%8C10%E5%80%8B%E3%81%AE%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%82%92%E7%84%A1%E6%96%99%E3%81%A7%E6%8F%90%E4%BE%9B%E3%81%99%E3%82%8BUnitedFreeBundle%E3%82%92%E7%99%BA%E8%A1%A8%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F14%2Funitedfreebundle%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="United Pluginsが10個のプラグインを無料で提供するUnitedFreeBundleを発表">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.35s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">DTMステーション</span>
+    </div>
+    <h2>世界にも例のないKORG PS-3300フィルター再現――144ボイスの“個体差”まで再現したソフト版PS-3300開発の舞台裏</h2>
+    <p class="summary">伝説的なビンテージシンセサイザーKORG PS-3300のソフトウェア版が開発され、その開発舞台裏が明かされた。このソフトウェア版は、オリジナルが持つ144ボイスの「個体差」までも再現するという、世界にも類を見ないアプローチでフィルターを忠実に再現している。クラフトワークやジャン＝ミシェル・ジャールなど、多くの著名アーティストを魅了したPS-3300のサウンドが、現代のDTM環境で利用可能になることで、新たな音楽表現の可能性を広げる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">KORG PS-3300は1977年から1981年にかけて約50台しか製造されなかった希少なポリフォニックシンセサイザーで、その独特の分厚いサウンドは多くのミュージシャンに愛されてきた。今回のソフトウェア版開発では、オリジナルの各ボイスが持つわずかな特性のバラつき（個体差）までもデジタルでモデリングすることで、その複雑で有機的なサウンドを再現することに成功した。これは単なるエミュレーションを超えた、精緻な物理モデリングに近い技術が投入されていることを示唆しており、ビンテージシンセの再現技術における新たなマイルストーンとなるだろう。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76755.html"
+        data-title="世界にも例のないKORG PS-3300フィルター再現――144ボイスの“個体差”まで再現したソフト版PS-3300開発の舞台裏"
+        data-summary="伝説的なビンテージシンセサイザーKORG PS-3300のソフトウェア版が開発され、その開発舞台裏が明かされた。このソフトウェア版は、オリジナルが持つ144ボイスの「個体差」までも再現するという、世界にも類を見ないアプローチでフィルターを忠実に再現している。クラフトワークやジャン＝ミシェル・ジャールなど、多くの著名アーティストを魅了したPS-3300のサウンドが、現代のDTM環境で利用可能になることで、新たな音楽表現の可能性を広げる。"
+        data-source="DTMステーション"
+        data-url="https://www.dtmstation.com/archives/76755.html"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E4%B8%96%E7%95%8C%E3%81%AB%E3%82%82%E4%BE%8B%E3%81%AE%E3%81%AA%E3%81%84KORG%20PS-3300%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E5%86%8D%E7%8F%BE%E2%80%95%E2%80%95144%E3%83%9C%E3%82%A4%E3%82%B9%E3%81%AE%E2%80%9C%E5%80%8B%E4%BD%93%E5%B7%AE%E2%80%9D%E3%81%BE%E3%81%A7%E5%86%8D%E7%8F%BE%E3%81%97%E3%81%9F%E3%82%BD%E3%83%95%E3%83%88%E7%89%88PS-3300%E9%96%8B%E7%99%BA%E3%81%AE%E8%88%9E%E5%8F%B0%E8%A3%8F%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76755.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="世界にも例のないKORG PS-3300フィルター再現――144ボイスの“個体差”まで再現したソフト版PS-3300開発の舞台裏">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.40s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">DTMステーション</span>
+    </div>
+    <h2>AWM2+FM+サンプラーのヤマハSEQTRAKがv2.0で大きく進化。新トラック機能とDAW連携を深掘りする</h2>
+    <p class="summary">ヤマハのコンパクトなオールインワン音楽制作ギア「SEQTRAK」が、v2.0アップデートで大幅な進化を遂げた。新トラック機能の追加とDAW連携の強化が主な内容で、これによりSEQTRAKの制作能力とワークフローの柔軟性が飛躍的に向上する。元々AWM2、FM、サンプラー、エフェクトを内蔵し、バッテリー駆動と内蔵スピーカーも備えた多機能デバイスだったが、今回のアップデートでさらにプロフェッショナルな制作環境に近づいた。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">SEQTRAKは2024年1月に発売されたばかりのポータブル音楽制作ツールで、ドラム、シンセ、サンプリング、エフェクトを一台で完結できる点が特徴。v2.0アップデートでは、より複雑な楽曲構成を可能にする新トラック機能が追加され、ユーザーはこれまで以上に自由なアイデアを形にできるようになる。また、DAW（Digital Audio Workstation）との連携機能が強化されたことで、SEQTRAKで作成したプロジェクトをスムーズに他のDAWに取り込み、最終的なミックスやマスタリングを行うことが可能になり、プロデューサーのワークフローが改善される。このアップデートは、SEQTRAKをより本格的な音楽制作のハブとして位置づけるものとなる。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76819.html"
+        data-title="AWM2+FM+サンプラーのヤマハSEQTRAKがv2.0で大きく進化。新トラック機能とDAW連携を深掘りする"
+        data-summary="ヤマハのコンパクトなオールインワン音楽制作ギア「SEQTRAK」が、v2.0アップデートで大幅な進化を遂げた。新トラック機能の追加とDAW連携の強化が主な内容で、これによりSEQTRAKの制作能力とワークフローの柔軟性が飛躍的に向上する。元々AWM2、FM、サンプラー、エフェクトを内蔵し、バッテリー駆動と内蔵スピーカーも備えた多機能デバイスだったが、今回のアップデートでさらにプロフェッショナルな制作環境に近づいた。"
+        data-source="DTMステーション"
+        data-url="https://www.dtmstation.com/archives/76819.html"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=AWM2%2BFM%2B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%A9%E3%83%BC%E3%81%AE%E3%83%A4%E3%83%9E%E3%83%8FSEQTRAK%E3%81%8Cv2.0%E3%81%A7%E5%A4%A7%E3%81%8D%E3%81%8F%E9%80%B2%E5%8C%96%E3%80%82%E6%96%B0%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E6%A9%9F%E8%83%BD%E3%81%A8DAW%E9%80%A3%E6%90%BA%E3%82%92%E6%B7%B1%E6%8E%98%E3%82%8A%E3%81%99%E3%82%8B%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F76819.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="AWM2+FM+サンプラーのヤマハSEQTRAKがv2.0で大きく進化。新トラック機能とDAW連携を深掘りする">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.45s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">Attack Magazine</span>
+    </div>
+    <h2>Zebra 3で80年代スタイルのチューンド・パーカッションを再現</h2>
+    <p class="summary">u-heのZebra 3シンセサイザーの新しいModalモジュールを活用し、80年代に流行したマリンバのようなチューンド・パーカッションサウンドを生成する詳細なチュートリアルが公開された。このモジュールは物理モデリング技術を用いることで、ノイズのようなシンプルな音源からでも、本物に近い打楽器の共鳴と有機的なバリエーションを生み出すことができる。チュートリアルでは、ホワイトノイズをパーカッシブなアルペジオに変換する手順がステップバイステップで解説されており、現在パブリックベータ版のZebra 3を無料で試すことができる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">記事では、Zebra 3のModalモジュールが、FMシンセシスやサンプリングでは難しかった金属や木、ガラスといった「叩かれる中空の物体」の複雑な共鳴を物理モデリングで再現できる点を強調している。具体的には、Noiseモジュールで作成した短いホワイトノイズをModalモジュールに通し、「Punched Can」などの物理モデルを適用することで、リアルなチューンド・ドラムサウンドを生成する。さらに、MSEG（Multi-Step Envelope Generator）やMapperモジュールを用いて複雑なリズミカルパターンやメロディックなリフを構築する方法も示されており、Ableton Liveでの実践的な活用方法が紹介されている。Zebra 3のパブリックベータ版はKVR Audioフォーラムからダウンロード可能。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Fsynth-secrets%2F80s-style-tuned-percussion-with-zebra-3%2F"
+        data-title="Zebra 3で80年代スタイルのチューンド・パーカッションを再現"
+        data-summary="u-heのZebra 3シンセサイザーの新しいModalモジュールを活用し、80年代に流行したマリンバのようなチューンド・パーカッションサウンドを生成する詳細なチュートリアルが公開された。このモジュールは物理モデリング技術を用いることで、ノイズのようなシンプルな音源からでも、本物に近い打楽器の共鳴と有機的なバリエーションを生み出すことができる。チュートリアルでは、ホワイトノイズをパーカッシブなアルペジオに変換する手順がステップバイステップで解説されており、現在パブリックベータ版のZebra 3を無料で試すことができる。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/technique/synth-secrets/80s-style-tuned-percussion-with-zebra-3/"
+        data-importance="🟢"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Zebra%203%E3%81%A780%E5%B9%B4%E4%BB%A3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%B3%E3%83%89%E3%83%BB%E3%83%91%E3%83%BC%E3%82%AB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E5%86%8D%E7%8F%BE%20https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Fsynth-secrets%2F80s-style-tuned-percussion-with-zebra-3%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Zebra 3で80年代スタイルのチューンド・パーカッションを再現">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.50s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">Attack Magazine</span>
+    </div>
+    <h2>グリッドを超えて：スウィングとは何か、そしてそれを加える方法</h2>
+    <p class="summary">DTMにおいて楽曲に「スウィング」を適用し、グルーヴと躍動感を与える方法について、その理論と実践的な手順が解説されている。スウィングとは、偶数番目の弱い拍をグリッドからずらすことで生まれる独特のリズム感であり、Ableton LiveのGroove Pool機能を使えば簡単に実現できる。チュートリアルでは、ストレートなビートから徐々にスウィングの度合いを変化させる例が示され、手動での調整からGroove Poolを使った効率的な方法までが紹介されている。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">記事ではまず、スウィングの基本的な概念を、均等に配置されたハイハットの例を使って説明する。弱い拍をグリッドの右側（遅延）に移動させることで「ポジティブスウィング」が生まれ、その割合がスウィングパーセンテージとして示される。Ableton LiveのGroove Poolを使用すると、MIDIノートを直接動かすのではなく、グリッド自体をシフトさせることでスウィングを適用できるため、プログラミングが容易になる利点がある。具体的には「Swing 16th 64 Groove」を例に挙げ、Groove PoolのTiming設定を調整することでビートにバウンス感を与える方法が紹介されている。ドラムパートだけでなく、ベースラインやリードサウンドなど、トラックの様々な要素にスウィングを適用することで、楽曲全体に統一感のあるグルーヴを生み出すことが可能だと示唆している。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Ftutorials%2Fgoing-off-grid-what-is-swing-and-how-to-add-it%2F"
+        data-title="グリッドを超えて：スウィングとは何か、そしてそれを加える方法"
+        data-summary="DTMにおいて楽曲に「スウィング」を適用し、グルーヴと躍動感を与える方法について、その理論と実践的な手順が解説されている。スウィングとは、偶数番目の弱い拍をグリッドからずらすことで生まれる独特のリズム感であり、Ableton LiveのGroove Pool機能を使えば簡単に実現できる。チュートリアルでは、ストレートなビートから徐々にスウィングの度合いを変化させる例が示され、手動での調整からGroove Poolを使った効率的な方法までが紹介されている。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/technique/tutorials/going-off-grid-what-is-swing-and-how-to-add-it/"
+        data-importance="🟢"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%82%92%E8%B6%85%E3%81%88%E3%81%A6%EF%BC%9A%E3%82%B9%E3%82%A6%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E3%81%9D%E3%82%8C%E3%82%92%E5%8A%A0%E3%81%88%E3%82%8B%E6%96%B9%E6%B3%95%20https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Ftutorials%2Fgoing-off-grid-what-is-swing-and-how-to-add-it%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="グリッドを超えて：スウィングとは何か、そしてそれを加える方法">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.55s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">Attack Magazine</span>
+    </div>
+    <h2>二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026のレポート</h2>
+    <p class="summary">ロンドン・シンセ＆ペダル・エキスポ2026のレポートで、今年Superboothに参加できない筆者が、小規模ながら活気あふれるこのイベントを高く評価している。Arturia, Moog, Korgといった有名ブランドから、Monk Projectのジェネレーティブ・シーケンサーTMA1やGenki Instrumentsのポリフォニック・シンセKatla、そしてAbleton Live用の3DモーションコントローラーアプリFlowfalといった革新的な新製品が紹介された。このイベントは、多様性には課題を残しつつも、参加者が実際に機材に触れて楽しむ貴重な機会を提供した。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">このエキスポは、Delicious Audio Events、KMR Audio、guitarguitarが主催し、ロンドンのHackney WickにあるNo. 90という会場で開催された。記事では、TMA1が20以上のシーケンサーモデルを提供し、ライブジャムに最適であることや、アイスランドのGenki Instrumentsが開発したKatlaシンセが、5つのボイスとサブオシレーターを備え、有機的で進化的なテクスチャーを生み出す「Blade-Runner-in-a-box」と評されている点が強調されている。また、スマートフォンやスマートウォッチをAbleton Liveの3Dモーションコントローラーとして利用できる無料アプリFlowfalも注目された。イベントの参加費用は初めて徴収されたにもかかわらず、多くの来場者で賑わい、そのアットホームな雰囲気が成功要因として挙げられている。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Fa-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026%2F"
+        data-title="二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026のレポート"
+        data-summary="ロンドン・シンセ＆ペダル・エキスポ2026のレポートで、今年Superboothに参加できない筆者が、小規模ながら活気あふれるこのイベントを高く評価している。Arturia, Moog, Korgといった有名ブランドから、Monk Projectのジェネレーティブ・シーケンサーTMA1やGenki Instrumentsのポリフォニック・シンセKatla、そしてAbleton Live用の3DモーションコントローラーアプリFlowfalといった革新的な新製品が紹介された。このイベントは、多様性には課題を残しつつも、参加者が実際に機材に触れて楽しむ貴重な機会を提供した。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/reviews/gear-software/a-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026/"
+        data-importance="🟢"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E4%BA%8C%E3%81%A4%E3%81%AE%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%9D%E7%89%A9%E8%AA%9E%EF%BC%9A%E3%83%AD%E3%83%B3%E3%83%89%E3%83%B3%E3%83%BB%E3%82%B7%E3%83%B3%E3%82%BB%EF%BC%86%E3%83%9A%E3%83%80%E3%83%AB%E3%83%BB%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%9D2026%E3%81%AE%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Fa-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026のレポート">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.60s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">Attack Magazine</span>
+    </div>
+    <h2>Zebra 3で80年代スタイルのチューンド・パーカッションを再現</h2>
+    <p class="summary">u-heのZebra 3シンセサイザーの新しいModalモジュールを活用し、80年代に流行したマリンバのようなチューンド・パーカッションサウンドを生成する詳細なチュートリアルが公開された。このモジュールは物理モデリング技術を用いることで、ノイズのようなシンプルな音源からでも、本物に近い打楽器の共鳴と有機的なバリエーションを生み出すことができる。チュートリアルでは、ホワイトノイズをパーカッシブなアルペジオに変換する手順がステップバイステップで解説されており、現在パブリックベータ版のZebra 3を無料で試すことができる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">記事では、Zebra 3のModalモジュールが、FMシンセシスやサンプリングでは難しかった金属や木、ガラスといった「叩かれる中空の物体」の複雑な共鳴を物理モデリングで再現できる点を強調している。具体的には、Noiseモジュールで作成した短いホワイトノイズをModalモジュールに通し、「Punched Can」などの物理モデルを適用することで、リアルなチューンド・ドラムサウンドを生成する。さらに、MSEG（Multi-Step Envelope Generator）やMapperモジュールを用いて複雑なリズミカルパターンやメロディックなリフを構築する方法も示されており、Ableton Liveでの実践的な活用方法が紹介されている。Zebra 3のパブリックベータ版はKVR Audioフォーラムからダウンロード可能。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Fsynth-secrets%2F80s-style-tuned-percussion-with-zebra-3%2F"
+        data-title="Zebra 3で80年代スタイルのチューンド・パーカッションを再現"
+        data-summary="u-heのZebra 3シンセサイザーの新しいModalモジュールを活用し、80年代に流行したマリンバのようなチューンド・パーカッションサウンドを生成する詳細なチュートリアルが公開された。このモジュールは物理モデリング技術を用いることで、ノイズのようなシンプルな音源からでも、本物に近い打楽器の共鳴と有機的なバリエーションを生み出すことができる。チュートリアルでは、ホワイトノイズをパーカッシブなアルペジオに変換する手順がステップバイステップで解説されており、現在パブリックベータ版のZebra 3を無料で試すことができる。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/technique/synth-secrets/80s-style-tuned-percussion-with-zebra-3/"
+        data-importance="🟢"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Zebra%203%E3%81%A780%E5%B9%B4%E4%BB%A3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%B3%E3%83%89%E3%83%BB%E3%83%91%E3%83%BC%E3%82%AB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E5%86%8D%E7%8F%BE%20https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Fsynth-secrets%2F80s-style-tuned-percussion-with-zebra-3%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Zebra 3で80年代スタイルのチューンド・パーカッションを再現">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.65s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">Attack Magazine</span>
+    </div>
+    <h2>グリッドを超えて：スウィングとは何か、そしてそれを加える方法</h2>
+    <p class="summary">DTMにおいて楽曲に「スウィング」を適用し、グルーヴと躍動感を与える方法について、その理論と実践的な手順が解説されている。スウィングとは、偶数番目の弱い拍をグリッドからずらすことで生まれる独特のリズム感であり、Ableton LiveのGroove Pool機能を使えば簡単に実現できる。チュートリアルでは、ストレートなビートから徐々にスウィングの度合いを変化させる例が示され、手動での調整からGroove Poolを使った効率的な方法までが紹介されている。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">記事ではまず、スウィングの基本的な概念を、均等に配置されたハイハットの例を使って説明する。弱い拍をグリッドの右側（遅延）に移動させることで「ポジティブスウィング」が生まれ、その割合がスウィングパーセンテージとして示される。Ableton LiveのGroove Poolを使用すると、MIDIノートを直接動かすのではなく、グリッド自体をシフトさせることでスウィングを適用できるため、プログラミングが容易になる利点がある。具体的には「Swing 16th 64 Groove」を例に挙げ、Groove PoolのTiming設定を調整することでビートにバウンス感を与える方法が紹介されている。ドラムパートだけでなく、ベースラインやリードサウンドなど、トラックの様々な要素にスウィングを適用することで、楽曲全体に統一感のあるグルーヴを生み出すことが可能だと示唆している。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Ftutorials%2Fgoing-off-grid-what-is-swing-and-how-to-add-it%2F"
+        data-title="グリッドを超えて：スウィングとは何か、そしてそれを加える方法"
+        data-summary="DTMにおいて楽曲に「スウィング」を適用し、グルーヴと躍動感を与える方法について、その理論と実践的な手順が解説されている。スウィングとは、偶数番目の弱い拍をグリッドからずらすことで生まれる独特のリズム感であり、Ableton LiveのGroove Pool機能を使えば簡単に実現できる。チュートリアルでは、ストレートなビートから徐々にスウィングの度合いを変化させる例が示され、手動での調整からGroove Poolを使った効率的な方法までが紹介されている。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/technique/tutorials/going-off-grid-what-is-swing-and-how-to-add-it/"
+        data-importance="🟢"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%82%92%E8%B6%85%E3%81%88%E3%81%A6%EF%BC%9A%E3%82%B9%E3%82%A6%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E3%81%9D%E3%82%8C%E3%82%92%E5%8A%A0%E3%81%88%E3%82%8B%E6%96%B9%E6%B3%95%20https%3A%2F%2Fwww.attackmagazine.com%2Ftechnique%2Ftutorials%2Fgoing-off-grid-what-is-swing-and-how-to-add-it%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="グリッドを超えて：スウィングとは何か、そしてそれを加える方法">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.70s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">Attack Magazine</span>
+    </div>
+    <h2>二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026のレポート</h2>
+    <p class="summary">ロンドン・シンセ＆ペダル・エキスポ2026のレポートで、今年Superboothに参加できない筆者が、小規模ながら活気あふれるこのイベントを高く評価している。Arturia, Moog, Korgといった有名ブランドから、Monk Projectのジェネレーティブ・シーケンサーTMA1やGenki Instrumentsのポリフォニック・シンセKatla、そしてAbleton Live用の3DモーションコントローラーアプリFlowfalといった革新的な新製品が紹介された。このイベントは、多様性には課題を残しつつも、参加者が実際に機材に触れて楽しむ貴重な機会を提供した。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">このエキスポは、Delicious Audio Events、KMR Audio、guitarguitarが主催し、ロンドンのHackney WickにあるNo. 90という会場で開催された。記事では、TMA1が20以上のシーケンサーモデルを提供し、ライブジャムに最適であることや、アイスランドのGenki Instrumentsが開発したKatlaシンセが、5つのボイスとサブオシレーターを備え、有機的で進化的なテクスチャーを生み出す「Blade-Runner-in-a-box」と評されている点が強調されている。また、スマートフォンやスマートウォッチをAbleton Liveの3Dモーションコントローラーとして利用できる無料アプリFlowfalも注目された。イベントの参加費用は初めて徴収されたにもかかわらず、多くの来場者で賑わい、そのアットホームな雰囲気が成功要因として挙げられている。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Fa-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026%2F"
+        data-title="二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026のレポート"
+        data-summary="ロンドン・シンセ＆ペダル・エキスポ2026のレポートで、今年Superboothに参加できない筆者が、小規模ながら活気あふれるこのイベントを高く評価している。Arturia, Moog, Korgといった有名ブランドから、Monk Projectのジェネレーティブ・シーケンサーTMA1やGenki Instrumentsのポリフォニック・シンセKatla、そしてAbleton Live用の3DモーションコントローラーアプリFlowfalといった革新的な新製品が紹介された。このイベントは、多様性には課題を残しつつも、参加者が実際に機材に触れて楽しむ貴重な機会を提供した。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/reviews/gear-software/a-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026/"
+        data-importance="🟢"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E4%BA%8C%E3%81%A4%E3%81%AE%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%9D%E7%89%A9%E8%AA%9E%EF%BC%9A%E3%83%AD%E3%83%B3%E3%83%89%E3%83%B3%E3%83%BB%E3%82%B7%E3%83%B3%E3%82%BB%EF%BC%86%E3%83%9A%E3%83%80%E3%83%AB%E3%83%BB%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%9D2026%E3%81%AE%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Fa-tale-of-two-expos-our-report-from-the-london-synth-pedal-expo-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="二つのエキスポ物語：ロンドン・シンセ＆ペダル・エキスポ2026のレポート">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+</section><section class="category-section" data-cat="音楽">
+  <p class="category-label">音楽</p>
+  <div class="item" style="animation-delay:0.00s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">MusicRadar</span>
+    </div>
+    <h2>「核ホロコーストについて明るく陽気なポップソングであることにいつも不安を感じていたが、とてつもなくキャッチーだった」：OMDが史上最高の反戦歌の一つをどのようにレコーディングしたか</h2>
+    <p class="summary">OMDの楽曲「Enola Gay」が、核ホロコーストをテーマにしながらも、明るくキャッチーなポップソングとしてどのように制作されたか、その裏話が語られている。この曲は、結婚式で流しても許される数少ない核兵器に関する曲として知られ、その独特のテーマと音楽性のギャップが魅力となっている。制作の背景には、アーティストの葛藤と、キャッチーさを追求した結果生まれた複雑な感情が込められている。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">OMDのメンバーは、「Enola Gay」が核戦争という重いテーマを扱っているにもかかわらず、その明るいメロディと陽気な雰囲気に常に複雑な感情を抱いていたという。しかし、その「とてつもなくキャッチー」な性質が、結果的に多くの人々に受け入れられる要因となった。この記事では、この楽曲がどのように構想され、レコーディングされたか、そしてその歌詞とサウンドの対比がどのようにして「史上最高の反戦歌の一つ」としての評価を得るに至ったのかが詳細に語られている。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fi-was-always-uneasy-about-the-fact-that-it-was-a-bright-perky-pop-song-about-a-nuclear-holocaust-but-it-was-insanely-catchy-how-omd-recorded-one-of-the-best-anti-war-songs-ever-made"
+        data-title="「核ホロコーストについて明るく陽気なポップソングであることにいつも不安を感じていたが、とてつもなくキャッチーだった」：OMDが史上最高の反戦歌の一つをどのようにレコーディングしたか"
+        data-summary="OMDの楽曲「Enola Gay」が、核ホロコーストをテーマにしながらも、明るくキャッチーなポップソングとしてどのように制作されたか、その裏話が語られている。この曲は、結婚式で流しても許される数少ない核兵器に関する曲として知られ、その独特のテーマと音楽性のギャップが魅力となっている。制作の背景には、アーティストの葛藤と、キャッチーさを追求した結果生まれた複雑な感情が込められている。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/artists/i-was-always-uneasy-about-the-fact-that-it-was-a-bright-perky-pop-song-about-a-nuclear-holocaust-but-it-was-insanely-catchy-how-omd-recorded-one-of-the-best-anti-war-songs-ever-made"
+        data-importance="🟢"
+        data-category="音楽">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E6%A0%B8%E3%83%9B%E3%83%AD%E3%82%B3%E3%83%BC%E3%82%B9%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%98%8E%E3%82%8B%E3%81%8F%E9%99%BD%E6%B0%97%E3%81%AA%E3%83%9D%E3%83%83%E3%83%97%E3%82%BD%E3%83%B3%E3%82%B0%E3%81%A7%E3%81%82%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%81%84%E3%81%A4%E3%82%82%E4%B8%8D%E5%AE%89%E3%82%92%E6%84%9F%E3%81%98%E3%81%A6%E3%81%84%E3%81%9F%E3%81%8C%E3%80%81%E3%81%A8%E3%81%A6%E3%81%A4%E3%82%82%E3%81%AA%E3%81%8F%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E3%83%BC%E3%81%A0%E3%81%A3%E3%81%9F%E3%80%8D%EF%BC%9AOMD%E3%81%8C%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%AB%98%E3%81%AE%E5%8F%8D%E6%88%A6%E6%AD%8C%E3%81%AE%E4%B8%80%E3%81%A4%E3%82%92%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%97%E3%81%9F%E3%81%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fi-was-always-uneasy-about-the-fact-that-it-was-a-bright-perky-pop-song-about-a-nuclear-holocaust-but-it-was-insanely-catchy-how-omd-recorded-one-of-the-best-anti-war-songs-ever-made" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="「核ホロコーストについて明るく陽気なポップソングであることにいつも不安を感じていたが、とてつもなくキャッチーだった」：OMDが史上最高の反戦歌の一つをどのようにレコーディングしたか">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.05s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">MusicRadar</span>
+    </div>
+    <h2>「核ホロコーストについて明るく陽気なポップソングであることにいつも不安を感じていたが、とてつもなくキャッチーだった」：OMDが史上最高の反戦歌の一つをどのようにレコーディングしたか</h2>
+    <p class="summary">OMDの楽曲「Enola Gay」が、核ホロコーストをテーマにしながらも、明るくキャッチーなポップソングとしてどのように制作されたか、その裏話が語られている。この曲は、結婚式で流しても許される数少ない核兵器に関する曲として知られ、その独特のテーマと音楽性のギャップが魅力となっている。制作の背景には、アーティストの葛藤と、キャッチーさを追求した結果生まれた複雑な感情が込められている。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">OMDのメンバーは、「Enola Gay」が核戦争という重いテーマを扱っているにもかかわらず、その明るいメロディと陽気な雰囲気に常に複雑な感情を抱いていたという。しかし、その「とてつもなくキャッチー」な性質が、結果的に多くの人々に受け入れられる要因となった。この記事では、この楽曲がどのように構想され、レコーディングされたか、そしてその歌詞とサウンドの対比がどのようにして「史上最高の反戦歌の一つ」としての評価を得るに至ったのかが詳細に語られている。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fi-was-always-uneasy-about-the-fact-that-it-was-a-bright-perky-pop-song-about-a-nuclear-holocaust-but-it-was-insanely-catchy-how-omd-recorded-one-of-the-best-anti-war-songs-ever-made"
+        data-title="「核ホロコーストについて明るく陽気なポップソングであることにいつも不安を感じていたが、とてつもなくキャッチーだった」：OMDが史上最高の反戦歌の一つをどのようにレコーディングしたか"
+        data-summary="OMDの楽曲「Enola Gay」が、核ホロコーストをテーマにしながらも、明るくキャッチーなポップソングとしてどのように制作されたか、その裏話が語られている。この曲は、結婚式で流しても許される数少ない核兵器に関する曲として知られ、その独特のテーマと音楽性のギャップが魅力となっている。制作の背景には、アーティストの葛藤と、キャッチーさを追求した結果生まれた複雑な感情が込められている。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/artists/i-was-always-uneasy-about-the-fact-that-it-was-a-bright-perky-pop-song-about-a-nuclear-holocaust-but-it-was-insanely-catchy-how-omd-recorded-one-of-the-best-anti-war-songs-ever-made"
+        data-importance="🟢"
+        data-category="音楽">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E6%A0%B8%E3%83%9B%E3%83%AD%E3%82%B3%E3%83%BC%E3%82%B9%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%98%8E%E3%82%8B%E3%81%8F%E9%99%BD%E6%B0%97%E3%81%AA%E3%83%9D%E3%83%83%E3%83%97%E3%82%BD%E3%83%B3%E3%82%B0%E3%81%A7%E3%81%82%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%81%84%E3%81%A4%E3%82%82%E4%B8%8D%E5%AE%89%E3%82%92%E6%84%9F%E3%81%98%E3%81%A6%E3%81%84%E3%81%9F%E3%81%8C%E3%80%81%E3%81%A8%E3%81%A6%E3%81%A4%E3%82%82%E3%81%AA%E3%81%8F%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E3%83%BC%E3%81%A0%E3%81%A3%E3%81%9F%E3%80%8D%EF%BC%9AOMD%E3%81%8C%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%AB%98%E3%81%AE%E5%8F%8D%E6%88%A6%E6%AD%8C%E3%81%AE%E4%B8%80%E3%81%A4%E3%82%92%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%97%E3%81%9F%E3%81%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fi-was-always-uneasy-about-the-fact-that-it-was-a-bright-perky-pop-song-about-a-nuclear-holocaust-but-it-was-insanely-catchy-how-omd-recorded-one-of-the-best-anti-war-songs-ever-made" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="「核ホロコーストについて明るく陽気なポップソングであることにいつも不安を感じていたが、とてつもなくキャッチーだった」：OMDが史上最高の反戦歌の一つをどのようにレコーディングしたか">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+</section><section class="category-section" data-cat="ビジネス">
+  <p class="category-label">ビジネス</p>
+  <div class="item" style="animation-delay:0.00s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">note クリエイター収益</span>
+    </div>
+    <h2>フォロワー1000人以下でも月収50万円——AIで「小さく強い」クリエイター収益モデルを設計する方法</h2>
+    <p class="summary">フォロワー1000人以下でも月収50万円を達成する「小さく強い」クリエイター収益モデルを、AIを活用して設計する方法が解説されている。この記事では、AI時代におけるフォロワー数に依存しない収益モデルの設計原理、個人クリエイターが構築できる4つの収益エンジン、小さなファンベースを「高密度の収益」に変換する「濃度設計」の手順を提示している。具体的な成功事例として、フォロワー数百人規模で月収50万円を実現した3名のモデルが紹介されており、個人クリエイターにとって実践的なマネタイズ戦略を提供する。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">この記事は、AIの進化により「フォロワー数」が収益に直結しにくくなる現状を踏まえ、いかにして「高密度な収益」を上げるかという点に焦点を当てている。具体的な「4つの収益エンジン」として、情報販売、コミュニティ運営、コンサルティング、コンテンツ制作などが考えられる。また、「濃度設計」とは、少数の熱心なファンに対して高付加価値なサービスやプロダクトを提供することで、単価を上げ、収益を最大化する戦略を指す。フォロワー数百人規模で月収50万円を達成した事例は、この濃度設計とAIツールによる効率化が組み合わされた結果であり、個人クリエイターが少ないリソースで大きな収益を上げるための具体的なアクションプラン（Today / This Week / This Month）も提示されている。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fnote.com%2Fsei_ryu5055%2Fn%2Fn059fac5da37b"
+        data-title="フォロワー1000人以下でも月収50万円——AIで「小さく強い」クリエイター収益モデルを設計する方法"
+        data-summary="フォロワー1000人以下でも月収50万円を達成する「小さく強い」クリエイター収益モデルを、AIを活用して設計する方法が解説されている。この記事では、AI時代におけるフォロワー数に依存しない収益モデルの設計原理、個人クリエイターが構築できる4つの収益エンジン、小さなファンベースを「高密度の収益」に変換する「濃度設計」の手順を提示している。具体的な成功事例として、フォロワー数百人規模で月収50万円を実現した3名のモデルが紹介されており、個人クリエイターにとって実践的なマネタイズ戦略を提供する。"
+        data-source="note クリエイター収益"
+        data-url="https://note.com/sei_ryu5055/n/n059fac5da37b"
+        data-importance="🟡"
+        data-category="ビジネス">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%95%E3%82%A9%E3%83%AD%E3%83%AF%E3%83%BC1000%E4%BA%BA%E4%BB%A5%E4%B8%8B%E3%81%A7%E3%82%82%E6%9C%88%E5%8F%8E50%E4%B8%87%E5%86%86%E2%80%94%E2%80%94AI%E3%81%A7%E3%80%8C%E5%B0%8F%E3%81%95%E3%81%8F%E5%BC%B7%E3%81%84%E3%80%8D%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%82%BF%E3%83%BC%E5%8F%8E%E7%9B%8A%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E8%A8%AD%E8%A8%88%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20https%3A%2F%2Fnote.com%2Fsei_ryu5055%2Fn%2Fn059fac5da37b" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="フォロワー1000人以下でも月収50万円——AIで「小さく強い」クリエイター収益モデルを設計する方法">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.05s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">note クリエイター収益</span>
+    </div>
+    <h2>TikTok 0から爆速マネタイズ最短攻略ガイド【完全版】</h2>
+    <p class="summary">TikTokでのマネタイズが以前よりも難しくなった現状を前提として、ゼロから最短で収益化を目指すための完全攻略ガイドが提供されている。かつては容易だったTikTokでの収益化が変化した背景を説明し、新たなアルゴリズムや市場環境に対応した戦略を提示する。個人クリエイターや副業を考える人にとって、現在のTikTokで効果的に収益を上げるための実践的な知識と戦略を得られる情報源となる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">記事は、TikTokのアルゴリズム変更や競合の増加により、以前のように簡単にフォロワーを増やしたり収益化したりすることが困難になったという厳しい現実から始まる。その上で、現在のTikTokで成功するための具体的な戦略として、ニッチなターゲット設定、質の高いコンテンツ制作、効果的なハッシュタグ戦略、他のプラットフォームとの連携などが詳細に解説されていると予想される。特に、短尺動画プラットフォームにおけるエンゲージメントの確保や、新たな収益化パスの探索に焦点を当てている可能性が高い。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fnote.com%2Ftanishi777%2Fn%2Fnc146fb8e750a"
+        data-title="TikTok 0から爆速マネタイズ最短攻略ガイド【完全版】"
+        data-summary="TikTokでのマネタイズが以前よりも難しくなった現状を前提として、ゼロから最短で収益化を目指すための完全攻略ガイドが提供されている。かつては容易だったTikTokでの収益化が変化した背景を説明し、新たなアルゴリズムや市場環境に対応した戦略を提示する。個人クリエイターや副業を考える人にとって、現在のTikTokで効果的に収益を上げるための実践的な知識と戦略を得られる情報源となる。"
+        data-source="note クリエイター収益"
+        data-url="https://note.com/tanishi777/n/nc146fb8e750a"
+        data-importance="🟡"
+        data-category="ビジネス">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=TikTok%200%E3%81%8B%E3%82%89%E7%88%86%E9%80%9F%E3%83%9E%E3%83%8D%E3%82%BF%E3%82%A4%E3%82%BA%E6%9C%80%E7%9F%AD%E6%94%BB%E7%95%A5%E3%82%AC%E3%82%A4%E3%83%89%E3%80%90%E5%AE%8C%E5%85%A8%E7%89%88%E3%80%91%20https%3A%2F%2Fnote.com%2Ftanishi777%2Fn%2Fnc146fb8e750a" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="TikTok 0から爆速マネタイズ最短攻略ガイド【完全版】">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.10s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">note クリエイター収益</span>
+    </div>
+    <h2>【2月振り返り】note有料記事の売上が減った理由｜Amazonアソシエイト1ヶ月の結果</h2>
+    <p class="summary">2026年2月のnote活動に関する振り返り記事で、note有料記事の売上が減少した理由と、Amazonアソシエイトを導入して1ヶ月間の結果が分析されている。この記事は、個人クリエイターが収益化プラットフォームを運用する上での現実的な課題と、異なるマネタイズ手法の効果を検証する過程を共有する。収益減少の原因究明と新たなアフィリエイト収益の検証は、他の個人クリエイターにとっても貴重な学びとなる。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">筆者は、2026年2月にnote有料記事の売上が減少したことについて、その原因を分析している。考えられる要因としては、投稿頻度、コンテンツの内容、市場の変化、競合の出現などが挙げられるだろう。同時に、新たな収益源として導入したAmazonアソシエイトの1ヶ月間の成果についても報告しており、その収益額や有効性について言及している。この記事は、個人クリエイターが多様な収益化戦略を試み、その成果を客観的に評価する重要性を示唆している。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fnote.com%2Fyossh_1205%2Fn%2Fnd2bf00154364"
+        data-title="【2月振り返り】note有料記事の売上が減った理由｜Amazonアソシエイト1ヶ月の結果"
+        data-summary="2026年2月のnote活動に関する振り返り記事で、note有料記事の売上が減少した理由と、Amazonアソシエイトを導入して1ヶ月間の結果が分析されている。この記事は、個人クリエイターが収益化プラットフォームを運用する上での現実的な課題と、異なるマネタイズ手法の効果を検証する過程を共有する。収益減少の原因究明と新たなアフィリエイト収益の検証は、他の個人クリエイターにとっても貴重な学びとなる。"
+        data-source="note クリエイター収益"
+        data-url="https://note.com/yossh_1205/n/nd2bf00154364"
+        data-importance="🟢"
+        data-category="ビジネス">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%902%E6%9C%88%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A%E3%80%91note%E6%9C%89%E6%96%99%E8%A8%98%E4%BA%8B%E3%81%AE%E5%A3%B2%E4%B8%8A%E3%81%8C%E6%B8%9B%E3%81%A3%E3%81%9F%E7%90%86%E7%94%B1%EF%BD%9CAmazon%E3%82%A2%E3%82%BD%E3%82%B7%E3%82%A8%E3%82%A4%E3%83%881%E3%83%B6%E6%9C%88%E3%81%AE%E7%B5%90%E6%9E%9C%20https%3A%2F%2Fnote.com%2Fyossh_1205%2Fn%2Fnd2bf00154364" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="【2月振り返り】note有料記事の売上が減った理由｜Amazonアソシエイト1ヶ月の結果">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+</section><section class="category-section" data-cat="経済">
+  <p class="category-label">経済</p>
+  <div class="item" style="animation-delay:0.00s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">東洋経済オンライン</span>
+    </div>
+    <h2>米アクティビストのエリオットがダイキン工業の株式を取得、過去最大級の資金を投入し経営改善を要求</h2>
+    <p class="summary">世界的アクティビストファンドのエリオットがダイキン工業の株式を取得し、過去最大級の資金を投入して経営改善を要求していることが明らかになった。この背景には、ダイキン株の長期的な停滞、業績の伸び悩み、特にアメリカ市場での苦戦があると指摘されている。エリオットの介入は、ダイキン工業の経営戦略に大きな影響を与える可能性があり、今後の経営改革の動向が注目される。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">エリオットは、ダイキン工業の主要株主となり、同社の株価低迷と業績不振、特に北米市場での競争力不足を問題視している。通常、アクティビストは企業価値向上のために事業ポートフォリオの見直し、コスト削減、資本政策の変更などを提案する。今回の介入も、ダイキン工業に対して具体的な経営改善策を要求するものとみられ、同社の企業統治や事業戦略に大きな変革を迫る可能性がある。この動きは、日本の大手企業におけるアクティビスト投資の新たな事例として注目される。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F941607%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="米アクティビストのエリオットがダイキン工業の株式を取得、過去最大級の資金を投入し経営改善を要求"
+        data-summary="世界的アクティビストファンドのエリオットがダイキン工業の株式を取得し、過去最大級の資金を投入して経営改善を要求していることが明らかになった。この背景には、ダイキン株の長期的な停滞、業績の伸び悩み、特にアメリカ市場での苦戦があると指摘されている。エリオットの介入は、ダイキン工業の経営戦略に大きな影響を与える可能性があり、今後の経営改革の動向が注目される。"
+        data-source="東洋経済オンライン"
+        data-url="https://toyokeizai.net/articles/-/941607?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-importance="🟡"
+        data-category="経済">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E7%B1%B3%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%93%E3%82%B9%E3%83%88%E3%81%AE%E3%82%A8%E3%83%AA%E3%82%AA%E3%83%83%E3%83%88%E3%81%8C%E3%83%80%E3%82%A4%E3%82%AD%E3%83%B3%E5%B7%A5%E6%A5%AD%E3%81%AE%E6%A0%AA%E5%BC%8F%E3%82%92%E5%8F%96%E5%BE%97%E3%80%81%E9%81%8E%E5%8E%BB%E6%9C%80%E5%A4%A7%E7%B4%9A%E3%81%AE%E8%B3%87%E9%87%91%E3%82%92%E6%8A%95%E5%85%A5%E3%81%97%E7%B5%8C%E5%96%B6%E6%94%B9%E5%96%84%E3%82%92%E8%A6%81%E6%B1%82%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F941607%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="米アクティビストのエリオットがダイキン工業の株式を取得、過去最大級の資金を投入し経営改善を要求">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.05s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">東洋経済オンライン</span>
+    </div>
+    <h2>【独自】米アクティビストのエリオットがダイキン工業の大株主に浮上、「3つの要求」の全貌とは</h2>
+    <p class="summary">世界的アクティビストファンドのエリオットが10億ドル以上を投じてダイキン工業の株式を取得し、大株主に浮上した。この投資の背景には、ダイキン工業の長期的な株価低迷と成長鈍化に対する不満があり、エリオットは同社に対して「3つの指摘」を含む具体的な経営改善要求を行っている。この動きは、日本の大手製造業に対するアクティビストの攻勢を象徴するものであり、ダイキン工業の今後の経営方針に大きな影響を及ぼすことが予想される。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">エリオットは、投資家としての立場からダイキン工業の企業価値向上を目指しており、そのために具体的な3つの要求を突きつけている。これには、資本効率の改善、経営戦略の見直し、株主還元策の強化などが含まれる可能性がある。特に、株価が長期的に低迷し、成長が鈍化している現状に対して、エリオットは経営陣に強い変革を求めている。このアクティビストの介入は、他の日本企業にとっても企業統治や株主との対話のあり方について再考を促すきっかけとなるだろう。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F941599%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="【独自】米アクティビストのエリオットがダイキン工業の大株主に浮上、「3つの要求」の全貌とは"
+        data-summary="世界的アクティビストファンドのエリオットが10億ドル以上を投じてダイキン工業の株式を取得し、大株主に浮上した。この投資の背景には、ダイキン工業の長期的な株価低迷と成長鈍化に対する不満があり、エリオットは同社に対して「3つの指摘」を含む具体的な経営改善要求を行っている。この動きは、日本の大手製造業に対するアクティビストの攻勢を象徴するものであり、ダイキン工業の今後の経営方針に大きな影響を及ぼすことが予想される。"
+        data-source="東洋経済オンライン"
+        data-url="https://toyokeizai.net/articles/-/941599?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-importance="🟡"
+        data-category="経済">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%90%E7%8B%AC%E8%87%AA%E3%80%91%E7%B1%B3%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%93%E3%82%B9%E3%83%88%E3%81%AE%E3%82%A8%E3%83%AA%E3%82%AA%E3%83%83%E3%83%88%E3%81%8C%E3%83%80%E3%82%A4%E3%82%AD%E3%83%B3%E5%B7%A5%E6%A5%AD%E3%81%AE%E5%A4%A7%E6%A0%AA%E4%B8%BB%E3%81%AB%E6%B5%AE%E4%B8%8A%E3%80%81%E3%80%8C3%E3%81%A4%E3%81%AE%E8%A6%81%E6%B1%82%E3%80%8D%E3%81%AE%E5%85%A8%E8%B2%8C%E3%81%A8%E3%81%AF%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F941599%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="【独自】米アクティビストのエリオットがダイキン工業の大株主に浮上、「3つの要求」の全貌とは">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.10s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">東洋経済オンライン</span>
+    </div>
+    <h2>【4兆円市場の勢力図】主人公は『鬼滅の刃』のソニーグループ／東宝やバンダイナムコHDなど勢力図は「5強」／8兆円への市場拡大も／業界が求めるビジネス人材【ビジネス戦国地図】</h2>
+    <p class="summary">新シリーズ「ビジネス戦国地図」の初回として、市場規模4兆円に迫るアニメ業界の勢力図が詳細に分析されている。アニメ業界は『鬼滅の刃』を手がけたソニーグループを筆頭に、東宝やバンダイナムコHDなどが「5強」を形成していることが明らかにされた。将来的には市場が8兆円規模に拡大する可能性も指摘されており、業界が求めるビジネス人材の像も提示されている。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">この記事は、成長を続けるアニメ業界のビジネス構造を包括的に解説している。ソニーグループが『鬼滅の刃』のようなメガヒット作品を通じて業界の「主人公」となっている一方、東宝、バンダイナムコホールディングスなどの大手企業が主要なプレイヤーとして市場を牽引している。アニメ制作、配給、グッズ販売、ゲーム化など多角的な事業展開が市場規模拡大の要因となっている。また、記事では、このようなダイナミックな業界で成功するために必要なビジネススキルや人材要件についても触れており、業界への参入を考えるビジネスパーソンにとっても参考となる情報を提供する。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F941657%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="【4兆円市場の勢力図】主人公は『鬼滅の刃』のソニーグループ／東宝やバンダイナムコHDなど勢力図は「5強」／8兆円への市場拡大も／業界が求めるビジネス人材【ビジネス戦国地図】"
+        data-summary="新シリーズ「ビジネス戦国地図」の初回として、市場規模4兆円に迫るアニメ業界の勢力図が詳細に分析されている。アニメ業界は『鬼滅の刃』を手がけたソニーグループを筆頭に、東宝やバンダイナムコHDなどが「5強」を形成していることが明らかにされた。将来的には市場が8兆円規模に拡大する可能性も指摘されており、業界が求めるビジネス人材の像も提示されている。"
+        data-source="東洋経済オンライン"
+        data-url="https://toyokeizai.net/articles/-/941657?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-importance="🟢"
+        data-category="経済">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%904%E5%85%86%E5%86%86%E5%B8%82%E5%A0%B4%E3%81%AE%E5%8B%A2%E5%8A%9B%E5%9B%B3%E3%80%91%E4%B8%BB%E4%BA%BA%E5%85%AC%E3%81%AF%E3%80%8E%E9%AC%BC%E6%BB%85%E3%81%AE%E5%88%83%E3%80%8F%E3%81%AE%E3%82%BD%E3%83%8B%E3%83%BC%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%EF%BC%8F%E6%9D%B1%E5%AE%9D%E3%82%84%E3%83%90%E3%83%B3%E3%83%80%E3%82%A4%E3%83%8A%E3%83%A0%E3%82%B3HD%E3%81%AA%E3%81%A9%E5%8B%A2%E5%8A%9B%E5%9B%B3%E3%81%AF%E3%80%8C5%E5%BC%B7%E3%80%8D%EF%BC%8F8%E5%85%86%E5%86%86%E3%81%B8%E3%81%AE%E5%B8%82%E5%A0%B4%E6%8B%A1%E5%A4%A7%E3%82%82%EF%BC%8F%E6%A5%AD%E7%95%8C%E3%81%8C%E6%B1%82%E3%82%81%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E4%BA%BA%E6%9D%90%E3%80%90%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E6%88%A6%E5%9B%BD%E5%9C%B0%E5%9B%B3%E3%80%91%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F941657%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="【4兆円市場の勢力図】主人公は『鬼滅の刃』のソニーグループ／東宝やバンダイナムコHDなど勢力図は「5強」／8兆円への市場拡大も／業界が求めるビジネス人材【ビジネス戦国地図】">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+</section>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+// ダークモード
+const btn = document.getElementById('darkBtn');
+const root = document.documentElement;
+const saved = localStorage.getItem('theme') || 'light';
+root.dataset.theme = saved;
+btn.textContent = saved === 'dark' ? '☀️ ライト' : '🌙 ダーク';
+btn.addEventListener('click', () => {
+  const dark = root.dataset.theme !== 'dark';
+  root.dataset.theme = dark ? 'dark' : 'light';
+  btn.textContent = dark ? '☀️ ライト' : '🌙 ダーク';
+  localStorage.setItem('theme', root.dataset.theme);
+});
+
+// カテゴリフィルター
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    document.querySelectorAll('.category-section, .urgent-section').forEach(sec => {
+      if (cat === 'all') {
+        sec.style.display = '';
+      } else if (cat === 'urgent') {
+        sec.style.display = sec.classList.contains('urgent-section') ? '' : 'none';
+      } else {
+        sec.style.display = sec.dataset.cat === cat ? '' : 'none';
+      }
+    });
+  });
+});
+
+// ⭐ 保存
+const STAR_KEY = 'starred_articles';
+function getStarred() { return JSON.parse(localStorage.getItem(STAR_KEY) || '{}'); }
+function saveStarred(obj) { localStorage.setItem(STAR_KEY, JSON.stringify(obj)); }
+document.querySelectorAll('.star-btn').forEach(btn => {
+  const id = btn.dataset.id;
+  if (getStarred()[id]) btn.classList.add('starred');
+  btn.addEventListener('click', () => {
+    let obj = getStarred();
+    if (obj[id]) {
+      delete obj[id];
+      btn.classList.remove('starred');
+      showToast('保存を解除しました');
+    } else {
+      obj[id] = {
+        id,
+        title: btn.dataset.title,
+        summary: btn.dataset.summary,
+        source_name: btn.dataset.source,
+        url: btn.dataset.url,
+        importance: btn.dataset.importance,
+        category: btn.dataset.category,
+      };
+      btn.classList.add('starred');
+      showToast('⭐ 保存しました');
     }
+    saveStarred(obj);
+  });
+});
 
-    // ダークモード
-    const btn = document.getElementById('darkBtn');
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme') || 'light';
-    root.dataset.theme = saved;
-    btn.textContent = saved === 'dark' ? '☀️ ライト' : '🌙 ダーク';
-    btn.addEventListener('click', () => {
-      const dark = root.dataset.theme !== 'dark';
-      root.dataset.theme = dark ? 'dark' : 'light';
-      btn.textContent = dark ? '☀️ ライト' : '🌙 ダーク';
-      localStorage.setItem('theme', root.dataset.theme);
+// 🤖 Claudeに聞く
+document.querySelectorAll('.claude-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const title = btn.dataset.title;
+    navigator.clipboard.writeText(title).then(() => {
+      showToast('タイトルをコピーしました');
+      setTimeout(() => window.open('https://claude.ai/new', '_blank'), 300);
+    }).catch(() => {
+      window.open('https://claude.ai/new', '_blank');
     });
-
-    // カテゴリフィルター
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const cat = btn.dataset.cat;
-        document.querySelectorAll('.category-section, .urgent-section').forEach(sec => {
-          if (cat === 'all') {
-            sec.style.display = '';
-          } else if (cat === 'urgent') {
-            sec.style.display = sec.classList.contains('urgent-section') ? '' : 'none';
-          } else {
-            sec.style.display = sec.dataset.cat === cat ? '' : 'none';
-          }
-        });
-      });
-    });
-
-    // ⭐ 星ボタン（記事データごとlocalStorageに保存）
-    const STAR_KEY = 'starred_articles';
-    function getStarred() { return JSON.parse(localStorage.getItem(STAR_KEY) || '{}'); }
-    function saveStarred(obj) { localStorage.setItem(STAR_KEY, JSON.stringify(obj)); }
-
-    document.querySelectorAll('.star-btn').forEach(btn => {
-      const id = btn.dataset.id;
-      if (getStarred()[id]) btn.classList.add('starred');
-      btn.addEventListener('click', () => {
-        let obj = getStarred();
-        if (obj[id]) {
-          delete obj[id];
-          btn.classList.remove('starred');
-          showToast('保存を解除しました');
-        } else {
-          obj[id] = {
-            id,
-            title:       btn.dataset.title,
-            summary:     btn.dataset.summary,
-            source_name: btn.dataset.source,
-            url:         btn.dataset.url,
-            importance:  btn.dataset.importance,
-            category:    btn.dataset.category,
-          };
-          btn.classList.add('starred');
-          showToast('⭐ 保存しました');
-        }
-        saveStarred(obj);
-      });
-    });
-
-    // 🤖 Claudeに聞くボタン（クリップボードコピー）
-    document.querySelectorAll('.claude-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const title = btn.dataset.title;
-        navigator.clipboard.writeText(title).then(() => {
-          showToast('タイトルをコピーしました');
-          setTimeout(() => window.open('https://claude.ai/new', '_blank'), 300);
-        }).catch(() => {
-          window.open('https://claude.ai/new', '_blank');
-        });
-      });
-    });
-  </script>
+  });
+});
+</script>
 </body>
 </html>
