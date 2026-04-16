@@ -26,8 +26,9 @@ jobs:
 
       - name: ダイジェストを生成
         env:
+          env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_SENDER: "nobu.dougahennsyuu@gmail.com"
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python main.py
 
