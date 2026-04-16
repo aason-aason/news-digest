@@ -58,7 +58,7 @@ rss:
     # - name: "Reddit edmproduction"        # categories: ["DTM"]
 
 gemini:
-  model: "gemini-2.5-flash"
+  model: "gemini-2.0-flash"
   max_tokens: 2048
 
 output:
