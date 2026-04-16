@@ -6,6 +6,7 @@ import os
 import json
 import re
 import logging
+import time
 from google import genai
 
 logger = logging.getLogger(__name__)
@@ -116,7 +117,20 @@ nullになった記事はJSONに含めないでください。
         )
     except Exception as e:
         print(f"[ERROR] Gemini API呼び出し失敗: {e}", flush=True)
-        raise
+        for attempt in range(3):
+            wait = 30 * (attempt + 1)
+            print(f"[RETRY] {wait}秒後に再試行します（{attempt + 1}/3回目）", flush=True)
+            time.sleep(wait)
+            try:
+                response = client.models.generate_content(
+                    model=config["gemini"]["model"],
+                    contents=prompt,
+                )
+                break
+            except Exception as retry_e:
+                print(f"[RETRY] 失敗: {retry_e}", flush=True)
+                if attempt == 2:
+                    raise
 
     text = response.text.strip()
     print(f"[DEBUG] Gemini応答（先頭200文字）: {text[:200]}", flush=True)
