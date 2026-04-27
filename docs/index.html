@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News Digest - 2026年04月26日</title>
+<title>News Digest - 2026年04月27日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
@@ -306,7 +306,7 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="header-top">
     <div class="header-logo">News Digest</div>
     <div class="header-meta">
-      <span class="header-date">2026.04.26</span>
+      <span class="header-date">2026.04.27</span>
       <div class="header-links">
         <a class="header-link" href="saved.html">⭐ 保存済み</a>
         <button class="header-link" id="darkBtn">🌙 ダーク</button>
@@ -315,6 +315,7 @@ details[open] summary::before { content: "▲ 閉じる"; }
   </div>
   <div class="filter-bar">
     <button class="filter-btn active" data-cat="all">すべて</button>
+<button class="filter-btn" data-cat="urgent">🔴 緊急</button>
 <button class="filter-btn" data-cat="テック・AI">テック・AI</button>
 <button class="filter-btn" data-cat="音楽">音楽</button>
 <button class="filter-btn" data-cat="DTM">DTM</button>
@@ -325,7 +326,38 @@ details[open] summary::before { content: "▲ 閉じる"; }
 </header>
 
 <main>
-  
+  <section class="urgent-section">
+  <p class="urgent-label">🔴 緊急アラート</p>
+  <div class="item" style="animation-delay:0.00s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-urgent">🔴 緊急</span>
+      <span class="item-source">TechCrunch</span>
+    </div>
+    <h2>OpenAI、500億ドルのAmazon取引に関するMicrosoftの法的リスクを解消</h2>
+    <p class="summary">OpenAIは、主要株主であるMicrosoftとの間で、AWS上での製品販売を可能にする主要な譲歩を獲得しました。これにより、OpenAIはMicrosoftの法的リスクを解消し、Microsoftは収益分配契約を通じて追加の資金を得ることになります。この合意は、AI開発とクラウドインフラストラクチャにおける両社の関係に影響を与える可能性があります。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">OpenAIは、その最大の株主であるMicrosoftとの間で、Amazon Web Services (AWS) 上での製品販売を可能にする重要な合意に至りました。この合意により、OpenAIはMicrosoftの法的リスクを軽減し、Microsoftは収益分配契約を通じて追加の資金を受け取ることになります。この取引は、AI業界における競争と協力の複雑なダイナミクスを示しており、OpenAIが複数のクラウドプロバイダーと連携できる能力を確保したことは、その将来の成長戦略にとって重要です。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F27%2Fopenai-ends-microsoft-legal-peril-over-its-50b-amazon-deal%2F"
+        data-title="OpenAI、500億ドルのAmazon取引に関するMicrosoftの法的リスクを解消"
+        data-summary="OpenAIは、主要株主であるMicrosoftとの間で、AWS上での製品販売を可能にする主要な譲歩を獲得しました。これにより、OpenAIはMicrosoftの法的リスクを解消し、Microsoftは収益分配契約を通じて追加の資金を得ることになります。この合意は、AI開発とクラウドインフラストラクチャにおける両社の関係に影響を与える可能性があります。"
+        data-source="TechCrunch"
+        data-url="https://techcrunch.com/2026/04/27/openai-ends-microsoft-legal-peril-over-its-50b-amazon-deal/"
+        data-importance="🔴"
+        data-category="テック・AI">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=OpenAI%E3%80%81500%E5%84%84%E3%83%89%E3%83%AB%E3%81%AEAmazon%E5%8F%96%E5%BC%95%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8BMicrosoft%E3%81%AE%E6%B3%95%E7%9A%84%E3%83%AA%E3%82%B9%E3%82%AF%E3%82%92%E8%A7%A3%E6%B6%88%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F27%2Fopenai-ends-microsoft-legal-peril-over-its-50b-amazon-deal%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="OpenAI、500億ドルのAmazon取引に関するMicrosoftの法的リスクを解消">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+</section>
   <section class="category-section" data-cat="テック・AI">
   <p class="category-label">テック・AI</p>
   <div class="item" style="animation-delay:0.00s">
@@ -334,25 +366,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">TechCrunch</span>
     </div>
-    <h2>Amazonの新しいポッドキャスト戦略：すべてを収益化する</h2>
-    <p class="summary">Amazonは、ポッドキャスト事業において、過去6ヶ月間で戦略を大きく転換させたようです。その新しい戦略は、ポッドキャストのあらゆる側面からの収益化を目指すものです。これにより、ポッドキャスト業界全体に影響を与える可能性があります。</p>
+    <h2>2025年に消費者がソーシャルメディア詐欺で21億ドルを失ったとFTCが報告</h2>
+    <p class="summary">米連邦取引委員会（FTC）の報告によると、2025年に消費者がソーシャルメディア詐欺で失った金額は21億ドルに達しました。これは、詐欺師が消費者に接触するあらゆる手段の中で最も高い損失額であり、ソーシャルメディア経由の詐欺被害が8倍に増加したことが示されています。この傾向は、オンラインでの詐欺対策の重要性を浮き彫りにしています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Amazonのポッドキャスト事業は、過去6ヶ月間で変革を遂げたと報じられています。新しい戦略は、コンテンツ制作、配信、広告など、ポッドキャストのエコシステム全体にわたる収益化の機会を模索しています。この動きは、クリエイターやリスナー、そして競合他社にも影響を与える可能性があります。</p>
+<p class="detail-text">連邦取引委員会（FTC）の最新報告書によると、2025年に消費者がソーシャルメディアを介した詐欺によって失った金額は21億ドルに達しました。これは、報告された詐欺被害の中で最も高額な損失であり、前年と比較して8倍もの増加を示しています。報告書は、ソーシャルメディアが詐欺師にとって主要な連絡手段となり、消費者がより高額な損失を被る傾向にあることを強調しています。この傾向は、オンラインプラットフォームにおけるセキュリティ対策の強化と、ユーザーの詐欺に対する警戒心の向上が急務であることを示唆しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F26%2Famazons-new-podcast-strategy-monetize-everything%2F"
-        data-title="Amazonの新しいポッドキャスト戦略：すべてを収益化する"
-        data-summary="Amazonは、ポッドキャスト事業において、過去6ヶ月間で戦略を大きく転換させたようです。その新しい戦略は、ポッドキャストのあらゆる側面からの収益化を目指すものです。これにより、ポッドキャスト業界全体に影響を与える可能性があります。"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F27%2Fconsumers-lost-2-1-billion-to-social-media-scams-in-2025-ftc-reports%2F"
+        data-title="2025年に消費者がソーシャルメディア詐欺で21億ドルを失ったとFTCが報告"
+        data-summary="米連邦取引委員会（FTC）の報告によると、2025年に消費者がソーシャルメディア詐欺で失った金額は21億ドルに達しました。これは、詐欺師が消費者に接触するあらゆる手段の中で最も高い損失額であり、ソーシャルメディア経由の詐欺被害が8倍に増加したことが示されています。この傾向は、オンラインでの詐欺対策の重要性を浮き彫りにしています。"
         data-source="TechCrunch"
-        data-url="https://techcrunch.com/2026/04/26/amazons-new-podcast-strategy-monetize-everything/"
+        data-url="https://techcrunch.com/2026/04/27/consumers-lost-2-1-billion-to-social-media-scams-in-2025-ftc-reports/"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Amazon%E3%81%AE%E6%96%B0%E3%81%97%E3%81%84%E3%83%9D%E3%83%83%E3%83%89%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88%E6%88%A6%E7%95%A5%EF%BC%9A%E3%81%99%E3%81%B9%E3%81%A6%E3%82%92%E5%8F%8E%E7%9B%8A%E5%8C%96%E3%81%99%E3%82%8B%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F26%2Famazons-new-podcast-strategy-monetize-everything%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=2025%E5%B9%B4%E3%81%AB%E6%B6%88%E8%B2%BB%E8%80%85%E3%81%8C%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E8%A9%90%E6%AC%BA%E3%81%A721%E5%84%84%E3%83%89%E3%83%AB%E3%82%92%E5%A4%B1%E3%81%A3%E3%81%9F%E3%81%A8FTC%E3%81%8C%E5%A0%B1%E5%91%8A%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F27%2Fconsumers-lost-2-1-billion-to-social-media-scams-in-2025-ftc-reports%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Amazonの新しいポッドキャスト戦略：すべてを収益化する">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="2025年に消費者がソーシャルメディア詐欺で21億ドルを失ったとFTCが報告">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -363,25 +395,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">TechCrunch Startups</span>
     </div>
-    <h2>このベイエリアの家を買うには、Anthropicの株式が必要</h2>
-    <p class="summary">サンフランシスコの北、ミルバレーにある13エーカーの物件について、ユニークな取引条件が提示されています。この物件を購入するには、AI企業Anthropicの株式を保有していることが条件となっています。これは、テクノロジー企業の従業員とその資産価値を反映する興味深い事例です。</p>
+    <h2>投資家がSkyeのiPhone向けAIホームスクリーンアプリのローンチ前に出資</h2>
+    <p class="summary">Skyeの新しいAIアプリは、ローンチ前に投資家から注目を集めました。これは、よりAIを意識したiPhoneへの関心の高まりを示唆しています。このアプリは、ユーザーエクスペリエンスを向上させる可能性があり、今後のiPhoneの進化におけるAIの役割を示唆しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この珍しい不動産取引は、AIスタートアップAnthropicの従業員に富がもたらされていることを示唆しています。提示されている13エーカーの物件は、その広さと立地から高額と予想されますが、購入条件としてAnthropicの株式保有が求められている点が特異です。これは、テクノロジー企業の株式が、不動産購入における重要な資産となり得ることを示しています。</p>
+<p class="detail-text">Skyeの新しいAIアプリが、ローンチ前から投資家の関心を集め、資金調達に成功しました。このアプリは、iPhoneのホームスクリーン体験をAIを活用してパーソナライズすることを目指しています。投資家がローンチ前の段階でこのアプリに資金を投じたことは、AI搭載スマートフォンの需要と、ユーザーエクスペリエンスを向上させるAIソリューションへの期待の高さを示しています。Skyeは、この資金を活用してアプリの開発とマーケティングを加速させる予定です。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F26%2Fto-buy-this-bay-area-home-youll-need-anthropic-equity%2F"
-        data-title="このベイエリアの家を買うには、Anthropicの株式が必要"
-        data-summary="サンフランシスコの北、ミルバレーにある13エーカーの物件について、ユニークな取引条件が提示されています。この物件を購入するには、AI企業Anthropicの株式を保有していることが条件となっています。これは、テクノロジー企業の従業員とその資産価値を反映する興味深い事例です。"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F27%2Finvestors-back-skye-signull-labs-ai-home-screen-app-for-iphone-ahead-of-launch%2F"
+        data-title="投資家がSkyeのiPhone向けAIホームスクリーンアプリのローンチ前に出資"
+        data-summary="Skyeの新しいAIアプリは、ローンチ前に投資家から注目を集めました。これは、よりAIを意識したiPhoneへの関心の高まりを示唆しています。このアプリは、ユーザーエクスペリエンスを向上させる可能性があり、今後のiPhoneの進化におけるAIの役割を示唆しています。"
         data-source="TechCrunch Startups"
-        data-url="https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/"
+        data-url="https://techcrunch.com/2026/04/27/investors-back-skye-signull-labs-ai-home-screen-app-for-iphone-ahead-of-launch/"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%81%93%E3%81%AE%E3%83%99%E3%82%A4%E3%82%A8%E3%83%AA%E3%82%A2%E3%81%AE%E5%AE%B6%E3%82%92%E8%B2%B7%E3%81%86%E3%81%AB%E3%81%AF%E3%80%81Anthropic%E3%81%AE%E6%A0%AA%E5%BC%8F%E3%81%8C%E5%BF%85%E8%A6%81%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F26%2Fto-buy-this-bay-area-home-youll-need-anthropic-equity%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E6%8A%95%E8%B3%87%E5%AE%B6%E3%81%8CSkye%E3%81%AEiPhone%E5%90%91%E3%81%91AI%E3%83%9B%E3%83%BC%E3%83%A0%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E3%83%AD%E3%83%BC%E3%83%B3%E3%83%81%E5%89%8D%E3%81%AB%E5%87%BA%E8%B3%87%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F27%2Finvestors-back-skye-signull-labs-ai-home-screen-app-for-iphone-ahead-of-launch%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="このベイエリアの家を買うには、Anthropicの株式が必要">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="投資家がSkyeのiPhone向けAIホームスクリーンアプリのローンチ前に出資">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -392,25 +424,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">TechCrunch Startups</span>
     </div>
-    <h2>インドのSnabbit、情報筋によると4億ドルの評価額で新規資金調達を模索</h2>
-    <p class="summary">インドのSnabbitは、投資家の関心が高まる中、3月に100万件以上の求人を達成し、急速に規模を拡大しています。同社は現在、4億ドルの評価額で新たな資金調達を目指していると報じられています。これは、インドのスタートアップエコシステムの活況を示唆しています。</p>
+    <h2>このベイエリアの家を購入するには、Anthropicの株式が必要</h2>
+    <p class="summary">サンフランシスコの北、ミリバレーにある13エーカーの不動産が、ユニークな取引条件で売りに出されています。購入者は、Anthropicの株式を所有している必要があります。これは、AI企業Anthropicの価値の高まりと、その従業員が享受する恩恵の一端を示唆しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Snabbitは、インドで急成長している求人プラットフォームです。最近の投資家の関心の高まりを受けて、同社は4億ドルという高い評価額での資金調達を検討していると伝えられています。3月にはすでに100万件以上の求人を掲載しており、その成長スピードは目覚ましいものがあります。この資金調達が成功すれば、Snabbitのさらなる事業拡大と、インドのテクノロジー市場における地位強化につながる可能性があります。</p>
+<p class="detail-text">サンフランシスコ・ベイエリアのミリバレーに位置する13エーカーの広大な不動産が、珍しい条件で市場に出ています。この物件の購入者は、AI企業Anthropicの株式を保有していることが条件となっています。これは、AI業界の成長と、Anthropicのような有望な企業の従業員が持つ経済的な影響力を示す一例です。このユニークな取引は、不動産市場における新たなトレンドの兆候となる可能性があり、テクノロジー企業の従業員が資産形成においてどのような優位性を持っているかを示唆しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F25%2Findias-snabbit-seeks-fresh-funding-at-a-400m-valuation-sources-say%2F"
-        data-title="インドのSnabbit、情報筋によると4億ドルの評価額で新規資金調達を模索"
-        data-summary="インドのSnabbitは、投資家の関心が高まる中、3月に100万件以上の求人を達成し、急速に規模を拡大しています。同社は現在、4億ドルの評価額で新たな資金調達を目指していると報じられています。これは、インドのスタートアップエコシステムの活況を示唆しています。"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F26%2Fto-buy-this-bay-area-home-youll-need-anthropic-equity%2F"
+        data-title="このベイエリアの家を購入するには、Anthropicの株式が必要"
+        data-summary="サンフランシスコの北、ミリバレーにある13エーカーの不動産が、ユニークな取引条件で売りに出されています。購入者は、Anthropicの株式を所有している必要があります。これは、AI企業Anthropicの価値の高まりと、その従業員が享受する恩恵の一端を示唆しています。"
         data-source="TechCrunch Startups"
-        data-url="https://techcrunch.com/2026/04/25/indias-snabbit-seeks-fresh-funding-at-a-400m-valuation-sources-say/"
+        data-url="https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A4%E3%83%B3%E3%83%89%E3%81%AESnabbit%E3%80%81%E6%83%85%E5%A0%B1%E7%AD%8B%E3%81%AB%E3%82%88%E3%82%8B%E3%81%A84%E5%84%84%E3%83%89%E3%83%AB%E3%81%AE%E8%A9%95%E4%BE%A1%E9%A1%8D%E3%81%A7%E6%96%B0%E8%A6%8F%E8%B3%87%E9%87%91%E8%AA%BF%E9%81%94%E3%82%92%E6%A8%A1%E7%B4%A2%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F25%2Findias-snabbit-seeks-fresh-funding-at-a-400m-valuation-sources-say%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%81%93%E3%81%AE%E3%83%99%E3%82%A4%E3%82%A8%E3%83%AA%E3%82%A2%E3%81%AE%E5%AE%B6%E3%82%92%E8%B3%BC%E5%85%A5%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%E3%80%81Anthropic%E3%81%AE%E6%A0%AA%E5%BC%8F%E3%81%8C%E5%BF%85%E8%A6%81%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F26%2Fto-buy-this-bay-area-home-youll-need-anthropic-equity%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="インドのSnabbit、情報筋によると4億ドルの評価額で新規資金調達を模索">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="このベイエリアの家を購入するには、Anthropicの株式が必要">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -421,25 +453,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">TechCrunch</span>
     </div>
-    <h2>スタンフォード大の学部生が世界を支配しようとしている…おそらくこの本を読んでさらに努力を続けるだろう</h2>
-    <p class="summary">この記事は、スタンフォード大学の学生が世界を支配することを目指すという壮大な野心を抱いていることを示唆しています。そして、彼らがどのような本を読んで、さらなる努力を追求するかについて考察しています。この本が彼らの進路や行動にどのような影響を与えるのか、その可能性を探る内容です。</p>
+    <h2>映画ファンのためのソーシャルプラットフォームLetterboxd、新たなオーナーを探していると報じられる</h2>
+    <p class="summary">映画ファンのためのソーシャルプラットフォームであるLetterboxdが、新たな買い手を探していると報じられています。CNBCやMS NOWの親会社であるVersantや、ハリウッドのメディア企業The Anklerなどが候補として挙がっています。これは、プラットフォームの将来や、映画コミュニティにおけるその役割に影響を与える可能性があります。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この記事は、テクノロジー界で注目されるスタンフォード大学の学生たちの野心に焦点を当てています。彼らが世界を支配するという壮大な目標を掲げ、それを達成するためにどのような知識やインスピレーションを求めているのかが示唆されています。具体的には、「この本」が彼らに与える影響について言及されており、その内容が彼らの学習意欲や行動をさらに加速させる可能性が示唆されています。</p>
+<p class="detail-text">Semaforの報道によると、映画レビューとリスト作成プラットフォームであるLetterboxdは、新たな買い手との交渉を進めているとされています。候補には、CNBCやMS NOWを傘下に持つVersantや、ハリウッドを拠点とするメディア企業The Anklerが含まれるとのことです。Letterboxdは、世界中の映画愛好家にとって重要なコミュニティハブとなっており、その買収の動向は注目されます。この取引が成立すれば、プラットフォームの運営方針やサービス内容に変化が生じる可能性があります。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F26%2Fthe-stanford-freshmen-who-want-to-rule-the-world-will-probably-read-this-book-and-try-even-harder%2F"
-        data-title="スタンフォード大の学部生が世界を支配しようとしている…おそらくこの本を読んでさらに努力を続けるだろう"
-        data-summary="この記事は、スタンフォード大学の学生が世界を支配することを目指すという壮大な野心を抱いていることを示唆しています。そして、彼らがどのような本を読んで、さらなる努力を追求するかについて考察しています。この本が彼らの進路や行動にどのような影響を与えるのか、その可能性を探る内容です。"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F27%2Fletterboxd-sale-film-social-media-semafor-versant-ankler%2F"
+        data-title="映画ファンのためのソーシャルプラットフォームLetterboxd、新たなオーナーを探していると報じられる"
+        data-summary="映画ファンのためのソーシャルプラットフォームであるLetterboxdが、新たな買い手を探していると報じられています。CNBCやMS NOWの親会社であるVersantや、ハリウッドのメディア企業The Anklerなどが候補として挙がっています。これは、プラットフォームの将来や、映画コミュニティにおけるその役割に影響を与える可能性があります。"
         data-source="TechCrunch"
-        data-url="https://techcrunch.com/2026/04/26/the-stanford-freshmen-who-want-to-rule-the-world-will-probably-read-this-book-and-try-even-harder/"
+        data-url="https://techcrunch.com/2026/04/27/letterboxd-sale-film-social-media-semafor-versant-ankler/"
         data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%89%E5%A4%A7%E3%81%AE%E5%AD%A6%E9%83%A8%E7%94%9F%E3%81%8C%E4%B8%96%E7%95%8C%E3%82%92%E6%94%AF%E9%85%8D%E3%81%97%E3%82%88%E3%81%86%E3%81%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E2%80%A6%E3%81%8A%E3%81%9D%E3%82%89%E3%81%8F%E3%81%93%E3%81%AE%E6%9C%AC%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%95%E3%82%89%E3%81%AB%E5%8A%AA%E5%8A%9B%E3%82%92%E7%B6%9A%E3%81%91%E3%82%8B%E3%81%A0%E3%82%8D%E3%81%86%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F26%2Fthe-stanford-freshmen-who-want-to-rule-the-world-will-probably-read-this-book-and-try-even-harder%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E6%98%A0%E7%94%BB%E3%83%95%E3%82%A1%E3%83%B3%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0Letterboxd%E3%80%81%E6%96%B0%E3%81%9F%E3%81%AA%E3%82%AA%E3%83%BC%E3%83%8A%E3%83%BC%E3%82%92%E6%8E%A2%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%A8%E5%A0%B1%E3%81%98%E3%82%89%E3%82%8C%E3%82%8B%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F27%2Fletterboxd-sale-film-social-media-semafor-versant-ankler%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="スタンフォード大の学部生が世界を支配しようとしている…おそらくこの本を読んでさらに努力を続けるだろう">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="映画ファンのためのソーシャルプラットフォームLetterboxd、新たなオーナーを探していると報じられる">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -448,48 +480,19 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">TechCrunch</span>
-    </div>
-    <h2>ティム・クックが築き上げたもの</h2>
-    <p class="summary">AppleのCEOであるティム・クックが2011年に就任して以来、同社がどのように変化してきたのか、そして次期CEOであるジョン・ターナスが直面するであろう課題について、「Equity」の最新エピソードで議論されています。これはAppleの過去と未来を洞察する内容です。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">このエピソードでは、ティム・クック氏がCEOに就任してからの10年以上にわたるAppleの進化に焦点を当てています。製品戦略、企業文化、市場での立ち位置など、多岐にわたる変化が分析されます。さらに、後任者であるジョン・ターナス氏が引き継ぐであろう、将来のAppleが直面するであろう技術革新、競争、市場の変化といった課題についても掘り下げられています。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F26%2Fwhat-tim-cook-built%2F"
-        data-title="ティム・クックが築き上げたもの"
-        data-summary="AppleのCEOであるティム・クックが2011年に就任して以来、同社がどのように変化してきたのか、そして次期CEOであるジョン・ターナスが直面するであろう課題について、「Equity」の最新エピソードで議論されています。これはAppleの過去と未来を洞察する内容です。"
-        data-source="TechCrunch"
-        data-url="https://techcrunch.com/2026/04/26/what-tim-cook-built/"
-        data-importance="🟢"
-        data-category="テック・AI">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%86%E3%82%A3%E3%83%A0%E3%83%BB%E3%82%AF%E3%83%83%E3%82%AF%E3%81%8C%E7%AF%89%E3%81%8D%E4%B8%8A%E3%81%92%E3%81%9F%E3%82%82%E3%81%AE%20https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F26%2Fwhat-tim-cook-built%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="ティム・クックが築き上げたもの">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-  <div class="item-thumb"></div>
-</div>
-<div class="item" style="animation-delay:0.25s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">TechCrunch Startups</span>
     </div>
     <h2>なぜ東京は2026年の最も重要なテクノロジーデスティネーションとなるのか</h2>
-    <p class="summary">2026年に開催されるSusHi Tech Tokyoは、4つの厳密に定義されたテクノロジー分野に焦点を当て、ライブデモンストレーション、専用展示フロア、そして世界中の技術開発者や資金提供者が参加するセッションを提供します。これにより、東京が世界のテクノロジーの中心地として注目される理由が語られています。</p>
+    <p class="summary">SusHi Tech Tokyo 2026は、4つの明確に定義されたテクノロジー分野に焦点を当て、ライブデモンストレーション、専用展示フロア、そして世界中の技術開発者や資金提供者によるセッションを提供します。これにより、東京は2026年に世界のテクノロジー業界にとって重要なハブとなることが期待されます。</p>
     <details>
 <summary></summary>
-<p class="detail-text">SusHi Tech Tokyo 2026は、AI、ロボティクス、サステナビリティ、そして次世代コンピューティングといった4つの主要なテクノロジー分野に特化したイベントです。各分野では、最先端の技術が実際にデモンストレーションされ、業界のリーダーたちが集まります。このイベントは、東京を世界のイノベーションハブとして位置づけ、将来のテクノロジー動向を占う上で重要な役割を果たすと期待されています。</p>
+<p class="detail-text">SusHi Tech Tokyo 2026は、2026年に東京が世界のテクノロジー分野における主要なデスティネーションとなる理由を明確に示しています。このイベントは、4つの厳密に定義されたテクノロジー領域に焦点を当て、それらを支援するためのライブデモンストレーション、専用の展示フロア、そして世界中の技術開発者や投資家が参加するセッションを特徴としています。この包括的なアプローチは、東京がイノベーションの中心地として、最新の技術動向を共有し、将来のテクノロジー開発を促進するためのプラットフォームを提供することを目指しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F04%2F25%2Fwhy-tokyo-is-the-most-important-tech-destination-of-2026%2F"
         data-title="なぜ東京は2026年の最も重要なテクノロジーデスティネーションとなるのか"
-        data-summary="2026年に開催されるSusHi Tech Tokyoは、4つの厳密に定義されたテクノロジー分野に焦点を当て、ライブデモンストレーション、専用展示フロア、そして世界中の技術開発者や資金提供者が参加するセッションを提供します。これにより、東京が世界のテクノロジーの中心地として注目される理由が語られています。"
+        data-summary="SusHi Tech Tokyo 2026は、4つの明確に定義されたテクノロジー分野に焦点を当て、ライブデモンストレーション、専用展示フロア、そして世界中の技術開発者や資金提供者によるセッションを提供します。これにより、東京は2026年に世界のテクノロジー業界にとって重要なハブとなることが期待されます。"
         data-source="TechCrunch Startups"
         data-url="https://techcrunch.com/2026/04/25/why-tokyo-is-the-most-important-tech-destination-of-2026/"
         data-importance="🟢"
@@ -508,27 +511,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Attack Magazine</span>
+      <span class="item-source">MusicRadar</span>
     </div>
-    <h2>エレクトロニック・ミュージック業界、151億ドルに到達、世界的な成長が加速</h2>
-    <p class="summary">最新のIMSビジネスレポートによると、2025年の世界の電子音楽産業は151億ドルを記録し、前年比7%増と成長が加速しました。このレポートは、収益源の多様化、オーディエンスの拡大、そしてAI技術の台頭など、電子音楽市場の現状と将来展望を示しています。この動向は、音楽業界全体に影響を与える可能性があります。</p>
+    <h2>「現代の紛れもないクラシック」：Rhodes MK8レビュー</h2>
+    <p class="summary">新しいRhodes MK8エレクトリックピアノは、単なる70年代や80年代のヴィンテージ楽器ではなく、現代的な機能とMIDIを搭載した紛れもないクラシックとして評価されています。このレビューでは、MK8のサウンド、機能、そして音楽制作におけるその位置づけが詳細に検証されています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">IMS（International Music Summit）が発表した2026年のビジネスレポートによると、2025年の電子音楽市場は151億ドル規模に達し、過去最高を記録しました。これは前年比7%の増加であり、特にストリーミング収益、出版、マーチャンダイジングなどが牽引しました。また、TikTokやSoundCloudでのエレクトロニック・ミュージック関連のハッシュタグの急増、AI生成ツールの利用拡大なども注目されています。レポートでは、ドイツが最大のリスナー市場であり、グローバルサウスからの成長も顕著であることが示されています。</p>
+<p class="detail-text">Rhodes MK8は、往年の名機としての評価を維持しつつ、現代の音楽制作環境に対応した進化を遂げたエレクトリックピアノです。MusicRadarによるレビューでは、MK8が単なるノスタルジックな復刻ではなく、現代的なサウンドデザインと演奏体験を提供する楽器として高く評価されています。特に、内蔵エフェクトやMIDI機能の充実により、多様な音楽ジャンルでの活用が期待できる点が強調されています。これにより、スタジオミュージシャンからライブパフォーマーまで、幅広い層の音楽家にとって魅力的な選択肢となるでしょう。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Felectronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates%2F"
-        data-title="エレクトロニック・ミュージック業界、151億ドルに到達、世界的な成長が加速"
-        data-summary="最新のIMSビジネスレポートによると、2025年の世界の電子音楽産業は151億ドルを記録し、前年比7%増と成長が加速しました。このレポートは、収益源の多様化、オーディエンスの拡大、そしてAI技術の台頭など、電子音楽市場の現状と将来展望を示しています。この動向は、音楽業界全体に影響を与える可能性があります。"
-        data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/news/electronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates/"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fkeyboards-pianos%2Frhodes-mk8-review"
+        data-title="「現代の紛れもないクラシック」：Rhodes MK8レビュー"
+        data-summary="新しいRhodes MK8エレクトリックピアノは、単なる70年代や80年代のヴィンテージ楽器ではなく、現代的な機能とMIDIを搭載した紛れもないクラシックとして評価されています。このレビューでは、MK8のサウンド、機能、そして音楽制作におけるその位置づけが詳細に検証されています。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/music-tech/keyboards-pianos/rhodes-mk8-review"
         data-importance="🟡"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%83%83%E3%82%AF%E3%83%BB%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E6%A5%AD%E7%95%8C%E3%80%81151%E5%84%84%E3%83%89%E3%83%AB%E3%81%AB%E5%88%B0%E9%81%94%E3%80%81%E4%B8%96%E7%95%8C%E7%9A%84%E3%81%AA%E6%88%90%E9%95%B7%E3%81%8C%E5%8A%A0%E9%80%9F%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Felectronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%8F%BE%E4%BB%A3%E3%81%AE%E7%B4%9B%E3%82%8C%E3%82%82%E3%81%AA%E3%81%84%E3%82%AF%E3%83%A9%E3%82%B7%E3%83%83%E3%82%AF%E3%80%8D%EF%BC%9ARhodes%20MK8%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fkeyboards-pianos%2Frhodes-mk8-review" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="エレクトロニック・ミュージック業界、151億ドルに到達、世界的な成長が加速">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「現代の紛れもないクラシック」：Rhodes MK8レビュー">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -539,25 +542,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">Attack Magazine</span>
     </div>
-    <h2>Ableton Live 12、アップグレード＆パックが25%オフ</h2>
-    <p class="summary">Abletonは、Live 12、アップグレード、および関連サウンドパックを対象に、期間限定で25%割引のプロモーションを実施しています。このオファーは4月29日（水）まで有効です。これは、Ableton Liveユーザーや購入を検討している人々にとって、お得な機会となります。</p>
+    <h2>エレクトロニック・ミュージック業界が151億ドルに達、グローバル成長が加速</h2>
+    <p class="summary">最新のIMSビジネスレポートによると、2025年のグローバルなエレクトロニック・ミュージック業界は151億ドルの収益を上げ、前年比7%増と成長が加速しました。このレポートは、多様な収益源の拡大、視聴者数の増加、そしてAIツールの普及が音楽制作に与える影響などを分析しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Abletonは、最新バージョンのAbleton Live 12、および既存ユーザー向けのアップグレード、さらにはLiveと連携するサウンドパック全般において、25%の割引キャンペーンを実施中です。このキャンペーンは4月29日までとなっており、Suite版およびStandard版の両方が対象となります。Live 12は、リアルタイムピッチ補正やSpliceとの連携といった新機能も追加されており、音楽制作のワークフローを向上させます。</p>
+<p class="detail-text">2025年のグローバルなエレクトロニック・ミュージック業界は、前年比7%増となる151億ドルの収益を記録しました。これは、 kaydedettyjen musiikkien tuotot, julkaisumaksut、そしてマーチャンダイジングなど、多様な収益源の拡大によるものです。視聴者数は9億1900万人に達し、特にグローバルサウス市場の成長が顕著です。また、AIを活用した音楽制作ツールの収益は651%増となり、音楽制作のあり方に変化をもたらしています。レポートは、エレクトロニック・ミュージックがその「シーンズカルチャー」により、AI生成コンテンツが蔓延する時代においても、独自のレジリエンスを維持していくと結論付けています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fsave-25-on-ableton-live-12-upgrades-packs%2F"
-        data-title="Ableton Live 12、アップグレード＆パックが25%オフ"
-        data-summary="Abletonは、Live 12、アップグレード、および関連サウンドパックを対象に、期間限定で25%割引のプロモーションを実施しています。このオファーは4月29日（水）まで有効です。これは、Ableton Liveユーザーや購入を検討している人々にとって、お得な機会となります。"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Felectronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates%2F"
+        data-title="エレクトロニック・ミュージック業界が151億ドルに達、グローバル成長が加速"
+        data-summary="最新のIMSビジネスレポートによると、2025年のグローバルなエレクトロニック・ミュージック業界は151億ドルの収益を上げ、前年比7%増と成長が加速しました。このレポートは、多様な収益源の拡大、視聴者数の増加、そしてAIツールの普及が音楽制作に与える影響などを分析しています。"
         data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/news/save-25-on-ableton-live-12-upgrades-packs/"
+        data-url="https://www.attackmagazine.com/news/electronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates/"
         data-importance="🟡"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Ableton%20Live%2012%E3%80%81%E3%82%A2%E3%83%83%E3%83%97%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89%EF%BC%86%E3%83%91%E3%83%83%E3%82%AF%E3%81%8C25%25%E3%82%AA%E3%83%95%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fsave-25-on-ableton-live-12-upgrades-packs%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%83%83%E3%82%AF%E3%83%BB%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E6%A5%AD%E7%95%8C%E3%81%8C151%E5%84%84%E3%83%89%E3%83%AB%E3%81%AB%E9%81%94%E3%80%81%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E6%88%90%E9%95%B7%E3%81%8C%E5%8A%A0%E9%80%9F%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Felectronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Ableton Live 12、アップグレード＆パックが25%オフ">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="エレクトロニック・ミュージック業界が151億ドルに達、グローバル成長が加速">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -565,28 +568,28 @@ details[open] summary::before { content: "▲ 閉じる"; }
 <div class="item" style="animation-delay:0.10s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">MusicRadar</span>
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">Attack Magazine</span>
     </div>
-    <h2>「ケイト・ブッシュがタウンハウス・スタジオでレコーディングしているのを見て、頭を突っ込んできて、『それは何？』と言いました」：イエス、エイジア、バグルスのシンセレジェンド、ジェフ・ダウンズに聞く</h2>
-    <p class="summary">シンセサイザー奏者のジェフ・ダウンズが、Wizzardのオーディションからバグルス、イエス、エイジアでの世界的な成功までの道のりを語っています。特に、ケイト・ブッシュとのスタジオでの偶然の出会いについても言及されており、音楽制作の興味深いエピソードが明かされています。</p>
+    <h2>Ableton Live 12、アップグレード、パックが25%オフ</h2>
+    <p class="summary">Abletonは、Live 12、アップグレード、および関連サウンドパックを対象とした期間限定で25%割引のプロモーションを開始しました。このセールは4月29日まで実施されており、Ableton Live 12 SuiteとStandardエディションの両方が対象となります。これは、Ableton Liveユーザーにとってソフトウェアを最新の状態に保つ絶好の機会です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">このインタビューでは、プログレッシブ・ロック界の重鎮であるジェフ・ダウンズが、自身のキャリアを振り返ります。ポップグループWizzardでの初期の経験から、バグルスの「Video Killed the Radio Star」でのブレイク、そしてイエスやエイジアでの活動まで、彼の音楽人生のハイライトが語られます。特に、伝説的なミュージシャンであるケイト・ブッシュとのスタジオでの逸話は、音楽ファンの関心を引くでしょう。</p>
+<p class="detail-text">Abletonは、Ableton Live 12、Live 12へのアップグレード、およびダウンロード可能なサウンドパックを対象とした25%割引プロモーションを実施中です。このキャンペーンは4月29日まで有効です。割引は、Live 12 SuiteとStandardエディションの両方に適用されます。Ableton Live 12は、最新のバージョンであり、リアルタイムピッチ補正やSpliceとの統合などの新機能も追加されています。この機会に、Ableton Liveの機能を拡張したいユーザーにとっては、非常にお得なプロモーションと言えます。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fkate-bush-saw-me-recording-at-townhouse-studios-popped-her-head-in-saw-the-fairlight-and-said-whats-that-we-speak-to-yes-asia-and-the-buggles-synth-legend-geoff-downes"
-        data-title="「ケイト・ブッシュがタウンハウス・スタジオでレコーディングしているのを見て、頭を突っ込んできて、『それは何？』と言いました」：イエス、エイジア、バグルスのシンセレジェンド、ジェフ・ダウンズに聞く"
-        data-summary="シンセサイザー奏者のジェフ・ダウンズが、Wizzardのオーディションからバグルス、イエス、エイジアでの世界的な成功までの道のりを語っています。特に、ケイト・ブッシュとのスタジオでの偶然の出会いについても言及されており、音楽制作の興味深いエピソードが明かされています。"
-        data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/kate-bush-saw-me-recording-at-townhouse-studios-popped-her-head-in-saw-the-fairlight-and-said-whats-that-we-speak-to-yes-asia-and-the-buggles-synth-legend-geoff-downes"
-        data-importance="🟢"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fsave-25-on-ableton-live-12-upgrades-packs%2F"
+        data-title="Ableton Live 12、アップグレード、パックが25%オフ"
+        data-summary="Abletonは、Live 12、アップグレード、および関連サウンドパックを対象とした期間限定で25%割引のプロモーションを開始しました。このセールは4月29日まで実施されており、Ableton Live 12 SuiteとStandardエディションの両方が対象となります。これは、Ableton Liveユーザーにとってソフトウェアを最新の状態に保つ絶好の機会です。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/news/save-25-on-ableton-live-12-upgrades-packs/"
+        data-importance="🟡"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%82%B1%E3%82%A4%E3%83%88%E3%83%BB%E3%83%96%E3%83%83%E3%82%B7%E3%83%A5%E3%81%8C%E3%82%BF%E3%82%A6%E3%83%B3%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA%E3%81%A7%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%82%92%E8%A6%8B%E3%81%A6%E3%80%81%E9%A0%AD%E3%82%92%E7%AA%81%E3%81%A3%E8%BE%BC%E3%82%93%E3%81%A7%E3%81%8D%E3%81%A6%E3%80%81%E3%80%8E%E3%81%9D%E3%82%8C%E3%81%AF%E4%BD%95%EF%BC%9F%E3%80%8F%E3%81%A8%E8%A8%80%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F%E3%80%8D%EF%BC%9A%E3%82%A4%E3%82%A8%E3%82%B9%E3%80%81%E3%82%A8%E3%82%A4%E3%82%B8%E3%82%A2%E3%80%81%E3%83%90%E3%82%B0%E3%83%AB%E3%82%B9%E3%81%AE%E3%82%B7%E3%83%B3%E3%82%BB%E3%83%AC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%89%E3%80%81%E3%82%B8%E3%82%A7%E3%83%95%E3%83%BB%E3%83%80%E3%82%A6%E3%83%B3%E3%82%BA%E3%81%AB%E8%81%9E%E3%81%8F%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fkate-bush-saw-me-recording-at-townhouse-studios-popped-her-head-in-saw-the-fairlight-and-said-whats-that-we-speak-to-yes-asia-and-the-buggles-synth-legend-geoff-downes" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Ableton%20Live%2012%E3%80%81%E3%82%A2%E3%83%83%E3%83%97%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89%E3%80%81%E3%83%91%E3%83%83%E3%82%AF%E3%81%8C25%25%E3%82%AA%E3%83%95%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fsave-25-on-ableton-live-12-upgrades-packs%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「ケイト・ブッシュがタウンハウス・スタジオでレコーディングしているのを見て、頭を突っ込んできて、『それは何？』と言いました」：イエス、エイジア、バグルスのシンセレジェンド、ジェフ・ダウンズに聞く">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Ableton Live 12、アップグレード、パックが25%オフ">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -597,25 +600,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">MusicRadar</span>
     </div>
-    <h2>「彼はしばしば2つのバナーを持ってセッションに現れ、キットの両側に設置してレコーディングしていました。『ヒットメーカーを雇ったぞ』と書かれていました」：パーディー・シャッフルからジャズの延長コードまで - スティーリー・ダンの『Babylon Sisters』を分析</h2>
-    <p class="summary">この記事では、スティーリー・ダンの楽曲「Babylon Sisters」に焦点を当て、その制作過程と音楽的特徴を分析しています。特に、ミキシングに274回もの試行錯誤を要したという逸話が紹介されており、楽曲の複雑さと完成度の高さが伺えます。また、レコーディング時のユニークなエピソードも語られています。</p>
+    <h2>「ネドラの声、スタイル、そして精神は音楽を変えるサウンドを定義するのに役立った。グループの物語と彼らの決定的影響力への彼女の貢献は永遠に生き続けるだろう」：The Ronettesの最後の存命メンバー、ネドラ・タリー・ロスが死去</h2>
+    <p class="summary">伝説的なグループ、The Ronettesの最後の存命メンバーであったネドラ・タリー・ロスが80歳で亡くなりました。彼女の声、スタイル、精神はグループのサウンドを定義し、音楽史に大きな影響を与えました。彼女の音楽への貢献と影響は、今後も語り継がれていくでしょう。</p>
     <details>
 <summary></summary>
-<p class="detail-text">「Babylon Sisters」は、スティーリー・ダンの代表曲の一つであり、その複雑なアレンジと洗練されたサウンドで知られています。この記事では、楽曲のパーディー・シャッフルに代表されるリズムパターン、ジャズからの影響を受けたコード進行、そしてエンジニアリングの苦労話などを掘り下げています。274回ものミキシング試行錯誤は、この楽曲がいかに丹念に作り上げられたかを示しています。</p>
+<p class="detail-text">The Ronettesの最後の存命メンバーであったネドラ・タリー・ロスさんが、80歳で死去しました。彼女は、グループの象徴的なサウンドとスタイルを形成する上で中心的な役割を果たしました。彼女のヴォーカルパフォーマンスと芸術的な貢献は、1960年代の音楽シーンに多大な影響を与え、後世のアーティストにもインスピレーションを与え続けています。彼女の死は音楽業界にとって大きな損失ですが、彼女の遺した音楽と功績は、永遠に記憶されるでしょう。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fhe-would-often-arrive-at-sessions-with-two-banners-which-he-placed-either-side-of-his-kit-while-recording-reading-you-done-hired-the-hit-maker-from-the-purdie-shuffle-to-its-extended-jazz-chords-analysing-steely-dans-babylon-sisters"
-        data-title="「彼はしばしば2つのバナーを持ってセッションに現れ、キットの両側に設置してレコーディングしていました。『ヒットメーカーを雇ったぞ』と書かれていました」：パーディー・シャッフルからジャズの延長コードまで - スティーリー・ダンの『Babylon Sisters』を分析"
-        data-summary="この記事では、スティーリー・ダンの楽曲「Babylon Sisters」に焦点を当て、その制作過程と音楽的特徴を分析しています。特に、ミキシングに274回もの試行錯誤を要したという逸話が紹介されており、楽曲の複雑さと完成度の高さが伺えます。また、レコーディング時のユニークなエピソードも語られています。"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingers-songwriters%2Fnedras-voice-style-and-spirit-helped-define-a-sound-that-would-change-music-her-contribution-to-the-groups-story-and-their-defining-influence-will-live-forever-the-last-surviving-member-of-the-ronettes-nedra-talley-ross-has-died"
+        data-title="「ネドラの声、スタイル、そして精神は音楽を変えるサウンドを定義するのに役立った。グループの物語と彼らの決定的影響力への彼女の貢献は永遠に生き続けるだろう」：The Ronettesの最後の存命メンバー、ネドラ・タリー・ロスが死去"
+        data-summary="伝説的なグループ、The Ronettesの最後の存命メンバーであったネドラ・タリー・ロスが80歳で亡くなりました。彼女の声、スタイル、精神はグループのサウンドを定義し、音楽史に大きな影響を与えました。彼女の音楽への貢献と影響は、今後も語り継がれていくでしょう。"
         data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/he-would-often-arrive-at-sessions-with-two-banners-which-he-placed-either-side-of-his-kit-while-recording-reading-you-done-hired-the-hit-maker-from-the-purdie-shuffle-to-its-extended-jazz-chords-analysing-steely-dans-babylon-sisters"
+        data-url="https://www.musicradar.com/artists/singers-songwriters/nedras-voice-style-and-spirit-helped-define-a-sound-that-would-change-music-her-contribution-to-the-groups-story-and-their-defining-influence-will-live-forever-the-last-surviving-member-of-the-ronettes-nedra-talley-ross-has-died"
         data-importance="🟢"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E5%BD%BC%E3%81%AF%E3%81%97%E3%81%B0%E3%81%97%E3%81%B02%E3%81%A4%E3%81%AE%E3%83%90%E3%83%8A%E3%83%BC%E3%82%92%E6%8C%81%E3%81%A3%E3%81%A6%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E7%8F%BE%E3%82%8C%E3%80%81%E3%82%AD%E3%83%83%E3%83%88%E3%81%AE%E4%B8%A1%E5%81%B4%E3%81%AB%E8%A8%AD%E7%BD%AE%E3%81%97%E3%81%A6%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E3%80%8E%E3%83%92%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E3%82%92%E9%9B%87%E3%81%A3%E3%81%9F%E3%81%9E%E3%80%8F%E3%81%A8%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%A6%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F%E3%80%8D%EF%BC%9A%E3%83%91%E3%83%BC%E3%83%87%E3%82%A3%E3%83%BC%E3%83%BB%E3%82%B7%E3%83%A3%E3%83%83%E3%83%95%E3%83%AB%E3%81%8B%E3%82%89%E3%82%B8%E3%83%A3%E3%82%BA%E3%81%AE%E5%BB%B6%E9%95%B7%E3%82%B3%E3%83%BC%E3%83%89%E3%81%BE%E3%81%A7%20-%20%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%80%E3%83%B3%E3%81%AE%E3%80%8EBabylon%20Sisters%E3%80%8F%E3%82%92%E5%88%86%E6%9E%90%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fhe-would-often-arrive-at-sessions-with-two-banners-which-he-placed-either-side-of-his-kit-while-recording-reading-you-done-hired-the-hit-maker-from-the-purdie-shuffle-to-its-extended-jazz-chords-analysing-steely-dans-babylon-sisters" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%83%8D%E3%83%89%E3%83%A9%E3%81%AE%E5%A3%B0%E3%80%81%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E7%B2%BE%E7%A5%9E%E3%81%AF%E9%9F%B3%E6%A5%BD%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9A%E7%BE%A9%E3%81%99%E3%82%8B%E3%81%AE%E3%81%AB%E5%BD%B9%E7%AB%8B%E3%81%A3%E3%81%9F%E3%80%82%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E7%89%A9%E8%AA%9E%E3%81%A8%E5%BD%BC%E3%82%89%E3%81%AE%E6%B1%BA%E5%AE%9A%E7%9A%84%E5%BD%B1%E9%9F%BF%E5%8A%9B%E3%81%B8%E3%81%AE%E5%BD%BC%E5%A5%B3%E3%81%AE%E8%B2%A2%E7%8C%AE%E3%81%AF%E6%B0%B8%E9%81%A0%E3%81%AB%E7%94%9F%E3%81%8D%E7%B6%9A%E3%81%91%E3%82%8B%E3%81%A0%E3%82%8D%E3%81%86%E3%80%8D%EF%BC%9AThe%20Ronettes%E3%81%AE%E6%9C%80%E5%BE%8C%E3%81%AE%E5%AD%98%E5%91%BD%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E3%80%81%E3%83%8D%E3%83%89%E3%83%A9%E3%83%BB%E3%82%BF%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%AD%E3%82%B9%E3%81%8C%E6%AD%BB%E5%8E%BB%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingers-songwriters%2Fnedras-voice-style-and-spirit-helped-define-a-sound-that-would-change-music-her-contribution-to-the-groups-story-and-their-defining-influence-will-live-forever-the-last-surviving-member-of-the-ronettes-nedra-talley-ross-has-died" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「彼はしばしば2つのバナーを持ってセッションに現れ、キットの両側に設置してレコーディングしていました。『ヒットメーカーを雇ったぞ』と書かれていました」：パーディー・シャッフルからジャズの延長コードまで - スティーリー・ダンの『Babylon Sisters』を分析">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「ネドラの声、スタイル、そして精神は音楽を変えるサウンドを定義するのに役立った。グループの物語と彼らの決定的影響力への彼女の貢献は永遠に生き続けるだろう」：The Ronettesの最後の存命メンバー、ネドラ・タリー・ロスが死去">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -626,25 +629,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">MusicRadar</span>
     </div>
-    <h2>「それはリーにとって起こった最良のことであると同時に最悪のことだ。彼は完璧な曲を書いたが、それは彼が何もする必要がないことを意味している。なぜなら彼は絶え間ない収入源を持っているからだ」：『There She Goes』の苦痛に満ちた、そして皮肉な物語</h2>
-    <p class="summary">この曲は、あるミュージシャンにとって成功の象徴であると同時に、創造的な停滞の原因ともなったという皮肉な物語を語っています。楽曲の成功が、その後の活動にどのような影響を与えたのか、その複雑な人間ドラマが描かれています。その楽曲は、「There She Goes」です。</p>
+    <h2>「もしネガティブなことがあれば、彼らがそれを公開しなかった理由がわかる」：プリンスの最初の妻、メイテ・ガルシアが彼についてのキャンセルされたNetflixドキュメンタリーについて語り、彼らとの関係についての彼女の本が映画化されることを確認</h2>
+    <p class="summary">プリンスの最初の妻であるメイテ・ガルシアが、キャンセルされたNetflixドキュメンタリーについて、その内容に理解を示しつつ、彼との関係を描いた自身の書籍が映画化されることを明らかにしました。彼女は、プリンスの音楽と類まれな才能こそが最も重要であると語っています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">「There She Goes」という楽曲は、その作者にとって大きな成功をもたらしましたが、同時に創造的なスランプを招いたとも言われています。この記事では、この曲がどのようにして生まれたのか、そしてその成功が作者のキャリアにどのような影響を与えたのかを詳細に分析しています。成功と停滞という二律背反の状況が、ミュージシャンの人生にどのように作用したのか、その深層心理に迫ります。</p>
+<p class="detail-text">プリンスの元妻であるメイテ・ガルシア氏が、プリンスに関するNetflixドキュメンタリーのキャンセルについて、その決定に理解を示しました。彼女は、ドキュメンタリーの内容には「ネガティブなこと」が含まれていた可能性があり、それが公開されなかった理由かもしれないと示唆しています。また、彼女は自身がプリンスとの関係について執筆した書籍が映画化されることも明かしました。ガルシア氏は、プリンスの「非凡な」才能と音楽こそが称賛されるべきだと強調しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingles-albums%2Fits-the-best-thing-thats-happened-to-lee-but-also-the-worst-he-wrote-this-perfect-song-but-its-meant-he-hasnt-had-to-do-anything-because-he-has-a-constant-source-of-income-the-torturous-and-ironic-story-of-there-she-goes"
-        data-title="「それはリーにとって起こった最良のことであると同時に最悪のことだ。彼は完璧な曲を書いたが、それは彼が何もする必要がないことを意味している。なぜなら彼は絶え間ない収入源を持っているからだ」：『There She Goes』の苦痛に満ちた、そして皮肉な物語"
-        data-summary="この曲は、あるミュージシャンにとって成功の象徴であると同時に、創造的な停滞の原因ともなったという皮肉な物語を語っています。楽曲の成功が、その後の活動にどのような影響を与えたのか、その複雑な人間ドラマが描かれています。その楽曲は、「There She Goes」です。"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fif-theres-anything-negative-i-understand-why-they-didnt-put-it-out-princes-first-wife-mayte-garcia-has-her-say-on-the-cancelled-netflix-documentary-about-him-and-confirms-that-her-book-about-their-relationship-is-being-turned-into-a-movie"
+        data-title="「もしネガティブなことがあれば、彼らがそれを公開しなかった理由がわかる」：プリンスの最初の妻、メイテ・ガルシアが彼についてのキャンセルされたNetflixドキュメンタリーについて語り、彼らとの関係についての彼女の本が映画化されることを確認"
+        data-summary="プリンスの最初の妻であるメイテ・ガルシアが、キャンセルされたNetflixドキュメンタリーについて、その内容に理解を示しつつ、彼との関係を描いた自身の書籍が映画化されることを明らかにしました。彼女は、プリンスの音楽と類まれな才能こそが最も重要であると語っています。"
         data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/singles-albums/its-the-best-thing-thats-happened-to-lee-but-also-the-worst-he-wrote-this-perfect-song-but-its-meant-he-hasnt-had-to-do-anything-because-he-has-a-constant-source-of-income-the-torturous-and-ironic-story-of-there-she-goes"
+        data-url="https://www.musicradar.com/artists/if-theres-anything-negative-i-understand-why-they-didnt-put-it-out-princes-first-wife-mayte-garcia-has-her-say-on-the-cancelled-netflix-documentary-about-him-and-confirms-that-her-book-about-their-relationship-is-being-turned-into-a-movie"
         data-importance="🟢"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%81%9D%E3%82%8C%E3%81%AF%E3%83%AA%E3%83%BC%E3%81%AB%E3%81%A8%E3%81%A3%E3%81%A6%E8%B5%B7%E3%81%93%E3%81%A3%E3%81%9F%E6%9C%80%E8%89%AF%E3%81%AE%E3%81%93%E3%81%A8%E3%81%A7%E3%81%82%E3%82%8B%E3%81%A8%E5%90%8C%E6%99%82%E3%81%AB%E6%9C%80%E6%82%AA%E3%81%AE%E3%81%93%E3%81%A8%E3%81%A0%E3%80%82%E5%BD%BC%E3%81%AF%E5%AE%8C%E7%92%A7%E3%81%AA%E6%9B%B2%E3%82%92%E6%9B%B8%E3%81%84%E3%81%9F%E3%81%8C%E3%80%81%E3%81%9D%E3%82%8C%E3%81%AF%E5%BD%BC%E3%81%8C%E4%BD%95%E3%82%82%E3%81%99%E3%82%8B%E5%BF%85%E8%A6%81%E3%81%8C%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E6%84%8F%E5%91%B3%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82%E3%81%AA%E3%81%9C%E3%81%AA%E3%82%89%E5%BD%BC%E3%81%AF%E7%B5%B6%E3%81%88%E9%96%93%E3%81%AA%E3%81%84%E5%8F%8E%E5%85%A5%E6%BA%90%E3%82%92%E6%8C%81%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%81%8B%E3%82%89%E3%81%A0%E3%80%8D%EF%BC%9A%E3%80%8EThere%20She%20Goes%E3%80%8F%E3%81%AE%E8%8B%A6%E7%97%9B%E3%81%AB%E6%BA%80%E3%81%A1%E3%81%9F%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E7%9A%AE%E8%82%89%E3%81%AA%E7%89%A9%E8%AA%9E%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingles-albums%2Fits-the-best-thing-thats-happened-to-lee-but-also-the-worst-he-wrote-this-perfect-song-but-its-meant-he-hasnt-had-to-do-anything-because-he-has-a-constant-source-of-income-the-torturous-and-ironic-story-of-there-she-goes" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%82%82%E3%81%97%E3%83%8D%E3%82%AC%E3%83%86%E3%82%A3%E3%83%96%E3%81%AA%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8C%E3%81%B0%E3%80%81%E5%BD%BC%E3%82%89%E3%81%8C%E3%81%9D%E3%82%8C%E3%82%92%E5%85%AC%E9%96%8B%E3%81%97%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F%E7%90%86%E7%94%B1%E3%81%8C%E3%82%8F%E3%81%8B%E3%82%8B%E3%80%8D%EF%BC%9A%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B9%E3%81%AE%E6%9C%80%E5%88%9D%E3%81%AE%E5%A6%BB%E3%80%81%E3%83%A1%E3%82%A4%E3%83%86%E3%83%BB%E3%82%AC%E3%83%AB%E3%82%B7%E3%82%A2%E3%81%8C%E5%BD%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%BB%E3%83%AB%E3%81%95%E3%82%8C%E3%81%9FNetflix%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%82%BF%E3%83%AA%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%9E%E3%82%8A%E3%80%81%E5%BD%BC%E3%82%89%E3%81%A8%E3%81%AE%E9%96%A2%E4%BF%82%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E5%BD%BC%E5%A5%B3%E3%81%AE%E6%9C%AC%E3%81%8C%E6%98%A0%E7%94%BB%E5%8C%96%E3%81%95%E3%82%8C%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fif-theres-anything-negative-i-understand-why-they-didnt-put-it-out-princes-first-wife-mayte-garcia-has-her-say-on-the-cancelled-netflix-documentary-about-him-and-confirms-that-her-book-about-their-relationship-is-being-turned-into-a-movie" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「それはリーにとって起こった最良のことであると同時に最悪のことだ。彼は完璧な曲を書いたが、それは彼が何もする必要がないことを意味している。なぜなら彼は絶え間ない収入源を持っているからだ」：『There She Goes』の苦痛に満ちた、そして皮肉な物語">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「もしネガティブなことがあれば、彼らがそれを公開しなかった理由がわかる」：プリンスの最初の妻、メイテ・ガルシアが彼についてのキャンセルされたNetflixドキュメンタリーについて語り、彼らとの関係についての彼女の本が映画化されることを確認">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -655,25 +658,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">Attack Magazine</span>
     </div>
-    <h2>レディ・タズ：「私は「より大きな集合体」を心から信じています」</h2>
-    <p class="summary">DJのレディ・タズは、テクノサウンド、Mind Medizinプラットフォーム、そしてパイロット、レーベルオーナー、ビジネスオーナー、テニスプレイヤーといった多様な活動について語っています。彼女のユニークな経験が、彼女の音楽と人生観にどのように影響を与えているかが探求されています。</p>
+    <h2>Lady Tazz – 「私は真に、より大きな集合体を信じている」</h2>
+    <p class="summary">DJ、レーベルオーナー、パイロットなど多才なLady Tazzが、自身のキャリアやインスピレーションについて語っています。彼女は、ホラー映画、SFドラマ、航空、そしてカール・ユングの心理学に影響を受け、自身の音楽制作やMind Medizinプラットフォームに活かしています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この記事では、DJであり、パイロット、レーベルオーナーなど多才な顔を持つレディ・タズ氏へのインタビューが掲載されています。彼女は、自身のDJ活動、Mind Medizinというプラットフォーム、そして人生における多様な経験が、どのように彼女の音楽制作や世界観を形成しているかを語っています。特に、心理学者のカール・ユングの「集合的無意識」の概念に触れ、人類の繋がりについて考察しています。</p>
+<p class="detail-text">DJであり、Mind Medizinプラットフォームの主宰者でもあるLady Tazzは、音楽活動以外にもパイロット、レーベルオーナー、テニスプレイヤーといった多彩な顔を持っています。彼女は、ホラー映画『Evil Dead』、SFドラマ『True Blood』、航空ドキュメンタリー、そしてカール・ユングの「集合的無意識」の概念にインスピレーションを受けています。これらの多様な経験が、彼女のアンコンプロマイジングなテクノサウンドと、プラットフォーム運営における「より大きな集合体」への信念を形成していると語っています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Fshow-and-tell%2Flady-tazz-i-genuinely-believe-in-the-greater-collective%2F"
-        data-title="レディ・タズ：「私は「より大きな集合体」を心から信じています」"
-        data-summary="DJのレディ・タズは、テクノサウンド、Mind Medizinプラットフォーム、そしてパイロット、レーベルオーナー、ビジネスオーナー、テニスプレイヤーといった多様な活動について語っています。彼女のユニークな経験が、彼女の音楽と人生観にどのように影響を与えているかが探求されています。"
+        data-title="Lady Tazz – 「私は真に、より大きな集合体を信じている」"
+        data-summary="DJ、レーベルオーナー、パイロットなど多才なLady Tazzが、自身のキャリアやインスピレーションについて語っています。彼女は、ホラー映画、SFドラマ、航空、そしてカール・ユングの心理学に影響を受け、自身の音楽制作やMind Medizinプラットフォームに活かしています。"
         data-source="Attack Magazine"
         data-url="https://www.attackmagazine.com/features/show-and-tell/lady-tazz-i-genuinely-believe-in-the-greater-collective/"
         data-importance="🟢"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BB%E3%82%BF%E3%82%BA%EF%BC%9A%E3%80%8C%E7%A7%81%E3%81%AF%E3%80%8C%E3%82%88%E3%82%8A%E5%A4%A7%E3%81%8D%E3%81%AA%E9%9B%86%E5%90%88%E4%BD%93%E3%80%8D%E3%82%92%E5%BF%83%E3%81%8B%E3%82%89%E4%BF%A1%E3%81%98%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%8D%20https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Fshow-and-tell%2Flady-tazz-i-genuinely-believe-in-the-greater-collective%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Lady%20Tazz%20%E2%80%93%20%E3%80%8C%E7%A7%81%E3%81%AF%E7%9C%9F%E3%81%AB%E3%80%81%E3%82%88%E3%82%8A%E5%A4%A7%E3%81%8D%E3%81%AA%E9%9B%86%E5%90%88%E4%BD%93%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6%E3%81%84%E3%82%8B%E3%80%8D%20https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Fshow-and-tell%2Flady-tazz-i-genuinely-believe-in-the-greater-collective%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="レディ・タズ：「私は「より大きな集合体」を心から信じています」">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Lady Tazz – 「私は真に、より大きな集合体を信じている」">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -684,27 +687,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Attack Magazine</span>
+      <span class="item-source">MusicRadar</span>
     </div>
-    <h2>エレクトロニック・ミュージック業界、151億ドルに到達、世界的な成長が加速</h2>
-    <p class="summary">最新のIMSビジネスレポートによると、2025年の世界の電子音楽産業は151億ドルを記録し、前年比7%増と成長が加速しました。このレポートは、収益源の多様化、オーディエンスの拡大、そしてAI技術の台頭など、電子音楽市場の現状と将来展望を示しています。この動向は、音楽業界全体に影響を与える可能性があります。</p>
+    <h2>「現代の紛れもないクラシック」：Rhodes MK8レビュー</h2>
+    <p class="summary">新しいRhodes MK8エレクトリックピアノは、単なる70年代や80年代のヴィンテージ楽器ではなく、現代的な機能とMIDIを搭載した紛れもないクラシックとして評価されています。このレビューでは、MK8のサウンド、機能、そして音楽制作におけるその位置づけが詳細に検証されています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">IMS（International Music Summit）が発表した2026年のビジネスレポートによると、2025年の電子音楽市場は151億ドル規模に達し、過去最高を記録しました。これは前年比7%の増加であり、特にストリーミング収益、出版、マーチャンダイジングなどが牽引しました。また、TikTokやSoundCloudでのエレクトロニック・ミュージック関連のハッシュタグの急増、AI生成ツールの利用拡大なども注目されています。レポートでは、ドイツが最大のリスナー市場であり、グローバルサウスからの成長も顕著であることが示されています。</p>
+<p class="detail-text">Rhodes MK8は、往年の名機としての評価を維持しつつ、現代の音楽制作環境に対応した進化を遂げたエレクトリックピアノです。MusicRadarによるレビューでは、MK8が単なるノスタルジックな復刻ではなく、現代的なサウンドデザインと演奏体験を提供する楽器として高く評価されています。特に、内蔵エフェクトやMIDI機能の充実により、多様な音楽ジャンルでの活用が期待できる点が強調されています。これにより、スタジオミュージシャンからライブパフォーマーまで、幅広い層の音楽家にとって魅力的な選択肢となるでしょう。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Felectronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates%2F"
-        data-title="エレクトロニック・ミュージック業界、151億ドルに到達、世界的な成長が加速"
-        data-summary="最新のIMSビジネスレポートによると、2025年の世界の電子音楽産業は151億ドルを記録し、前年比7%増と成長が加速しました。このレポートは、収益源の多様化、オーディエンスの拡大、そしてAI技術の台頭など、電子音楽市場の現状と将来展望を示しています。この動向は、音楽業界全体に影響を与える可能性があります。"
-        data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/news/electronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates/"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fkeyboards-pianos%2Frhodes-mk8-review"
+        data-title="「現代の紛れもないクラシック」：Rhodes MK8レビュー"
+        data-summary="新しいRhodes MK8エレクトリックピアノは、単なる70年代や80年代のヴィンテージ楽器ではなく、現代的な機能とMIDIを搭載した紛れもないクラシックとして評価されています。このレビューでは、MK8のサウンド、機能、そして音楽制作におけるその位置づけが詳細に検証されています。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/music-tech/keyboards-pianos/rhodes-mk8-review"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%83%83%E3%82%AF%E3%83%BB%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E6%A5%AD%E7%95%8C%E3%80%81151%E5%84%84%E3%83%89%E3%83%AB%E3%81%AB%E5%88%B0%E9%81%94%E3%80%81%E4%B8%96%E7%95%8C%E7%9A%84%E3%81%AA%E6%88%90%E9%95%B7%E3%81%8C%E5%8A%A0%E9%80%9F%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Felectronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%8F%BE%E4%BB%A3%E3%81%AE%E7%B4%9B%E3%82%8C%E3%82%82%E3%81%AA%E3%81%84%E3%82%AF%E3%83%A9%E3%82%B7%E3%83%83%E3%82%AF%E3%80%8D%EF%BC%9ARhodes%20MK8%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fkeyboards-pianos%2Frhodes-mk8-review" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="エレクトロニック・ミュージック業界、151億ドルに到達、世界的な成長が加速">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「現代の紛れもないクラシック」：Rhodes MK8レビュー">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -715,25 +718,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">Attack Magazine</span>
     </div>
-    <h2>Ableton Live 12、アップグレード＆パックが25%オフ</h2>
-    <p class="summary">Abletonは、Live 12、アップグレード、および関連サウンドパックを対象に、期間限定で25%割引のプロモーションを実施しています。このオファーは4月29日（水）まで有効です。これは、Ableton Liveユーザーや購入を検討している人々にとって、お得な機会となります。</p>
+    <h2>エレクトロニック・ミュージック業界が151億ドルに達、グローバル成長が加速</h2>
+    <p class="summary">最新のIMSビジネスレポートによると、2025年のグローバルなエレクトロニック・ミュージック業界は151億ドルの収益を上げ、前年比7%増と成長が加速しました。このレポートは、多様な収益源の拡大、視聴者数の増加、そしてAIツールの普及が音楽制作に与える影響などを分析しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Abletonは、最新バージョンのAbleton Live 12、および既存ユーザー向けのアップグレード、さらにはLiveと連携するサウンドパック全般において、25%の割引キャンペーンを実施中です。このキャンペーンは4月29日までとなっており、Suite版およびStandard版の両方が対象となります。Live 12は、リアルタイムピッチ補正やSpliceとの連携といった新機能も追加されており、音楽制作のワークフローを向上させます。</p>
+<p class="detail-text">2025年のグローバルなエレクトロニック・ミュージック業界は、前年比7%増となる151億ドルの収益を記録しました。これは、 kaydedettyjen musiikkien tuotot, julkaisumaksut、そしてマーチャンダイジングなど、多様な収益源の拡大によるものです。視聴者数は9億1900万人に達し、特にグローバルサウス市場の成長が顕著です。また、AIを活用した音楽制作ツールの収益は651%増となり、音楽制作のあり方に変化をもたらしています。レポートは、エレクトロニック・ミュージックがその「シーンズカルチャー」により、AI生成コンテンツが蔓延する時代においても、独自のレジリエンスを維持していくと結論付けています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fsave-25-on-ableton-live-12-upgrades-packs%2F"
-        data-title="Ableton Live 12、アップグレード＆パックが25%オフ"
-        data-summary="Abletonは、Live 12、アップグレード、および関連サウンドパックを対象に、期間限定で25%割引のプロモーションを実施しています。このオファーは4月29日（水）まで有効です。これは、Ableton Liveユーザーや購入を検討している人々にとって、お得な機会となります。"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Felectronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates%2F"
+        data-title="エレクトロニック・ミュージック業界が151億ドルに達、グローバル成長が加速"
+        data-summary="最新のIMSビジネスレポートによると、2025年のグローバルなエレクトロニック・ミュージック業界は151億ドルの収益を上げ、前年比7%増と成長が加速しました。このレポートは、多様な収益源の拡大、視聴者数の増加、そしてAIツールの普及が音楽制作に与える影響などを分析しています。"
         data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/news/save-25-on-ableton-live-12-upgrades-packs/"
+        data-url="https://www.attackmagazine.com/news/electronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Ableton%20Live%2012%E3%80%81%E3%82%A2%E3%83%83%E3%83%97%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89%EF%BC%86%E3%83%91%E3%83%83%E3%82%AF%E3%81%8C25%25%E3%82%AA%E3%83%95%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fsave-25-on-ableton-live-12-upgrades-packs%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%83%83%E3%82%AF%E3%83%BB%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E6%A5%AD%E7%95%8C%E3%81%8C151%E5%84%84%E3%83%89%E3%83%AB%E3%81%AB%E9%81%94%E3%80%81%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E6%88%90%E9%95%B7%E3%81%8C%E5%8A%A0%E9%80%9F%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Felectronic-music-industry-reaches-15-1-billion-as-global-growth-accelerates%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Ableton Live 12、アップグレード＆パックが25%オフ">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="エレクトロニック・ミュージック業界が151億ドルに達、グローバル成長が加速">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -742,27 +745,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Bedroom Producers Blog</span>
+      <span class="item-source">Attack Magazine</span>
     </div>
-    <h2>MNTRA、Roland Jupiter-6フィルタープラグイン「FLTRS-LE」を無料リリース</h2>
-    <p class="summary">MNTRAは、Roland Jupiter-6のフィルター回路をベースにした無料フィルタープラグイン「FLTRS-LE」をリリースしました。これは、同社の有料プラグイン「FLTRS」の軽量版で、37のアナログ回路と物理エンジンを搭載しています。この無料プラグインは、Roland Jupiter-6のサウンドをDTMで再現したいユーザーにとって、魅力的なツールとなるでしょう。</p>
+    <h2>Ableton Live 12、アップグレード、パックが25%オフ</h2>
+    <p class="summary">Abletonは、Live 12、アップグレード、および関連サウンドパックを対象とした期間限定で25%割引のプロモーションを開始しました。このセールは4月29日まで実施されており、Ableton Live 12 SuiteとStandardエディションの両方が対象となります。これは、Ableton Liveユーザーにとってソフトウェアを最新の状態に保つ絶好の機会です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">MNTRAが公開した「FLTRS-LE」は、伝説的なシンセサイザーRoland Jupiter-6のサウンドをエミュレートするフィルタープラグインです。これは、有料版「FLTRS」の機能を限定した無料版であり、「EUROPA-6」と名付けられたフィルター回路を搭載しています。このプラグインは、ローエンドのカットオフ周波数やレゾナンスを調整できるほか、ドライブやディストーションといったエフェクトも備えています。DTMユーザーは、 Jupiter-6の独特なサウンドキャラクターを無料で体験できます。</p>
+<p class="detail-text">Abletonは、Ableton Live 12、Live 12へのアップグレード、およびダウンロード可能なサウンドパックを対象とした25%割引プロモーションを実施中です。このキャンペーンは4月29日まで有効です。割引は、Live 12 SuiteとStandardエディションの両方に適用されます。Ableton Live 12は、最新のバージョンであり、リアルタイムピッチ補正やSpliceとの統合などの新機能も追加されています。この機会に、Ableton Liveの機能を拡張したいユーザーにとっては、非常にお得なプロモーションと言えます。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F25%2Fmntra-fltrs-le%2F"
-        data-title="MNTRA、Roland Jupiter-6フィルタープラグイン「FLTRS-LE」を無料リリース"
-        data-summary="MNTRAは、Roland Jupiter-6のフィルター回路をベースにした無料フィルタープラグイン「FLTRS-LE」をリリースしました。これは、同社の有料プラグイン「FLTRS」の軽量版で、37のアナログ回路と物理エンジンを搭載しています。この無料プラグインは、Roland Jupiter-6のサウンドをDTMで再現したいユーザーにとって、魅力的なツールとなるでしょう。"
-        data-source="Bedroom Producers Blog"
-        data-url="https://bedroomproducersblog.com/2026/04/25/mntra-fltrs-le/"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fsave-25-on-ableton-live-12-upgrades-packs%2F"
+        data-title="Ableton Live 12、アップグレード、パックが25%オフ"
+        data-summary="Abletonは、Live 12、アップグレード、および関連サウンドパックを対象とした期間限定で25%割引のプロモーションを開始しました。このセールは4月29日まで実施されており、Ableton Live 12 SuiteとStandardエディションの両方が対象となります。これは、Ableton Liveユーザーにとってソフトウェアを最新の状態に保つ絶好の機会です。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/news/save-25-on-ableton-live-12-upgrades-packs/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=MNTRA%E3%80%81Roland%20Jupiter-6%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%8CFLTRS-LE%E3%80%8D%E3%82%92%E7%84%A1%E6%96%99%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F25%2Fmntra-fltrs-le%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Ableton%20Live%2012%E3%80%81%E3%82%A2%E3%83%83%E3%83%97%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89%E3%80%81%E3%83%91%E3%83%83%E3%82%AF%E3%81%8C25%25%E3%82%AA%E3%83%95%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fsave-25-on-ableton-live-12-upgrades-packs%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="MNTRA、Roland Jupiter-6フィルタープラグイン「FLTRS-LE」を無料リリース">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Ableton Live 12、アップグレード、パックが25%オフ">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -773,25 +776,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">Bedroom Producers Blog</span>
     </div>
-    <h2>Stone Voices、無料AMラジオシミュレータープラグイン「Retro Radio」をリリース</h2>
-    <p class="summary">Stone Voicesは、ビンテージAMラジオのサウンドをエミュレートする無料プラグイン「Retro Radio」をmacOSとWindows向けにリリースしました。このプラグインは、AMラジオ特有の低忠実度とノイズ感を再現し、楽曲に独特の質感を与えることができます。音楽制作において、意図的に「不完全さ」を取り入れたいクリエイターにとって役立つツールです。</p>
+    <h2>Saelin Audio、ボーカルとアコースティックギター向けの無料アダプティブ・クリアリティ・プラグイン「Shine」をリリース</h2>
+    <p class="summary">Saelin Audioは、ボーカルとアコースティックギター用に設計された無料のアダプティブ・クリアリティ・プラグイン「Shine」をリリースしました。このプラグインは、プリセットなしでリアルタイムにボーカルやギターのプレゼンスとエアを調整し、ワークフローをスピードアップさせます。これは、DAWユーザーにとって無料ながら非常に便利なツールです。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Stone Voicesからリリースされた「Retro Radio」は、古き良きAMラジオのサウンドを忠実に再現する無料のプラグインです。このプラグインは、AMラジオ特有の低音質、ノイズ、そして温かみのあるサウンドキャラクターをエミュレートします。音楽制作者は、このプラグインを使用して、楽曲にレトロな雰囲気や独特の質感を加えることができます。macOSとWindowsの両方に対応しており、誰でも手軽に試すことができます。</p>
+<p class="detail-text">Saelin Audioがリリースした「Shine」は、ボーカルやアコースティックギターのサウンドにクリアさと輝きを加えるための無料プラグインです。このアダプティブ・クリアリティ・プラグインは、演奏のダイナミクスに応じてリアルタイムにプレゼンスとエアのレベルを調整します。従来のEQプラグインとは異なり、Šineは複雑な設定を必要とせず、ドロップ＆ゴーで効果を発揮するため、音楽制作のワークフローを大幅に簡素化します。このプラグインは、ボーカルやアコースティックギターのミックスで、より洗練されたサウンドを実現したいクリエイターにとって貴重なリソースとなります。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F24%2Fstone-voices-retro-radio%2F"
-        data-title="Stone Voices、無料AMラジオシミュレータープラグイン「Retro Radio」をリリース"
-        data-summary="Stone Voicesは、ビンテージAMラジオのサウンドをエミュレートする無料プラグイン「Retro Radio」をmacOSとWindows向けにリリースしました。このプラグインは、AMラジオ特有の低忠実度とノイズ感を再現し、楽曲に独特の質感を与えることができます。音楽制作において、意図的に「不完全さ」を取り入れたいクリエイターにとって役立つツールです。"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F27%2Fsaelin-audio-shine%2F"
+        data-title="Saelin Audio、ボーカルとアコースティックギター向けの無料アダプティブ・クリアリティ・プラグイン「Shine」をリリース"
+        data-summary="Saelin Audioは、ボーカルとアコースティックギター用に設計された無料のアダプティブ・クリアリティ・プラグイン「Shine」をリリースしました。このプラグインは、プリセットなしでリアルタイムにボーカルやギターのプレゼンスとエアを調整し、ワークフローをスピードアップさせます。これは、DAWユーザーにとって無料ながら非常に便利なツールです。"
         data-source="Bedroom Producers Blog"
-        data-url="https://bedroomproducersblog.com/2026/04/24/stone-voices-retro-radio/"
+        data-url="https://bedroomproducersblog.com/2026/04/27/saelin-audio-shine/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Stone%20Voices%E3%80%81%E7%84%A1%E6%96%99AM%E3%83%A9%E3%82%B8%E3%82%AA%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%8CRetro%20Radio%E3%80%8D%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F24%2Fstone-voices-retro-radio%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Saelin%20Audio%E3%80%81%E3%83%9C%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%A8%E3%82%A2%E3%82%B3%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E3%82%AE%E3%82%BF%E3%83%BC%E5%90%91%E3%81%91%E3%81%AE%E7%84%A1%E6%96%99%E3%82%A2%E3%83%80%E3%83%97%E3%83%86%E3%82%A3%E3%83%96%E3%83%BB%E3%82%AF%E3%83%AA%E3%82%A2%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BB%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%8CShine%E3%80%8D%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F27%2Fsaelin-audio-shine%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Stone Voices、無料AMラジオシミュレータープラグイン「Retro Radio」をリリース">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Saelin Audio、ボーカルとアコースティックギター向けの無料アダプティブ・クリアリティ・プラグイン「Shine」をリリース">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -802,25 +805,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">Bedroom Producers Blog</span>
     </div>
-    <h2>Venus Theory、Decent Sampler向け無料タングドラムライブラリ「forms:tongues」をリリース</h2>
-    <p class="summary">開発元のVenus Theoryが、Decent Sampler向けの無料タングドラムライブラリ「forms:tongues」をリリースしました。これは、以前にリリースされた「forms:piano」や「auras:lichen」に続く無料ライブラリです。タングドラムの持つ、静かで催眠的なサウンドは、アンビエント音楽やリラクゼーション音楽の制作に最適です。</p>
+    <h2>Flame Sound、非言語的なボーカルサウンドのコレクション「Free Human Voices」をリリース</h2>
+    <p class="summary">Flame Soundは、4人のプロの声優による1,400種類以上の非言語的な人間のボーカルサウンドを収録した「Free Human Voices」を無料でリリースしました。このサウンドライブラリは、音楽制作やサウンドデザインにおいて、人間的なニュアンスや感情を加えるのに役立ちます。これは、DTMユーザーにとって無料で利用できる高品質なボーカル素材です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Venus Theoryは、Decent Sampler用の無料サウンドライブラリ「forms:tongues」を公開しました。このライブラリは、タングドラムのサウンドをサンプリングしたもので、その静謐で心地よい響きは、アンビエント、チルアウト、またはサウンドデザインの用途に最適です。Venus Theoryはこれまでにも高品質な無料ライブラリを数多く提供しており、この「forms:tongues」もその一つとして、DTMユーザーに広く利用されることが期待されます。</p>
+<p class="detail-text">Flame Soundは、最新のサウンドライブラリ「Free Human Voices」を無料公開しました。このコレクションには、4人のプロの声優が担当した1,400種類以上の非言語的なボーカルサウンドが含まれています。これらのサウンドは、音楽制作におけるエモーショナルな表現や、サウンドデザインにおけるリアリティの追求に役立ちます。Flame Soundは、自身のプレミアムサウンドデザインレーベルであることを明かしつつ、この無料ライブラリがクリエイターコミュニティに貢献することを期待しています。このライブラリは、ボーカル chops、アトモスフィア、またはサウンドエフェクトとして幅広く活用できます。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F24%2Fvenus-theory-froms-tongues%2F"
-        data-title="Venus Theory、Decent Sampler向け無料タングドラムライブラリ「forms:tongues」をリリース"
-        data-summary="開発元のVenus Theoryが、Decent Sampler向けの無料タングドラムライブラリ「forms:tongues」をリリースしました。これは、以前にリリースされた「forms:piano」や「auras:lichen」に続く無料ライブラリです。タングドラムの持つ、静かで催眠的なサウンドは、アンビエント音楽やリラクゼーション音楽の制作に最適です。"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F27%2Ffree-human-voices%2F"
+        data-title="Flame Sound、非言語的なボーカルサウンドのコレクション「Free Human Voices」をリリース"
+        data-summary="Flame Soundは、4人のプロの声優による1,400種類以上の非言語的な人間のボーカルサウンドを収録した「Free Human Voices」を無料でリリースしました。このサウンドライブラリは、音楽制作やサウンドデザインにおいて、人間的なニュアンスや感情を加えるのに役立ちます。これは、DTMユーザーにとって無料で利用できる高品質なボーカル素材です。"
         data-source="Bedroom Producers Blog"
-        data-url="https://bedroomproducersblog.com/2026/04/24/venus-theory-froms-tongues/"
+        data-url="https://bedroomproducersblog.com/2026/04/27/free-human-voices/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Venus%20Theory%E3%80%81Decent%20Sampler%E5%90%91%E3%81%91%E7%84%A1%E6%96%99%E3%82%BF%E3%83%B3%E3%82%B0%E3%83%89%E3%83%A9%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%80%8Cforms%3Atongues%E3%80%8D%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F24%2Fvenus-theory-froms-tongues%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Flame%20Sound%E3%80%81%E9%9D%9E%E8%A8%80%E8%AA%9E%E7%9A%84%E3%81%AA%E3%83%9C%E3%83%BC%E3%82%AB%E3%83%AB%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%81%AE%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8CFree%20Human%20Voices%E3%80%8D%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F27%2Ffree-human-voices%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Venus Theory、Decent Sampler向け無料タングドラムライブラリ「forms:tongues」をリリース">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Flame Sound、非言語的なボーカルサウンドのコレクション「Free Human Voices」をリリース">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -829,19 +832,48 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">Bedroom Producers Blog</span>
+    </div>
+    <h2>Techivation、ドライブ・サチュレーション・コントロール付き無料リニアフェーズ・ティルトEQ「Tilt EQ」をリリース</h2>
+    <p class="summary">Techivationは、macOSおよびWindows向けの無料リニアフェーズ・ティルトEQプラグイン「Tilt EQ」をリリースしました。このプラグインは、ドライブ・サチュレーション機能も備えており、トーンシェーピングの幅を広げます。利用するにはTechivationアカウントの作成が必要ですが、開発者の他の無料プラグインも利用可能になります。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">Techivationから、macOSとWindowsに対応した無料のティルトEQプラグイン「Tilt EQ」が登場しました。このプラグインは、リニアフェーズ処理により音質の劣化を最小限に抑えつつ、サウンドのブライトネスやダークネスを直感的に調整できるティルトEQ機能を搭載しています。さらに、内蔵のドライブ・サチュレーション機能により、サウンドに暖かみや倍音を加えることも可能です。このプラグインを入手するには、Techivationのウェブサイトで無料アカウントを作成する必要がありますが、これにより他の開発者の無料プラグインにもアクセスできるようになります。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F27%2Ftechivation-tilteq%2F"
+        data-title="Techivation、ドライブ・サチュレーション・コントロール付き無料リニアフェーズ・ティルトEQ「Tilt EQ」をリリース"
+        data-summary="Techivationは、macOSおよびWindows向けの無料リニアフェーズ・ティルトEQプラグイン「Tilt EQ」をリリースしました。このプラグインは、ドライブ・サチュレーション機能も備えており、トーンシェーピングの幅を広げます。利用するにはTechivationアカウントの作成が必要ですが、開発者の他の無料プラグインも利用可能になります。"
+        data-source="Bedroom Producers Blog"
+        data-url="https://bedroomproducersblog.com/2026/04/27/techivation-tilteq/"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Techivation%E3%80%81%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%83%BB%E3%82%B5%E3%83%81%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E4%BB%98%E3%81%8D%E7%84%A1%E6%96%99%E3%83%AA%E3%83%8B%E3%82%A2%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA%E3%83%BB%E3%83%86%E3%82%A3%E3%83%AB%E3%83%88EQ%E3%80%8CTilt%20EQ%E3%80%8D%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F04%2F27%2Ftechivation-tilteq%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Techivation、ドライブ・サチュレーション・コントロール付き無料リニアフェーズ・ティルトEQ「Tilt EQ」をリリース">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+  <div class="item-thumb"></div>
+</div>
+<div class="item" style="animation-delay:0.30s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">DTMステーション</span>
     </div>
     <h2>付属ソフトだけで30万円超!? Softubeの新製品Flow Studioは「元が取れる」どころか実質無料級</h2>
-    <p class="summary">Softubeから発売された新しいコントロールサーフェス「Flow Studio」は、付属するソフトウェアだけでも30万円相当の価値があるとのことです。これは、購入者が実質的に無料で多機能な音楽制作環境を手に入れられることを意味します。音楽プロデューサーは、より没入感のあるワークフローを体験できるでしょう。</p>
+    <p class="summary">Softubeから新製品のコントロールサーフェス「Flow Studio」が発売されました。この製品は、音楽プロデューサーが作業に没頭できるような没入感を提供し、付属するソフトウェアの価値は30万円を超え、実質無料級と評価されています。これは、DTM環境をアップグレードしたいユーザーにとって魅力的な選択肢です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">スウェーデンのSoftubeが発表した「Flow Studio」は、単なるハードウェアコントロールサーフェスではありません。付属するソフトウェア群は、合計で30万円を超える価値があるとされており、購入者は多大な恩恵を受けることになります。この製品は、音楽プロデューサーが制作プロセスに深く没入できるよう設計されており、録音からミキシングまで、効率的かつ直感的な操作を可能にします。実質無料級の価値を持つこの製品は、多くのクリエイターにとって魅力的な選択肢となるでしょう。</p>
+<p class="detail-text">スウェーデンのSoftubeが、音楽プロデューサー向けの新しいコントロールサーフェス「Flow Studio」を発表しました。このデバイスは、ワークフローの最適化と没入感の向上を目的として設計されています。Flow Studioには、30万円以上の価値を持つソフトウェアが付属しており、そのコストパフォーマンスの高さから「実質無料級」と評されています。これにより、クリエイターは高度な機能を手軽に導入でき、音楽制作に集中することが可能になります。この製品は、DTM環境の向上を目指すプロフェッショナルや熱心なアマチュアにとって、非常に魅力的な選択肢となるでしょう。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77131.html"
         data-title="付属ソフトだけで30万円超!? Softubeの新製品Flow Studioは「元が取れる」どころか実質無料級"
-        data-summary="Softubeから発売された新しいコントロールサーフェス「Flow Studio」は、付属するソフトウェアだけでも30万円相当の価値があるとのことです。これは、購入者が実質的に無料で多機能な音楽制作環境を手に入れられることを意味します。音楽プロデューサーは、より没入感のあるワークフローを体験できるでしょう。"
+        data-summary="Softubeから新製品のコントロールサーフェス「Flow Studio」が発売されました。この製品は、音楽プロデューサーが作業に没頭できるような没入感を提供し、付属するソフトウェアの価値は30万円を超え、実質無料級と評価されています。これは、DTM環境をアップグレードしたいユーザーにとって魅力的な選択肢です。"
         data-source="DTMステーション"
         data-url="https://www.dtmstation.com/archives/77131.html"
         data-importance="🟡"
@@ -854,23 +886,23 @@ details[open] summary::before { content: "▲ 閉じる"; }
   </div>
   <div class="item-thumb"></div>
 </div>
-<div class="item" style="animation-delay:0.30s">
+<div class="item" style="animation-delay:0.35s">
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">DTMステーション</span>
     </div>
     <h2>UVIがカシオ公認で発売した「VINTAGE CASIO LEGACY」——開発者に聞く、伝説のシンセが現代に蘇るまで</h2>
-    <p class="summary">UVIから、カシオ公認のビンテージシンセサイザー音源ライブラリ「VINTAGE CASIO LEGACY」が発売されました。この記事では、開発者へのインタビューを通じて、CZ、FZ、VZ、HZ、CTK、RZといった伝説的なカシオ機がどのように現代に蘇ったのか、その開発秘話が語られています。往年のカシオサウンドに興味のあるDTMユーザーにとって、貴重な情報源となるでしょう。</p>
+    <p class="summary">UVIがカシオ公認でリリースした音源ライブラリ「VINTAGE CASIO LEGACY」は、6機種の伝説的なカシオ製ビンテージシンセサイザーを収録しています。開発者へのインタビューを通じて、これらのシンセサイザーがどのようにサンプリングされ、現代のDAW環境で再現されるに至ったかの背景が明かされています。これは、レトロシンセサイザーファンにとって興味深い内容です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">UVIがリリースした「VINTAGE CASIO LEGACY」は、カシオの6つの伝説的なビンテージシンセサイザー（CZ、FZ、VZ、HZ、CTK、RZ）を忠実にサンプリングした音源ライブラリです。この記事では、UVIの開発チームが、これらのクラシックシンセサイザーのサウンドをどのように再現し、現代の音楽制作環境に適した形で提供するに至ったのか、その開発プロセスや苦労話に迫ります。カシオの歴史的なサウンドに魅了されたクリエイターにとって、必見の内容です。</p>
+<p class="detail-text">UVIは、カシオの公認を得て、歴代のビンテージカシオシンセサイザー6機種（CZ、FZ、VZ、HZ、CTK、RZ）を収録した音源ライブラリ「VINTAGE CASIO LEGACY」を発売しました。DTMステーションの記事では、このライブラリの開発者へのインタビューを通じて、カシオの伝説的なサウンドを忠実に再現するためのサンプリングプロセスや、現代の音楽制作環境でこれらのサウンドを最大限に活用するための工夫が語られています。往年のカシオサウンドを愛するクリエイターにとって、これは非常に貴重なリソースとなるでしょう。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77039.html"
         data-title="UVIがカシオ公認で発売した「VINTAGE CASIO LEGACY」——開発者に聞く、伝説のシンセが現代に蘇るまで"
-        data-summary="UVIから、カシオ公認のビンテージシンセサイザー音源ライブラリ「VINTAGE CASIO LEGACY」が発売されました。この記事では、開発者へのインタビューを通じて、CZ、FZ、VZ、HZ、CTK、RZといった伝説的なカシオ機がどのように現代に蘇ったのか、その開発秘話が語られています。往年のカシオサウンドに興味のあるDTMユーザーにとって、貴重な情報源となるでしょう。"
+        data-summary="UVIがカシオ公認でリリースした音源ライブラリ「VINTAGE CASIO LEGACY」は、6機種の伝説的なカシオ製ビンテージシンセサイザーを収録しています。開発者へのインタビューを通じて、これらのシンセサイザーがどのようにサンプリングされ、現代のDAW環境で再現されるに至ったかの背景が明かされています。これは、レトロシンセサイザーファンにとって興味深い内容です。"
         data-source="DTMステーション"
         data-url="https://www.dtmstation.com/archives/77039.html"
         data-importance="🟡"
@@ -883,60 +915,31 @@ details[open] summary::before { content: "▲ 閉じる"; }
   </div>
   <div class="item-thumb"></div>
 </div>
-<div class="item" style="animation-delay:0.35s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">MusicRadar</span>
-    </div>
-    <h2>「ケイト・ブッシュがタウンハウス・スタジオでレコーディングしているのを見て、頭を突っ込んできて、『それは何？』と言いました」：イエス、エイジア、バグルスのシンセレジェンド、ジェフ・ダウンズに聞く</h2>
-    <p class="summary">シンセサイザー奏者のジェフ・ダウンズが、Wizzardのオーディションからバグルス、イエス、エイジアでの世界的な成功までの道のりを語っています。特に、ケイト・ブッシュとのスタジオでの偶然の出会いについても言及されており、音楽制作の興味深いエピソードが明かされています。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">このインタビューでは、プログレッシブ・ロック界の重鎮であるジェフ・ダウンズが、自身のキャリアを振り返ります。ポップグループWizzardでの初期の経験から、バグルスの「Video Killed the Radio Star」でのブレイク、そしてイエスやエイジアでの活動まで、彼の音楽人生のハイライトが語られます。特に、伝説的なミュージシャンであるケイト・ブッシュとのスタジオでの逸話は、音楽ファンの関心を引くでしょう。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fkate-bush-saw-me-recording-at-townhouse-studios-popped-her-head-in-saw-the-fairlight-and-said-whats-that-we-speak-to-yes-asia-and-the-buggles-synth-legend-geoff-downes"
-        data-title="「ケイト・ブッシュがタウンハウス・スタジオでレコーディングしているのを見て、頭を突っ込んできて、『それは何？』と言いました」：イエス、エイジア、バグルスのシンセレジェンド、ジェフ・ダウンズに聞く"
-        data-summary="シンセサイザー奏者のジェフ・ダウンズが、Wizzardのオーディションからバグルス、イエス、エイジアでの世界的な成功までの道のりを語っています。特に、ケイト・ブッシュとのスタジオでの偶然の出会いについても言及されており、音楽制作の興味深いエピソードが明かされています。"
-        data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/kate-bush-saw-me-recording-at-townhouse-studios-popped-her-head-in-saw-the-fairlight-and-said-whats-that-we-speak-to-yes-asia-and-the-buggles-synth-legend-geoff-downes"
-        data-importance="🟢"
-        data-category="DTM">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%82%B1%E3%82%A4%E3%83%88%E3%83%BB%E3%83%96%E3%83%83%E3%82%B7%E3%83%A5%E3%81%8C%E3%82%BF%E3%82%A6%E3%83%B3%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA%E3%81%A7%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%82%92%E8%A6%8B%E3%81%A6%E3%80%81%E9%A0%AD%E3%82%92%E7%AA%81%E3%81%A3%E8%BE%BC%E3%82%93%E3%81%A7%E3%81%8D%E3%81%A6%E3%80%81%E3%80%8E%E3%81%9D%E3%82%8C%E3%81%AF%E4%BD%95%EF%BC%9F%E3%80%8F%E3%81%A8%E8%A8%80%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F%E3%80%8D%EF%BC%9A%E3%82%A4%E3%82%A8%E3%82%B9%E3%80%81%E3%82%A8%E3%82%A4%E3%82%B8%E3%82%A2%E3%80%81%E3%83%90%E3%82%B0%E3%83%AB%E3%82%B9%E3%81%AE%E3%82%B7%E3%83%B3%E3%82%BB%E3%83%AC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%89%E3%80%81%E3%82%B8%E3%82%A7%E3%83%95%E3%83%BB%E3%83%80%E3%82%A6%E3%83%B3%E3%82%BA%E3%81%AB%E8%81%9E%E3%81%8F%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fkate-bush-saw-me-recording-at-townhouse-studios-popped-her-head-in-saw-the-fairlight-and-said-whats-that-we-speak-to-yes-asia-and-the-buggles-synth-legend-geoff-downes" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「ケイト・ブッシュがタウンハウス・スタジオでレコーディングしているのを見て、頭を突っ込んできて、『それは何？』と言いました」：イエス、エイジア、バグルスのシンセレジェンド、ジェフ・ダウンズに聞く">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-  <div class="item-thumb"></div>
-</div>
 <div class="item" style="animation-delay:0.40s">
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">MusicRadar</span>
     </div>
-    <h2>「彼はしばしば2つのバナーを持ってセッションに現れ、キットの両側に設置してレコーディングしていました。『ヒットメーカーを雇ったぞ』と書かれていました」：パーディー・シャッフルからジャズの延長コードまで - スティーリー・ダンの『Babylon Sisters』を分析</h2>
-    <p class="summary">この記事では、スティーリー・ダンの楽曲「Babylon Sisters」に焦点を当て、その制作過程と音楽的特徴を分析しています。特に、ミキシングに274回もの試行錯誤を要したという逸話が紹介されており、楽曲の複雑さと完成度の高さが伺えます。また、レコーディング時のユニークなエピソードも語られています。</p>
+    <h2>「ネドラの声、スタイル、そして精神は音楽を変えるサウンドを定義するのに役立った。グループの物語と彼らの決定的影響力への彼女の貢献は永遠に生き続けるだろう」：The Ronettesの最後の存命メンバー、ネドラ・タリー・ロスが死去</h2>
+    <p class="summary">伝説的なグループ、The Ronettesの最後の存命メンバーであったネドラ・タリー・ロスが80歳で亡くなりました。彼女の声、スタイル、精神はグループのサウンドを定義し、音楽史に大きな影響を与えました。彼女の音楽への貢献と影響は、今後も語り継がれていくでしょう。</p>
     <details>
 <summary></summary>
-<p class="detail-text">「Babylon Sisters」は、スティーリー・ダンの代表曲の一つであり、その複雑なアレンジと洗練されたサウンドで知られています。この記事では、楽曲のパーディー・シャッフルに代表されるリズムパターン、ジャズからの影響を受けたコード進行、そしてエンジニアリングの苦労話などを掘り下げています。274回ものミキシング試行錯誤は、この楽曲がいかに丹念に作り上げられたかを示しています。</p>
+<p class="detail-text">The Ronettesの最後の存命メンバーであったネドラ・タリー・ロスさんが、80歳で死去しました。彼女は、グループの象徴的なサウンドとスタイルを形成する上で中心的な役割を果たしました。彼女のヴォーカルパフォーマンスと芸術的な貢献は、1960年代の音楽シーンに多大な影響を与え、後世のアーティストにもインスピレーションを与え続けています。彼女の死は音楽業界にとって大きな損失ですが、彼女の遺した音楽と功績は、永遠に記憶されるでしょう。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fhe-would-often-arrive-at-sessions-with-two-banners-which-he-placed-either-side-of-his-kit-while-recording-reading-you-done-hired-the-hit-maker-from-the-purdie-shuffle-to-its-extended-jazz-chords-analysing-steely-dans-babylon-sisters"
-        data-title="「彼はしばしば2つのバナーを持ってセッションに現れ、キットの両側に設置してレコーディングしていました。『ヒットメーカーを雇ったぞ』と書かれていました」：パーディー・シャッフルからジャズの延長コードまで - スティーリー・ダンの『Babylon Sisters』を分析"
-        data-summary="この記事では、スティーリー・ダンの楽曲「Babylon Sisters」に焦点を当て、その制作過程と音楽的特徴を分析しています。特に、ミキシングに274回もの試行錯誤を要したという逸話が紹介されており、楽曲の複雑さと完成度の高さが伺えます。また、レコーディング時のユニークなエピソードも語られています。"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingers-songwriters%2Fnedras-voice-style-and-spirit-helped-define-a-sound-that-would-change-music-her-contribution-to-the-groups-story-and-their-defining-influence-will-live-forever-the-last-surviving-member-of-the-ronettes-nedra-talley-ross-has-died"
+        data-title="「ネドラの声、スタイル、そして精神は音楽を変えるサウンドを定義するのに役立った。グループの物語と彼らの決定的影響力への彼女の貢献は永遠に生き続けるだろう」：The Ronettesの最後の存命メンバー、ネドラ・タリー・ロスが死去"
+        data-summary="伝説的なグループ、The Ronettesの最後の存命メンバーであったネドラ・タリー・ロスが80歳で亡くなりました。彼女の声、スタイル、精神はグループのサウンドを定義し、音楽史に大きな影響を与えました。彼女の音楽への貢献と影響は、今後も語り継がれていくでしょう。"
         data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/he-would-often-arrive-at-sessions-with-two-banners-which-he-placed-either-side-of-his-kit-while-recording-reading-you-done-hired-the-hit-maker-from-the-purdie-shuffle-to-its-extended-jazz-chords-analysing-steely-dans-babylon-sisters"
+        data-url="https://www.musicradar.com/artists/singers-songwriters/nedras-voice-style-and-spirit-helped-define-a-sound-that-would-change-music-her-contribution-to-the-groups-story-and-their-defining-influence-will-live-forever-the-last-surviving-member-of-the-ronettes-nedra-talley-ross-has-died"
         data-importance="🟢"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E5%BD%BC%E3%81%AF%E3%81%97%E3%81%B0%E3%81%97%E3%81%B02%E3%81%A4%E3%81%AE%E3%83%90%E3%83%8A%E3%83%BC%E3%82%92%E6%8C%81%E3%81%A3%E3%81%A6%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E7%8F%BE%E3%82%8C%E3%80%81%E3%82%AD%E3%83%83%E3%83%88%E3%81%AE%E4%B8%A1%E5%81%B4%E3%81%AB%E8%A8%AD%E7%BD%AE%E3%81%97%E3%81%A6%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E3%80%8E%E3%83%92%E3%83%83%E3%83%88%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E3%82%92%E9%9B%87%E3%81%A3%E3%81%9F%E3%81%9E%E3%80%8F%E3%81%A8%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%A6%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F%E3%80%8D%EF%BC%9A%E3%83%91%E3%83%BC%E3%83%87%E3%82%A3%E3%83%BC%E3%83%BB%E3%82%B7%E3%83%A3%E3%83%83%E3%83%95%E3%83%AB%E3%81%8B%E3%82%89%E3%82%B8%E3%83%A3%E3%82%BA%E3%81%AE%E5%BB%B6%E9%95%B7%E3%82%B3%E3%83%BC%E3%83%89%E3%81%BE%E3%81%A7%20-%20%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%80%E3%83%B3%E3%81%AE%E3%80%8EBabylon%20Sisters%E3%80%8F%E3%82%92%E5%88%86%E6%9E%90%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fhe-would-often-arrive-at-sessions-with-two-banners-which-he-placed-either-side-of-his-kit-while-recording-reading-you-done-hired-the-hit-maker-from-the-purdie-shuffle-to-its-extended-jazz-chords-analysing-steely-dans-babylon-sisters" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%83%8D%E3%83%89%E3%83%A9%E3%81%AE%E5%A3%B0%E3%80%81%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E7%B2%BE%E7%A5%9E%E3%81%AF%E9%9F%B3%E6%A5%BD%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9A%E7%BE%A9%E3%81%99%E3%82%8B%E3%81%AE%E3%81%AB%E5%BD%B9%E7%AB%8B%E3%81%A3%E3%81%9F%E3%80%82%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E7%89%A9%E8%AA%9E%E3%81%A8%E5%BD%BC%E3%82%89%E3%81%AE%E6%B1%BA%E5%AE%9A%E7%9A%84%E5%BD%B1%E9%9F%BF%E5%8A%9B%E3%81%B8%E3%81%AE%E5%BD%BC%E5%A5%B3%E3%81%AE%E8%B2%A2%E7%8C%AE%E3%81%AF%E6%B0%B8%E9%81%A0%E3%81%AB%E7%94%9F%E3%81%8D%E7%B6%9A%E3%81%91%E3%82%8B%E3%81%A0%E3%82%8D%E3%81%86%E3%80%8D%EF%BC%9AThe%20Ronettes%E3%81%AE%E6%9C%80%E5%BE%8C%E3%81%AE%E5%AD%98%E5%91%BD%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E3%80%81%E3%83%8D%E3%83%89%E3%83%A9%E3%83%BB%E3%82%BF%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%AD%E3%82%B9%E3%81%8C%E6%AD%BB%E5%8E%BB%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingers-songwriters%2Fnedras-voice-style-and-spirit-helped-define-a-sound-that-would-change-music-her-contribution-to-the-groups-story-and-their-defining-influence-will-live-forever-the-last-surviving-member-of-the-ronettes-nedra-talley-ross-has-died" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「彼はしばしば2つのバナーを持ってセッションに現れ、キットの両側に設置してレコーディングしていました。『ヒットメーカーを雇ったぞ』と書かれていました」：パーディー・シャッフルからジャズの延長コードまで - スティーリー・ダンの『Babylon Sisters』を分析">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「ネドラの声、スタイル、そして精神は音楽を変えるサウンドを定義するのに役立った。グループの物語と彼らの決定的影響力への彼女の貢献は永遠に生き続けるだろう」：The Ronettesの最後の存命メンバー、ネドラ・タリー・ロスが死去">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -947,25 +950,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">MusicRadar</span>
     </div>
-    <h2>「それはリーにとって起こった最良のことであると同時に最悪のことだ。彼は完璧な曲を書いたが、それは彼が何もする必要がないことを意味している。なぜなら彼は絶え間ない収入源を持っているからだ」：『There She Goes』の苦痛に満ちた、そして皮肉な物語</h2>
-    <p class="summary">この曲は、あるミュージシャンにとって成功の象徴であると同時に、創造的な停滞の原因ともなったという皮肉な物語を語っています。楽曲の成功が、その後の活動にどのような影響を与えたのか、その複雑な人間ドラマが描かれています。その楽曲は、「There She Goes」です。</p>
+    <h2>「もしネガティブなことがあれば、彼らがそれを公開しなかった理由がわかる」：プリンスの最初の妻、メイテ・ガルシアが彼についてのキャンセルされたNetflixドキュメンタリーについて語り、彼らとの関係についての彼女の本が映画化されることを確認</h2>
+    <p class="summary">プリンスの最初の妻であるメイテ・ガルシアが、キャンセルされたNetflixドキュメンタリーについて、その内容に理解を示しつつ、彼との関係を描いた自身の書籍が映画化されることを明らかにしました。彼女は、プリンスの音楽と類まれな才能こそが最も重要であると語っています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">「There She Goes」という楽曲は、その作者にとって大きな成功をもたらしましたが、同時に創造的なスランプを招いたとも言われています。この記事では、この曲がどのようにして生まれたのか、そしてその成功が作者のキャリアにどのような影響を与えたのかを詳細に分析しています。成功と停滞という二律背反の状況が、ミュージシャンの人生にどのように作用したのか、その深層心理に迫ります。</p>
+<p class="detail-text">プリンスの元妻であるメイテ・ガルシア氏が、プリンスに関するNetflixドキュメンタリーのキャンセルについて、その決定に理解を示しました。彼女は、ドキュメンタリーの内容には「ネガティブなこと」が含まれていた可能性があり、それが公開されなかった理由かもしれないと示唆しています。また、彼女は自身がプリンスとの関係について執筆した書籍が映画化されることも明かしました。ガルシア氏は、プリンスの「非凡な」才能と音楽こそが称賛されるべきだと強調しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingles-albums%2Fits-the-best-thing-thats-happened-to-lee-but-also-the-worst-he-wrote-this-perfect-song-but-its-meant-he-hasnt-had-to-do-anything-because-he-has-a-constant-source-of-income-the-torturous-and-ironic-story-of-there-she-goes"
-        data-title="「それはリーにとって起こった最良のことであると同時に最悪のことだ。彼は完璧な曲を書いたが、それは彼が何もする必要がないことを意味している。なぜなら彼は絶え間ない収入源を持っているからだ」：『There She Goes』の苦痛に満ちた、そして皮肉な物語"
-        data-summary="この曲は、あるミュージシャンにとって成功の象徴であると同時に、創造的な停滞の原因ともなったという皮肉な物語を語っています。楽曲の成功が、その後の活動にどのような影響を与えたのか、その複雑な人間ドラマが描かれています。その楽曲は、「There She Goes」です。"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fif-theres-anything-negative-i-understand-why-they-didnt-put-it-out-princes-first-wife-mayte-garcia-has-her-say-on-the-cancelled-netflix-documentary-about-him-and-confirms-that-her-book-about-their-relationship-is-being-turned-into-a-movie"
+        data-title="「もしネガティブなことがあれば、彼らがそれを公開しなかった理由がわかる」：プリンスの最初の妻、メイテ・ガルシアが彼についてのキャンセルされたNetflixドキュメンタリーについて語り、彼らとの関係についての彼女の本が映画化されることを確認"
+        data-summary="プリンスの最初の妻であるメイテ・ガルシアが、キャンセルされたNetflixドキュメンタリーについて、その内容に理解を示しつつ、彼との関係を描いた自身の書籍が映画化されることを明らかにしました。彼女は、プリンスの音楽と類まれな才能こそが最も重要であると語っています。"
         data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/singles-albums/its-the-best-thing-thats-happened-to-lee-but-also-the-worst-he-wrote-this-perfect-song-but-its-meant-he-hasnt-had-to-do-anything-because-he-has-a-constant-source-of-income-the-torturous-and-ironic-story-of-there-she-goes"
+        data-url="https://www.musicradar.com/artists/if-theres-anything-negative-i-understand-why-they-didnt-put-it-out-princes-first-wife-mayte-garcia-has-her-say-on-the-cancelled-netflix-documentary-about-him-and-confirms-that-her-book-about-their-relationship-is-being-turned-into-a-movie"
         data-importance="🟢"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%81%9D%E3%82%8C%E3%81%AF%E3%83%AA%E3%83%BC%E3%81%AB%E3%81%A8%E3%81%A3%E3%81%A6%E8%B5%B7%E3%81%93%E3%81%A3%E3%81%9F%E6%9C%80%E8%89%AF%E3%81%AE%E3%81%93%E3%81%A8%E3%81%A7%E3%81%82%E3%82%8B%E3%81%A8%E5%90%8C%E6%99%82%E3%81%AB%E6%9C%80%E6%82%AA%E3%81%AE%E3%81%93%E3%81%A8%E3%81%A0%E3%80%82%E5%BD%BC%E3%81%AF%E5%AE%8C%E7%92%A7%E3%81%AA%E6%9B%B2%E3%82%92%E6%9B%B8%E3%81%84%E3%81%9F%E3%81%8C%E3%80%81%E3%81%9D%E3%82%8C%E3%81%AF%E5%BD%BC%E3%81%8C%E4%BD%95%E3%82%82%E3%81%99%E3%82%8B%E5%BF%85%E8%A6%81%E3%81%8C%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E6%84%8F%E5%91%B3%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82%E3%81%AA%E3%81%9C%E3%81%AA%E3%82%89%E5%BD%BC%E3%81%AF%E7%B5%B6%E3%81%88%E9%96%93%E3%81%AA%E3%81%84%E5%8F%8E%E5%85%A5%E6%BA%90%E3%82%92%E6%8C%81%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%81%8B%E3%82%89%E3%81%A0%E3%80%8D%EF%BC%9A%E3%80%8EThere%20She%20Goes%E3%80%8F%E3%81%AE%E8%8B%A6%E7%97%9B%E3%81%AB%E6%BA%80%E3%81%A1%E3%81%9F%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E7%9A%AE%E8%82%89%E3%81%AA%E7%89%A9%E8%AA%9E%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingles-albums%2Fits-the-best-thing-thats-happened-to-lee-but-also-the-worst-he-wrote-this-perfect-song-but-its-meant-he-hasnt-had-to-do-anything-because-he-has-a-constant-source-of-income-the-torturous-and-ironic-story-of-there-she-goes" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%82%82%E3%81%97%E3%83%8D%E3%82%AC%E3%83%86%E3%82%A3%E3%83%96%E3%81%AA%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8C%E3%81%B0%E3%80%81%E5%BD%BC%E3%82%89%E3%81%8C%E3%81%9D%E3%82%8C%E3%82%92%E5%85%AC%E9%96%8B%E3%81%97%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F%E7%90%86%E7%94%B1%E3%81%8C%E3%82%8F%E3%81%8B%E3%82%8B%E3%80%8D%EF%BC%9A%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B9%E3%81%AE%E6%9C%80%E5%88%9D%E3%81%AE%E5%A6%BB%E3%80%81%E3%83%A1%E3%82%A4%E3%83%86%E3%83%BB%E3%82%AC%E3%83%AB%E3%82%B7%E3%82%A2%E3%81%8C%E5%BD%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%BB%E3%83%AB%E3%81%95%E3%82%8C%E3%81%9FNetflix%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%82%BF%E3%83%AA%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%9E%E3%82%8A%E3%80%81%E5%BD%BC%E3%82%89%E3%81%A8%E3%81%AE%E9%96%A2%E4%BF%82%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E5%BD%BC%E5%A5%B3%E3%81%AE%E6%9C%AC%E3%81%8C%E6%98%A0%E7%94%BB%E5%8C%96%E3%81%95%E3%82%8C%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fif-theres-anything-negative-i-understand-why-they-didnt-put-it-out-princes-first-wife-mayte-garcia-has-her-say-on-the-cancelled-netflix-documentary-about-him-and-confirms-that-her-book-about-their-relationship-is-being-turned-into-a-movie" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「それはリーにとって起こった最良のことであると同時に最悪のことだ。彼は完璧な曲を書いたが、それは彼が何もする必要がないことを意味している。なぜなら彼は絶え間ない収入源を持っているからだ」：『There She Goes』の苦痛に満ちた、そして皮肉な物語">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「もしネガティブなことがあれば、彼らがそれを公開しなかった理由がわかる」：プリンスの最初の妻、メイテ・ガルシアが彼についてのキャンセルされたNetflixドキュメンタリーについて語り、彼らとの関係についての彼女の本が映画化されることを確認">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -976,25 +979,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">Attack Magazine</span>
     </div>
-    <h2>レディ・タズ：「私は「より大きな集合体」を心から信じています」</h2>
-    <p class="summary">DJのレディ・タズは、テクノサウンド、Mind Medizinプラットフォーム、そしてパイロット、レーベルオーナー、ビジネスオーナー、テニスプレイヤーといった多様な活動について語っています。彼女のユニークな経験が、彼女の音楽と人生観にどのように影響を与えているかが探求されています。</p>
+    <h2>Lady Tazz – 「私は真に、より大きな集合体を信じている」</h2>
+    <p class="summary">DJ、レーベルオーナー、パイロットなど多才なLady Tazzが、自身のキャリアやインスピレーションについて語っています。彼女は、ホラー映画、SFドラマ、航空、そしてカール・ユングの心理学に影響を受け、自身の音楽制作やMind Medizinプラットフォームに活かしています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この記事では、DJであり、パイロット、レーベルオーナーなど多才な顔を持つレディ・タズ氏へのインタビューが掲載されています。彼女は、自身のDJ活動、Mind Medizinというプラットフォーム、そして人生における多様な経験が、どのように彼女の音楽制作や世界観を形成しているかを語っています。特に、心理学者のカール・ユングの「集合的無意識」の概念に触れ、人類の繋がりについて考察しています。</p>
+<p class="detail-text">DJであり、Mind Medizinプラットフォームの主宰者でもあるLady Tazzは、音楽活動以外にもパイロット、レーベルオーナー、テニスプレイヤーといった多彩な顔を持っています。彼女は、ホラー映画『Evil Dead』、SFドラマ『True Blood』、航空ドキュメンタリー、そしてカール・ユングの「集合的無意識」の概念にインスピレーションを受けています。これらの多様な経験が、彼女のアンコンプロマイジングなテクノサウンドと、プラットフォーム運営における「より大きな集合体」への信念を形成していると語っています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Fshow-and-tell%2Flady-tazz-i-genuinely-believe-in-the-greater-collective%2F"
-        data-title="レディ・タズ：「私は「より大きな集合体」を心から信じています」"
-        data-summary="DJのレディ・タズは、テクノサウンド、Mind Medizinプラットフォーム、そしてパイロット、レーベルオーナー、ビジネスオーナー、テニスプレイヤーといった多様な活動について語っています。彼女のユニークな経験が、彼女の音楽と人生観にどのように影響を与えているかが探求されています。"
+        data-title="Lady Tazz – 「私は真に、より大きな集合体を信じている」"
+        data-summary="DJ、レーベルオーナー、パイロットなど多才なLady Tazzが、自身のキャリアやインスピレーションについて語っています。彼女は、ホラー映画、SFドラマ、航空、そしてカール・ユングの心理学に影響を受け、自身の音楽制作やMind Medizinプラットフォームに活かしています。"
         data-source="Attack Magazine"
         data-url="https://www.attackmagazine.com/features/show-and-tell/lady-tazz-i-genuinely-believe-in-the-greater-collective/"
         data-importance="🟢"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%AC%E3%83%87%E3%82%A3%E3%83%BB%E3%82%BF%E3%82%BA%EF%BC%9A%E3%80%8C%E7%A7%81%E3%81%AF%E3%80%8C%E3%82%88%E3%82%8A%E5%A4%A7%E3%81%8D%E3%81%AA%E9%9B%86%E5%90%88%E4%BD%93%E3%80%8D%E3%82%92%E5%BF%83%E3%81%8B%E3%82%89%E4%BF%A1%E3%81%98%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%8D%20https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Fshow-and-tell%2Flady-tazz-i-genuinely-believe-in-the-greater-collective%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Lady%20Tazz%20%E2%80%93%20%E3%80%8C%E7%A7%81%E3%81%AF%E7%9C%9F%E3%81%AB%E3%80%81%E3%82%88%E3%82%8A%E5%A4%A7%E3%81%8D%E3%81%AA%E9%9B%86%E5%90%88%E4%BD%93%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6%E3%81%84%E3%82%8B%E3%80%8D%20https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Fshow-and-tell%2Flady-tazz-i-genuinely-believe-in-the-greater-collective%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="レディ・タズ：「私は「より大きな集合体」を心から信じています」">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Lady Tazz – 「私は真に、より大きな集合体を信じている」">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -1006,16 +1009,16 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="item-source">DTMステーション</span>
     </div>
     <h2>物理モデリングvs大容量サンプリング——ピアノ音源の選び方をPianoteq 9とIvory 3 German Dで徹底検証</h2>
-    <p class="summary">この記事では、ソフトウェアピアノ音源の二大アプローチである「物理モデリング」と「大容量サンプリング」を、Pianoteq 9とIvory 3 German Dを例に徹底的に比較検証しています。どちらのアプローチがどのようなユーザーに適しているのか、具体的なサウンドの違いや特徴が詳細に解説されており、ピアノ音源選びに迷っているユーザーにとって、非常に参考になる内容です。</p>
+    <p class="summary">ピアノ音源の選択において、物理モデリングと大容量サンプリングという二つの主要なアプローチが比較検証されています。Pianoteq 9とIvory 3 German Dを例に、それぞれの特徴、メリット・デメリット、そしてどのようなユーザーに適しているかが詳細に分析されています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">ソフトウェアピアノ音源の選択において、物理モデリングとサンプリングという二つの主要な技術が存在します。この記事では、Pianoteq 9（物理モデリング）とIvory 3 German D（サンプリング）という代表的な製品を比較し、それぞれの音響特性、演奏感、CPU負荷などの違いを詳細に分析しています。これにより、ユーザーは自身の音楽ジャンル、制作環境、そして好みに合ったピアノ音源を選ぶための明確な指針を得ることができます。</p>
+<p class="detail-text">ソフトウェアピアノ音源の選択肢は、物理モデリングと大容量サンプリングの二つに大別されます。DTMステーションの記事では、Pianoteq 9（物理モデリング）とIvory 3 German D（大容量サンプリング）を具体例として挙げ、それぞれの音質、演奏性、CPU負荷、そして表現力の違いを徹底的に検証しています。この記事は、ピアノ音源の購入を検討しているユーザーが、自身の制作スタイルや目的に最適な音源を選択するための貴重な情報源となります。どちらのアプローチが優れているかではなく、それぞれの特性を理解し、使い分けることの重要性が示唆されています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77084.html"
         data-title="物理モデリングvs大容量サンプリング——ピアノ音源の選び方をPianoteq 9とIvory 3 German Dで徹底検証"
-        data-summary="この記事では、ソフトウェアピアノ音源の二大アプローチである「物理モデリング」と「大容量サンプリング」を、Pianoteq 9とIvory 3 German Dを例に徹底的に比較検証しています。どちらのアプローチがどのようなユーザーに適しているのか、具体的なサウンドの違いや特徴が詳細に解説されており、ピアノ音源選びに迷っているユーザーにとって、非常に参考になる内容です。"
+        data-summary="ピアノ音源の選択において、物理モデリングと大容量サンプリングという二つの主要なアプローチが比較検証されています。Pianoteq 9とIvory 3 German Dを例に、それぞれの特徴、メリット・デメリット、そしてどのようなユーザーに適しているかが詳細に分析されています。"
         data-source="DTMステーション"
         data-url="https://www.dtmstation.com/archives/77084.html"
         data-importance="🟢"
@@ -1037,16 +1040,16 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="item-source">note クリエイター収益</span>
     </div>
     <h2>スマホ完結｜収益構造の裏側と回る仕組みの全設計</h2>
-    <p class="summary">この記事は、スマートフォンだけで完結する収益構造の裏側と、その仕組み全体を設計する方法について解説しています。ただし、特定の成果や収益を保証するものではなく、個人の実行量や環境によって結果は変動する可能性があると注意書きされています。SNS運用やAIツールの活用についても触れられており、最新のトレンドを踏まえた収益化戦略に興味がある読者にとって有益な情報を提供しています。</p>
+    <p class="summary">本記事は、スマートフォンのみで完結する収益構造の設計について、実体験や調査に基づいた詳細な解説を提供しています。収益化の仕組み、その背後にある構造、そして効果的な運用方法について、具体的な設計図としてまとめられています。ただし、成果を保証するものではなく、個人の努力や環境に依存することを注意喚起しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">本記事は、スマートフォンを活用した収益化モデルの設計に特化しています。収益構造の構築から、それを継続的に機能させるための仕組みまでを網羅的に解説。SNS運用、自動化、AIツールの活用といった現代的な手法についても言及されています。ただし、著者は、これらの手法が必ずしも成功を保証するものではなく、市場状況や個人の努力によって成果が大きく左右されることを強調しており、利用者は最新の利用規約やガイドラインを確認し、自己責任で運用することが求められています。</p>
+<p class="detail-text">この記事は、スマートフォンだけで収益を生み出すためのビジネスモデルの全設計図を提示しています。筆者は、実体験や調査に基づいて、収益構造の裏側と、それを円滑に機能させるための仕組みを詳細に解説しています。SNS運用、自動化、AIツールの活用についても触れられていますが、プラットフォームの規約変更や仕様変更による影響の可能性も指摘されています。読者に対して、掲載内容は情報提供を目的としたものであり、特定の成果を保証するものではないこと、また、自己責任での利用を求めている点も明記されています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fnote.com%2Fdeft_eel6718%2Fn%2Fn4519f4d01600"
         data-title="スマホ完結｜収益構造の裏側と回る仕組みの全設計"
-        data-summary="この記事は、スマートフォンだけで完結する収益構造の裏側と、その仕組み全体を設計する方法について解説しています。ただし、特定の成果や収益を保証するものではなく、個人の実行量や環境によって結果は変動する可能性があると注意書きされています。SNS運用やAIツールの活用についても触れられており、最新のトレンドを踏まえた収益化戦略に興味がある読者にとって有益な情報を提供しています。"
+        data-summary="本記事は、スマートフォンのみで完結する収益構造の設計について、実体験や調査に基づいた詳細な解説を提供しています。収益化の仕組み、その背後にある構造、そして効果的な運用方法について、具体的な設計図としてまとめられています。ただし、成果を保証するものではなく、個人の努力や環境に依存することを注意喚起しています。"
         data-source="note クリエイター収益"
         data-url="https://note.com/deft_eel6718/n/n4519f4d01600"
         data-importance="🟡"
@@ -1066,16 +1069,16 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="item-source">note クリエイター収益</span>
     </div>
     <h2>TuneCoreで初めて収益が出た──543再生で153円「よく再生されたな」</h2>
-    <p class="summary">TuneCoreで楽曲を配信している著者が、初めて収益が発生したことを報告しています。543回の再生で153円という収益額に「よく再生されたな」とコメントしており、インディペンデントアーティストの収益化の現実を示唆しています。これは、楽曲配信プラットフォームでの収益化のリアルな事例として興味深いです。</p>
+    <p class="summary">TuneCoreを通じて楽曲を配信している筆者が、初めて収益を得た体験を綴っています。543回の再生で153円という結果に、驚きとともに喜びを感じています。この経験は、インディーズミュージシャンがデジタル配信プラットフォームで収益化を目指す上での、小さな一歩を示すものです。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この記事は、インディペンデントアーティストが音楽配信プラットフォームTuneCoreを通じて収益を得た際の、初収益の記録を綴っています。543回の再生で得られた収益は153円という modest なものでしたが、著者にとっては大きな一歩であったことが伺えます。この体験談は、楽曲配信における収益化の現実と、インディペンデントアーティストが直面する課題を浮き彫りにしています。</p>
+<p class="detail-text">TuneCoreで楽曲を配信している筆者が、初めて収益が発生したことを報告しています。543回の再生で得られた収益は153円でしたが、筆者は「よく再生されたな」と、その結果に満足感を示しています。これは、インディーズミュージシャンがデジタル配信プラットフォームを通じて収益を上げるための、初期段階での貴重な経験談と言えます。この小さな成功体験は、他のアーティストにとっても、収益化へのモチベーションとなる可能性があります。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fnote.com%2Fakausa28%2Fn%2Fn045b7cb9a532"
         data-title="TuneCoreで初めて収益が出た──543再生で153円「よく再生されたな」"
-        data-summary="TuneCoreで楽曲を配信している著者が、初めて収益が発生したことを報告しています。543回の再生で153円という収益額に「よく再生されたな」とコメントしており、インディペンデントアーティストの収益化の現実を示唆しています。これは、楽曲配信プラットフォームでの収益化のリアルな事例として興味深いです。"
+        data-summary="TuneCoreを通じて楽曲を配信している筆者が、初めて収益を得た体験を綴っています。543回の再生で153円という結果に、驚きとともに喜びを感じています。この経験は、インディーズミュージシャンがデジタル配信プラットフォームで収益化を目指す上での、小さな一歩を示すものです。"
         data-source="note クリエイター収益"
         data-url="https://note.com/akausa28/n/n045b7cb9a532"
         data-importance="🟡"
@@ -1095,16 +1098,16 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="item-source">note クリエイター収益</span>
     </div>
     <h2>フォロワー1000人以下でも月収50万円——AIで「小さく強い」クリエイター収益モデルを設計する方法</h2>
-    <p class="summary">この記事では、フォロワー数が1000人以下でも月収50万円を達成するための、AIを活用した「小さく強い」クリエイター収益モデルの設計方法を解説しています。フォロワー数に依存しない収益モデルの原理や、4つの収益エンジン、そして具体的なアクションプランが示されており、個人クリエイターにとって実践的なノウハウが詰まっています。</p>
+    <p class="summary">本記事は、AI時代においてフォロワー数に依存しない「小さく強い」クリエイター収益モデルの設計方法を解説しています。AIを活用して、小さなファンベースからでも月収50万円を達成するための4つの収益エンジン、高密度な収益化戦略、そして具体的なアクションプランが提示されています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">本記事は、AI時代におけるフォロワー数に依存しない収益モデルの構築に焦点を当てています。フォロワーが少ない状態でも月収50万円を実現するための「4つの収益エンジン」と、それを高密度に収益化する「濃度設計」の手法を具体的に解説。さらに、3人の実践者のモデルを紹介し、今日・今週・今月という段階的なアクションプランを提示しています。個人クリエイターが低フォロワー数でも経済的な成功を収めるための実践的なガイドとなっています。</p>
+<p class="detail-text">AI時代におけるクリエイターの収益化戦略に焦点を当てたこの記事では、フォロワー数が少なくても月収50万円を達成するための具体的な方法論が解説されています。AIを活用し、フォロワー数に依存しない収益モデルを設計するための「4つの収益エンジン」や、ファンベースの「濃度」を高める戦略が提示されています。さらに、記事では、フォロワー数百人規模で月収50万円を実現した3名の具体的な事例も紹介されており、読者が自身の状況に合わせて収益モデルを構築するための実践的なガイドとなっています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fnote.com%2Fsei_ryu5055%2Fn%2Fn059fac5da37b"
         data-title="フォロワー1000人以下でも月収50万円——AIで「小さく強い」クリエイター収益モデルを設計する方法"
-        data-summary="この記事では、フォロワー数が1000人以下でも月収50万円を達成するための、AIを活用した「小さく強い」クリエイター収益モデルの設計方法を解説しています。フォロワー数に依存しない収益モデルの原理や、4つの収益エンジン、そして具体的なアクションプランが示されており、個人クリエイターにとって実践的なノウハウが詰まっています。"
+        data-summary="本記事は、AI時代においてフォロワー数に依存しない「小さく強い」クリエイター収益モデルの設計方法を解説しています。AIを活用して、小さなファンベースからでも月収50万円を達成するための4つの収益エンジン、高密度な収益化戦略、そして具体的なアクションプランが提示されています。"
         data-source="note クリエイター収益"
         data-url="https://note.com/sei_ryu5055/n/n059fac5da37b"
         data-importance="🟡"
@@ -1120,28 +1123,28 @@ details[open] summary::before { content: "▲ 閉じる"; }
 <div class="item" style="animation-delay:0.15s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">東洋経済オンライン</span>
     </div>
-    <h2>｢レジ袋は白にしますか？黒にしますか？｣　"1年半ぶりに帰国"した日本人がモヤっとした｢3つの出来事｣　 | ライフ | 東洋経済オンライン</h2>
-    <p class="summary">30年間イタリアで暮らした筆者が、1年半ぶりに日本に一時帰国した際に感じた「モヤっとした」3つの出来事について述べています。レジ袋の色選び、過剰な暖房設定、そして観光客増加による違和感など、外国の視点から見た日本の日常が描かれています。これは、日本の社会や文化に対する新しい視点を提供する内容です。</p>
+    <h2>｢会社員だけの生活は『心が死ぬ』とわかってた｣薬剤師が1800万円を失った起業塾　それでも見つけた｢居場所｣の正体</h2>
+    <p class="summary">会社員生活に疑問を感じていた薬剤師の女性が、1800万円もの大金を失った「起業塾」の実態を告白しています。彼女は、孤独や「居場所」への渇望から巧妙な洗脳に陥ったと語り、それでも自己肯定感を失わなかった理由を探ります。この記事は、起業を夢見る人々に警鐘を鳴らしています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この記事は、イタリアで長年生活してきた筆者が、一時帰国中に体験した日本の日常における3つの「モヤっとした」出来事を綴っています。具体的には、スーパーでのレジ袋の色選択、冬季における過剰な暖房設定、そして増加する観光客への対応といった、一見些細ながらも外国の視点からは異質に映る習慣や状況が描写されています。これらのエピソードを通じて、筆者は日本の社会や文化に対する独自の考察を述べています。</p>
+<p class="detail-text">薬剤師として働く女性が、会社員生活に虚しさを感じ、「心が死ぬ」という思いから起業塾に傾倒し、結果として1800万円を失った体験を綴っています。彼女は、孤独感や「居場所」を求める心理につけ込まれ、ネットワークビジネス形式の「起業塾」に洗脳されていった経緯を赤裸々に語っています。しかし、記事は単なる失敗談に終わらず、彼女がその経験を通して「居場所」を見出し、自己肯定感を保ち続けた理由にも迫ります。この体験談は、起業を志す人々や、自己啓発セミナーなどに興味を持つ人々にとって、注意喚起となる内容です。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F940642%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
-        data-title="｢レジ袋は白にしますか？黒にしますか？｣　&quot;1年半ぶりに帰国&quot;した日本人がモヤっとした｢3つの出来事｣　 | ライフ | 東洋経済オンライン"
-        data-summary="30年間イタリアで暮らした筆者が、1年半ぶりに日本に一時帰国した際に感じた「モヤっとした」3つの出来事について述べています。レジ袋の色選び、過剰な暖房設定、そして観光客増加による違和感など、外国の視点から見た日本の日常が描かれています。これは、日本の社会や文化に対する新しい視点を提供する内容です。"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F940547%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="｢会社員だけの生活は『心が死ぬ』とわかってた｣薬剤師が1800万円を失った起業塾　それでも見つけた｢居場所｣の正体"
+        data-summary="会社員生活に疑問を感じていた薬剤師の女性が、1800万円もの大金を失った「起業塾」の実態を告白しています。彼女は、孤独や「居場所」への渇望から巧妙な洗脳に陥ったと語り、それでも自己肯定感を失わなかった理由を探ります。この記事は、起業を夢見る人々に警鐘を鳴らしています。"
         data-source="東洋経済オンライン"
-        data-url="https://toyokeizai.net/articles/-/940642?utm_source=rss&utm_medium=http&utm_campaign=link_back"
-        data-importance="🟢"
+        data-url="https://toyokeizai.net/articles/-/940547?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-importance="🟡"
         data-category="ビジネス">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%EF%BD%A2%E3%83%AC%E3%82%B8%E8%A2%8B%E3%81%AF%E7%99%BD%E3%81%AB%E3%81%97%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F%E9%BB%92%E3%81%AB%E3%81%97%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F%EF%BD%A3%E3%80%80%221%E5%B9%B4%E5%8D%8A%E3%81%B6%E3%82%8A%E3%81%AB%E5%B8%B0%E5%9B%BD%22%E3%81%97%E3%81%9F%E6%97%A5%E6%9C%AC%E4%BA%BA%E3%81%8C%E3%83%A2%E3%83%A4%E3%81%A3%E3%81%A8%E3%81%97%E3%81%9F%EF%BD%A23%E3%81%A4%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B%EF%BD%A3%E3%80%80%20%7C%20%E3%83%A9%E3%82%A4%E3%83%95%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F940642%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%EF%BD%A2%E4%BC%9A%E7%A4%BE%E5%93%A1%E3%81%A0%E3%81%91%E3%81%AE%E7%94%9F%E6%B4%BB%E3%81%AF%E3%80%8E%E5%BF%83%E3%81%8C%E6%AD%BB%E3%81%AC%E3%80%8F%E3%81%A8%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%9F%EF%BD%A3%E8%96%AC%E5%89%A4%E5%B8%AB%E3%81%8C1800%E4%B8%87%E5%86%86%E3%82%92%E5%A4%B1%E3%81%A3%E3%81%9F%E8%B5%B7%E6%A5%AD%E5%A1%BE%E3%80%80%E3%81%9D%E3%82%8C%E3%81%A7%E3%82%82%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%9F%EF%BD%A2%E5%B1%85%E5%A0%B4%E6%89%80%EF%BD%A3%E3%81%AE%E6%AD%A3%E4%BD%93%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F940547%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="｢レジ袋は白にしますか？黒にしますか？｣　&quot;1年半ぶりに帰国&quot;した日本人がモヤっとした｢3つの出来事｣　 | ライフ | 東洋経済オンライン">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="｢会社員だけの生活は『心が死ぬ』とわかってた｣薬剤師が1800万円を失った起業塾　それでも見つけた｢居場所｣の正体">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -1149,28 +1152,28 @@ details[open] summary::before { content: "▲ 閉じる"; }
 <div class="item" style="animation-delay:0.20s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">東洋経済オンライン</span>
     </div>
-    <h2>｢右手に触るな！｣リハビリを拒絶する脳卒中70代男性の心を開いた"意外なひと言"…訪問看護師が担う"家族ケア"のリアル | ライフ | 東洋経済オンライン</h2>
-    <p class="summary">2000年から始まった介護保険制度の下で、訪問看護は高齢者やその家族にとって重要な支えとなっています。この記事では、北海道の医療過疎地域で開業した訪問看護師の奮闘や、リハビリを拒否する70代男性の心を開いた「意外な一言」など、利用者と家族のケアにおけるリアルなエピソードが描かれています。</p>
+    <h2>薬剤師が1800万円を失った｢起業塾｣への後悔｢ネットワークビジネス｣に洗脳された地獄の日々</h2>
+    <p class="summary">薬剤師の女性が、1800万円を失った「起業塾」での経験を告白し、ネットワークビジネスへの「洗脳」による苦痛の日々を語っています。堅実なキャリアを歩んでいた彼女が、なぜ高額な投資をしてしまったのか、その心理的な背景と巧妙な手口が詳細に描かれています。この記事は、悪質な勧誘に対する注意喚起となります。</p>
     <details>
 <summary></summary>
-<p class="detail-text">東洋経済オンラインの記事は、訪問看護師の活動とその重要性に焦点を当てています。特に、北海道の医療過疎地域で独立開業した訪問看護師の奮闘を紹介し、リハビリを拒否する脳卒中を患った70代男性の心を動かした「意外な一言」という感動的なエピソードを詳述しています。この記事は、介護保険制度下での訪問看護が、患者本人だけでなく、その家族の精神的なサポートにも大きく貢献している実態を伝えています。</p>
+<p class="detail-text">薬剤師としての安定したキャリアを持っていた40代の女性が、「起業塾」という名のネットワークビジネスに誘導され、6年間にわたり総額1800万円もの大金を投じてしまった経緯を告白しています。記事では、彼女がどのようにして「起業」という甘い言葉に惹かれ、最終的に「洗脳」とも言える状態に陥っていったのか、その心理的なプロセスや巧妙な勧誘手口が詳細に描かれています。この体験談は、同様の被害に遭う可能性のある人々への強烈な注意喚起となっています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F942257%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
-        data-title="｢右手に触るな！｣リハビリを拒絶する脳卒中70代男性の心を開いた&quot;意外なひと言&quot;…訪問看護師が担う&quot;家族ケア&quot;のリアル | ライフ | 東洋経済オンライン"
-        data-summary="2000年から始まった介護保険制度の下で、訪問看護は高齢者やその家族にとって重要な支えとなっています。この記事では、北海道の医療過疎地域で開業した訪問看護師の奮闘や、リハビリを拒否する70代男性の心を開いた「意外な一言」など、利用者と家族のケアにおけるリアルなエピソードが描かれています。"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F940544%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="薬剤師が1800万円を失った｢起業塾｣への後悔｢ネットワークビジネス｣に洗脳された地獄の日々"
+        data-summary="薬剤師の女性が、1800万円を失った「起業塾」での経験を告白し、ネットワークビジネスへの「洗脳」による苦痛の日々を語っています。堅実なキャリアを歩んでいた彼女が、なぜ高額な投資をしてしまったのか、その心理的な背景と巧妙な手口が詳細に描かれています。この記事は、悪質な勧誘に対する注意喚起となります。"
         data-source="東洋経済オンライン"
-        data-url="https://toyokeizai.net/articles/-/942257?utm_source=rss&utm_medium=http&utm_campaign=link_back"
-        data-importance="🟢"
+        data-url="https://toyokeizai.net/articles/-/940544?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-importance="🟡"
         data-category="ビジネス">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%EF%BD%A2%E5%8F%B3%E6%89%8B%E3%81%AB%E8%A7%A6%E3%82%8B%E3%81%AA%EF%BC%81%EF%BD%A3%E3%83%AA%E3%83%8F%E3%83%93%E3%83%AA%E3%82%92%E6%8B%92%E7%B5%B6%E3%81%99%E3%82%8B%E8%84%B3%E5%8D%92%E4%B8%AD70%E4%BB%A3%E7%94%B7%E6%80%A7%E3%81%AE%E5%BF%83%E3%82%92%E9%96%8B%E3%81%84%E3%81%9F%22%E6%84%8F%E5%A4%96%E3%81%AA%E3%81%B2%E3%81%A8%E8%A8%80%22%E2%80%A6%E8%A8%AA%E5%95%8F%E7%9C%8B%E8%AD%B7%E5%B8%AB%E3%81%8C%E6%8B%85%E3%81%86%22%E5%AE%B6%E6%97%8F%E3%82%B1%E3%82%A2%22%E3%81%AE%E3%83%AA%E3%82%A2%E3%83%AB%20%7C%20%E3%83%A9%E3%82%A4%E3%83%95%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F942257%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E8%96%AC%E5%89%A4%E5%B8%AB%E3%81%8C1800%E4%B8%87%E5%86%86%E3%82%92%E5%A4%B1%E3%81%A3%E3%81%9F%EF%BD%A2%E8%B5%B7%E6%A5%AD%E5%A1%BE%EF%BD%A3%E3%81%B8%E3%81%AE%E5%BE%8C%E6%82%94%EF%BD%A2%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%EF%BD%A3%E3%81%AB%E6%B4%97%E8%84%B3%E3%81%95%E3%82%8C%E3%81%9F%E5%9C%B0%E7%8D%84%E3%81%AE%E6%97%A5%E3%80%85%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F940544%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="｢右手に触るな！｣リハビリを拒絶する脳卒中70代男性の心を開いた&quot;意外なひと言&quot;…訪問看護師が担う&quot;家族ケア&quot;のリアル | ライフ | 東洋経済オンライン">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="薬剤師が1800万円を失った｢起業塾｣への後悔｢ネットワークビジネス｣に洗脳された地獄の日々">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
@@ -1180,28 +1183,28 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item" style="animation-delay:0.00s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">東洋経済オンライン</span>
     </div>
-    <h2>日経平均株価は史上最高値を更新中だが､むしろGW前後は｢利益確定売り｣に押された方が相場は長続きすると読むワケ | 政治・経済・投資 | 東洋経済オンライン</h2>
-    <p class="summary">日経平均株価が史上最高値を更新する中、この記事では、ゴールデンウィーク前後の「利益確定売り」が相場を長期的に見ると長続きさせる要因となると分析しています。AI需要の拡大が成長を牽引する一方で、今後の調整リスクや資金の動きにどう備えるべきか、専門家の見解が示されています。</p>
+    <h2>｢食事の邪魔しない｣と若者に人気…｢翠｣｢ROKU｣バカ売れで"ジン"旋風 サントリーが65億円投資で見せた本気</h2>
+    <p class="summary">サントリーのジン「翠」や「ROKU」が若者を中心に人気を集め、国内外市場で爆発的に売れています。同社は65億円を投資して大阪工場の生産体制を2.6倍に強化するなど、ジン市場における本気度を示しています。このジンブームは、飲料業界における新たなトレンドを示唆しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">東洋経済オンラインの記事では、日経平均株価が史上最高値を更新する現状に触れつつ、ゴールデンウィーク前後の利益確定売りが、むしろ市場の持続的な成長に寄与する可能性を指摘しています。AI需要の急拡大を背景とした強気相場が続く中、この記事は、短期的な価格変動に惑わされず、中長期的な視点で市場を分析することの重要性を説いています。今後の市場動向を理解する上で、有益な洞察を提供しています。</p>
+<p class="detail-text">サントリーが展開するジンブランド、「翠（SUI）」と「ROKU〈六〉」が、若年層を中心に国内外で驚異的な人気を博しています。これらのジンは、食事の邪魔をしない軽やかな味わいが支持され、売上が急増しています。この需要増に対応するため、サントリーは大阪工場に総額65億円を投資し、生産能力を2.6倍に増強しました。この大規模な投資は、サントリーがジン市場の成長ポテンシャルに確信を持っていることを示しており、今後の競争激化が予想されます。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F942713%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
-        data-title="日経平均株価は史上最高値を更新中だが､むしろGW前後は｢利益確定売り｣に押された方が相場は長続きすると読むワケ | 政治・経済・投資 | 東洋経済オンライン"
-        data-summary="日経平均株価が史上最高値を更新する中、この記事では、ゴールデンウィーク前後の「利益確定売り」が相場を長期的に見ると長続きさせる要因となると分析しています。AI需要の拡大が成長を牽引する一方で、今後の調整リスクや資金の動きにどう備えるべきか、専門家の見解が示されています。"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F942354%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="｢食事の邪魔しない｣と若者に人気…｢翠｣｢ROKU｣バカ売れで&quot;ジン&quot;旋風 サントリーが65億円投資で見せた本気"
+        data-summary="サントリーのジン「翠」や「ROKU」が若者を中心に人気を集め、国内外市場で爆発的に売れています。同社は65億円を投資して大阪工場の生産体制を2.6倍に強化するなど、ジン市場における本気度を示しています。このジンブームは、飲料業界における新たなトレンドを示唆しています。"
         data-source="東洋経済オンライン"
-        data-url="https://toyokeizai.net/articles/-/942713?utm_source=rss&utm_medium=http&utm_campaign=link_back"
-        data-importance="🟡"
+        data-url="https://toyokeizai.net/articles/-/942354?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-importance="🟢"
         data-category="経済">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E6%97%A5%E7%B5%8C%E5%B9%B3%E5%9D%87%E6%A0%AA%E4%BE%A1%E3%81%AF%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%AB%98%E5%80%A4%E3%82%92%E6%9B%B4%E6%96%B0%E4%B8%AD%E3%81%A0%E3%81%8C%EF%BD%A4%E3%82%80%E3%81%97%E3%82%8DGW%E5%89%8D%E5%BE%8C%E3%81%AF%EF%BD%A2%E5%88%A9%E7%9B%8A%E7%A2%BA%E5%AE%9A%E5%A3%B2%E3%82%8A%EF%BD%A3%E3%81%AB%E6%8A%BC%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%8C%E7%9B%B8%E5%A0%B4%E3%81%AF%E9%95%B7%E7%B6%9A%E3%81%8D%E3%81%99%E3%82%8B%E3%81%A8%E8%AA%AD%E3%82%80%E3%83%AF%E3%82%B1%20%7C%20%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88%E3%83%BB%E6%8A%95%E8%B3%87%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F942713%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%EF%BD%A2%E9%A3%9F%E4%BA%8B%E3%81%AE%E9%82%AA%E9%AD%94%E3%81%97%E3%81%AA%E3%81%84%EF%BD%A3%E3%81%A8%E8%8B%A5%E8%80%85%E3%81%AB%E4%BA%BA%E6%B0%97%E2%80%A6%EF%BD%A2%E7%BF%A0%EF%BD%A3%EF%BD%A2ROKU%EF%BD%A3%E3%83%90%E3%82%AB%E5%A3%B2%E3%82%8C%E3%81%A7%22%E3%82%B8%E3%83%B3%22%E6%97%8B%E9%A2%A8%20%E3%82%B5%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC%E3%81%8C65%E5%84%84%E5%86%86%E6%8A%95%E8%B3%87%E3%81%A7%E8%A6%8B%E3%81%9B%E3%81%9F%E6%9C%AC%E6%B0%97%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F942354%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="日経平均株価は史上最高値を更新中だが､むしろGW前後は｢利益確定売り｣に押された方が相場は長続きすると読むワケ | 政治・経済・投資 | 東洋経済オンライン">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="｢食事の邪魔しない｣と若者に人気…｢翠｣｢ROKU｣バカ売れで&quot;ジン&quot;旋風 サントリーが65億円投資で見せた本気">🤖 Claudeに聞く</button>
     </div>
   </div>
   <div class="item-thumb"></div>
