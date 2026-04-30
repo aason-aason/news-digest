@@ -8,6 +8,15 @@ rss:
     - name: "TechCrunch Startups"
       url: "https://techcrunch.com/category/startups/feed/"
       categories: ["テック・AI"]
+    - name: "ITmedia NEWS"
+      url: "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml"
+      categories: ["テック・AI"]
+    - name: "Gigazine"
+      url: "https://gigazine.net/news/rss_2.0/"
+      categories: ["テック・AI"]
+    - name: "ITmedia AI+"
+      url: "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml"
+      categories: ["テック・AI", "Anthropic"]
 
     # Anthropic
     - name: "Anthropic Blog"

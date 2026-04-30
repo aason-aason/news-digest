@@ -227,9 +227,6 @@ main {{
 
 /* 記事 */
 .item {{
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 16px;
   padding: 20px 0;
   border-bottom: 1px solid var(--border);
   align-items: start;
@@ -302,13 +299,6 @@ details[open] summary::before {{ content: "▲ 閉じる"; }}
   color: var(--subtext);
   line-height: 1.85;
   margin-top: 10px;
-}}
-.item-thumb {{
-  width: 72px;
-  height: 54px;
-  background: var(--border);
-  border-radius: 3px;
-  flex-shrink: 0;
 }}
 .item-actions {{
   display: flex;
@@ -689,7 +679,7 @@ def _build_item(article: dict, delay: float) -> str:
       {badge}
       <span class="item-source">{source_name}</span>
     </div>
-    <h2>{title}</h2>
+    <h2><a href="{url_escaped}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">{title}</a></h2>
     <p class="summary">{summary}</p>
     {detail_block}
     <div class="item-actions">
@@ -707,7 +697,6 @@ def _build_item(article: dict, delay: float) -> str:
       <button class="action-btn claude-btn" data-title="{title_escaped}">🤖 Claudeに聞く</button>
     </div>
   </div>
-  <div class="item-thumb"></div>
 </div>"""
 
 
