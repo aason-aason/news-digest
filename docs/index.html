@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News Digest - 2026年06月02日</title>
+<title>News Digest - 2026年06月03日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
@@ -296,7 +296,7 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="header-top">
     <div class="header-logo">News Digest</div>
     <div class="header-meta">
-      <span class="header-date">2026.06.02</span>
+      <span class="header-date">2026.06.03</span>
       <div class="header-links">
         <a class="header-link" href="saved.html">⭐ 保存済み</a>
         <button class="header-link" id="darkBtn">🌙 ダーク</button>
@@ -305,6 +305,7 @@ details[open] summary::before { content: "▲ 閉じる"; }
   </div>
   <div class="filter-bar">
     <button class="filter-btn active" data-cat="all">すべて</button>
+<button class="filter-btn" data-cat="urgent">🔴 緊急</button>
 <button class="filter-btn" data-cat="テック・AI">テック・AI</button>
 <button class="filter-btn" data-cat="Anthropic">Anthropic</button>
 <button class="filter-btn" data-cat="音楽">音楽</button>
@@ -316,7 +317,37 @@ details[open] summary::before { content: "▲ 閉じる"; }
 </header>
 
 <main>
-  
+  <section class="urgent-section">
+  <p class="urgent-label">🔴 緊急アラート</p>
+  <div class="item" style="animation-delay:0.00s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-urgent">🔴 緊急</span>
+      <span class="item-source">ITmedia NEWS</span>
+    </div>
+    <h2><a href="https://www.itmedia.co.jp/news/articles/2606/03/news138.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">阿波銀行の情報漏えい、被害のテスト環境は「本来廃止すべきだった」　システム高度化作業でも利用</a></h2>
+    <p class="summary">阿波銀行で発生した顧客情報漏えいの調査結果が発表され、不正アクセスを受けたテスト環境が本来廃止すべき状態であったにも関わらず、AIを使ったシステム高度化作業などに転用されていたことが判明した。同行は管理態勢の不備を認め、役員処分を行った。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">阿波銀行で発生した大規模な顧客情報漏えい事件において、原因となったテスト環境は、本来であれば既に廃止されるべき状態であったにも関わらず、AIを活用したシステム高度化作業などのために継続利用されていたことが明らかになった。この事態は、同行の情報管理体制の深刻な不備を浮き彫りにし、同行は管理体制の不備を認め、頭取を含む役員に対する処分を発表した。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews138.html"
+        data-title="阿波銀行の情報漏えい、被害のテスト環境は「本来廃止すべきだった」　システム高度化作業でも利用"
+        data-summary="阿波銀行で発生した顧客情報漏えいの調査結果が発表され、不正アクセスを受けたテスト環境が本来廃止すべき状態であったにも関わらず、AIを使ったシステム高度化作業などに転用されていたことが判明した。同行は管理態勢の不備を認め、役員処分を行った。"
+        data-source="ITmedia NEWS"
+        data-url="https://www.itmedia.co.jp/news/articles/2606/03/news138.html"
+        data-importance="🔴"
+        data-category="テック・AI">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E9%98%BF%E6%B3%A2%E9%8A%80%E8%A1%8C%E3%81%AE%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%80%81%E8%A2%AB%E5%AE%B3%E3%81%AE%E3%83%86%E3%82%B9%E3%83%88%E7%92%B0%E5%A2%83%E3%81%AF%E3%80%8C%E6%9C%AC%E6%9D%A5%E5%BB%83%E6%AD%A2%E3%81%99%E3%81%B9%E3%81%8D%E3%81%A0%E3%81%A3%E3%81%9F%E3%80%8D%E3%80%80%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%AB%98%E5%BA%A6%E5%8C%96%E4%BD%9C%E6%A5%AD%E3%81%A7%E3%82%82%E5%88%A9%E7%94%A8%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews138.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="阿波銀行の情報漏えい、被害のテスト環境は「本来廃止すべきだった」　システム高度化作業でも利用">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+</section>
   <section class="category-section" data-cat="テック・AI">
   <p class="category-label">テック・AI</p>
   <div class="item" style="animation-delay:0.00s">
@@ -325,25 +356,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">TechCrunch</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Cyera、営業損失にもかかわらずARRの80倍の評価額120億ドルでの資金調達を目指す</a></h2>
-    <p class="summary">サイバーセキュリティ企業Cyeraは、営業損失を抱えながらも、ARR（年間経常収益）の80倍に相当する120億ドルの評価額での資金調達を目指しています。Evolution Equity Partnersが主導する約3億ドルのラウンドが進行中です。この巨額の評価額は、サイバーセキュリティ分野における高い成長期待を示唆しています。</p>
+    <h2><a href="https://techcrunch.com/2026/06/03/lovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Lovable、Google Cloudとの複数年契約を締結、利用を5倍に拡大、情報筋</a></h2>
+    <p class="summary">LovableとGoogleは、LovableのGoogle Cloud利用面積を5倍に拡大し、Anthropic Claudeへのアクセスを拡張する複数年契約を延長した。この契約は、LovableがGoogle CloudのインフラストラクチャとAI機能をより深く活用することを示唆している。</p>
     <details>
 <summary></summary>
-<p class="detail-text">サイバーセキュリティ企業Cyeraは、Evolution Equity Partnersが主導する約3億ドルの新たな資金調達ラウンドを交渉中であり、その評価額は120億ドルに達する見込みです。これは、同社の年間経常収益（ARR）の80倍に相当しますが、同社は現在営業損失を計上しています。この高評価額は、データセキュリティ分野におけるCyeraの急速な成長と、投資家からの強い関心を示しています。</p>
+<p class="detail-text">この契約により、LovableはGoogle CloudのコンピューティングリソースとAIソリューションを大幅に拡張することになる。特に、AnthropicのClaudeモデルへのアクセス強化は、LovableのAI開発における競争力を高める可能性がある。Google Cloudの発表によると、この提携はLovableのクラウド利用を5倍に増加させるとされている。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fcyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses%2F"
-        data-title="Cyera、営業損失にもかかわらずARRの80倍の評価額120億ドルでの資金調達を目指す"
-        data-summary="サイバーセキュリティ企業Cyeraは、営業損失を抱えながらも、ARR（年間経常収益）の80倍に相当する120億ドルの評価額での資金調達を目指しています。Evolution Equity Partnersが主導する約3億ドルのラウンドが進行中です。この巨額の評価額は、サイバーセキュリティ分野における高い成長期待を示唆しています。"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F03%2Flovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says%2F"
+        data-title="Lovable、Google Cloudとの複数年契約を締結、利用を5倍に拡大、情報筋"
+        data-summary="LovableとGoogleは、LovableのGoogle Cloud利用面積を5倍に拡大し、Anthropic Claudeへのアクセスを拡張する複数年契約を延長した。この契約は、LovableがGoogle CloudのインフラストラクチャとAI機能をより深く活用することを示唆している。"
         data-source="TechCrunch"
-        data-url="https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/"
+        data-url="https://techcrunch.com/2026/06/03/lovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says/"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Cyera%E3%80%81%E5%96%B6%E6%A5%AD%E6%90%8D%E5%A4%B1%E3%81%AB%E3%82%82%E3%81%8B%E3%81%8B%E3%82%8F%E3%82%89%E3%81%9AARR%E3%81%AE80%E5%80%8D%E3%81%AE%E8%A9%95%E4%BE%A1%E9%A1%8D120%E5%84%84%E3%83%89%E3%83%AB%E3%81%A7%E3%81%AE%E8%B3%87%E9%87%91%E8%AA%BF%E9%81%94%E3%82%92%E7%9B%AE%E6%8C%87%E3%81%99%20https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fcyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Lovable%E3%80%81Google%20Cloud%E3%81%A8%E3%81%AE%E8%A4%87%E6%95%B0%E5%B9%B4%E5%A5%91%E7%B4%84%E3%82%92%E7%B7%A0%E7%B5%90%E3%80%81%E5%88%A9%E7%94%A8%E3%82%925%E5%80%8D%E3%81%AB%E6%8B%A1%E5%A4%A7%E3%80%81%E6%83%85%E5%A0%B1%E7%AD%8B%20https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F03%2Flovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Cyera、営業損失にもかかわらずARRの80倍の評価額120億ドルでの資金調達を目指す">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Lovable、Google Cloudとの複数年契約を締結、利用を5倍に拡大、情報筋">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -351,27 +382,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">TechCrunch Startups</span>
+      <span class="item-source">TechCrunch</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Cyera、営業損失にもかかわらずARRの80倍の評価額120億ドルでの資金調達を目指す</a></h2>
-    <p class="summary">サイバーセキュリティ企業Cyeraは、営業損失を抱えながらも、ARR（年間経常収益）の80倍に相当する120億ドルの評価額での資金調達を目指しています。Evolution Equity Partnersが主導する約3億ドルのラウンドが進行中です。この巨額の評価額は、サイバーセキュリティ分野における高い成長期待を示唆しています。</p>
+    <h2><a href="https://techcrunch.com/2026/06/03/uber-to-put-500-data-collection-vehicles-on-the-road-this-year/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Uber、今年中に500台のデータ収集車両を公道へ</a></h2>
+    <p class="summary">Uberは、今年中に500台のデータ収集車両を公道に展開する計画を発表した。これらの車両は、Uberの新しい自動運転車（AV）ラボ部門のためにデータを収集するセンサーを搭載する。これは、Uberが自動運転技術の開発を加速させるための重要な一歩となる。</p>
     <details>
 <summary></summary>
-<p class="detail-text">サイバーセキュリティ企業Cyeraは、Evolution Equity Partnersが主導する約3億ドルの新たな資金調達ラウンドを交渉中であり、その評価額は120億ドルに達する見込みです。これは、同社の年間経常収益（ARR）の80倍に相当しますが、同社は現在営業損失を計上しています。この高評価額は、データセキュリティ分野におけるCyeraの急速な成長と、投資家からの強い関心を示しています。</p>
+<p class="detail-text">Uberは、自動運転技術の開発とデータ収集を強化するため、改造されたIoniq 5車両を500台、今年中に公道に投入する。これらの車両には、高度なセンサーが搭載され、UberのAV Labs部門が自動運転システムの開発と改善に必要なデータを収集する。この取り組みは、Uberが自動運転分野での競争力を高め、将来的なサービス展開を目指す上での重要な戦略となる。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fcyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses%2F"
-        data-title="Cyera、営業損失にもかかわらずARRの80倍の評価額120億ドルでの資金調達を目指す"
-        data-summary="サイバーセキュリティ企業Cyeraは、営業損失を抱えながらも、ARR（年間経常収益）の80倍に相当する120億ドルの評価額での資金調達を目指しています。Evolution Equity Partnersが主導する約3億ドルのラウンドが進行中です。この巨額の評価額は、サイバーセキュリティ分野における高い成長期待を示唆しています。"
-        data-source="TechCrunch Startups"
-        data-url="https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F03%2Fuber-to-put-500-data-collection-vehicles-on-the-road-this-year%2F"
+        data-title="Uber、今年中に500台のデータ収集車両を公道へ"
+        data-summary="Uberは、今年中に500台のデータ収集車両を公道に展開する計画を発表した。これらの車両は、Uberの新しい自動運転車（AV）ラボ部門のためにデータを収集するセンサーを搭載する。これは、Uberが自動運転技術の開発を加速させるための重要な一歩となる。"
+        data-source="TechCrunch"
+        data-url="https://techcrunch.com/2026/06/03/uber-to-put-500-data-collection-vehicles-on-the-road-this-year/"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Cyera%E3%80%81%E5%96%B6%E6%A5%AD%E6%90%8D%E5%A4%B1%E3%81%AB%E3%82%82%E3%81%8B%E3%81%8B%E3%82%8F%E3%82%89%E3%81%9AARR%E3%81%AE80%E5%80%8D%E3%81%AE%E8%A9%95%E4%BE%A1%E9%A1%8D120%E5%84%84%E3%83%89%E3%83%AB%E3%81%A7%E3%81%AE%E8%B3%87%E9%87%91%E8%AA%BF%E9%81%94%E3%82%92%E7%9B%AE%E6%8C%87%E3%81%99%20https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fcyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Uber%E3%80%81%E4%BB%8A%E5%B9%B4%E4%B8%AD%E3%81%AB500%E5%8F%B0%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E5%8F%8E%E9%9B%86%E8%BB%8A%E4%B8%A1%E3%82%92%E5%85%AC%E9%81%93%E3%81%B8%20https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F03%2Fuber-to-put-500-data-collection-vehicles-on-the-road-this-year%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Cyera、営業損失にもかかわらずARRの80倍の評価額120億ドルでの資金調達を目指す">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Uber、今年中に500台のデータ収集車両を公道へ">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -381,25 +412,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">TechCrunch Startups</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/06/02/a-startup-everand-is-now-bundling-ebooks-audiobooks-and-book-clubs-in-challenge-to-amazon/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Everand、電子書籍、オーディオブック、ブッククラブをバンドルし、Amazonに挑戦</a></h2>
-    <p class="summary">新しい読書サブスクリプションサービスEverandが登場し、電子書籍とオーディオブック、そしてFableのブッククラブコミュニティへのアクセスを提供します。これはAmazonの読書サービスに対する挑戦であり、統合された読書体験を提供しようとするものです。</p>
+    <h2><a href="https://techcrunch.com/2026/06/03/lovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Lovable、Google Cloudとの複数年契約を締結、利用を5倍に拡大、情報筋</a></h2>
+    <p class="summary">LovableとGoogleは、LovableのGoogle Cloud利用面積を5倍に拡大し、Anthropic Claudeへのアクセスを拡張する複数年契約を延長した。この契約は、LovableがGoogle CloudのインフラストラクチャとAI機能をより深く活用することを示唆している。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Everandは、電子書籍、オーディオブック、およびFableのブッククラブコミュニティへのアクセスを統合した新しい読書サブスクリプションサービスを発表しました。このサービスは、Amazonが提供するKindle UnlimitedやAudibleといったサービスに対抗するもので、ユーザーに包括的な読書体験を提供することを目指しています。Everandは、多様なコンテンツとコミュニティ機能を組み合わせることで、読書市場における新たな選択肢を提供しようとしています。</p>
+<p class="detail-text">この契約により、LovableはGoogle CloudのコンピューティングリソースとAIソリューションを大幅に拡張することになる。特に、AnthropicのClaudeモデルへのアクセス強化は、LovableのAI開発における競争力を高める可能性がある。Google Cloudの発表によると、この提携はLovableのクラウド利用を5倍に増加させるとされている。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fa-startup-everand-is-now-bundling-ebooks-audiobooks-and-book-clubs-in-challenge-to-amazon%2F"
-        data-title="Everand、電子書籍、オーディオブック、ブッククラブをバンドルし、Amazonに挑戦"
-        data-summary="新しい読書サブスクリプションサービスEverandが登場し、電子書籍とオーディオブック、そしてFableのブッククラブコミュニティへのアクセスを提供します。これはAmazonの読書サービスに対する挑戦であり、統合された読書体験を提供しようとするものです。"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F03%2Flovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says%2F"
+        data-title="Lovable、Google Cloudとの複数年契約を締結、利用を5倍に拡大、情報筋"
+        data-summary="LovableとGoogleは、LovableのGoogle Cloud利用面積を5倍に拡大し、Anthropic Claudeへのアクセスを拡張する複数年契約を延長した。この契約は、LovableがGoogle CloudのインフラストラクチャとAI機能をより深く活用することを示唆している。"
         data-source="TechCrunch Startups"
-        data-url="https://techcrunch.com/2026/06/02/a-startup-everand-is-now-bundling-ebooks-audiobooks-and-book-clubs-in-challenge-to-amazon/"
+        data-url="https://techcrunch.com/2026/06/03/lovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says/"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Everand%E3%80%81%E9%9B%BB%E5%AD%90%E6%9B%B8%E7%B1%8D%E3%80%81%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%96%E3%83%83%E3%82%AF%E3%80%81%E3%83%96%E3%83%83%E3%82%AF%E3%82%AF%E3%83%A9%E3%83%96%E3%82%92%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%81%97%E3%80%81Amazon%E3%81%AB%E6%8C%91%E6%88%A6%20https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fa-startup-everand-is-now-bundling-ebooks-audiobooks-and-book-clubs-in-challenge-to-amazon%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Lovable%E3%80%81Google%20Cloud%E3%81%A8%E3%81%AE%E8%A4%87%E6%95%B0%E5%B9%B4%E5%A5%91%E7%B4%84%E3%82%92%E7%B7%A0%E7%B5%90%E3%80%81%E5%88%A9%E7%94%A8%E3%82%925%E5%80%8D%E3%81%AB%E6%8B%A1%E5%A4%A7%E3%80%81%E6%83%85%E5%A0%B1%E7%AD%8B%20https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F03%2Flovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Everand、電子書籍、オーディオブック、ブッククラブをバンドルし、Amazonに挑戦">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Lovable、Google Cloudとの複数年契約を締結、利用を5倍に拡大、情報筋">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -407,27 +438,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">ITmedia NEWS</span>
+      <span class="item-source">TechCrunch Startups</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/news/articles/2606/03/news066.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Microsoft、AndroidベースのAIエージェント基盤「Solara」発表 Snapdragon搭載のバッジ型端末も披露</a></h2>
-    <p class="summary">Microsoftは「Build 2026」で、AIエージェント専用の新プラットフォーム「Project Solara」を発表しました。このプラットフォームはWindowsではなくAOSPベースのOSを採用し、Qualcommと共同開発した社員証のようなデバイスとMediaTekと共同開発した据え置き型デバイスのリファレンスを公開しました。主要企業とのパイロット運用も開始されます。</p>
+    <h2><a href="https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Coralogix、AIエージェントを監視する必要があると賭けて2億ドルを調達</a></h2>
+    <p class="summary">Coralogixは、AIシステムが本番稼働するにつれて、その動作を監視し、障害をトラブルシューティングし、信頼性の高い運用に必要な運用データを提供するツールの需要が高まると予測し、2億ドルを調達した。この資金調達は、AI運用の複雑化に対応する市場のニーズを反映している。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Microsoftは、AIエージェントの実行に特化した新しいプラットフォーム「Project Solara」を「Build 2026」にて発表しました。このプラットフォームは、WindowsではなくAndroid Open Source Project（AOSP）をベースとしたOSを採用しており、Qualcommと共同開発した社員証型のウェアラブルデバイスや、MediaTekと共同開発した据え置き型デバイスのリファレンスモデルが披露されました。Microsoftは、これらのデバイスとプラットフォームを活用し、主要企業とのパイロット運用を開始する予定です。</p>
+<p class="detail-text">AIシステムが普及し、本番環境での利用が進むにつれて、その監視、デバッグ、および運用データの管理はますます重要になっている。Coralogixは、この分野の成長を見込み、2億ドルの資金を調達した。同社は、AIエージェントのパフォーマンスをリアルタイムで追跡し、潜在的な問題を早期に発見・解決するためのソリューションを提供することで、AIシステムの信頼性と効率性を向上させることを目指している。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews066.html"
-        data-title="Microsoft、AndroidベースのAIエージェント基盤「Solara」発表 Snapdragon搭載のバッジ型端末も披露"
-        data-summary="Microsoftは「Build 2026」で、AIエージェント専用の新プラットフォーム「Project Solara」を発表しました。このプラットフォームはWindowsではなくAOSPベースのOSを採用し、Qualcommと共同開発した社員証のようなデバイスとMediaTekと共同開発した据え置き型デバイスのリファレンスを公開しました。主要企業とのパイロット運用も開始されます。"
-        data-source="ITmedia NEWS"
-        data-url="https://www.itmedia.co.jp/news/articles/2606/03/news066.html"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F03%2Fcoralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents%2F"
+        data-title="Coralogix、AIエージェントを監視する必要があると賭けて2億ドルを調達"
+        data-summary="Coralogixは、AIシステムが本番稼働するにつれて、その動作を監視し、障害をトラブルシューティングし、信頼性の高い運用に必要な運用データを提供するツールの需要が高まると予測し、2億ドルを調達した。この資金調達は、AI運用の複雑化に対応する市場のニーズを反映している。"
+        data-source="TechCrunch Startups"
+        data-url="https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Microsoft%E3%80%81Android%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AEAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E5%9F%BA%E7%9B%A4%E3%80%8CSolara%E3%80%8D%E7%99%BA%E8%A1%A8%20Snapdragon%E6%90%AD%E8%BC%89%E3%81%AE%E3%83%90%E3%83%83%E3%82%B8%E5%9E%8B%E7%AB%AF%E6%9C%AB%E3%82%82%E6%8A%AB%E9%9C%B2%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews066.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Coralogix%E3%80%81AI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%82%92%E7%9B%A3%E8%A6%96%E3%81%99%E3%82%8B%E5%BF%85%E8%A6%81%E3%81%8C%E3%81%82%E3%82%8B%E3%81%A8%E8%B3%AD%E3%81%91%E3%81%A62%E5%84%84%E3%83%89%E3%83%AB%E3%82%92%E8%AA%BF%E9%81%94%20https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F03%2Fcoralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Microsoft、AndroidベースのAIエージェント基盤「Solara」発表 Snapdragon搭載のバッジ型端末も披露">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Coralogix、AIエージェントを監視する必要があると賭けて2億ドルを調達">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -437,25 +468,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">ITmedia NEWS</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/news/articles/2606/03/news063.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Microsoft、NVIDIAのSoC搭載でAI特化のミニPC「Surface RTX Spark Dev Box」披露</a></h2>
-    <p class="summary">Microsoftは「Build 2026」で、AI開発に特化したミニPC「Surface RTX Spark Dev Box」を発表しました。NVIDIAの「RTX Spark」を搭載し、最大1ペタフロップスの演算性能と128GBのメモリを備えています。これにより、1200億パラメータ超のモデルのローカル推論や学習が可能になります。各種開発ツールもプリインストールされています。</p>
+    <h2><a href="https://www.itmedia.co.jp/news/articles/2606/04/news065.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">SpaceX、IPOで750億ドル（約12兆円）調達へ　時価総額は1兆7700億ドルの見通し</a></h2>
+    <p class="summary">SpaceXは、新規株式公開（IPO）で750億ドルを調達する計画を発表した。5億5555万株を1株135ドルで売り出し、時価総額は約1兆7700億ドルに達する見込みだ。同社はAI分野の潜在市場を26.5兆ドルと試算しており、AnthropicやAlphabetなどの競合大手が巨額の資金調達を進める中で株式公開に踏み切る。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Microsoftは「Build 2026」カンファレンスにおいて、AI開発者向けの高性能ミニPC「Surface RTX Spark Dev Box」を発表しました。このデバイスはNVIDIAの最新SoC「RTX Spark」を搭載し、最大1ペタフロップスという驚異的な演算性能と128GBの大容量メモリを提供します。これにより、1200億パラメータを超える大規模言語モデル（LLM）などのAIモデルのローカル環境での推論や学習が実現可能となります。さらに、AI開発に必要な各種ツールがプリインストールされており、開発者はすぐに作業を開始できます。</p>
+<p class="detail-text">SpaceXがIPOを通じて750億ドル（約12兆円）という巨額の資金調達を目指している。1株135ドルで5億5555万株を公開し、時価総額は1兆7700億ドルに達すると見込まれている。この戦略的な動きは、AI分野における26.5兆ドルという巨大な潜在市場への参入と、AnthropicやAlphabetといったAI大手との競争激化を背景としている。SpaceXは、衛星インターネット事業だけでなく、AI分野でも大きな成長を目指していることを示唆している。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews063.html"
-        data-title="Microsoft、NVIDIAのSoC搭載でAI特化のミニPC「Surface RTX Spark Dev Box」披露"
-        data-summary="Microsoftは「Build 2026」で、AI開発に特化したミニPC「Surface RTX Spark Dev Box」を発表しました。NVIDIAの「RTX Spark」を搭載し、最大1ペタフロップスの演算性能と128GBのメモリを備えています。これにより、1200億パラメータ超のモデルのローカル推論や学習が可能になります。各種開発ツールもプリインストールされています。"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F04%2Fnews065.html"
+        data-title="SpaceX、IPOで750億ドル（約12兆円）調達へ　時価総額は1兆7700億ドルの見通し"
+        data-summary="SpaceXは、新規株式公開（IPO）で750億ドルを調達する計画を発表した。5億5555万株を1株135ドルで売り出し、時価総額は約1兆7700億ドルに達する見込みだ。同社はAI分野の潜在市場を26.5兆ドルと試算しており、AnthropicやAlphabetなどの競合大手が巨額の資金調達を進める中で株式公開に踏み切る。"
         data-source="ITmedia NEWS"
-        data-url="https://www.itmedia.co.jp/news/articles/2606/03/news063.html"
+        data-url="https://www.itmedia.co.jp/news/articles/2606/04/news065.html"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Microsoft%E3%80%81NVIDIA%E3%81%AESoC%E6%90%AD%E8%BC%89%E3%81%A7AI%E7%89%B9%E5%8C%96%E3%81%AE%E3%83%9F%E3%83%8BPC%E3%80%8CSurface%20RTX%20Spark%20Dev%20Box%E3%80%8D%E6%8A%AB%E9%9C%B2%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews063.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=SpaceX%E3%80%81IPO%E3%81%A7750%E5%84%84%E3%83%89%E3%83%AB%EF%BC%88%E7%B4%8412%E5%85%86%E5%86%86%EF%BC%89%E8%AA%BF%E9%81%94%E3%81%B8%E3%80%80%E6%99%82%E4%BE%A1%E7%B7%8F%E9%A1%8D%E3%81%AF1%E5%85%867700%E5%84%84%E3%83%89%E3%83%AB%E3%81%AE%E8%A6%8B%E9%80%9A%E3%81%97%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F04%2Fnews065.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Microsoft、NVIDIAのSoC搭載でAI特化のミニPC「Surface RTX Spark Dev Box」披露">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="SpaceX、IPOで750億ドル（約12兆円）調達へ　時価総額は1兆7700億ドルの見通し">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -463,27 +494,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Gigazine</span>
+      <span class="item-source">ITmedia NEWS</span>
     </div>
-    <h2><a href="https://gigazine.net/news/20260602-remote-grew-revenue/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">AI導入で従業員1人当たりの収益を50％アップさせた企業が存在する</a></h2>
-    <p class="summary">給与計算ツール開発企業のRemoteは、社内のあらゆる業務プロセスにAIを導入した結果、従業員一人当たりの収益を50％増加させることに成功したと発表しました。これは、AIが単なる効率化ツールに留まらず、企業の収益性を劇的に向上させる可能性を示す具体的な事例です。</p>
+    <h2><a href="https://www.itmedia.co.jp/news/articles/2606/04/news063.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Alphabet、AI資本調達で需要超過　公募などで450億ドル確保、総額850億ドル計画へ</a></h2>
+    <p class="summary">Alphabet（Google）は、実施中の株式資本調達で需要超過により約450億ドルを調達したと発表した。当初目標を上回るペースで推移しており、Berkshire Hathawayも100億ドル相当を取得した。次四半期の株式売却を含め総額850億ドルを見込み、AIインフラやデータセンターへの巨額投資に充てる方針だ。</p>
     <details>
 <summary></summary>
-<p class="detail-text">給与計算ツールを開発するRemote社は、社内のほぼ全ての業務プロセスにAIを戦略的に導入することで、従業員一人当たりの収益を前年比50％増加させるという驚異的な成果を達成したことを明らかにしました。同社は、AIを単なる自動化ツールとしてではなく、意思決定支援、顧客対応のパーソナライズ、そして新たなビジネス機会の創出に活用することで、組織全体の生産性と収益性を飛躍的に向上させたと説明しています。この事例は、AI導入が企業の成長戦略において極めて重要な役割を果たす可能性を示唆しています。</p>
+<p class="detail-text">Alphabetは、AI分野への大規模投資のため、実施中の株式資本調達において当初の目標を大幅に上回る約450億ドルを調達した。Berkshire Hathawayも100億ドル相当を取得しており、総額850億ドルを見込んでいる。この巨額の資金は、AIインフラの拡充、データセンターの建設・増強、そしてAI研究開発に重点的に投資される計画だ。この動きは、AlphabetがAI競争におけるリーダーシップを維持・強化しようとする強い意志を示している。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260602-remote-grew-revenue%2F"
-        data-title="AI導入で従業員1人当たりの収益を50％アップさせた企業が存在する"
-        data-summary="給与計算ツール開発企業のRemoteは、社内のあらゆる業務プロセスにAIを導入した結果、従業員一人当たりの収益を50％増加させることに成功したと発表しました。これは、AIが単なる効率化ツールに留まらず、企業の収益性を劇的に向上させる可能性を示す具体的な事例です。"
-        data-source="Gigazine"
-        data-url="https://gigazine.net/news/20260602-remote-grew-revenue/"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F04%2Fnews063.html"
+        data-title="Alphabet、AI資本調達で需要超過　公募などで450億ドル確保、総額850億ドル計画へ"
+        data-summary="Alphabet（Google）は、実施中の株式資本調達で需要超過により約450億ドルを調達したと発表した。当初目標を上回るペースで推移しており、Berkshire Hathawayも100億ドル相当を取得した。次四半期の株式売却を含め総額850億ドルを見込み、AIインフラやデータセンターへの巨額投資に充てる方針だ。"
+        data-source="ITmedia NEWS"
+        data-url="https://www.itmedia.co.jp/news/articles/2606/04/news063.html"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=AI%E5%B0%8E%E5%85%A5%E3%81%A7%E5%BE%93%E6%A5%AD%E5%93%A11%E4%BA%BA%E5%BD%93%E3%81%9F%E3%82%8A%E3%81%AE%E5%8F%8E%E7%9B%8A%E3%82%9250%EF%BC%85%E3%82%A2%E3%83%83%E3%83%97%E3%81%95%E3%81%9B%E3%81%9F%E4%BC%81%E6%A5%AD%E3%81%8C%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260602-remote-grew-revenue%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Alphabet%E3%80%81AI%E8%B3%87%E6%9C%AC%E8%AA%BF%E9%81%94%E3%81%A7%E9%9C%80%E8%A6%81%E8%B6%85%E9%81%8E%E3%80%80%E5%85%AC%E5%8B%9F%E3%81%AA%E3%81%A9%E3%81%A7450%E5%84%84%E3%83%89%E3%83%AB%E7%A2%BA%E4%BF%9D%E3%80%81%E7%B7%8F%E9%A1%8D850%E5%84%84%E3%83%89%E3%83%AB%E8%A8%88%E7%94%BB%E3%81%B8%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F04%2Fnews063.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="AI導入で従業員1人当たりの収益を50％アップさせた企業が存在する">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Alphabet、AI資本調達で需要超過　公募などで450億ドル確保、総額850億ドル計画へ">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -493,25 +524,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/enterprise/articles/2606/03/news043.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">シャドーAIに「ログイン情報」を渡している割合は？ Oktaの実態調査で判明</a></h2>
-    <p class="summary">Oktaの調査によると、経営幹部の95%は従業員がAIを責任を持って利用していると確信していますが、シャドーAI（組織が公式に承認していないAIツールの利用）を利用している従業員は過半数に上ることが判明しました。さらに、シャドーAIを利用する従業員の中には、情報漏洩につながりかねない危険な使い方をしている人もいることが明らかになりました。</p>
+    <h2><a href="https://www.itmedia.co.jp/enterprise/articles/2606/04/news024.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ServiceNowとAccenture、エージェント型AIを全社展開する「FDE」を開始</a></h2>
+    <p class="summary">ServiceNowとAccentureが、エージェント型AIの全社展開を推進する新プログラム「FDE」（Fully Deployed Enterprise）を開始した。このプログラムは、AI導入が実証実験段階で停滞し、全社規模での成果に繋がらないという課題の解決を目指す。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Oktaが実施した調査により、多くの企業で「シャドーAI」と呼ばれる、組織が正式に承認していないAIツールの利用が蔓延している実態が明らかになりました。調査では、経営幹部の95%が従業員によるAIの責任ある利用を確信している一方で、実際にシャドーAIを利用している従業員が過半数に達していることが示されました。さらに深刻なのは、シャドーAIを利用する従業員の一部が、企業の機密情報や個人情報が漏洩するリスクを高めるような、危険な使い方をしているという事実です。この調査結果は、企業におけるAI利用のガバナンスとセキュリティ対策の重要性を浮き彫りにしています。</p>
+<p class="detail-text">ServiceNowとAccentureは、企業におけるエージェント型AIの本格的な導入と全社展開を支援する「FDE」プログラムを開始した。多くの企業がAIの PoC（概念実証）で止まってしまう現状を踏まえ、このプログラムは、AI技術の導入から全社的な運用、そしてビジネス成果への結びつけまでを包括的にサポートする。これにより、AIの導入効果を最大化し、組織全体の生産性向上を目指す。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fenterprise%2Farticles%2F2606%2F03%2Fnews043.html"
-        data-title="シャドーAIに「ログイン情報」を渡している割合は？ Oktaの実態調査で判明"
-        data-summary="Oktaの調査によると、経営幹部の95%は従業員がAIを責任を持って利用していると確信していますが、シャドーAI（組織が公式に承認していないAIツールの利用）を利用している従業員は過半数に上ることが判明しました。さらに、シャドーAIを利用する従業員の中には、情報漏洩につながりかねない危険な使い方をしている人もいることが明らかになりました。"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fenterprise%2Farticles%2F2606%2F04%2Fnews024.html"
+        data-title="ServiceNowとAccenture、エージェント型AIを全社展開する「FDE」を開始"
+        data-summary="ServiceNowとAccentureが、エージェント型AIの全社展開を推進する新プログラム「FDE」（Fully Deployed Enterprise）を開始した。このプログラムは、AI導入が実証実験段階で停滞し、全社規模での成果に繋がらないという課題の解決を目指す。"
         data-source="ITmedia AI+"
-        data-url="https://www.itmedia.co.jp/enterprise/articles/2606/03/news043.html"
+        data-url="https://www.itmedia.co.jp/enterprise/articles/2606/04/news024.html"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B7%E3%83%A3%E3%83%89%E3%83%BCAI%E3%81%AB%E3%80%8C%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E6%83%85%E5%A0%B1%E3%80%8D%E3%82%92%E6%B8%A1%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%89%B2%E5%90%88%E3%81%AF%EF%BC%9F%20Okta%E3%81%AE%E5%AE%9F%E6%85%8B%E8%AA%BF%E6%9F%BB%E3%81%A7%E5%88%A4%E6%98%8E%20https%3A%2F%2Fwww.itmedia.co.jp%2Fenterprise%2Farticles%2F2606%2F03%2Fnews043.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=ServiceNow%E3%81%A8Accenture%E3%80%81%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E5%9E%8BAI%E3%82%92%E5%85%A8%E7%A4%BE%E5%B1%95%E9%96%8B%E3%81%99%E3%82%8B%E3%80%8CFDE%E3%80%8D%E3%82%92%E9%96%8B%E5%A7%8B%20https%3A%2F%2Fwww.itmedia.co.jp%2Fenterprise%2Farticles%2F2606%2F04%2Fnews024.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="シャドーAIに「ログイン情報」を渡している割合は？ Oktaの実態調査で判明">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="ServiceNowとAccenture、エージェント型AIを全社展開する「FDE」を開始">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -521,25 +552,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/news/articles/2606/03/news066.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Microsoft、AndroidベースのAIエージェント基盤「Solara」発表 Snapdragon搭載のバッジ型端末も披露</a></h2>
-    <p class="summary">Microsoftは「Build 2026」で、AIエージェント専用の新プラットフォーム「Project Solara」を発表しました。このプラットフォームはWindowsではなくAOSPベースのOSを採用し、Qualcommと共同開発した社員証のようなデバイスとMediaTekと共同開発した据え置き型デバイスのリファレンスを公開しました。主要企業とのパイロット運用も開始されます。</p>
+    <h2><a href="https://monoist.itmedia.co.jp/mn/articles/2606/04/news059.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「WEDA」を前面に押し出すアドバンテック、エッジAIモデルの開発期間を86％削減</a></h2>
+    <p class="summary">アドバンテックは、「COMPUTEX TAIPEI 2026」で、同社のハードウェアと統合管理ソリューション「WEDA」を活用することで、エッジAIモデルの開発期間を86%削減できることをデモンストレーションした。これは、エッジAIの導入を迅速化する上で重要な進歩である。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Microsoftは、AIエージェントの実行に特化した新しいプラットフォーム「Project Solara」を「Build 2026」にて発表しました。このプラットフォームは、WindowsではなくAndroid Open Source Project（AOSP）をベースとしたOSを採用しており、Qualcommと共同開発した社員証型のウェアラブルデバイスや、MediaTekと共同開発した据え置き型デバイスのリファレンスモデルが披露されました。Microsoftは、これらのデバイスとプラットフォームを活用し、主要企業とのパイロット運用を開始する予定です。</p>
+<p class="detail-text">アドバンテックは、COMPUTEX TAIPEI 2026において、エッジAI開発・導入・運用を統合的に管理するプラットフォーム「WEDA」を発表した。同社は、WEDAを用いることで、エッジAIモデルの開発期間を従来の86%削減できることを実証した。このソリューションは、ハードウェアとソフトウェアを連携させ、開発プロセスを効率化することで、企業が迅速にエッジAIソリューションを展開することを可能にする。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews066.html"
-        data-title="Microsoft、AndroidベースのAIエージェント基盤「Solara」発表 Snapdragon搭載のバッジ型端末も披露"
-        data-summary="Microsoftは「Build 2026」で、AIエージェント専用の新プラットフォーム「Project Solara」を発表しました。このプラットフォームはWindowsではなくAOSPベースのOSを採用し、Qualcommと共同開発した社員証のようなデバイスとMediaTekと共同開発した据え置き型デバイスのリファレンスを公開しました。主要企業とのパイロット運用も開始されます。"
+        data-id="https%3A%2F%2Fmonoist.itmedia.co.jp%2Fmn%2Farticles%2F2606%2F04%2Fnews059.html"
+        data-title="「WEDA」を前面に押し出すアドバンテック、エッジAIモデルの開発期間を86％削減"
+        data-summary="アドバンテックは、「COMPUTEX TAIPEI 2026」で、同社のハードウェアと統合管理ソリューション「WEDA」を活用することで、エッジAIモデルの開発期間を86%削減できることをデモンストレーションした。これは、エッジAIの導入を迅速化する上で重要な進歩である。"
         data-source="ITmedia AI+"
-        data-url="https://www.itmedia.co.jp/news/articles/2606/03/news066.html"
+        data-url="https://monoist.itmedia.co.jp/mn/articles/2606/04/news059.html"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Microsoft%E3%80%81Android%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AEAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E5%9F%BA%E7%9B%A4%E3%80%8CSolara%E3%80%8D%E7%99%BA%E8%A1%A8%20Snapdragon%E6%90%AD%E8%BC%89%E3%81%AE%E3%83%90%E3%83%83%E3%82%B8%E5%9E%8B%E7%AB%AF%E6%9C%AB%E3%82%82%E6%8A%AB%E9%9C%B2%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews066.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8CWEDA%E3%80%8D%E3%82%92%E5%89%8D%E9%9D%A2%E3%81%AB%E6%8A%BC%E3%81%97%E5%87%BA%E3%81%99%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%83%86%E3%83%83%E3%82%AF%E3%80%81%E3%82%A8%E3%83%83%E3%82%B8AI%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E9%96%8B%E7%99%BA%E6%9C%9F%E9%96%93%E3%82%9286%EF%BC%85%E5%89%8A%E6%B8%9B%20https%3A%2F%2Fmonoist.itmedia.co.jp%2Fmn%2Farticles%2F2606%2F04%2Fnews059.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Microsoft、AndroidベースのAIエージェント基盤「Solara」発表 Snapdragon搭載のバッジ型端末も披露">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「WEDA」を前面に押し出すアドバンテック、エッジAIモデルの開発期間を86％削減">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -549,25 +580,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/business/articles/2606/03/news017.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">AI需要で半導体不足は「しばらく続く」 PCメーカー、デルの対応策は？</a></h2>
-    <p class="summary">AI需要の急増により、半導体不足が「しばらく続く」とPCメーカーのデル・テクノロジーズは予測しています。この記事では、デルがこの半導体不足という難局をどのように乗り切ろうとしているのか、その対応策に焦点を当てています。AI分野の成長がサプライチェーンに与える影響の大きさが示唆されています。</p>
+    <h2><a href="https://www.itmedia.co.jp/business/articles/2606/04/news023.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">2年間で「1万時間」削減　「1円の誤りも許されない」ソニー経理が“まず試してみる”DX集団に化けたワケ</a></h2>
+    <p class="summary">ソニーグループの経理部門は、2年間で150件以上のDXプロジェクトを推進し、累積1万時間以上の業務時間を創出した。正確性と継続性が求められる経理部門が、いかにして「まず試してみる」というDX推進の姿勢を確立し、変革を実現したのかが語られている。</p>
     <details>
 <summary></summary>
-<p class="detail-text">AI技術の急速な発展と普及に伴う需要の拡大により、半導体業界では深刻な供給不足が続いており、この状況は「しばらく続く」とPCメーカーであるデル・テクノロジーズは予測しています。デルは、AI関連製品の生産に必要な半導体の安定供給を確保するため、サプライヤーとの連携強化や代替部品の検討など、多岐にわたる戦略的な対応策を講じているとのことです。この記事では、デルが直面する供給網の課題と、それを克服するための具体的な取り組みについて詳述しています。</p>
+<p class="detail-text">ソニーグループの経理部門は、約2年間で150件以上のDX（デジタルトランスフォーメーション）プロジェクトを推進し、累積1万時間以上の業務効率化を達成した。これまで「1円の誤りも許されない」という厳格な環境下で、変革に抵抗があった経理部門が、どのようにして「まず試してみる」というアプローチを取り入れ、DXを推進できる集団へと変貌を遂げたのか、その具体的なプロセスや要因が解説されている。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2606%2F03%2Fnews017.html"
-        data-title="AI需要で半導体不足は「しばらく続く」 PCメーカー、デルの対応策は？"
-        data-summary="AI需要の急増により、半導体不足が「しばらく続く」とPCメーカーのデル・テクノロジーズは予測しています。この記事では、デルがこの半導体不足という難局をどのように乗り切ろうとしているのか、その対応策に焦点を当てています。AI分野の成長がサプライチェーンに与える影響の大きさが示唆されています。"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2606%2F04%2Fnews023.html"
+        data-title="2年間で「1万時間」削減　「1円の誤りも許されない」ソニー経理が“まず試してみる”DX集団に化けたワケ"
+        data-summary="ソニーグループの経理部門は、2年間で150件以上のDXプロジェクトを推進し、累積1万時間以上の業務時間を創出した。正確性と継続性が求められる経理部門が、いかにして「まず試してみる」というDX推進の姿勢を確立し、変革を実現したのかが語られている。"
         data-source="ITmedia AI+"
-        data-url="https://www.itmedia.co.jp/business/articles/2606/03/news017.html"
+        data-url="https://www.itmedia.co.jp/business/articles/2606/04/news023.html"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=AI%E9%9C%80%E8%A6%81%E3%81%A7%E5%8D%8A%E5%B0%8E%E4%BD%93%E4%B8%8D%E8%B6%B3%E3%81%AF%E3%80%8C%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F%E7%B6%9A%E3%81%8F%E3%80%8D%20PC%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E3%80%81%E3%83%87%E3%83%AB%E3%81%AE%E5%AF%BE%E5%BF%9C%E7%AD%96%E3%81%AF%EF%BC%9F%20https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2606%2F03%2Fnews017.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=2%E5%B9%B4%E9%96%93%E3%81%A7%E3%80%8C1%E4%B8%87%E6%99%82%E9%96%93%E3%80%8D%E5%89%8A%E6%B8%9B%E3%80%80%E3%80%8C1%E5%86%86%E3%81%AE%E8%AA%A4%E3%82%8A%E3%82%82%E8%A8%B1%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84%E3%80%8D%E3%82%BD%E3%83%8B%E3%83%BC%E7%B5%8C%E7%90%86%E3%81%8C%E2%80%9C%E3%81%BE%E3%81%9A%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B%E2%80%9DDX%E9%9B%86%E5%9B%A3%E3%81%AB%E5%8C%96%E3%81%91%E3%81%9F%E3%83%AF%E3%82%B1%20https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2606%2F04%2Fnews023.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="AI需要で半導体不足は「しばらく続く」 PCメーカー、デルの対応策は？">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="2年間で「1万時間」削減　「1円の誤りも許されない」ソニー経理が“まず試してみる”DX集団に化けたワケ">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -577,25 +608,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">TechCrunch</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/06/02/squishmallows-dentures-and-an-i-heart-hot-dads-bag-uber-has-found-thousands-of-items-left-in-robotaxis/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ロボットタクシーに忘れられた「Squishmallows、義歯、そして『お父さん大好き』バッグ」：Uberが数千点の遺失物を発見</a></h2>
-    <p class="summary">Uberは、ロボットタクシーから数千点の遺失物を回収しました。これには、Squishmallows、義歯、そして「お父さん大好き」と書かれたバッグなどが含まれています。自動運転の未来においても、乗客が置き忘れた物を届けるという人間的なサービスが必要であることが示唆されています。</p>
+    <h2><a href="https://techcrunch.com/video/defense-tech-is-flooded-with-money-but-whos-built-to-last/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">防衛テックは資金に溢れているが、持続可能なものは誰が構築できるのか？</a></h2>
+    <p class="summary">防衛テック業界は現在、多額の資金が流入している。AndurilとMach Industriesは評価額を大幅に引き上げ、米国政府は防衛予算を40%増加させる見込みだ。しかし、ベンチャー投資家のロス・フビーニ氏によれば、多くの新興企業がプロトタイプ契約と実用化の間の「死の谷」で失われるだろう。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Uberは、ロボットタクシーの運用において、乗客が置き忘れた様々な品々を発見しており、その数は数千点に上ります。回収されたものの中には、子供に人気のぬいぐるみ「Squishmallows」、義歯、そして「I Heart Hot Dads」と書かれたバッグなど、多岐にわたるアイテムが含まれています。これは、自動運転技術の進化と共に、従来のような人間によるサポートや遺失物管理の必要性が依然として存在することを示しています。</p>
+<p class="detail-text">防衛テック分野は、AndurilやMach Industriesのような企業の評価額上昇や、米国政府による防衛予算の大幅な増加により、近年大きな注目を集めている。しかし、ベンチャー投資家のロス・フビーニ氏は、多くのスタートアップが技術開発から市場投入までの移行期に直面する困難、いわゆる「死の谷」を乗り越えられないと指摘している。これは、技術的な課題、規制のハードル、そして長期的なビジネスモデルの確立の難しさによるものだ。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fsquishmallows-dentures-and-an-i-heart-hot-dads-bag-uber-has-found-thousands-of-items-left-in-robotaxis%2F"
-        data-title="ロボットタクシーに忘れられた「Squishmallows、義歯、そして『お父さん大好き』バッグ」：Uberが数千点の遺失物を発見"
-        data-summary="Uberは、ロボットタクシーから数千点の遺失物を回収しました。これには、Squishmallows、義歯、そして「お父さん大好き」と書かれたバッグなどが含まれています。自動運転の未来においても、乗客が置き忘れた物を届けるという人間的なサービスが必要であることが示唆されています。"
+        data-id="https%3A%2F%2Ftechcrunch.com%2Fvideo%2Fdefense-tech-is-flooded-with-money-but-whos-built-to-last%2F"
+        data-title="防衛テックは資金に溢れているが、持続可能なものは誰が構築できるのか？"
+        data-summary="防衛テック業界は現在、多額の資金が流入している。AndurilとMach Industriesは評価額を大幅に引き上げ、米国政府は防衛予算を40%増加させる見込みだ。しかし、ベンチャー投資家のロス・フビーニ氏によれば、多くの新興企業がプロトタイプ契約と実用化の間の「死の谷」で失われるだろう。"
         data-source="TechCrunch"
-        data-url="https://techcrunch.com/2026/06/02/squishmallows-dentures-and-an-i-heart-hot-dads-bag-uber-has-found-thousands-of-items-left-in-robotaxis/"
+        data-url="https://techcrunch.com/video/defense-tech-is-flooded-with-money-but-whos-built-to-last/"
         data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E3%81%AB%E5%BF%98%E3%82%8C%E3%82%89%E3%82%8C%E3%81%9F%E3%80%8CSquishmallows%E3%80%81%E7%BE%A9%E6%AD%AF%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E3%80%8E%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%80%8F%E3%83%90%E3%83%83%E3%82%B0%E3%80%8D%EF%BC%9AUber%E3%81%8C%E6%95%B0%E5%8D%83%E7%82%B9%E3%81%AE%E9%81%BA%E5%A4%B1%E7%89%A9%E3%82%92%E7%99%BA%E8%A6%8B%20https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fsquishmallows-dentures-and-an-i-heart-hot-dads-bag-uber-has-found-thousands-of-items-left-in-robotaxis%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E9%98%B2%E8%A1%9B%E3%83%86%E3%83%83%E3%82%AF%E3%81%AF%E8%B3%87%E9%87%91%E3%81%AB%E6%BA%A2%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%8C%E3%80%81%E6%8C%81%E7%B6%9A%E5%8F%AF%E8%83%BD%E3%81%AA%E3%82%82%E3%81%AE%E3%81%AF%E8%AA%B0%E3%81%8C%E6%A7%8B%E7%AF%89%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%AE%E3%81%8B%EF%BC%9F%20https%3A%2F%2Ftechcrunch.com%2Fvideo%2Fdefense-tech-is-flooded-with-money-but-whos-built-to-last%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="ロボットタクシーに忘れられた「Squishmallows、義歯、そして『お父さん大好き』バッグ」：Uberが数千点の遺失物を発見">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="防衛テックは資金に溢れているが、持続可能なものは誰が構築できるのか？">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -603,27 +634,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">TechCrunch</span>
+      <span class="item-source">TechCrunch Startups</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/06/02/cyberdeck-tiktok-trend-reject-big-tech/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">サイバーデッキが注目を集める、スタイルと実質でビッグテックの監視に異議を唱える</a></h2>
-    <p class="summary">ソーシャルメディアでDIYハードウェアコミュニティが人気を集め、サイバーデッキが注目されています。これらは、太陽光発電のゲームエミュレーター、ポケットサイズの電子書籍リーダー、クラムシェル型バッグコンピューターなどを披露しており、ビッグテックの監視に対するスタイルと実質を伴った抵抗の意思表示となっています。</p>
+    <h2><a href="https://techcrunch.com/2026/06/03/these-two-founders-left-goldman-and-meta-to-build-voice-ai-for-markets-everyone-else-overlooked/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ゴールドマン・サックスとMeta出身の創業者2名、他の誰もが見落とした市場向けの音声AIを構築</a></h2>
+    <p class="summary">ゴールドマン・サックスとMetaの元従業員が、これまで顧みられなかった市場向けの音声AIを開発するスタートアップを設立した。同社の独自スタックは、現在アフリカと中東で1日あたり17,000件以上の通話を処理している。</p>
     <details>
 <summary></summary>
-<p class="detail-text">近年、ソーシャルメディア上でDIYハードウェアコミュニティが活況を呈しており、特に「サイバーデッキ」と呼ばれるデバイスが注目されています。これらは、ユーザーが自らの手で構築した、太陽光発電で動作するゲームエミュレーター、ポケットサイズの電子書籍リーダー、そしてクラムシェル型のバッグコンピューターといったユニークなデバイスです。これらのデバイスは、ビッグテックによる監視社会への抵抗を、デザイン性と機能性を兼ね備えた形で表現しています。</p>
+<p class="detail-text">このスタートアップは、金融業界とテクノロジー業界の経験を持つ創業者によって設立され、アフリカや中東といった市場のニーズに特化した音声AIソリューションを提供している。同社が開発した独自技術スタックは、現地の言語や文化、通信環境に合わせて最適化されており、現在、1日あたり17,000件以上の通話処理能力を誇る。この成功は、未開拓市場におけるAI技術の可能性を示唆している。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fcyberdeck-tiktok-trend-reject-big-tech%2F"
-        data-title="サイバーデッキが注目を集める、スタイルと実質でビッグテックの監視に異議を唱える"
-        data-summary="ソーシャルメディアでDIYハードウェアコミュニティが人気を集め、サイバーデッキが注目されています。これらは、太陽光発電のゲームエミュレーター、ポケットサイズの電子書籍リーダー、クラムシェル型バッグコンピューターなどを披露しており、ビッグテックの監視に対するスタイルと実質を伴った抵抗の意思表示となっています。"
-        data-source="TechCrunch"
-        data-url="https://techcrunch.com/2026/06/02/cyberdeck-tiktok-trend-reject-big-tech/"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F03%2Fthese-two-founders-left-goldman-and-meta-to-build-voice-ai-for-markets-everyone-else-overlooked%2F"
+        data-title="ゴールドマン・サックスとMeta出身の創業者2名、他の誰もが見落とした市場向けの音声AIを構築"
+        data-summary="ゴールドマン・サックスとMetaの元従業員が、これまで顧みられなかった市場向けの音声AIを開発するスタートアップを設立した。同社の独自スタックは、現在アフリカと中東で1日あたり17,000件以上の通話を処理している。"
+        data-source="TechCrunch Startups"
+        data-url="https://techcrunch.com/2026/06/03/these-two-founders-left-goldman-and-meta-to-build-voice-ai-for-markets-everyone-else-overlooked/"
         data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B5%E3%82%A4%E3%83%90%E3%83%BC%E3%83%87%E3%83%83%E3%82%AD%E3%81%8C%E6%B3%A8%E7%9B%AE%E3%82%92%E9%9B%86%E3%82%81%E3%82%8B%E3%80%81%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%A8%E5%AE%9F%E8%B3%AA%E3%81%A7%E3%83%93%E3%83%83%E3%82%B0%E3%83%86%E3%83%83%E3%82%AF%E3%81%AE%E7%9B%A3%E8%A6%96%E3%81%AB%E7%95%B0%E8%AD%B0%E3%82%92%E5%94%B1%E3%81%88%E3%82%8B%20https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fcyberdeck-tiktok-trend-reject-big-tech%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%89%E3%83%9E%E3%83%B3%E3%83%BB%E3%82%B5%E3%83%83%E3%82%AF%E3%82%B9%E3%81%A8Meta%E5%87%BA%E8%BA%AB%E3%81%AE%E5%89%B5%E6%A5%AD%E8%80%852%E5%90%8D%E3%80%81%E4%BB%96%E3%81%AE%E8%AA%B0%E3%82%82%E3%81%8C%E8%A6%8B%E8%90%BD%E3%81%A8%E3%81%97%E3%81%9F%E5%B8%82%E5%A0%B4%E5%90%91%E3%81%91%E3%81%AE%E9%9F%B3%E5%A3%B0AI%E3%82%92%E6%A7%8B%E7%AF%89%20https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F03%2Fthese-two-founders-left-goldman-and-meta-to-build-voice-ai-for-markets-everyone-else-overlooked%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="サイバーデッキが注目を集める、スタイルと実質でビッグテックの監視に異議を唱える">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="ゴールドマン・サックスとMeta出身の創業者2名、他の誰もが見落とした市場向けの音声AIを構築">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -631,27 +662,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">TechCrunch Startups</span>
+      <span class="item-source">Gigazine</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/06/02/ex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">元Andurilエンジニア、複合材のAmazonを構築するために4200万ドルを調達</a></h2>
-    <p class="summary">元AndurilエンジニアであるZack Eakin氏が、より速く、より安く、より良い複合材を製造することを目指す「Layup Parts」を設立し、4200万ドルを調達しました。同氏はモータースポーツの経験と、Palmer Luckey氏やElon Musk氏の下での経験を活かし、この分野での変革を目指しています。</p>
+    <h2><a href="https://gigazine.net/news/20260604-sega-games-vinyl-record/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">メガドライブのゲームをアナログレコードに記録して実機でプレイすることは可能なのか？</a></h2>
+    <p class="summary">セガのゲーム機「メガドライブ」のゲームデータをアナログレコードに記録し、それを実機でプレイできるかという実験が行われた。レトロゲーム系YouTuberが、メガドライブとレコードプレイヤーを接続し、データ読み込みの可能性を検証した。</p>
     <details>
 <summary></summary>
-<p class="detail-text">元AndurilのエンジニアであるZack Eakin氏は、航空宇宙、自動車、ロボット工学などの産業で使用される複合材の製造プロセスを効率化するため、Layup Partsを設立し、4200万ドルの資金調達に成功しました。Eakin氏は、モータースポーツ業界での経験と、Oculusの創業者であるPalmer Luckey氏、そしてSpaceXのElon Musk氏の下で培った技術的知識を活かし、より高速で低コスト、かつ高品質な複合材の製造を実現することを目指しています。</p>
+<p class="detail-text">レトロゲーム愛好家であるYouTuberのThroaty Mumbo氏が、セガのメガドライブ用ゲームをアナログレコードに記録し、それを実機でプレイするという挑戦的な試みを行った。この実験では、メガドライブ本体とレコードプレイヤーを接続し、ゲームのプログラムやサウンドデータをレコード盤にエンコード、そして再生してゲームが正常に動作するかどうかを検証している。これは、古いテクノロジーと新しい技術を組み合わせたユニークな試みである。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts%2F"
-        data-title="元Andurilエンジニア、複合材のAmazonを構築するために4200万ドルを調達"
-        data-summary="元AndurilエンジニアであるZack Eakin氏が、より速く、より安く、より良い複合材を製造することを目指す「Layup Parts」を設立し、4200万ドルを調達しました。同氏はモータースポーツの経験と、Palmer Luckey氏やElon Musk氏の下での経験を活かし、この分野での変革を目指しています。"
-        data-source="TechCrunch Startups"
-        data-url="https://techcrunch.com/2026/06/02/ex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts/"
+        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260604-sega-games-vinyl-record%2F"
+        data-title="メガドライブのゲームをアナログレコードに記録して実機でプレイすることは可能なのか？"
+        data-summary="セガのゲーム機「メガドライブ」のゲームデータをアナログレコードに記録し、それを実機でプレイできるかという実験が行われた。レトロゲーム系YouTuberが、メガドライブとレコードプレイヤーを接続し、データ読み込みの可能性を検証した。"
+        data-source="Gigazine"
+        data-url="https://gigazine.net/news/20260604-sega-games-vinyl-record/"
         data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E5%85%83Anduril%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%80%81%E8%A4%87%E5%90%88%E6%9D%90%E3%81%AEAmazon%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB4200%E4%B8%87%E3%83%89%E3%83%AB%E3%82%92%E8%AA%BF%E9%81%94%20https%3A%2F%2Ftechcrunch.com%2F2026%2F06%2F02%2Fex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%A1%E3%82%AC%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%81%AE%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%92%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AB%E8%A8%98%E9%8C%B2%E3%81%97%E3%81%A6%E5%AE%9F%E6%A9%9F%E3%81%A7%E3%83%97%E3%83%AC%E3%82%A4%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E5%8F%AF%E8%83%BD%E3%81%AA%E3%81%AE%E3%81%8B%EF%BC%9F%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260604-sega-games-vinyl-record%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="元Andurilエンジニア、複合材のAmazonを構築するために4200万ドルを調達">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="メガドライブのゲームをアナログレコードに記録して実機でプレイすることは可能なのか？">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -659,27 +690,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">ITmedia NEWS</span>
+      <span class="item-source">Gigazine</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/news/articles/2606/03/news054.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「電源タップは3～5年で交換推奨」は短すぎ？ 推奨する日本配線システム工業会に聞いてみた</a></h2>
-    <p class="summary">パナソニックの「電源タップは3～5年で交換推奨」というX（旧Twitter）の投稿が波紋を呼んでいます。この記事では、この交換目安を推奨している日本配線システム工業会に、その根拠や推奨期間について話を聞いています。一般的に考えられているよりも短い交換期間の理由が明らかになるかもしれません。</p>
+    <h2><a href="https://gigazine.net/news/20260604-hwinfo-nasa/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">CPU温度やクロック周波数などをグラフ化できる定番アプリ「HWiNFO」はNASAの実験にも活用されている</a></h2>
+    <p class="summary">PCのハードウェア情報を詳細に取得・監視できる定番アプリ「HWiNFO」が、NASAの研究においても活用されていることが明らかになった。CPU、GPU、メモリなどの詳細な情報をグラフ化できるこのアプリは、研究開発の現場でも信頼されている。</p>
     <details>
 <summary></summary>
-<p class="detail-text">パナソニックがX（旧Twitter）で投稿した「電源タップの交換目安は3～5年」という情報が、多くのユーザーの間で議論を呼んでいます。この目安を推奨しているとされる日本配線システム工業会に、ITmedia NEWSが直撃取材を敢行しました。工業会への取材を通じて、なぜ短期間での交換が推奨されるのか、その技術的な背景や安全性の観点からの理由が説明されています。この記事は、電源タップの寿命や安全な使用方法についての疑問に答えるものとなっています。</p>
+<p class="detail-text">PCのパフォーマンス監視ツールとして広く利用されている「HWiNFO」は、CPU、GPU、メモリ、ストレージ、ファンなど、PCのあらゆるハードウェアコンポーネントに関する詳細な情報をリアルタイムで取得し、グラフ化する機能を持つ。この高度なモニタリング機能がNASAの研究プロジェクトでも採用されており、宇宙開発における機器の安定稼働やデータ分析に貢献していることが示唆されている。この事実は、HWiNFOが単なるゲーマー向けツールではなく、科学技術分野でも信頼される高精度なソフトウェアであることを裏付けている。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews054.html"
-        data-title="「電源タップは3～5年で交換推奨」は短すぎ？ 推奨する日本配線システム工業会に聞いてみた"
-        data-summary="パナソニックの「電源タップは3～5年で交換推奨」というX（旧Twitter）の投稿が波紋を呼んでいます。この記事では、この交換目安を推奨している日本配線システム工業会に、その根拠や推奨期間について話を聞いています。一般的に考えられているよりも短い交換期間の理由が明らかになるかもしれません。"
-        data-source="ITmedia NEWS"
-        data-url="https://www.itmedia.co.jp/news/articles/2606/03/news054.html"
+        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260604-hwinfo-nasa%2F"
+        data-title="CPU温度やクロック周波数などをグラフ化できる定番アプリ「HWiNFO」はNASAの実験にも活用されている"
+        data-summary="PCのハードウェア情報を詳細に取得・監視できる定番アプリ「HWiNFO」が、NASAの研究においても活用されていることが明らかになった。CPU、GPU、メモリなどの詳細な情報をグラフ化できるこのアプリは、研究開発の現場でも信頼されている。"
+        data-source="Gigazine"
+        data-url="https://gigazine.net/news/20260604-hwinfo-nasa/"
         data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E9%9B%BB%E6%BA%90%E3%82%BF%E3%83%83%E3%83%97%E3%81%AF3%EF%BD%9E5%E5%B9%B4%E3%81%A7%E4%BA%A4%E6%8F%9B%E6%8E%A8%E5%A5%A8%E3%80%8D%E3%81%AF%E7%9F%AD%E3%81%99%E3%81%8E%EF%BC%9F%20%E6%8E%A8%E5%A5%A8%E3%81%99%E3%82%8B%E6%97%A5%E6%9C%AC%E9%85%8D%E7%B7%9A%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%B7%A5%E6%A5%AD%E4%BC%9A%E3%81%AB%E8%81%9E%E3%81%84%E3%81%A6%E3%81%BF%E3%81%9F%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews054.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=CPU%E6%B8%A9%E5%BA%A6%E3%82%84%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF%E5%91%A8%E6%B3%A2%E6%95%B0%E3%81%AA%E3%81%A9%E3%82%92%E3%82%B0%E3%83%A9%E3%83%95%E5%8C%96%E3%81%A7%E3%81%8D%E3%82%8B%E5%AE%9A%E7%95%AA%E3%82%A2%E3%83%97%E3%83%AA%E3%80%8CHWiNFO%E3%80%8D%E3%81%AFNASA%E3%81%AE%E5%AE%9F%E9%A8%93%E3%81%AB%E3%82%82%E6%B4%BB%E7%94%A8%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260604-hwinfo-nasa%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「電源タップは3～5年で交換推奨」は短すぎ？ 推奨する日本配線システム工業会に聞いてみた">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="CPU温度やクロック周波数などをグラフ化できる定番アプリ「HWiNFO」はNASAの実験にも活用されている">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -689,53 +720,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">Gigazine</span>
     </div>
-    <h2><a href="https://gigazine.net/news/20260603-nice-nano-million-dollar-product-dorm-room/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">1億6000万円超を売り上げた自作キーボード用の小型マイコンボード「nice!nano」の開発秘話を本人が語る</a></h2>
-    <p class="summary">自作キーボード用の小型マイコンボード「nice!nano」が、100万ドル（約1億6000万円）以上の売上を記録した開発者、ニック・ウィナンズ氏が、大学1年生時に寮でこの製品を開発した経緯をブログで公開しました。これは、個人開発者が小規模なアイデアから大きな成功を収めた事例として注目されます。</p>
+    <h2><a href="https://gigazine.net/news/20260604-otzi-iceman-yeast-bread/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「アイスマン」の体から「パン作りに使えそうな酵母」が発見される、研究チームはアイスマン由来の酵母からパン種の作成に成功</a></h2>
+    <p class="summary">約5300年前にアルプス山脈で死亡し、氷河の中でミイラ化した「アイスマン」の体から、パン作りに利用可能な酵母が発見された。研究チームはこの酵母を用いて、パン種を作成することに成功した。</p>
     <details>
 <summary></summary>
-<p class="detail-text">大学1年生のニック・ウィナンズ氏が、大学の寮で開発した小型マイコンボード「nice!nano」は、自作キーボード愛好家の間で絶大な人気を博し、100万ドル（約1億6000万円）を超える売上を記録しました。ウィナンズ氏は、自身のブログでこの製品開発の秘話、特に初期のアイデア創出からプロトタイピング、そして市場投入に至るまでの道のりを詳細に綴っています。この事例は、小規模な個人開発プロジェクトがどのようにして大きな商業的成功を収めることができるかを示す好例です。</p>
+<p class="detail-text">アイスマン（Ötzi）として知られる、約5300年前にアルプス山脈で亡くなったミイラの体から、パン作りに適した可能性のある酵母が発見された。この発見は、古代の微生物生態系に関する貴重な情報を提供するだけでなく、研究チームによってこの酵母が実際にパン種として利用され、パンが作られたことを示している。これは、古代の食品製造技術や微生物の保存状態に関する科学的な洞察を提供する興味深い研究である。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260603-nice-nano-million-dollar-product-dorm-room%2F"
-        data-title="1億6000万円超を売り上げた自作キーボード用の小型マイコンボード「nice!nano」の開発秘話を本人が語る"
-        data-summary="自作キーボード用の小型マイコンボード「nice!nano」が、100万ドル（約1億6000万円）以上の売上を記録した開発者、ニック・ウィナンズ氏が、大学1年生時に寮でこの製品を開発した経緯をブログで公開しました。これは、個人開発者が小規模なアイデアから大きな成功を収めた事例として注目されます。"
+        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260604-otzi-iceman-yeast-bread%2F"
+        data-title="「アイスマン」の体から「パン作りに使えそうな酵母」が発見される、研究チームはアイスマン由来の酵母からパン種の作成に成功"
+        data-summary="約5300年前にアルプス山脈で死亡し、氷河の中でミイラ化した「アイスマン」の体から、パン作りに利用可能な酵母が発見された。研究チームはこの酵母を用いて、パン種を作成することに成功した。"
         data-source="Gigazine"
-        data-url="https://gigazine.net/news/20260603-nice-nano-million-dollar-product-dorm-room/"
+        data-url="https://gigazine.net/news/20260604-otzi-iceman-yeast-bread/"
         data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=1%E5%84%846000%E4%B8%87%E5%86%86%E8%B6%85%E3%82%92%E5%A3%B2%E3%82%8A%E4%B8%8A%E3%81%92%E3%81%9F%E8%87%AA%E4%BD%9C%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E7%94%A8%E3%81%AE%E5%B0%8F%E5%9E%8B%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%89%E3%80%8Cnice%21nano%E3%80%8D%E3%81%AE%E9%96%8B%E7%99%BA%E7%A7%98%E8%A9%B1%E3%82%92%E6%9C%AC%E4%BA%BA%E3%81%8C%E8%AA%9E%E3%82%8B%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260603-nice-nano-million-dollar-product-dorm-room%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%82%A2%E3%82%A4%E3%82%B9%E3%83%9E%E3%83%B3%E3%80%8D%E3%81%AE%E4%BD%93%E3%81%8B%E3%82%89%E3%80%8C%E3%83%91%E3%83%B3%E4%BD%9C%E3%82%8A%E3%81%AB%E4%BD%BF%E3%81%88%E3%81%9D%E3%81%86%E3%81%AA%E9%85%B5%E6%AF%8D%E3%80%8D%E3%81%8C%E7%99%BA%E8%A6%8B%E3%81%95%E3%82%8C%E3%82%8B%E3%80%81%E7%A0%94%E7%A9%B6%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AF%E3%82%A2%E3%82%A4%E3%82%B9%E3%83%9E%E3%83%B3%E7%94%B1%E6%9D%A5%E3%81%AE%E9%85%B5%E6%AF%8D%E3%81%8B%E3%82%89%E3%83%91%E3%83%B3%E7%A8%AE%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%AB%E6%88%90%E5%8A%9F%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260604-otzi-iceman-yeast-bread%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="1億6000万円超を売り上げた自作キーボード用の小型マイコンボード「nice!nano」の開発秘話を本人が語る">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.70s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">Gigazine</span>
-    </div>
-    <h2><a href="https://gigazine.net/news/20260603-mirror-bend-before-breaks/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">鏡は割れる前に曲がるのか？スーパースローモーション映像で検証</a></h2>
-    <p class="summary">登録者数1500万人を誇る人気YouTuber「The Slow Mo Guys」が、ハイスピードカメラを用いて、鏡が割れる瞬間を人間の目には捉えられないほどの精密さで撮影した映像を公開しました。この映像は、物理現象を詳細に観察するという科学的探求とエンターテイメント性を兼ね備えています。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">人気YouTubeチャンネル「The Slow Mo Guys」が、鏡が破壊される瞬間の物理現象を捉えた、息をのむようなスーパースローモーション映像を公開しました。彼らは高度なハイスピードカメラ技術を駆使し、鏡が割れる直前の微細な変形や、破片が飛び散る様子を、人間の視覚では捉えきれないレベルで詳細に記録しています。この映像は、日常的な現象の背後にある物理学的なメカニズムを視覚的に理解する上で、非常に興味深いコンテンツとなっています。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260603-mirror-bend-before-breaks%2F"
-        data-title="鏡は割れる前に曲がるのか？スーパースローモーション映像で検証"
-        data-summary="登録者数1500万人を誇る人気YouTuber「The Slow Mo Guys」が、ハイスピードカメラを用いて、鏡が割れる瞬間を人間の目には捉えられないほどの精密さで撮影した映像を公開しました。この映像は、物理現象を詳細に観察するという科学的探求とエンターテイメント性を兼ね備えています。"
-        data-source="Gigazine"
-        data-url="https://gigazine.net/news/20260603-mirror-bend-before-breaks/"
-        data-importance="🟢"
-        data-category="テック・AI">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E9%8F%A1%E3%81%AF%E5%89%B2%E3%82%8C%E3%82%8B%E5%89%8D%E3%81%AB%E6%9B%B2%E3%81%8C%E3%82%8B%E3%81%AE%E3%81%8B%EF%BC%9F%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AD%E3%83%BC%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E6%98%A0%E5%83%8F%E3%81%A7%E6%A4%9C%E8%A8%BC%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260603-mirror-bend-before-breaks%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="鏡は割れる前に曲がるのか？スーパースローモーション映像で検証">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「アイスマン」の体から「パン作りに使えそうな酵母」が発見される、研究チームはアイスマン由来の酵母からパン種の作成に成功">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -747,25 +750,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/enterprise/articles/2606/03/news043.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">シャドーAIに「ログイン情報」を渡している割合は？ Oktaの実態調査で判明</a></h2>
-    <p class="summary">Oktaの調査によると、経営幹部の95%は従業員がAIを責任を持って利用していると確信していますが、シャドーAI（組織が公式に承認していないAIツールの利用）を利用している従業員は過半数に上ることが判明しました。さらに、シャドーAIを利用する従業員の中には、情報漏洩につながりかねない危険な使い方をしている人もいることが明らかになりました。</p>
+    <h2><a href="https://www.itmedia.co.jp/enterprise/articles/2606/04/news024.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ServiceNowとAccenture、エージェント型AIを全社展開する「FDE」を開始</a></h2>
+    <p class="summary">ServiceNowとAccentureが、エージェント型AIの全社展開を推進する新プログラム「FDE」（Fully Deployed Enterprise）を開始した。このプログラムは、AI導入が実証実験段階で停滞し、全社規模での成果に繋がらないという課題の解決を目指す。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Oktaが実施した調査により、多くの企業で「シャドーAI」と呼ばれる、組織が正式に承認していないAIツールの利用が蔓延している実態が明らかになりました。調査では、経営幹部の95%が従業員によるAIの責任ある利用を確信している一方で、実際にシャドーAIを利用している従業員が過半数に達していることが示されました。さらに深刻なのは、シャドーAIを利用する従業員の一部が、企業の機密情報や個人情報が漏洩するリスクを高めるような、危険な使い方をしているという事実です。この調査結果は、企業におけるAI利用のガバナンスとセキュリティ対策の重要性を浮き彫りにしています。</p>
+<p class="detail-text">ServiceNowとAccentureは、企業におけるエージェント型AIの本格的な導入と全社展開を支援する「FDE」プログラムを開始した。多くの企業がAIの PoC（概念実証）で止まってしまう現状を踏まえ、このプログラムは、AI技術の導入から全社的な運用、そしてビジネス成果への結びつけまでを包括的にサポートする。これにより、AIの導入効果を最大化し、組織全体の生産性向上を目指す。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fenterprise%2Farticles%2F2606%2F03%2Fnews043.html"
-        data-title="シャドーAIに「ログイン情報」を渡している割合は？ Oktaの実態調査で判明"
-        data-summary="Oktaの調査によると、経営幹部の95%は従業員がAIを責任を持って利用していると確信していますが、シャドーAI（組織が公式に承認していないAIツールの利用）を利用している従業員は過半数に上ることが判明しました。さらに、シャドーAIを利用する従業員の中には、情報漏洩につながりかねない危険な使い方をしている人もいることが明らかになりました。"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fenterprise%2Farticles%2F2606%2F04%2Fnews024.html"
+        data-title="ServiceNowとAccenture、エージェント型AIを全社展開する「FDE」を開始"
+        data-summary="ServiceNowとAccentureが、エージェント型AIの全社展開を推進する新プログラム「FDE」（Fully Deployed Enterprise）を開始した。このプログラムは、AI導入が実証実験段階で停滞し、全社規模での成果に繋がらないという課題の解決を目指す。"
         data-source="ITmedia AI+"
-        data-url="https://www.itmedia.co.jp/enterprise/articles/2606/03/news043.html"
+        data-url="https://www.itmedia.co.jp/enterprise/articles/2606/04/news024.html"
         data-importance="🟡"
         data-category="Anthropic">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B7%E3%83%A3%E3%83%89%E3%83%BCAI%E3%81%AB%E3%80%8C%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E6%83%85%E5%A0%B1%E3%80%8D%E3%82%92%E6%B8%A1%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%89%B2%E5%90%88%E3%81%AF%EF%BC%9F%20Okta%E3%81%AE%E5%AE%9F%E6%85%8B%E8%AA%BF%E6%9F%BB%E3%81%A7%E5%88%A4%E6%98%8E%20https%3A%2F%2Fwww.itmedia.co.jp%2Fenterprise%2Farticles%2F2606%2F03%2Fnews043.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=ServiceNow%E3%81%A8Accenture%E3%80%81%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E5%9E%8BAI%E3%82%92%E5%85%A8%E7%A4%BE%E5%B1%95%E9%96%8B%E3%81%99%E3%82%8B%E3%80%8CFDE%E3%80%8D%E3%82%92%E9%96%8B%E5%A7%8B%20https%3A%2F%2Fwww.itmedia.co.jp%2Fenterprise%2Farticles%2F2606%2F04%2Fnews024.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="シャドーAIに「ログイン情報」を渡している割合は？ Oktaの実態調査で判明">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="ServiceNowとAccenture、エージェント型AIを全社展開する「FDE」を開始">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -775,25 +778,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/news/articles/2606/03/news066.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Microsoft、AndroidベースのAIエージェント基盤「Solara」発表 Snapdragon搭載のバッジ型端末も披露</a></h2>
-    <p class="summary">Microsoftは「Build 2026」で、AIエージェント専用の新プラットフォーム「Project Solara」を発表しました。このプラットフォームはWindowsではなくAOSPベースのOSを採用し、Qualcommと共同開発した社員証のようなデバイスとMediaTekと共同開発した据え置き型デバイスのリファレンスを公開しました。主要企業とのパイロット運用も開始されます。</p>
+    <h2><a href="https://monoist.itmedia.co.jp/mn/articles/2606/04/news059.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「WEDA」を前面に押し出すアドバンテック、エッジAIモデルの開発期間を86％削減</a></h2>
+    <p class="summary">アドバンテックは、「COMPUTEX TAIPEI 2026」で、同社のハードウェアと統合管理ソリューション「WEDA」を活用することで、エッジAIモデルの開発期間を86%削減できることをデモンストレーションした。これは、エッジAIの導入を迅速化する上で重要な進歩である。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Microsoftは、AIエージェントの実行に特化した新しいプラットフォーム「Project Solara」を「Build 2026」にて発表しました。このプラットフォームは、WindowsではなくAndroid Open Source Project（AOSP）をベースとしたOSを採用しており、Qualcommと共同開発した社員証型のウェアラブルデバイスや、MediaTekと共同開発した据え置き型デバイスのリファレンスモデルが披露されました。Microsoftは、これらのデバイスとプラットフォームを活用し、主要企業とのパイロット運用を開始する予定です。</p>
+<p class="detail-text">アドバンテックは、COMPUTEX TAIPEI 2026において、エッジAI開発・導入・運用を統合的に管理するプラットフォーム「WEDA」を発表した。同社は、WEDAを用いることで、エッジAIモデルの開発期間を従来の86%削減できることを実証した。このソリューションは、ハードウェアとソフトウェアを連携させ、開発プロセスを効率化することで、企業が迅速にエッジAIソリューションを展開することを可能にする。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews066.html"
-        data-title="Microsoft、AndroidベースのAIエージェント基盤「Solara」発表 Snapdragon搭載のバッジ型端末も披露"
-        data-summary="Microsoftは「Build 2026」で、AIエージェント専用の新プラットフォーム「Project Solara」を発表しました。このプラットフォームはWindowsではなくAOSPベースのOSを採用し、Qualcommと共同開発した社員証のようなデバイスとMediaTekと共同開発した据え置き型デバイスのリファレンスを公開しました。主要企業とのパイロット運用も開始されます。"
+        data-id="https%3A%2F%2Fmonoist.itmedia.co.jp%2Fmn%2Farticles%2F2606%2F04%2Fnews059.html"
+        data-title="「WEDA」を前面に押し出すアドバンテック、エッジAIモデルの開発期間を86％削減"
+        data-summary="アドバンテックは、「COMPUTEX TAIPEI 2026」で、同社のハードウェアと統合管理ソリューション「WEDA」を活用することで、エッジAIモデルの開発期間を86%削減できることをデモンストレーションした。これは、エッジAIの導入を迅速化する上で重要な進歩である。"
         data-source="ITmedia AI+"
-        data-url="https://www.itmedia.co.jp/news/articles/2606/03/news066.html"
+        data-url="https://monoist.itmedia.co.jp/mn/articles/2606/04/news059.html"
         data-importance="🟡"
         data-category="Anthropic">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Microsoft%E3%80%81Android%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AEAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E5%9F%BA%E7%9B%A4%E3%80%8CSolara%E3%80%8D%E7%99%BA%E8%A1%A8%20Snapdragon%E6%90%AD%E8%BC%89%E3%81%AE%E3%83%90%E3%83%83%E3%82%B8%E5%9E%8B%E7%AB%AF%E6%9C%AB%E3%82%82%E6%8A%AB%E9%9C%B2%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2606%2F03%2Fnews066.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8CWEDA%E3%80%8D%E3%82%92%E5%89%8D%E9%9D%A2%E3%81%AB%E6%8A%BC%E3%81%97%E5%87%BA%E3%81%99%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%83%86%E3%83%83%E3%82%AF%E3%80%81%E3%82%A8%E3%83%83%E3%82%B8AI%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E9%96%8B%E7%99%BA%E6%9C%9F%E9%96%93%E3%82%9286%EF%BC%85%E5%89%8A%E6%B8%9B%20https%3A%2F%2Fmonoist.itmedia.co.jp%2Fmn%2Farticles%2F2606%2F04%2Fnews059.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Microsoft、AndroidベースのAIエージェント基盤「Solara」発表 Snapdragon搭載のバッジ型端末も披露">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「WEDA」を前面に押し出すアドバンテック、エッジAIモデルの開発期間を86％削減">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -803,25 +806,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/business/articles/2606/03/news017.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">AI需要で半導体不足は「しばらく続く」 PCメーカー、デルの対応策は？</a></h2>
-    <p class="summary">AI需要の急増により、半導体不足が「しばらく続く」とPCメーカーのデル・テクノロジーズは予測しています。この記事では、デルがこの半導体不足という難局をどのように乗り切ろうとしているのか、その対応策に焦点を当てています。AI分野の成長がサプライチェーンに与える影響の大きさが示唆されています。</p>
+    <h2><a href="https://www.itmedia.co.jp/business/articles/2606/04/news023.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">2年間で「1万時間」削減　「1円の誤りも許されない」ソニー経理が“まず試してみる”DX集団に化けたワケ</a></h2>
+    <p class="summary">ソニーグループの経理部門は、2年間で150件以上のDXプロジェクトを推進し、累積1万時間以上の業務時間を創出した。正確性と継続性が求められる経理部門が、いかにして「まず試してみる」というDX推進の姿勢を確立し、変革を実現したのかが語られている。</p>
     <details>
 <summary></summary>
-<p class="detail-text">AI技術の急速な発展と普及に伴う需要の拡大により、半導体業界では深刻な供給不足が続いており、この状況は「しばらく続く」とPCメーカーであるデル・テクノロジーズは予測しています。デルは、AI関連製品の生産に必要な半導体の安定供給を確保するため、サプライヤーとの連携強化や代替部品の検討など、多岐にわたる戦略的な対応策を講じているとのことです。この記事では、デルが直面する供給網の課題と、それを克服するための具体的な取り組みについて詳述しています。</p>
+<p class="detail-text">ソニーグループの経理部門は、約2年間で150件以上のDX（デジタルトランスフォーメーション）プロジェクトを推進し、累積1万時間以上の業務効率化を達成した。これまで「1円の誤りも許されない」という厳格な環境下で、変革に抵抗があった経理部門が、どのようにして「まず試してみる」というアプローチを取り入れ、DXを推進できる集団へと変貌を遂げたのか、その具体的なプロセスや要因が解説されている。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2606%2F03%2Fnews017.html"
-        data-title="AI需要で半導体不足は「しばらく続く」 PCメーカー、デルの対応策は？"
-        data-summary="AI需要の急増により、半導体不足が「しばらく続く」とPCメーカーのデル・テクノロジーズは予測しています。この記事では、デルがこの半導体不足という難局をどのように乗り切ろうとしているのか、その対応策に焦点を当てています。AI分野の成長がサプライチェーンに与える影響の大きさが示唆されています。"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2606%2F04%2Fnews023.html"
+        data-title="2年間で「1万時間」削減　「1円の誤りも許されない」ソニー経理が“まず試してみる”DX集団に化けたワケ"
+        data-summary="ソニーグループの経理部門は、2年間で150件以上のDXプロジェクトを推進し、累積1万時間以上の業務時間を創出した。正確性と継続性が求められる経理部門が、いかにして「まず試してみる」というDX推進の姿勢を確立し、変革を実現したのかが語られている。"
         data-source="ITmedia AI+"
-        data-url="https://www.itmedia.co.jp/business/articles/2606/03/news017.html"
+        data-url="https://www.itmedia.co.jp/business/articles/2606/04/news023.html"
         data-importance="🟡"
         data-category="Anthropic">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=AI%E9%9C%80%E8%A6%81%E3%81%A7%E5%8D%8A%E5%B0%8E%E4%BD%93%E4%B8%8D%E8%B6%B3%E3%81%AF%E3%80%8C%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F%E7%B6%9A%E3%81%8F%E3%80%8D%20PC%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E3%80%81%E3%83%87%E3%83%AB%E3%81%AE%E5%AF%BE%E5%BF%9C%E7%AD%96%E3%81%AF%EF%BC%9F%20https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2606%2F03%2Fnews017.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=2%E5%B9%B4%E9%96%93%E3%81%A7%E3%80%8C1%E4%B8%87%E6%99%82%E9%96%93%E3%80%8D%E5%89%8A%E6%B8%9B%E3%80%80%E3%80%8C1%E5%86%86%E3%81%AE%E8%AA%A4%E3%82%8A%E3%82%82%E8%A8%B1%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84%E3%80%8D%E3%82%BD%E3%83%8B%E3%83%BC%E7%B5%8C%E7%90%86%E3%81%8C%E2%80%9C%E3%81%BE%E3%81%9A%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B%E2%80%9DDX%E9%9B%86%E5%9B%A3%E3%81%AB%E5%8C%96%E3%81%91%E3%81%9F%E3%83%AF%E3%82%B1%20https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2606%2F04%2Fnews023.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="AI需要で半導体不足は「しばらく続く」 PCメーカー、デルの対応策は？">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="2年間で「1万時間」削減　「1円の誤りも許されない」ソニー経理が“まず試してみる”DX集団に化けたワケ">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -833,25 +836,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">MusicRadar</span>
     </div>
-    <h2><a href="https://www.musicradar.com/music-tech/after-seeing-it-in-action-im-convinced-that-abletons-extensions-is-going-to-change-how-music-makers-use-live-forever" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">実際に使用した結果、AbletonのExtensionsはLiveの使い方を永遠に変えるだろうと確信した</a></h2>
-    <p class="summary">Abletonは、Live Suiteを拡張・改変・カスタマイズできる新しいツールや機能を提供する、JavaScriptベースの無料ツールキット「Extensions SDK」をリリースしました。これは、音楽制作者がLiveをどのように使用するかに革新をもたらすと期待されています。</p>
+    <h2><a href="https://www.musicradar.com/guitars/fender-tone-master-pro-firmware-update-2026" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Fender、Tone Master Proに大規模なファームウェアアップデートを実施、Big Fアンプアーカイブから本物のクラシックとEVH Gearからのハイゲインサウンドを追加</a></h2>
+    <p class="summary">Fenderは、Tone Master Proに大規模なファームウェアアップデートをリリースした。このアップデートにより、Fenderアンプアーカイブからのクラシックサウンドと、EVH Gearからのハイゲインサウンドが追加された。既存ユーザーは無料で利用可能。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Abletonは、音楽制作ソフトウェア「Ableton Live Suite」の機能を大幅に拡張できる「Extensions SDK（Software Development Kit）」を公開しました。このSDKはJavaScriptベースで開発されており、開発者はこれを用いて、Liveのプロジェクトデータに直接アクセス・操作できるカスタムツールを作成できます。この「Extensions」と呼ばれる新しいソフトウェアカテゴリーは、Liveのワークフローをより柔軟にし、カスタマイズ性を高めることで、音楽制作の未来を大きく変える可能性を秘めています。SDKは無料で提供されており、開発者コミュニティの参加を促しています。</p>
+<p class="detail-text">Tone Master Proの最新ファームウェアアップデートは、Fenderの象徴的なアンプサウンドを多数追加し、サウンドパレットを大幅に拡張する。これにより、クラシックなFenderサウンドに加え、EVH Gear（エディ・ヴァン・ヘイレン）にインスパイアされたパワフルなハイゲインサウンドも利用可能になる。このアップデートは、Tone Master Proの汎用性を高め、ギタリストに幅広いサウンドメイキングの選択肢を提供する。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fafter-seeing-it-in-action-im-convinced-that-abletons-extensions-is-going-to-change-how-music-makers-use-live-forever"
-        data-title="実際に使用した結果、AbletonのExtensionsはLiveの使い方を永遠に変えるだろうと確信した"
-        data-summary="Abletonは、Live Suiteを拡張・改変・カスタマイズできる新しいツールや機能を提供する、JavaScriptベースの無料ツールキット「Extensions SDK」をリリースしました。これは、音楽制作者がLiveをどのように使用するかに革新をもたらすと期待されています。"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Ffender-tone-master-pro-firmware-update-2026"
+        data-title="Fender、Tone Master Proに大規模なファームウェアアップデートを実施、Big Fアンプアーカイブから本物のクラシックとEVH Gearからのハイゲインサウンドを追加"
+        data-summary="Fenderは、Tone Master Proに大規模なファームウェアアップデートをリリースした。このアップデートにより、Fenderアンプアーカイブからのクラシックサウンドと、EVH Gearからのハイゲインサウンドが追加された。既存ユーザーは無料で利用可能。"
         data-source="MusicRadar"
-        data-url="https://www.musicradar.com/music-tech/after-seeing-it-in-action-im-convinced-that-abletons-extensions-is-going-to-change-how-music-makers-use-live-forever"
+        data-url="https://www.musicradar.com/guitars/fender-tone-master-pro-firmware-update-2026"
         data-importance="🟡"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E5%AE%9F%E9%9A%9B%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E7%B5%90%E6%9E%9C%E3%80%81Ableton%E3%81%AEExtensions%E3%81%AFLive%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%82%92%E6%B0%B8%E9%81%A0%E3%81%AB%E5%A4%89%E3%81%88%E3%82%8B%E3%81%A0%E3%82%8D%E3%81%86%E3%81%A8%E7%A2%BA%E4%BF%A1%E3%81%97%E3%81%9F%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fafter-seeing-it-in-action-im-convinced-that-abletons-extensions-is-going-to-change-how-music-makers-use-live-forever" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Fender%E3%80%81Tone%20Master%20Pro%E3%81%AB%E5%A4%A7%E8%A6%8F%E6%A8%A1%E3%81%AA%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E3%82%92%E5%AE%9F%E6%96%BD%E3%80%81Big%20F%E3%82%A2%E3%83%B3%E3%83%97%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%8B%E3%82%89%E6%9C%AC%E7%89%A9%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%B7%E3%83%83%E3%82%AF%E3%81%A8EVH%20Gear%E3%81%8B%E3%82%89%E3%81%AE%E3%83%8F%E3%82%A4%E3%82%B2%E3%82%A4%E3%83%B3%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0%20https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Ffender-tone-master-pro-firmware-update-2026" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="実際に使用した結果、AbletonのExtensionsはLiveの使い方を永遠に変えるだろうと確信した">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Fender、Tone Master Proに大規模なファームウェアアップデートを実施、Big Fアンプアーカイブから本物のクラシックとEVH Gearからのハイゲインサウンドを追加">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -861,81 +864,81 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">Attack Magazine</span>
     </div>
-    <h2><a href="https://www.attackmagazine.com/news/labelworx-unveils-elevate-funding-programme-for-independent-labels/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">LabelWorx、インディペンデントレーベル向け「Elevate」資金提供プログラムを発表</a></h2>
-    <p class="summary">LabelWorxは、インディペンデントエレクトロニックミュージックレーベル向けに、初期資金提供、戦略計画、プロモーションサポートを組み合わせた新しいプログラム「Elevate」を発表しました。このプログラムは、インディペンデントレーベルが直面するキャッシュフローの課題、特に収益発生とロイヤリティ支払い間の遅延に対応するものです。</p>
+    <h2><a href="https://www.attackmagazine.com/reviews/the-best/ten-of-the-best-budget-drum-machines-under-500/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">10選：500ドル以下の格安ドラムマシン</a></h2>
+    <p class="summary">手頃な価格で入手できる高品質なドラムマシンが多数登場しており、予算を抑えたいプロデューサーにとって、現在が絶好の機会となっている。この記事では、2026年に購入可能な500ドル以下のベストな格安ドラムマシン10選を紹介している。</p>
     <details>
 <summary></summary>
-<p class="detail-text">LabelWorxは、インディペンデントエレクトロニックミュージックレーベルを対象とした新しい資金提供プログラム「Elevate」を発表しました。このプログラムは、レーベルが直面するキャッシュフローの問題、特にリリースからロイヤリティ収入の受領までの遅延に対処するために設計されており、初期の資本提供、テーラードされたビジネスプランニング、およびプロモーションサポートを提供します。初年度には1000万ドルの資金が提供され、参加レーベルは12ヶ月の成長戦略、プロモーションキャンペーンへのアクセス、および長期的な持続可能性とROI向上のための戦略的レビューを受けられます。これは、インディペンデント音楽セクターにおける代替的な資金調達オプションの増加傾向を反映しています。</p>
+<p class="detail-text">この記事では、DTMユーザー向けに、500ドル以下で購入できる優れたドラムマシンを厳選して紹介している。Korg Volca Drum、Roland T-8 Beat Machine、Arturia DrumBrute Impact、Behringer RD-9、Elektron Model:Cycles、Cyclone Analogic Beat Bot TT-78、cre8audio Boom Chick、Akai Professional MPC Sample、Roland TR-08、Korg Drumlogueといった機種が、それぞれの特徴と共に解説されている。予算を抑えつつも、多様なサウンドメイクが可能な機材選びの参考となる。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Flabelworx-unveils-elevate-funding-programme-for-independent-labels%2F"
-        data-title="LabelWorx、インディペンデントレーベル向け「Elevate」資金提供プログラムを発表"
-        data-summary="LabelWorxは、インディペンデントエレクトロニックミュージックレーベル向けに、初期資金提供、戦略計画、プロモーションサポートを組み合わせた新しいプログラム「Elevate」を発表しました。このプログラムは、インディペンデントレーベルが直面するキャッシュフローの課題、特に収益発生とロイヤリティ支払い間の遅延に対応するものです。"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2Ften-of-the-best-budget-drum-machines-under-500%2F"
+        data-title="10選：500ドル以下の格安ドラムマシン"
+        data-summary="手頃な価格で入手できる高品質なドラムマシンが多数登場しており、予算を抑えたいプロデューサーにとって、現在が絶好の機会となっている。この記事では、2026年に購入可能な500ドル以下のベストな格安ドラムマシン10選を紹介している。"
         data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/news/labelworx-unveils-elevate-funding-programme-for-independent-labels/"
+        data-url="https://www.attackmagazine.com/reviews/the-best/ten-of-the-best-budget-drum-machines-under-500/"
         data-importance="🟡"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=LabelWorx%E3%80%81%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%9A%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88%E3%83%AC%E3%83%BC%E3%83%99%E3%83%AB%E5%90%91%E3%81%91%E3%80%8CElevate%E3%80%8D%E8%B3%87%E9%87%91%E6%8F%90%E4%BE%9B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E7%99%BA%E8%A1%A8%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Flabelworx-unveils-elevate-funding-programme-for-independent-labels%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=10%E9%81%B8%EF%BC%9A500%E3%83%89%E3%83%AB%E4%BB%A5%E4%B8%8B%E3%81%AE%E6%A0%BC%E5%AE%89%E3%83%89%E3%83%A9%E3%83%A0%E3%83%9E%E3%82%B7%E3%83%B3%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2Ften-of-the-best-budget-drum-machines-under-500%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="LabelWorx、インディペンデントレーベル向け「Elevate」資金提供プログラムを発表">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="10選：500ドル以下の格安ドラムマシン">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
 <div class="item" style="animation-delay:0.10s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">MusicRadar</span>
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">Attack Magazine</span>
     </div>
-    <h2><a href="https://www.musicradar.com/artists/i-wrote-this-song-as-soon-as-i-got-home-from-the-screening-sometimes-you-just-know-right-taylor-swift-reunites-with-jack-antonoff-and-goes-back-to-country-for-toy-story-5-song-i-knew-it-i-knew-you" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「家に帰るとすぐにこの曲を書いた。時々、そういうものだとわかるよね？」テイラー・スウィフト、ジャック・アントノフと再会し、トイ・ストーリー5の楽曲「I Knew It, I Knew You」でカントリーに戻る</a></h2>
-    <p class="summary">テイラー・スウィフトがジャック・アントノフと再びタッグを組み、トイ・ストーリー5の楽曲「I Knew It, I Knew You」でカントリーミュージックのルーツに回帰しました。この楽曲は、映画の試写会から帰宅後すぐに書き上げられたとされています。</p>
+    <h2><a href="https://www.attackmagazine.com/news/ableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Ableton Extensions SDKがLive Suiteを実験的な開発プラットフォームに変える</a></h2>
+    <p class="summary">Abletonは、開発者がAbleton Live Suiteと直接連携するカスタムツールを作成できるように設計された、JavaScriptベースの新しいExtensions SDKのパブリックベータ版をリリースした。このSDKは、Liveのエコシステムに「Extensions」という新しいソフトウェアカテゴリを導入する。</p>
     <details>
 <summary></summary>
-<p class="detail-text">テイラー・スウィフトが、長年のコラボレーターであるジャック・アントノフと共に、ディズニー・ピクサー映画『トイ・ストーリー5』のために書き下ろした新曲「I Knew It, I Knew You」を発表しました。スウィフトはこの楽曲について、「映画の試写会から家に帰るとすぐに書いた。時々、そういうものだとわかることがある」と語っており、インスピレーションが湧いたらすぐに形にする彼女の制作スタイルが伺えます。楽曲は、彼女の初期のスタイルであるカントリーミュージックの要素を取り入れたものとなっています。</p>
+<p class="detail-text">Abletonの新しいExtensions SDKは、開発者がJavaScriptを使用して、Live Set内のトラック、クリップ、オートメーションデータなどの要素にアクセス・編集できるカスタムツールを作成することを可能にする。これらのExtensionsは、Liveのプロジェクト構造に深く統合され、ワークフローの自動化、視覚化、創造的な実験など、多様な用途に活用できる。これにより、Live Suiteのカスタマイズ性が大幅に向上し、よりパーソナライズされた制作環境の構築が可能になる。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fi-wrote-this-song-as-soon-as-i-got-home-from-the-screening-sometimes-you-just-know-right-taylor-swift-reunites-with-jack-antonoff-and-goes-back-to-country-for-toy-story-5-song-i-knew-it-i-knew-you"
-        data-title="「家に帰るとすぐにこの曲を書いた。時々、そういうものだとわかるよね？」テイラー・スウィフト、ジャック・アントノフと再会し、トイ・ストーリー5の楽曲「I Knew It, I Knew You」でカントリーに戻る"
-        data-summary="テイラー・スウィフトがジャック・アントノフと再びタッグを組み、トイ・ストーリー5の楽曲「I Knew It, I Knew You」でカントリーミュージックのルーツに回帰しました。この楽曲は、映画の試写会から帰宅後すぐに書き上げられたとされています。"
-        data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/i-wrote-this-song-as-soon-as-i-got-home-from-the-screening-sometimes-you-just-know-right-taylor-swift-reunites-with-jack-antonoff-and-goes-back-to-country-for-toy-story-5-song-i-knew-it-i-knew-you"
-        data-importance="🟢"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform%2F"
+        data-title="Ableton Extensions SDKがLive Suiteを実験的な開発プラットフォームに変える"
+        data-summary="Abletonは、開発者がAbleton Live Suiteと直接連携するカスタムツールを作成できるように設計された、JavaScriptベースの新しいExtensions SDKのパブリックベータ版をリリースした。このSDKは、Liveのエコシステムに「Extensions」という新しいソフトウェアカテゴリを導入する。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/news/ableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform/"
+        data-importance="🟡"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E5%AE%B6%E3%81%AB%E5%B8%B0%E3%82%8B%E3%81%A8%E3%81%99%E3%81%90%E3%81%AB%E3%81%93%E3%81%AE%E6%9B%B2%E3%82%92%E6%9B%B8%E3%81%84%E3%81%9F%E3%80%82%E6%99%82%E3%80%85%E3%80%81%E3%81%9D%E3%81%86%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%81%A0%E3%81%A8%E3%82%8F%E3%81%8B%E3%82%8B%E3%82%88%E3%81%AD%EF%BC%9F%E3%80%8D%E3%83%86%E3%82%A4%E3%83%A9%E3%83%BC%E3%83%BB%E3%82%B9%E3%82%A6%E3%82%A3%E3%83%95%E3%83%88%E3%80%81%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%88%E3%83%8E%E3%83%95%E3%81%A8%E5%86%8D%E4%BC%9A%E3%81%97%E3%80%81%E3%83%88%E3%82%A4%E3%83%BB%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC5%E3%81%AE%E6%A5%BD%E6%9B%B2%E3%80%8CI%20Knew%20It%2C%20I%20Knew%20You%E3%80%8D%E3%81%A7%E3%82%AB%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC%E3%81%AB%E6%88%BB%E3%82%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fi-wrote-this-song-as-soon-as-i-got-home-from-the-screening-sometimes-you-just-know-right-taylor-swift-reunites-with-jack-antonoff-and-goes-back-to-country-for-toy-story-5-song-i-knew-it-i-knew-you" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Ableton%20Extensions%20SDK%E3%81%8CLive%20Suite%E3%82%92%E5%AE%9F%E9%A8%93%E7%9A%84%E3%81%AA%E9%96%8B%E7%99%BA%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AB%E5%A4%89%E3%81%88%E3%82%8B%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「家に帰るとすぐにこの曲を書いた。時々、そういうものだとわかるよね？」テイラー・スウィフト、ジャック・アントノフと再会し、トイ・ストーリー5の楽曲「I Knew It, I Knew You」でカントリーに戻る">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Ableton Extensions SDKがLive Suiteを実験的な開発プラットフォームに変える">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
 <div class="item" style="animation-delay:0.15s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">MusicRadar</span>
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">Attack Magazine</span>
     </div>
-    <h2><a href="https://www.musicradar.com/artists/bands/thanks-for-the-geography-lesson-i-dont-know-what-you-have-to-be-so-proud-of-right-now-black-crowes-booed-at-gig-in-tampa-florida" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」：ブラック・クロウズ、フロリダ州タンパでのギグでブーイングを浴びる</a></h2>
-    <p class="summary">ブラック・クロウズがフロリダ州タンパでのライブ中に、観客から「USA！」というチャントが起こり、バンドメンバーが「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」と返したことで、ブーイングを浴びました。この出来事は、政治的・文化的な意見の相違がライブパフォーマンスに影響を与えた例として注目されます。</p>
+    <h2><a href="https://www.attackmagazine.com/news/labelworx-unveils-elevate-funding-programme-for-independent-labels/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">LabelWorx、インディペンデントレーベル向けElevateファンドプログラムを発表</a></h2>
+    <p class="summary">LabelWorxは、インディペンデントなエレクトロニックミュージックレーベルに対し、資金提供、戦略計画、プロモーションサポートを組み合わせた新しいプログラム「Elevate」を発表した。このプログラムは、レーベルが直面するキャッシュフローの課題に対応することを目指している。</p>
     <details>
 <summary></summary>
-<p class="detail-text">ロックバンド、ブラック・クロウズがフロリダ州タンパでのライブ中、観客の一部から「USA！」という愛国的なチャントが起こった際、ボーカルのクリス・ロビンソンが「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」と皮肉を込めて返答したところ、会場からブーイングが起こりました。このやり取りは、バンドの政治的・社会的なスタンスと、一部の観客の感情との間に生じた摩擦を示唆しており、アーティストと聴衆の間の複雑な関係性を浮き彫りにしています。</p>
+<p class="detail-text">LabelWorxが新たに開始した「Elevate」プログラムは、インディペンデントレーベルが抱える資金繰りの問題を解決するために設計されている。このプログラムでは、最大1000万ドルの初期資金提供に加え、12ヶ月にわたる成長戦略の策定、LabelWorxのPick N' Mixプラットフォームを通じたプロモーションキャンペーン、そして長期的な持続可能性を高めるための戦略的レビューが提供される。これは、エレクトロニックミュージック業界のレーベルが、より安定した経営基盤を築き、成長を加速させるための支援策となる。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fbands%2Fthanks-for-the-geography-lesson-i-dont-know-what-you-have-to-be-so-proud-of-right-now-black-crowes-booed-at-gig-in-tampa-florida"
-        data-title="「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」：ブラック・クロウズ、フロリダ州タンパでのギグでブーイングを浴びる"
-        data-summary="ブラック・クロウズがフロリダ州タンパでのライブ中に、観客から「USA！」というチャントが起こり、バンドメンバーが「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」と返したことで、ブーイングを浴びました。この出来事は、政治的・文化的な意見の相違がライブパフォーマンスに影響を与えた例として注目されます。"
-        data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/bands/thanks-for-the-geography-lesson-i-dont-know-what-you-have-to-be-so-proud-of-right-now-black-crowes-booed-at-gig-in-tampa-florida"
-        data-importance="🟢"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Flabelworx-unveils-elevate-funding-programme-for-independent-labels%2F"
+        data-title="LabelWorx、インディペンデントレーベル向けElevateファンドプログラムを発表"
+        data-summary="LabelWorxは、インディペンデントなエレクトロニックミュージックレーベルに対し、資金提供、戦略計画、プロモーションサポートを組み合わせた新しいプログラム「Elevate」を発表した。このプログラムは、レーベルが直面するキャッシュフローの課題に対応することを目指している。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/news/labelworx-unveils-elevate-funding-programme-for-independent-labels/"
+        data-importance="🟡"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E5%9C%B0%E7%90%86%E3%81%AE%E6%8E%88%E6%A5%AD%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E2%80%A6%E4%BB%8A%E3%80%81%E8%AA%87%E3%82%89%E3%81%97%E3%81%92%E3%81%AB%E6%80%9D%E3%81%88%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E4%BD%95%E3%81%AA%E3%81%AE%E3%81%8B%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84%E3%80%8D%EF%BC%9A%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF%E3%83%BB%E3%82%AF%E3%83%AD%E3%82%A6%E3%82%BA%E3%80%81%E3%83%95%E3%83%AD%E3%83%AA%E3%83%80%E5%B7%9E%E3%82%BF%E3%83%B3%E3%83%91%E3%81%A7%E3%81%AE%E3%82%AE%E3%82%B0%E3%81%A7%E3%83%96%E3%83%BC%E3%82%A4%E3%83%B3%E3%82%B0%E3%82%92%E6%B5%B4%E3%81%B3%E3%82%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fbands%2Fthanks-for-the-geography-lesson-i-dont-know-what-you-have-to-be-so-proud-of-right-now-black-crowes-booed-at-gig-in-tampa-florida" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=LabelWorx%E3%80%81%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%9A%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88%E3%83%AC%E3%83%BC%E3%83%99%E3%83%AB%E5%90%91%E3%81%91Elevate%E3%83%95%E3%82%A1%E3%83%B3%E3%83%89%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E7%99%BA%E8%A1%A8%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Flabelworx-unveils-elevate-funding-programme-for-independent-labels%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」：ブラック・クロウズ、フロリダ州タンパでのギグでブーイングを浴びる">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="LabelWorx、インディペンデントレーベル向けElevateファンドプログラムを発表">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -943,27 +946,55 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">Attack Magazine</span>
+      <span class="item-source">MusicRadar</span>
     </div>
-    <h2><a href="https://www.attackmagazine.com/features/columns/kaitlyn-aurelia-smith-with-london-contemporary-orchestra-barbican-review/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Kaitlyn Aurelia Smith & London Contemporary Orchestra、Barbicanでの演奏レビュー</a></h2>
-    <p class="summary">Kaitlyn Aurelia Smithが、ロンドン・コンテンポラリー・オーケストラと共にBarbicanでパフォーマンスを行いました。この公演は、彼女の過去の作品と新しいサウンドの融合を試み、親密なエレクトロニクスからリズム主導の新しい領域へとサウンドを押し広げました。新アルバム「RUIN: It’s Not Just Music」からの楽曲も披露されました。</p>
+    <h2><a href="https://www.musicradar.com/music-tech/scientists-finally-unravel-the-mysteries-of-a-pianists-touch-after-measuring-hand-and-finger-movements-with-microscopic-spatial-precision" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">科学者たちは「微細な空間精度」で手と指の動きを測定し、ピアニストの「タッチ」の謎を最終的に解明</a></h2>
+    <p class="summary">科学者たちは、ピアノ奏者の「タッチ」の謎を解明するために、手と指の動きを極めて高い精度で測定した。この研究により、ピアノという楽器がこれまで考えられていた以上に表現力豊かであることが示唆される。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Kaitlyn Aurelia Smithは、ロンドン・コンテンポラリー・オーケストラを伴い、ロンドンのBarbican Centreでパフォーマンスを行いました。この公演は、彼女のキャリアを振り返るとともに、今後の音楽的方向性を示すものでした。前半では、デビューアルバム「EARS」から10年間の音楽的進化を辿り、最新アルバム『Thoughts on the Future』の楽曲をオーケストラと共に披露しました。後半では、近日発売されるアルバム『RUIN: It’s Not Just Music』からの楽曲を演奏し、ブレイクビーツやインダストリアルテクノに影響を受けた、よりリズム主導でダイナミックなサウンドを提示しました。このパフォーマンスは、Smithの音楽が内省的なエレクトロニクスから、より身体的でエネルギッシュな領域へと進化していることを示しています。</p>
+<p class="detail-text">この研究では、最先端のモーションキャプチャ技術と圧力センサーを用いて、ピアニストが鍵盤に触れる際の手と指の微細な動きと力の加え方を高精度で測定した。これにより、演奏者の感情や音楽的意図がどのように音色やダイナミクスに変換されるかのメカニズムが明らかになった。この発見は、ピアノ演奏の芸術性と科学的理解の両面において、新たな視点を提供するものである。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Fcolumns%2Fkaitlyn-aurelia-smith-with-london-contemporary-orchestra-barbican-review%2F"
-        data-title="Kaitlyn Aurelia Smith & London Contemporary Orchestra、Barbicanでの演奏レビュー"
-        data-summary="Kaitlyn Aurelia Smithが、ロンドン・コンテンポラリー・オーケストラと共にBarbicanでパフォーマンスを行いました。この公演は、彼女の過去の作品と新しいサウンドの融合を試み、親密なエレクトロニクスからリズム主導の新しい領域へとサウンドを押し広げました。新アルバム「RUIN: It’s Not Just Music」からの楽曲も披露されました。"
-        data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/features/columns/kaitlyn-aurelia-smith-with-london-contemporary-orchestra-barbican-review/"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fscientists-finally-unravel-the-mysteries-of-a-pianists-touch-after-measuring-hand-and-finger-movements-with-microscopic-spatial-precision"
+        data-title="科学者たちは「微細な空間精度」で手と指の動きを測定し、ピアニストの「タッチ」の謎を最終的に解明"
+        data-summary="科学者たちは、ピアノ奏者の「タッチ」の謎を解明するために、手と指の動きを極めて高い精度で測定した。この研究により、ピアノという楽器がこれまで考えられていた以上に表現力豊かであることが示唆される。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/music-tech/scientists-finally-unravel-the-mysteries-of-a-pianists-touch-after-measuring-hand-and-finger-movements-with-microscopic-spatial-precision"
         data-importance="🟢"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Kaitlyn%20Aurelia%20Smith%20%26%20London%20Contemporary%20Orchestra%E3%80%81Barbican%E3%81%A7%E3%81%AE%E6%BC%94%E5%A5%8F%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%20https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Fcolumns%2Fkaitlyn-aurelia-smith-with-london-contemporary-orchestra-barbican-review%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E7%A7%91%E5%AD%A6%E8%80%85%E3%81%9F%E3%81%A1%E3%81%AF%E3%80%8C%E5%BE%AE%E7%B4%B0%E3%81%AA%E7%A9%BA%E9%96%93%E7%B2%BE%E5%BA%A6%E3%80%8D%E3%81%A7%E6%89%8B%E3%81%A8%E6%8C%87%E3%81%AE%E5%8B%95%E3%81%8D%E3%82%92%E6%B8%AC%E5%AE%9A%E3%81%97%E3%80%81%E3%83%94%E3%82%A2%E3%83%8B%E3%82%B9%E3%83%88%E3%81%AE%E3%80%8C%E3%82%BF%E3%83%83%E3%83%81%E3%80%8D%E3%81%AE%E8%AC%8E%E3%82%92%E6%9C%80%E7%B5%82%E7%9A%84%E3%81%AB%E8%A7%A3%E6%98%8E%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fscientists-finally-unravel-the-mysteries-of-a-pianists-touch-after-measuring-hand-and-finger-movements-with-microscopic-spatial-precision" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Kaitlyn Aurelia Smith & London Contemporary Orchestra、Barbicanでの演奏レビュー">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="科学者たちは「微細な空間精度」で手と指の動きを測定し、ピアニストの「タッチ」の謎を最終的に解明">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.25s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">MusicRadar</span>
+    </div>
+    <h2><a href="https://www.musicradar.com/artists/singers-songwriters/i-looked-at-my-band-and-they-were-all-looking-at-the-floor-so-that-was-the-first-hint-that-something-was-not-right-barry-manilow-says-that-he-doesnt-sound-like-me-after-cancer-surgery" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「バンドのみんなを見たら、みんな床を見ていた。だから何かが間違っている最初の兆候だったんだ」とバリー・マニロウ、がん手術後に「自分らしくない」と語る</a></h2>
+    <p class="summary">バリー・マニロウは、がん手術後に自身の声が「自分らしくない」と語った。彼は、バンドメンバーの反応から、手術が声に影響を与えていることに気づいたと述べている。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">世界的歌手バリー・マニロウが、最近受けたがん手術の影響で、自身の歌声が以前とは異なると明かした。彼は、リハーサル中にバンドメンバーの表情を見て、声の変化に気づいたというエピソードを語った。この個人的な体験は、音楽家が直面する身体的な課題と、それが創造性に与える影響について示唆に富む。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingers-songwriters%2Fi-looked-at-my-band-and-they-were-all-looking-at-the-floor-so-that-was-the-first-hint-that-something-was-not-right-barry-manilow-says-that-he-doesnt-sound-like-me-after-cancer-surgery"
+        data-title="「バンドのみんなを見たら、みんな床を見ていた。だから何かが間違っている最初の兆候だったんだ」とバリー・マニロウ、がん手術後に「自分らしくない」と語る"
+        data-summary="バリー・マニロウは、がん手術後に自身の声が「自分らしくない」と語った。彼は、バンドメンバーの反応から、手術が声に影響を与えていることに気づいたと述べている。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/artists/singers-songwriters/i-looked-at-my-band-and-they-were-all-looking-at-the-floor-so-that-was-the-first-hint-that-something-was-not-right-barry-manilow-says-that-he-doesnt-sound-like-me-after-cancer-surgery"
+        data-importance="🟢"
+        data-category="音楽">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E3%81%BF%E3%82%93%E3%81%AA%E3%82%92%E8%A6%8B%E3%81%9F%E3%82%89%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E5%BA%8A%E3%82%92%E8%A6%8B%E3%81%A6%E3%81%84%E3%81%9F%E3%80%82%E3%81%A0%E3%81%8B%E3%82%89%E4%BD%95%E3%81%8B%E3%81%8C%E9%96%93%E9%81%95%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E6%9C%80%E5%88%9D%E3%81%AE%E5%85%86%E5%80%99%E3%81%A0%E3%81%A3%E3%81%9F%E3%82%93%E3%81%A0%E3%80%8D%E3%81%A8%E3%83%90%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%9E%E3%83%8B%E3%83%AD%E3%82%A6%E3%80%81%E3%81%8C%E3%82%93%E6%89%8B%E8%A1%93%E5%BE%8C%E3%81%AB%E3%80%8C%E8%87%AA%E5%88%86%E3%82%89%E3%81%97%E3%81%8F%E3%81%AA%E3%81%84%E3%80%8D%E3%81%A8%E8%AA%9E%E3%82%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingers-songwriters%2Fi-looked-at-my-band-and-they-were-all-looking-at-the-floor-so-that-was-the-first-hint-that-something-was-not-right-barry-manilow-says-that-he-doesnt-sound-like-me-after-cancer-surgery" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="「バンドのみんなを見たら、みんな床を見ていた。だから何かが間違っている最初の兆候だったんだ」とバリー・マニロウ、がん手術後に「自分らしくない」と語る">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -975,25 +1006,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">MusicRadar</span>
     </div>
-    <h2><a href="https://www.musicradar.com/music-tech/after-seeing-it-in-action-im-convinced-that-abletons-extensions-is-going-to-change-how-music-makers-use-live-forever" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">実際に使用した結果、AbletonのExtensionsはLiveの使い方を永遠に変えるだろうと確信した</a></h2>
-    <p class="summary">Abletonは、Live Suiteを拡張・改変・カスタマイズできる新しいツールや機能を提供する、JavaScriptベースの無料ツールキット「Extensions SDK」をリリースしました。これは、音楽制作者がLiveをどのように使用するかに革新をもたらすと期待されています。</p>
+    <h2><a href="https://www.musicradar.com/guitars/fender-tone-master-pro-firmware-update-2026" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Fender、Tone Master Proに大規模なファームウェアアップデートを実施、Big Fアンプアーカイブから本物のクラシックとEVH Gearからのハイゲインサウンドを追加</a></h2>
+    <p class="summary">Fenderは、Tone Master Proに大規模なファームウェアアップデートをリリースした。このアップデートにより、Fenderアンプアーカイブからのクラシックサウンドと、EVH Gearからのハイゲインサウンドが追加された。既存ユーザーは無料で利用可能。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Abletonは、音楽制作ソフトウェア「Ableton Live Suite」の機能を大幅に拡張できる「Extensions SDK（Software Development Kit）」を公開しました。このSDKはJavaScriptベースで開発されており、開発者はこれを用いて、Liveのプロジェクトデータに直接アクセス・操作できるカスタムツールを作成できます。この「Extensions」と呼ばれる新しいソフトウェアカテゴリーは、Liveのワークフローをより柔軟にし、カスタマイズ性を高めることで、音楽制作の未来を大きく変える可能性を秘めています。SDKは無料で提供されており、開発者コミュニティの参加を促しています。</p>
+<p class="detail-text">Tone Master Proの最新ファームウェアアップデートは、Fenderの象徴的なアンプサウンドを多数追加し、サウンドパレットを大幅に拡張する。これにより、クラシックなFenderサウンドに加え、EVH Gear（エディ・ヴァン・ヘイレン）にインスパイアされたパワフルなハイゲインサウンドも利用可能になる。このアップデートは、Tone Master Proの汎用性を高め、ギタリストに幅広いサウンドメイキングの選択肢を提供する。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fafter-seeing-it-in-action-im-convinced-that-abletons-extensions-is-going-to-change-how-music-makers-use-live-forever"
-        data-title="実際に使用した結果、AbletonのExtensionsはLiveの使い方を永遠に変えるだろうと確信した"
-        data-summary="Abletonは、Live Suiteを拡張・改変・カスタマイズできる新しいツールや機能を提供する、JavaScriptベースの無料ツールキット「Extensions SDK」をリリースしました。これは、音楽制作者がLiveをどのように使用するかに革新をもたらすと期待されています。"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Ffender-tone-master-pro-firmware-update-2026"
+        data-title="Fender、Tone Master Proに大規模なファームウェアアップデートを実施、Big Fアンプアーカイブから本物のクラシックとEVH Gearからのハイゲインサウンドを追加"
+        data-summary="Fenderは、Tone Master Proに大規模なファームウェアアップデートをリリースした。このアップデートにより、Fenderアンプアーカイブからのクラシックサウンドと、EVH Gearからのハイゲインサウンドが追加された。既存ユーザーは無料で利用可能。"
         data-source="MusicRadar"
-        data-url="https://www.musicradar.com/music-tech/after-seeing-it-in-action-im-convinced-that-abletons-extensions-is-going-to-change-how-music-makers-use-live-forever"
+        data-url="https://www.musicradar.com/guitars/fender-tone-master-pro-firmware-update-2026"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E5%AE%9F%E9%9A%9B%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E7%B5%90%E6%9E%9C%E3%80%81Ableton%E3%81%AEExtensions%E3%81%AFLive%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E3%82%92%E6%B0%B8%E9%81%A0%E3%81%AB%E5%A4%89%E3%81%88%E3%82%8B%E3%81%A0%E3%82%8D%E3%81%86%E3%81%A8%E7%A2%BA%E4%BF%A1%E3%81%97%E3%81%9F%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fafter-seeing-it-in-action-im-convinced-that-abletons-extensions-is-going-to-change-how-music-makers-use-live-forever" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Fender%E3%80%81Tone%20Master%20Pro%E3%81%AB%E5%A4%A7%E8%A6%8F%E6%A8%A1%E3%81%AA%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E3%82%92%E5%AE%9F%E6%96%BD%E3%80%81Big%20F%E3%82%A2%E3%83%B3%E3%83%97%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%8B%E3%82%89%E6%9C%AC%E7%89%A9%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%B7%E3%83%83%E3%82%AF%E3%81%A8EVH%20Gear%E3%81%8B%E3%82%89%E3%81%AE%E3%83%8F%E3%82%A4%E3%82%B2%E3%82%A4%E3%83%B3%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0%20https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Ffender-tone-master-pro-firmware-update-2026" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="実際に使用した結果、AbletonのExtensionsはLiveの使い方を永遠に変えるだろうと確信した">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Fender、Tone Master Proに大規模なファームウェアアップデートを実施、Big Fアンプアーカイブから本物のクラシックとEVH Gearからのハイゲインサウンドを追加">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1003,25 +1034,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">Attack Magazine</span>
     </div>
-    <h2><a href="https://www.attackmagazine.com/news/ableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Ableton Extensions SDK、Live Suiteを実験的な開発プラットフォームに変える</a></h2>
-    <p class="summary">Abletonは、開発者がAbleton Liveプロジェクトと直接やり取りできるカスタムツールを構築できるJavaScriptベースの新しいツールキット「Extensions SDK」のパブリックベータ版を発表しました。このSDKは無料でダウンロード可能で、コミュニティのフィードバックが将来の開発を形作ることになります。</p>
+    <h2><a href="https://www.attackmagazine.com/reviews/the-best/ten-of-the-best-budget-drum-machines-under-500/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">10選：500ドル以下の格安ドラムマシン</a></h2>
+    <p class="summary">手頃な価格で入手できる高品質なドラムマシンが多数登場しており、予算を抑えたいプロデューサーにとって、現在が絶好の機会となっている。この記事では、2026年に購入可能な500ドル以下のベストな格安ドラムマシン10選を紹介している。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Abletonは、開発者がAbleton Live Suiteと連携するカスタムツールを作成できるように設計された、JavaScriptベースのツールキット「Extensions Software Development Kit（SDK）」のパブリックベータ版を発表しました。このSDKは無料でダウンロード可能であり、Abletonは、このオープンな開発プロセスがコミュニティの実験とフィードバックによって guided されると述べています。ExtensionsはLive Set内のトラック、クリップ、オートメーションデータ、パラメータなどにアクセス・編集でき、開発者は分析、可視化、ワークフロー自動化、クリエイティブな実験のためのユーティリティを作成できます。Live 12 Suiteユーザーはベータプログラムに参加し、Live 12.4.5ベータ版をダウンロードすることで利用を開始できます。</p>
+<p class="detail-text">この記事では、DTMユーザー向けに、500ドル以下で購入できる優れたドラムマシンを厳選して紹介している。Korg Volca Drum、Roland T-8 Beat Machine、Arturia DrumBrute Impact、Behringer RD-9、Elektron Model:Cycles、Cyclone Analogic Beat Bot TT-78、cre8audio Boom Chick、Akai Professional MPC Sample、Roland TR-08、Korg Drumlogueといった機種が、それぞれの特徴と共に解説されている。予算を抑えつつも、多様なサウンドメイクが可能な機材選びの参考となる。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform%2F"
-        data-title="Ableton Extensions SDK、Live Suiteを実験的な開発プラットフォームに変える"
-        data-summary="Abletonは、開発者がAbleton Liveプロジェクトと直接やり取りできるカスタムツールを構築できるJavaScriptベースの新しいツールキット「Extensions SDK」のパブリックベータ版を発表しました。このSDKは無料でダウンロード可能で、コミュニティのフィードバックが将来の開発を形作ることになります。"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2Ften-of-the-best-budget-drum-machines-under-500%2F"
+        data-title="10選：500ドル以下の格安ドラムマシン"
+        data-summary="手頃な価格で入手できる高品質なドラムマシンが多数登場しており、予算を抑えたいプロデューサーにとって、現在が絶好の機会となっている。この記事では、2026年に購入可能な500ドル以下のベストな格安ドラムマシン10選を紹介している。"
         data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/news/ableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform/"
+        data-url="https://www.attackmagazine.com/reviews/the-best/ten-of-the-best-budget-drum-machines-under-500/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Ableton%20Extensions%20SDK%E3%80%81Live%20Suite%E3%82%92%E5%AE%9F%E9%A8%93%E7%9A%84%E3%81%AA%E9%96%8B%E7%99%BA%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AB%E5%A4%89%E3%81%88%E3%82%8B%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=10%E9%81%B8%EF%BC%9A500%E3%83%89%E3%83%AB%E4%BB%A5%E4%B8%8B%E3%81%AE%E6%A0%BC%E5%AE%89%E3%83%89%E3%83%A9%E3%83%A0%E3%83%9E%E3%82%B7%E3%83%B3%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2Ften-of-the-best-budget-drum-machines-under-500%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Ableton Extensions SDK、Live Suiteを実験的な開発プラットフォームに変える">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="10選：500ドル以下の格安ドラムマシン">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1031,25 +1062,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">Attack Magazine</span>
     </div>
-    <h2><a href="https://www.attackmagazine.com/news/ableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Ableton Extensions SDK、Live Suiteを実験的な開発プラットフォームに変える</a></h2>
-    <p class="summary">Abletonは、開発者がAbleton Liveプロジェクトと直接やり取りできるカスタムツールを構築できるJavaScriptベースの新しいツールキット「Extensions SDK」のパブリックベータ版を発表しました。このSDKは無料でダウンロード可能で、コミュニティのフィードバックが将来の開発を形作ることになります。</p>
+    <h2><a href="https://www.attackmagazine.com/news/ableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Ableton Extensions SDKがLive Suiteを実験的な開発プラットフォームに変える</a></h2>
+    <p class="summary">Abletonは、開発者がAbleton Live Suiteと直接連携するカスタムツールを作成できるように設計された、JavaScriptベースの新しいExtensions SDKのパブリックベータ版をリリースした。このSDKは、Liveのエコシステムに「Extensions」という新しいソフトウェアカテゴリを導入する。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Abletonは、開発者がAbleton Live Suiteと連携するカスタムツールを作成できるように設計された、JavaScriptベースのツールキット「Extensions Software Development Kit（SDK）」のパブリックベータ版を発表しました。このSDKは無料でダウンロード可能であり、Abletonは、このオープンな開発プロセスがコミュニティの実験とフィードバックによって guided されると述べています。ExtensionsはLive Set内のトラック、クリップ、オートメーションデータ、パラメータなどにアクセス・編集でき、開発者は分析、可視化、ワークフロー自動化、クリエイティブな実験のためのユーティリティを作成できます。Live 12 Suiteユーザーはベータプログラムに参加し、Live 12.4.5ベータ版をダウンロードすることで利用を開始できます。</p>
+<p class="detail-text">Abletonの新しいExtensions SDKは、開発者がJavaScriptを使用して、Live Set内のトラック、クリップ、オートメーションデータなどの要素にアクセス・編集できるカスタムツールを作成することを可能にする。これらのExtensionsは、Liveのプロジェクト構造に深く統合され、ワークフローの自動化、視覚化、創造的な実験など、多様な用途に活用できる。これにより、Live Suiteのカスタマイズ性が大幅に向上し、よりパーソナライズされた制作環境の構築が可能になる。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform%2F"
-        data-title="Ableton Extensions SDK、Live Suiteを実験的な開発プラットフォームに変える"
-        data-summary="Abletonは、開発者がAbleton Liveプロジェクトと直接やり取りできるカスタムツールを構築できるJavaScriptベースの新しいツールキット「Extensions SDK」のパブリックベータ版を発表しました。このSDKは無料でダウンロード可能で、コミュニティのフィードバックが将来の開発を形作ることになります。"
+        data-title="Ableton Extensions SDKがLive Suiteを実験的な開発プラットフォームに変える"
+        data-summary="Abletonは、開発者がAbleton Live Suiteと直接連携するカスタムツールを作成できるように設計された、JavaScriptベースの新しいExtensions SDKのパブリックベータ版をリリースした。このSDKは、Liveのエコシステムに「Extensions」という新しいソフトウェアカテゴリを導入する。"
         data-source="Attack Magazine"
         data-url="https://www.attackmagazine.com/news/ableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Ableton%20Extensions%20SDK%E3%80%81Live%20Suite%E3%82%92%E5%AE%9F%E9%A8%93%E7%9A%84%E3%81%AA%E9%96%8B%E7%99%BA%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AB%E5%A4%89%E3%81%88%E3%82%8B%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Ableton%20Extensions%20SDK%E3%81%8CLive%20Suite%E3%82%92%E5%AE%9F%E9%A8%93%E7%9A%84%E3%81%AA%E9%96%8B%E7%99%BA%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AB%E5%A4%89%E3%81%88%E3%82%8B%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fableton-extensions-sdk-turns-live-suite-into-an-experimental-development-platform%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Ableton Extensions SDK、Live Suiteを実験的な開発プラットフォームに変える">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Ableton Extensions SDKがLive Suiteを実験的な開発プラットフォームに変える">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1059,25 +1090,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">Attack Magazine</span>
     </div>
-    <h2><a href="https://www.attackmagazine.com/news/labelworx-unveils-elevate-funding-programme-for-independent-labels/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">LabelWorx、インディペンデントレーベル向け「Elevate」資金提供プログラムを発表</a></h2>
-    <p class="summary">LabelWorxは、インディペンデントエレクトロニックミュージックレーベル向けに、初期資金提供、戦略計画、プロモーションサポートを組み合わせた新しいプログラム「Elevate」を発表しました。このプログラムは、インディペンデントレーベルが直面するキャッシュフローの課題、特に収益発生とロイヤリティ支払い間の遅延に対応するものです。</p>
+    <h2><a href="https://www.attackmagazine.com/news/labelworx-unveils-elevate-funding-programme-for-independent-labels/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">LabelWorx、インディペンデントレーベル向けElevateファンドプログラムを発表</a></h2>
+    <p class="summary">LabelWorxは、インディペンデントなエレクトロニックミュージックレーベルに対し、資金提供、戦略計画、プロモーションサポートを組み合わせた新しいプログラム「Elevate」を発表した。このプログラムは、レーベルが直面するキャッシュフローの課題に対応することを目指している。</p>
     <details>
 <summary></summary>
-<p class="detail-text">LabelWorxは、インディペンデントエレクトロニックミュージックレーベルを対象とした新しい資金提供プログラム「Elevate」を発表しました。このプログラムは、レーベルが直面するキャッシュフローの問題、特にリリースからロイヤリティ収入の受領までの遅延に対処するために設計されており、初期の資本提供、テーラードされたビジネスプランニング、およびプロモーションサポートを提供します。初年度には1000万ドルの資金が提供され、参加レーベルは12ヶ月の成長戦略、プロモーションキャンペーンへのアクセス、および長期的な持続可能性とROI向上のための戦略的レビューを受けられます。これは、インディペンデント音楽セクターにおける代替的な資金調達オプションの増加傾向を反映しています。</p>
+<p class="detail-text">LabelWorxが新たに開始した「Elevate」プログラムは、インディペンデントレーベルが抱える資金繰りの問題を解決するために設計されている。このプログラムでは、最大1000万ドルの初期資金提供に加え、12ヶ月にわたる成長戦略の策定、LabelWorxのPick N' Mixプラットフォームを通じたプロモーションキャンペーン、そして長期的な持続可能性を高めるための戦略的レビューが提供される。これは、エレクトロニックミュージック業界のレーベルが、より安定した経営基盤を築き、成長を加速させるための支援策となる。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Flabelworx-unveils-elevate-funding-programme-for-independent-labels%2F"
-        data-title="LabelWorx、インディペンデントレーベル向け「Elevate」資金提供プログラムを発表"
-        data-summary="LabelWorxは、インディペンデントエレクトロニックミュージックレーベル向けに、初期資金提供、戦略計画、プロモーションサポートを組み合わせた新しいプログラム「Elevate」を発表しました。このプログラムは、インディペンデントレーベルが直面するキャッシュフローの課題、特に収益発生とロイヤリティ支払い間の遅延に対応するものです。"
+        data-title="LabelWorx、インディペンデントレーベル向けElevateファンドプログラムを発表"
+        data-summary="LabelWorxは、インディペンデントなエレクトロニックミュージックレーベルに対し、資金提供、戦略計画、プロモーションサポートを組み合わせた新しいプログラム「Elevate」を発表した。このプログラムは、レーベルが直面するキャッシュフローの課題に対応することを目指している。"
         data-source="Attack Magazine"
         data-url="https://www.attackmagazine.com/news/labelworx-unveils-elevate-funding-programme-for-independent-labels/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=LabelWorx%E3%80%81%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%9A%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88%E3%83%AC%E3%83%BC%E3%83%99%E3%83%AB%E5%90%91%E3%81%91%E3%80%8CElevate%E3%80%8D%E8%B3%87%E9%87%91%E6%8F%90%E4%BE%9B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E7%99%BA%E8%A1%A8%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Flabelworx-unveils-elevate-funding-programme-for-independent-labels%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=LabelWorx%E3%80%81%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%9A%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88%E3%83%AC%E3%83%BC%E3%83%99%E3%83%AB%E5%90%91%E3%81%91Elevate%E3%83%95%E3%82%A1%E3%83%B3%E3%83%89%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E7%99%BA%E8%A1%A8%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Flabelworx-unveils-elevate-funding-programme-for-independent-labels%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="LabelWorx、インディペンデントレーベル向け「Elevate」資金提供プログラムを発表">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="LabelWorx、インディペンデントレーベル向けElevateファンドプログラムを発表">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1087,25 +1118,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">Bedroom Producers Blog</span>
     </div>
-    <h2><a href="https://bedroomproducersblog.com/2026/06/02/jura-chorus-free/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">AIR Music Technology、8月2日までChorusプラグイン「Jura Chorus」を無料提供</a></h2>
-    <p class="summary">AIR Music Technologyは、8月2日までChorusプラグイン「Jura Chorus」を無料ダウンロードで提供しています。このプラグインは、クラシックなRoland Juno-60をベースにしたAIRのJuraバーチャルシンセサイザーに含まれるコーラスエフェクトです。通常は有料ですが、期間限定で無償入手できます。</p>
+    <h2><a href="https://bedroomproducersblog.com/2026/06/03/underwaterfx-ypichev/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">UnderwaterFXはWindows向けの無料オープンソースの水中フィルタープラグインです</a></h2>
+    <p class="summary">開発者のypichevが、無料かつオープンソースのクリエイティブマルチエフェクトプラグイン「UnderwaterFX」をリリースした。このプラグインは、オーディオを水中から聞こえるようなサウンドに変換するユニークな効果を提供する。</p>
     <details>
 <summary></summary>
-<p class="detail-text">AIR Music Technologyは、同社のJuraバーチャルシンセサイザーに搭載されているコーラスエフェクトをスタンドアロンプラグイン化した「Jura Chorus」を、2026年8月2日まで無料配布しています。Jura Chorusは、伝説的なRoland Juno-60のコーラスサウンドをエミュレートしており、温かみのある広がりのあるコーラスエフェクトを提供します。通常価格は39ドルですが、この期間中は無料で入手可能です。Plugin Boutiqueでは現在14ドルに割引されていますが、AIR Music Technologyのウェブサイトから直接無料でダウンロードできます。</p>
+<p class="detail-text">「UnderwaterFX」は、Windowsプラットフォーム向けに提供される無料のオーディオエフェクトプラグインである。C++とJUCEフレームワークで開発されており、オーディオ信号を物理的に水中で響いているかのような独特なサウンドに加工する。このプラグインは、サウンドデザインの実験や、楽曲に独特の雰囲気を加えるために利用できる。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F02%2Fjura-chorus-free%2F"
-        data-title="AIR Music Technology、8月2日までChorusプラグイン「Jura Chorus」を無料提供"
-        data-summary="AIR Music Technologyは、8月2日までChorusプラグイン「Jura Chorus」を無料ダウンロードで提供しています。このプラグインは、クラシックなRoland Juno-60をベースにしたAIRのJuraバーチャルシンセサイザーに含まれるコーラスエフェクトです。通常は有料ですが、期間限定で無償入手できます。"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F03%2Funderwaterfx-ypichev%2F"
+        data-title="UnderwaterFXはWindows向けの無料オープンソースの水中フィルタープラグインです"
+        data-summary="開発者のypichevが、無料かつオープンソースのクリエイティブマルチエフェクトプラグイン「UnderwaterFX」をリリースした。このプラグインは、オーディオを水中から聞こえるようなサウンドに変換するユニークな効果を提供する。"
         data-source="Bedroom Producers Blog"
-        data-url="https://bedroomproducersblog.com/2026/06/02/jura-chorus-free/"
+        data-url="https://bedroomproducersblog.com/2026/06/03/underwaterfx-ypichev/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=AIR%20Music%20Technology%E3%80%818%E6%9C%882%E6%97%A5%E3%81%BE%E3%81%A7Chorus%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%8CJura%20Chorus%E3%80%8D%E3%82%92%E7%84%A1%E6%96%99%E6%8F%90%E4%BE%9B%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F02%2Fjura-chorus-free%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=UnderwaterFX%E3%81%AFWindows%E5%90%91%E3%81%91%E3%81%AE%E7%84%A1%E6%96%99%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E6%B0%B4%E4%B8%AD%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%A7%E3%81%99%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F03%2Funderwaterfx-ypichev%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="AIR Music Technology、8月2日までChorusプラグイン「Jura Chorus」を無料提供">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="UnderwaterFXはWindows向けの無料オープンソースの水中フィルタープラグインです">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1113,19 +1144,131 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">Bedroom Producers Blog</span>
+    </div>
+    <h2><a href="https://bedroomproducersblog.com/2026/06/03/carve-audio-gas-can-amp/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Carve Audio、希少な1980年代アンプにインスパイアされたギターアンププラグイン「Gas Can Amp」（49ドル）をリリース</a></h2>
+    <p class="summary">Carve Audioは、1980年代に製造された希少なポータブルアンプ「The Can」にインスパイアされたギターアンププラグイン「Gas Can Amp」（49ドル）をリリースした。このアンプは、その独特のグリッティなトーンで知られている。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">「Gas Can Amp」は、1980年代にSLM Electronicsによって製造された、プラスチック製ガソリン缶型筐体のポータブルギターアンプ「The Can」をエミュレートしたプラグインである。このアンプは、その独特で荒々しいトーンから、初期のFoo Fightersのレコーディングなどでも使用されたと言われている。Carve Audioは、この希少なアンプのサウンドをデジタルで再現し、ギタリストにユニークなサウンドメイキングの選択肢を提供している。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F03%2Fcarve-audio-gas-can-amp%2F"
+        data-title="Carve Audio、希少な1980年代アンプにインスパイアされたギターアンププラグイン「Gas Can Amp」（49ドル）をリリース"
+        data-summary="Carve Audioは、1980年代に製造された希少なポータブルアンプ「The Can」にインスパイアされたギターアンププラグイン「Gas Can Amp」（49ドル）をリリースした。このアンプは、その独特のグリッティなトーンで知られている。"
+        data-source="Bedroom Producers Blog"
+        data-url="https://bedroomproducersblog.com/2026/06/03/carve-audio-gas-can-amp/"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Carve%20Audio%E3%80%81%E5%B8%8C%E5%B0%91%E3%81%AA1980%E5%B9%B4%E4%BB%A3%E3%82%A2%E3%83%B3%E3%83%97%E3%81%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%91%E3%82%A4%E3%82%A2%E3%81%95%E3%82%8C%E3%81%9F%E3%82%AE%E3%82%BF%E3%83%BC%E3%82%A2%E3%83%B3%E3%83%97%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%8CGas%20Can%20Amp%E3%80%8D%EF%BC%8849%E3%83%89%E3%83%AB%EF%BC%89%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F03%2Fcarve-audio-gas-can-amp%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="Carve Audio、希少な1980年代アンプにインスパイアされたギターアンププラグイン「Gas Can Amp」（49ドル）をリリース">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.30s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">Bedroom Producers Blog</span>
+    </div>
+    <h2><a href="https://bedroomproducersblog.com/2026/06/03/s1gns-of-l1fe-texture-loom/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">S1gns Of L1fe、無料のテクスチャーローム・アトモスフィアエンジンプラグインをリリース</a></h2>
+    <p class="summary">S1gns Of L1feが、Ableton Live、macOS、Windows向けの無料デュアルサンプル・アトモスフィアエンジン「Texture Loom」をリリースした。このプラグインは、没入感のあるサウンドスケープを作成するために設計されている。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">「Texture Loom」は、S1gns Of L1feが開発した、無料で使用できるアトモスフィアエンジンプラグインである。Ableton Live、macOS、Windowsに対応しており、2つのサンプルソースを組み合わせて、豊かで深みのあるアンビエントサウンドやテクスチャーを作成できる。このプラグインは、映画音楽、ゲーム音楽、アンビエントミュージックなど、壮大なサウンドスケープを必要とする制作に最適である。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F03%2Fs1gns-of-l1fe-texture-loom%2F"
+        data-title="S1gns Of L1fe、無料のテクスチャーローム・アトモスフィアエンジンプラグインをリリース"
+        data-summary="S1gns Of L1feが、Ableton Live、macOS、Windows向けの無料デュアルサンプル・アトモスフィアエンジン「Texture Loom」をリリースした。このプラグインは、没入感のあるサウンドスケープを作成するために設計されている。"
+        data-source="Bedroom Producers Blog"
+        data-url="https://bedroomproducersblog.com/2026/06/03/s1gns-of-l1fe-texture-loom/"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=S1gns%20Of%20L1fe%E3%80%81%E7%84%A1%E6%96%99%E3%81%AE%E3%83%86%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AD%E3%83%BC%E3%83%A0%E3%83%BB%E3%82%A2%E3%83%88%E3%83%A2%E3%82%B9%E3%83%95%E3%82%A3%E3%82%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F03%2Fs1gns-of-l1fe-texture-loom%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="S1gns Of L1fe、無料のテクスチャーローム・アトモスフィアエンジンプラグインをリリース">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.35s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">DTMステーション</span>
+    </div>
+    <h2><a href="https://www.dtmstation.com/archives/77635.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">DTMソフト購入の新潮流——Ableton Live 12.4とRent-to-ownが変える制作環境</a></h2>
+    <p class="summary">DTMソフトウェアにおけるサブスクリプションモデルの増加と、Rent-to-own（所有権移行型レンタル）の導入が、ユーザーの制作環境に変化をもたらしている。多くのユーザーは依然として買い切り型を好むが、これらの新しい購入形態が制作環境にどのような影響を与えるかが議論されている。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">Ableton Live 12.4のリリースとともに、DTMソフトウェアの購入方法に変化が見られる。従来の買い切り型に加え、サブスクリプションモデルやRent-to-own（分割払いにより最終的にソフトウェアの所有権を得る形式）が導入されている。この記事では、これらの新しい購入形態が、DTMユーザーの初期投資負担を軽減し、最新ソフトウェアへのアクセスを容易にする一方で、長期的なコストや所有権に対する考え方にどのような影響を与えるかを考察している。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77635.html"
+        data-title="DTMソフト購入の新潮流——Ableton Live 12.4とRent-to-ownが変える制作環境"
+        data-summary="DTMソフトウェアにおけるサブスクリプションモデルの増加と、Rent-to-own（所有権移行型レンタル）の導入が、ユーザーの制作環境に変化をもたらしている。多くのユーザーは依然として買い切り型を好むが、これらの新しい購入形態が制作環境にどのような影響を与えるかが議論されている。"
+        data-source="DTMステーション"
+        data-url="https://www.dtmstation.com/archives/77635.html"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=DTM%E3%82%BD%E3%83%95%E3%83%88%E8%B3%BC%E5%85%A5%E3%81%AE%E6%96%B0%E6%BD%AE%E6%B5%81%E2%80%94%E2%80%94Ableton%20Live%2012.4%E3%81%A8Rent-to-own%E3%81%8C%E5%A4%89%E3%81%88%E3%82%8B%E5%88%B6%E4%BD%9C%E7%92%B0%E5%A2%83%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77635.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="DTMソフト購入の新潮流——Ableton Live 12.4とRent-to-ownが変える制作環境">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.40s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">DTMステーション</span>
+    </div>
+    <h2><a href="https://www.dtmstation.com/archives/51899036.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">DTM初心者のためのMIDIキーボードの基礎知識と選び方 2026年版</a></h2>
+    <p class="summary">DTM制作に不可欠なハードウェアであるMIDIキーボードについて、初心者を対象とした基礎知識と選び方を解説する2026年版の記事。オーディオインターフェイスについても触れられている。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">DTMを始める上で、MIDIキーボードはオーディオインターフェイスと並ぶ重要なハードウェアである。この記事では、MIDIキーボードの基本的な機能、接続方法、そして選び方のポイントを、DTM初心者向けに分かりやすく解説している。2026年現在の市場動向を踏まえ、予算や用途に応じた推奨モデルも紹介されており、これからDTMを始めたいと考えている読者にとって貴重な情報源となる。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F51899036.html"
+        data-title="DTM初心者のためのMIDIキーボードの基礎知識と選び方 2026年版"
+        data-summary="DTM制作に不可欠なハードウェアであるMIDIキーボードについて、初心者を対象とした基礎知識と選び方を解説する2026年版の記事。オーディオインターフェイスについても触れられている。"
+        data-source="DTMステーション"
+        data-url="https://www.dtmstation.com/archives/51899036.html"
+        data-importance="🟡"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=DTM%E5%88%9D%E5%BF%83%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEMIDI%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98%E3%81%A8%E9%81%B8%E3%81%B3%E6%96%B9%202026%E5%B9%B4%E7%89%88%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F51899036.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="DTM初心者のためのMIDIキーボードの基礎知識と選び方 2026年版">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.45s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">DTMステーション</span>
     </div>
     <h2><a href="https://www.dtmstation.com/archives/77596.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ChatGPTでは答えられないDTMトラブルを即解決!?SONICWIRE「AIサポート」が約30年分の事例で実現した、専用AIの実力</a></h2>
-    <p class="summary">SONICWIREは、約30年分のDTMトラブル事例を学習させた専用AI「AIサポート」を導入しました。このAIは、ChatGPTでも解決が難しいような、プラグインの起動不良、ライブラリの読み込みエラー、認証エラーといったDTM特有の複雑なトラブルに迅速に対応できる能力を持っているとされています。</p>
+    <p class="summary">SONICWIREが提供する「AIサポート」は、約30年分のDTMトラブル事例を学習した専用AIにより、ChatGPTでは解決できないようなDTM特有のトラブルに迅速に対応する。これにより、DTMユーザーの困りごとを効果的に解決することが期待される。</p>
     <details>
 <summary></summary>
-<p class="detail-text">SONICWIREは、長年にわたり蓄積された約30年分のDTM（デスクトップミュージック）に関するトラブルシューティング事例を学習させた、独自のAIサポートシステムを開発・導入しました。この「AIサポート」は、一般的なAIチャットボットでは対応が難しい、プラグインが突然起動しない、ライブラリが読み込めない、認証エラーが発生するなど、DTMユーザーが直面する専門的で複雑な問題に対して、即座に的確な解決策を提供することを目指しています。この専用AIは、DTMにおけるトラブルシューティングの効率を大幅に向上させる可能性を秘めています。</p>
+<p class="detail-text">SONICWIREの「AIサポート」は、長年にわたるDTM関連のトラブルシューティング事例を基に構築された、高度なAIサポートシステムである。プラグインの起動不良、ライブラリの読み込みエラー、認証問題など、DTM特有の複雑な問題に対して、ChatGPTのような汎用AIでは対応が難しいケースでも、この専用AIは的確な解決策を提示する。これにより、DTMユーザーは、従来よりも迅速かつ効果的に問題を解決し、制作活動をスムーズに進めることができる。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77596.html"
         data-title="ChatGPTでは答えられないDTMトラブルを即解決!?SONICWIRE「AIサポート」が約30年分の事例で実現した、専用AIの実力"
-        data-summary="SONICWIREは、約30年分のDTMトラブル事例を学習させた専用AI「AIサポート」を導入しました。このAIは、ChatGPTでも解決が難しいような、プラグインの起動不良、ライブラリの読み込みエラー、認証エラーといったDTM特有の複雑なトラブルに迅速に対応できる能力を持っているとされています。"
+        data-summary="SONICWIREが提供する「AIサポート」は、約30年分のDTMトラブル事例を学習した専用AIにより、ChatGPTでは解決できないようなDTM特有のトラブルに迅速に対応する。これにより、DTMユーザーの困りごとを効果的に解決することが期待される。"
         data-source="DTMステーション"
         data-url="https://www.dtmstation.com/archives/77596.html"
         data-importance="🟡"
@@ -1137,143 +1280,31 @@ details[open] summary::before { content: "▲ 閉じる"; }
     </div>
   </div>
 </div>
-<div class="item" style="animation-delay:0.30s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">MusicRadar</span>
-    </div>
-    <h2><a href="https://www.musicradar.com/artists/i-wrote-this-song-as-soon-as-i-got-home-from-the-screening-sometimes-you-just-know-right-taylor-swift-reunites-with-jack-antonoff-and-goes-back-to-country-for-toy-story-5-song-i-knew-it-i-knew-you" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「家に帰るとすぐにこの曲を書いた。時々、そういうものだとわかるよね？」テイラー・スウィフト、ジャック・アントノフと再会し、トイ・ストーリー5の楽曲「I Knew It, I Knew You」でカントリーに戻る</a></h2>
-    <p class="summary">テイラー・スウィフトがジャック・アントノフと再びタッグを組み、トイ・ストーリー5の楽曲「I Knew It, I Knew You」でカントリーミュージックのルーツに回帰しました。この楽曲は、映画の試写会から帰宅後すぐに書き上げられたとされています。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">テイラー・スウィフトが、長年のコラボレーターであるジャック・アントノフと共に、ディズニー・ピクサー映画『トイ・ストーリー5』のために書き下ろした新曲「I Knew It, I Knew You」を発表しました。スウィフトはこの楽曲について、「映画の試写会から家に帰るとすぐに書いた。時々、そういうものだとわかることがある」と語っており、インスピレーションが湧いたらすぐに形にする彼女の制作スタイルが伺えます。楽曲は、彼女の初期のスタイルであるカントリーミュージックの要素を取り入れたものとなっています。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fi-wrote-this-song-as-soon-as-i-got-home-from-the-screening-sometimes-you-just-know-right-taylor-swift-reunites-with-jack-antonoff-and-goes-back-to-country-for-toy-story-5-song-i-knew-it-i-knew-you"
-        data-title="「家に帰るとすぐにこの曲を書いた。時々、そういうものだとわかるよね？」テイラー・スウィフト、ジャック・アントノフと再会し、トイ・ストーリー5の楽曲「I Knew It, I Knew You」でカントリーに戻る"
-        data-summary="テイラー・スウィフトがジャック・アントノフと再びタッグを組み、トイ・ストーリー5の楽曲「I Knew It, I Knew You」でカントリーミュージックのルーツに回帰しました。この楽曲は、映画の試写会から帰宅後すぐに書き上げられたとされています。"
-        data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/i-wrote-this-song-as-soon-as-i-got-home-from-the-screening-sometimes-you-just-know-right-taylor-swift-reunites-with-jack-antonoff-and-goes-back-to-country-for-toy-story-5-song-i-knew-it-i-knew-you"
-        data-importance="🟢"
-        data-category="DTM">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E5%AE%B6%E3%81%AB%E5%B8%B0%E3%82%8B%E3%81%A8%E3%81%99%E3%81%90%E3%81%AB%E3%81%93%E3%81%AE%E6%9B%B2%E3%82%92%E6%9B%B8%E3%81%84%E3%81%9F%E3%80%82%E6%99%82%E3%80%85%E3%80%81%E3%81%9D%E3%81%86%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%81%A0%E3%81%A8%E3%82%8F%E3%81%8B%E3%82%8B%E3%82%88%E3%81%AD%EF%BC%9F%E3%80%8D%E3%83%86%E3%82%A4%E3%83%A9%E3%83%BC%E3%83%BB%E3%82%B9%E3%82%A6%E3%82%A3%E3%83%95%E3%83%88%E3%80%81%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%88%E3%83%8E%E3%83%95%E3%81%A8%E5%86%8D%E4%BC%9A%E3%81%97%E3%80%81%E3%83%88%E3%82%A4%E3%83%BB%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC5%E3%81%AE%E6%A5%BD%E6%9B%B2%E3%80%8CI%20Knew%20It%2C%20I%20Knew%20You%E3%80%8D%E3%81%A7%E3%82%AB%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC%E3%81%AB%E6%88%BB%E3%82%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fi-wrote-this-song-as-soon-as-i-got-home-from-the-screening-sometimes-you-just-know-right-taylor-swift-reunites-with-jack-antonoff-and-goes-back-to-country-for-toy-story-5-song-i-knew-it-i-knew-you" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「家に帰るとすぐにこの曲を書いた。時々、そういうものだとわかるよね？」テイラー・スウィフト、ジャック・アントノフと再会し、トイ・ストーリー5の楽曲「I Knew It, I Knew You」でカントリーに戻る">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.35s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">MusicRadar</span>
-    </div>
-    <h2><a href="https://www.musicradar.com/artists/bands/thanks-for-the-geography-lesson-i-dont-know-what-you-have-to-be-so-proud-of-right-now-black-crowes-booed-at-gig-in-tampa-florida" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」：ブラック・クロウズ、フロリダ州タンパでのギグでブーイングを浴びる</a></h2>
-    <p class="summary">ブラック・クロウズがフロリダ州タンパでのライブ中に、観客から「USA！」というチャントが起こり、バンドメンバーが「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」と返したことで、ブーイングを浴びました。この出来事は、政治的・文化的な意見の相違がライブパフォーマンスに影響を与えた例として注目されます。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">ロックバンド、ブラック・クロウズがフロリダ州タンパでのライブ中、観客の一部から「USA！」という愛国的なチャントが起こった際、ボーカルのクリス・ロビンソンが「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」と皮肉を込めて返答したところ、会場からブーイングが起こりました。このやり取りは、バンドの政治的・社会的なスタンスと、一部の観客の感情との間に生じた摩擦を示唆しており、アーティストと聴衆の間の複雑な関係性を浮き彫りにしています。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fbands%2Fthanks-for-the-geography-lesson-i-dont-know-what-you-have-to-be-so-proud-of-right-now-black-crowes-booed-at-gig-in-tampa-florida"
-        data-title="「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」：ブラック・クロウズ、フロリダ州タンパでのギグでブーイングを浴びる"
-        data-summary="ブラック・クロウズがフロリダ州タンパでのライブ中に、観客から「USA！」というチャントが起こり、バンドメンバーが「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」と返したことで、ブーイングを浴びました。この出来事は、政治的・文化的な意見の相違がライブパフォーマンスに影響を与えた例として注目されます。"
-        data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/bands/thanks-for-the-geography-lesson-i-dont-know-what-you-have-to-be-so-proud-of-right-now-black-crowes-booed-at-gig-in-tampa-florida"
-        data-importance="🟢"
-        data-category="DTM">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E5%9C%B0%E7%90%86%E3%81%AE%E6%8E%88%E6%A5%AD%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E2%80%A6%E4%BB%8A%E3%80%81%E8%AA%87%E3%82%89%E3%81%97%E3%81%92%E3%81%AB%E6%80%9D%E3%81%88%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E4%BD%95%E3%81%AA%E3%81%AE%E3%81%8B%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84%E3%80%8D%EF%BC%9A%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF%E3%83%BB%E3%82%AF%E3%83%AD%E3%82%A6%E3%82%BA%E3%80%81%E3%83%95%E3%83%AD%E3%83%AA%E3%83%80%E5%B7%9E%E3%82%BF%E3%83%B3%E3%83%91%E3%81%A7%E3%81%AE%E3%82%AE%E3%82%B0%E3%81%A7%E3%83%96%E3%83%BC%E3%82%A4%E3%83%B3%E3%82%B0%E3%82%92%E6%B5%B4%E3%81%B3%E3%82%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fbands%2Fthanks-for-the-geography-lesson-i-dont-know-what-you-have-to-be-so-proud-of-right-now-black-crowes-booed-at-gig-in-tampa-florida" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「地理の授業ありがとう…今、誇らしげに思えることが何なのかわからない」：ブラック・クロウズ、フロリダ州タンパでのギグでブーイングを浴びる">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.40s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">Attack Magazine</span>
-    </div>
-    <h2><a href="https://www.attackmagazine.com/features/columns/kaitlyn-aurelia-smith-with-london-contemporary-orchestra-barbican-review/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Kaitlyn Aurelia Smith & London Contemporary Orchestra、Barbicanでの演奏レビュー</a></h2>
-    <p class="summary">Kaitlyn Aurelia Smithが、ロンドン・コンテンポラリー・オーケストラと共にBarbicanでパフォーマンスを行いました。この公演は、彼女の過去の作品と新しいサウンドの融合を試み、親密なエレクトロニクスからリズム主導の新しい領域へとサウンドを押し広げました。新アルバム「RUIN: It’s Not Just Music」からの楽曲も披露されました。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">Kaitlyn Aurelia Smithは、ロンドン・コンテンポラリー・オーケストラを伴い、ロンドンのBarbican Centreでパフォーマンスを行いました。この公演は、彼女のキャリアを振り返るとともに、今後の音楽的方向性を示すものでした。前半では、デビューアルバム「EARS」から10年間の音楽的進化を辿り、最新アルバム『Thoughts on the Future』の楽曲をオーケストラと共に披露しました。後半では、近日発売されるアルバム『RUIN: It’s Not Just Music』からの楽曲を演奏し、ブレイクビーツやインダストリアルテクノに影響を受けた、よりリズム主導でダイナミックなサウンドを提示しました。このパフォーマンスは、Smithの音楽が内省的なエレクトロニクスから、より身体的でエネルギッシュな領域へと進化していることを示しています。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Fcolumns%2Fkaitlyn-aurelia-smith-with-london-contemporary-orchestra-barbican-review%2F"
-        data-title="Kaitlyn Aurelia Smith & London Contemporary Orchestra、Barbicanでの演奏レビュー"
-        data-summary="Kaitlyn Aurelia Smithが、ロンドン・コンテンポラリー・オーケストラと共にBarbicanでパフォーマンスを行いました。この公演は、彼女の過去の作品と新しいサウンドの融合を試み、親密なエレクトロニクスからリズム主導の新しい領域へとサウンドを押し広げました。新アルバム「RUIN: It’s Not Just Music」からの楽曲も披露されました。"
-        data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/features/columns/kaitlyn-aurelia-smith-with-london-contemporary-orchestra-barbican-review/"
-        data-importance="🟢"
-        data-category="DTM">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Kaitlyn%20Aurelia%20Smith%20%26%20London%20Contemporary%20Orchestra%E3%80%81Barbican%E3%81%A7%E3%81%AE%E6%BC%94%E5%A5%8F%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%20https%3A%2F%2Fwww.attackmagazine.com%2Ffeatures%2Fcolumns%2Fkaitlyn-aurelia-smith-with-london-contemporary-orchestra-barbican-review%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Kaitlyn Aurelia Smith & London Contemporary Orchestra、Barbicanでの演奏レビュー">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.45s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">Bedroom Producers Blog</span>
-    </div>
-    <h2><a href="https://bedroomproducersblog.com/2026/06/02/otodesk-ambience-reverb/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OTODESK、Windows用無料オープンソースのアルゴリズムリバーブプラグイン「Ambience」をリリース</a></h2>
-    <p class="summary">OTODESKは、Windows向けの無料・オープンソースのアルゴリズムリバーブプラグイン「Ambience」をリリースしました。このプラグインは、ソロ開発者であるMakoto Iida氏（OTODESK）による16チャンネルのフィードバックディレイネットワークリバーブです。 convolution ベースではない点が特徴です。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">OTODESKは、Windowsプラットフォームに対応した無料かつオープンソースのアルゴリズムリバーブプラグイン「Ambience」をリリースしました。このプラグインは、ソロ開発者であるMakoto Iida氏（OTODESK名義）が開発したもので、16チャンネルのフィードバックディレイネットワーク（FDN）リバーブ技術を採用しています。Iida氏によると、Ambienceはconvolution reverbとは異なり、より柔軟で表現力豊かな空間エフェクトを作り出すことが可能です。オープンソースであるため、開発者コミュニティによるさらなる改良やカスタマイズが期待されます。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F02%2Fotodesk-ambience-reverb%2F"
-        data-title="OTODESK、Windows用無料オープンソースのアルゴリズムリバーブプラグイン「Ambience」をリリース"
-        data-summary="OTODESKは、Windows向けの無料・オープンソースのアルゴリズムリバーブプラグイン「Ambience」をリリースしました。このプラグインは、ソロ開発者であるMakoto Iida氏（OTODESK）による16チャンネルのフィードバックディレイネットワークリバーブです。 convolution ベースではない点が特徴です。"
-        data-source="Bedroom Producers Blog"
-        data-url="https://bedroomproducersblog.com/2026/06/02/otodesk-ambience-reverb/"
-        data-importance="🟢"
-        data-category="DTM">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=OTODESK%E3%80%81Windows%E7%94%A8%E7%84%A1%E6%96%99%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E3%83%AA%E3%83%90%E3%83%BC%E3%83%96%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%8CAmbience%E3%80%8D%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F02%2Fotodesk-ambience-reverb%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="OTODESK、Windows用無料オープンソースのアルゴリズムリバーブプラグイン「Ambience」をリリース">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
 <div class="item" style="animation-delay:0.50s">
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">Bedroom Producers Blog</span>
+      <span class="item-source">MusicRadar</span>
     </div>
-    <h2><a href="https://bedroomproducersblog.com/2026/06/02/ub-dsp-vowel-blender/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">UB DSP、イントロセール実施中のフォーマントフィルタープラグイン「Vowel Blender」をリリース</a></h2>
-    <p class="summary">UB DSPは、macOS、Windows、Linuxに対応したフォーマントフィルタープラグイン「Vowel Blender」をリリースしました。このプラグインは、2Dの音声XYパッドを特徴とし、プリセットされた母音形状を選択するのではなく、母音空間内をカーソルでドラッグして音色を変化させます。</p>
+    <h2><a href="https://www.musicradar.com/music-tech/scientists-finally-unravel-the-mysteries-of-a-pianists-touch-after-measuring-hand-and-finger-movements-with-microscopic-spatial-precision" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">科学者たちは「微細な空間精度」で手と指の動きを測定し、ピアニストの「タッチ」の謎を最終的に解明</a></h2>
+    <p class="summary">科学者たちは、ピアノ奏者の「タッチ」の謎を解明するために、手と指の動きを極めて高い精度で測定した。この研究により、ピアノという楽器がこれまで考えられていた以上に表現力豊かであることが示唆される。</p>
     <details>
 <summary></summary>
-<p class="detail-text">UB DSPは、macOS、Windows、Linuxに対応した新しいフォーマントフィルタープラグイン「Vowel Blender」をリリースしました。これは、同社からリリースされる2番目のプラグインであり、「Grit Blender」に続く製品です。Vowel Blenderの最大の特徴は、2次元の音声XYパッドであり、ユーザーはプリセットされた母音形状を選択するのではなく、このパッド上でカーソルを移動させることで、母音空間内を自由に探索し、ユニークな母音エフェクトを作り出すことができます。リリースを記念して、イントロダクションプライスでの提供が行われています。</p>
+<p class="detail-text">この研究では、最先端のモーションキャプチャ技術と圧力センサーを用いて、ピアニストが鍵盤に触れる際の手と指の微細な動きと力の加え方を高精度で測定した。これにより、演奏者の感情や音楽的意図がどのように音色やダイナミクスに変換されるかのメカニズムが明らかになった。この発見は、ピアノ演奏の芸術性と科学的理解の両面において、新たな視点を提供するものである。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F02%2Fub-dsp-vowel-blender%2F"
-        data-title="UB DSP、イントロセール実施中のフォーマントフィルタープラグイン「Vowel Blender」をリリース"
-        data-summary="UB DSPは、macOS、Windows、Linuxに対応したフォーマントフィルタープラグイン「Vowel Blender」をリリースしました。このプラグインは、2Dの音声XYパッドを特徴とし、プリセットされた母音形状を選択するのではなく、母音空間内をカーソルでドラッグして音色を変化させます。"
-        data-source="Bedroom Producers Blog"
-        data-url="https://bedroomproducersblog.com/2026/06/02/ub-dsp-vowel-blender/"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fscientists-finally-unravel-the-mysteries-of-a-pianists-touch-after-measuring-hand-and-finger-movements-with-microscopic-spatial-precision"
+        data-title="科学者たちは「微細な空間精度」で手と指の動きを測定し、ピアニストの「タッチ」の謎を最終的に解明"
+        data-summary="科学者たちは、ピアノ奏者の「タッチ」の謎を解明するために、手と指の動きを極めて高い精度で測定した。この研究により、ピアノという楽器がこれまで考えられていた以上に表現力豊かであることが示唆される。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/music-tech/scientists-finally-unravel-the-mysteries-of-a-pianists-touch-after-measuring-hand-and-finger-movements-with-microscopic-spatial-precision"
         data-importance="🟢"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=UB%20DSP%E3%80%81%E3%82%A4%E3%83%B3%E3%83%88%E3%83%AD%E3%82%BB%E3%83%BC%E3%83%AB%E5%AE%9F%E6%96%BD%E4%B8%AD%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%83%88%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%8CVowel%20Blender%E3%80%8D%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F06%2F02%2Fub-dsp-vowel-blender%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E7%A7%91%E5%AD%A6%E8%80%85%E3%81%9F%E3%81%A1%E3%81%AF%E3%80%8C%E5%BE%AE%E7%B4%B0%E3%81%AA%E7%A9%BA%E9%96%93%E7%B2%BE%E5%BA%A6%E3%80%8D%E3%81%A7%E6%89%8B%E3%81%A8%E6%8C%87%E3%81%AE%E5%8B%95%E3%81%8D%E3%82%92%E6%B8%AC%E5%AE%9A%E3%81%97%E3%80%81%E3%83%94%E3%82%A2%E3%83%8B%E3%82%B9%E3%83%88%E3%81%AE%E3%80%8C%E3%82%BF%E3%83%83%E3%83%81%E3%80%8D%E3%81%AE%E8%AC%8E%E3%82%92%E6%9C%80%E7%B5%82%E7%9A%84%E3%81%AB%E8%A7%A3%E6%98%8E%20https%3A%2F%2Fwww.musicradar.com%2Fmusic-tech%2Fscientists-finally-unravel-the-mysteries-of-a-pianists-touch-after-measuring-hand-and-finger-movements-with-microscopic-spatial-precision" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="UB DSP、イントロセール実施中のフォーマントフィルタープラグイン「Vowel Blender」をリリース">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="科学者たちは「微細な空間精度」で手と指の動きを測定し、ピアニストの「タッチ」の謎を最終的に解明">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1281,55 +1312,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">DTMステーション</span>
+      <span class="item-source">MusicRadar</span>
     </div>
-    <h2><a href="https://www.dtmstation.com/archives/77635.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">DTMソフト購入の新潮流——Ableton Live 12.4とRent-to-ownが変える制作環境</a></h2>
-    <p class="summary">DTMソフトウェアのサブスクリプションモデルが普及する中、買い切り型を望むユーザーの声も根強くあります。この記事では、Ableton Live 12.4のリリースとRent-to-own（分割払い購入）という新しい購入形態が、DTMerの制作環境にどのような変化をもたらすのかを探っています。</p>
+    <h2><a href="https://www.musicradar.com/artists/singers-songwriters/i-looked-at-my-band-and-they-were-all-looking-at-the-floor-so-that-was-the-first-hint-that-something-was-not-right-barry-manilow-says-that-he-doesnt-sound-like-me-after-cancer-surgery" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「バンドのみんなを見たら、みんな床を見ていた。だから何かが間違っている最初の兆候だったんだ」とバリー・マニロウ、がん手術後に「自分らしくない」と語る</a></h2>
+    <p class="summary">バリー・マニロウは、がん手術後に自身の声が「自分らしくない」と語った。彼は、バンドメンバーの反応から、手術が声に影響を与えていることに気づいたと述べている。</p>
     <details>
 <summary></summary>
-<p class="detail-text">DTM（デスクトップミュージック）ソフトウェアの分野では、サブスクリプションモデルの導入が進んでいますが、多くのユーザーは依然として買い切り型を好む傾向があります。この記事では、Ableton Live 12.4のアップデートと、Rent-to-own（分割払い購入）といった新しい購入オプションが、DTMソフトウェアの入手方法や利用スタイルにどのような変革をもたらしているのかを解説しています。これらの新しい潮流は、ユーザーにとってより柔軟でアクセスしやすい制作環境の構築に貢献する可能性があります。</p>
+<p class="detail-text">世界的歌手バリー・マニロウが、最近受けたがん手術の影響で、自身の歌声が以前とは異なると明かした。彼は、リハーサル中にバンドメンバーの表情を見て、声の変化に気づいたというエピソードを語った。この個人的な体験は、音楽家が直面する身体的な課題と、それが創造性に与える影響について示唆に富む。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77635.html"
-        data-title="DTMソフト購入の新潮流——Ableton Live 12.4とRent-to-ownが変える制作環境"
-        data-summary="DTMソフトウェアのサブスクリプションモデルが普及する中、買い切り型を望むユーザーの声も根強くあります。この記事では、Ableton Live 12.4のリリースとRent-to-own（分割払い購入）という新しい購入形態が、DTMerの制作環境にどのような変化をもたらすのかを探っています。"
-        data-source="DTMステーション"
-        data-url="https://www.dtmstation.com/archives/77635.html"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingers-songwriters%2Fi-looked-at-my-band-and-they-were-all-looking-at-the-floor-so-that-was-the-first-hint-that-something-was-not-right-barry-manilow-says-that-he-doesnt-sound-like-me-after-cancer-surgery"
+        data-title="「バンドのみんなを見たら、みんな床を見ていた。だから何かが間違っている最初の兆候だったんだ」とバリー・マニロウ、がん手術後に「自分らしくない」と語る"
+        data-summary="バリー・マニロウは、がん手術後に自身の声が「自分らしくない」と語った。彼は、バンドメンバーの反応から、手術が声に影響を与えていることに気づいたと述べている。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/artists/singers-songwriters/i-looked-at-my-band-and-they-were-all-looking-at-the-floor-so-that-was-the-first-hint-that-something-was-not-right-barry-manilow-says-that-he-doesnt-sound-like-me-after-cancer-surgery"
         data-importance="🟢"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=DTM%E3%82%BD%E3%83%95%E3%83%88%E8%B3%BC%E5%85%A5%E3%81%AE%E6%96%B0%E6%BD%AE%E6%B5%81%E2%80%94%E2%80%94Ableton%20Live%2012.4%E3%81%A8Rent-to-own%E3%81%8C%E5%A4%89%E3%81%88%E3%82%8B%E5%88%B6%E4%BD%9C%E7%92%B0%E5%A2%83%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F77635.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%83%90%E3%83%B3%E3%83%89%E3%81%AE%E3%81%BF%E3%82%93%E3%81%AA%E3%82%92%E8%A6%8B%E3%81%9F%E3%82%89%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E5%BA%8A%E3%82%92%E8%A6%8B%E3%81%A6%E3%81%84%E3%81%9F%E3%80%82%E3%81%A0%E3%81%8B%E3%82%89%E4%BD%95%E3%81%8B%E3%81%8C%E9%96%93%E9%81%95%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E6%9C%80%E5%88%9D%E3%81%AE%E5%85%86%E5%80%99%E3%81%A0%E3%81%A3%E3%81%9F%E3%82%93%E3%81%A0%E3%80%8D%E3%81%A8%E3%83%90%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%9E%E3%83%8B%E3%83%AD%E3%82%A6%E3%80%81%E3%81%8C%E3%82%93%E6%89%8B%E8%A1%93%E5%BE%8C%E3%81%AB%E3%80%8C%E8%87%AA%E5%88%86%E3%82%89%E3%81%97%E3%81%8F%E3%81%AA%E3%81%84%E3%80%8D%E3%81%A8%E8%AA%9E%E3%82%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsingers-songwriters%2Fi-looked-at-my-band-and-they-were-all-looking-at-the-floor-so-that-was-the-first-hint-that-something-was-not-right-barry-manilow-says-that-he-doesnt-sound-like-me-after-cancer-surgery" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="DTMソフト購入の新潮流——Ableton Live 12.4とRent-to-ownが変える制作環境">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.60s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">DTMステーション</span>
-    </div>
-    <h2><a href="https://www.dtmstation.com/archives/51899036.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">DTM初心者のためのMIDIキーボードの基礎知識と選び方 2026年版</a></h2>
-    <p class="summary">DTMを行う上で必須となるハードウェアであるオーディオインターフェイスとMIDIキーボードについて、DTM初心者を対象に基礎知識と選び方を紹介しています。この記事は、2026年版として最新の情報に基づいています。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">DTM（デスクトップミュージック）制作において、オーディオインターフェイスとMIDIキーボードは、音源の入力や出力、演奏のコントロールに不可欠なハードウェアです。この記事では、DTM初心者向けに、MIDIキーボードの基本的な機能、接続方法、そして自身の制作スタイルに合ったMIDIキーボードの選び方について、2026年現在の最新情報に基づいて詳しく解説しています。オーディオインターフェイスに関する情報も、過去の記事で別途紹介されていることが示唆されています。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F51899036.html"
-        data-title="DTM初心者のためのMIDIキーボードの基礎知識と選び方 2026年版"
-        data-summary="DTMを行う上で必須となるハードウェアであるオーディオインターフェイスとMIDIキーボードについて、DTM初心者を対象に基礎知識と選び方を紹介しています。この記事は、2026年版として最新の情報に基づいています。"
-        data-source="DTMステーション"
-        data-url="https://www.dtmstation.com/archives/51899036.html"
-        data-importance="🟢"
-        data-category="DTM">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=DTM%E5%88%9D%E5%BF%83%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEMIDI%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98%E3%81%A8%E9%81%B8%E3%81%B3%E6%96%B9%202026%E5%B9%B4%E7%89%88%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F51899036.html" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="DTM初心者のためのMIDIキーボードの基礎知識と選び方 2026年版">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「バンドのみんなを見たら、みんな床を見ていた。だから何かが間違っている最初の兆候だったんだ」とバリー・マニロウ、がん手術後に「自分らしくない」と語る">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1339,19 +1342,103 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">IndieHackers</span>
+    </div>
+    <h2><a href="https://www.mysorepalace.tv/argentine-division-1-independiente-rivadavia-vs-barracas-central-08h00-ngay-12-03-2026/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">アルゼンチン・ディビジョン1 – インディペンディエンテ・リバダビア vs バラカス・セントラル 08:00 2026年3月12日</a></h2>
+    <p class="summary">この記事は、2026年3月12日午前8時に開催されるアルゼンチン・ディビジョン1のサッカー試合、インディペンディエンテ・リバダビア対バラカス・セントラルの対戦情報を提供している。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">この情報は、アルゼンチン・ディビジョン1リーグの試合日程に関するもので、2026年3月12日午前8時（現地時間）にキックオフされる、インディペンディエンテ・リバダビアとバラカス・セントラルの対戦について述べている。試合の開催場所や放送予定などの詳細情報は含まれていない。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.mysorepalace.tv%2Fargentine-division-1-independiente-rivadavia-vs-barracas-central-08h00-ngay-12-03-2026%2F"
+        data-title="アルゼンチン・ディビジョン1 – インディペンディエンテ・リバダビア vs バラカス・セントラル 08:00 2026年3月12日"
+        data-summary="この記事は、2026年3月12日午前8時に開催されるアルゼンチン・ディビジョン1のサッカー試合、インディペンディエンテ・リバダビア対バラカス・セントラルの対戦情報を提供している。"
+        data-source="IndieHackers"
+        data-url="https://www.mysorepalace.tv/argentine-division-1-independiente-rivadavia-vs-barracas-central-08h00-ngay-12-03-2026/"
+        data-importance="🟡"
+        data-category="ビジネス">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A2%E3%83%AB%E3%82%BC%E3%83%B3%E3%83%81%E3%83%B3%E3%83%BB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B8%E3%83%A7%E3%83%B31%20%E2%80%93%20%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%9A%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A8%E3%83%B3%E3%83%86%E3%83%BB%E3%83%AA%E3%83%90%E3%83%80%E3%83%93%E3%82%A2%20vs%20%E3%83%90%E3%83%A9%E3%82%AB%E3%82%B9%E3%83%BB%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%2008%3A00%202026%E5%B9%B43%E6%9C%8812%E6%97%A5%20https%3A%2F%2Fwww.mysorepalace.tv%2Fargentine-division-1-independiente-rivadavia-vs-barracas-central-08h00-ngay-12-03-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="アルゼンチン・ディビジョン1 – インディペンディエンテ・リバダビア vs バラカス・セントラル 08:00 2026年3月12日">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.05s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">IndieHackers</span>
+    </div>
+    <h2><a href="https://www.mysorepalace.tv/giai-vdqg-luxembourg-progres-niedercorn-vs-cs-petange-00h30-ngay-02-03-2026/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ルクセンブルク・ナショナルリーグ – プログレス・ニーダーコルン vs CSペタンジュ 00:30 2026年3月2日</a></h2>
+    <p class="summary">この記事は、2026年3月2日午前0時30分に開催されるルクセンブルク・ナショナルリーグのサッカー試合、プログレス・ニーダーコルン対CSペタンジュの対戦情報を提供している。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">この情報は、ルクセンブルク・ナショナルリーグの試合日程に関するもので、2026年3月2日午前0時30分（現地時間）にキックオフされる、プログレス・ニーダーコルンとCSペタンジュの対戦について述べている。試合の開催場所や放送予定などの詳細情報は含まれていない。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.mysorepalace.tv%2Fgiai-vdqg-luxembourg-progres-niedercorn-vs-cs-petange-00h30-ngay-02-03-2026%2F"
+        data-title="ルクセンブルク・ナショナルリーグ – プログレス・ニーダーコルン vs CSペタンジュ 00:30 2026年3月2日"
+        data-summary="この記事は、2026年3月2日午前0時30分に開催されるルクセンブルク・ナショナルリーグのサッカー試合、プログレス・ニーダーコルン対CSペタンジュの対戦情報を提供している。"
+        data-source="IndieHackers"
+        data-url="https://www.mysorepalace.tv/giai-vdqg-luxembourg-progres-niedercorn-vs-cs-petange-00h30-ngay-02-03-2026/"
+        data-importance="🟡"
+        data-category="ビジネス">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%AB%E3%82%AF%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AB%E3%82%AF%E3%83%BB%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB%E3%83%AA%E3%83%BC%E3%82%B0%20%E2%80%93%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%AC%E3%82%B9%E3%83%BB%E3%83%8B%E3%83%BC%E3%83%80%E3%83%BC%E3%82%B3%E3%83%AB%E3%83%B3%20vs%20CS%E3%83%9A%E3%82%BF%E3%83%B3%E3%82%B8%E3%83%A5%2000%3A30%202026%E5%B9%B43%E6%9C%882%E6%97%A5%20https%3A%2F%2Fwww.mysorepalace.tv%2Fgiai-vdqg-luxembourg-progres-niedercorn-vs-cs-petange-00h30-ngay-02-03-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="ルクセンブルク・ナショナルリーグ – プログレス・ニーダーコルン vs CSペタンジュ 00:30 2026年3月2日">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.10s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="item-source">IndieHackers</span>
+    </div>
+    <h2><a href="https://www.mysorepalace.tv/mexico-liga-mx-u19-monterrey-u19-vs-cdsyc-cruz-azul-u19-00h30-ngay-01-03-2026/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">メキシコ・リーガMX U19 – モンテレイU19 vs CDSyCクルス・アスルU19 00:30 2026年3月1日</a></h2>
+    <p class="summary">この記事は、2026年3月1日午前0時30分に開催されるメキシコ・リーガMX U19（U19リーグ）のサッカー試合、モンテレイU19対CDSyCクルス・アスルU19の対戦情報を提供している。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">この情報は、メキシコ・リーガMX U19リーグの試合日程に関するもので、2026年3月1日午前0時30分（現地時間）にキックオフされる、モンテレイU19とCDSyCクルス・アスルU19の対戦について述べている。試合の開催場所や放送予定などの詳細情報は含まれていない。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.mysorepalace.tv%2Fmexico-liga-mx-u19-monterrey-u19-vs-cdsyc-cruz-azul-u19-00h30-ngay-01-03-2026%2F"
+        data-title="メキシコ・リーガMX U19 – モンテレイU19 vs CDSyCクルス・アスルU19 00:30 2026年3月1日"
+        data-summary="この記事は、2026年3月1日午前0時30分に開催されるメキシコ・リーガMX U19（U19リーグ）のサッカー試合、モンテレイU19対CDSyCクルス・アスルU19の対戦情報を提供している。"
+        data-source="IndieHackers"
+        data-url="https://www.mysorepalace.tv/mexico-liga-mx-u19-monterrey-u19-vs-cdsyc-cruz-azul-u19-00h30-ngay-01-03-2026/"
+        data-importance="🟡"
+        data-category="ビジネス">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%A1%E3%82%AD%E3%82%B7%E3%82%B3%E3%83%BB%E3%83%AA%E3%83%BC%E3%82%ACMX%20U19%20%E2%80%93%20%E3%83%A2%E3%83%B3%E3%83%86%E3%83%AC%E3%82%A4U19%20vs%20CDSyC%E3%82%AF%E3%83%AB%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%B9%E3%83%ABU19%2000%3A30%202026%E5%B9%B43%E6%9C%881%E6%97%A5%20https%3A%2F%2Fwww.mysorepalace.tv%2Fmexico-liga-mx-u19-monterrey-u19-vs-cdsyc-cruz-azul-u19-00h30-ngay-01-03-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="メキシコ・リーガMX U19 – モンテレイU19 vs CDSyCクルス・アスルU19 00:30 2026年3月1日">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.15s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">note クリエイター収益</span>
     </div>
     <h2><a href="https://note.com/bunga777/n/ndd95119e223e" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Xのクリエイター収益は「ほぼギャンブル」みたいなもん！</a></h2>
-    <p class="summary">この記事では、X（旧Twitter）のクリエイター収益、特にPremiumプール分配の仕組みと実態について、「合法的なギャンブル」と表現しながら論じています。収益の不安定さや予測困難性について言及している可能性があります。</p>
+    <p class="summary">この記事では、X（旧Twitter）におけるクリエイター収益、特にプレミアムプール分配の仕組みと実態について、「合法的なギャンブル」と表現し、その収益性に疑問を呈している。収益の不安定さが指摘されている。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この記事は、X（旧Twitter）におけるクリエイターの収益化、特にPremiumプール分配の仕組みと、その実態について掘り下げています。筆者は、Xのクリエイター収益を「合法的なギャンブル」と形容し、その収益がどのように決定され、どのような要素によって変動するのかを解説しています。不確実性の高い収益構造や、クリエイターが直面する課題について、具体的な考察が展開されていると考えられます。</p>
+<p class="detail-text">X（旧Twitter）のクリエイター収益化プログラム、特にプレミアムプール分配の仕組みが、その収益の不確実性から「合法的なギャンブル」と評されている。この記事では、この分配メカニズムの具体的な内容と、それがクリエイターにもたらす収益の変動性や不安定さについて詳細に解説している。収益を保証されない不安定な状況が、クリエイターのモチベーションや活動継続に影響を与える可能性が示唆されている。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fnote.com%2Fbunga777%2Fn%2Fndd95119e223e"
         data-title="Xのクリエイター収益は「ほぼギャンブル」みたいなもん！"
-        data-summary="この記事では、X（旧Twitter）のクリエイター収益、特にPremiumプール分配の仕組みと実態について、「合法的なギャンブル」と表現しながら論じています。収益の不安定さや予測困難性について言及している可能性があります。"
+        data-summary="この記事では、X（旧Twitter）におけるクリエイター収益、特にプレミアムプール分配の仕組みと実態について、「合法的なギャンブル」と表現し、その収益性に疑問を呈している。収益の不安定さが指摘されている。"
         data-source="note クリエイター収益"
         data-url="https://note.com/bunga777/n/ndd95119e223e"
         data-importance="🟡"
@@ -1363,51 +1450,51 @@ details[open] summary::before { content: "▲ 閉じる"; }
     </div>
   </div>
 </div>
-<div class="item" style="animation-delay:0.05s">
+<div class="item" style="animation-delay:0.20s">
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">note クリエイター収益</span>
     </div>
-    <h2><a href="https://note.com/fanbotokka/n/n01cef73d0084" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">イラストレーターはギュられるのか？ ーー人間絵師の生存戦略</a></h2>
-    <p class="summary">月収3万円程度のイラストレーターである筆者が、AI時代のイラストレーターの生存戦略について考察しています。AIによるイラスト生成が普及する中で、「ギュられる」（＝AIに代替される、あるいはその影響を受ける）状況と、人間絵師が生き残るための戦略について議論しています。</p>
+    <h2><a href="https://note.com/fanbotokka/n/n01cef73d0084" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">イラストレーターはギュられるのか？　ーー人間絵師の生存戦略</a></h2>
+    <p class="summary">この記事は、AI時代におけるイラストレーターの生存戦略について論じている。AIによる「ギュられる」状況（＝AIに仕事を奪われる、またはAIに依存せざるを得なくなる状況）が発生しているとしつつも、人間絵師が完全に終了する段階ではないと結論づけている。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この記事は、AIによる画像生成技術の進歩がイラストレーターの仕事に与える影響について、一人のイラストレーター（月収3万円程度）の視点から考察したものです。筆者は、「ギュられる」という表現を用いて、AIに代替される、あるいはAIの普及によって仕事が圧迫される状況を説明しつつ、人間ならではの「人間絵師」がAI時代に生き残るための具体的な戦略や考え方について論じています。AIとの共存や、人間だからこそ提供できる価値に焦点を当てた内容と考えられます。</p>
+<p class="detail-text">AI技術の進展により、イラストレーターの仕事がAIに代替される可能性（「ギュられる」）が指摘されている。この記事では、R-18コンテンツを制作する弱小イラストレーターの視点から、AI時代における人間絵師の生存戦略を考察している。一部のイラストレーターは既にAIの影響を受けているが、全ての人間絵師が仕事を失うわけではなく、独自の強みや戦略を持つことで生き残る道があると論じている。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fnote.com%2Ffanbotokka%2Fn%2Fn01cef73d0084"
-        data-title="イラストレーターはギュられるのか？ ーー人間絵師の生存戦略"
-        data-summary="月収3万円程度のイラストレーターである筆者が、AI時代のイラストレーターの生存戦略について考察しています。AIによるイラスト生成が普及する中で、「ギュられる」（＝AIに代替される、あるいはその影響を受ける）状況と、人間絵師が生き残るための戦略について議論しています。"
+        data-title="イラストレーターはギュられるのか？　ーー人間絵師の生存戦略"
+        data-summary="この記事は、AI時代におけるイラストレーターの生存戦略について論じている。AIによる「ギュられる」状況（＝AIに仕事を奪われる、またはAIに依存せざるを得なくなる状況）が発生しているとしつつも、人間絵師が完全に終了する段階ではないと結論づけている。"
         data-source="note クリエイター収益"
         data-url="https://note.com/fanbotokka/n/n01cef73d0084"
         data-importance="🟡"
         data-category="ビジネス">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AF%E3%82%AE%E3%83%A5%E3%82%89%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B%EF%BC%9F%20%E3%83%BC%E3%83%BC%E4%BA%BA%E9%96%93%E7%B5%B5%E5%B8%AB%E3%81%AE%E7%94%9F%E5%AD%98%E6%88%A6%E7%95%A5%20https%3A%2F%2Fnote.com%2Ffanbotokka%2Fn%2Fn01cef73d0084" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AF%E3%82%AE%E3%83%A5%E3%82%89%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B%EF%BC%9F%E3%80%80%E3%83%BC%E3%83%BC%E4%BA%BA%E9%96%93%E7%B5%B5%E5%B8%AB%E3%81%AE%E7%94%9F%E5%AD%98%E6%88%A6%E7%95%A5%20https%3A%2F%2Fnote.com%2Ffanbotokka%2Fn%2Fn01cef73d0084" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="イラストレーターはギュられるのか？ ーー人間絵師の生存戦略">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="イラストレーターはギュられるのか？　ーー人間絵師の生存戦略">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
-<div class="item" style="animation-delay:0.10s">
+<div class="item" style="animation-delay:0.25s">
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">note クリエイター収益</span>
     </div>
     <h2><a href="https://note.com/otona_an/n/nadb51ceba451" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">myfansクリエイターはどれくらい稼いでいるのか？収益構造と月収レンジ別の実態を徹底解説</a></h2>
-    <p class="summary">日本発のサブスクリプション型アダルトプラットフォーム「myfans」のクリエイター収益について、収益構造と月収レンジ別の実態を徹底解説しています。クリエイターがどれくらい稼いでいるのか、その実情を知りたい読者向けの情報を提供しています。</p>
+    <p class="summary">この記事は、アダルトサブスクリプションプラットフォーム「myfans」におけるクリエイターの収益実態について、収益構造と月収レンジ別に詳細に解説している。クリエイターがどれくらい稼いでいるのか、という疑問に答える内容となっている。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この記事は、株式会社CRMCが運営するサブスクリプション型プラットフォーム「myfans」で活動するクリエイターの収益について、詳細な解説を提供しています。myfansは、クリエイターが月額プランを設定し、ファンと密接な関係を築けるプラットフォームとして知られていますが、実際の収益に関する情報は限られています。本記事では、myfansの収益構造を分析し、月収レンジ別にクリエイターの実態を徹底的に解説することで、プラットフォームの収益性やクリエイターの収入に関する疑問に答えています。</p>
+<p class="detail-text">日本発のアダルトサブスクリプションプラットフォーム「myfans」で活動するクリエイターの収益について、その実態を徹底的に分析した記事である。月額プランの設定方法、ファンとの関係性、そして具体的な収益レンジ（月収帯）別に、クリエイターがどのように収益を得ているのかを詳細に解説している。これまで公開されることの少なかった、プラットフォームの収益構造とクリエイターの収入に関する貴重な情報が提供されている。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fnote.com%2Fotona_an%2Fn%2Fnadb51ceba451"
         data-title="myfansクリエイターはどれくらい稼いでいるのか？収益構造と月収レンジ別の実態を徹底解説"
-        data-summary="日本発のサブスクリプション型アダルトプラットフォーム「myfans」のクリエイター収益について、収益構造と月収レンジ別の実態を徹底解説しています。クリエイターがどれくらい稼いでいるのか、その実情を知りたい読者向けの情報を提供しています。"
+        data-summary="この記事は、アダルトサブスクリプションプラットフォーム「myfans」におけるクリエイターの収益実態について、収益構造と月収レンジ別に詳細に解説している。クリエイターがどれくらい稼いでいるのか、という疑問に答える内容となっている。"
         data-source="note クリエイター収益"
         data-url="https://note.com/otona_an/n/nadb51ceba451"
         data-importance="🟡"
@@ -1419,145 +1506,33 @@ details[open] summary::before { content: "▲ 閉じる"; }
     </div>
   </div>
 </div>
-<div class="item" style="animation-delay:0.15s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">IndieHackers</span>
-    </div>
-    <h2><a href="https://www.mysorepalace.tv/argentine-division-1-independiente-rivadavia-vs-barracas-central-08h00-ngay-12-03-2026/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">アルゼンチン・ディビシオン1 – インディペンディエンテ・リバダビア vs バラカス・セントラル 2026年3月12日 08:00</a></h2>
-    <p class="summary">この記事は、2026年3月12日に行われるアルゼンチン・ディビシオン1のサッカー試合、インディペンディエンテ・リバダビア対バラカス・セントラルの試合情報を提供しています。試合の開催日時が記載されています。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">この記事は、2026年3月12日午前8時（現地時間）に開催される、アルゼンチン・ディビシオン1のサッカー試合、インディペンディエンテ・リバダビア対バラカス・セントラルの対戦カードに関する情報を提供しています。詳細な試合展開や結果については触れられていませんが、試合の開催日時が明記されています。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.mysorepalace.tv%2Fargentine-division-1-independiente-rivadavia-vs-barracas-central-08h00-ngay-12-03-2026%2F"
-        data-title="アルゼンチン・ディビシオン1 – インディペンディエンテ・リバダビア vs バラカス・セントラル 2026年3月12日 08:00"
-        data-summary="この記事は、2026年3月12日に行われるアルゼンチン・ディビシオン1のサッカー試合、インディペンディエンテ・リバダビア対バラカス・セントラルの試合情報を提供しています。試合の開催日時が記載されています。"
-        data-source="IndieHackers"
-        data-url="https://www.mysorepalace.tv/argentine-division-1-independiente-rivadavia-vs-barracas-central-08h00-ngay-12-03-2026/"
-        data-importance="🟢"
-        data-category="ビジネス">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A2%E3%83%AB%E3%82%BC%E3%83%B3%E3%83%81%E3%83%B3%E3%83%BB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B7%E3%82%AA%E3%83%B31%20%E2%80%93%20%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%9A%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A8%E3%83%B3%E3%83%86%E3%83%BB%E3%83%AA%E3%83%90%E3%83%80%E3%83%93%E3%82%A2%20vs%20%E3%83%90%E3%83%A9%E3%82%AB%E3%82%B9%E3%83%BB%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%202026%E5%B9%B43%E6%9C%8812%E6%97%A5%2008%3A00%20https%3A%2F%2Fwww.mysorepalace.tv%2Fargentine-division-1-independiente-rivadavia-vs-barracas-central-08h00-ngay-12-03-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="アルゼンチン・ディビシオン1 – インディペンディエンテ・リバダビア vs バラカス・セントラル 2026年3月12日 08:00">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.20s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">IndieHackers</span>
-    </div>
-    <h2><a href="https://www.mysorepalace.tv/giai-vdqg-luxembourg-progres-niedercorn-vs-cs-petange-00h30-ngay-02-03-2026/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ルクセンブルク・ナショナルリーグ – プログレス・ニーダーコルン vs CSペタンジュ 2026年3月2日 00:30</a></h2>
-    <p class="summary">この記事は、2026年3月2日に行われるルクセンブルク・ナショナルリーグのサッカー試合、プログレス・ニーダーコルン対CSペタンジュの試合情報を提供しています。試合の開催日時が記載されています。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">この記事は、2026年3月2日午前0時30分（現地時間）に開催される、ルクセンブルク・ナショナルリーグのサッカー試合、プログレス・ニーダーコルン対CSペタンジュの対戦カードに関する情報を提供しています。詳細な試合展開や結果については触れられていませんが、試合の開催日時が明記されています。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.mysorepalace.tv%2Fgiai-vdqg-luxembourg-progres-niedercorn-vs-cs-petange-00h30-ngay-02-03-2026%2F"
-        data-title="ルクセンブルク・ナショナルリーグ – プログレス・ニーダーコルン vs CSペタンジュ 2026年3月2日 00:30"
-        data-summary="この記事は、2026年3月2日に行われるルクセンブルク・ナショナルリーグのサッカー試合、プログレス・ニーダーコルン対CSペタンジュの試合情報を提供しています。試合の開催日時が記載されています。"
-        data-source="IndieHackers"
-        data-url="https://www.mysorepalace.tv/giai-vdqg-luxembourg-progres-niedercorn-vs-cs-petange-00h30-ngay-02-03-2026/"
-        data-importance="🟢"
-        data-category="ビジネス">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%AB%E3%82%AF%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AB%E3%82%AF%E3%83%BB%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB%E3%83%AA%E3%83%BC%E3%82%B0%20%E2%80%93%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%AC%E3%82%B9%E3%83%BB%E3%83%8B%E3%83%BC%E3%83%80%E3%83%BC%E3%82%B3%E3%83%AB%E3%83%B3%20vs%20CS%E3%83%9A%E3%82%BF%E3%83%B3%E3%82%B8%E3%83%A5%202026%E5%B9%B43%E6%9C%882%E6%97%A5%2000%3A30%20https%3A%2F%2Fwww.mysorepalace.tv%2Fgiai-vdqg-luxembourg-progres-niedercorn-vs-cs-petange-00h30-ngay-02-03-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="ルクセンブルク・ナショナルリーグ – プログレス・ニーダーコルン vs CSペタンジュ 2026年3月2日 00:30">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.25s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">IndieHackers</span>
-    </div>
-    <h2><a href="https://www.mysorepalace.tv/mexico-liga-mx-u19-monterrey-u19-vs-cdsyc-cruz-azul-u19-00h30-ngay-01-03-2026/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">メキシコ・リーガMX U19 – モンテレイU19 vs CDSyCクルス・アスルU19 2026年3月1日 00:30</a></h2>
-    <p class="summary">この記事は、2026年3月1日に行われるメキシコ・リーガMX U19のサッカー試合、モンテレイU19対CDSyCクルス・アスルU19の試合情報を提供しています。試合の開催日時が記載されています。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">この記事は、2026年3月1日午前0時30分（現地時間）に開催される、メキシコ・リーガMX U19のサッカー試合、モンテレイU19対CDSyCクルス・アスルU19の対戦カードに関する情報を提供しています。詳細な試合展開や結果については触れられていませんが、試合の開催日時が明記されています。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.mysorepalace.tv%2Fmexico-liga-mx-u19-monterrey-u19-vs-cdsyc-cruz-azul-u19-00h30-ngay-01-03-2026%2F"
-        data-title="メキシコ・リーガMX U19 – モンテレイU19 vs CDSyCクルス・アスルU19 2026年3月1日 00:30"
-        data-summary="この記事は、2026年3月1日に行われるメキシコ・リーガMX U19のサッカー試合、モンテレイU19対CDSyCクルス・アスルU19の試合情報を提供しています。試合の開催日時が記載されています。"
-        data-source="IndieHackers"
-        data-url="https://www.mysorepalace.tv/mexico-liga-mx-u19-monterrey-u19-vs-cdsyc-cruz-azul-u19-00h30-ngay-01-03-2026/"
-        data-importance="🟢"
-        data-category="ビジネス">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%A1%E3%82%AD%E3%82%B7%E3%82%B3%E3%83%BB%E3%83%AA%E3%83%BC%E3%82%ACMX%20U19%20%E2%80%93%20%E3%83%A2%E3%83%B3%E3%83%86%E3%83%AC%E3%82%A4U19%20vs%20CDSyC%E3%82%AF%E3%83%AB%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%B9%E3%83%ABU19%202026%E5%B9%B43%E6%9C%881%E6%97%A5%2000%3A30%20https%3A%2F%2Fwww.mysorepalace.tv%2Fmexico-liga-mx-u19-monterrey-u19-vs-cdsyc-cruz-azul-u19-00h30-ngay-01-03-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="メキシコ・リーガMX U19 – モンテレイU19 vs CDSyCクルス・アスルU19 2026年3月1日 00:30">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.30s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">東洋経済オンライン</span>
-    </div>
-    <h2><a href="https://toyokeizai.net/articles/-/946477?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">急な豪雨｢傘を買わず｣に"コンビニの日用品"だけで乗り切る仕事帰りのサバイバル術 …のはずが住宅街に現れた不審者になるまで</a></h2>
-    <p class="summary">突然の豪雨に遭遇した際、傘を持たずにコンビニの日用品だけで乗り切ろうとする「サバイバル術」の記事です。しかし、その試みは意図せぬ方向へ進み、住宅街に現れた「不審者」のような状況に陥ってしまった経緯が語られています。これは、日常における予期せぬ出来事と、それに対する人間の行動の面白さを示唆しています。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">この記事は、仕事帰りに突然の豪雨に遭遇した筆者が、傘を持っていなかったため、コンビニで調達した日用品（例：レジ袋、雑誌など）を駆使して雨をしのごうとした体験談を綴っています。本来は「サバイバル術」として、機転を利かせた対処法を紹介する意図があったようですが、その結果、周囲から見れば「住宅街に現れた不審者」のような奇妙な格好になってしまった、というユーモラスな顛末が描かれています。日常における想定外の出来事と、それに対する人間のユニークな対応が描かれたエッセイ風の記事です。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F946477%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
-        data-title="急な豪雨｢傘を買わず｣に&quot;コンビニの日用品&quot;だけで乗り切る仕事帰りのサバイバル術 …のはずが住宅街に現れた不審者になるまで"
-        data-summary="突然の豪雨に遭遇した際、傘を持たずにコンビニの日用品だけで乗り切ろうとする「サバイバル術」の記事です。しかし、その試みは意図せぬ方向へ進み、住宅街に現れた「不審者」のような状況に陥ってしまった経緯が語られています。これは、日常における予期せぬ出来事と、それに対する人間の行動の面白さを示唆しています。"
-        data-source="東洋経済オンライン"
-        data-url="https://toyokeizai.net/articles/-/946477?utm_source=rss&utm_medium=http&utm_campaign=link_back"
-        data-importance="🟢"
-        data-category="ビジネス">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E6%80%A5%E3%81%AA%E8%B1%AA%E9%9B%A8%EF%BD%A2%E5%82%98%E3%82%92%E8%B2%B7%E3%82%8F%E3%81%9A%EF%BD%A3%E3%81%AB%22%E3%82%B3%E3%83%B3%E3%83%93%E3%83%8B%E3%81%AE%E6%97%A5%E7%94%A8%E5%93%81%22%E3%81%A0%E3%81%91%E3%81%A7%E4%B9%97%E3%82%8A%E5%88%87%E3%82%8B%E4%BB%95%E4%BA%8B%E5%B8%B0%E3%82%8A%E3%81%AE%E3%82%B5%E3%83%90%E3%82%A4%E3%83%90%E3%83%AB%E8%A1%93%20%E2%80%A6%E3%81%AE%E3%81%AF%E3%81%9A%E3%81%8C%E4%BD%8F%E5%AE%85%E8%A1%97%E3%81%AB%E7%8F%BE%E3%82%8C%E3%81%9F%E4%B8%8D%E5%AF%A9%E8%80%85%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%BE%E3%81%A7%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F946477%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="急な豪雨｢傘を買わず｣に&quot;コンビニの日用品&quot;だけで乗り切る仕事帰りのサバイバル術 …のはずが住宅街に現れた不審者になるまで">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
 </section><section class="category-section" data-cat="経済">
   <p class="category-label">経済</p>
   <div class="item" style="animation-delay:0.00s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">東洋経済オンライン</span>
     </div>
-    <h2><a href="https://toyokeizai.net/articles/-/946620?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">【直撃】ニデック岸田社長は｢永守氏の責任｣をどのように考えているのか？ 刑事告発も視野に入っているのか？</a></h2>
-    <p class="summary">この記事は、ニデックの岸田光哉社長に、一連の不正会計と品質不正問題における創業者・永守重信氏の責任について直撃取材した内容を報じています。刑事告発の可能性についても言及されています。これは、企業統治と経営責任に関する重要な論点を含んでいます。</p>
+    <h2><a href="https://toyokeizai.net/articles/-/946289?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">GT-R復活もありうる？ 日産CEOイヴァン氏が気さく語った｢これから日産がリリースするクルマ｣の具体性 | ビジネス | 東洋経済オンライン</a></h2>
+    <p class="summary">日産自動車のCEOであるイヴァン・エスピノーサ氏が、今後の日産がリリースする新型車について具体的に語った。GT-Rの復活の可能性にも言及されており、日産の将来的な車種展開に注目が集まっている。</p>
     <details>
 <summary></summary>
-<p class="detail-text">東洋経済オンラインは、ニデック（旧日本電産）で発覚した一連の不正会計および品質不正問題に関して、現社長である岸田光哉氏に直接取材を敢行しました。記事では、同社の創業者であり、カリスマ経営者として知られる永守重信氏の責任について、岸田社長がどのように認識しているのかが焦点となっています。さらに、問題の深刻さから刑事告発の可能性も視野に入れているのかどうかも含め、社長の回答が詳細に報じられています。これは、企業のコンプライアミンス体制や、経営トップの責任の所在に関する厳しい問いかけです。</p>
+<p class="detail-text">日産自動車のCEO、イヴァン・エスピノーサ氏が、日産の今後の車種ラインナップについて、ジャーナリストとのラウンドテーブルで語った内容をまとめた記事である。特に、象徴的なスポーツカーであるGT-Rの将来的な復活の可能性についても触れられており、日産がどのような戦略で市場に臨むのか、具体的な新型車の情報とともに示唆されている。これは、自動車業界および日産ファンにとって関心の高い内容である。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F946620%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
-        data-title="【直撃】ニデック岸田社長は｢永守氏の責任｣をどのように考えているのか？ 刑事告発も視野に入っているのか？"
-        data-summary="この記事は、ニデックの岸田光哉社長に、一連の不正会計と品質不正問題における創業者・永守重信氏の責任について直撃取材した内容を報じています。刑事告発の可能性についても言及されています。これは、企業統治と経営責任に関する重要な論点を含んでいます。"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F946289%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="GT-R復活もありうる？ 日産CEOイヴァン氏が気さく語った｢これから日産がリリースするクルマ｣の具体性 | ビジネス | 東洋経済オンライン"
+        data-summary="日産自動車のCEOであるイヴァン・エスピノーサ氏が、今後の日産がリリースする新型車について具体的に語った。GT-Rの復活の可能性にも言及されており、日産の将来的な車種展開に注目が集まっている。"
         data-source="東洋経済オンライン"
-        data-url="https://toyokeizai.net/articles/-/946620?utm_source=rss&utm_medium=http&utm_campaign=link_back"
-        data-importance="🟡"
+        data-url="https://toyokeizai.net/articles/-/946289?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-importance="🟢"
         data-category="経済">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%90%E7%9B%B4%E6%92%83%E3%80%91%E3%83%8B%E3%83%87%E3%83%83%E3%82%AF%E5%B2%B8%E7%94%B0%E7%A4%BE%E9%95%B7%E3%81%AF%EF%BD%A2%E6%B0%B8%E5%AE%88%E6%B0%8F%E3%81%AE%E8%B2%AC%E4%BB%BB%EF%BD%A3%E3%82%92%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%8B%EF%BC%9F%20%E5%88%91%E4%BA%8B%E5%91%8A%E7%99%BA%E3%82%82%E8%A6%96%E9%87%8E%E3%81%AB%E5%85%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%8B%EF%BC%9F%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F946620%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=GT-R%E5%BE%A9%E6%B4%BB%E3%82%82%E3%81%82%E3%82%8A%E3%81%86%E3%82%8B%EF%BC%9F%20%E6%97%A5%E7%94%A3CEO%E3%82%A4%E3%83%B4%E3%82%A1%E3%83%B3%E6%B0%8F%E3%81%8C%E6%B0%97%E3%81%95%E3%81%8F%E8%AA%9E%E3%81%A3%E3%81%9F%EF%BD%A2%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%E6%97%A5%E7%94%A3%E3%81%8C%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%99%E3%82%8B%E3%82%AF%E3%83%AB%E3%83%9E%EF%BD%A3%E3%81%AE%E5%85%B7%E4%BD%93%E6%80%A7%20%7C%20%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F946289%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="【直撃】ニデック岸田社長は｢永守氏の責任｣をどのように考えているのか？ 刑事告発も視野に入っているのか？">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="GT-R復活もありうる？ 日産CEOイヴァン氏が気さく語った｢これから日産がリリースするクルマ｣の具体性 | ビジネス | 東洋経済オンライン">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1567,25 +1542,53 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">東洋経済オンライン</span>
     </div>
-    <h2><a href="https://toyokeizai.net/articles/-/946523?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">『嵐』最後の日…二宮和也が｢ジャニーズ｣の名を"あえて口に出し続けた"ワケ　3年越しに語られた《独立の真意》</a></h2>
-    <p class="summary">アイドルグループ「嵐」の活動最終日に、二宮和也さんが「ジャニーズ」の名前をあえて口にし続けた理由について、3年越しに語られた独立の真意とともに掘り下げています。これは、芸能業界における組織、独立、そして個人のキャリア戦略に関する考察を含んでいます。</p>
+    <h2><a href="https://toyokeizai.net/articles/-/946323?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ロボタクシー、自動運転技術、電動化…日本の自動車メーカーは世界から見て本当に遅れているのか、見落としている本質 | ライフ | 東洋経済オンライン</a></h2>
+    <p class="summary">世界で急速に実用化が進むロボタクシーや自動運転技術、電動化といった分野において、日本の自動車メーカーが本当に世界から遅れているのか、その実態と見落とされている本質を考察する記事である。日本の自動車産業の現状と課題を多角的に分析している。</p>
     <details>
 <summary></summary>
-<p class="detail-text">5月31日に行われた国民的アイドルグループ「嵐」の活動最終日において、メンバーの二宮和也さんが「ジャニーズ」という所属事務所の名前を繰り返し口にしたことについて、その背景にある真意が3年越しに語られています。この記事では、二宮さんの発言の意図を、事務所の終焉、自身の独立、そして長年にわたる芸能界でのキャリアに対する自負や複雑な思いといった多角的な視点から分析しています。これは、芸能事務所の変遷や、個人のキャリアパスにおける組織との関係性についての示唆に富む内容となっています。</p>
+<p class="detail-text">この記事は、自動運転技術、特にロボタクシーの普及やEV（電気自動車）化の潮流において、日本の自動車メーカーが国際的に見て遅れているという一般的な見解に疑問を呈し、その実情を深く掘り下げている。技術開発のスピード、インフラ整備の状況、そして日本独自の市場特性などを考慮に入れ、日本の自動車産業が抱える本質的な課題と、今後の進むべき方向性について分析・考察している。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F946523%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
-        data-title="『嵐』最後の日…二宮和也が｢ジャニーズ｣の名を&quot;あえて口に出し続けた&quot;ワケ　3年越しに語られた《独立の真意》"
-        data-summary="アイドルグループ「嵐」の活動最終日に、二宮和也さんが「ジャニーズ」の名前をあえて口にし続けた理由について、3年越しに語られた独立の真意とともに掘り下げています。これは、芸能業界における組織、独立、そして個人のキャリア戦略に関する考察を含んでいます。"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F946323%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="ロボタクシー、自動運転技術、電動化…日本の自動車メーカーは世界から見て本当に遅れているのか、見落としている本質 | ライフ | 東洋経済オンライン"
+        data-summary="世界で急速に実用化が進むロボタクシーや自動運転技術、電動化といった分野において、日本の自動車メーカーが本当に世界から遅れているのか、その実態と見落とされている本質を考察する記事である。日本の自動車産業の現状と課題を多角的に分析している。"
         data-source="東洋経済オンライン"
-        data-url="https://toyokeizai.net/articles/-/946523?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-url="https://toyokeizai.net/articles/-/946323?utm_source=rss&utm_medium=http&utm_campaign=link_back"
         data-importance="🟢"
         data-category="経済">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8E%E5%B5%90%E3%80%8F%E6%9C%80%E5%BE%8C%E3%81%AE%E6%97%A5%E2%80%A6%E4%BA%8C%E5%AE%AE%E5%92%8C%E4%B9%9F%E3%81%8C%EF%BD%A2%E3%82%B8%E3%83%A3%E3%83%8B%E3%83%BC%E3%82%BA%EF%BD%A3%E3%81%AE%E5%90%8D%E3%82%92%22%E3%81%82%E3%81%88%E3%81%A6%E5%8F%A3%E3%81%AB%E5%87%BA%E3%81%97%E7%B6%9A%E3%81%91%E3%81%9F%22%E3%83%AF%E3%82%B1%E3%80%803%E5%B9%B4%E8%B6%8A%E3%81%97%E3%81%AB%E8%AA%9E%E3%82%89%E3%82%8C%E3%81%9F%E3%80%8A%E7%8B%AC%E7%AB%8B%E3%81%AE%E7%9C%9F%E6%84%8F%E3%80%8B%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F946523%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%AD%E3%83%9C%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E3%80%81%E8%87%AA%E5%8B%95%E9%81%8B%E8%BB%A2%E6%8A%80%E8%A1%93%E3%80%81%E9%9B%BB%E5%8B%95%E5%8C%96%E2%80%A6%E6%97%A5%E6%9C%AC%E3%81%AE%E8%87%AA%E5%8B%95%E8%BB%8A%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AF%E4%B8%96%E7%95%8C%E3%81%8B%E3%82%89%E8%A6%8B%E3%81%A6%E6%9C%AC%E5%BD%93%E3%81%AB%E9%81%85%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%8B%E3%80%81%E8%A6%8B%E8%90%BD%E3%81%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E6%9C%AC%E8%B3%AA%20%7C%20%E3%83%A9%E3%82%A4%E3%83%95%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F946323%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="『嵐』最後の日…二宮和也が｢ジャニーズ｣の名を&quot;あえて口に出し続けた&quot;ワケ　3年越しに語られた《独立の真意》">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="ロボタクシー、自動運転技術、電動化…日本の自動車メーカーは世界から見て本当に遅れているのか、見落としている本質 | ライフ | 東洋経済オンライン">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.10s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">東洋経済オンライン</span>
+    </div>
+    <h2><a href="https://toyokeizai.net/articles/-/945960?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">バリュー投資家DAIBOUCHOUが狙うAI関連の割安株､｢トレンドフォローの極致｣で勝つ投資術とは | 政治・経済・投資 | 東洋経済オンライン</a></h2>
+    <p class="summary">バリュー投資家として知られるDAIBOUCHOU氏が、AI関連の割安株への投資戦略を語る。同氏は、「トレンドフォローの極致」と表現する投資術を用いて、AIブームの中で割安な銘柄を見つけ出し、投資で成功する方法について解説している。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">著名なバリュー投資家DAIBOUCHOU氏が、AI関連銘柄への投資戦略について解説する記事である。AI技術の発展が市場に大きな影響を与える中、同氏は「トレンドフォローの極致」と称する独自の投資手法により、AIブームに乗り遅れることなく、割安で成長性のある銘柄を発掘する方法を披露している。これは、AI関連投資に関心のある投資家にとって、具体的な投資判断に役立つ実践的な知見を提供するものである。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F945960%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="バリュー投資家DAIBOUCHOUが狙うAI関連の割安株､｢トレンドフォローの極致｣で勝つ投資術とは | 政治・経済・投資 | 東洋経済オンライン"
+        data-summary="バリュー投資家として知られるDAIBOUCHOU氏が、AI関連の割安株への投資戦略を語る。同氏は、「トレンドフォローの極致」と表現する投資術を用いて、AIブームの中で割安な銘柄を見つけ出し、投資で成功する方法について解説している。"
+        data-source="東洋経済オンライン"
+        data-url="https://toyokeizai.net/articles/-/945960?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-importance="🟢"
+        data-category="経済">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%90%E3%83%AA%E3%83%A5%E3%83%BC%E6%8A%95%E8%B3%87%E5%AE%B6DAIBOUCHOU%E3%81%8C%E7%8B%99%E3%81%86AI%E9%96%A2%E9%80%A3%E3%81%AE%E5%89%B2%E5%AE%89%E6%A0%AA%EF%BD%A4%EF%BD%A2%E3%83%88%E3%83%AC%E3%83%B3%E3%83%89%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E3%81%AE%E6%A5%B5%E8%87%B4%EF%BD%A3%E3%81%A7%E5%8B%9D%E3%81%A4%E6%8A%95%E8%B3%87%E8%A1%93%E3%81%A8%E3%81%AF%20%7C%20%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88%E3%83%BB%E6%8A%95%E8%B3%87%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F945960%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="バリュー投資家DAIBOUCHOUが狙うAI関連の割安株､｢トレンドフォローの極致｣で勝つ投資術とは | 政治・経済・投資 | 東洋経済オンライン">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
