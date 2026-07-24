@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News Digest - 2026年07月23日</title>
+<title>News Digest - 2026年07月24日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
@@ -296,7 +296,7 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="header-top">
     <div class="header-logo">News Digest</div>
     <div class="header-meta">
-      <span class="header-date">2026.07.23</span>
+      <span class="header-date">2026.07.24</span>
       <div class="header-links">
         <a class="header-link" href="saved.html">⭐ 保存済み</a>
         <button class="header-link" id="darkBtn">🌙 ダーク</button>
@@ -305,6 +305,7 @@ details[open] summary::before { content: "▲ 閉じる"; }
   </div>
   <div class="filter-bar">
     <button class="filter-btn active" data-cat="all">すべて</button>
+<button class="filter-btn" data-cat="urgent">🔴 緊急</button>
 <button class="filter-btn" data-cat="テック・AI">テック・AI</button>
 <button class="filter-btn" data-cat="Anthropic">Anthropic</button>
 <button class="filter-btn" data-cat="音楽">音楽</button>
@@ -316,7 +317,37 @@ details[open] summary::before { content: "▲ 閉じる"; }
 </header>
 
 <main>
-  
+  <section class="urgent-section">
+  <p class="urgent-label">🔴 緊急アラート</p>
+  <div class="item" style="animation-delay:0.00s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-urgent">🔴 緊急</span>
+      <span class="item-source">ITmedia NEWS</span>
+    </div>
+    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/24/news096.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「LINE広告」の一部記録など約3年半分を誤って削除 LINEヤフー</a></h2>
+    <p class="summary">LINEヤフーは、「LINE広告」など企業向けサービスに関連する記録を約3年半分にわたり誤って削除していたと発表しました。データの漏えいや不正利用は確認されていませんが、個人情報保護法で定められた記録保存義務に違反する可能性があります。これは、データ管理体制の不備を示唆しており、企業にとって重大な問題です。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">LINEヤフーは7月24日、「LINE広告」など企業向けサービスに関連し、個人情報保護法が保存を義務付ける記録を誤って削除していたと発表しました。データの漏えいや不正利用は確認していませんが、記録の欠落は、過去の広告キャンペーンの効果測定やコンプライアンス遵守に影響を与える可能性があります。この件は、データ管理とセキュリティの重要性を改めて浮き彫りにしています。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews096.html"
+        data-title="「LINE広告」の一部記録など約3年半分を誤って削除 LINEヤフー"
+        data-summary="LINEヤフーは、「LINE広告」など企業向けサービスに関連する記録を約3年半分にわたり誤って削除していたと発表しました。データの漏えいや不正利用は確認されていませんが、個人情報保護法で定められた記録保存義務に違反する可能性があります。これは、データ管理体制の不備を示唆しており、企業にとって重大な問題です。"
+        data-source="ITmedia NEWS"
+        data-url="https://www.itmedia.co.jp/news/articles/2607/24/news096.html"
+        data-importance="🔴"
+        data-category="テック・AI">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8CLINE%E5%BA%83%E5%91%8A%E3%80%8D%E3%81%AE%E4%B8%80%E9%83%A8%E8%A8%98%E9%8C%B2%E3%81%AA%E3%81%A9%E7%B4%843%E5%B9%B4%E5%8D%8A%E5%88%86%E3%82%92%E8%AA%A4%E3%81%A3%E3%81%A6%E5%89%8A%E9%99%A4%20LINE%E3%83%A4%E3%83%95%E3%83%BC%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews096.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="「LINE広告」の一部記録など約3年半分を誤って削除 LINEヤフー">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+</section>
   <section class="category-section" data-cat="テック・AI">
   <p class="category-label">テック・AI</p>
   <div class="item" style="animation-delay:0.00s">
@@ -325,25 +356,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">TechCrunch</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">AMD、Helios AIラックシステムでNVIDIAに挑戦</a></h2>
-    <p class="summary">AMDは、今年後半に出荷を開始する新しいラックシステム「Helios AI」で、競合のNVIDIAに挑戦状を叩きつけました。このシステムは、AIワークロードの処理能力を向上させることを目的としています。</p>
+    <h2><a href="https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-marc-pincus-in-talks-to-raise-100m/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Reid Hoffman氏、Marc Pincus氏が共同設立した新AIラボ「Prentis」、1億ドルの資金調達交渉中</a></h2>
+    <p class="summary">Reid Hoffman氏とMarc Pincus氏が共同設立した新しいAIラボ「Prentis」が、1億ドルの資金調達を交渉中です。このラボは、定型的なコンピュータータスクの自動化が、AIの最大のユースケースとしてコーディングを追い抜くと予測しています。これはAIの活用方法における新たなトレンドを示唆するものです。</p>
     <details>
 <summary></summary>
-<p class="detail-text">AMDのHelios AIラックシステムは、同社がAIチップ市場におけるNVIDIAとの競争を激化させることを示しています。このシステムは、大規模なAIモデルのトレーニングや推論を効率的に行うために設計されており、データセンター向けの高性能コンピューティングソリューションを提供します。具体的な仕様や性能については、今後詳細が発表される見込みです。</p>
+<p class="detail-text">Prentisは、AIがコーディングよりも日常的なタスクの自動化において、より大きな影響力を持つと見込んでいます。この分野への大規模な投資は、AIの応用範囲が拡大していることを示しています。AIによる自動化は、企業の生産性向上や新たなビジネスモデルの創出に繋がる可能性があります。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Famd-takes-on-nvidia-with-its-helios-ai-rack-scale-system%2F"
-        data-title="AMD、Helios AIラックシステムでNVIDIAに挑戦"
-        data-summary="AMDは、今年後半に出荷を開始する新しいラックシステム「Helios AI」で、競合のNVIDIAに挑戦状を叩きつけました。このシステムは、AIワークロードの処理能力を向上させることを目的としています。"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Fprentis-new-ai-lab-co-founded-by-reid-hoffman-marc-pincus-in-talks-to-raise-100m%2F"
+        data-title="Reid Hoffman氏、Marc Pincus氏が共同設立した新AIラボ「Prentis」、1億ドルの資金調達交渉中"
+        data-summary="Reid Hoffman氏とMarc Pincus氏が共同設立した新しいAIラボ「Prentis」が、1億ドルの資金調達を交渉中です。このラボは、定型的なコンピュータータスクの自動化が、AIの最大のユースケースとしてコーディングを追い抜くと予測しています。これはAIの活用方法における新たなトレンドを示唆するものです。"
         data-source="TechCrunch"
-        data-url="https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/"
+        data-url="https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-marc-pincus-in-talks-to-raise-100m/"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=AMD%E3%80%81Helios%20AI%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%A7NVIDIA%E3%81%AB%E6%8C%91%E6%88%A6%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Famd-takes-on-nvidia-with-its-helios-ai-rack-scale-system%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Reid%20Hoffman%E6%B0%8F%E3%80%81Marc%20Pincus%E6%B0%8F%E3%81%8C%E5%85%B1%E5%90%8C%E8%A8%AD%E7%AB%8B%E3%81%97%E3%81%9F%E6%96%B0AI%E3%83%A9%E3%83%9C%E3%80%8CPrentis%E3%80%8D%E3%80%811%E5%84%84%E3%83%89%E3%83%AB%E3%81%AE%E8%B3%87%E9%87%91%E8%AA%BF%E9%81%94%E4%BA%A4%E6%B8%89%E4%B8%AD%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Fprentis-new-ai-lab-co-founded-by-reid-hoffman-marc-pincus-in-talks-to-raise-100m%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="AMD、Helios AIラックシステムでNVIDIAに挑戦">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Reid Hoffman氏、Marc Pincus氏が共同設立した新AIラボ「Prentis」、1億ドルの資金調達交渉中">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -351,27 +382,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">TechCrunch</span>
+      <span class="item-source">TechCrunch Startups</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/07/23/patreon-lays-off-off-20-of-its-workforce/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Patreon、従業員の20%を解雇</a></h2>
-    <p class="summary">Patreonは、市場の変化に対応し、コスト構造を安定させるために、従業員の20%を削減するという決定を発表しました。CEOは、同社のコアビジネスは依然として強力であると述べています。</p>
+    <h2><a href="https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-marc-pincus-in-talks-to-raise-100m/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Reid Hoffman氏、Marc Pincus氏が共同設立した新AIラボ「Prentis」、1億ドルの資金調達交渉中</a></h2>
+    <p class="summary">Reid Hoffman氏とMarc Pincus氏が共同設立した新しいAIラボ「Prentis」が、1億ドルの資金調達を交渉中です。このラボは、定型的なコンピュータータスクの自動化が、AIの最大のユースケースとしてコーディングを追い抜くと予測しています。これはAIの活用方法における新たなトレンドを示唆するものです。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この解雇は、Patreonが直面する市場の変動と、持続的な成長のために事業を再調整する必要性を示唆しています。具体的にどの部門が影響を受けるか、また解雇された従業員へのサポート措置など、詳細については memo に記載されているとのことです。これは、サブスクリプションプラットフォーム業界における構造的な課題を浮き彫りにしています。</p>
+<p class="detail-text">Prentisは、AIがコーディングよりも日常的なタスクの自動化において、より大きな影響力を持つと見込んでいます。この分野への大規模な投資は、AIの応用範囲が拡大していることを示しています。AIによる自動化は、企業の生産性向上や新たなビジネスモデルの創出に繋がる可能性があります。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Fpatreon-lays-off-off-20-of-its-workforce%2F"
-        data-title="Patreon、従業員の20%を解雇"
-        data-summary="Patreonは、市場の変化に対応し、コスト構造を安定させるために、従業員の20%を削減するという決定を発表しました。CEOは、同社のコアビジネスは依然として強力であると述べています。"
-        data-source="TechCrunch"
-        data-url="https://techcrunch.com/2026/07/23/patreon-lays-off-off-20-of-its-workforce/"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Fprentis-new-ai-lab-co-founded-by-reid-hoffman-marc-pincus-in-talks-to-raise-100m%2F"
+        data-title="Reid Hoffman氏、Marc Pincus氏が共同設立した新AIラボ「Prentis」、1億ドルの資金調達交渉中"
+        data-summary="Reid Hoffman氏とMarc Pincus氏が共同設立した新しいAIラボ「Prentis」が、1億ドルの資金調達を交渉中です。このラボは、定型的なコンピュータータスクの自動化が、AIの最大のユースケースとしてコーディングを追い抜くと予測しています。これはAIの活用方法における新たなトレンドを示唆するものです。"
+        data-source="TechCrunch Startups"
+        data-url="https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-marc-pincus-in-talks-to-raise-100m/"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Patreon%E3%80%81%E5%BE%93%E6%A5%AD%E5%93%A1%E3%81%AE20%25%E3%82%92%E8%A7%A3%E9%9B%87%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Fpatreon-lays-off-off-20-of-its-workforce%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Reid%20Hoffman%E6%B0%8F%E3%80%81Marc%20Pincus%E6%B0%8F%E3%81%8C%E5%85%B1%E5%90%8C%E8%A8%AD%E7%AB%8B%E3%81%97%E3%81%9F%E6%96%B0AI%E3%83%A9%E3%83%9C%E3%80%8CPrentis%E3%80%8D%E3%80%811%E5%84%84%E3%83%89%E3%83%AB%E3%81%AE%E8%B3%87%E9%87%91%E8%AA%BF%E9%81%94%E4%BA%A4%E6%B8%89%E4%B8%AD%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Fprentis-new-ai-lab-co-founded-by-reid-hoffman-marc-pincus-in-talks-to-raise-100m%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Patreon、従業員の20%を解雇">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Reid Hoffman氏、Marc Pincus氏が共同設立した新AIラボ「Prentis」、1億ドルの資金調達交渉中">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -379,27 +410,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">TechCrunch Startups</span>
+      <span class="item-source">ITmedia NEWS</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/07/23/insurance-startup-corgi-reportedly-raised-more-money-at-4b-its-third-round-in-eight-weeks/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">保険スタートアップCorgi、8週間で3度目の資金調達、評価額40億ドルに</a></h2>
-    <p class="summary">保険スタートアップのCorgiが、8週間で3度目となる資金調達を、評価額40億ドルで完了したと報じられています。これはAI分野における急速な資金調達のトレンドを示す事例です。</p>
+    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/25/news016.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Anthropic、「Claude Opus 5」公開 Fable 5に迫る性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも</a></h2>
+    <p class="summary">Anthropicは最新LLM「Claude Opus 5」を公開しました。これは、上位モデル「Claude Fable 5」に匹敵する性能を半額で提供します。プログラミングやナレッジワークで高い評価を得ており、推論の深さを調整するパラメータや、拒否時に自動フォールバックする機能も備えています。AIモデルの性能向上と価格競争が激化していることを示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Corgiの急速な資金調達は、AIを活用した保険テクノロジーへの投資家の関心の高さを物語っています。短期間での複数回の大型調達は、市場の期待値の高さを示唆しますが、同時に評価額の持続可能性についても注目が集まる可能性があります。この事例は、AIスタートアップの資金調達環境の現状を反映しています。</p>
+<p class="detail-text">Claude Opus 5は、Claude Fable 5と同等の知能を半額で提供します。これにより、より多くのユーザーが高度なAIモデルを利用できるようになります。安全性分類器に連動する自動フォールバック機能は、AIの安全な利用を促進します。この発表は、AnthropicのAI開発における継続的な進歩と、競争力のある価格設定戦略を示しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Finsurance-startup-corgi-reportedly-raised-more-money-at-4b-its-third-round-in-eight-weeks%2F"
-        data-title="保険スタートアップCorgi、8週間で3度目の資金調達、評価額40億ドルに"
-        data-summary="保険スタートアップのCorgiが、8週間で3度目となる資金調達を、評価額40億ドルで完了したと報じられています。これはAI分野における急速な資金調達のトレンドを示す事例です。"
-        data-source="TechCrunch Startups"
-        data-url="https://techcrunch.com/2026/07/23/insurance-startup-corgi-reportedly-raised-more-money-at-4b-its-third-round-in-eight-weeks/"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F25%2Fnews016.html"
+        data-title="Anthropic、「Claude Opus 5」公開 Fable 5に迫る性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも"
+        data-summary="Anthropicは最新LLM「Claude Opus 5」を公開しました。これは、上位モデル「Claude Fable 5」に匹敵する性能を半額で提供します。プログラミングやナレッジワークで高い評価を得ており、推論の深さを調整するパラメータや、拒否時に自動フォールバックする機能も備えています。AIモデルの性能向上と価格競争が激化していることを示しています。"
+        data-source="ITmedia NEWS"
+        data-url="https://www.itmedia.co.jp/news/articles/2607/25/news016.html"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E4%BF%9D%E9%99%BA%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97Corgi%E3%80%818%E9%80%B1%E9%96%93%E3%81%A73%E5%BA%A6%E7%9B%AE%E3%81%AE%E8%B3%87%E9%87%91%E8%AA%BF%E9%81%94%E3%80%81%E8%A9%95%E4%BE%A1%E9%A1%8D40%E5%84%84%E3%83%89%E3%83%AB%E3%81%AB%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Finsurance-startup-corgi-reportedly-raised-more-money-at-4b-its-third-round-in-eight-weeks%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Anthropic%E3%80%81%E3%80%8CClaude%20Opus%205%E3%80%8D%E5%85%AC%E9%96%8B%20Fable%205%E3%81%AB%E8%BF%AB%E3%82%8B%E6%80%A7%E8%83%BD%E3%82%92%E5%8D%8A%E9%A1%8D%E3%81%A7%E2%80%95%E2%80%95%E3%82%B5%E3%82%A4%E3%83%90%E3%83%BC%E5%AE%89%E5%85%A8%E7%AD%96%E3%81%AF%E7%B7%A9%E5%92%8C%E3%80%81%E6%8B%92%E5%90%A6%E6%99%82%E3%81%AF%E8%87%AA%E5%8B%95%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%82%82%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F25%2Fnews016.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="保険スタートアップCorgi、8週間で3度目の資金調達、評価額40億ドルに">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Anthropic、「Claude Opus 5」公開 Fable 5に迫る性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -407,27 +438,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">TechCrunch Startups</span>
+      <span class="item-source">Gigazine</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">元Googleセキュリティ幹部が設立したAegisAI、AI駆動型スピアフィッシング対策で3600万ドルを調達</a></h2>
-    <p class="summary">元Googleのセキュリティ幹部が設立したAegisAIは、AIを活用してスピアフィッシング攻撃を防ぐための技術開発を進めており、この分野で3600万ドルの資金調達に成功しました。同社は、AIエージェントを用いてメッセージを分析します。</p>
+    <h2><a href="https://gigazine.net/news/20260725-claude-opus-5/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「Claude Opus 5」が登場、Claude Fable 5の半額で同等性能を発揮し制限緩め</a></h2>
+    <p class="summary">Anthropicが「Claude Opus 5」をリリースしました。Claude Opus 5は、Claude Fable 5と同等の性能を半額で提供し、制限も緩められています。第三者機関のテストでもClaude Fable 5を上回る性能が確認されており、AIモデルの性能向上とコストパフォーマンスの改善が進んでいることを示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">AegisAIは、高度なAIエージェントを開発し、人間のようにメッセージを迅速に分析することで、巧妙なスピアフィッシング攻撃を検知・阻止することを目指しています。この技術は、従来のチェックリストでは見落としがちな微妙な異常を捉えることができます。資金調達により、同社は製品開発と市場展開を加速させる計画です。</p>
+<p class="detail-text">Anthropicが「Claude Opus 5」を日本時間の2026年7月25日未明にリリースしました。Claude Fable 5と同等の性能を半分の価格で実現したとアピールされており、第三者機関のテストでもClaude Fable 5を上回る性能が確認されています。これは、より高性能なAIモデルがより手頃な価格で利用可能になることを意味し、AIの普及を促進する可能性があります。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Faegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing%2F"
-        data-title="元Googleセキュリティ幹部が設立したAegisAI、AI駆動型スピアフィッシング対策で3600万ドルを調達"
-        data-summary="元Googleのセキュリティ幹部が設立したAegisAIは、AIを活用してスピアフィッシング攻撃を防ぐための技術開発を進めており、この分野で3600万ドルの資金調達に成功しました。同社は、AIエージェントを用いてメッセージを分析します。"
-        data-source="TechCrunch Startups"
-        data-url="https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/"
+        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260725-claude-opus-5%2F"
+        data-title="「Claude Opus 5」が登場、Claude Fable 5の半額で同等性能を発揮し制限緩め"
+        data-summary="Anthropicが「Claude Opus 5」をリリースしました。Claude Opus 5は、Claude Fable 5と同等の性能を半額で提供し、制限も緩められています。第三者機関のテストでもClaude Fable 5を上回る性能が確認されており、AIモデルの性能向上とコストパフォーマンスの改善が進んでいることを示しています。"
+        data-source="Gigazine"
+        data-url="https://gigazine.net/news/20260725-claude-opus-5/"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E5%85%83Google%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E5%B9%B9%E9%83%A8%E3%81%8C%E8%A8%AD%E7%AB%8B%E3%81%97%E3%81%9FAegisAI%E3%80%81AI%E9%A7%86%E5%8B%95%E5%9E%8B%E3%82%B9%E3%83%94%E3%82%A2%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0%E5%AF%BE%E7%AD%96%E3%81%A73600%E4%B8%87%E3%83%89%E3%83%AB%E3%82%92%E8%AA%BF%E9%81%94%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Faegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8CClaude%20Opus%205%E3%80%8D%E3%81%8C%E7%99%BB%E5%A0%B4%E3%80%81Claude%20Fable%205%E3%81%AE%E5%8D%8A%E9%A1%8D%E3%81%A7%E5%90%8C%E7%AD%89%E6%80%A7%E8%83%BD%E3%82%92%E7%99%BA%E6%8F%AE%E3%81%97%E5%88%B6%E9%99%90%E7%B7%A9%E3%82%81%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260725-claude-opus-5%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="元Googleセキュリティ幹部が設立したAegisAI、AI駆動型スピアフィッシング対策で3600万ドルを調達">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「Claude Opus 5」が登場、Claude Fable 5の半額で同等性能を発揮し制限緩め">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -435,27 +466,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">TechCrunch Startups</span>
+      <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Runway、生成メディア市場の混雑を受けAIモデルルーターをローンチ</a></h2>
-    <p class="summary">Runwayは、生成メディア市場の競争が激化する中、AIモデルルーターをリリースしました。このツールは、品質、速度、コストの優先度に基づいて、リクエストに最適な画像、動画、音声生成モデルを自動的に選択します。</p>
+    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/25/news016.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Anthropic、「Claude Opus 5」公開 Fable 5に迫る性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも</a></h2>
+    <p class="summary">Anthropicは最新LLM「Claude Opus 5」を公開しました。Claude Opus 5は、上位モデル「Claude Fable 5」に匹敵する性能を半額で提供します。プログラミングやナレッジワークで高い評価を得ており、推論の深さを調整するパラメータや、拒否時に自動フォールバックする機能も備えています。AIモデルの性能向上と価格競争が激化していることを示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">RunwayのAIモデルルーターは、ユーザーが生成メディアを作成する際に、複数のAIモデルの中から最適なものを選択する手間を省きます。開発者が品質、速度、またはコストといった特定の要件に基づいて、最も効率的なモデルを自動的に選択できるように設計されています。これにより、生成メディアの作成プロセスが効率化され、より多様なニーズに対応できるようになります。</p>
+<p class="detail-text">Claude Opus 5は、Claude Fable 5と同等の知能を半額で提供します。これにより、より多くのユーザーが高度なAIモデルを利用できるようになります。安全性分類器に連動する自動フォールバック機能は、AIの安全な利用を促進します。この発表は、AnthropicのAI開発における継続的な進歩と、競争力のある価格設定戦略を示しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Frunway-bets-on-ai-model-routing-as-generative-media-gets-crowded%2F"
-        data-title="Runway、生成メディア市場の混雑を受けAIモデルルーターをローンチ"
-        data-summary="Runwayは、生成メディア市場の競争が激化する中、AIモデルルーターをリリースしました。このツールは、品質、速度、コストの優先度に基づいて、リクエストに最適な画像、動画、音声生成モデルを自動的に選択します。"
-        data-source="TechCrunch Startups"
-        data-url="https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F25%2Fnews016.html"
+        data-title="Anthropic、「Claude Opus 5」公開 Fable 5に迫る性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも"
+        data-summary="Anthropicは最新LLM「Claude Opus 5」を公開しました。Claude Opus 5は、上位モデル「Claude Fable 5」に匹敵する性能を半額で提供します。プログラミングやナレッジワークで高い評価を得ており、推論の深さを調整するパラメータや、拒否時に自動フォールバックする機能も備えています。AIモデルの性能向上と価格競争が激化していることを示しています。"
+        data-source="ITmedia AI+"
+        data-url="https://www.itmedia.co.jp/news/articles/2607/25/news016.html"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Runway%E3%80%81%E7%94%9F%E6%88%90%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E5%B8%82%E5%A0%B4%E3%81%AE%E6%B7%B7%E9%9B%91%E3%82%92%E5%8F%97%E3%81%91AI%E3%83%A2%E3%83%87%E3%83%AB%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%92%E3%83%AD%E3%83%BC%E3%83%B3%E3%83%81%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Frunway-bets-on-ai-model-routing-as-generative-media-gets-crowded%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Anthropic%E3%80%81%E3%80%8CClaude%20Opus%205%E3%80%8D%E5%85%AC%E9%96%8B%20Fable%205%E3%81%AB%E8%BF%AB%E3%82%8B%E6%80%A7%E8%83%BD%E3%82%92%E5%8D%8A%E9%A1%8D%E3%81%A7%E2%80%95%E2%80%95%E3%82%B5%E3%82%A4%E3%83%90%E3%83%BC%E5%AE%89%E5%85%A8%E7%AD%96%E3%81%AF%E7%B7%A9%E5%92%8C%E3%80%81%E6%8B%92%E5%90%A6%E6%99%82%E3%81%AF%E8%87%AA%E5%8B%95%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%82%82%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F25%2Fnews016.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Runway、生成メディア市場の混雑を受けAIモデルルーターをローンチ">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Anthropic、「Claude Opus 5」公開 Fable 5に迫る性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -463,167 +494,167 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">ITmedia NEWS</span>
+      <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/24/news017.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「生成AIで仕事が楽に」のはずが……IT現場を蝕む“AI疲れ・AIうつ”の正体</a></h2>
-    <p class="summary">「AI疲れ」や「AIうつ」といった言葉が聞かれるようになり、IT現場で生成AIの利用による精神的な負担が増大しています。この記事では、その疲れの正体を整理し、個人がどう考え、どう変わるべきかについての判断軸を提示します。</p>
+    <h2><a href="https://www.itmedia.co.jp/aiplus/article/2607/24/2000000221/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">近畿大、入試にAIの利用認める 情報学部の総合型選抜で</a></h2>
+    <p class="summary">近畿大学は、2027年度の情報学部の総合型選抜入学試験で、生成AIの利用を認めると発表しました。自己PR動画やプレゼンテーション資料でのAI利用方針を明示しており、教育現場におけるAIの活用がさらに進むことを示唆しています。これは、AIと教育の関わり方に関する重要な一歩です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">生成AIの導入は、業務効率化を期待させる一方で、過度な期待や技術への適応、情報過多などから「AI疲れ」を引き起こす可能性があります。本稿では、こうした精神的な課題の背景を分析し、AIとの健全な付き合い方や、個人が取るべき対策について具体的な示唆を与えようとしています。IT現場の労働環境における重要な問題提起です。</p>
+<p class="detail-text">近畿大学は、2027年度の情報学部の総合型選抜入学試験で、生成AIの利用を認めると発表した。提出する自己PR動画やプレゼンテーション資料などでのAIの利用方針を明示した。これは、AI技術を教育の現場でどのように活用していくかという、今後の大学入試における新しい潮流を示すものです。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews017.html"
-        data-title="「生成AIで仕事が楽に」のはずが……IT現場を蝕む“AI疲れ・AIうつ”の正体"
-        data-summary="「AI疲れ」や「AIうつ」といった言葉が聞かれるようになり、IT現場で生成AIの利用による精神的な負担が増大しています。この記事では、その疲れの正体を整理し、個人がどう考え、どう変わるべきかについての判断軸を提示します。"
-        data-source="ITmedia NEWS"
-        data-url="https://www.itmedia.co.jp/news/articles/2607/24/news017.html"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Faiplus%2Farticle%2F2607%2F24%2F2000000221%2F"
+        data-title="近畿大、入試にAIの利用認める 情報学部の総合型選抜で"
+        data-summary="近畿大学は、2027年度の情報学部の総合型選抜入学試験で、生成AIの利用を認めると発表しました。自己PR動画やプレゼンテーション資料でのAI利用方針を明示しており、教育現場におけるAIの活用がさらに進むことを示唆しています。これは、AIと教育の関わり方に関する重要な一歩です。"
+        data-source="ITmedia AI+"
+        data-url="https://www.itmedia.co.jp/aiplus/article/2607/24/2000000221/"
         data-importance="🟡"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%94%9F%E6%88%90AI%E3%81%A7%E4%BB%95%E4%BA%8B%E3%81%8C%E6%A5%BD%E3%81%AB%E3%80%8D%E3%81%AE%E3%81%AF%E3%81%9A%E3%81%8C%E2%80%A6%E2%80%A6IT%E7%8F%BE%E5%A0%B4%E3%82%92%E8%9D%95%E3%82%80%E2%80%9CAI%E7%96%B2%E3%82%8C%E3%83%BBAI%E3%81%86%E3%81%A4%E2%80%9D%E3%81%AE%E6%AD%A3%E4%BD%93%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews017.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E8%BF%91%E7%95%BF%E5%A4%A7%E3%80%81%E5%85%A5%E8%A9%A6%E3%81%ABAI%E3%81%AE%E5%88%A9%E7%94%A8%E8%AA%8D%E3%82%81%E3%82%8B%20%E6%83%85%E5%A0%B1%E5%AD%A6%E9%83%A8%E3%81%AE%E7%B7%8F%E5%90%88%E5%9E%8B%E9%81%B8%E6%8A%9C%E3%81%A7%20https%3A%2F%2Fwww.itmedia.co.jp%2Faiplus%2Farticle%2F2607%2F24%2F2000000221%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「生成AIで仕事が楽に」のはずが……IT現場を蝕む“AI疲れ・AIうつ”の正体">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="近畿大、入試にAIの利用認める 情報学部の総合型選抜で">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
 <div class="item" style="animation-delay:0.30s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Gigazine</span>
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">TechCrunch</span>
     </div>
-    <h2><a href="https://gigazine.net/news/20260724-bento-slides-powerpoint-alternative/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">単一HTMLファイルでローカル動作するスライド作成ウェブアプリ「Bento/Slides」が登場、共同編集可能＆AIエージェントでの自動操作もスムーズ</a></h2>
-    <p class="summary">単一HTMLファイルでローカル動作し、共同編集やAIエージェントによる自動操作も可能なスライド作成ウェブアプリ「Bento/Slides」が登場しました。インターネット接続なしで利用できる点が特徴です。</p>
+    <h2><a href="https://techcrunch.com/2026/07/24/techcrunch-disrupt-2026s-new-smart-money-stage-explores-fintech-payments-ai-and-everything-between/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">TechCrunch Disrupt 2026の新しいSmart Money Stage、フィンテック、決済、AIなどを探求</a></h2>
+    <p class="summary">TechCrunch Disrupt 2026では、フィンテック、決済、AIなどを中心とした新しい「Smart Money Stage」が設けられます。このステージは、進化し続けるお金の概念とそのテクノロジーへの影響を探求することを目的としています。カンファレンスでこれらのトピックが取り上げられることは、業界の注目度を示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Bento/Slidesは、手軽さと機能性を両立させた新しいスライド作成ツールです。単一HTMLファイルでの保存・実行は、配布や共有の容易さにつながります。AIエージェントとの連携は、今後のコンテンツ作成の可能性を広げます。共同編集機能も搭載されているため、チームでの利用にも適しています。</p>
+<p class="detail-text">Money has evolved into far more than the cash in your wallet or your bank account. And at TechCrunch Disrupt 2026, we’re devoting an entire stage to that progression. Fintech, payments, and AI are all core to this evolution, and the Smart Money Stage will bring together the leading thinkers and innovators in these spaces to discuss the future of finance and technology.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260724-bento-slides-powerpoint-alternative%2F"
-        data-title="単一HTMLファイルでローカル動作するスライド作成ウェブアプリ「Bento/Slides」が登場、共同編集可能＆AIエージェントでの自動操作もスムーズ"
-        data-summary="単一HTMLファイルでローカル動作し、共同編集やAIエージェントによる自動操作も可能なスライド作成ウェブアプリ「Bento/Slides」が登場しました。インターネット接続なしで利用できる点が特徴です。"
-        data-source="Gigazine"
-        data-url="https://gigazine.net/news/20260724-bento-slides-powerpoint-alternative/"
-        data-importance="🟡"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Ftechcrunch-disrupt-2026s-new-smart-money-stage-explores-fintech-payments-ai-and-everything-between%2F"
+        data-title="TechCrunch Disrupt 2026の新しいSmart Money Stage、フィンテック、決済、AIなどを探求"
+        data-summary="TechCrunch Disrupt 2026では、フィンテック、決済、AIなどを中心とした新しい「Smart Money Stage」が設けられます。このステージは、進化し続けるお金の概念とそのテクノロジーへの影響を探求することを目的としています。カンファレンスでこれらのトピックが取り上げられることは、業界の注目度を示しています。"
+        data-source="TechCrunch"
+        data-url="https://techcrunch.com/2026/07/24/techcrunch-disrupt-2026s-new-smart-money-stage-explores-fintech-payments-ai-and-everything-between/"
+        data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E5%8D%98%E4%B8%80HTML%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E5%8B%95%E4%BD%9C%E3%81%99%E3%82%8B%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E4%BD%9C%E6%88%90%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%80%8CBento%2FSlides%E3%80%8D%E3%81%8C%E7%99%BB%E5%A0%B4%E3%80%81%E5%85%B1%E5%90%8C%E7%B7%A8%E9%9B%86%E5%8F%AF%E8%83%BD%EF%BC%86AI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%A7%E3%81%AE%E8%87%AA%E5%8B%95%E6%93%8D%E4%BD%9C%E3%82%82%E3%82%B9%E3%83%A0%E3%83%BC%E3%82%BA%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260724-bento-slides-powerpoint-alternative%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=TechCrunch%20Disrupt%202026%E3%81%AE%E6%96%B0%E3%81%97%E3%81%84Smart%20Money%20Stage%E3%80%81%E3%83%95%E3%82%A3%E3%83%B3%E3%83%86%E3%83%83%E3%82%AF%E3%80%81%E6%B1%BA%E6%B8%88%E3%80%81AI%E3%81%AA%E3%81%A9%E3%82%92%E6%8E%A2%E6%B1%82%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Ftechcrunch-disrupt-2026s-new-smart-money-stage-explores-fintech-payments-ai-and-everything-between%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="単一HTMLファイルでローカル動作するスライド作成ウェブアプリ「Bento/Slides」が登場、共同編集可能＆AIエージェントでの自動操作もスムーズ">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="TechCrunch Disrupt 2026の新しいSmart Money Stage、フィンテック、決済、AIなどを探求">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
 <div class="item" style="animation-delay:0.35s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Gigazine</span>
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">TechCrunch</span>
     </div>
-    <h2><a href="https://gigazine.net/news/20260723-kimi-k3-artifical-analysis/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Kimi K3はAIエージェントのベンチマーク「AA-Briefcase」でFable 5に次ぐ2位の成績を達成、しかし実行コストはOpus 4.8よりも高くタスクあたり平均1時間近くかかる</a></h2>
-    <p class="summary">Moonshot AIのKimi K3は、AIエージェントのベンチマーク「AA-Briefcase」で高い評価を得ましたが、Claude Opus 4.8よりも実行コストが高いという課題も浮き彫りになりました。タスクあたりの平均実行時間は約1時間です。</p>
+    <h2><a href="https://techcrunch.com/2026/07/24/social-media-ban-children-countries-list/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ベトナム、子供のソーシャルメディア利用を制限へ 他国でも同様の動きが加速</a></h2>
+    <p class="summary">ベトナムが子供のソーシャルメディア利用を制限する方針を示しました。これは、2025年末にオーストラリアがサイバーいじめや依存、捕食者への暴露といったリスク軽減のために同様の措置を講じたのに続く動きです。世界的に子供のオンライン安全への関心が高まっています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Kimi K3のベンチマーク結果は、その性能の高さを裏付けるものですが、実用面でのコストパフォーマンスが課題となる可能性を示唆しています。AIモデルの性能とコストのバランスは、今後の普及において重要な要素となります。AA-Briefcaseのようなベンチマークは、モデルの能力を比較評価する上で有用ですが、実際の利用シーンにおける実用性も考慮する必要があります。</p>
+<p class="detail-text">Australia was the first country to issue a ban in late 2025, aiming to reduce the pressures and risks that young users may face on social media, including cyberbullying, social media addiction, and exposure to predators. Vietnam's move reflects a growing global concern about the impact of social media on young people's well-being. Other countries are also considering or implementing similar regulations.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260723-kimi-k3-artifical-analysis%2F"
-        data-title="Kimi K3はAIエージェントのベンチマーク「AA-Briefcase」でFable 5に次ぐ2位の成績を達成、しかし実行コストはOpus 4.8よりも高くタスクあたり平均1時間近くかかる"
-        data-summary="Moonshot AIのKimi K3は、AIエージェントのベンチマーク「AA-Briefcase」で高い評価を得ましたが、Claude Opus 4.8よりも実行コストが高いという課題も浮き彫りになりました。タスクあたりの平均実行時間は約1時間です。"
-        data-source="Gigazine"
-        data-url="https://gigazine.net/news/20260723-kimi-k3-artifical-analysis/"
-        data-importance="🟡"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Fsocial-media-ban-children-countries-list%2F"
+        data-title="ベトナム、子供のソーシャルメディア利用を制限へ 他国でも同様の動きが加速"
+        data-summary="ベトナムが子供のソーシャルメディア利用を制限する方針を示しました。これは、2025年末にオーストラリアがサイバーいじめや依存、捕食者への暴露といったリスク軽減のために同様の措置を講じたのに続く動きです。世界的に子供のオンライン安全への関心が高まっています。"
+        data-source="TechCrunch"
+        data-url="https://techcrunch.com/2026/07/24/social-media-ban-children-countries-list/"
+        data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Kimi%20K3%E3%81%AFAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%AE%E3%83%99%E3%83%B3%E3%83%81%E3%83%9E%E3%83%BC%E3%82%AF%E3%80%8CAA-Briefcase%E3%80%8D%E3%81%A7Fable%205%E3%81%AB%E6%AC%A1%E3%81%902%E4%BD%8D%E3%81%AE%E6%88%90%E7%B8%BE%E3%82%92%E9%81%94%E6%88%90%E3%80%81%E3%81%97%E3%81%8B%E3%81%97%E5%AE%9F%E8%A1%8C%E3%82%B3%E3%82%B9%E3%83%88%E3%81%AFOpus%204.8%E3%82%88%E3%82%8A%E3%82%82%E9%AB%98%E3%81%8F%E3%82%BF%E3%82%B9%E3%82%AF%E3%81%82%E3%81%9F%E3%82%8A%E5%B9%B3%E5%9D%871%E6%99%82%E9%96%93%E8%BF%91%E3%81%8F%E3%81%8B%E3%81%8B%E3%82%8B%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260723-kimi-k3-artifical-analysis%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E3%80%81%E5%AD%90%E4%BE%9B%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E5%88%A9%E7%94%A8%E3%82%92%E5%88%B6%E9%99%90%E3%81%B8%20%E4%BB%96%E5%9B%BD%E3%81%A7%E3%82%82%E5%90%8C%E6%A7%98%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%8C%E5%8A%A0%E9%80%9F%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Fsocial-media-ban-children-countries-list%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Kimi K3はAIエージェントのベンチマーク「AA-Briefcase」でFable 5に次ぐ2位の成績を達成、しかし実行コストはOpus 4.8よりも高くタスクあたり平均1時間近くかかる">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="ベトナム、子供のソーシャルメディア利用を制限へ 他国でも同様の動きが加速">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
 <div class="item" style="animation-delay:0.40s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">ITmedia AI+</span>
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">TechCrunch Startups</span>
     </div>
-    <h2><a href="https://kn.itmedia.co.jp/kn/articles/2607/24/news049.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">【元経産省の専門家に聞く】中小企業がハマる「生成AIトラブル」5つの解決シナリオ</a></h2>
-    <p class="summary">中小企業が生成AI導入で直面しやすい5つのトラブルについて、元経済産業省の専門家が解決策を解説しています。具体的な課題と、明日から実践できる乗り切り方が示されています。</p>
+    <h2><a href="https://techcrunch.com/2026/07/24/techcrunch-disrupt-2026s-new-smart-money-stage-explores-fintech-payments-ai-and-everything-between/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">TechCrunch Disrupt 2026の新しいSmart Money Stage、フィンテック、決済、AIなどを探求</a></h2>
+    <p class="summary">TechCrunch Disrupt 2026では、フィンテック、決済、AIなどを中心とした新しい「Smart Money Stage」が設けられます。このステージは、進化し続けるお金の概念とそのテクノロジーへの影響を探求することを目的としています。カンファレンスでこれらのトピックが取り上げられることは、業界の注目度を示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この記事は、中小企業が生成AI導入時に陥りやすい具体的な問題を、専門家の視点から掘り下げ、実践的な解決策を提示しています。AI導入におけるリスク管理や、効果的な活用方法についての洞察が得られます。元経産省の専門家という権威性もあり、中小企業経営者にとって参考になる情報源となるでしょう。</p>
+<p class="detail-text">Money has evolved into far more than the cash in your wallet or your bank account. And at TechCrunch Disrupt 2026, we’re devoting an entire stage to that progression. Fintech, payments, and AI are all core to this evolution, and the Smart Money Stage will bring together the leading thinkers and innovators in these spaces to discuss the future of finance and technology.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fkn.itmedia.co.jp%2Fkn%2Farticles%2F2607%2F24%2Fnews049.html"
-        data-title="【元経産省の専門家に聞く】中小企業がハマる「生成AIトラブル」5つの解決シナリオ"
-        data-summary="中小企業が生成AI導入で直面しやすい5つのトラブルについて、元経済産業省の専門家が解決策を解説しています。具体的な課題と、明日から実践できる乗り切り方が示されています。"
-        data-source="ITmedia AI+"
-        data-url="https://kn.itmedia.co.jp/kn/articles/2607/24/news049.html"
-        data-importance="🟡"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Ftechcrunch-disrupt-2026s-new-smart-money-stage-explores-fintech-payments-ai-and-everything-between%2F"
+        data-title="TechCrunch Disrupt 2026の新しいSmart Money Stage、フィンテック、決済、AIなどを探求"
+        data-summary="TechCrunch Disrupt 2026では、フィンテック、決済、AIなどを中心とした新しい「Smart Money Stage」が設けられます。このステージは、進化し続けるお金の概念とそのテクノロジーへの影響を探求することを目的としています。カンファレンスでこれらのトピックが取り上げられることは、業界の注目度を示しています。"
+        data-source="TechCrunch Startups"
+        data-url="https://techcrunch.com/2026/07/24/techcrunch-disrupt-2026s-new-smart-money-stage-explores-fintech-payments-ai-and-everything-between/"
+        data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%90%E5%85%83%E7%B5%8C%E7%94%A3%E7%9C%81%E3%81%AE%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%AB%E8%81%9E%E3%81%8F%E3%80%91%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E3%81%8C%E3%83%8F%E3%83%9E%E3%82%8B%E3%80%8C%E7%94%9F%E6%88%90AI%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%80%8D5%E3%81%A4%E3%81%AE%E8%A7%A3%E6%B1%BA%E3%82%B7%E3%83%8A%E3%83%AA%E3%82%AA%20https%3A%2F%2Fkn.itmedia.co.jp%2Fkn%2Farticles%2F2607%2F24%2Fnews049.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=TechCrunch%20Disrupt%202026%E3%81%AE%E6%96%B0%E3%81%97%E3%81%84Smart%20Money%20Stage%E3%80%81%E3%83%95%E3%82%A3%E3%83%B3%E3%83%86%E3%83%83%E3%82%AF%E3%80%81%E6%B1%BA%E6%B8%88%E3%80%81AI%E3%81%AA%E3%81%A9%E3%82%92%E6%8E%A2%E6%B1%82%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Ftechcrunch-disrupt-2026s-new-smart-money-stage-explores-fintech-payments-ai-and-everything-between%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="【元経産省の専門家に聞く】中小企業がハマる「生成AIトラブル」5つの解決シナリオ">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="TechCrunch Disrupt 2026の新しいSmart Money Stage、フィンテック、決済、AIなどを探求">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
 <div class="item" style="animation-delay:0.45s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">ITmedia AI+</span>
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">TechCrunch Startups</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/business/articles/2607/24/news015.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「AIの提案」を妄信する人、疑える人――“眼力ある人材”を育てる絶対条件</a></h2>
-    <p class="summary">AIが生成するコンテンツが増える中、AIの提案を無批判に受け入れるリスクが指摘されています。FigmaのCDOは、AI時代には「制作」から「目利き」へと人間の役割が移行するとし、AIの提案を吟味できる人材育成の重要性を説いています。</p>
+    <h2><a href="https://techcrunch.com/2026/07/24/build-in-public-fail-in-public-what-its-like-to-be-a-founder-under-20-right-now/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Build in public, fail in public：20歳以下の起業家にとっての現在</a></h2>
+    <p class="summary">AIツールは、構築の機会を民主化し、成功までの時間を短縮しました。これにより、多くの若者が大企業に頼らずに成功する会社を始めることが可能になっています。この記事は、若い起業家が「公に構築し、公に失敗する」ことについて語っています。これは、現代のスタートアップ環境におけるオープンさと学習の重要性を示唆しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">AIの進化により、人間は単なるコンテンツ制作者から、AIの出力を評価・選択する「目利き」へと役割が変わることが示唆されています。AIは過去のデータに基づいて提案を行いますが、未来を切り拓くのは人間であるという指摘は重要です。AI時代における人間の創造性や判断力をどう維持・向上させるか、そのための思考法が論じられています。</p>
+<p class="detail-text">AI tools have democratized the opportunity to build, shortening the timelines of success and enabling more young people to start successful companies without stepping foot inside a Big Tech company. The article explores the challenges and rewards of being a young founder in today's rapidly evolving tech landscape. It highlights the importance of transparency and learning from both successes and failures.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2607%2F24%2Fnews015.html"
-        data-title="「AIの提案」を妄信する人、疑える人――“眼力ある人材”を育てる絶対条件"
-        data-summary="AIが生成するコンテンツが増える中、AIの提案を無批判に受け入れるリスクが指摘されています。FigmaのCDOは、AI時代には「制作」から「目利き」へと人間の役割が移行するとし、AIの提案を吟味できる人材育成の重要性を説いています。"
-        data-source="ITmedia AI+"
-        data-url="https://www.itmedia.co.jp/business/articles/2607/24/news015.html"
-        data-importance="🟡"
+        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Fbuild-in-public-fail-in-public-what-its-like-to-be-a-founder-under-20-right-now%2F"
+        data-title="Build in public, fail in public：20歳以下の起業家にとっての現在"
+        data-summary="AIツールは、構築の機会を民主化し、成功までの時間を短縮しました。これにより、多くの若者が大企業に頼らずに成功する会社を始めることが可能になっています。この記事は、若い起業家が「公に構築し、公に失敗する」ことについて語っています。これは、現代のスタートアップ環境におけるオープンさと学習の重要性を示唆しています。"
+        data-source="TechCrunch Startups"
+        data-url="https://techcrunch.com/2026/07/24/build-in-public-fail-in-public-what-its-like-to-be-a-founder-under-20-right-now/"
+        data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8CAI%E3%81%AE%E6%8F%90%E6%A1%88%E3%80%8D%E3%82%92%E5%A6%84%E4%BF%A1%E3%81%99%E3%82%8B%E4%BA%BA%E3%80%81%E7%96%91%E3%81%88%E3%82%8B%E4%BA%BA%E2%80%95%E2%80%95%E2%80%9C%E7%9C%BC%E5%8A%9B%E3%81%82%E3%82%8B%E4%BA%BA%E6%9D%90%E2%80%9D%E3%82%92%E8%82%B2%E3%81%A6%E3%82%8B%E7%B5%B6%E5%AF%BE%E6%9D%A1%E4%BB%B6%20https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2607%2F24%2Fnews015.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Build%20in%20public%2C%20fail%20in%20public%EF%BC%9A20%E6%AD%B3%E4%BB%A5%E4%B8%8B%E3%81%AE%E8%B5%B7%E6%A5%AD%E5%AE%B6%E3%81%AB%E3%81%A8%E3%81%A3%E3%81%A6%E3%81%AE%E7%8F%BE%E5%9C%A8%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F24%2Fbuild-in-public-fail-in-public-what-its-like-to-be-a-founder-under-20-right-now%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「AIの提案」を妄信する人、疑える人――“眼力ある人材”を育てる絶対条件">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Build in public, fail in public：20歳以下の起業家にとっての現在">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
 <div class="item" style="animation-delay:0.50s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">ITmedia AI+</span>
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">ITmedia NEWS</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/24/news017.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「生成AIで仕事が楽に」のはずが……IT現場を蝕む“AI疲れ・AIうつ”の正体</a></h2>
-    <p class="summary">「AI疲れ」や「AIうつ」といった言葉が聞かれるようになり、IT現場で生成AIの利用による精神的な負担が増大しています。この記事では、その疲れの正体を整理し、個人がどう考え、どう変わるべきかについての判断軸を提示します。</p>
+    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/24/news095.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">隠すか、見せるか ビジネスマン向け“ファン付きウェア”、2つのアプローチ</a></h2>
+    <p class="summary">ファン付きウェアがビジネスシーンでの利用も広がる中、2社が異なるアプローチでビジネスマン向けの製品を開発しています。一方はいかに目立たなくするか、もう一方はデザイン性を重視するなど、用途や好みに合わせた選択肢が提供されようとしています。これは、ウェアラブルテクノロジーの多様化と市場の成熟を示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">生成AIの導入は、業務効率化を期待させる一方で、過度な期待や技術への適応、情報過多などから「AI疲れ」を引き起こす可能性があります。本稿では、こうした精神的な課題の背景を分析し、AIとの健全な付き合い方や、個人が取るべき対策について具体的な示唆を与えようとしています。IT現場の労働環境における重要な問題提起です。</p>
+<p class="detail-text">外で活動する人達の間では、ファン付きウェアがもはや当たり前の存在になったが、まだ利用しにくいシーンが多いのも事実だ。ビジネスパーソン向けのファン付きウェアを開発する2社のアプローチを紹介。それぞれの製品は、ステルス性とデザイン性を重視したアプローチで、ビジネスシーンでの快適な着用を目指しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews017.html"
-        data-title="「生成AIで仕事が楽に」のはずが……IT現場を蝕む“AI疲れ・AIうつ”の正体"
-        data-summary="「AI疲れ」や「AIうつ」といった言葉が聞かれるようになり、IT現場で生成AIの利用による精神的な負担が増大しています。この記事では、その疲れの正体を整理し、個人がどう考え、どう変わるべきかについての判断軸を提示します。"
-        data-source="ITmedia AI+"
-        data-url="https://www.itmedia.co.jp/news/articles/2607/24/news017.html"
-        data-importance="🟡"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews095.html"
+        data-title="隠すか、見せるか ビジネスマン向け“ファン付きウェア”、2つのアプローチ"
+        data-summary="ファン付きウェアがビジネスシーンでの利用も広がる中、2社が異なるアプローチでビジネスマン向けの製品を開発しています。一方はいかに目立たなくするか、もう一方はデザイン性を重視するなど、用途や好みに合わせた選択肢が提供されようとしています。これは、ウェアラブルテクノロジーの多様化と市場の成熟を示しています。"
+        data-source="ITmedia NEWS"
+        data-url="https://www.itmedia.co.jp/news/articles/2607/24/news095.html"
+        data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%94%9F%E6%88%90AI%E3%81%A7%E4%BB%95%E4%BA%8B%E3%81%8C%E6%A5%BD%E3%81%AB%E3%80%8D%E3%81%AE%E3%81%AF%E3%81%9A%E3%81%8C%E2%80%A6%E2%80%A6IT%E7%8F%BE%E5%A0%B4%E3%82%92%E8%9D%95%E3%82%80%E2%80%9CAI%E7%96%B2%E3%82%8C%E3%83%BBAI%E3%81%86%E3%81%A4%E2%80%9D%E3%81%AE%E6%AD%A3%E4%BD%93%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews017.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E9%9A%A0%E3%81%99%E3%81%8B%E3%80%81%E8%A6%8B%E3%81%9B%E3%82%8B%E3%81%8B%20%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%9E%E3%83%B3%E5%90%91%E3%81%91%E2%80%9C%E3%83%95%E3%82%A1%E3%83%B3%E4%BB%98%E3%81%8D%E3%82%A6%E3%82%A7%E3%82%A2%E2%80%9D%E3%80%812%E3%81%A4%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews095.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「生成AIで仕事が楽に」のはずが……IT現場を蝕む“AI疲れ・AIうつ”の正体">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="隠すか、見せるか ビジネスマン向け“ファン付きウェア”、2つのアプローチ">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -631,27 +662,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">TechCrunch</span>
+      <span class="item-source">Gigazine</span>
     </div>
-    <h2><a href="https://techcrunch.com/2026/07/23/mobileye-ceo-amnon-shashua-to-step-aside-as-company-pushes-into-robotaxis-robotics/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Mobileye CEO Amnon Shashuaがロボットタクシー、ロボティクスへの注力を理由に退任へ</a></h2>
-    <p class="summary">MobileyeのCEOであるAmnon Shashua氏が、同社がロボットタクシーおよびロボティクス分野に注力するのに伴い、CEOを退任し、取締役会会長に就任する予定です。この異動は、同社の戦略的方向性の変化を示唆しています。</p>
+    <h2><a href="https://gigazine.net/news/20260724-present-summer-2026/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">GIGAZINE夏のプレゼント大放出企画「アンケートに答えて全部持っていってください！」、全部で60品目以上あり！</a></h2>
+    <p class="summary">GIGAZINEが、アンケート回答者全員にプレゼントを提供する「夏のプレゼント大放出企画」を実施中です。キーボード、ゲーム、イヤホンなど、61品目以上が用意されています。この企画は、読者層のリサーチも兼ねており、読者とのエンゲージメントを高める試みです。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Amnon Shashua氏は、MobileyeのCEOとしての役割を終え、取締役会会長として同社の戦略的方向性に引き続き関与します。この変更は、自動運転技術とロボティクスの分野における同社の将来的な展開を強化するためのものです。Shashua氏は、長年にわたりMobileyeの成長と技術革新を牽引してきました。</p>
+<p class="detail-text">夏の暑い日にGIGAZINEから皆様へプレゼント！アンケートに答えるだけで応募できるプレゼント大放出企画がスタートします。キーボード、ゲーム、イヤホンなどさまざまなアイテムをドドンと61品目ご用意。プレゼントの番号を覚えて記事末尾にあるリンクから応募してください。普段の記事のアクセス解析だけではわからない「GIGAZINEを読んでいるのはどういう人たちなのか？」という点のリサーチも兼ねているので、「プレゼントはいらないけどアンケートには協力してもイイヨ！」という場合も回答してもらえると非常にありがたいです！◆応募期間2026年7月24日(金)から2026年8月9日(日)23時59分まで。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Fmobileye-ceo-amnon-shashua-to-step-aside-as-company-pushes-into-robotaxis-robotics%2F"
-        data-title="Mobileye CEO Amnon Shashuaがロボットタクシー、ロボティクスへの注力を理由に退任へ"
-        data-summary="MobileyeのCEOであるAmnon Shashua氏が、同社がロボットタクシーおよびロボティクス分野に注力するのに伴い、CEOを退任し、取締役会会長に就任する予定です。この異動は、同社の戦略的方向性の変化を示唆しています。"
-        data-source="TechCrunch"
-        data-url="https://techcrunch.com/2026/07/23/mobileye-ceo-amnon-shashua-to-step-aside-as-company-pushes-into-robotaxis-robotics/"
+        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260724-present-summer-2026%2F"
+        data-title="GIGAZINE夏のプレゼント大放出企画「アンケートに答えて全部持っていってください！」、全部で60品目以上あり！"
+        data-summary="GIGAZINEが、アンケート回答者全員にプレゼントを提供する「夏のプレゼント大放出企画」を実施中です。キーボード、ゲーム、イヤホンなど、61品目以上が用意されています。この企画は、読者層のリサーチも兼ねており、読者とのエンゲージメントを高める試みです。"
+        data-source="Gigazine"
+        data-url="https://gigazine.net/news/20260724-present-summer-2026/"
         data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Mobileye%20CEO%20Amnon%20Shashua%E3%81%8C%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E3%80%81%E3%83%AD%E3%83%9C%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%81%B8%E3%81%AE%E6%B3%A8%E5%8A%9B%E3%82%92%E7%90%86%E7%94%B1%E3%81%AB%E9%80%80%E4%BB%BB%E3%81%B8%20https%3A%2F%2Ftechcrunch.com%2F2026%2F07%2F23%2Fmobileye-ceo-amnon-shashua-to-step-aside-as-company-pushes-into-robotaxis-robotics%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=GIGAZINE%E5%A4%8F%E3%81%AE%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%E5%A4%A7%E6%94%BE%E5%87%BA%E4%BC%81%E7%94%BB%E3%80%8C%E3%82%A2%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%88%E3%81%AB%E7%AD%94%E3%81%88%E3%81%A6%E5%85%A8%E9%83%A8%E6%8C%81%E3%81%A3%E3%81%A6%E3%81%84%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%EF%BC%81%E3%80%8D%E3%80%81%E5%85%A8%E9%83%A8%E3%81%A760%E5%93%81%E7%9B%AE%E4%BB%A5%E4%B8%8A%E3%81%82%E3%82%8A%EF%BC%81%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260724-present-summer-2026%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Mobileye CEO Amnon Shashuaがロボットタクシー、ロボティクスへの注力を理由に退任へ">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="GIGAZINE夏のプレゼント大放出企画「アンケートに答えて全部持っていってください！」、全部で60品目以上あり！">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -659,27 +690,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">ITmedia NEWS</span>
+      <span class="item-source">Gigazine</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/23/news116.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「人間洗濯機」が高齢者施設に　福祉の現場に万博技術導入　人手不足解消や産業成長に期待</a></h2>
-    <p class="summary">2025年大阪・関西万博で紹介された技術が福祉分野で実用化され始めており、特に「人間洗濯機」を応用した入浴装置が介護施設に導入されました。これは、人手不足の解消やヘルスケア産業の成長に貢献することが期待されています。</p>
+    <h2><a href="https://gigazine.net/news/20260725-gigazine-kindle-ranking-2026-q2/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">作家や批評家が選ぶ「史上最高の小説100選」・アニメ監督や作家インタビューなどAmazonで売上トップ100のGIGAZINE記事ランキング2026年第2四半期版まとめ</a></h2>
+    <p class="summary">GIGAZINEが、2026年第2四半期にAmazonで最も読まれた記事トップ100を発表しました。このランキングは、Google検索とは異なり、Amazonでの販売データに基づいています。作家や批評家が選ぶ「史上最高の小説100選」やインタビュー記事などが上位にランクインしており、読者の関心が高いコンテンツを示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">万博技術の福祉分野への応用は、高齢化社会における介護現場の人手不足という喫緊の課題に対する革新的な解決策となり得ます。入浴支援装置の導入は、介護者の負担軽減だけでなく、利用者のQOL向上にも寄与する可能性があります。介護ロボットやAI見守りシステムなども含め、テクノロジーが福祉の現場をどのように変革していくか、その動向が注目されます。</p>
+<p class="detail-text">GIGAZINEの記事を電子化した書籍を対象に、「2026年第2四半期で最もたくさん読まれた記事トップ100」がわかるランキングを作ってみました。Google検索の影響が大きい普段のアクセス解析記事と違い、Amazonならではのランキングとなっています。これは、読者の興味関心やコンテンツの評価を、別の角度から把握するのに役立ちます。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F23%2Fnews116.html"
-        data-title="「人間洗濯機」が高齢者施設に　福祉の現場に万博技術導入　人手不足解消や産業成長に期待"
-        data-summary="2025年大阪・関西万博で紹介された技術が福祉分野で実用化され始めており、特に「人間洗濯機」を応用した入浴装置が介護施設に導入されました。これは、人手不足の解消やヘルスケア産業の成長に貢献することが期待されています。"
-        data-source="ITmedia NEWS"
-        data-url="https://www.itmedia.co.jp/news/articles/2607/23/news116.html"
+        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260725-gigazine-kindle-ranking-2026-q2%2F"
+        data-title="作家や批評家が選ぶ「史上最高の小説100選」・アニメ監督や作家インタビューなどAmazonで売上トップ100のGIGAZINE記事ランキング2026年第2四半期版まとめ"
+        data-summary="GIGAZINEが、2026年第2四半期にAmazonで最も読まれた記事トップ100を発表しました。このランキングは、Google検索とは異なり、Amazonでの販売データに基づいています。作家や批評家が選ぶ「史上最高の小説100選」やインタビュー記事などが上位にランクインしており、読者の関心が高いコンテンツを示しています。"
+        data-source="Gigazine"
+        data-url="https://gigazine.net/news/20260725-gigazine-kindle-ranking-2026-q2/"
         data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E4%BA%BA%E9%96%93%E6%B4%97%E6%BF%AF%E6%A9%9F%E3%80%8D%E3%81%8C%E9%AB%98%E9%BD%A2%E8%80%85%E6%96%BD%E8%A8%AD%E3%81%AB%E3%80%80%E7%A6%8F%E7%A5%89%E3%81%AE%E7%8F%BE%E5%A0%B4%E3%81%AB%E4%B8%87%E5%8D%9A%E6%8A%80%E8%A1%93%E5%B0%8E%E5%85%A5%E3%80%80%E4%BA%BA%E6%89%8B%E4%B8%8D%E8%B6%B3%E8%A7%A3%E6%B6%88%E3%82%84%E7%94%A3%E6%A5%AD%E6%88%90%E9%95%B7%E3%81%AB%E6%9C%9F%E5%BE%85%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F23%2Fnews116.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E4%BD%9C%E5%AE%B6%E3%82%84%E6%89%B9%E8%A9%95%E5%AE%B6%E3%81%8C%E9%81%B8%E3%81%B6%E3%80%8C%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%AB%98%E3%81%AE%E5%B0%8F%E8%AA%AC100%E9%81%B8%E3%80%8D%E3%83%BB%E3%82%A2%E3%83%8B%E3%83%A1%E7%9B%A3%E7%9D%A3%E3%82%84%E4%BD%9C%E5%AE%B6%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%93%E3%83%A5%E3%83%BC%E3%81%AA%E3%81%A9Amazon%E3%81%A7%E5%A3%B2%E4%B8%8A%E3%83%88%E3%83%83%E3%83%97100%E3%81%AEGIGAZINE%E8%A8%98%E4%BA%8B%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B02026%E5%B9%B4%E7%AC%AC2%E5%9B%9B%E5%8D%8A%E6%9C%9F%E7%89%88%E3%81%BE%E3%81%A8%E3%82%81%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260725-gigazine-kindle-ranking-2026-q2%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「人間洗濯機」が高齢者施設に　福祉の現場に万博技術導入　人手不足解消や産業成長に期待">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="作家や批評家が選ぶ「史上最高の小説100選」・アニメ監督や作家インタビューなどAmazonで売上トップ100のGIGAZINE記事ランキング2026年第2四半期版まとめ">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -687,55 +718,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">ITmedia NEWS</span>
+      <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/23/news115.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「サナエトークン」巡る首相秘書陳述全文　「一度も説明受けず」</a></h2>
-    <p class="summary">高市早苗首相の陣営を巡る中傷動画作成疑惑と「サナエトークン」について、首相秘書が関与を全否定する陳述書を衆院予算委員会に提出しました。秘書は、疑惑に関連する説明を一切受けていないと主張しています。</p>
+    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/24/news094.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">スーパーに並んだ「ごちゃごちゃ生成AIポップ」が物議 “看板王”こと、きぬた歯科院長「これはアリ」</a></h2>
+    <p class="summary">スーパーの青果売り場に並ぶ、生成AIで作られたとみられる派手な商品ポップがSNSで話題になっています。デザインの「見づらさ」を指摘する声がある一方、看板広告で知られるきぬた歯科院長は「これはアリ」と評価しています。これは、生成AIのクリエイティブな活用方法とその受容性について議論を提起しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この陳述書は、政治資金や暗号資産を巡る疑惑の核心に迫るものです。秘書が関与を全面的に否定したことで、疑惑の解明は新たな局面を迎える可能性があります。法的な影響や政治的な波紋が予想されるため、今後の調査の進展が注目されます。特に、選挙活動と暗号資産の関連性についての関心が高まっています。</p>
+<p class="detail-text">スーパーの青果売り場に並ぶ、生成AIで作ったとみられる派手な商品ポップがXで物議を醸している。吸血鬼や戦国武将を描いたデザインに「見づらい」との声が相次ぐ中、看板広告で知られるきぬた歯科のきぬた泰和院長は「これはアリ」と評価。その理由とは。生成AIによるデザインの自由度と、それが消費者にどう受け止められるかのバランスが問われています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F23%2Fnews115.html"
-        data-title="「サナエトークン」巡る首相秘書陳述全文　「一度も説明受けず」"
-        data-summary="高市早苗首相の陣営を巡る中傷動画作成疑惑と「サナエトークン」について、首相秘書が関与を全否定する陳述書を衆院予算委員会に提出しました。秘書は、疑惑に関連する説明を一切受けていないと主張しています。"
-        data-source="ITmedia NEWS"
-        data-url="https://www.itmedia.co.jp/news/articles/2607/23/news115.html"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews094.html"
+        data-title="スーパーに並んだ「ごちゃごちゃ生成AIポップ」が物議 “看板王”こと、きぬた歯科院長「これはアリ」"
+        data-summary="スーパーの青果売り場に並ぶ、生成AIで作られたとみられる派手な商品ポップがSNSで話題になっています。デザインの「見づらさ」を指摘する声がある一方、看板広告で知られるきぬた歯科院長は「これはアリ」と評価しています。これは、生成AIのクリエイティブな活用方法とその受容性について議論を提起しています。"
+        data-source="ITmedia AI+"
+        data-url="https://www.itmedia.co.jp/news/articles/2607/24/news094.html"
         data-importance="🟢"
         data-category="テック・AI">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%82%B5%E3%83%8A%E3%82%A8%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E3%80%8D%E5%B7%A1%E3%82%8B%E9%A6%96%E7%9B%B8%E7%A7%98%E6%9B%B8%E9%99%B3%E8%BF%B0%E5%85%A8%E6%96%87%E3%80%80%E3%80%8C%E4%B8%80%E5%BA%A6%E3%82%82%E8%AA%AC%E6%98%8E%E5%8F%97%E3%81%91%E3%81%9A%E3%80%8D%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F23%2Fnews115.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%81%AB%E4%B8%A6%E3%82%93%E3%81%A0%E3%80%8C%E3%81%94%E3%81%A1%E3%82%83%E3%81%94%E3%81%A1%E3%82%83%E7%94%9F%E6%88%90AI%E3%83%9D%E3%83%83%E3%83%97%E3%80%8D%E3%81%8C%E7%89%A9%E8%AD%B0%20%E2%80%9C%E7%9C%8B%E6%9D%BF%E7%8E%8B%E2%80%9D%E3%81%93%E3%81%A8%E3%80%81%E3%81%8D%E3%81%AC%E3%81%9F%E6%AD%AF%E7%A7%91%E9%99%A2%E9%95%B7%E3%80%8C%E3%81%93%E3%82%8C%E3%81%AF%E3%82%A2%E3%83%AA%E3%80%8D%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews094.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「サナエトークン」巡る首相秘書陳述全文　「一度も説明受けず」">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.70s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">Gigazine</span>
-    </div>
-    <h2><a href="https://gigazine.net/news/20260724-overpaid-fire-ceo-ai/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">AIで従業員ではなくCEOを解雇すればどれほど多くのメリットがあるのか？</a></h2>
-    <p class="summary">ホワイトカラーの従業員をAIに置き換える動きが強まる中、AI「OverpAId」はCEOを解雇する可能性を示唆しています。この記事では、AIによるCEO解任のメリットについて考察しています。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">AIが企業のトップであるCEOを代替するという発想は、従来のAI活用の枠を超えたものです。OverpAIdのような概念は、経営効率の向上や客観的な意思決定を期待させる一方で、倫理的・社会的な問題も提起します。AIによる経営判断がもたらす長期的な影響についても、議論の余地がありそうです。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fgigazine.net%2Fnews%2F20260724-overpaid-fire-ceo-ai%2F"
-        data-title="AIで従業員ではなくCEOを解雇すればどれほど多くのメリットがあるのか？"
-        data-summary="ホワイトカラーの従業員をAIに置き換える動きが強まる中、AI「OverpAId」はCEOを解雇する可能性を示唆しています。この記事では、AIによるCEO解任のメリットについて考察しています。"
-        data-source="Gigazine"
-        data-url="https://gigazine.net/news/20260724-overpaid-fire-ceo-ai/"
-        data-importance="🟢"
-        data-category="テック・AI">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=AI%E3%81%A7%E5%BE%93%E6%A5%AD%E5%93%A1%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%8FCEO%E3%82%92%E8%A7%A3%E9%9B%87%E3%81%99%E3%82%8C%E3%81%B0%E3%81%A9%E3%82%8C%E3%81%BB%E3%81%A9%E5%A4%9A%E3%81%8F%E3%81%AE%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88%E3%81%8C%E3%81%82%E3%82%8B%E3%81%AE%E3%81%8B%EF%BC%9F%20https%3A%2F%2Fgigazine.net%2Fnews%2F20260724-overpaid-fire-ceo-ai%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="AIで従業員ではなくCEOを解雇すればどれほど多くのメリットがあるのか？">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="スーパーに並んだ「ごちゃごちゃ生成AIポップ」が物議 “看板王”こと、きぬた歯科院長「これはアリ」">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -747,25 +750,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://kn.itmedia.co.jp/kn/articles/2607/24/news049.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">【元経産省の専門家に聞く】中小企業がハマる「生成AIトラブル」5つの解決シナリオ</a></h2>
-    <p class="summary">中小企業が生成AI導入で直面しやすい5つのトラブルについて、元経済産業省の専門家が解決策を解説しています。具体的な課題と、明日から実践できる乗り切り方が示されています。</p>
+    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/25/news016.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Anthropic、「Claude Opus 5」公開 Fable 5に迫る性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも</a></h2>
+    <p class="summary">Anthropicは最新LLM「Claude Opus 5」を公開しました。Claude Opus 5は、上位モデル「Claude Fable 5」に匹敵する性能を半額で提供します。プログラミングやナレッジワークで高い評価を得ており、推論の深さを調整するパラメータや、拒否時に自動フォールバックする機能も備えています。AIモデルの性能向上と価格競争が激化していることを示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この記事は、中小企業が生成AI導入時に陥りやすい具体的な問題を、専門家の視点から掘り下げ、実践的な解決策を提示しています。AI導入におけるリスク管理や、効果的な活用方法についての洞察が得られます。元経産省の専門家という権威性もあり、中小企業経営者にとって参考になる情報源となるでしょう。</p>
+<p class="detail-text">Claude Opus 5は、Claude Fable 5と同等の知能を半額で提供します。これにより、より多くのユーザーが高度なAIモデルを利用できるようになります。安全性分類器に連動する自動フォールバック機能は、AIの安全な利用を促進します。この発表は、AnthropicのAI開発における継続的な進歩と、競争力のある価格設定戦略を示しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fkn.itmedia.co.jp%2Fkn%2Farticles%2F2607%2F24%2Fnews049.html"
-        data-title="【元経産省の専門家に聞く】中小企業がハマる「生成AIトラブル」5つの解決シナリオ"
-        data-summary="中小企業が生成AI導入で直面しやすい5つのトラブルについて、元経済産業省の専門家が解決策を解説しています。具体的な課題と、明日から実践できる乗り切り方が示されています。"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F25%2Fnews016.html"
+        data-title="Anthropic、「Claude Opus 5」公開 Fable 5に迫る性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも"
+        data-summary="Anthropicは最新LLM「Claude Opus 5」を公開しました。Claude Opus 5は、上位モデル「Claude Fable 5」に匹敵する性能を半額で提供します。プログラミングやナレッジワークで高い評価を得ており、推論の深さを調整するパラメータや、拒否時に自動フォールバックする機能も備えています。AIモデルの性能向上と価格競争が激化していることを示しています。"
         data-source="ITmedia AI+"
-        data-url="https://kn.itmedia.co.jp/kn/articles/2607/24/news049.html"
+        data-url="https://www.itmedia.co.jp/news/articles/2607/25/news016.html"
         data-importance="🟡"
         data-category="Anthropic">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%90%E5%85%83%E7%B5%8C%E7%94%A3%E7%9C%81%E3%81%AE%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%AB%E8%81%9E%E3%81%8F%E3%80%91%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E3%81%8C%E3%83%8F%E3%83%9E%E3%82%8B%E3%80%8C%E7%94%9F%E6%88%90AI%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%80%8D5%E3%81%A4%E3%81%AE%E8%A7%A3%E6%B1%BA%E3%82%B7%E3%83%8A%E3%83%AA%E3%82%AA%20https%3A%2F%2Fkn.itmedia.co.jp%2Fkn%2Farticles%2F2607%2F24%2Fnews049.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Anthropic%E3%80%81%E3%80%8CClaude%20Opus%205%E3%80%8D%E5%85%AC%E9%96%8B%20Fable%205%E3%81%AB%E8%BF%AB%E3%82%8B%E6%80%A7%E8%83%BD%E3%82%92%E5%8D%8A%E9%A1%8D%E3%81%A7%E2%80%95%E2%80%95%E3%82%B5%E3%82%A4%E3%83%90%E3%83%BC%E5%AE%89%E5%85%A8%E7%AD%96%E3%81%AF%E7%B7%A9%E5%92%8C%E3%80%81%E6%8B%92%E5%90%A6%E6%99%82%E3%81%AF%E8%87%AA%E5%8B%95%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%82%82%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F25%2Fnews016.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="【元経産省の専門家に聞く】中小企業がハマる「生成AIトラブル」5つの解決シナリオ">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Anthropic、「Claude Opus 5」公開 Fable 5に迫る性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -775,53 +778,53 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/business/articles/2607/24/news015.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「AIの提案」を妄信する人、疑える人――“眼力ある人材”を育てる絶対条件</a></h2>
-    <p class="summary">AIが生成するコンテンツが増える中、AIの提案を無批判に受け入れるリスクが指摘されています。FigmaのCDOは、AI時代には「制作」から「目利き」へと人間の役割が移行するとし、AIの提案を吟味できる人材育成の重要性を説いています。</p>
+    <h2><a href="https://www.itmedia.co.jp/aiplus/article/2607/24/2000000221/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">近畿大、入試にAIの利用認める 情報学部の総合型選抜で</a></h2>
+    <p class="summary">近畿大学は、2027年度の情報学部の総合型選抜入学試験で、生成AIの利用を認めると発表しました。自己PR動画やプレゼンテーション資料でのAI利用方針を明示しており、教育現場におけるAIの活用がさらに進むことを示唆しています。これは、AIと教育の関わり方に関する重要な一歩です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">AIの進化により、人間は単なるコンテンツ制作者から、AIの出力を評価・選択する「目利き」へと役割が変わることが示唆されています。AIは過去のデータに基づいて提案を行いますが、未来を切り拓くのは人間であるという指摘は重要です。AI時代における人間の創造性や判断力をどう維持・向上させるか、そのための思考法が論じられています。</p>
+<p class="detail-text">近畿大学は、2027年度の情報学部の総合型選抜入学試験で、生成AIの利用を認めると発表した。提出する自己PR動画やプレゼンテーション資料などでのAIの利用方針を明示した。これは、AI技術を教育の現場でどのように活用していくかという、今後の大学入試における新しい潮流を示すものです。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2607%2F24%2Fnews015.html"
-        data-title="「AIの提案」を妄信する人、疑える人――“眼力ある人材”を育てる絶対条件"
-        data-summary="AIが生成するコンテンツが増える中、AIの提案を無批判に受け入れるリスクが指摘されています。FigmaのCDOは、AI時代には「制作」から「目利き」へと人間の役割が移行するとし、AIの提案を吟味できる人材育成の重要性を説いています。"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Faiplus%2Farticle%2F2607%2F24%2F2000000221%2F"
+        data-title="近畿大、入試にAIの利用認める 情報学部の総合型選抜で"
+        data-summary="近畿大学は、2027年度の情報学部の総合型選抜入学試験で、生成AIの利用を認めると発表しました。自己PR動画やプレゼンテーション資料でのAI利用方針を明示しており、教育現場におけるAIの活用がさらに進むことを示唆しています。これは、AIと教育の関わり方に関する重要な一歩です。"
         data-source="ITmedia AI+"
-        data-url="https://www.itmedia.co.jp/business/articles/2607/24/news015.html"
+        data-url="https://www.itmedia.co.jp/aiplus/article/2607/24/2000000221/"
         data-importance="🟡"
         data-category="Anthropic">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8CAI%E3%81%AE%E6%8F%90%E6%A1%88%E3%80%8D%E3%82%92%E5%A6%84%E4%BF%A1%E3%81%99%E3%82%8B%E4%BA%BA%E3%80%81%E7%96%91%E3%81%88%E3%82%8B%E4%BA%BA%E2%80%95%E2%80%95%E2%80%9C%E7%9C%BC%E5%8A%9B%E3%81%82%E3%82%8B%E4%BA%BA%E6%9D%90%E2%80%9D%E3%82%92%E8%82%B2%E3%81%A6%E3%82%8B%E7%B5%B6%E5%AF%BE%E6%9D%A1%E4%BB%B6%20https%3A%2F%2Fwww.itmedia.co.jp%2Fbusiness%2Farticles%2F2607%2F24%2Fnews015.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E8%BF%91%E7%95%BF%E5%A4%A7%E3%80%81%E5%85%A5%E8%A9%A6%E3%81%ABAI%E3%81%AE%E5%88%A9%E7%94%A8%E8%AA%8D%E3%82%81%E3%82%8B%20%E6%83%85%E5%A0%B1%E5%AD%A6%E9%83%A8%E3%81%AE%E7%B7%8F%E5%90%88%E5%9E%8B%E9%81%B8%E6%8A%9C%E3%81%A7%20https%3A%2F%2Fwww.itmedia.co.jp%2Faiplus%2Farticle%2F2607%2F24%2F2000000221%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「AIの提案」を妄信する人、疑える人――“眼力ある人材”を育てる絶対条件">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="近畿大、入試にAIの利用認める 情報学部の総合型選抜で">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
 <div class="item" style="animation-delay:0.10s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
+      <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">ITmedia AI+</span>
     </div>
-    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/24/news017.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「生成AIで仕事が楽に」のはずが……IT現場を蝕む“AI疲れ・AIうつ”の正体</a></h2>
-    <p class="summary">「AI疲れ」や「AIうつ」といった言葉が聞かれるようになり、IT現場で生成AIの利用による精神的な負担が増大しています。この記事では、その疲れの正体を整理し、個人がどう考え、どう変わるべきかについての判断軸を提示します。</p>
+    <h2><a href="https://www.itmedia.co.jp/news/articles/2607/24/news094.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">スーパーに並んだ「ごちゃごちゃ生成AIポップ」が物議 “看板王”こと、きぬた歯科院長「これはアリ」</a></h2>
+    <p class="summary">スーパーの青果売り場に並ぶ、生成AIで作られたとみられる派手な商品ポップがSNSで話題になっています。デザインの「見づらさ」を指摘する声がある一方、看板広告で知られるきぬた歯科院長は「これはアリ」と評価しています。これは、生成AIのクリエイティブな活用方法とその受容性について議論を提起しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">生成AIの導入は、業務効率化を期待させる一方で、過度な期待や技術への適応、情報過多などから「AI疲れ」を引き起こす可能性があります。本稿では、こうした精神的な課題の背景を分析し、AIとの健全な付き合い方や、個人が取るべき対策について具体的な示唆を与えようとしています。IT現場の労働環境における重要な問題提起です。</p>
+<p class="detail-text">スーパーの青果売り場に並ぶ、生成AIで作ったとみられる派手な商品ポップがXで物議を醸している。吸血鬼や戦国武将を描いたデザインに「見づらい」との声が相次ぐ中、看板広告で知られるきぬた歯科のきぬた泰和院長は「これはアリ」と評価。その理由とは。生成AIによるデザインの自由度と、それが消費者にどう受け止められるかのバランスが問われています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews017.html"
-        data-title="「生成AIで仕事が楽に」のはずが……IT現場を蝕む“AI疲れ・AIうつ”の正体"
-        data-summary="「AI疲れ」や「AIうつ」といった言葉が聞かれるようになり、IT現場で生成AIの利用による精神的な負担が増大しています。この記事では、その疲れの正体を整理し、個人がどう考え、どう変わるべきかについての判断軸を提示します。"
+        data-id="https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews094.html"
+        data-title="スーパーに並んだ「ごちゃごちゃ生成AIポップ」が物議 “看板王”こと、きぬた歯科院長「これはアリ」"
+        data-summary="スーパーの青果売り場に並ぶ、生成AIで作られたとみられる派手な商品ポップがSNSで話題になっています。デザインの「見づらさ」を指摘する声がある一方、看板広告で知られるきぬた歯科院長は「これはアリ」と評価しています。これは、生成AIのクリエイティブな活用方法とその受容性について議論を提起しています。"
         data-source="ITmedia AI+"
-        data-url="https://www.itmedia.co.jp/news/articles/2607/24/news017.html"
-        data-importance="🟡"
+        data-url="https://www.itmedia.co.jp/news/articles/2607/24/news094.html"
+        data-importance="🟢"
         data-category="Anthropic">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%94%9F%E6%88%90AI%E3%81%A7%E4%BB%95%E4%BA%8B%E3%81%8C%E6%A5%BD%E3%81%AB%E3%80%8D%E3%81%AE%E3%81%AF%E3%81%9A%E3%81%8C%E2%80%A6%E2%80%A6IT%E7%8F%BE%E5%A0%B4%E3%82%92%E8%9D%95%E3%82%80%E2%80%9CAI%E7%96%B2%E3%82%8C%E3%83%BBAI%E3%81%86%E3%81%A4%E2%80%9D%E3%81%AE%E6%AD%A3%E4%BD%93%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews017.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%81%AB%E4%B8%A6%E3%82%93%E3%81%A0%E3%80%8C%E3%81%94%E3%81%A1%E3%82%83%E3%81%94%E3%81%A1%E3%82%83%E7%94%9F%E6%88%90AI%E3%83%9D%E3%83%83%E3%83%97%E3%80%8D%E3%81%8C%E7%89%A9%E8%AD%B0%20%E2%80%9C%E7%9C%8B%E6%9D%BF%E7%8E%8B%E2%80%9D%E3%81%93%E3%81%A8%E3%80%81%E3%81%8D%E3%81%AC%E3%81%9F%E6%AD%AF%E7%A7%91%E9%99%A2%E9%95%B7%E3%80%8C%E3%81%93%E3%82%8C%E3%81%AF%E3%82%A2%E3%83%AA%E3%80%8D%20https%3A%2F%2Fwww.itmedia.co.jp%2Fnews%2Farticles%2F2607%2F24%2Fnews094.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「生成AIで仕事が楽に」のはずが……IT現場を蝕む“AI疲れ・AIうつ”の正体">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="スーパーに並んだ「ごちゃごちゃ生成AIポップ」が物議 “看板王”こと、きぬた歯科院長「これはアリ」">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -833,53 +836,53 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">Attack Magazine</span>
     </div>
-    <h2><a href="https://www.attackmagazine.com/news/native-instruments-and-a-g-cook-launch-supersaw-synthesiser/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Native InstrumentsとA. G. CookがSuper*Sawシンセサイザーをローンチ</a></h2>
-    <p class="summary">Native Instrumentsは、プロデューサーA. G. Cookと共同開発したソフトシンセ「Super*Saw」を発表しました。このシンセは、Cook氏がCharli XCXやBeyoncéなどのアーティストのために使用してきたレイヤード・スーパーソー・プロダクション技術を基盤としています。</p>
+    <h2><a href="https://www.attackmagazine.com/news/native-instruments-and-a-g-cook-launch-supersaw-synthesiser/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Native InstrumentsとA.G. CookがSuper*Sawシンセサイザーをローンチ</a></h2>
+    <p class="summary">Native Instrumentsは、プロデューサーA.G. Cookと共同開発したソフトシンセ「Super*Saw」を発表しました。このシンセは、Cook氏がCharli XCXやBeyoncéなどのアーティストのために使用してきたレイヤード・スーパーソーのプロダクション技術を基盤としています。Super*Sawは、複雑なサウンドデザインを単一のインストゥルメントで実現し、現代の音楽制作におけるサウンドメイキングの進化を示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Super*Sawは、2つの独立したオシレーターバンクを搭載し、それぞれ最大16基のソー（ノコギリ波）を生成できます。これにより、豊かで厚みのあるサウンドメイクが可能です。X/Yモーフ機能により、4つのパッチ状態を保存し、滑らかに遷移させることができます。また、コードやスケール機能、内蔵エフェクト（コーラス、ディレイ、リバーブなど）も搭載しており、多様な音楽制作に対応します。価格は99ドルです。</p>
+<p class="detail-text">The new soft synth adapts A. G. Cook’s layered supersaw production techniques for a dedicated plug-in. Super*Saw combines dual oscillator banks, patch morphing, harmonic tools, effects and Native Instruments hardware integration. It is built around two independent oscillator banks, each generating up to 16 sawtooth waves, and features a four-corner X/Y Morpher for continuous sound alteration. The instrument is priced at $99 or €99.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fnative-instruments-and-a-g-cook-launch-supersaw-synthesiser%2F"
-        data-title="Native InstrumentsとA. G. CookがSuper*Sawシンセサイザーをローンチ"
-        data-summary="Native Instrumentsは、プロデューサーA. G. Cookと共同開発したソフトシンセ「Super*Saw」を発表しました。このシンセは、Cook氏がCharli XCXやBeyoncéなどのアーティストのために使用してきたレイヤード・スーパーソー・プロダクション技術を基盤としています。"
+        data-title="Native InstrumentsとA.G. CookがSuper*Sawシンセサイザーをローンチ"
+        data-summary="Native Instrumentsは、プロデューサーA.G. Cookと共同開発したソフトシンセ「Super*Saw」を発表しました。このシンセは、Cook氏がCharli XCXやBeyoncéなどのアーティストのために使用してきたレイヤード・スーパーソーのプロダクション技術を基盤としています。Super*Sawは、複雑なサウンドデザインを単一のインストゥルメントで実現し、現代の音楽制作におけるサウンドメイキングの進化を示しています。"
         data-source="Attack Magazine"
         data-url="https://www.attackmagazine.com/news/native-instruments-and-a-g-cook-launch-supersaw-synthesiser/"
         data-importance="🟡"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Native%20Instruments%E3%81%A8A.%20G.%20Cook%E3%81%8CSuper%2ASaw%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC%E3%82%92%E3%83%AD%E3%83%BC%E3%83%B3%E3%83%81%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fnative-instruments-and-a-g-cook-launch-supersaw-synthesiser%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Native%20Instruments%E3%81%A8A.G.%20Cook%E3%81%8CSuper%2ASaw%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC%E3%82%92%E3%83%AD%E3%83%BC%E3%83%B3%E3%83%81%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fnative-instruments-and-a-g-cook-launch-supersaw-synthesiser%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Native InstrumentsとA. G. CookがSuper*Sawシンセサイザーをローンチ">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Native InstrumentsとA.G. CookがSuper*Sawシンセサイザーをローンチ">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
 <div class="item" style="animation-delay:0.05s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Attack Magazine</span>
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">MusicRadar</span>
     </div>
-    <h2><a href="https://www.attackmagazine.com/reviews/gear-software/orchid-who-knew-chords-could-be-this-much-fun/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OrchiD: コードがこんなに楽しいなんて誰が知っていた？</a></h2>
-    <p class="summary">Telepathic InstrumentsのOrchidは、Tame ImpalaのKevin Parkerが開発に関わった画期的なコードジェネレーターですが、ダンスミュージックプロデューサーにもアピールできるのでしょうか。この記事では、その魅力と実用性をレビューしています。</p>
+    <h2><a href="https://www.musicradar.com/guitars/guitar-pedals/morley-wah-octo-fuzz-review" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">"If the WTF is a sign of things to come, I can’t wait to see what these mad scientists cook up next" Morley X DOD Wah-OcTo-Fuzz review</a></h2>
+    <p class="summary">Morley X DOD Wah-OcTo-Fuzzペダルは、革新的で風変わりな3-in-1ストンプボックスです。過去を尊重しつつも、新しいサウンドを生み出しています。このペダルのレビューは、音楽制作における独創性と実験精神の重要性を示唆しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Orchid ORC-1は、インスピレーションを得るための「アイデアマシン」として設計されており、コード進行の作曲を容易にします。鍵盤と8つのコードボタンにより、直感的に様々なコードタイプを生成できます。メジャー/マイナースケール設定や、コードのボイシングを調整する機能も備わっています。内蔵ビートやオーディオロッカー、さらには8時間のバッテリー駆動といった機能も搭載しています。価格は699ドルです。</p>
+<p class="detail-text">A fantastic, wacky, and eccentric three-in-one stompbox that harks back while creating something fresh. The reviewer praises its versatility and unique sound capabilities, suggesting it's a valuable addition for guitarists looking to explore new sonic territories. The pedal combines wah, octave, and fuzz effects in a single unit.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Forchid-who-knew-chords-could-be-this-much-fun%2F"
-        data-title="OrchiD: コードがこんなに楽しいなんて誰が知っていた？"
-        data-summary="Telepathic InstrumentsのOrchidは、Tame ImpalaのKevin Parkerが開発に関わった画期的なコードジェネレーターですが、ダンスミュージックプロデューサーにもアピールできるのでしょうか。この記事では、その魅力と実用性をレビューしています。"
-        data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/reviews/gear-software/orchid-who-knew-chords-could-be-this-much-fun/"
-        data-importance="🟡"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Fguitar-pedals%2Fmorley-wah-octo-fuzz-review"
+        data-title="&quot;If the WTF is a sign of things to come, I can’t wait to see what these mad scientists cook up next&quot; Morley X DOD Wah-OcTo-Fuzz review"
+        data-summary="Morley X DOD Wah-OcTo-Fuzzペダルは、革新的で風変わりな3-in-1ストンプボックスです。過去を尊重しつつも、新しいサウンドを生み出しています。このペダルのレビューは、音楽制作における独創性と実験精神の重要性を示唆しています。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/guitars/guitar-pedals/morley-wah-octo-fuzz-review"
+        data-importance="🟢"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=OrchiD%3A%20%E3%82%B3%E3%83%BC%E3%83%89%E3%81%8C%E3%81%93%E3%82%93%E3%81%AA%E3%81%AB%E6%A5%BD%E3%81%97%E3%81%84%E3%81%AA%E3%82%93%E3%81%A6%E8%AA%B0%E3%81%8C%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%81%9F%EF%BC%9F%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Forchid-who-knew-chords-could-be-this-much-fun%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%22If%20the%20WTF%20is%20a%20sign%20of%20things%20to%20come%2C%20I%20can%E2%80%99t%20wait%20to%20see%20what%20these%20mad%20scientists%20cook%20up%20next%22%20Morley%20X%20DOD%20Wah-OcTo-Fuzz%20review%20https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Fguitar-pedals%2Fmorley-wah-octo-fuzz-review" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="OrchiD: コードがこんなに楽しいなんて誰が知っていた？">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="&quot;If the WTF is a sign of things to come, I can’t wait to see what these mad scientists cook up next&quot; Morley X DOD Wah-OcTo-Fuzz review">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -889,25 +892,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">MusicRadar</span>
     </div>
-    <h2><a href="https://www.musicradar.com/artists/sophie-lloyd-ozzy-osbourne-tribute-shred-black-sabbath-paranoid" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「暗黒の王子の追悼に」：Sophie Lloyd、Black SabbathのParanoidの激しいシュレッドカバーでOzzy Osbourneに敬意を表す</a></h2>
-    <p class="summary">Machine Gun KellyのギタリストでありYouTubeスーパースターのSophie Lloydが、Ozzy Osbourneの命日1周年に際し、Black Sabbathのクラシック曲「Paranoid」を激しいギターソロでカバーし、追悼の意を表しました。これはOzzy Osbourneへの敬意を示すパフォーマンスです。</p>
+    <h2><a href="https://www.musicradar.com/artists/jimmy-eat-world-bleed-american" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「何かをとてもシンプルに作ることに、本当に強力なものがある。どこまでそれを推し進められるかという、少し狂ったような感覚がある」: Jim AdkinsとZach Lindが語るJimmy Eat Worldの『Bleed American』制作秘話 - 彼らの人生を変えたアルバム</a></h2>
+    <p class="summary">Jim AdkinsとZach Lindは、Jimmy Eat Worldの『Bleed American』の制作過程を振り返り、シンプルなアプローチの重要性と、それを極限まで追求する情熱について語っています。レーベルもマネージメントもなく、資金も底をつきかけていた状況で、彼らは世界を魅了する楽曲を生み出しました。これは、クリエイティブな情熱が困難を乗り越える力となることを示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Sophie Lloydによる「Paranoid」のカバーは、Ozzy Osbourneへのトリビュートとして、彼女の卓越したギターテクニックを披露しています。このパフォーマンスは、Ozzy Osbourneの音楽的遺産を称えるものであり、ファンにとって感動的なものとなるでしょう。彼女はYouTubeで高い人気を誇るギタリストです。</p>
+<p class="detail-text">They had no label, no management and the money was running out, but they had the songs, and a hit that would catch the ear of Taylor Swift, Prince and the rest of the world. The interview delves into the band's early struggles and how their determination to create authentic music led to their breakthrough album. It highlights the power of independent creation and the unexpected paths to success.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsophie-lloyd-ozzy-osbourne-tribute-shred-black-sabbath-paranoid"
-        data-title="「暗黒の王子の追悼に」：Sophie Lloyd、Black SabbathのParanoidの激しいシュレッドカバーでOzzy Osbourneに敬意を表す"
-        data-summary="Machine Gun KellyのギタリストでありYouTubeスーパースターのSophie Lloydが、Ozzy Osbourneの命日1周年に際し、Black Sabbathのクラシック曲「Paranoid」を激しいギターソロでカバーし、追悼の意を表しました。これはOzzy Osbourneへの敬意を示すパフォーマンスです。"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fjimmy-eat-world-bleed-american"
+        data-title="「何かをとてもシンプルに作ることに、本当に強力なものがある。どこまでそれを推し進められるかという、少し狂ったような感覚がある」: Jim AdkinsとZach Lindが語るJimmy Eat Worldの『Bleed American』制作秘話 - 彼らの人生を変えたアルバム"
+        data-summary="Jim AdkinsとZach Lindは、Jimmy Eat Worldの『Bleed American』の制作過程を振り返り、シンプルなアプローチの重要性と、それを極限まで追求する情熱について語っています。レーベルもマネージメントもなく、資金も底をつきかけていた状況で、彼らは世界を魅了する楽曲を生み出しました。これは、クリエイティブな情熱が困難を乗り越える力となることを示しています。"
         data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/sophie-lloyd-ozzy-osbourne-tribute-shred-black-sabbath-paranoid"
+        data-url="https://www.musicradar.com/artists/jimmy-eat-world-bleed-american"
         data-importance="🟢"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E6%9A%97%E9%BB%92%E3%81%AE%E7%8E%8B%E5%AD%90%E3%81%AE%E8%BF%BD%E6%82%BC%E3%81%AB%E3%80%8D%EF%BC%9ASophie%20Lloyd%E3%80%81Black%20Sabbath%E3%81%AEParanoid%E3%81%AE%E6%BF%80%E3%81%97%E3%81%84%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%83%E3%83%89%E3%82%AB%E3%83%90%E3%83%BC%E3%81%A7Ozzy%20Osbourne%E3%81%AB%E6%95%AC%E6%84%8F%E3%82%92%E8%A1%A8%E3%81%99%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsophie-lloyd-ozzy-osbourne-tribute-shred-black-sabbath-paranoid" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E4%BD%95%E3%81%8B%E3%82%92%E3%81%A8%E3%81%A6%E3%82%82%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AB%E4%BD%9C%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%80%81%E6%9C%AC%E5%BD%93%E3%81%AB%E5%BC%B7%E5%8A%9B%E3%81%AA%E3%82%82%E3%81%AE%E3%81%8C%E3%81%82%E3%82%8B%E3%80%82%E3%81%A9%E3%81%93%E3%81%BE%E3%81%A7%E3%81%9D%E3%82%8C%E3%82%92%E6%8E%A8%E3%81%97%E9%80%B2%E3%82%81%E3%82%89%E3%82%8C%E3%82%8B%E3%81%8B%E3%81%A8%E3%81%84%E3%81%86%E3%80%81%E5%B0%91%E3%81%97%E7%8B%82%E3%81%A3%E3%81%9F%E3%82%88%E3%81%86%E3%81%AA%E6%84%9F%E8%A6%9A%E3%81%8C%E3%81%82%E3%82%8B%E3%80%8D%3A%20Jim%20Adkins%E3%81%A8Zach%20Lind%E3%81%8C%E8%AA%9E%E3%82%8BJimmy%20Eat%20World%E3%81%AE%E3%80%8EBleed%20American%E3%80%8F%E5%88%B6%E4%BD%9C%E7%A7%98%E8%A9%B1%20-%20%E5%BD%BC%E3%82%89%E3%81%AE%E4%BA%BA%E7%94%9F%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E3%82%A2%E3%83%AB%E3%83%90%E3%83%A0%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fjimmy-eat-world-bleed-american" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「暗黒の王子の追悼に」：Sophie Lloyd、Black SabbathのParanoidの激しいシュレッドカバーでOzzy Osbourneに敬意を表す">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「何かをとてもシンプルに作ることに、本当に強力なものがある。どこまでそれを推し進められるかという、少し狂ったような感覚がある」: Jim AdkinsとZach Lindが語るJimmy Eat Worldの『Bleed American』制作秘話 - 彼らの人生を変えたアルバム">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -917,25 +920,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">MusicRadar</span>
     </div>
-    <h2><a href="https://www.musicradar.com/artists/jay-weinberg-on-bruce-springsteen-test-when-filling-in-for-his-dad-in-e-street-band" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「ブルース・スプリングスティーンが私を放り込んだワイルドな状況だったし、彼は自分が何をしているか分かっていたと思う。彼こそ私が一緒に音楽を演奏した唯一の生粋の天才だ」：Jay Weinberg、E Street Bandとの共演で「死ぬほど怖かった」ブルース・スプリングスティーンのテストについて語る</a></h2>
-    <p class="summary">Jay Weinbergは、E Street Bandとの共演前にBruce Springsteenから受けたテストについて語り、その状況が「死ぬほど怖かった」と明かしました。これは、伝説的なミュージシャンとの共演にまつわる逸話です。</p>
+    <h2><a href="https://www.musicradar.com/artists/shows-festivals/put-some-diapers-on-next-time-yall-singer-songwriter-noah-kahan-urges-fans-to-take-precautions-or-control-themselves-amid-a-growing-rise-in-cases-of-people-relieving-themselves-at-his-shows" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「次回はオムツでも履いてきてね、みんな」シンガーソングライターNoah Kahan、コンサートでの排泄問題増加を受け、ファンに注意喚起</a></h2>
+    <p class="summary">シンガーソングライターのNoah Kahanが、コンサートで観客の排泄問題が増加していることに懸念を示し、予防策を講じるか、自己管理を促しました。Olivia Rodrigoなどの他のアーティストも同様の懸念を表明しており、これは大規模イベントにおける観客の行動とアーティストへの影響に関する問題提起です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Jay Weinbergは、Bruce SpringsteenとE Street Bandとの共演という、多くのミュージシャンが憧れる機会を得る過程での貴重な体験を語っています。このエピソードは、偉大なアーティストとの仕事が、才能だけでなく、精神的な強さも要求されることを示唆しています。Bruce Springsteenの指導の下、Jay Weinbergがどのようにプレッシャーを乗り越えたのか、その詳細が語られています。</p>
+<p class="detail-text">Other artists, including Olivia Rodrigo, have shared their concerns about performing to fans who have lost control of their bladders and bowels. Kahan's plea comes amidst a growing trend of concertgoers engaging in disruptive behavior. This issue highlights the challenges artists face in managing large crowds and maintaining a positive concert environment for everyone.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fjay-weinberg-on-bruce-springsteen-test-when-filling-in-for-his-dad-in-e-street-band"
-        data-title="「ブルース・スプリングスティーンが私を放り込んだワイルドな状況だったし、彼は自分が何をしているか分かっていたと思う。彼こそ私が一緒に音楽を演奏した唯一の生粋の天才だ」：Jay Weinberg、E Street Bandとの共演で「死ぬほど怖かった」ブルース・スプリングスティーンのテストについて語る"
-        data-summary="Jay Weinbergは、E Street Bandとの共演前にBruce Springsteenから受けたテストについて語り、その状況が「死ぬほど怖かった」と明かしました。これは、伝説的なミュージシャンとの共演にまつわる逸話です。"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fshows-festivals%2Fput-some-diapers-on-next-time-yall-singer-songwriter-noah-kahan-urges-fans-to-take-precautions-or-control-themselves-amid-a-growing-rise-in-cases-of-people-relieving-themselves-at-his-shows"
+        data-title="「次回はオムツでも履いてきてね、みんな」シンガーソングライターNoah Kahan、コンサートでの排泄問題増加を受け、ファンに注意喚起"
+        data-summary="シンガーソングライターのNoah Kahanが、コンサートで観客の排泄問題が増加していることに懸念を示し、予防策を講じるか、自己管理を促しました。Olivia Rodrigoなどの他のアーティストも同様の懸念を表明しており、これは大規模イベントにおける観客の行動とアーティストへの影響に関する問題提起です。"
         data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/jay-weinberg-on-bruce-springsteen-test-when-filling-in-for-his-dad-in-e-street-band"
+        data-url="https://www.musicradar.com/artists/shows-festivals/put-some-diapers-on-next-time-yall-singer-songwriter-noah-kahan-urges-fans-to-take-precautions-or-control-themselves-amid-a-growing-rise-in-cases-of-people-relieving-themselves-at-his-shows"
         data-importance="🟢"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%83%96%E3%83%AB%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%B3%E3%81%8C%E7%A7%81%E3%82%92%E6%94%BE%E3%82%8A%E8%BE%BC%E3%82%93%E3%81%A0%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%E3%81%AA%E7%8A%B6%E6%B3%81%E3%81%A0%E3%81%A3%E3%81%9F%E3%81%97%E3%80%81%E5%BD%BC%E3%81%AF%E8%87%AA%E5%88%86%E3%81%8C%E4%BD%95%E3%82%92%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%8B%E5%88%86%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A8%E6%80%9D%E3%81%86%E3%80%82%E5%BD%BC%E3%81%93%E3%81%9D%E7%A7%81%E3%81%8C%E4%B8%80%E7%B7%92%E3%81%AB%E9%9F%B3%E6%A5%BD%E3%82%92%E6%BC%94%E5%A5%8F%E3%81%97%E3%81%9F%E5%94%AF%E4%B8%80%E3%81%AE%E7%94%9F%E7%B2%8B%E3%81%AE%E5%A4%A9%E6%89%8D%E3%81%A0%E3%80%8D%EF%BC%9AJay%20Weinberg%E3%80%81E%20Street%20Band%E3%81%A8%E3%81%AE%E5%85%B1%E6%BC%94%E3%81%A7%E3%80%8C%E6%AD%BB%E3%81%AC%E3%81%BB%E3%81%A9%E6%80%96%E3%81%8B%E3%81%A3%E3%81%9F%E3%80%8D%E3%83%96%E3%83%AB%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%86%E3%82%B9%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%9E%E3%82%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fjay-weinberg-on-bruce-springsteen-test-when-filling-in-for-his-dad-in-e-street-band" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E6%AC%A1%E5%9B%9E%E3%81%AF%E3%82%AA%E3%83%A0%E3%83%84%E3%81%A7%E3%82%82%E5%B1%A5%E3%81%84%E3%81%A6%E3%81%8D%E3%81%A6%E3%81%AD%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E3%80%8D%E3%82%B7%E3%83%B3%E3%82%AC%E3%83%BC%E3%82%BD%E3%83%B3%E3%82%B0%E3%83%A9%E3%82%A4%E3%82%BF%E3%83%BCNoah%20Kahan%E3%80%81%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88%E3%81%A7%E3%81%AE%E6%8E%92%E6%B3%84%E5%95%8F%E9%A1%8C%E5%A2%97%E5%8A%A0%E3%82%92%E5%8F%97%E3%81%91%E3%80%81%E3%83%95%E3%82%A1%E3%83%B3%E3%81%AB%E6%B3%A8%E6%84%8F%E5%96%9A%E8%B5%B7%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fshows-festivals%2Fput-some-diapers-on-next-time-yall-singer-songwriter-noah-kahan-urges-fans-to-take-precautions-or-control-themselves-amid-a-growing-rise-in-cases-of-people-relieving-themselves-at-his-shows" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「ブルース・スプリングスティーンが私を放り込んだワイルドな状況だったし、彼は自分が何をしているか分かっていたと思う。彼こそ私が一緒に音楽を演奏した唯一の生粋の天才だ」：Jay Weinberg、E Street Bandとの共演で「死ぬほど怖かった」ブルース・スプリングスティーンのテストについて語る">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="「次回はオムツでも履いてきてね、みんな」シンガーソングライターNoah Kahan、コンサートでの排泄問題増加を受け、ファンに注意喚起">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -943,27 +946,55 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">MusicRadar</span>
+      <span class="item-source">Attack Magazine</span>
     </div>
-    <h2><a href="https://www.musicradar.com/guitars/guitar-amps/blackstar-beam-mini-review" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「Beam Miniの本当のすごさは、膨大なアンプキャプチャーにもアクセスできることだ」：Blackstar Beam Miniレビュー</a></h2>
-    <p class="summary">Blackstar Beam Miniは、そのコンパクトさにもかかわらず、膨大なアンプキャプチャーにアクセスできる点が特徴です。このレビューでは、その多機能性とサウンドについて評価されています。</p>
+    <h2><a href="https://www.attackmagazine.com/reviews/the-best/5-of-the-best-software-and-hardware-trackers/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">5つの最高のソフトウェアおよびハードウェアトラッカー</a></h2>
+    <p class="summary">この記事では、DTMにおけるトラックメイキングの代替手法として注目される「トラッカー」について、5つの優れたソフトウェアおよびハードウェア製品を紹介しています。トラッカーは、数字でノートやパラメータ情報を表示し、垂直方向に進行する独特のインターフェースを持ち、特にJungleやIDMなどのジャンルで重宝されています。これは、DAWとは異なる制作スタイルを探求するクリエイターにとって有益な情報です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Blackstar Beam Miniは、ギタリストやベーシスト向けのコンパクトなアンプであり、最新のサウンドモデリング技術を活用しています。多種多様なアンプサウンドをシミュレートできる機能は、自宅練習からレコーディングまで幅広く活用できる可能性を秘めています。レビューでは、そのサウンドクオリティと使い勝手について詳しく解説されています。</p>
+<p class="detail-text">We’re all familiar with the traditional DAW sequencer, which scrolls along a timeline from left to right. Most major DAWs use some kind of horizontal sequencer, with note information represented as blocks on a piano roll, but this is not the only game in town. Trackers provide a novel alternative, one that displays note and parameter information as numbers, and proceeds vertically, tumbling from the top of the screen down. The article details SunVox, Electronisounds TRX-12, Renoise, Dirtywave M8, and Polyend Tracker+, explaining their features and pricing.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Fguitar-amps%2Fblackstar-beam-mini-review"
-        data-title="「Beam Miniの本当のすごさは、膨大なアンプキャプチャーにもアクセスできることだ」：Blackstar Beam Miniレビュー"
-        data-summary="Blackstar Beam Miniは、そのコンパクトさにもかかわらず、膨大なアンプキャプチャーにアクセスできる点が特徴です。このレビューでは、その多機能性とサウンドについて評価されています。"
-        data-source="MusicRadar"
-        data-url="https://www.musicradar.com/guitars/guitar-amps/blackstar-beam-mini-review"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2F5-of-the-best-software-and-hardware-trackers%2F"
+        data-title="5つの最高のソフトウェアおよびハードウェアトラッカー"
+        data-summary="この記事では、DTMにおけるトラックメイキングの代替手法として注目される「トラッカー」について、5つの優れたソフトウェアおよびハードウェア製品を紹介しています。トラッカーは、数字でノートやパラメータ情報を表示し、垂直方向に進行する独特のインターフェースを持ち、特にJungleやIDMなどのジャンルで重宝されています。これは、DAWとは異なる制作スタイルを探求するクリエイターにとって有益な情報です。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/reviews/the-best/5-of-the-best-software-and-hardware-trackers/"
         data-importance="🟢"
         data-category="音楽">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8CBeam%20Mini%E3%81%AE%E6%9C%AC%E5%BD%93%E3%81%AE%E3%81%99%E3%81%94%E3%81%95%E3%81%AF%E3%80%81%E8%86%A8%E5%A4%A7%E3%81%AA%E3%82%A2%E3%83%B3%E3%83%97%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E3%83%BC%E3%81%AB%E3%82%82%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A0%E3%80%8D%EF%BC%9ABlackstar%20Beam%20Mini%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%20https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Fguitar-amps%2Fblackstar-beam-mini-review" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=5%E3%81%A4%E3%81%AE%E6%9C%80%E9%AB%98%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%8A%E3%82%88%E3%81%B3%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%88%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2F5-of-the-best-software-and-hardware-trackers%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「Beam Miniの本当のすごさは、膨大なアンプキャプチャーにもアクセスできることだ」：Blackstar Beam Miniレビュー">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="5つの最高のソフトウェアおよびハードウェアトラッカー">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.25s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">Attack Magazine</span>
+    </div>
+    <h2><a href="https://www.attackmagazine.com/reviews/gear-software/orchid-who-knew-chords-could-be-this-much-fun/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OrchiD: コードがこんなに楽しいとは誰が知っていた？</a></h2>
+    <p class="summary">Telepathic InstrumentsのOrchidは、Tame ImpalaのKevin Parkerが考案した画期的なコードジェネレーターです。この楽器は、メロディックなアイデアを生み出すのに特化しており、ダンスミュージックプロデューサーにもその魅力を発揮します。Orchidは、音楽制作におけるインスピレーションと楽しさを提供し、新しい作曲アプローチを提案しています。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">Telepathic Instruments’ Orchid is a fantastic chord generator from Tame Impala’s Kevin Parker, but can it appeal to dance music producers too? The instrument is designed to help users work through chord progressions and is more of a song starter than a song finisher. It features a single octave of keys and eight chord buttons, allowing for easy creation of chord progressions. The sound engine includes virtual analog, physically modeled electric piano, and FM synthesis types. The accompanying software app, Pistil, costs £99.</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Forchid-who-knew-chords-could-be-this-much-fun%2F"
+        data-title="OrchiD: コードがこんなに楽しいとは誰が知っていた？"
+        data-summary="Telepathic InstrumentsのOrchidは、Tame ImpalaのKevin Parkerが考案した画期的なコードジェネレーターです。この楽器は、メロディックなアイデアを生み出すのに特化しており、ダンスミュージックプロデューサーにもその魅力を発揮します。Orchidは、音楽制作におけるインスピレーションと楽しさを提供し、新しい作曲アプローチを提案しています。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/reviews/gear-software/orchid-who-knew-chords-could-be-this-much-fun/"
+        data-importance="🟢"
+        data-category="音楽">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=OrchiD%3A%20%E3%82%B3%E3%83%BC%E3%83%89%E3%81%8C%E3%81%93%E3%82%93%E3%81%AA%E3%81%AB%E6%A5%BD%E3%81%97%E3%81%84%E3%81%A8%E3%81%AF%E8%AA%B0%E3%81%8C%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%81%9F%EF%BC%9F%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Forchid-who-knew-chords-could-be-this-much-fun%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="OrchiD: コードがこんなに楽しいとは誰が知っていた？">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -975,25 +1006,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">Attack Magazine</span>
     </div>
-    <h2><a href="https://www.attackmagazine.com/reviews/the-best/5-of-the-best-software-and-hardware-trackers/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">5つの最高のソフトウェアおよびハードウェアトラッカー</a></h2>
-    <p class="summary">このガイドでは、Jungle、IDM、Breakcoreなどのジャンル制作に不可欠な「トラッカー」と呼ばれる音楽制作ソフトウェアとハードウェアのトップ5を紹介しています。トラッカーの基本から、各ツールの特徴、そして実際の使用例までを網羅しています。</p>
+    <h2><a href="https://www.attackmagazine.com/news/native-instruments-and-a-g-cook-launch-supersaw-synthesiser/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Native InstrumentsとA.G. CookがSuper*Sawシンセサイザーをローンチ</a></h2>
+    <p class="summary">Native Instrumentsは、プロデューサーA.G. Cookと共同開発したソフトシンセ「Super*Saw」を発表しました。このシンセは、Cook氏がCharli XCXやBeyoncéなどのアーティストのために使用してきたレイヤード・スーパーソーのプロダクション技術を基盤としています。Super*Sawは、複雑なサウンドデザインを単一のインストゥルメントで実現し、現代の音楽制作におけるサウンドメイキングの進化を示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">トラッカーは、従来のDAWとは異なる垂直スクロールのシーケンサーを備えた音楽制作ツールであり、特に特定のジャンルで根強い人気があります。この記事では、Alexander Zolotov Sunvox、Electronisounds TRX-12、Renoise、Dirtywave M8、Polyend Tracker+といった、現在入手可能な優れたトラッカーを、ソフトウェアとハードウェアの両面から紹介しています。それぞれのツールの価格、機能、そしてどのようなユーザーに適しているかについても解説しています。</p>
+<p class="detail-text">The new soft synth adapts A. G. Cook’s layered supersaw production techniques for a dedicated plug-in. Super*Saw combines dual oscillator banks, patch morphing, harmonic tools, effects and Native Instruments hardware integration. It is built around two independent oscillator banks, each generating up to 16 sawtooth waves, and features a four-corner X/Y Morpher for continuous sound alteration. The instrument is priced at $99 or €99.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2F5-of-the-best-software-and-hardware-trackers%2F"
-        data-title="5つの最高のソフトウェアおよびハードウェアトラッカー"
-        data-summary="このガイドでは、Jungle、IDM、Breakcoreなどのジャンル制作に不可欠な「トラッカー」と呼ばれる音楽制作ソフトウェアとハードウェアのトップ5を紹介しています。トラッカーの基本から、各ツールの特徴、そして実際の使用例までを網羅しています。"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fnative-instruments-and-a-g-cook-launch-supersaw-synthesiser%2F"
+        data-title="Native InstrumentsとA.G. CookがSuper*Sawシンセサイザーをローンチ"
+        data-summary="Native Instrumentsは、プロデューサーA.G. Cookと共同開発したソフトシンセ「Super*Saw」を発表しました。このシンセは、Cook氏がCharli XCXやBeyoncéなどのアーティストのために使用してきたレイヤード・スーパーソーのプロダクション技術を基盤としています。Super*Sawは、複雑なサウンドデザインを単一のインストゥルメントで実現し、現代の音楽制作におけるサウンドメイキングの進化を示しています。"
         data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/reviews/the-best/5-of-the-best-software-and-hardware-trackers/"
+        data-url="https://www.attackmagazine.com/news/native-instruments-and-a-g-cook-launch-supersaw-synthesiser/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=5%E3%81%A4%E3%81%AE%E6%9C%80%E9%AB%98%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%8A%E3%82%88%E3%81%B3%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%88%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2F5-of-the-best-software-and-hardware-trackers%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Native%20Instruments%E3%81%A8A.G.%20Cook%E3%81%8CSuper%2ASaw%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC%E3%82%92%E3%83%AD%E3%83%BC%E3%83%B3%E3%83%81%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fnative-instruments-and-a-g-cook-launch-supersaw-synthesiser%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="5つの最高のソフトウェアおよびハードウェアトラッカー">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Native InstrumentsとA.G. CookがSuper*Sawシンセサイザーをローンチ">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1001,27 +1032,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Attack Magazine</span>
+      <span class="item-source">Bedroom Producers Blog</span>
     </div>
-    <h2><a href="https://www.attackmagazine.com/reviews/the-best/5-of-the-best-software-and-hardware-trackers/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">5つの最高のソフトウェアおよびハードウェアトラッカー</a></h2>
-    <p class="summary">このガイドでは、Jungle、IDM、Breakcoreなどのジャンル制作に不可欠な「トラッカー」と呼ばれる音楽制作ソフトウェアとハードウェアのトップ5を紹介しています。トラッカーの基本から、各ツールの特徴、そして実際の使用例までを網羅しています。</p>
+    <h2><a href="https://bedroomproducersblog.com/2026/07/24/gliff-midi-guitar-translator/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">GliffはmacOSとWindows向けの無料MIDIギター翻訳ツールです</a></h2>
+    <p class="summary">Gliffは、macOSとWindows向けの無料ギターベースのプラグインで、ギタリストとキーボーディストの両方を対象としています。ギタリストはクリーンでポリフォニックなMIDIコードパターンを作成し、プロジェクトにドラッグ＆ドロップできます。このツールは、ギタリストがMIDIコントローラーとしてギターをより活用できるようにし、DTMにおける新たな可能性を示唆しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">トラッカーは、従来のDAWとは異なる垂直スクロールのシーケンサーを備えた音楽制作ツールであり、特に特定のジャンルで根強い人気があります。この記事では、Alexander Zolotov Sunvox、Electronisounds TRX-12、Renoise、Dirtywave M8、Polyend Tracker+といった、現在入手可能な優れたトラッカーを、ソフトウェアとハードウェアの両面から紹介しています。それぞれのツールの価格、機能、そしてどのようなユーザーに適しているかについても解説しています。</p>
+<p class="detail-text">Gliff is a free guitar-based plugin for macOS and Windows that's aimed at guitarists and keyboardists alike. So, there are two ways to approach this plugin: one is as a guitarist looking to create clean, polyphonic MIDI chord patterns that you can drag and drop into your project. The appeal might be that you're a guitarist who wants to use their guitar as a MIDI controller. It can translate guitar signals into MIDI notes, allowing for seamless integration with DAWs and virtual instruments.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2F5-of-the-best-software-and-hardware-trackers%2F"
-        data-title="5つの最高のソフトウェアおよびハードウェアトラッカー"
-        data-summary="このガイドでは、Jungle、IDM、Breakcoreなどのジャンル制作に不可欠な「トラッカー」と呼ばれる音楽制作ソフトウェアとハードウェアのトップ5を紹介しています。トラッカーの基本から、各ツールの特徴、そして実際の使用例までを網羅しています。"
-        data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/reviews/the-best/5-of-the-best-software-and-hardware-trackers/"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F24%2Fgliff-midi-guitar-translator%2F"
+        data-title="GliffはmacOSとWindows向けの無料MIDIギター翻訳ツールです"
+        data-summary="Gliffは、macOSとWindows向けの無料ギターベースのプラグインで、ギタリストとキーボーディストの両方を対象としています。ギタリストはクリーンでポリフォニックなMIDIコードパターンを作成し、プロジェクトにドラッグ＆ドロップできます。このツールは、ギタリストがMIDIコントローラーとしてギターをより活用できるようにし、DTMにおける新たな可能性を示唆しています。"
+        data-source="Bedroom Producers Blog"
+        data-url="https://bedroomproducersblog.com/2026/07/24/gliff-midi-guitar-translator/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=5%E3%81%A4%E3%81%AE%E6%9C%80%E9%AB%98%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%8A%E3%82%88%E3%81%B3%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%88%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2F5-of-the-best-software-and-hardware-trackers%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Gliff%E3%81%AFmacOS%E3%81%A8Windows%E5%90%91%E3%81%91%E3%81%AE%E7%84%A1%E6%96%99MIDI%E3%82%AE%E3%82%BF%E3%83%BC%E7%BF%BB%E8%A8%B3%E3%83%84%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%99%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F24%2Fgliff-midi-guitar-translator%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="5つの最高のソフトウェアおよびハードウェアトラッカー">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="GliffはmacOSとWindows向けの無料MIDIギター翻訳ツールです">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1029,27 +1060,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Attack Magazine</span>
+      <span class="item-source">Bedroom Producers Blog</span>
     </div>
-    <h2><a href="https://www.attackmagazine.com/news/native-instruments-and-a-g-cook-launch-supersaw-synthesiser/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Native InstrumentsとA. G. CookがSuper*Sawシンセサイザーをローンチ</a></h2>
-    <p class="summary">Native Instrumentsは、プロデューサーA. G. Cookと共同開発したソフトシンセ「Super*Saw」を発表しました。このシンセは、Cook氏がCharli XCXやBeyoncéなどのアーティストのために使用してきたレイヤード・スーパーソー・プロダクション技術を基盤としています。</p>
+    <h2><a href="https://bedroomproducersblog.com/2026/07/24/matari-audio-buffr-beta/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Matari Audio、レトロスペクティブオーディオ＆MIDIキャプチャプラグイン「BUFFR」の無料パブリックベータ版をリリース</a></h2>
+    <p class="summary">Matari Audioは、macOS、Windows、Linux向けのレトロスペクティブオーディオ、システムオーディオ、MIDIキャプチャプラグイン「BUFFR」の無料パブリックベータ版をリリースしました。このプラグインは、過去のオーディオやMIDI入力をキャプチャできるため、録音ミスを防いだり、セッションのアイデアを保存したりするのに役立ちます。これは、DTMにおけるワークフローを改善する有用なツールです。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Super*Sawは、2つの独立したオシレーターバンクを搭載し、それぞれ最大16基のソー（ノコギリ波）を生成できます。これにより、豊かで厚みのあるサウンドメイクが可能です。X/Yモーフ機能により、4つのパッチ状態を保存し、滑らかに遷移させることができます。また、コードやスケール機能、内蔵エフェクト（コーラス、ディレイ、リバーブなど）も搭載しており、多様な音楽制作に対応します。価格は99ドルです。</p>
+<p class="detail-text">Matari Audio has released BUFFR, a free public beta of a retrospective audio, system audio, and MIDI capture plugin for macOS, Windows, and Linux. Important note before we get into the details: the public beta is free, but each beta license lasts 21 days from first use. There is no announced beta program end date. BUFFR allows users to capture audio and MIDI data that has already occurred, offering a safety net for recording and creative exploration.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fnative-instruments-and-a-g-cook-launch-supersaw-synthesiser%2F"
-        data-title="Native InstrumentsとA. G. CookがSuper*Sawシンセサイザーをローンチ"
-        data-summary="Native Instrumentsは、プロデューサーA. G. Cookと共同開発したソフトシンセ「Super*Saw」を発表しました。このシンセは、Cook氏がCharli XCXやBeyoncéなどのアーティストのために使用してきたレイヤード・スーパーソー・プロダクション技術を基盤としています。"
-        data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/news/native-instruments-and-a-g-cook-launch-supersaw-synthesiser/"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F24%2Fmatari-audio-buffr-beta%2F"
+        data-title="Matari Audio、レトロスペクティブオーディオ＆MIDIキャプチャプラグイン「BUFFR」の無料パブリックベータ版をリリース"
+        data-summary="Matari Audioは、macOS、Windows、Linux向けのレトロスペクティブオーディオ、システムオーディオ、MIDIキャプチャプラグイン「BUFFR」の無料パブリックベータ版をリリースしました。このプラグインは、過去のオーディオやMIDI入力をキャプチャできるため、録音ミスを防いだり、セッションのアイデアを保存したりするのに役立ちます。これは、DTMにおけるワークフローを改善する有用なツールです。"
+        data-source="Bedroom Producers Blog"
+        data-url="https://bedroomproducersblog.com/2026/07/24/matari-audio-buffr-beta/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Native%20Instruments%E3%81%A8A.%20G.%20Cook%E3%81%8CSuper%2ASaw%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC%E3%82%92%E3%83%AD%E3%83%BC%E3%83%B3%E3%83%81%20https%3A%2F%2Fwww.attackmagazine.com%2Fnews%2Fnative-instruments-and-a-g-cook-launch-supersaw-synthesiser%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Matari%20Audio%E3%80%81%E3%83%AC%E3%83%88%E3%83%AD%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%EF%BC%86MIDI%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%8CBUFFR%E3%80%8D%E3%81%AE%E7%84%A1%E6%96%99%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%AF%E3%83%99%E3%83%BC%E3%82%BF%E7%89%88%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F24%2Fmatari-audio-buffr-beta%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Native InstrumentsとA. G. CookがSuper*Sawシンセサイザーをローンチ">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Matari Audio、レトロスペクティブオーディオ＆MIDIキャプチャプラグイン「BUFFR」の無料パブリックベータ版をリリース">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1057,27 +1088,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Attack Magazine</span>
+      <span class="item-source">Bedroom Producers Blog</span>
     </div>
-    <h2><a href="https://www.attackmagazine.com/reviews/gear-software/orchid-who-knew-chords-could-be-this-much-fun/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OrchiD: コードがこんなに楽しいなんて誰が知っていた？</a></h2>
-    <p class="summary">Telepathic InstrumentsのOrchidは、Tame ImpalaのKevin Parkerが開発に関わった画期的なコードジェネレーターですが、ダンスミュージックプロデューサーにもアピールできるのでしょうか。この記事では、その魅力と実用性をレビューしています。</p>
+    <h2><a href="https://bedroomproducersblog.com/2026/07/24/expressive-e-noisy-2-6/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Expressive E、新しいレゾネーター、エフェクト、プリセットを備えたNoisy 2.6をローンチ（イントロオファー）</a></h2>
+    <p class="summary">Expressive Eは、ノイズ・スルー・レゾナンス・ソフトウェアシンセサイザーのメジャーアップデートである「Noisy 2.6」をリリースしました。既存ユーザーは無料アップデートで利用でき、新規ユーザーは期間限定で40%オフの価格で購入できます。このアップデートにより、シンセサイザーの表現力とサウンドデザインの可能性がさらに広がります。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Orchid ORC-1は、インスピレーションを得るための「アイデアマシン」として設計されており、コード進行の作曲を容易にします。鍵盤と8つのコードボタンにより、直感的に様々なコードタイプを生成できます。メジャー/マイナースケール設定や、コードのボイシングを調整する機能も備わっています。内蔵ビートやオーディオロッカー、さらには8時間のバッテリー駆動といった機能も搭載しています。価格は699ドルです。</p>
+<p class="detail-text">Expressive E has released Noisy 2.6, a major update to its noise-through-resonance software synthesizer. Noisy 2.6 is a free update for existing Noisy 2 owners. For a limited time, new users can get it for €89/$89 (40% off), before it returns to its regular €149/$149 price. The update includes new resonators, effects, and presets, enhancing the sonic capabilities of the synthesizer and offering more creative options for producers.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Forchid-who-knew-chords-could-be-this-much-fun%2F"
-        data-title="OrchiD: コードがこんなに楽しいなんて誰が知っていた？"
-        data-summary="Telepathic InstrumentsのOrchidは、Tame ImpalaのKevin Parkerが開発に関わった画期的なコードジェネレーターですが、ダンスミュージックプロデューサーにもアピールできるのでしょうか。この記事では、その魅力と実用性をレビューしています。"
-        data-source="Attack Magazine"
-        data-url="https://www.attackmagazine.com/reviews/gear-software/orchid-who-knew-chords-could-be-this-much-fun/"
+        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F24%2Fexpressive-e-noisy-2-6%2F"
+        data-title="Expressive E、新しいレゾネーター、エフェクト、プリセットを備えたNoisy 2.6をローンチ（イントロオファー）"
+        data-summary="Expressive Eは、ノイズ・スルー・レゾナンス・ソフトウェアシンセサイザーのメジャーアップデートである「Noisy 2.6」をリリースしました。既存ユーザーは無料アップデートで利用でき、新規ユーザーは期間限定で40%オフの価格で購入できます。このアップデートにより、シンセサイザーの表現力とサウンドデザインの可能性がさらに広がります。"
+        data-source="Bedroom Producers Blog"
+        data-url="https://bedroomproducersblog.com/2026/07/24/expressive-e-noisy-2-6/"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=OrchiD%3A%20%E3%82%B3%E3%83%BC%E3%83%89%E3%81%8C%E3%81%93%E3%82%93%E3%81%AA%E3%81%AB%E6%A5%BD%E3%81%97%E3%81%84%E3%81%AA%E3%82%93%E3%81%A6%E8%AA%B0%E3%81%8C%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%81%9F%EF%BC%9F%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Forchid-who-knew-chords-could-be-this-much-fun%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Expressive%20E%E3%80%81%E6%96%B0%E3%81%97%E3%81%84%E3%83%AC%E3%82%BE%E3%83%8D%E3%83%BC%E3%82%BF%E3%83%BC%E3%80%81%E3%82%A8%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%E3%80%81%E3%83%97%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88%E3%82%92%E5%82%99%E3%81%88%E3%81%9FNoisy%202.6%E3%82%92%E3%83%AD%E3%83%BC%E3%83%B3%E3%83%81%EF%BC%88%E3%82%A4%E3%83%B3%E3%83%88%E3%83%AD%E3%82%AA%E3%83%95%E3%82%A1%E3%83%BC%EF%BC%89%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F24%2Fexpressive-e-noisy-2-6%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="OrchiD: コードがこんなに楽しいなんて誰が知っていた？">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="Expressive E、新しいレゾネーター、エフェクト、プリセットを備えたNoisy 2.6をローンチ（イントロオファー）">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1085,27 +1116,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Bedroom Producers Blog</span>
+      <span class="item-source">DTMステーション</span>
     </div>
-    <h2><a href="https://bedroomproducersblog.com/2026/07/23/friendgineer-labs-chance/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Friendgineer Labs、無料のランダムマルチFXプラグイン「Chance」をリリース</a></h2>
-    <p class="summary">Friendgineer Labsは、macOSおよびWindows向けの無料ランダムマルチFXプラグイン「Chance」をリリースしました。これはKVR Developer Challenge 2026のエントリー作品の一つであり、ユニークなエフェクトを提供します。</p>
+    <h2><a href="https://www.dtmstation.com/archives/78442.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">アナログ名機MGがデジタルに進化！ヤマハのデジタルミキサー、MGXシリーズはDTMの強力な武器になる</a></h2>
+    <p class="summary">ヤマハのアナログミキサーMGシリーズをデジタル化した「MGXシリーズ」が登場しました。長年愛されてきたMGシリーズの使いやすさと信頼性を引き継ぎつつ、デジタルならではの機能が追加されたことで、DTM制作において強力な武器となると期待されています。これは、音楽制作の現場におけるミキシングツールの進化を示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Chanceは、ランダムなエフェクトの組み合わせにより、予測不可能なサウンドを生み出すプラグインです。音楽制作に新たなインスピレーションをもたらす可能性があり、特に実験的なサウンドデザインを求めるクリエイターに適しています。無料で利用できるため、手軽に試すことができます。</p>
+<p class="detail-text">長年にわたりベストセラーモデルとして、ライブや設備音響などはもちろん、音楽制作の現場でもいろいろ使われてきたヤマハのアナログミキサー、MGシリーズ。そのMGシリーズをデジタルへと進化させたデジタルミキシングコンソール、MGXシリーズは、DTM制作において、より高度なサウンドメイキングと柔軟なミキシングを可能にします。その機能と利便性は、プロフェッショナルからホビイストまで幅広く支持されるでしょう。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F23%2Ffriendgineer-labs-chance%2F"
-        data-title="Friendgineer Labs、無料のランダムマルチFXプラグイン「Chance」をリリース"
-        data-summary="Friendgineer Labsは、macOSおよびWindows向けの無料ランダムマルチFXプラグイン「Chance」をリリースしました。これはKVR Developer Challenge 2026のエントリー作品の一つであり、ユニークなエフェクトを提供します。"
-        data-source="Bedroom Producers Blog"
-        data-url="https://bedroomproducersblog.com/2026/07/23/friendgineer-labs-chance/"
+        data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F78442.html"
+        data-title="アナログ名機MGがデジタルに進化！ヤマハのデジタルミキサー、MGXシリーズはDTMの強力な武器になる"
+        data-summary="ヤマハのアナログミキサーMGシリーズをデジタル化した「MGXシリーズ」が登場しました。長年愛されてきたMGシリーズの使いやすさと信頼性を引き継ぎつつ、デジタルならではの機能が追加されたことで、DTM制作において強力な武器となると期待されています。これは、音楽制作の現場におけるミキシングツールの進化を示しています。"
+        data-source="DTMステーション"
+        data-url="https://www.dtmstation.com/archives/78442.html"
         data-importance="🟡"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Friendgineer%20Labs%E3%80%81%E7%84%A1%E6%96%99%E3%81%AE%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%83%9E%E3%83%AB%E3%83%81FX%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%8CChance%E3%80%8D%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F23%2Ffriendgineer-labs-chance%2F" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E5%90%8D%E6%A9%9FMG%E3%81%8C%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%81%AB%E9%80%B2%E5%8C%96%EF%BC%81%E3%83%A4%E3%83%9E%E3%83%8F%E3%81%AE%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9F%E3%82%AD%E3%82%B5%E3%83%BC%E3%80%81MGX%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%E3%81%AFDTM%E3%81%AE%E5%BC%B7%E5%8A%9B%E3%81%AA%E6%AD%A6%E5%99%A8%E3%81%AB%E3%81%AA%E3%82%8B%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F78442.html" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Friendgineer Labs、無料のランダムマルチFXプラグイン「Chance」をリリース">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="アナログ名機MGがデジタルに進化！ヤマハのデジタルミキサー、MGXシリーズはDTMの強力な武器になる">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1113,75 +1144,19 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Bedroom Producers Blog</span>
-    </div>
-    <h2><a href="https://bedroomproducersblog.com/2026/07/23/westwood-instruments-roots-plugins/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Westwood Instruments、無料のRootsインストゥルメントをプラグイン形式で再リリース</a></h2>
-    <p class="summary">Westwood Instrumentsは、以前Kontakt Player向けに提供されていた無料のバーチャルインストゥルメントシリーズ「Roots」を、独自開発のプラグイン形式で再リリースしました。これにより、より多くのユーザーがこれらのインストゥルメントを利用できるようになります。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">Rootsシリーズは、Untold StringsやDust Pianoなどの、ユニークなサウンドを持つ無料のインストゥルメントコレクションです。今回のプラグイン形式での再リリースにより、Kontakt Playerを所有していないユーザーでも手軽に利用できるようになりました。実験的なサウンドや独特のテクスチャーを求めるプロデューサーにとって、貴重なリソースとなるでしょう。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F23%2Fwestwood-instruments-roots-plugins%2F"
-        data-title="Westwood Instruments、無料のRootsインストゥルメントをプラグイン形式で再リリース"
-        data-summary="Westwood Instrumentsは、以前Kontakt Player向けに提供されていた無料のバーチャルインストゥルメントシリーズ「Roots」を、独自開発のプラグイン形式で再リリースしました。これにより、より多くのユーザーがこれらのインストゥルメントを利用できるようになります。"
-        data-source="Bedroom Producers Blog"
-        data-url="https://bedroomproducersblog.com/2026/07/23/westwood-instruments-roots-plugins/"
-        data-importance="🟡"
-        data-category="DTM">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Westwood%20Instruments%E3%80%81%E7%84%A1%E6%96%99%E3%81%AERoots%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%82%A5%E3%83%AB%E3%83%A1%E3%83%B3%E3%83%88%E3%82%92%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E5%BD%A2%E5%BC%8F%E3%81%A7%E5%86%8D%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F23%2Fwestwood-instruments-roots-plugins%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Westwood Instruments、無料のRootsインストゥルメントをプラグイン形式で再リリース">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.30s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">Bedroom Producers Blog</span>
-    </div>
-    <h2><a href="https://bedroomproducersblog.com/2026/07/22/fracture-sounds-blueprint-textural-sax/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Fracture Sounds、Kontakt Player向けの無料実験的木管楽器ライブラリ「Blueprint: Textural Sax」をリリース</a></h2>
-    <p class="summary">Fracture Soundsは、無料のBlueprintコレクションに新たなメンバーとして、実験的な木管楽器ライブラリ「Blueprint: Textural Sax」をKontakt Player向けにリリースしました。これは、従来のサックスの音色にとらわれない、ユニークなテクスチャサウンドを提供します。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">Blueprint: Textural Saxは、Textural CelloやTextural Violinに続く、Blueprintシリーズの最新作です。このライブラリは、サックスのリアルな再現を目指すのではなく、その音色を基にした実験的でシネマティックなテクスチャサウンドを生成することに焦点を当てています。サウンドデザイナーや映画音楽制作者にとって、ユニークなサウンドパレットを提供するでしょう。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F22%2Ffracture-sounds-blueprint-textural-sax%2F"
-        data-title="Fracture Sounds、Kontakt Player向けの無料実験的木管楽器ライブラリ「Blueprint: Textural Sax」をリリース"
-        data-summary="Fracture Soundsは、無料のBlueprintコレクションに新たなメンバーとして、実験的な木管楽器ライブラリ「Blueprint: Textural Sax」をKontakt Player向けにリリースしました。これは、従来のサックスの音色にとらわれない、ユニークなテクスチャサウンドを提供します。"
-        data-source="Bedroom Producers Blog"
-        data-url="https://bedroomproducersblog.com/2026/07/22/fracture-sounds-blueprint-textural-sax/"
-        data-importance="🟡"
-        data-category="DTM">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=Fracture%20Sounds%E3%80%81Kontakt%20Player%E5%90%91%E3%81%91%E3%81%AE%E7%84%A1%E6%96%99%E5%AE%9F%E9%A8%93%E7%9A%84%E6%9C%A8%E7%AE%A1%E6%A5%BD%E5%99%A8%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%80%8CBlueprint%3A%20Textural%20Sax%E3%80%8D%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20https%3A%2F%2Fbedroomproducersblog.com%2F2026%2F07%2F22%2Ffracture-sounds-blueprint-textural-sax%2F" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="Fracture Sounds、Kontakt Player向けの無料実験的木管楽器ライブラリ「Blueprint: Textural Sax」をリリース">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.35s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
       <span class="item-source">DTMステーション</span>
     </div>
     <h2><a href="https://www.dtmstation.com/archives/78243.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「初音ミクV6」はこうして生まれた――クリプトン×ヤマハ開発陣が語る「初音ミクらしさ」をAIで実現するまで</a></h2>
-    <p class="summary">VOCALOID6に対応した歌声合成ソフトウェア「初音ミク V6」がリリースされ、クリプトン・フューチャー・メディアとヤマハの開発陣が、「初音ミクらしさ」をAIで実現した過程について語っています。これは、最新の歌声合成技術とキャラクター性を両立させた開発秘話です。</p>
+    <p class="summary">VOCALOID6に対応した歌声合成ソフトウェア「初音ミク V6」がリリースされました。この記事では、クリプトン・フューチャー・メディアとヤマハの開発陣が、「初音ミクらしさ」をAIでどのように実現したのかを語っています。これは、AI技術がボーカルシンセサイザーの表現力をどのように向上させているかを示す興味深い事例です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">初音ミク V6の開発において、AI技術がどのように活用され、キャラクターの個性を維持・向上させたのかが詳述されています。開発者たちは、単なる歌声合成にとどまらず、「初音ミクらしさ」という独特の魅力をAIで再現することに注力したとのことです。この技術は、今後のボーカロイド開発に新たな道を開く可能性があります。</p>
+<p class="detail-text">多くの方もご存じの通り、2026年4月14日、VOCALOID6に対応した歌声合成ソフトウェア「初音ミク V6」が正式リリースされました。VOCALOIDとしては「初音ミク V4X」以来となる大型バージョンで、ボイスバンクの歌声品質を向上させるために、AI技術が活用されています。開発陣は、AIを活用することで、より自然で感情豊かな「初音ミクらしさ」を表現することに成功したと語っています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F78243.html"
         data-title="「初音ミクV6」はこうして生まれた――クリプトン×ヤマハ開発陣が語る「初音ミクらしさ」をAIで実現するまで"
-        data-summary="VOCALOID6に対応した歌声合成ソフトウェア「初音ミク V6」がリリースされ、クリプトン・フューチャー・メディアとヤマハの開発陣が、「初音ミクらしさ」をAIで実現した過程について語っています。これは、最新の歌声合成技術とキャラクター性を両立させた開発秘話です。"
+        data-summary="VOCALOID6に対応した歌声合成ソフトウェア「初音ミク V6」がリリースされました。この記事では、クリプトン・フューチャー・メディアとヤマハの開発陣が、「初音ミクらしさ」をAIでどのように実現したのかを語っています。これは、AI技術がボーカルシンセサイザーの表現力をどのように向上させているかを示す興味深い事例です。"
         data-source="DTMステーション"
         data-url="https://www.dtmstation.com/archives/78243.html"
         data-importance="🟡"
@@ -1193,31 +1168,87 @@ details[open] summary::before { content: "▲ 閉じる"; }
     </div>
   </div>
 </div>
-<div class="item" style="animation-delay:0.40s">
+<div class="item" style="animation-delay:0.30s">
   <div class="item-body">
     <div class="item-meta">
-      <span class="imp-badge imp-important">🟡 重要</span>
-      <span class="item-source">DTMステーション</span>
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">MusicRadar</span>
     </div>
-    <h2><a href="https://www.dtmstation.com/archives/78500.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">こんなミキサーを待っていた！オーディオIF機能搭載のKORGのミニミキサー、NTS-4が超強力で便利だ！</a></h2>
-    <p class="summary">KORGから発売されたミニミキサー「NTS-4 mixer kit」は、オーディオインターフェース機能も搭載しており、その強力さと便利さが高く評価されています。この製品は、コンパクトながら多機能なミキシングソリューションを提供します。</p>
+    <h2><a href="https://www.musicradar.com/guitars/guitar-pedals/morley-wah-octo-fuzz-review" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">"If the WTF is a sign of things to come, I can’t wait to see what these mad scientists cook up next" Morley X DOD Wah-OcTo-Fuzz review</a></h2>
+    <p class="summary">Morley X DOD Wah-OcTo-Fuzzペダルは、革新的で風変わりな3-in-1ストンプボックスです。過去を尊重しつつも、新しいサウンドを生み出しています。このペダルのレビューは、DTMにおける独創性と実験精神の重要性を示唆しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">KORG NTS-4は、キット型の小型ガジェットとして人気のNTSシリーズの第4弾で、ミキサー機能に特化しています。オーディオIF機能も内蔵されているため、PCとの連携も容易です。組み立て式のガジェットとしての楽しみに加え、実践的な音楽制作ツールとしても非常に有用である点が強調されています。価格は35,200円（税込）です。</p>
+<p class="detail-text">A fantastic, wacky, and eccentric three-in-one stompbox that harks back while creating something fresh. The reviewer praises its versatility and unique sound capabilities, suggesting it's a valuable addition for guitarists and producers looking to explore new sonic territories. The pedal combines wah, octave, and fuzz effects in a single unit.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F78500.html"
-        data-title="こんなミキサーを待っていた！オーディオIF機能搭載のKORGのミニミキサー、NTS-4が超強力で便利だ！"
-        data-summary="KORGから発売されたミニミキサー「NTS-4 mixer kit」は、オーディオインターフェース機能も搭載しており、その強力さと便利さが高く評価されています。この製品は、コンパクトながら多機能なミキシングソリューションを提供します。"
-        data-source="DTMステーション"
-        data-url="https://www.dtmstation.com/archives/78500.html"
-        data-importance="🟡"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Fguitar-pedals%2Fmorley-wah-octo-fuzz-review"
+        data-title="&quot;If the WTF is a sign of things to come, I can’t wait to see what these mad scientists cook up next&quot; Morley X DOD Wah-OcTo-Fuzz review"
+        data-summary="Morley X DOD Wah-OcTo-Fuzzペダルは、革新的で風変わりな3-in-1ストンプボックスです。過去を尊重しつつも、新しいサウンドを生み出しています。このペダルのレビューは、DTMにおける独創性と実験精神の重要性を示唆しています。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/guitars/guitar-pedals/morley-wah-octo-fuzz-review"
+        data-importance="🟢"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%81%93%E3%82%93%E3%81%AA%E3%83%9F%E3%82%AD%E3%82%B5%E3%83%BC%E3%82%92%E5%BE%85%E3%81%A3%E3%81%A6%E3%81%84%E3%81%9F%EF%BC%81%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AAIF%E6%A9%9F%E8%83%BD%E6%90%AD%E8%BC%89%E3%81%AEKORG%E3%81%AE%E3%83%9F%E3%83%8B%E3%83%9F%E3%82%AD%E3%82%B5%E3%83%BC%E3%80%81NTS-4%E3%81%8C%E8%B6%85%E5%BC%B7%E5%8A%9B%E3%81%A7%E4%BE%BF%E5%88%A9%E3%81%A0%EF%BC%81%20https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F78500.html" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%22If%20the%20WTF%20is%20a%20sign%20of%20things%20to%20come%2C%20I%20can%E2%80%99t%20wait%20to%20see%20what%20these%20mad%20scientists%20cook%20up%20next%22%20Morley%20X%20DOD%20Wah-OcTo-Fuzz%20review%20https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Fguitar-pedals%2Fmorley-wah-octo-fuzz-review" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="こんなミキサーを待っていた！オーディオIF機能搭載のKORGのミニミキサー、NTS-4が超強力で便利だ！">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="&quot;If the WTF is a sign of things to come, I can’t wait to see what these mad scientists cook up next&quot; Morley X DOD Wah-OcTo-Fuzz review">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.35s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">MusicRadar</span>
+    </div>
+    <h2><a href="https://www.musicradar.com/artists/jimmy-eat-world-bleed-american" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「何かをとてもシンプルに作ることに、本当に強力なものがある。どこまでそれを推し進められるかという、少し狂ったような感覚がある」: Jim AdkinsとZach Lindが語るJimmy Eat Worldの『Bleed American』制作秘話 - 彼らの人生を変えたアルバム</a></h2>
+    <p class="summary">Jim AdkinsとZach Lindは、Jimmy Eat Worldの『Bleed American』の制作過程を振り返り、シンプルなアプローチの重要性と、それを極限まで追求する情熱について語っています。レーベルもマネージメントもなく、資金も底をつきかけていた状況で、彼らは世界を魅了する楽曲を生み出しました。これは、DTMにおけるクリエイティブな情熱が困難を乗り越える力となることを示しています。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">They had no label, no management and the money was running out, but they had the songs, and a hit that would catch the ear of Taylor Swift, Prince and the rest of the world. The interview delves into the band's early struggles and how their determination to create authentic music led to their breakthrough album. It highlights the power of independent creation and the unexpected paths to success in music production.</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fjimmy-eat-world-bleed-american"
+        data-title="「何かをとてもシンプルに作ることに、本当に強力なものがある。どこまでそれを推し進められるかという、少し狂ったような感覚がある」: Jim AdkinsとZach Lindが語るJimmy Eat Worldの『Bleed American』制作秘話 - 彼らの人生を変えたアルバム"
+        data-summary="Jim AdkinsとZach Lindは、Jimmy Eat Worldの『Bleed American』の制作過程を振り返り、シンプルなアプローチの重要性と、それを極限まで追求する情熱について語っています。レーベルもマネージメントもなく、資金も底をつきかけていた状況で、彼らは世界を魅了する楽曲を生み出しました。これは、DTMにおけるクリエイティブな情熱が困難を乗り越える力となることを示しています。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/artists/jimmy-eat-world-bleed-american"
+        data-importance="🟢"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E4%BD%95%E3%81%8B%E3%82%92%E3%81%A8%E3%81%A6%E3%82%82%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AB%E4%BD%9C%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%80%81%E6%9C%AC%E5%BD%93%E3%81%AB%E5%BC%B7%E5%8A%9B%E3%81%AA%E3%82%82%E3%81%AE%E3%81%8C%E3%81%82%E3%82%8B%E3%80%82%E3%81%A9%E3%81%93%E3%81%BE%E3%81%A7%E3%81%9D%E3%82%8C%E3%82%92%E6%8E%A8%E3%81%97%E9%80%B2%E3%82%81%E3%82%89%E3%82%8C%E3%82%8B%E3%81%8B%E3%81%A8%E3%81%84%E3%81%86%E3%80%81%E5%B0%91%E3%81%97%E7%8B%82%E3%81%A3%E3%81%9F%E3%82%88%E3%81%86%E3%81%AA%E6%84%9F%E8%A6%9A%E3%81%8C%E3%81%82%E3%82%8B%E3%80%8D%3A%20Jim%20Adkins%E3%81%A8Zach%20Lind%E3%81%8C%E8%AA%9E%E3%82%8BJimmy%20Eat%20World%E3%81%AE%E3%80%8EBleed%20American%E3%80%8F%E5%88%B6%E4%BD%9C%E7%A7%98%E8%A9%B1%20-%20%E5%BD%BC%E3%82%89%E3%81%AE%E4%BA%BA%E7%94%9F%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E3%82%A2%E3%83%AB%E3%83%90%E3%83%A0%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fjimmy-eat-world-bleed-american" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="「何かをとてもシンプルに作ることに、本当に強力なものがある。どこまでそれを推し進められるかという、少し狂ったような感覚がある」: Jim AdkinsとZach Lindが語るJimmy Eat Worldの『Bleed American』制作秘話 - 彼らの人生を変えたアルバム">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.40s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">MusicRadar</span>
+    </div>
+    <h2><a href="https://www.musicradar.com/artists/shows-festivals/put-some-diapers-on-next-time-yall-singer-songwriter-noah-kahan-urges-fans-to-take-precautions-or-control-themselves-amid-a-growing-rise-in-cases-of-people-relieving-themselves-at-his-shows" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「次回はオムツでも履いてきてね、みんな」シンガーソングライターNoah Kahan、コンサートでの排泄問題増加を受け、ファンに注意喚起</a></h2>
+    <p class="summary">シンガーソングライターのNoah Kahanが、コンサートで観客の排泄問題が増加していることに懸念を示し、予防策を講じるか、自己管理を促しました。Olivia Rodrigoなどの他のアーティストも同様の懸念を表明しており、これはDTMにおける大規模イベントでの観客の行動とアーティストへの影響に関する問題提起です。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">Other artists, including Olivia Rodrigo, have shared their concerns about performing to fans who have lost control of their bladders and bowels. Kahan's plea comes amidst a growing trend of concertgoers engaging in disruptive behavior. This issue highlights the challenges artists and producers face in managing large events and maintaining a positive environment for attendees.</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fshows-festivals%2Fput-some-diapers-on-next-time-yall-singer-songwriter-noah-kahan-urges-fans-to-take-precautions-or-control-themselves-amid-a-growing-rise-in-cases-of-people-relieving-themselves-at-his-shows"
+        data-title="「次回はオムツでも履いてきてね、みんな」シンガーソングライターNoah Kahan、コンサートでの排泄問題増加を受け、ファンに注意喚起"
+        data-summary="シンガーソングライターのNoah Kahanが、コンサートで観客の排泄問題が増加していることに懸念を示し、予防策を講じるか、自己管理を促しました。Olivia Rodrigoなどの他のアーティストも同様の懸念を表明しており、これはDTMにおける大規模イベントでの観客の行動とアーティストへの影響に関する問題提起です。"
+        data-source="MusicRadar"
+        data-url="https://www.musicradar.com/artists/shows-festivals/put-some-diapers-on-next-time-yall-singer-songwriter-noah-kahan-urges-fans-to-take-precautions-or-control-themselves-amid-a-growing-rise-in-cases-of-people-relieving-themselves-at-his-shows"
+        data-importance="🟢"
+        data-category="DTM">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E6%AC%A1%E5%9B%9E%E3%81%AF%E3%82%AA%E3%83%A0%E3%83%84%E3%81%A7%E3%82%82%E5%B1%A5%E3%81%84%E3%81%A6%E3%81%8D%E3%81%A6%E3%81%AD%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E3%80%8D%E3%82%B7%E3%83%B3%E3%82%AC%E3%83%BC%E3%82%BD%E3%83%B3%E3%82%B0%E3%83%A9%E3%82%A4%E3%82%BF%E3%83%BCNoah%20Kahan%E3%80%81%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88%E3%81%A7%E3%81%AE%E6%8E%92%E6%B3%84%E5%95%8F%E9%A1%8C%E5%A2%97%E5%8A%A0%E3%82%92%E5%8F%97%E3%81%91%E3%80%81%E3%83%95%E3%82%A1%E3%83%B3%E3%81%AB%E6%B3%A8%E6%84%8F%E5%96%9A%E8%B5%B7%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fshows-festivals%2Fput-some-diapers-on-next-time-yall-singer-songwriter-noah-kahan-urges-fans-to-take-precautions-or-control-themselves-amid-a-growing-rise-in-cases-of-people-relieving-themselves-at-his-shows" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="「次回はオムツでも履いてきてね、みんな」シンガーソングライターNoah Kahan、コンサートでの排泄問題増加を受け、ファンに注意喚起">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1225,27 +1256,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">MusicRadar</span>
+      <span class="item-source">Attack Magazine</span>
     </div>
-    <h2><a href="https://www.musicradar.com/artists/sophie-lloyd-ozzy-osbourne-tribute-shred-black-sabbath-paranoid" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「暗黒の王子の追悼に」：Sophie Lloyd、Black SabbathのParanoidの激しいシュレッドカバーでOzzy Osbourneに敬意を表す</a></h2>
-    <p class="summary">Machine Gun KellyのギタリストでありYouTubeスーパースターのSophie Lloydが、Ozzy Osbourneの命日1周年に際し、Black Sabbathのクラシック曲「Paranoid」を激しいギターソロでカバーし、追悼の意を表しました。これはOzzy Osbourneへの敬意を示すパフォーマンスです。</p>
+    <h2><a href="https://www.attackmagazine.com/reviews/the-best/5-of-the-best-software-and-hardware-trackers/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">5つの最高のソフトウェアおよびハードウェアトラッカー</a></h2>
+    <p class="summary">この記事では、DTMにおけるトラックメイキングの代替手法として注目される「トラッカー」について、5つの優れたソフトウェアおよびハードウェア製品を紹介しています。トラッカーは、数字でノートやパラメータ情報を表示し、垂直方向に進行する独特のインターフェースを持ち、特にJungleやIDMなどのジャンルで重宝されています。これは、DAWとは異なる制作スタイルを探求するクリエイターにとって有益な情報です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Sophie Lloydによる「Paranoid」のカバーは、Ozzy Osbourneへのトリビュートとして、彼女の卓越したギターテクニックを披露しています。このパフォーマンスは、Ozzy Osbourneの音楽的遺産を称えるものであり、ファンにとって感動的なものとなるでしょう。彼女はYouTubeで高い人気を誇るギタリストです。</p>
+<p class="detail-text">We’re all familiar with the traditional DAW sequencer, which scrolls along a timeline from left to right. Most major DAWs use some kind of horizontal sequencer, with note information represented as blocks on a piano roll, but this is not the only game in town. Trackers provide a novel alternative, one that displays note and parameter information as numbers, and proceeds vertically, tumbling from the top of the screen down. The article details SunVox, Electronisounds TRX-12, Renoise, Dirtywave M8, and Polyend Tracker+, explaining their features and pricing.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsophie-lloyd-ozzy-osbourne-tribute-shred-black-sabbath-paranoid"
-        data-title="「暗黒の王子の追悼に」：Sophie Lloyd、Black SabbathのParanoidの激しいシュレッドカバーでOzzy Osbourneに敬意を表す"
-        data-summary="Machine Gun KellyのギタリストでありYouTubeスーパースターのSophie Lloydが、Ozzy Osbourneの命日1周年に際し、Black Sabbathのクラシック曲「Paranoid」を激しいギターソロでカバーし、追悼の意を表しました。これはOzzy Osbourneへの敬意を示すパフォーマンスです。"
-        data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/sophie-lloyd-ozzy-osbourne-tribute-shred-black-sabbath-paranoid"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2F5-of-the-best-software-and-hardware-trackers%2F"
+        data-title="5つの最高のソフトウェアおよびハードウェアトラッカー"
+        data-summary="この記事では、DTMにおけるトラックメイキングの代替手法として注目される「トラッカー」について、5つの優れたソフトウェアおよびハードウェア製品を紹介しています。トラッカーは、数字でノートやパラメータ情報を表示し、垂直方向に進行する独特のインターフェースを持ち、特にJungleやIDMなどのジャンルで重宝されています。これは、DAWとは異なる制作スタイルを探求するクリエイターにとって有益な情報です。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/reviews/the-best/5-of-the-best-software-and-hardware-trackers/"
         data-importance="🟢"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E6%9A%97%E9%BB%92%E3%81%AE%E7%8E%8B%E5%AD%90%E3%81%AE%E8%BF%BD%E6%82%BC%E3%81%AB%E3%80%8D%EF%BC%9ASophie%20Lloyd%E3%80%81Black%20Sabbath%E3%81%AEParanoid%E3%81%AE%E6%BF%80%E3%81%97%E3%81%84%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%83%E3%83%89%E3%82%AB%E3%83%90%E3%83%BC%E3%81%A7Ozzy%20Osbourne%E3%81%AB%E6%95%AC%E6%84%8F%E3%82%92%E8%A1%A8%E3%81%99%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fsophie-lloyd-ozzy-osbourne-tribute-shred-black-sabbath-paranoid" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=5%E3%81%A4%E3%81%AE%E6%9C%80%E9%AB%98%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%8A%E3%82%88%E3%81%B3%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%88%E3%83%A9%E3%83%83%E3%82%AB%E3%83%BC%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fthe-best%2F5-of-the-best-software-and-hardware-trackers%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「暗黒の王子の追悼に」：Sophie Lloyd、Black SabbathのParanoidの激しいシュレッドカバーでOzzy Osbourneに敬意を表す">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="5つの最高のソフトウェアおよびハードウェアトラッカー">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1253,27 +1284,27 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">MusicRadar</span>
+      <span class="item-source">Attack Magazine</span>
     </div>
-    <h2><a href="https://www.musicradar.com/artists/jay-weinberg-on-bruce-springsteen-test-when-filling-in-for-his-dad-in-e-street-band" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「ブルース・スプリングスティーンが私を放り込んだワイルドな状況だったし、彼は自分が何をしているか分かっていたと思う。彼こそ私が一緒に音楽を演奏した唯一の生粋の天才だ」：Jay Weinberg、E Street Bandとの共演で「死ぬほど怖かった」ブルース・スプリングスティーンのテストについて語る</a></h2>
-    <p class="summary">Jay Weinbergは、E Street Bandとの共演前にBruce Springsteenから受けたテストについて語り、その状況が「死ぬほど怖かった」と明かしました。これは、伝説的なミュージシャンとの共演にまつわる逸話です。</p>
+    <h2><a href="https://www.attackmagazine.com/reviews/gear-software/orchid-who-knew-chords-could-be-this-much-fun/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OrchiD: コードがこんなに楽しいとは誰が知っていた？</a></h2>
+    <p class="summary">Telepathic InstrumentsのOrchidは、Tame ImpalaのKevin Parkerが考案した画期的なコードジェネレーターです。この楽器は、メロディックなアイデアを生み出すのに特化しており、ダンスミュージックプロデューサーにもその魅力を発揮します。Orchidは、音楽制作におけるインスピレーションと楽しさを提供し、新しい作曲アプローチを提案しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Jay Weinbergは、Bruce SpringsteenとE Street Bandとの共演という、多くのミュージシャンが憧れる機会を得る過程での貴重な体験を語っています。このエピソードは、偉大なアーティストとの仕事が、才能だけでなく、精神的な強さも要求されることを示唆しています。Bruce Springsteenの指導の下、Jay Weinbergがどのようにプレッシャーを乗り越えたのか、その詳細が語られています。</p>
+<p class="detail-text">Telepathic Instruments’ Orchid is a fantastic chord generator from Tame Impala’s Kevin Parker, but can it appeal to dance music producers too? The instrument is designed to help users work through chord progressions and is more of a song starter than a song finisher. It features a single octave of keys and eight chord buttons, allowing for easy creation of chord progressions. The sound engine includes virtual analog, physically modeled electric piano, and FM synthesis types. The accompanying software app, Pistil, costs £99.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fjay-weinberg-on-bruce-springsteen-test-when-filling-in-for-his-dad-in-e-street-band"
-        data-title="「ブルース・スプリングスティーンが私を放り込んだワイルドな状況だったし、彼は自分が何をしているか分かっていたと思う。彼こそ私が一緒に音楽を演奏した唯一の生粋の天才だ」：Jay Weinberg、E Street Bandとの共演で「死ぬほど怖かった」ブルース・スプリングスティーンのテストについて語る"
-        data-summary="Jay Weinbergは、E Street Bandとの共演前にBruce Springsteenから受けたテストについて語り、その状況が「死ぬほど怖かった」と明かしました。これは、伝説的なミュージシャンとの共演にまつわる逸話です。"
-        data-source="MusicRadar"
-        data-url="https://www.musicradar.com/artists/jay-weinberg-on-bruce-springsteen-test-when-filling-in-for-his-dad-in-e-street-band"
+        data-id="https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Forchid-who-knew-chords-could-be-this-much-fun%2F"
+        data-title="OrchiD: コードがこんなに楽しいとは誰が知っていた？"
+        data-summary="Telepathic InstrumentsのOrchidは、Tame ImpalaのKevin Parkerが考案した画期的なコードジェネレーターです。この楽器は、メロディックなアイデアを生み出すのに特化しており、ダンスミュージックプロデューサーにもその魅力を発揮します。Orchidは、音楽制作におけるインスピレーションと楽しさを提供し、新しい作曲アプローチを提案しています。"
+        data-source="Attack Magazine"
+        data-url="https://www.attackmagazine.com/reviews/gear-software/orchid-who-knew-chords-could-be-this-much-fun/"
         data-importance="🟢"
         data-category="DTM">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E3%83%96%E3%83%AB%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%B3%E3%81%8C%E7%A7%81%E3%82%92%E6%94%BE%E3%82%8A%E8%BE%BC%E3%82%93%E3%81%A0%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%E3%81%AA%E7%8A%B6%E6%B3%81%E3%81%A0%E3%81%A3%E3%81%9F%E3%81%97%E3%80%81%E5%BD%BC%E3%81%AF%E8%87%AA%E5%88%86%E3%81%8C%E4%BD%95%E3%82%92%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%8B%E5%88%86%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A8%E6%80%9D%E3%81%86%E3%80%82%E5%BD%BC%E3%81%93%E3%81%9D%E7%A7%81%E3%81%8C%E4%B8%80%E7%B7%92%E3%81%AB%E9%9F%B3%E6%A5%BD%E3%82%92%E6%BC%94%E5%A5%8F%E3%81%97%E3%81%9F%E5%94%AF%E4%B8%80%E3%81%AE%E7%94%9F%E7%B2%8B%E3%81%AE%E5%A4%A9%E6%89%8D%E3%81%A0%E3%80%8D%EF%BC%9AJay%20Weinberg%E3%80%81E%20Street%20Band%E3%81%A8%E3%81%AE%E5%85%B1%E6%BC%94%E3%81%A7%E3%80%8C%E6%AD%BB%E3%81%AC%E3%81%BB%E3%81%A9%E6%80%96%E3%81%8B%E3%81%A3%E3%81%9F%E3%80%8D%E3%83%96%E3%83%AB%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%86%E3%82%B9%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%9E%E3%82%8B%20https%3A%2F%2Fwww.musicradar.com%2Fartists%2Fjay-weinberg-on-bruce-springsteen-test-when-filling-in-for-his-dad-in-e-street-band" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=OrchiD%3A%20%E3%82%B3%E3%83%BC%E3%83%89%E3%81%8C%E3%81%93%E3%82%93%E3%81%AA%E3%81%AB%E6%A5%BD%E3%81%97%E3%81%84%E3%81%A8%E3%81%AF%E8%AA%B0%E3%81%8C%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%81%9F%EF%BC%9F%20https%3A%2F%2Fwww.attackmagazine.com%2Freviews%2Fgear-software%2Forchid-who-knew-chords-could-be-this-much-fun%2F" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「ブルース・スプリングスティーンが私を放り込んだワイルドな状況だったし、彼は自分が何をしているか分かっていたと思う。彼こそ私が一緒に音楽を演奏した唯一の生粋の天才だ」：Jay Weinberg、E Street Bandとの共演で「死ぬほど怖かった」ブルース・スプリングスティーンのテストについて語る">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="OrchiD: コードがこんなに楽しいとは誰が知っていた？">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1281,47 +1312,19 @@ details[open] summary::before { content: "▲ 閉じる"; }
   <div class="item-body">
     <div class="item-meta">
       <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">MusicRadar</span>
-    </div>
-    <h2><a href="https://www.musicradar.com/guitars/guitar-amps/blackstar-beam-mini-review" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">「Beam Miniの本当のすごさは、膨大なアンプキャプチャーにもアクセスできることだ」：Blackstar Beam Miniレビュー</a></h2>
-    <p class="summary">Blackstar Beam Miniは、そのコンパクトさにもかかわらず、膨大なアンプキャプチャーにアクセスできる点が特徴です。このレビューでは、その多機能性とサウンドについて評価されています。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">Blackstar Beam Miniは、ギタリストやベーシスト向けのコンパクトなアンプであり、最新のサウンドモデリング技術を活用しています。多種多様なアンプサウンドをシミュレートできる機能は、自宅練習からレコーディングまで幅広く活用できる可能性を秘めています。レビューでは、そのサウンドクオリティと使い勝手について詳しく解説されています。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Fguitar-amps%2Fblackstar-beam-mini-review"
-        data-title="「Beam Miniの本当のすごさは、膨大なアンプキャプチャーにもアクセスできることだ」：Blackstar Beam Miniレビュー"
-        data-summary="Blackstar Beam Miniは、そのコンパクトさにもかかわらず、膨大なアンプキャプチャーにアクセスできる点が特徴です。このレビューでは、その多機能性とサウンドについて評価されています。"
-        data-source="MusicRadar"
-        data-url="https://www.musicradar.com/guitars/guitar-amps/blackstar-beam-mini-review"
-        data-importance="🟢"
-        data-category="DTM">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E3%80%8CBeam%20Mini%E3%81%AE%E6%9C%AC%E5%BD%93%E3%81%AE%E3%81%99%E3%81%94%E3%81%95%E3%81%AF%E3%80%81%E8%86%A8%E5%A4%A7%E3%81%AA%E3%82%A2%E3%83%B3%E3%83%97%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E3%83%BC%E3%81%AB%E3%82%82%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A0%E3%80%8D%EF%BC%9ABlackstar%20Beam%20Mini%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%20https%3A%2F%2Fwww.musicradar.com%2Fguitars%2Fguitar-amps%2Fblackstar-beam-mini-review" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="「Beam Miniの本当のすごさは、膨大なアンプキャプチャーにもアクセスできることだ」：Blackstar Beam Miniレビュー">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
-<div class="item" style="animation-delay:0.60s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">DTMステーション</span>
     </div>
     <h2><a href="https://www.dtmstation.com/archives/78527.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">独学の限界を感じた地方在住DTMerへ。上京しなくてもプロレベルを目指せるJBG音楽院オンライン校という選択肢</a></h2>
-    <p class="summary">地方在住で独学に限界を感じているDTMer向けに、JBG音楽院オンライン校がプロレベルを目指せる選択肢として紹介されています。地理的な制約なく、質の高い音楽教育を受けられる機会を提供しています。</p>
+    <p class="summary">地方在住で独学に限界を感じているDTMerに対し、JBG音楽院オンライン校がプロレベルを目指せる選択肢として紹介されています。上京せずに、プロミュージシャン仕込みの指導を受けられるオンライン校の存在は、DTM学習者にとって新たな可能性を開きます。これは、教育格差の解消と、より多くの人々が音楽制作スキルを向上できる機会を提供するものです。</p>
     <details>
 <summary></summary>
-<p class="detail-text">この記事は、DTM学習における地域格差や独学の難しさに焦点を当て、JBG音楽院オンライン校のメリットを強調しています。オンライン形式で、プロのミュージシャンから直接指導を受けられる環境は、多くのDTMerにとって魅力的です。音楽理論、作曲、ミキシングなど、幅広いスキルを習得できるカリキュラムが提供されているようです。</p>
+<p class="detail-text">DTMステーションでもこれまで「バークリー音大＆プロミュージシャン仕込みのDTM作曲スクール、JGB音楽院とは？」、「独学の限界を感じたDTMerへ。JBG音楽院で身につく「音楽家の基礎体力」」といった記事で紹介してきたJBG音楽院が、オンライン校を開講し、地方在住者でもプロレベルのDTMスキルを習得できる環境を提供しています。このコースでは、実践的なカリキュラムと専門的な指導により、学習者は自身の音楽制作能力を飛躍的に向上させることが可能です。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fwww.dtmstation.com%2Farchives%2F78527.html"
         data-title="独学の限界を感じた地方在住DTMerへ。上京しなくてもプロレベルを目指せるJBG音楽院オンライン校という選択肢"
-        data-summary="地方在住で独学に限界を感じているDTMer向けに、JBG音楽院オンライン校がプロレベルを目指せる選択肢として紹介されています。地理的な制約なく、質の高い音楽教育を受けられる機会を提供しています。"
+        data-summary="地方在住で独学に限界を感じているDTMerに対し、JBG音楽院オンライン校がプロレベルを目指せる選択肢として紹介されています。上京せずに、プロミュージシャン仕込みの指導を受けられるオンライン校の存在は、DTM学習者にとって新たな可能性を開きます。これは、教育格差の解消と、より多くの人々が音楽制作スキルを向上できる機会を提供するものです。"
         data-source="DTMステーション"
         data-url="https://www.dtmstation.com/archives/78527.html"
         data-importance="🟢"
@@ -1342,16 +1345,16 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="item-source">note クリエイター収益</span>
     </div>
     <h2><a href="https://note.com/bunga777/n/nc7f4cba36185" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Xの収益って、結局どうやって決まるの？公式情報をもとに整理してみた【2026年7月版】</a></h2>
-    <p class="summary">この記事では、X（旧Twitter）での収益がどのように決定されるのか、公式情報を基に整理しています。同じ100万インプレッションでも収益額が異なる理由など、クリエイターが知りたい収益化のメカニズムを解説しています。</p>
+    <p class="summary">この記事では、X（旧Twitter）の収益がどのように決定されるのか、公式情報を基に整理しています。同じ100万インプレッションでも収益額が異なる理由に疑問を投げかけ、収益化の仕組みを解説しています。これは、コンテンツクリエイターがプラットフォームでの収益を理解し、最大化するために役立つ情報です。</p>
     <details>
 <summary></summary>
-<p class="detail-text">Xの収益化モデルは、インプレッション数やエンゲージメントなど、複数の要因によって左右されます。この記事では、公式発表に基づき、収益分配の仕組みや、クリエイターが収益を最大化するために考慮すべき点を具体的に解説しています。2026年7月現在の最新情報に基づいているため、Xで収益を得ているクリエイターにとって必読の内容です。</p>
+<p class="detail-text">色々な方のXの収益報告を見ていると、ちょっと不思議じゃないですか？「同じ100万インプレッションなのに、どうして収益額がこんなに違うの？」この記事では、Xの収益化の仕組みについて、公式情報を基に詳細に解説しており、クリエイターが自身の収益を把握し、向上させるための具体的なヒントを提供しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fnote.com%2Fbunga777%2Fn%2Fnc7f4cba36185"
         data-title="Xの収益って、結局どうやって決まるの？公式情報をもとに整理してみた【2026年7月版】"
-        data-summary="この記事では、X（旧Twitter）での収益がどのように決定されるのか、公式情報を基に整理しています。同じ100万インプレッションでも収益額が異なる理由など、クリエイターが知りたい収益化のメカニズムを解説しています。"
+        data-summary="この記事では、X（旧Twitter）の収益がどのように決定されるのか、公式情報を基に整理しています。同じ100万インプレッションでも収益額が異なる理由に疑問を投げかけ、収益化の仕組みを解説しています。これは、コンテンツクリエイターがプラットフォームでの収益を理解し、最大化するために役立つ情報です。"
         data-source="note クリエイター収益"
         data-url="https://note.com/bunga777/n/nc7f4cba36185"
         data-importance="🟡"
@@ -1370,16 +1373,16 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="item-source">note クリエイター収益</span>
     </div>
     <h2><a href="https://note.com/yeku/n/nd865220ee0ec" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">売れて嬉しい有料記事。実際の手取り額、計算してみたことありますか？【簡単試算ツール】</a></h2>
-    <p class="summary">noteで有料記事を販売した際の実際の手取り額について、簡単な試算ツールとともに解説しています。クリエイターが収益を正確に把握するための情報を提供しています。</p>
+    <p class="summary">noteで有料記事などが売れた際の実際の手取り額を計算するための、簡単な試算ツールが提供されています。クリエイターにとって、売上だけでなく手取り額の把握は収益管理において不可欠です。この記事は、クリエイターが自身の収益を正確に理解し、より効果的な収益戦略を立てるための実践的な情報を提供しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">noteで有料コンテンツを販売するクリエイターにとって、プラットフォーム手数料や税金などを差し引いた実際の手取り額を把握することは重要です。この記事では、それを手軽に計算できるツールを紹介し、収益管理の重要性を説いています。クリエイターエコノミーにおける透明性と、収益の正確な理解を促す内容です。</p>
+<p class="detail-text">noteでは手軽に有料記事やマガジン、メンバーシップなどでお金をいただいたり、差し上げたりすることができますね。記事を手に取って頂けるのは、私たちクリエイターにとって、すごく嬉しいことです。この記事では、有料記事が販売された際の実際の手取り額を計算するための簡単な試算ツールを紹介しており、クリエイターが自身の収益を具体的に把握し、今後の活動に役立てるための情報を提供しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fnote.com%2Fyeku%2Fn%2Fnd865220ee0ec"
         data-title="売れて嬉しい有料記事。実際の手取り額、計算してみたことありますか？【簡単試算ツール】"
-        data-summary="noteで有料記事を販売した際の実際の手取り額について、簡単な試算ツールとともに解説しています。クリエイターが収益を正確に把握するための情報を提供しています。"
+        data-summary="noteで有料記事などが売れた際の実際の手取り額を計算するための、簡単な試算ツールが提供されています。クリエイターにとって、売上だけでなく手取り額の把握は収益管理において不可欠です。この記事は、クリエイターが自身の収益を正確に理解し、より効果的な収益戦略を立てるための実践的な情報を提供しています。"
         data-source="note クリエイター収益"
         data-url="https://note.com/yeku/n/nd865220ee0ec"
         data-importance="🟡"
@@ -1398,16 +1401,16 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="item-source">IndieHackers</span>
     </div>
     <h2><a href="https://sana-supply.nl/keo-chap/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Tỷ Lệ Kèo Chấp Chính & Bí Quyết Soi Hiệu Quả Cho Tân Thủ</a></h2>
-    <p class="summary">この記事は、サッカーベッティングにおける「 kèo chấp」（ハンディキャップベット）の主要な種類と、初心者が効果的にベットを見極めるためのヒントについて解説しています。ハンディキャップベットは、チーム間の実力差を埋めるために利用される一般的なベットタイプです。</p>
+    <p class="summary">この記事は、サッカーベッティングにおける「Kèo chấp」（ハンディキャップベット）の基本と、初心者が効果的に賭けを見抜くための秘訣を解説しています。ハンディキャップベットは、実力差のあるチーム間のバランスを取り、より多くの賭けの選択肢を提供するものです。これは、ベッティング市場の多様性と、情報に基づいた意思決定の重要性を示唆しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">「 kèo chấp」（ハンディキャップベット）は、ベッティングにおいて、実力差のあるチーム間の試合でよりバランスの取れたオッズを提供するための仕組みです。この記事では、その基本的な仕組みと、ベットを選択する際に考慮すべき要素について説明しています。特に、初心者向けに、オッズの分析方法やリスク管理の重要性にも触れています。</p>
+<p class="detail-text">Kèo chấp luôn nằm trong nhóm tỷ lệ được người chơi lựa chọn nhiều nhất khi tham gia cá cược bóng đá. Dạng này giúp cân bằng sự chênh lệch trình độ giữa hai đội, từ đó tạo ra nhiều lựa chọn đặt cược hấp dẫn. Khi hiểu rõ nguyên tắc vận hành và kết hợp với các bí quyết soi kèo hiệu quả, người chơi mới có thể tự tin hơn khi tham gia đặt cược và nâng cao khả năng chiến thắng của mình.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fsana-supply.nl%2Fkeo-chap%2F"
         data-title="Tỷ Lệ Kèo Chấp Chính & Bí Quyết Soi Hiệu Quả Cho Tân Thủ"
-        data-summary="この記事は、サッカーベッティングにおける「 kèo chấp」（ハンディキャップベット）の主要な種類と、初心者が効果的にベットを見極めるためのヒントについて解説しています。ハンディキャップベットは、チーム間の実力差を埋めるために利用される一般的なベットタイプです。"
+        data-summary="この記事は、サッカーベッティングにおける「Kèo chấp」（ハンディキャップベット）の基本と、初心者が効果的に賭けを見抜くための秘訣を解説しています。ハンディキャップベットは、実力差のあるチーム間のバランスを取り、より多くの賭けの選択肢を提供するものです。これは、ベッティング市場の多様性と、情報に基づいた意思決定の重要性を示唆しています。"
         data-source="IndieHackers"
         data-url="https://sana-supply.nl/keo-chap/"
         data-importance="🟢"
@@ -1426,16 +1429,16 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="item-source">IndieHackers</span>
     </div>
     <h2><a href="https://sana-supply.nl/keo-malaysia/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Kèo Malaysia Và Những Điều Người Chơi Bóng Đá Cần Biết</a></h2>
-    <p class="summary">「Kèo Malaysia」は、ベッティング市場で人気のあるベットタイプであり、そのシンプルな計算方法が特徴です。この記事では、サッカーベッティングにおけるこのベットタイプについて、プレイヤーが知っておくべき重要な情報を提供しています。</p>
+    <p class="summary">この記事では、サッカーベッティングで人気のある「Kèo Malaysia」（マレーシアベット）について解説し、プレイヤーが知っておくべき事項をまとめています。マレーシアベットは、そのシンプルな計算方法でプレイヤーが資金を管理しやすく、多くのオンラインプラットフォームで提供されています。これは、ベッティングにおける多様なオッズ形式とその理解の重要性を示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">「Kèo Malaysia」は、その収益計算の簡潔さから多くのベッターに支持されています。この記事では、このベットタイプの仕組み、メリット、そしてKEONHACAI5のようなプラットフォームでどのように利用できるかについて解説しています。ベッティング戦略を立てる上で、このベットタイプを理解することは重要です。</p>
+<p class="detail-text">Kèo Malaysia được đánh giá là một trong những loại tỷ lệ cá cược phổ biến nhất hiện nay trên các bảng kèo. Cách tính tiền thắng thua đơn giản giúp người chơi kiểm soát vốn hiệu quả hơn so với nhiều loại khác. Tại nhiều nền tảng cá cược trực tuyến như KEONHACAI5, dạng kèo này mang đến trải nghiệm đặt cược dễ dàng và minh bạch, phù hợp với nhiều đối tượng người chơi.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fsana-supply.nl%2Fkeo-malaysia%2F"
         data-title="Kèo Malaysia Và Những Điều Người Chơi Bóng Đá Cần Biết"
-        data-summary="「Kèo Malaysia」は、ベッティング市場で人気のあるベットタイプであり、そのシンプルな計算方法が特徴です。この記事では、サッカーベッティングにおけるこのベットタイプについて、プレイヤーが知っておくべき重要な情報を提供しています。"
+        data-summary="この記事では、サッカーベッティングで人気のある「Kèo Malaysia」（マレーシアベット）について解説し、プレイヤーが知っておくべき事項をまとめています。マレーシアベットは、そのシンプルな計算方法でプレイヤーが資金を管理しやすく、多くのオンラインプラットフォームで提供されています。これは、ベッティングにおける多様なオッズ形式とその理解の重要性を示しています。"
         data-source="IndieHackers"
         data-url="https://sana-supply.nl/keo-malaysia/"
         data-importance="🟢"
@@ -1454,16 +1457,16 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="item-source">IndieHackers</span>
     </div>
     <h2><a href="https://sana-supply.nl/keo-chau-a/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Kèo Châu Á – Phương Pháp Đọc Bảng Tỷ Lệ Chuẩn Xác Nhất</a></h2>
-    <p class="summary">「Kèo Châu Á」（アジアハンディキャップ）は、サッカーの試合におけるチーム間の実力差を反映するベッティングオッズであり、この記事ではそのオッズ表を正確に読み解く方法を解説しています。KÈO NHÀ CÁIなどのプラットフォームが提供する情報も活用します。</p>
+    <p class="summary">「Kèo Châu Á」（アジアベット）は、サッカーにおけるチーム間の実力差を反映するハンディキャップベットの一種です。この記事では、正確なオッズ表の読み方について解説しており、KÈO NHÀ CÁIのようなプラットフォームが提供する最新情報が、プレイヤーの試合状況把握に役立つことを示しています。これは、スポーツベッティングにおける情報分析の重要性を示唆しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">アジアハンディキャップは、サッカーベッティングにおいて最も一般的なオッズ形式の一つです。この記事では、そのオッズがどのように決定され、プレイヤーがどのように分析すべきかについて詳細に解説しています。KÈO NHÀ CÁIのようなサイトから提供される最新のオッズ情報を活用し、より正確な予測を立てるためのガイドを提供しています。</p>
+<p class="detail-text">Kèo châu Á là dạng cược chấp phản ánh rõ nét mức độ chênh lệch thực lực giữa hai đội bóng trên sân cỏ hiện nay. Nền tảng KÈO NHÀ CÁI cung cấp đầy đủ thông tin tỷ lệ cập nhật liên tục giúp người chơi nắm bắt tình hình trận đấu nhanh chóng. Các phương pháp đọc bảng tỷ lệ chuẩn xác sẽ giúp người chơi đưa ra quyết định đặt cược thông minh và hiệu quả hơn.</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fsana-supply.nl%2Fkeo-chau-a%2F"
         data-title="Kèo Châu Á – Phương Pháp Đọc Bảng Tỷ Lệ Chuẩn Xác Nhất"
-        data-summary="「Kèo Châu Á」（アジアハンディキャップ）は、サッカーの試合におけるチーム間の実力差を反映するベッティングオッズであり、この記事ではそのオッズ表を正確に読み解く方法を解説しています。KÈO NHÀ CÁIなどのプラットフォームが提供する情報も活用します。"
+        data-summary="「Kèo Châu Á」（アジアベット）は、サッカーにおけるチーム間の実力差を反映するハンディキャップベットの一種です。この記事では、正確なオッズ表の読み方について解説しており、KÈO NHÀ CÁIのようなプラットフォームが提供する最新情報が、プレイヤーの試合状況把握に役立つことを示しています。これは、スポーツベッティングにおける情報分析の重要性を示唆しています。"
         data-source="IndieHackers"
         data-url="https://sana-supply.nl/keo-chau-a/"
         data-importance="🟢"
@@ -1482,16 +1485,16 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="item-source">note クリエイター収益</span>
     </div>
     <h2><a href="https://note.com/nikohulu/n/n1c5ed966337b" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">【AIアーティスト運用】選ばれた人にしか届かない〇〇に招待されました。</a></h2>
-    <p class="summary">AIアーティストとして活動する著者が、特定のインフルエンサーや関係者のみが招待される特別なイベントに招待された体験を綴っています。これは、AIアートコミュニティ内での活動や、そこでの機会について示唆しています。</p>
+    <p class="summary">AIアーティストとして活動する著者が、特別な招待を受けた体験について語っています。「選ばれた人にしか届かない」という招待は、AIアートコミュニティ内での独自のネットワークや機会の存在を示唆しています。これは、AIアートの分野における新たな展開や、クリエイター間の交流の重要性を示しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">AIアーティストとして活動する中で、限定的なコミュニティやイベントへの招待は、その分野での影響力や認知度を示す指標となります。この記事では、著者がどのような経緯で招待されたのか、そしてそのイベントが自身の活動にどのような影響を与えるのかについて触れられています。AIアートの進化と、それに伴うクリエイターの活動の広がりを示唆しています。</p>
+<p class="detail-text">まいどっ！！にこひゅるです。今回は、先日いつものようにSNSを開いていたら遂に届いていました。AIアーティストとして、特別な招待を受けた体験について書かれており、その招待が「選ばれた人にしか届かない」ものであることが強調されています。この出来事は、AIアートの分野におけるクリエイターの活動や、コミュニティ内での評価、そして新たな機会の創出を示唆しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
         data-id="https%3A%2F%2Fnote.com%2Fnikohulu%2Fn%2Fn1c5ed966337b"
         data-title="【AIアーティスト運用】選ばれた人にしか届かない〇〇に招待されました。"
-        data-summary="AIアーティストとして活動する著者が、特定のインフルエンサーや関係者のみが招待される特別なイベントに招待された体験を綴っています。これは、AIアートコミュニティ内での活動や、そこでの機会について示唆しています。"
+        data-summary="AIアーティストとして活動する著者が、特別な招待を受けた体験について語っています。「選ばれた人にしか届かない」という招待は、AIアートコミュニティ内での独自のネットワークや機会の存在を示唆しています。これは、AIアートの分野における新たな展開や、クリエイター間の交流の重要性を示しています。"
         data-source="note クリエイター収益"
         data-url="https://note.com/nikohulu/n/n1c5ed966337b"
         data-importance="🟢"
@@ -1503,34 +1506,6 @@ details[open] summary::before { content: "▲ 閉じる"; }
     </div>
   </div>
 </div>
-<div class="item" style="animation-delay:0.30s">
-  <div class="item-body">
-    <div class="item-meta">
-      <span class="imp-badge imp-useful">🟢 有益</span>
-      <span class="item-source">東洋経済オンライン</span>
-    </div>
-    <h2><a href="https://toyokeizai.net/articles/-/950628?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">｢気分は30代？｣実年齢よりも若い気がしてしまう不思議…40代からの《主観年齢》がもたらす意外な効果と落とし穴 | ライフ | 東洋経済オンライン</a></h2>
-    <p class="summary">実年齢よりも若く感じる「主観年齢」について、40代からの変化とその効果、そして落とし穴について解説しています。この記事は、年齢に対する心理的な側面と、それがもたらす影響に焦点を当てています。</p>
-    <details>
-<summary></summary>
-<p class="detail-text">「主観年齢」は、心理学においても広く研究されている概念であり、実年齢よりも若く感じることで、幸福度や健康状態に良い影響を与える可能性があります。しかし、過度に若く感じすぎることで、現実との乖離が生じるリスクも指摘されています。この記事では、40代という人生の節目において、主観年齢がどのように変化し、どのような効果や注意点があるのかを、生命科学者の視点から解説しています。</p>
-</details>
-    <div class="item-actions">
-      <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F950628%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
-        data-title="｢気分は30代？｣実年齢よりも若い気がしてしまう不思議…40代からの《主観年齢》がもたらす意外な効果と落とし穴 | ライフ | 東洋経済オンライン"
-        data-summary="実年齢よりも若く感じる「主観年齢」について、40代からの変化とその効果、そして落とし穴について解説しています。この記事は、年齢に対する心理的な側面と、それがもたらす影響に焦点を当てています。"
-        data-source="東洋経済オンライン"
-        data-url="https://toyokeizai.net/articles/-/950628?utm_source=rss&utm_medium=http&utm_campaign=link_back"
-        data-importance="🟢"
-        data-category="ビジネス">⭐ 保存</button>
-      <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%EF%BD%A2%E6%B0%97%E5%88%86%E3%81%AF30%E4%BB%A3%EF%BC%9F%EF%BD%A3%E5%AE%9F%E5%B9%B4%E9%BD%A2%E3%82%88%E3%82%8A%E3%82%82%E8%8B%A5%E3%81%84%E6%B0%97%E3%81%8C%E3%81%97%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E4%B8%8D%E6%80%9D%E8%AD%B0%E2%80%A640%E4%BB%A3%E3%81%8B%E3%82%89%E3%81%AE%E3%80%8A%E4%B8%BB%E8%A6%B3%E5%B9%B4%E9%BD%A2%E3%80%8B%E3%81%8C%E3%82%82%E3%81%9F%E3%82%89%E3%81%99%E6%84%8F%E5%A4%96%E3%81%AA%E5%8A%B9%E6%9E%9C%E3%81%A8%E8%90%BD%E3%81%A8%E3%81%97%E7%A9%B4%20%7C%20%E3%83%A9%E3%82%A4%E3%83%95%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F950628%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
-      <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="｢気分は30代？｣実年齢よりも若い気がしてしまう不思議…40代からの《主観年齢》がもたらす意外な効果と落とし穴 | ライフ | 東洋経済オンライン">🤖 Claudeに聞く</button>
-    </div>
-  </div>
-</div>
 </section><section class="category-section" data-cat="経済">
   <p class="category-label">経済</p>
   <div class="item" style="animation-delay:0.00s">
@@ -1539,25 +1514,25 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">東洋経済オンライン</span>
     </div>
-    <h2><a href="https://toyokeizai.net/articles/-/952498?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">｢副首都＝大阪｣の大きな落とし穴､大阪人が持つ"特異なコミュニケーション文化"から読み解く｢副首都論争｣のあるべき姿 | 政治・経済・投資 | 東洋経済オンライン</a></h2>
-    <p class="summary">大阪が「副首都」と見なされることの落とし穴として、大阪特有のコミュニケーション文化を挙げています。この記事は、副首都論争において、政治的な駆け引きを超えて重視すべき条件を検証します。</p>
+    <h2><a href="https://toyokeizai.net/articles/-/952347?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">｢"地味な服装"で行ったことを後悔…｣松田聖子コンサートで目撃した《あまりの熱狂》 46年間も"現役で居続ける"背景 | ライフ | 東洋経済オンライン</a></h2>
+    <p class="summary">この記事は、歌手・松田聖子さんのコンサートでの熱狂と、46年間現役を続けられる背景に迫っています。世代を超えてファンを魅了し続ける彼女のパワーの秘密を探ることで、エンターテイメント業界における長寿アーティストの要因と、ファンとの関係性の深さが浮き彫りになります。これは、エンターテイメント産業の市場動向と、ブランドロイヤリティの重要性を示唆しています。</p>
     <details>
 <summary></summary>
-<p class="detail-text">副首都構想における大阪の優位性や、それに伴う課題について、文化的な側面から掘り下げています。大阪の「特異なコミュニケーション文化」が、副首都としての機能や受け入れにどのような影響を与えるのかを分析しています。単なる地理的・経済的な要因だけでなく、社会・文化的な文脈も考慮した議論の重要性を示唆しています。</p>
+<p class="detail-text">活動40年以上のアーティストの中でも､松田聖子さんは今も圧倒的な熱狂を巻き起こしています。世代を超えたファンを魅了し続けるそのパワーの秘密とは？　会場で感じた｢永遠の青春｣を探ります。この記事は、松田聖子さんのカリスマ性と、長年にわたりトップアーティストであり続けるための戦略、そしてファンが彼女に惹きつけられる心理を分析しています。これは、エンターテイメントビジネスにおける成功要因を考察する上で示唆に富む内容です。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F952498%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
-        data-title="｢副首都＝大阪｣の大きな落とし穴､大阪人が持つ&quot;特異なコミュニケーション文化&quot;から読み解く｢副首都論争｣のあるべき姿 | 政治・経済・投資 | 東洋経済オンライン"
-        data-summary="大阪が「副首都」と見なされることの落とし穴として、大阪特有のコミュニケーション文化を挙げています。この記事は、副首都論争において、政治的な駆け引きを超えて重視すべき条件を検証します。"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F952347%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="｢&quot;地味な服装&quot;で行ったことを後悔…｣松田聖子コンサートで目撃した《あまりの熱狂》 46年間も&quot;現役で居続ける&quot;背景 | ライフ | 東洋経済オンライン"
+        data-summary="この記事は、歌手・松田聖子さんのコンサートでの熱狂と、46年間現役を続けられる背景に迫っています。世代を超えてファンを魅了し続ける彼女のパワーの秘密を探ることで、エンターテイメント業界における長寿アーティストの要因と、ファンとの関係性の深さが浮き彫りになります。これは、エンターテイメント産業の市場動向と、ブランドロイヤリティの重要性を示唆しています。"
         data-source="東洋経済オンライン"
-        data-url="https://toyokeizai.net/articles/-/952498?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-url="https://toyokeizai.net/articles/-/952347?utm_source=rss&utm_medium=http&utm_campaign=link_back"
         data-importance="🟢"
         data-category="経済">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%EF%BD%A2%E5%89%AF%E9%A6%96%E9%83%BD%EF%BC%9D%E5%A4%A7%E9%98%AA%EF%BD%A3%E3%81%AE%E5%A4%A7%E3%81%8D%E3%81%AA%E8%90%BD%E3%81%A8%E3%81%97%E7%A9%B4%EF%BD%A4%E5%A4%A7%E9%98%AA%E4%BA%BA%E3%81%8C%E6%8C%81%E3%81%A4%22%E7%89%B9%E7%95%B0%E3%81%AA%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E6%96%87%E5%8C%96%22%E3%81%8B%E3%82%89%E8%AA%AD%E3%81%BF%E8%A7%A3%E3%81%8F%EF%BD%A2%E5%89%AF%E9%A6%96%E9%83%BD%E8%AB%96%E4%BA%89%EF%BD%A3%E3%81%AE%E3%81%82%E3%82%8B%E3%81%B9%E3%81%8D%E5%A7%BF%20%7C%20%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88%E3%83%BB%E6%8A%95%E8%B3%87%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F952498%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%EF%BD%A2%22%E5%9C%B0%E5%91%B3%E3%81%AA%E6%9C%8D%E8%A3%85%22%E3%81%A7%E8%A1%8C%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8%E3%82%92%E5%BE%8C%E6%82%94%E2%80%A6%EF%BD%A3%E6%9D%BE%E7%94%B0%E8%81%96%E5%AD%90%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88%E3%81%A7%E7%9B%AE%E6%92%83%E3%81%97%E3%81%9F%E3%80%8A%E3%81%82%E3%81%BE%E3%82%8A%E3%81%AE%E7%86%B1%E7%8B%82%E3%80%8B%2046%E5%B9%B4%E9%96%93%E3%82%82%22%E7%8F%BE%E5%BD%B9%E3%81%A7%E5%B1%85%E7%B6%9A%E3%81%91%E3%82%8B%22%E8%83%8C%E6%99%AF%20%7C%20%E3%83%A9%E3%82%A4%E3%83%95%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F952347%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="｢副首都＝大阪｣の大きな落とし穴､大阪人が持つ&quot;特異なコミュニケーション文化&quot;から読み解く｢副首都論争｣のあるべき姿 | 政治・経済・投資 | 東洋経済オンライン">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="｢&quot;地味な服装&quot;で行ったことを後悔…｣松田聖子コンサートで目撃した《あまりの熱狂》 46年間も&quot;現役で居続ける&quot;背景 | ライフ | 東洋経済オンライン">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
@@ -1567,25 +1542,53 @@ details[open] summary::before { content: "▲ 閉じる"; }
       <span class="imp-badge imp-useful">🟢 有益</span>
       <span class="item-source">東洋経済オンライン</span>
     </div>
-    <h2><a href="https://toyokeizai.net/articles/-/952497?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">副首都構想は｢大阪ありき｣でいいのか？ 国会論戦が見落としている"超重要論点"と必要条件を満たす"大穴"の最強候補 | 政治・経済・投資 | 東洋経済オンライン</a></h2>
-    <p class="summary">国会で議論されている副首都構想において、大阪が「ありき」で進められている現状に疑問を呈し、論戦が見落としている重要論点と、副首都の条件を満たす可能性のある「大穴」候補について考察しています。日本全体の防災・危機管理の観点から、より多角的な視点での検討を促しています。</p>
+    <h2><a href="https://toyokeizai.net/articles/-/950496?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">総まくり!有名大学の最新動向⑤｢日本大学､東洋大学､駒澤大学､専修大学｣ | キャリア・教育 | 東洋経済オンライン</a></h2>
+    <p class="summary">この記事では、日本大学、東洋大学、駒澤大学、専修大学といった有名大学の最新動向をまとめています。各大学が新学部設置や教育改革などを進める様子は、日本の高等教育市場における競争と進化を示しています。これは、教育産業の動向と、将来の学生にとっての選択肢の変化を理解する上で役立ちます。</p>
     <details>
 <summary></summary>
-<p class="detail-text">東京直下地震など、大規模災害への備えとして副首都の設置が議論されていますが、その議論が大阪に偏っている現状に警鐘を鳴らしています。この記事では、副首都に求められる真の要件を提示し、現時点ではあまり注目されていないが、条件を満たす可能性のある地域を「大穴」候補として提示しています。防災・減災の観点から、より戦略的な議論の必要性を訴えています。</p>
+<p class="detail-text">日本の主要大学が次々と新学部設置やキャンパス整備､革新的な教育･入試改革を進めています。日東駒専各大学が未来を見据えた取り組みで学生生活や学びの質をどのように変革しつつあるのか､その最前線を紹介します。この記事は、大学の戦略、学生募集、教育の質向上に向けた各校の具体的な取り組みを詳述しており、日本の教育セクターの将来像を描き出しています。</p>
 </details>
     <div class="item-actions">
       <button class="action-btn star-btn"
-        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F952497%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
-        data-title="副首都構想は｢大阪ありき｣でいいのか？ 国会論戦が見落としている&quot;超重要論点&quot;と必要条件を満たす&quot;大穴&quot;の最強候補 | 政治・経済・投資 | 東洋経済オンライン"
-        data-summary="国会で議論されている副首都構想において、大阪が「ありき」で進められている現状に疑問を呈し、論戦が見落としている重要論点と、副首都の条件を満たす可能性のある「大穴」候補について考察しています。日本全体の防災・危機管理の観点から、より多角的な視点での検討を促しています。"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F950496%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="総まくり!有名大学の最新動向⑤｢日本大学､東洋大学､駒澤大学､専修大学｣ | キャリア・教育 | 東洋経済オンライン"
+        data-summary="この記事では、日本大学、東洋大学、駒澤大学、専修大学といった有名大学の最新動向をまとめています。各大学が新学部設置や教育改革などを進める様子は、日本の高等教育市場における競争と進化を示しています。これは、教育産業の動向と、将来の学生にとっての選択肢の変化を理解する上で役立ちます。"
         data-source="東洋経済オンライン"
-        data-url="https://toyokeizai.net/articles/-/952497?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-url="https://toyokeizai.net/articles/-/950496?utm_source=rss&utm_medium=http&utm_campaign=link_back"
         data-importance="🟢"
         data-category="経済">⭐ 保存</button>
       <span class="action-sep">|</span>
-      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E5%89%AF%E9%A6%96%E9%83%BD%E6%A7%8B%E6%83%B3%E3%81%AF%EF%BD%A2%E5%A4%A7%E9%98%AA%E3%81%82%E3%82%8A%E3%81%8D%EF%BD%A3%E3%81%A7%E3%81%84%E3%81%84%E3%81%AE%E3%81%8B%EF%BC%9F%20%E5%9B%BD%E4%BC%9A%E8%AB%96%E6%88%A6%E3%81%8C%E8%A6%8B%E8%90%BD%E3%81%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%22%E8%B6%85%E9%87%8D%E8%A6%81%E8%AB%96%E7%82%B9%22%E3%81%A8%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99%22%E5%A4%A7%E7%A9%B4%22%E3%81%AE%E6%9C%80%E5%BC%B7%E5%80%99%E8%A3%9C%20%7C%20%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88%E3%83%BB%E6%8A%95%E8%B3%87%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F952497%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%E7%B7%8F%E3%81%BE%E3%81%8F%E3%82%8A%21%E6%9C%89%E5%90%8D%E5%A4%A7%E5%AD%A6%E3%81%AE%E6%9C%80%E6%96%B0%E5%8B%95%E5%90%91%E2%91%A4%EF%BD%A2%E6%97%A5%E6%9C%AC%E5%A4%A7%E5%AD%A6%EF%BD%A4%E6%9D%B1%E6%B4%8B%E5%A4%A7%E5%AD%A6%EF%BD%A4%E9%A7%92%E6%BE%A4%E5%A4%A7%E5%AD%A6%EF%BD%A4%E5%B0%82%E4%BF%AE%E5%A4%A7%E5%AD%A6%EF%BD%A3%20%7C%20%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A2%E3%83%BB%E6%95%99%E8%82%B2%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F950496%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
       <span class="action-sep">|</span>
-      <button class="action-btn claude-btn" data-title="副首都構想は｢大阪ありき｣でいいのか？ 国会論戦が見落としている&quot;超重要論点&quot;と必要条件を満たす&quot;大穴&quot;の最強候補 | 政治・経済・投資 | 東洋経済オンライン">🤖 Claudeに聞く</button>
+      <button class="action-btn claude-btn" data-title="総まくり!有名大学の最新動向⑤｢日本大学､東洋大学､駒澤大学､専修大学｣ | キャリア・教育 | 東洋経済オンライン">🤖 Claudeに聞く</button>
+    </div>
+  </div>
+</div>
+<div class="item" style="animation-delay:0.10s">
+  <div class="item-body">
+    <div class="item-meta">
+      <span class="imp-badge imp-useful">🟢 有益</span>
+      <span class="item-source">東洋経済オンライン</span>
+    </div>
+    <h2><a href="https://toyokeizai.net/articles/-/952493?utm_source=rss&utm_medium=http&utm_campaign=link_back" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">｢38.8℃の京都にインバウンド観光客はいる？｣歩いて驚いた…清水寺も嵐山も｢こんな光景初めて｣《酷暑ジャパン》の現実 | ライフ | 東洋経済オンライン</a></h2>
+    <p class="summary">記録的な猛暑に見舞われる京都の観光地の現状をレポートしています。通常はインバウンド客で賑わう場所も、酷暑の影響で異例の光景が広がっている様子が描かれています。これは、気候変動が観光産業や地域経済に与える影響を示唆しており、持続可能な観光のあり方を考えさせる内容です。</p>
+    <details>
+<summary></summary>
+<p class="detail-text">記録的な猛暑に包まれる京都。いつもはインバウンド客で賑わう京都の街は果たしてどうなっているのだろうか？　"肉体派ライター"が真夏の観光地を実際に歩いて確かめた。この記事は、極端な気象条件が観光客の行動や観光地の景観に与える影響を、現場の視点からリアルに描写しています。これは、気候変動と経済活動の相互作用を理解する上で貴重な情報源となります。</p>
+</details>
+    <div class="item-actions">
+      <button class="action-btn star-btn"
+        data-id="https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F952493%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back"
+        data-title="｢38.8℃の京都にインバウンド観光客はいる？｣歩いて驚いた…清水寺も嵐山も｢こんな光景初めて｣《酷暑ジャパン》の現実 | ライフ | 東洋経済オンライン"
+        data-summary="記録的な猛暑に見舞われる京都の観光地の現状をレポートしています。通常はインバウンド客で賑わう場所も、酷暑の影響で異例の光景が広がっている様子が描かれています。これは、気候変動が観光産業や地域経済に与える影響を示唆しており、持続可能な観光のあり方を考えさせる内容です。"
+        data-source="東洋経済オンライン"
+        data-url="https://toyokeizai.net/articles/-/952493?utm_source=rss&utm_medium=http&utm_campaign=link_back"
+        data-importance="🟢"
+        data-category="経済">⭐ 保存</button>
+      <span class="action-sep">|</span>
+      <a class="action-btn" href="https://twitter.com/intent/tweet?text=%EF%BD%A238.8%E2%84%83%E3%81%AE%E4%BA%AC%E9%83%BD%E3%81%AB%E3%82%A4%E3%83%B3%E3%83%90%E3%82%A6%E3%83%B3%E3%83%89%E8%A6%B3%E5%85%89%E5%AE%A2%E3%81%AF%E3%81%84%E3%82%8B%EF%BC%9F%EF%BD%A3%E6%AD%A9%E3%81%84%E3%81%A6%E9%A9%9A%E3%81%84%E3%81%9F%E2%80%A6%E6%B8%85%E6%B0%B4%E5%AF%BA%E3%82%82%E5%B5%90%E5%B1%B1%E3%82%82%EF%BD%A2%E3%81%93%E3%82%93%E3%81%AA%E5%85%89%E6%99%AF%E5%88%9D%E3%82%81%E3%81%A6%EF%BD%A3%E3%80%8A%E9%85%B7%E6%9A%91%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3%E3%80%8B%E3%81%AE%E7%8F%BE%E5%AE%9F%20%7C%20%E3%83%A9%E3%82%A4%E3%83%95%20%7C%20%E6%9D%B1%E6%B4%8B%E7%B5%8C%E6%B8%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%20https%3A%2F%2Ftoyokeizai.net%2Farticles%2F-%2F952493%3Futm_source%3Drss%26utm_medium%3Dhttp%26utm_campaign%3Dlink_back" target="_blank" rel="noopener">𝕏 投稿</a>
+      <span class="action-sep">|</span>
+      <button class="action-btn claude-btn" data-title="｢38.8℃の京都にインバウンド観光客はいる？｣歩いて驚いた…清水寺も嵐山も｢こんな光景初めて｣《酷暑ジャパン》の現実 | ライフ | 東洋経済オンライン">🤖 Claudeに聞く</button>
     </div>
   </div>
 </div>
